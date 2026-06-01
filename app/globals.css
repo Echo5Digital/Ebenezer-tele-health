@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*
+     * IMPORTANT — PLACEHOLDER COLORS
+     * Extract exact HEX values from the Ebenezer Telehealth logo file
+     * and replace these values. Update tailwind.config.js to match.
+     */
+    --primary: #2A7A6F;
+    --primary-dark: #1E5C54;
+    --navy: #1C2B40;
+    --mint: #B8E8DC;
+    --seafoam: #8CCBBF;
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 170 48% 32%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-balance;
+    color: var(--navy);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-light {
+    @apply bg-white;
+  }
+
+  .section-muted {
+    @apply bg-gray-50;
+  }
+
+  .section-primary {
+    background-color: var(--primary);
+  }
+
+  .section-navy {
+    background-color: var(--navy);
+  }
+
+  /* AEO / GEO selector — do not rename */
+  .hero-answer-line {
+    @apply text-base md:text-lg leading-relaxed text-gray-700;
+  }
+
+  /* AEO / GEO selector — do not rename */
+  .faq-answer {
+    @apply text-base leading-relaxed text-gray-600;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.625rem;
+    padding: 0.75rem 1.75rem;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    box-shadow: 0 2px 8px rgba(42, 122, 111, 0.25);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 16px rgba(42, 122, 111, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 0.625rem;
+    padding: 0.75rem 1.75rem;
+    border: 2px solid var(--primary);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+  }
+
+  .btn-ghost-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.625rem;
+    padding: 0.75rem 1.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: background-color 0.15s ease;
+  }
+
+  .btn-ghost-white:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}
