@@ -21,19 +21,24 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
-    handleScroll() // set correct state on initial render
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Transparent only on the home page where the dark hero provides contrast.
+  // On all other pages the body background is light, so the glass card is always shown.
+  const isHomePage = pathname === '/'
+  const isTransparent = isHomePage && !scrolled
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Brand accent bar — only when scrolled */}
+      {/* Brand accent bar — only when not transparent */}
       <div
         className="h-1 w-full transition-opacity duration-300"
         style={{
           backgroundColor: 'var(--primary)',
-          opacity: scrolled ? 1 : 0,
+          opacity: isTransparent ? 0 : 1,
         }}
         aria-hidden="true"
       />
@@ -41,25 +46,25 @@ export default function Header() {
       {/* Backdrop wrapper */}
       <div
         className="px-3 sm:px-5 lg:px-6 py-3 transition-all duration-300"
-        style={scrolled ? {
+        style={isTransparent ? {} : {
           background: 'linear-gradient(180deg, rgba(184,232,220,0.22) 0%, rgba(255,255,255,0.97) 100%)',
           backdropFilter: 'blur(18px)',
           WebkitBackdropFilter: 'blur(18px)',
-        } : {}}
+        }}
       >
         {/* Floating nav card */}
         <nav
           className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-5 sm:px-7 h-[68px] transition-all duration-300"
           aria-label="Global"
-          style={scrolled ? {
+          style={isTransparent ? {
+            background: 'transparent',
+            border: '1px solid rgba(255,255,255,0.15)',
+          } : {
             background: 'linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(184,232,220,0.18) 100%)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
             border: '1px solid rgba(42,122,111,0.18)',
             boxShadow: '0 4px 24px rgba(42,122,111,0.10), inset 0 1px 0 rgba(255,255,255,0.8)',
-          } : {
-            background: 'transparent',
-            border: '1px solid transparent',
           }}
         >
           {/* Logo */}
@@ -71,12 +76,16 @@ export default function Header() {
             <Image
               src="/ez_logo.png"
               alt="Ebenezer Telehealth"
-              width={148}
-              height={60}
+              width={108}
+              height={100}
               priority
-              className={`h-11 w-auto object-contain transition-all duration-300 ${
-                scrolled ? '' : 'brightness-0 invert'
-              }`}
+              className="h-11 w-auto object-contain"
+              style={{
+                filter: isTransparent
+                  ? 'brightness(0) invert(1) drop-shadow(0 0 6px rgba(0,0,0,0.35))'
+                  : 'none',
+                transition: 'filter 0.3s ease',
+              }}
             />
           </Link>
 
@@ -87,13 +96,13 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`text-xs font-bold uppercase tracking-widest transition-colors ${
-                  scrolled
+                  isTransparent
                     ? pathname === item.href
-                      ? 'text-primary'
-                      : 'text-gray-500 hover:text-gray-800'
+                      ? 'text-white'
+                      : 'text-white/70 hover:text-white'
                     : pathname === item.href
-                    ? 'text-white'
-                    : 'text-white/75 hover:text-white'
+                    ? 'text-primary'
+                    : 'text-gray-500 hover:text-gray-800'
                 }`}
               >
                 {item.name}
@@ -106,7 +115,7 @@ export default function Header() {
             <a
               href="tel:4053498188"
               className={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors ${
-                scrolled ? 'text-gray-500 hover:text-primary' : 'text-white/75 hover:text-white'
+                isTransparent ? 'text-white/70 hover:text-white' : 'text-gray-500 hover:text-primary'
               }`}
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
@@ -126,7 +135,7 @@ export default function Header() {
           <button
             type="button"
             className={`lg:hidden rounded-full p-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
-              scrolled ? 'text-gray-500 hover:bg-gray-100' : 'text-white/80 hover:bg-white/10'
+              isTransparent ? 'text-white/85 hover:bg-white/10' : 'text-gray-500 hover:bg-gray-100'
             }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
