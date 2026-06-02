@@ -67,8 +67,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen antialiased">
         <Header />
-        {/* pb-16 offsets the fixed mobile bottom bar on small screens */}
-        <main className="pb-16 lg:pb-0">{children}</main>
+        {/* pt-[80px] offsets the fixed header; pb-16 offsets the fixed mobile bottom bar */}
+        <main className="pt-[80px] pb-16 lg:pb-0">{children}</main>
         <Footer />
         <MobileBottomBar />
       </body>

@@ -24,13 +24,13 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden -mt-[80px]"
       style={{ backgroundColor: 'var(--navy)' }}
       aria-label="Hero"
     >
       {/* Background image at 0.5 opacity */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 opacity-50">
+        <div className="absolute inset-0 opacity-20">
           <Image
             src="/ez-home-bg.webp"
             alt=""
@@ -49,7 +49,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-14 md:pt-24 md:pb-20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[100px] pb-14 md:pt-[120px] md:pb-20">
         <div className="max-w-3xl">
           {/* Pre-headline badge */}
           <div
