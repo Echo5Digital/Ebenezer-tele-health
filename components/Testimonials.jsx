@@ -37,21 +37,21 @@ function StarRating() {
 
 export default function Testimonials() {
   return (
-    <section className="bg-gray-50" aria-labelledby="testimonials-heading">
+    <section style={{ backgroundColor: 'var(--primary)' }} aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
+            style={{ color: 'var(--mint)' }}
           >
             Patient Stories
           </span>
           <h2
             id="testimonials-heading"
             className="text-3xl md:text-4xl font-bold"
-            style={{ color: 'var(--navy)' }}
+            style={{ color: '#ffffff' }}
           >
             What Our Patients Say
           </h2>
@@ -62,14 +62,18 @@ export default function Testimonials() {
           {placeholderTestimonials.map((testimonial) => (
             <figure
               key={testimonial.id}
-              className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col gap-4"
+              className="rounded-2xl p-7 flex flex-col gap-4"
+              style={{
+                background: 'rgba(255,255,255,0.09)',
+                border: '1px solid rgba(255,255,255,0.15)',
+              }}
             >
               {/* Placeholder notice */}
               <div
                 className="inline-block self-start rounded-full px-3 py-1 text-xs font-semibold"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.4)',
-                  color: 'var(--primary-dark)',
+                  backgroundColor: 'rgba(184,232,220,0.25)',
+                  color: 'var(--mint)',
                 }}
               >
                 Client review placeholder
@@ -77,21 +81,40 @@ export default function Testimonials() {
 
               <StarRating />
 
-              <blockquote className="text-sm text-gray-400 italic leading-relaxed flex-1">
+              <blockquote
+                className="text-sm italic leading-relaxed flex-1"
+                style={{ color: 'rgba(255,255,255,0.65)' }}
+              >
                 &ldquo;{testimonial.text}&rdquo;
               </blockquote>
 
-              <figcaption className="flex items-center gap-3 pt-2 border-t border-gray-100">
+              <figcaption
+                className="flex items-center gap-3 pt-2"
+                style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }}
+              >
                 <div
-                  className="h-9 w-9 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
-                  style={{ backgroundColor: 'var(--seafoam)' }}
+                  className="h-9 w-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
+                  style={{
+                    backgroundColor: 'rgba(184,232,220,0.30)',
+                    color: '#ffffff',
+                  }}
                   aria-hidden="true"
                 >
                   P
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-gray-400">{testimonial.author}</p>
-                  <p className="text-xs text-gray-400">{testimonial.location}</p>
+                  <p
+                    className="text-sm font-semibold"
+                    style={{ color: 'rgba(255,255,255,0.85)' }}
+                  >
+                    {testimonial.author}
+                  </p>
+                  <p
+                    className="text-xs"
+                    style={{ color: 'rgba(255,255,255,0.55)' }}
+                  >
+                    {testimonial.location}
+                  </p>
                 </div>
               </figcaption>
             </figure>
@@ -99,7 +122,10 @@ export default function Testimonials() {
         </div>
 
         {/* Google review note */}
-        <p className="text-center text-sm text-gray-400 mt-8">
+        <p
+          className="text-center text-sm mt-8"
+          style={{ color: 'rgba(255,255,255,0.50)' }}
+        >
           Reviews will be sourced from Google. Placeholders above will be replaced with
           real patient feedback.
         </p>

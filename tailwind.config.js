@@ -30,6 +30,14 @@ module.exports = {
           DEFAULT: '#8CCBBF',
           foreground: '#1C2B40',
         },
+        cream: {
+          DEFAULT: '#EDF7F4',
+          foreground: '#1C2B40',
+        },
+        'deep-teal': {
+          DEFAULT: '#0E3D38',
+          foreground: '#ffffff',
+        },
         border: 'hsl(214.3 31.8% 91.4%)',
         input: 'hsl(214.3 31.8% 91.4%)',
         ring: 'hsl(170 48% 32%)',

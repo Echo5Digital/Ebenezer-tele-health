@@ -36,8 +36,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-5 max-w-xs">
-              Faith-driven, compassionate telehealth for women and families across Oklahoma.
-              Led by Dr. Susan George, DNP, APRN, BC-ADM.
+              Faith-driven, compassionate telehealth for women and families across Oklahoma,
+              based in Oklahoma City. Led by Dr. Susan George, DNP, APRN, BC-ADM.
             </p>
             {/* NAP — format must be identical everywhere */}
             <address className="not-italic space-y-2.5">

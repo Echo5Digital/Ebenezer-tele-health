@@ -40,7 +40,7 @@ const plans = [
 
 export default function PricingSection() {
   return (
-    <section className="bg-white" aria-labelledby="pricing-heading">
+    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
@@ -56,12 +56,15 @@ export default function PricingSection() {
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{ color: 'var(--navy)' }}
           >
-            Simple, Honest Pricing
+            How Much Does a Telehealth Visit Cost Without Insurance?
           </h2>
+          {/* AEO answer-first paragraph — ~43 words, direct answer before cards */}
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            No insurance? No problem. We&apos;re a cash-pay practice with
-            clear, upfront pricing — you&apos;ll always know the cost before
-            you book.
+            Ebenezer Telehealth is a cash-pay telehealth practice in Oklahoma
+            City &mdash; no insurance required, ever. The exact cost of your
+            visit is confirmed before you book, with no hidden fees and no
+            surprise bills. Pricing varies by service type; rates are disclosed
+            at scheduling.
           </p>
         </div>
 

@@ -24,16 +24,16 @@ const faqs = [
   },
   {
     id: 'faq-2',
-    question: 'Do I need insurance?',
+    question: 'Do I need insurance to see a doctor online at Ebenezer Telehealth?',
     answer:
-      "No. We're a transparent cash-pay practice, so you'll know your cost upfront with no surprise bills.",
+      "No. Ebenezer Telehealth is a transparent cash-pay practice, so you'll know your cost upfront with no surprise bills.",
     extra: null,
   },
   {
     id: 'faq-3',
-    question: 'Where in Oklahoma can I be seen?',
+    question: 'Where in Oklahoma can I be seen by Ebenezer Telehealth?',
     answer:
-      "Anywhere in the state, as long as you're physically located in Oklahoma at the time of your visit.",
+      "Anywhere in Oklahoma, as long as you're physically located in the state at the time of your visit.",
     extra: null,
   },
   {
@@ -69,14 +69,14 @@ const faqs = [
     id: 'faq-6',
     question: 'How soon can I be seen?',
     answer:
-      'Same-day appointments are often available. Book online or call (405) 349-8188.',
+      'Same-day telehealth appointments in Oklahoma are often available. Book online or call (405) 349-8188.',
     extra: null,
   },
 ]
 
 export default function FAQSection() {
   return (
-    <section className="bg-white" aria-labelledby="faq-heading">
+    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="faq-heading">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}

@@ -27,24 +27,44 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-gray-50" aria-labelledby="services-heading">
+    <section style={{ backgroundColor: 'var(--deep-teal)' }} aria-labelledby="services-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
+            style={{ color: 'var(--mint)' }}
           >
             What We Treat
           </span>
           <h2
             id="services-heading"
-            className="text-3xl md:text-4xl font-bold"
-            style={{ color: 'var(--navy)' }}
+            className="text-3xl md:text-4xl font-bold mb-5"
+            style={{ color: '#ffffff' }}
           >
-            Online Care for Oklahoma Women and Families
+            What Can a Telehealth Doctor Treat Online?
           </h2>
+          {/* AEO answer-first paragraph — ~44 words, direct answer before elaboration */}
+          <p
+            className="text-base md:text-lg max-w-2xl mx-auto"
+            style={{ color: 'rgba(255,255,255,0.75)' }}
+          >
+            Dr. Susan George, DNP, APRN, treats{' '}
+            <strong className="font-semibold" style={{ color: '#ffffff' }}>
+              women&apos;s health
+            </strong>{' '}
+            concerns, manages{' '}
+            <strong className="font-semibold" style={{ color: '#ffffff' }}>
+              online weight loss
+            </strong>
+            , and evaluates{' '}
+            <strong className="font-semibold" style={{ color: '#ffffff' }}>
+              minor illnesses
+            </strong>{' '}
+            via secure video from anywhere in Oklahoma. All visits are cash-pay.
+            No insurance required. The exact visit cost is confirmed before you book.
+          </p>
         </div>
 
         {/* Service cards */}
@@ -52,34 +72,42 @@ export default function ServicesSection() {
           {services.map((service) => (
             <article
               key={service.slug}
-              className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all"
+              className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(184,232,220,0.18)',
+                backdropFilter: 'blur(8px)',
+              }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(184,232,220,0.5)' }}
+                style={{ backgroundColor: 'rgba(184,232,220,0.15)' }}
                 aria-hidden="true"
               >
                 <service.icon
                   className="h-6 w-6"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--mint)' }}
                 />
               </div>
 
               <h3
                 className="text-xl font-semibold leading-snug"
-                style={{ color: 'var(--navy)' }}
+                style={{ color: '#ffffff' }}
               >
                 {service.title}
               </h3>
 
-              <p className="text-sm text-gray-600 leading-relaxed flex-1">
+              <p
+                className="text-sm leading-relaxed flex-1"
+                style={{ color: 'rgba(255,255,255,0.70)' }}
+              >
                 {service.description}
               </p>
 
               <Link
                 href={`/${service.slug}`}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold mt-1 group"
-                style={{ color: 'var(--primary)' }}
+                style={{ color: 'var(--mint)' }}
                 aria-label={`Learn more about ${service.title}`}
               >
                 Learn More
@@ -94,13 +122,23 @@ export default function ServicesSection() {
 
         {/* Post-services CTA */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-5">
+          <p className="mb-5" style={{ color: 'rgba(255,255,255,0.70)' }}>
             Not sure which service is right for you? Get in touch and we&apos;ll
             help.
           </p>
           <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
             Book Your Visit
           </Link>
+          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+            or{' '}
+            <a
+              href="tel:4053498188"
+              className="font-semibold"
+              style={{ color: 'var(--mint)' }}
+            >
+              call (405) 349-8188
+            </a>
+          </p>
         </div>
       </div>
     </section>

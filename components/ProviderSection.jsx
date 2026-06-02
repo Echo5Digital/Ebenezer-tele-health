@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Award, MapPin, Quote } from 'lucide-react'
 
@@ -11,7 +12,7 @@ const credentials = [
 
 export default function ProviderSection() {
   return (
-    <section className="bg-white" aria-labelledby="provider-heading">
+    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="provider-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         {/* Section label */}
         <div className="text-center mb-12 md:mb-16">
@@ -32,43 +33,8 @@ export default function ProviderSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
-          {/* Photo placeholder */}
-          <div className="flex flex-col items-center lg:items-start gap-5">
-            <div
-              className="relative w-full max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden aspect-[4/5] flex items-center justify-center"
-              style={{ backgroundColor: 'rgba(184,232,220,0.25)', border: '2px dashed rgba(42,122,111,0.3)' }}
-            >
-              {/*
-               * TODO: Replace this placeholder with:
-               * <Image src="/dr-susan-george.jpg" alt="Dr. Susan George, DNP, APRN" fill className="object-cover" priority />
-               */}
-              <div className="text-center px-8 py-10">
-                <div
-                  className="h-24 w-24 rounded-full mx-auto mb-4 flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(42,122,111,0.15)' }}
-                >
-                  <span className="text-4xl font-bold" style={{ color: 'var(--primary)' }}>
-                    SG
-                  </span>
-                </div>
-                <p className="text-sm font-medium text-gray-500">
-                  Professional photo coming soon
-                </p>
-                <p className="text-xs text-gray-400 mt-1">Dr. Susan George, DNP, APRN</p>
-              </div>
-            </div>
-
-            {/* Credential badges */}
-            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-              <Badge variant="mint">DNP</Badge>
-              <Badge variant="mint">APRN</Badge>
-              <Badge variant="mint">BC-ADM</Badge>
-              <Badge variant="seafoam">Women&apos;s Health</Badge>
-            </div>
-          </div>
-
-          {/* Bio & credentials */}
-          <div className="flex flex-col gap-6">
+          {/* Bio & credentials — LEFT on desktop */}
+          <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Your care at Ebenezer Telehealth is led by Dr. Susan George, a
@@ -152,7 +118,28 @@ export default function ProviderSection() {
             {/* Location */}
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <MapPin className="h-4 w-4 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
-              Serving patients throughout Oklahoma via secure telehealth
+              Based in Oklahoma City, OK — serving patients throughout Oklahoma via secure telehealth
+            </div>
+          </div>
+
+          {/* Provider photo — RIGHT on desktop */}
+          <div className="flex flex-col items-center gap-5 order-1 lg:order-2">
+            <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
+              <Image
+                src="/doc_img.webp"
+                alt="Dr. Susan George, DNP, APRN — Provider at Ebenezer Telehealth, Oklahoma City"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+
+            {/* Credential badges */}
+            <div className="flex flex-wrap gap-2 justify-center">
+              <Badge variant="mint">DNP</Badge>
+              <Badge variant="mint">APRN</Badge>
+              <Badge variant="mint">BC-ADM</Badge>
+              <Badge variant="seafoam">Women&apos;s Health</Badge>
             </div>
           </div>
         </div>

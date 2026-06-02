@@ -14,7 +14,7 @@ const valueCards = [
   {
     icon: Wifi,
     title: 'Care from anywhere in Oklahoma.',
-    body: 'Skip the drive and the waiting room. Connect securely from home.',
+    body: 'Skip the drive and the waiting room. Connect via secure telehealth from anywhere in Oklahoma.',
   },
   {
     icon: Heart,
@@ -25,28 +25,40 @@ const valueCards = [
 
 export default function QuickValueBar() {
   return (
-    <section className="bg-gray-50" aria-label="Why choose Ebenezer Telehealth">
+    <section style={{ backgroundColor: 'var(--navy)' }} aria-label="Why choose Ebenezer Telehealth">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {valueCards.map((card) => (
             <div
               key={card.title}
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col gap-3 hover:shadow-md transition-shadow"
+              className="rounded-xl p-6 flex flex-col gap-3 transition-all hover:-translate-y-0.5"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.10)',
+              }}
             >
               <div
                 className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
-                style={{ backgroundColor: 'rgba(184,232,220,0.5)' }}
+                style={{ backgroundColor: 'rgba(184,232,220,0.18)' }}
                 aria-hidden="true"
               >
                 <card.icon
                   className="h-5 w-5"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--mint)' }}
                 />
               </div>
-              <h3 className="text-base font-semibold leading-snug" style={{ color: 'var(--navy)' }}>
+              <h3
+                className="text-base font-semibold leading-snug"
+                style={{ color: '#ffffff' }}
+              >
                 {card.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{card.body}</p>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: 'rgba(255,255,255,0.65)' }}
+              >
+                {card.body}
+              </p>
             </div>
           ))}
         </div>

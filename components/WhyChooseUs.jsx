@@ -3,13 +3,13 @@ import { CheckCircle2 } from 'lucide-react'
 const bullets = [
   'You see a real, named provider every time — Dr. Susan George, DNP, APRN, BC-ADM.',
   "Transparent cash pricing so you can make a confident decision before you book.",
-  "Convenient and private — secure, HIPAA-compliant visits from wherever you are in Oklahoma.",
-  "Especially for women and families, with a provider who specializes in women's health.",
+  "Convenient and private — secure, HIPAA-compliant telehealth visits from wherever you are in Oklahoma.",
+  "Faith-driven care for women and families — with a Women's Health Specialist who is Board Certified in Advanced Diabetes Management (BC-ADM).",
 ]
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white" aria-labelledby="why-heading">
+    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="why-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
               Why Oklahomans Choose Ebenezer Telehealth
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-              Ebenezer Telehealth was built to make quality medical care
+              Ebenezer Telehealth was built to make quality telehealth care
               accessible to women and families across Oklahoma — without the
               long drives, crowded waiting rooms, or confusing bills. We deliver
               care with integrity, dignity, and a personal touch that reflects

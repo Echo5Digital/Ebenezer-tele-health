@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function FinalCTA() {
   return (
     <section
@@ -25,17 +27,17 @@ export default function FinalCTA() {
           Ready to See a Provider Today?
         </h2>
         <p className="text-lg text-white/80 mb-8 leading-relaxed">
-          Compassionate, affordable online care for Oklahoma women and
+          Compassionate, affordable telehealth for Oklahoma women and
           families — without the wait.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
+          <Link
             href="/contact"
             className="btn-ghost-white text-base px-8 py-3.5 w-full sm:w-auto"
           >
             Book Your Visit
-          </a>
+          </Link>
           <a
             href="tel:4053498188"
             className="inline-flex items-center justify-center gap-2 text-white/90 hover:text-white font-semibold text-base transition-colors w-full sm:w-auto"

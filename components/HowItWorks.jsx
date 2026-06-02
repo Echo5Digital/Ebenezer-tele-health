@@ -4,8 +4,19 @@ const steps = [
   {
     number: '01',
     title: 'Book Your Visit',
-    description:
-      'Book your visit online or call (405) 349-8188 to schedule at a time that works for you.',
+    description: (
+      <>
+        Book your visit online or{' '}
+        <a
+          href="tel:4053498188"
+          className="font-semibold underline"
+          style={{ color: 'var(--mint)' }}
+        >
+          call (405) 349-8188
+        </a>{' '}
+        to schedule at a time that works for you.
+      </>
+    ),
   },
   {
     number: '02',
@@ -31,7 +42,7 @@ export default function HowItWorks() {
   return (
     <section
       className="relative"
-      style={{ backgroundColor: 'rgba(184,232,220,0.12)' }}
+      style={{ backgroundColor: 'var(--navy)' }}
       aria-labelledby="how-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -40,17 +51,35 @@ export default function HowItWorks() {
         <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
+            style={{ color: 'var(--mint)' }}
           >
             How It Works
           </span>
           <h2
             id="how-heading"
-            className="text-3xl md:text-4xl font-bold"
-            style={{ color: 'var(--navy)' }}
+            className="text-3xl md:text-4xl font-bold mb-5"
+            style={{ color: '#ffffff' }}
           >
-            Getting Care Online Is Simple
+            How Do Online Doctor Visits in Oklahoma Work?
           </h2>
+          {/* AEO answer-first paragraph — ~45 words, direct answer before elaboration */}
+          <p
+            className="text-base md:text-lg max-w-2xl mx-auto"
+            style={{ color: 'rgba(255,255,255,0.75)' }}
+          >
+            Book online or{' '}
+            <a
+              href="tel:4053498188"
+              className="font-semibold underline"
+              style={{ color: 'var(--mint)' }}
+            >
+              call (405) 349-8188
+            </a>
+            , complete a short health intake, then meet Dr. Susan George by
+            secure video from anywhere in Oklahoma. The visit is a real medical
+            consultation. You receive a diagnosis, treatment plan, and
+            prescriptions sent electronically to your pharmacy when appropriate.
+          </p>
         </div>
 
         {/* Steps grid */}
@@ -61,12 +90,18 @@ export default function HowItWorks() {
               {index < steps.length - 1 && (
                 <div
                   className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                  style={{ backgroundColor: 'rgba(42,122,111,0.25)' }}
+                  style={{ backgroundColor: 'rgba(184,232,220,0.25)' }}
                   aria-hidden="true"
                 />
               )}
 
-              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4 h-full">
+              <div
+                className="rounded-2xl p-6 flex flex-col gap-4 h-full"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.10)',
+                }}
+              >
                 <div
                   className="inline-flex h-14 w-14 items-center justify-center rounded-xl text-xl font-bold"
                   style={{
@@ -78,11 +113,14 @@ export default function HowItWorks() {
                 </div>
                 <h3
                   className="text-base font-semibold leading-snug"
-                  style={{ color: 'var(--navy)' }}
+                  style={{ color: '#ffffff' }}
                 >
                   {step.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: 'rgba(255,255,255,0.65)' }}
+                >
                   {step.description}
                 </p>
               </div>
@@ -95,6 +133,16 @@ export default function HowItWorks() {
           <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
             Book Your Visit
           </Link>
+          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+            or{' '}
+            <a
+              href="tel:4053498188"
+              className="font-semibold"
+              style={{ color: 'var(--mint)' }}
+            >
+              call (405) 349-8188
+            </a>
+          </p>
         </div>
       </div>
     </section>
