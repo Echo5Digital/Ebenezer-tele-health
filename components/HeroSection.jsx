@@ -24,7 +24,7 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden -mt-[80px]"
+      className="relative overflow-hidden -mt-[80px] min-h-[600px] md:min-h-[80vh]"
       style={{ backgroundColor: 'var(--navy)' }}
       aria-label="Hero"
     >
@@ -49,7 +49,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[100px] pb-14 md:pt-[120px] md:pb-20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[140px] pb-24 md:pt-[160px] md:pb-32">
         <div className="max-w-3xl">
           {/* Pre-headline badge */}
           <div
@@ -136,21 +136,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom wave separator — fill matches AnswerBlock cream bg */}
-      <div className="relative h-8 overflow-hidden" aria-hidden="true">
-        <svg
-          viewBox="0 0 1440 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute bottom-0 w-full"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 32C360 0 720 0 1080 16C1260 24 1380 32 1440 32H0Z"
-            fill="#EDF7F4"
-          />
-        </svg>
-      </div>
+
     </section>
   )
 }

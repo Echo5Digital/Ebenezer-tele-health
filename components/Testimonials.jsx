@@ -21,19 +21,9 @@ const placeholderTestimonials = [
   },
 ]
 
-function StarRating() {
-  return (
-    <div className="flex gap-0.5" aria-label="5 out of 5 stars">
-      {[...Array(5)].map((_, i) => (
-        <Star
-          key={i}
-          className="h-4 w-4 fill-amber-400 text-amber-400"
-          aria-hidden="true"
-        />
-      ))}
-    </div>
-  )
-}
+// NOTE: No sub-component functions at module level — this is a Server Component.
+// Defining a named function component here causes __webpack_modules__[moduleId]
+// is not a function at runtime in Next.js 15. Keep all JSX inlined instead.
 
 export default function Testimonials() {
   return (
@@ -79,7 +69,15 @@ export default function Testimonials() {
                 Client review placeholder
               </div>
 
-              <StarRating />
+              <div className="flex gap-0.5" aria-label="5 out of 5 stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="h-4 w-4 fill-amber-400 text-amber-400"
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
 
               <blockquote
                 className="text-sm italic leading-relaxed flex-1"

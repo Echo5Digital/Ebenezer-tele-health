@@ -129,7 +129,7 @@ export default function ProviderSection() {
                 src="/doc_img.webp"
                 alt="Dr. Susan George, DNP, APRN — Provider at Ebenezer Telehealth, Oklahoma City"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 priority
               />
             </div>

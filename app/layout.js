@@ -49,6 +49,9 @@ export const metadata = {
     description:
       "Affordable cash-pay telehealth in Oklahoma. Women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
   },
+  icons: {
+    icon: '/7c290023-b033-4171-a9fc-6f290c7ccf74.svg',
+  },
   robots: {
     index: true,
     follow: true,

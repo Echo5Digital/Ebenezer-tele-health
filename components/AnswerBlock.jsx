@@ -7,15 +7,20 @@
 export default function AnswerBlock() {
   return (
     <section
-      style={{ backgroundColor: 'var(--cream)' }}
+      className="relative overflow-hidden"
       aria-label="About Ebenezer Telehealth"
     >
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(237,247,244,0.55)' }}
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 md:py-12">
         <div
           className="rounded-xl border px-6 py-6 md:px-8 md:py-7"
           style={{
             borderColor: 'rgba(42,122,111,0.2)',
-            backgroundColor: 'rgba(184,232,220,0.12)',
+            backgroundColor: '#ffffff',
           }}
         >
           {/* AEO entity statement — speakable schema target */}

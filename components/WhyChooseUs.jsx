@@ -9,8 +9,22 @@ const bullets = [
 
 export default function WhyChooseUs() {
   return (
-    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="why-heading">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <section
+      className="relative overflow-hidden"
+      aria-labelledby="why-heading"
+      style={{
+        backgroundImage: "url('/body_bg.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(237,247,244,0.70)' }}
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Text */}
@@ -54,7 +68,7 @@ export default function WhyChooseUs() {
           <div className="flex items-center justify-center lg:justify-end">
             <div
               className="relative w-full max-w-sm rounded-2xl p-8"
-              style={{ backgroundColor: 'rgba(184,232,220,0.2)', border: '1px solid rgba(42,122,111,0.15)' }}
+              style={{ backgroundColor: '#ffffff', border: '1px solid rgba(42,122,111,0.2)' }}
             >
               {/* Stats / trust signals */}
               <div className="space-y-6">

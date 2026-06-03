@@ -76,8 +76,24 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="faq-heading">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <section
+      className="relative overflow-hidden"
+      aria-labelledby="faq-heading"
+      style={{
+        backgroundImage: "url('/body_bg2.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Cream overlay — keeps content legible, lets bg image show subtly */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(237,247,244,0.48)' }}
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12">
