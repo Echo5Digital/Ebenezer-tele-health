@@ -100,7 +100,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
               Book Your Visit
             </Link>
@@ -111,28 +111,28 @@ export default function HeroSection() {
               Call (405) 349-8188
             </a>
           </div>
+        </div>
 
-          {/* Trust strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {trustItems.map((item) => (
-              <div
-                key={item.text}
-                className="flex items-center gap-2"
+        {/* Trust strip — outside max-w-3xl so each item keeps its natural width on sm+ */}
+        <div className="grid grid-cols-2 gap-3 mt-10 sm:flex sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+          {trustItems.map((item) => (
+            <div
+              key={item.text}
+              className="flex items-center gap-2"
+            >
+              <item.icon
+                className="h-4 w-4 flex-shrink-0"
+                style={{ color: 'var(--mint)' }}
+                aria-hidden="true"
+              />
+              <span
+                className="text-xs leading-snug sm:whitespace-nowrap"
+                style={{ color: 'rgba(255,255,255,0.70)' }}
               >
-                <item.icon
-                  className="h-4 w-4 flex-shrink-0"
-                  style={{ color: 'var(--mint)' }}
-                  aria-hidden="true"
-                />
-                <span
-                  className="text-xs leading-snug"
-                  style={{ color: 'rgba(255,255,255,0.70)' }}
-                >
-                  {item.text}
-                </span>
-              </div>
-            ))}
-          </div>
+                {item.text}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 

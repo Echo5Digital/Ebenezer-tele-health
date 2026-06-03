@@ -24,18 +24,8 @@ export default function HomePage() {
   return (
     <>
       <SchemaMarkup />
-      {/* Shared background wrapper — body_bg.webp spans hero arc + answer block as one image */}
-      <div
-        style={{
-          backgroundImage: "url('/body_bg.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <HeroSection />
-        <AnswerBlock />
-      </div>
+      <HeroSection />
+      <AnswerBlock />
       <QuickValueBar />
       <ProviderSection />
       <ServicesSection />

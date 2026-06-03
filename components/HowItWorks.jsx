@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import VideoBackground from '@/components/VideoBackground'
 
 const steps = [
   {
@@ -41,11 +42,21 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section
-      className="relative"
+      className="relative overflow-hidden"
       style={{ backgroundColor: 'var(--navy)' }}
       aria-labelledby="how-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      {/* Background video — loops between 2 s and 7 s for smooth playback */}
+      <VideoBackground />
+
+      {/* Dark overlay — keeps all text and cards clearly legible */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(28,43,64,0.55)' }}
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12 md:mb-14">
