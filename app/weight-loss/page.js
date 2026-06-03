@@ -70,7 +70,7 @@ export default function WeightLossPage() {
                 Book Your Visit
               </Link>
               <a
-                href="tel:4053498188"
+                href="tel:+14053498188"
                 className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
               >
                 Call (405) 349-8188
@@ -114,7 +114,7 @@ export default function WeightLossPage() {
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Weight loss isn&apos;t simple, and it&apos;s not one-size-fits-all.
-                Dr. George&apos;s BC-ADM certification gives her deep expertise in
+                Dr. Susan George&apos;s BC-ADM certification gives her deep expertise in
                 how metabolic health, blood sugar, and hormones affect body
                 weight — making her uniquely qualified to guide real, sustainable
                 outcomes.
@@ -153,7 +153,7 @@ export default function WeightLossPage() {
                 creates a plan that is safe and effective for you.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Dr. George&apos;s specialization in Advanced Diabetes Management
+                Dr. Susan George&apos;s specialization in Advanced Diabetes Management
                 means she understands the metabolic drivers of weight gain that
                 many providers overlook.
               </p>
@@ -173,7 +173,7 @@ export default function WeightLossPage() {
           <p className="text-gray-600 mb-4">
             Questions? Call{' '}
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="font-semibold"
               style={{ color: 'var(--primary)' }}
             >

@@ -39,7 +39,7 @@ export default function FinalCTA() {
             Book Your Visit
           </Link>
           <a
-            href="tel:4053498188"
+            href="tel:+14053498188"
             className="inline-flex items-center justify-center gap-2 text-white/90 hover:text-white font-semibold text-base transition-colors w-full sm:w-auto"
           >
             Call (405) 349-8188

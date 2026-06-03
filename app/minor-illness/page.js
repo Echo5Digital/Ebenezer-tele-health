@@ -83,7 +83,7 @@ export default function MinorIllnessPage() {
                 Book Your Visit
               </Link>
               <a
-                href="tel:4053498188"
+                href="tel:+14053498188"
                 className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
               >
                 Call (405) 349-8188
@@ -126,7 +126,7 @@ export default function MinorIllnessPage() {
               </h2>
               <p className="text-gray-600 mb-8">
                 Many minor illnesses don&apos;t require an in-person visit.
-                Dr. George can evaluate your symptoms, make a diagnosis, and
+                Dr. Susan George can evaluate your symptoms, make a diagnosis, and
                 prescribe treatment electronically — often the same day you
                 reach out.
               </p>

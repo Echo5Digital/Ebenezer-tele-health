@@ -73,7 +73,7 @@ export default function WomensHealthPage() {
                 Book Your Visit
               </Link>
               <a
-                href="tel:4053498188"
+                href="tel:+14053498188"
                 className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
               >
                 Call (405) 349-8188
@@ -116,7 +116,7 @@ export default function WomensHealthPage() {
                 What We Treat
               </h2>
               <p className="text-gray-600 mb-8">
-                Dr. George brings specialized women&apos;s health expertise to
+                Dr. Susan George brings specialized women&apos;s health expertise to
                 every virtual visit. Common conditions and concerns we address
                 include:
               </p>
@@ -145,7 +145,7 @@ export default function WomensHealthPage() {
                 className="text-xl font-semibold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Why choose Dr. George for women&apos;s health?
+                Why choose Dr. Susan George for women&apos;s health?
               </h3>
               <p className="text-gray-600 mb-5 leading-relaxed">
                 Dr. Susan George is not a generalist — she brings focused
@@ -155,7 +155,7 @@ export default function WomensHealthPage() {
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Every visit is private, secure, and HIPAA-compliant. You speak
-                directly with Dr. George — no rotating staff, no impersonal
+                directly with Dr. Susan George — no rotating staff, no impersonal
                 networks.
               </p>
               <div className="mt-6">
@@ -185,7 +185,7 @@ export default function WomensHealthPage() {
             </Link>{' '}
             or call us directly at{' '}
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="font-semibold"
               style={{ color: 'var(--primary)' }}
             >

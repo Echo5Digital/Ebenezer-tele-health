@@ -105,7 +105,7 @@ export default function HeroSection() {
               Book Your Visit
             </Link>
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="btn-ghost-white text-base px-7 py-3.5 w-full sm:w-auto"
             >
               Call (405) 349-8188

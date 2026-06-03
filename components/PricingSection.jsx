@@ -7,7 +7,7 @@ const plans = [
     price: 'TBD',
     description: 'Online evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
     features: [
-      'Video visit with Dr. George',
+      'Video visit with Dr. Susan George',
       'Diagnosis & treatment plan',
       'Electronic prescriptions when appropriate',
       'Same-day availability',
@@ -18,7 +18,7 @@ const plans = [
     price: 'TBD',
     description: "Comprehensive virtual care for women's health needs including birth control, hormonal health, and more.",
     features: [
-      'Video visit with Dr. George',
+      'Video visit with Dr. Susan George',
       "Women's health specialty care",
       'Prescriptions sent to pharmacy',
       'Private & HIPAA-compliant',
@@ -30,7 +30,7 @@ const plans = [
     price: 'TBD',
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
-      'Video visit with Dr. George',
+      'Video visit with Dr. Susan George',
       'Personalized metabolic health plan',
       'Ongoing management support',
       'Clinical — not a quick-fix program',

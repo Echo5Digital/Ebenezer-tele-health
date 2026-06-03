@@ -43,7 +43,7 @@ const schemaGraph = {
       description:
         "Faith-driven, Oklahoma City-based telehealth practice offering affordable cash-pay online visits for women's health, weight loss management, and minor illnesses to patients across Oklahoma.",
       url: 'https://ebenezertelehealth.com',
-      telephone: '+1-405-349-8188',
+      telephone: '+14053498188',
       priceRange: '$$',
       // TODO: Replace with actual office/provider photo URL supplied by client
       // image: 'https://ebenezertelehealth.com/[office-or-provider-photo].jpg',
@@ -122,12 +122,12 @@ const schemaGraph = {
       },
       paymentAccepted: 'Cash, Credit Card',
       currenciesAccepted: 'USD',
-      // TODO: Add social/profile URLs once provided by client
-      sameAs: [
-        // '[CLIENT TO PROVIDE - Google Business Profile URL]',
-        // '[CLIENT TO PROVIDE - Facebook URL]',
-        // '[CLIENT TO PROVIDE - Instagram URL]',
-      ],
+      // TODO: Uncomment and add social/profile URLs once provided by client
+      // sameAs: [
+      //   '[CLIENT TO PROVIDE - Google Business Profile URL]',
+      //   '[CLIENT TO PROVIDE - Facebook URL]',
+      //   '[CLIENT TO PROVIDE - Instagram URL]',
+      // ],
     },
 
     // ── 2. WebSite ────────────────────────────────────────────────────────────

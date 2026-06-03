@@ -8,7 +8,7 @@ const steps = [
       <>
         Book your visit online or{' '}
         <a
-          href="tel:4053498188"
+          href="tel:+14053498188"
           className="font-semibold underline"
           style={{ color: 'var(--mint)' }}
         >
@@ -26,7 +26,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet with Dr. George',
+    title: 'Meet with Dr. Susan George',
     description:
       'Connect by secure video from anywhere in Oklahoma. A private, real medical consultation.',
   },
@@ -69,7 +69,7 @@ export default function HowItWorks() {
           >
             Book online or{' '}
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="font-semibold underline"
               style={{ color: 'var(--mint)' }}
             >
@@ -136,7 +136,7 @@ export default function HowItWorks() {
           <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
             or{' '}
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="font-semibold"
               style={{ color: 'var(--mint)' }}
             >

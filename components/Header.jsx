@@ -7,10 +7,10 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Phone, ArrowUpRight } from 'lucide-react'
 
 const navigation = [
-  { name: 'Home', href: '/' },
   { name: "Women's Health", href: '/womens-health' },
   { name: 'Weight Loss', href: '/weight-loss' },
   { name: 'Minor Illness', href: '/minor-illness' },
+  { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -73,20 +73,23 @@ export default function Header() {
             className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
             aria-label="Ebenezer Telehealth — Home"
           >
-            <Image
-              src="/ez_logo.png"
-              alt="Ebenezer Telehealth"
-              width={108}
-              height={100}
-              priority
-              className="h-11 w-auto object-contain"
-              style={{
-                filter: isTransparent
-                  ? 'brightness(0) invert(1) drop-shadow(0 0 6px rgba(0,0,0,0.35))'
-                  : 'none',
-                transition: 'filter 0.3s ease',
-              }}
-            />
+            <div
+              className="rounded-xl transition-all duration-300"
+              style={isTransparent ? {
+                background: 'rgba(255,255,255,0.92)',
+                padding: '5px 12px',
+                boxShadow: '0 2px 16px rgba(0,0,0,0.2)',
+              } : {}}
+            >
+              <Image
+                src="/ez_logo.png"
+                alt="Ebenezer Telehealth"
+                width={108}
+                height={100}
+                priority
+                className="h-11 w-auto object-contain"
+              />
+            </div>
           </Link>
 
           {/* Desktop nav links */}
@@ -113,7 +116,7 @@ export default function Header() {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors ${
                 isTransparent ? 'text-white/70 hover:text-white' : 'text-gray-500 hover:text-primary'
               }`}
@@ -184,7 +187,7 @@ export default function Header() {
               {/* Mobile CTAs */}
               <div className="mt-4 pt-4 border-t border-gray-100 space-y-2">
                 <a
-                  href="tel:4053498188"
+                  href="tel:+14053498188"
                   className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors"
                 >
                   <Phone

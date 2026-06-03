@@ -29,7 +29,7 @@ export default function ContactPage() {
               Book Your Visit
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Ready to see Dr. George? Book online or call us directly.
+              Ready to see Dr. Susan George? Book online or call us directly.
               Same-day appointments are often available.
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
               <p className="text-sm text-gray-500 text-center">
                 Prefer to call? Reach us at{' '}
                 <a
-                  href="tel:4053498188"
+                  href="tel:+14053498188"
                   className="font-semibold"
                   style={{ color: 'var(--primary)' }}
                 >
@@ -118,7 +118,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm font-semibold text-gray-800">Phone</p>
                       <a
-                        href="tel:4053498188"
+                        href="tel:+14053498188"
                         className="text-base font-semibold hover:text-primary transition-colors"
                         style={{ color: 'var(--primary)' }}
                       >

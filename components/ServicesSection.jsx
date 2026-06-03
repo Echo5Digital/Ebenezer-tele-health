@@ -14,7 +14,7 @@ const services = [
     title: 'Online Weight Loss Management',
     slug: 'weight-loss',
     description:
-      'A medically guided weight-loss plan built around your metabolic health — overseen by Dr. George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick-fix gimmick.',
+      'A medically guided weight-loss plan built around your metabolic health — overseen by Dr. Susan George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick-fix gimmick.',
   },
   {
     icon: Thermometer,
@@ -132,7 +132,7 @@ export default function ServicesSection() {
           <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
             or{' '}
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="font-semibold"
               style={{ color: 'var(--mint)' }}
             >

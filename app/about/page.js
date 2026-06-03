@@ -109,7 +109,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 With a deep commitment to compassionate, faith-driven medicine,
-                Dr. George provides accessible, affordable care to women and
+                Dr. Susan George provides accessible, affordable care to women and
                 families across Oklahoma — with the integrity, dignity, and
                 personal attention every patient deserves.
               </p>
@@ -206,7 +206,7 @@ export default function AboutPage() {
             Ready to Experience the Difference?
           </h2>
           <p className="text-white/80 mb-8">
-            Book your visit with Dr. George — same-day appointments often
+            Book your visit with Dr. Susan George — same-day appointments often
             available.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -214,7 +214,7 @@ export default function AboutPage() {
               Book Your Visit
             </Link>
             <a
-              href="tel:4053498188"
+              href="tel:+14053498188"
               className="text-white/90 hover:text-white font-semibold text-base transition-colors w-full sm:w-auto text-center"
             >
               Call (405) 349-8188

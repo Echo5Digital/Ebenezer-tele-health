@@ -44,7 +44,7 @@ export default function ProviderSection() {
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
                 With a deep commitment to compassionate, faith-driven medicine,
-                Dr. George provides accessible, affordable care to women and
+                Dr. Susan George provides accessible, affordable care to women and
                 families across Oklahoma — with the integrity, dignity, and
                 personal attention every patient deserves.
               </p>

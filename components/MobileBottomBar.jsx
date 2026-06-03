@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Phone, CalendarDays } from 'lucide-react'
 
 export default function MobileBottomBar() {
@@ -11,7 +12,7 @@ export default function MobileBottomBar() {
     >
       <div className="flex h-16 shadow-2xl">
         <a
-          href="tel:4053498188"
+          href="tel:+14053498188"
           className="flex flex-1 items-center justify-center gap-2 text-sm font-semibold text-white transition-opacity active:opacity-80"
           style={{ backgroundColor: 'var(--navy)' }}
           aria-label="Call Ebenezer Telehealth at (405) 349-8188"
@@ -19,7 +20,7 @@ export default function MobileBottomBar() {
           <Phone className="h-4 w-4" aria-hidden="true" />
           Call Now
         </a>
-        <a
+        <Link
           href="/contact"
           className="flex flex-1 items-center justify-center gap-2 text-sm font-semibold text-white transition-opacity active:opacity-80"
           style={{ backgroundColor: 'var(--primary)' }}
@@ -27,7 +28,7 @@ export default function MobileBottomBar() {
         >
           <CalendarDays className="h-4 w-4" aria-hidden="true" />
           Book Visit
-        </a>
+        </Link>
       </div>
     </div>
   )
