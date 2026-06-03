@@ -42,7 +42,7 @@ export default function VideoBackground() {
   return (
     <video
       ref={videoRef}
-      className="absolute inset-0 w-full h-full object-cover opacity-50"
+      className="absolute inset-0 w-full h-full object-cover opacity-20"
       autoPlay
       muted
       playsInline
