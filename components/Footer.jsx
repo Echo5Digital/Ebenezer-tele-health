@@ -24,6 +24,7 @@ export default function Footer() {
       className="text-white"
       role="contentinfo"
       style={{
+        backgroundColor: '#02403B',
         background: 'linear-gradient(180deg, #02403B 0%, #024843 40%, #035D57 100%)',
       }}
     >
@@ -53,7 +54,7 @@ export default function Footer() {
                 }}
               >
                 <Image
-                  src="/ez_logo.png"
+                  src="/ebenezer_logo.webp"
                   alt="Ebenezer Telehealth"
                   width={160}
                   height={64}

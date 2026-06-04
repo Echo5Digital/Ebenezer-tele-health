@@ -25,7 +25,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative overflow-hidden -mt-[80px] min-h-[600px] md:min-h-[80vh]"
-      style={{ backgroundColor: '#99D9D9' }}
+      style={{ backgroundColor: '#035D57' }}
       aria-label="Hero"
     >
       {/* Background image at 0.5 opacity */}
@@ -44,7 +44,7 @@ export default function HeroSection() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(3,93,87,0.55) 0%, rgba(3,93,87,0.25) 100%)',
+              'linear-gradient(135deg, rgba(2, 72, 67, 0.85) 0%, rgba(3, 93, 87, 0.65) 100%)',
           }}
         />
       </div>
@@ -55,14 +55,14 @@ export default function HeroSection() {
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 border"
             style={{
-              backgroundColor: 'rgba(3,93,87,0.20)',
-              borderColor: 'rgba(3,93,87,0.40)',
-              color: 'rgba(255,255,255,0.95)',
+              backgroundColor: 'rgba(153,217,217,0.15)',
+              borderColor: 'rgba(153,217,217,0.30)',
+              color: '#99D9D9',
             }}
           >
             <span
               className="inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: '#035D57' }}
+              style={{ backgroundColor: '#99D9D9' }}
               aria-hidden="true"
             />
             Faith-Driven Telehealth &middot; Oklahoma City, OK
@@ -74,14 +74,14 @@ export default function HeroSection() {
             style={{ color: '#ffffff' }}
           >
             Affordable Online{' '}
-            <span style={{ color: '#035D57' }}>Doctor Visits</span>
+            <span style={{ color: '#99D9D9' }}>Doctor Visits</span>
             <br className="hidden sm:block" /> in Oklahoma City
           </h1>
 
           {/* Subheadline */}
           <p
             className="text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
-            style={{ color: 'rgba(255,255,255,0.78)' }}
+            style={{ color: 'rgba(255,255,255,0.92)' }}
           >
             Faith-driven, compassionate telehealth for women and families —
             from anywhere in Oklahoma. See a trusted provider online for{' '}
@@ -122,12 +122,12 @@ export default function HeroSection() {
             >
               <item.icon
                 className="h-4 w-4 flex-shrink-0"
-                style={{ color: '#035D57' }}
+                style={{ color: '#99D9D9' }}
                 aria-hidden="true"
               />
               <span
                 className="text-xs leading-snug sm:whitespace-nowrap"
-                style={{ color: 'rgba(255,255,255,0.70)' }}
+                style={{ color: 'rgba(255,255,255,0.88)' }}
               >
                 {item.text}
               </span>

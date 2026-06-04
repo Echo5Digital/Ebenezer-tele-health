@@ -76,7 +76,7 @@ export default function HowItWorks() {
           {/* AEO answer-first paragraph — ~45 words, direct answer before elaboration */}
           <p
             className="text-base md:text-lg max-w-2xl mx-auto"
-            style={{ color: 'rgba(255,255,255,0.75)' }}
+            style={{ color: 'rgba(255,255,255,0.92)' }}
           >
             Book online or{' '}
             <a
@@ -130,7 +130,7 @@ export default function HowItWorks() {
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
-                  style={{ color: 'rgba(255,255,255,0.65)' }}
+                  style={{ color: 'rgba(255,255,255,0.88)' }}
                 >
                   {step.description}
                 </p>
@@ -144,7 +144,7 @@ export default function HowItWorks() {
           <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
             Book Your Visit
           </Link>
-          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.85)' }}>
             or{' '}
             <a
               href="tel:+14053498188"

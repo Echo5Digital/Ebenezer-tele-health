@@ -47,9 +47,10 @@ export default function Header() {
       <div
         className="px-3 sm:px-5 lg:px-6 py-3 transition-all duration-300"
         style={isTransparent ? {} : {
-          background: 'linear-gradient(180deg, rgba(3,93,87,0.08) 0%, rgba(255,255,255,0.97) 100%)',
-          backdropFilter: 'blur(18px)',
-          WebkitBackdropFilter: 'blur(18px)',
+          background: 'rgba(255, 255, 255, 0.98)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          boxShadow: '0 1px 4px rgba(0,0,0,0.05)',
         }}
       >
         {/* Floating nav card */}
@@ -60,11 +61,11 @@ export default function Header() {
             background: '#035D57',
             border: '1px solid rgba(255,255,255,0.15)',
           } : {
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(153,217,217,0.15) 100%)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(153,217,217,0.25) 100%)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
             border: '1px solid rgba(3,93,87,0.18)',
-            boxShadow: '0 4px 24px rgba(3,93,87,0.10), inset 0 1px 0 rgba(255,255,255,0.8)',
+            boxShadow: '0 4px 24px rgba(3,93,87,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
           }}
         >
           {/* Logo */}
@@ -82,7 +83,7 @@ export default function Header() {
               } : {}}
             >
               <Image
-                src="/ez_logo.png"
+                src="/ebenezer_logo.webp"
                 alt="Ebenezer Telehealth"
                 width={108}
                 height={100}

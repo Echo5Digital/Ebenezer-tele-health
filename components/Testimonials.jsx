@@ -81,7 +81,7 @@ export default function Testimonials() {
 
               <blockquote
                 className="text-sm italic leading-relaxed flex-1"
-                style={{ color: 'rgba(255,255,255,0.65)' }}
+                style={{ color: 'rgba(255,255,255,0.88)' }}
               >
                 &ldquo;{testimonial.text}&rdquo;
               </blockquote>
@@ -103,13 +103,13 @@ export default function Testimonials() {
                 <div>
                   <p
                     className="text-sm font-semibold"
-                    style={{ color: 'rgba(255,255,255,0.85)' }}
+                    style={{ color: 'rgba(255,255,255,0.95)' }}
                   >
                     {testimonial.author}
                   </p>
                   <p
                     className="text-xs"
-                    style={{ color: 'rgba(255,255,255,0.55)' }}
+                    style={{ color: 'rgba(255,255,255,0.78)' }}
                   >
                     {testimonial.location}
                   </p>
@@ -122,7 +122,7 @@ export default function Testimonials() {
         {/* Google review note */}
         <p
           className="text-center text-sm mt-8"
-          style={{ color: 'rgba(255,255,255,0.50)' }}
+          style={{ color: 'rgba(255,255,255,0.72)' }}
         >
           Reviews will be sourced from Google. Placeholders above will be replaced with
           real patient feedback.

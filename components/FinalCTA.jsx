@@ -26,7 +26,7 @@ export default function FinalCTA() {
         >
           Ready to See a Provider Today?
         </h2>
-        <p className="text-lg text-white/80 mb-8 leading-relaxed">
+        <p className="text-lg text-white/95 mb-8 leading-relaxed">
           Compassionate, affordable telehealth for Oklahoma women and
           families — without the wait.
         </p>
@@ -47,7 +47,7 @@ export default function FinalCTA() {
         </div>
 
         {/* NAP reinforcement */}
-        <p className="mt-10 text-sm text-white/50">
+        <p className="mt-10 text-sm text-white/70">
           Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405) 349-8188 &middot; ebenezertelehealth.com
         </p>
       </div>

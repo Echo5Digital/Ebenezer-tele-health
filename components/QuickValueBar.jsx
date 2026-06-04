@@ -55,7 +55,7 @@ export default function QuickValueBar() {
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: 'rgba(255,255,255,0.65)' }}
+                style={{ color: 'rgba(255,255,255,0.88)' }}
               >
                 {card.body}
               </p>

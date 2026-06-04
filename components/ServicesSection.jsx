@@ -48,7 +48,7 @@ export default function ServicesSection() {
           {/* AEO answer-first paragraph — ~44 words, direct answer before elaboration */}
           <p
             className="text-base md:text-lg max-w-2xl mx-auto"
-            style={{ color: 'rgba(255,255,255,0.75)' }}
+            style={{ color: 'rgba(255,255,255,0.92)' }}
           >
             Dr. Susan George, DNP, APRN, treats{' '}
             <strong className="font-semibold" style={{ color: '#ffffff' }}>
@@ -99,7 +99,7 @@ export default function ServicesSection() {
 
               <p
                 className="text-sm leading-relaxed flex-1"
-                style={{ color: 'rgba(255,255,255,0.70)' }}
+                style={{ color: 'rgba(255,255,255,0.88)' }}
               >
                 {service.description}
               </p>
@@ -122,14 +122,14 @@ export default function ServicesSection() {
 
         {/* Post-services CTA */}
         <div className="mt-12 text-center">
-          <p className="mb-5" style={{ color: 'rgba(255,255,255,0.70)' }}>
+          <p className="mb-5" style={{ color: 'rgba(255,255,255,0.88)' }}>
             Not sure which service is right for you? Get in touch and we&apos;ll
             help.
           </p>
           <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
             Book Your Visit
           </Link>
-          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.85)' }}>
             or{' '}
             <a
               href="tel:+14053498188"
