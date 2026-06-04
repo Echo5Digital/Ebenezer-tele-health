@@ -65,8 +65,8 @@ export default function ContactPage() {
               <div
                 className="rounded-xl flex items-center justify-center py-16 text-center"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.15)',
-                  border: '2px dashed rgba(42,122,111,0.25)',
+                  backgroundColor: 'rgba(153,217,217,0.15)',
+                  border: '2px dashed rgba(3,93,87,0.25)',
                 }}
               >
                 <div>
@@ -177,8 +177,8 @@ export default function ContactPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.15)',
-                  border: '1px solid rgba(42,122,111,0.2)',
+                  backgroundColor: 'rgba(153,217,217,0.15)',
+                  border: '1px solid rgba(3,93,87,0.20)',
                 }}
               >
                 <h3

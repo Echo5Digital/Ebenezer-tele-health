@@ -11,7 +11,7 @@ const steps = [
         <a
           href="tel:+14053498188"
           className="font-semibold underline"
-          style={{ color: 'var(--mint)' }}
+          style={{ color: '#99D9D9' }}
         >
           call (405) 349-8188
         </a>{' '}
@@ -43,7 +43,7 @@ export default function HowItWorks() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ backgroundColor: 'var(--navy)' }}
+      style={{ backgroundColor: '#035D57' }}
       aria-labelledby="how-heading"
     >
       {/* Background video — loops between 2 s and 7 s for smooth playback */}
@@ -52,7 +52,7 @@ export default function HowItWorks() {
       {/* Dark overlay — keeps all text and cards clearly legible */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: 'rgba(28,43,64,0.55)' }}
+        style={{ backgroundColor: 'rgba(3,93,87,0.50)' }}
         aria-hidden="true"
       />
 
@@ -62,7 +62,7 @@ export default function HowItWorks() {
         <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--mint)' }}
+            style={{ color: '#99D9D9' }}
           >
             How It Works
           </span>
@@ -82,7 +82,7 @@ export default function HowItWorks() {
             <a
               href="tel:+14053498188"
               className="font-semibold underline"
-              style={{ color: 'var(--mint)' }}
+              style={{ color: '#99D9D9' }}
             >
               call (405) 349-8188
             </a>
@@ -101,7 +101,7 @@ export default function HowItWorks() {
               {index < steps.length - 1 && (
                 <div
                   className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                  style={{ backgroundColor: 'rgba(184,232,220,0.25)' }}
+                  style={{ backgroundColor: 'rgba(153,217,217,0.22)' }}
                   aria-hidden="true"
                 />
               )}
@@ -149,7 +149,7 @@ export default function HowItWorks() {
             <a
               href="tel:+14053498188"
               className="font-semibold"
-              style={{ color: 'var(--mint)' }}
+              style={{ color: '#99D9D9' }}
             >
               call (405) 349-8188
             </a>

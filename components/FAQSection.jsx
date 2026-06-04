@@ -89,7 +89,7 @@ export default function FAQSection() {
       {/* Cream overlay — keeps content legible, lets bg image show subtly */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: 'rgba(237,247,244,0.48)' }}
+        style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
         aria-hidden="true"
       />
 

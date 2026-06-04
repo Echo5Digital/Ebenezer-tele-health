@@ -14,8 +14,8 @@ const legalLinks = [
 ]
 
 const sectionHeadingStyle = {
-  color: 'var(--mint)',
-  borderBottom: '1px solid rgba(184,232,220,0.15)',
+  color: '#99D9D9',
+  borderBottom: '1px solid rgba(153,217,217,0.20)',
 }
 
 export default function Footer() {
@@ -24,14 +24,14 @@ export default function Footer() {
       className="text-white"
       role="contentinfo"
       style={{
-        background: 'linear-gradient(180deg, #0A1929 0%, #0D1E30 40%, var(--navy) 100%)',
+        background: 'linear-gradient(180deg, #02403B 0%, #024843 40%, #035D57 100%)',
       }}
     >
       {/* Primary color top accent line */}
       <div
         className="h-1 w-full"
         style={{
-          background: 'linear-gradient(90deg, var(--primary) 0%, var(--mint) 50%, var(--primary) 100%)',
+          background: 'linear-gradient(90deg, #035D57 0%, #99D9D9 50%, #035D57 100%)',
         }}
         aria-hidden="true"
       />
@@ -82,10 +82,10 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(184,232,220,0.1)' }}
+                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
                   aria-hidden="true"
                 >
-                  <MapPin className="h-3.5 w-3.5" style={{ color: 'var(--seafoam)' }} />
+                  <MapPin className="h-3.5 w-3.5"                   style={{ color: '#99D9D9' }} />
                 </div>
                 <div>
                   <strong className="text-white font-semibold block mb-0.5">Ebenezer Telehealth</strong>
@@ -101,10 +101,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(184,232,220,0.1)' }}
+                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
                   aria-hidden="true"
                 >
-                  <Phone className="h-3.5 w-3.5" style={{ color: 'var(--seafoam)' }} />
+                  <Phone className="h-3.5 w-3.5" style={{ color: '#99D9D9' }} />
                 </div>
                 <a href="tel:+14053498188" className="font-medium transition-colors hover:text-white">
                   (405) 349-8188
@@ -115,10 +115,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(184,232,220,0.1)' }}
+                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
                   aria-hidden="true"
                 >
-                  <Mail className="h-3.5 w-3.5" style={{ color: 'var(--seafoam)' }} />
+                  <Mail className="h-3.5 w-3.5" style={{ color: '#99D9D9' }} />
                 </div>
                 <a
                   href="mailto:contact@ebenezertelehealth.com"
@@ -132,10 +132,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(184,232,220,0.1)' }}
+                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
                   aria-hidden="true"
                 >
-                  <Globe className="h-3.5 w-3.5" style={{ color: 'var(--seafoam)' }} />
+                  <Globe className="h-3.5 w-3.5" style={{ color: '#99D9D9' }} />
                 </div>
                 <span>ebenezertelehealth.com</span>
               </div>
@@ -165,7 +165,7 @@ export default function Footer() {
                   >
                     <ArrowUpRight
                       className="h-3.5 w-3.5 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      style={{ color: 'var(--mint)' }}
+                      style={{ color: '#99D9D9' }}
                       aria-hidden="true"
                     />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>

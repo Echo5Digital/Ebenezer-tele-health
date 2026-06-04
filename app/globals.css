@@ -4,18 +4,13 @@
 
 @layer base {
   :root {
-    /*
-     * IMPORTANT — PLACEHOLDER COLORS
-     * Extract exact HEX values from the Ebenezer Telehealth logo file
-     * and replace these values. Update tailwind.config.js to match.
-     */
-    --primary: #2A7A6F;
-    --primary-dark: #1E5C54;
-    --navy: #1C2B40;
-    --mint: #B8E8DC;
-    --seafoam: #8CCBBF;
-    --cream: #EDF7F4;
-    --deep-teal: #0E3D38;
+    --primary: #035D57;
+    --primary-dark: #024843;
+    --navy: #035D57;
+    --mint: #99D9D9;
+    --seafoam: #99D9D9;
+    --cream: #E8F7F7;
+    --deep-teal: #024843;
 
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -33,7 +28,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 170 48% 32%;
+    --ring: 178 93% 19%;
     --radius: 0.75rem;
   }
 }
@@ -102,12 +97,12 @@
     border-radius: 0.625rem;
     padding: 0.75rem 1.75rem;
     transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
-    box-shadow: 0 2px 8px rgba(42, 122, 111, 0.25);
+    box-shadow: 0 2px 8px rgba(3, 93, 87, 0.30);
   }
 
   .btn-primary:hover {
     background-color: var(--primary-dark);
-    box-shadow: 0 4px 16px rgba(42, 122, 111, 0.35);
+    box-shadow: 0 4px 16px rgba(3, 93, 87, 0.40);
     transform: translateY(-1px);
   }
 

@@ -140,14 +140,14 @@ export default function AboutPage() {
               <div
                 className="rounded-2xl overflow-hidden aspect-[4/5] flex items-center justify-center max-w-sm mx-auto lg:mx-0 mb-6"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.25)',
-                  border: '2px dashed rgba(42,122,111,0.3)',
+                  backgroundColor: 'rgba(153,217,217,0.25)',
+                  border: '2px dashed rgba(3,93,87,0.30)',
                 }}
               >
                 <div className="text-center px-8">
                   <div
                     className="h-24 w-24 rounded-full mx-auto mb-4 flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(42,122,111,0.15)' }}
+                    style={{ backgroundColor: 'rgba(3,93,87,0.15)' }}
                   >
                     <span
                       className="text-4xl font-bold"
@@ -166,7 +166,7 @@ export default function AboutPage() {
               <figure
                 className="rounded-xl p-6 border-l-4"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.15)',
+                  backgroundColor: 'rgba(153,217,217,0.15)',
                   borderColor: 'var(--primary)',
                 }}
               >

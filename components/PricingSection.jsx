@@ -80,10 +80,10 @@ export default function PricingSection() {
               }`}
               style={
                 plan.featured
-                  ? {
+                   ? {
                       background:
-                        'linear-gradient(135deg, rgba(42,122,111,0.05) 0%, rgba(184,232,220,0.15) 100%)',
-                      borderColor: 'rgba(42,122,111,0.3)',
+                        'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
+                      borderColor: 'rgba(3,93,87,0.30)',
                     }
                   : {}
               }
@@ -144,8 +144,8 @@ export default function PricingSection() {
         <div
           className="mt-10 rounded-xl p-5 flex items-start gap-3"
           style={{
-            backgroundColor: 'rgba(184,232,220,0.15)',
-            border: '1px solid rgba(42,122,111,0.2)',
+            backgroundColor: 'rgba(153,217,217,0.15)',
+            border: '1px solid rgba(3,93,87,0.20)',
           }}
           role="note"
         >

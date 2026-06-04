@@ -373,8 +373,8 @@ export default function HipaaNoticePage() {
             <div
               className="rounded-xl p-5"
               style={{
-                backgroundColor: 'rgba(184,232,220,0.15)',
-                border: '1px solid rgba(42,122,111,0.2)',
+                backgroundColor: 'rgba(153,217,217,0.15)',
+                border: '1px solid rgba(3,93,87,0.20)',
               }}
             >
               <p className="text-sm text-gray-600">

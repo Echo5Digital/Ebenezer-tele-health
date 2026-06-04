@@ -27,14 +27,14 @@ const placeholderTestimonials = [
 
 export default function Testimonials() {
   return (
-    <section style={{ backgroundColor: 'var(--primary)' }} aria-labelledby="testimonials-heading">
+    <section style={{ backgroundColor: '#035D57' }} aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--mint)' }}
+            style={{ color: '#99D9D9' }}
           >
             Patient Stories
           </span>
@@ -62,8 +62,8 @@ export default function Testimonials() {
               <div
                 className="inline-block self-start rounded-full px-3 py-1 text-xs font-semibold"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.25)',
-                  color: 'var(--mint)',
+                  backgroundColor: 'rgba(153,217,217,0.22)',
+                  color: '#99D9D9',
                 }}
               >
                 Client review placeholder
@@ -93,7 +93,7 @@ export default function Testimonials() {
                 <div
                   className="h-9 w-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
                   style={{
-                    backgroundColor: 'rgba(184,232,220,0.30)',
+                    backgroundColor: 'rgba(153,217,217,0.28)',
                     color: '#ffffff',
                   }}
                   aria-hidden="true"

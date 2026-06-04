@@ -25,12 +25,12 @@ export default function HeroSection() {
   return (
     <section
       className="relative overflow-hidden -mt-[80px] min-h-[600px] md:min-h-[80vh]"
-      style={{ backgroundColor: 'var(--navy)' }}
+      style={{ backgroundColor: '#99D9D9' }}
       aria-label="Hero"
     >
       {/* Background image at 0.5 opacity */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-15">
           <Image
             src="/ez-home-bg.webp"
             alt=""
@@ -44,7 +44,7 @@ export default function HeroSection() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(28,43,64,0.80) 0%, rgba(28,43,64,0.45) 100%)',
+              'linear-gradient(135deg, rgba(3,93,87,0.55) 0%, rgba(3,93,87,0.25) 100%)',
           }}
         />
       </div>
@@ -55,14 +55,14 @@ export default function HeroSection() {
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 border"
             style={{
-              backgroundColor: 'rgba(255,255,255,0.10)',
-              borderColor: 'rgba(255,255,255,0.20)',
-              color: 'rgba(255,255,255,0.92)',
+              backgroundColor: 'rgba(3,93,87,0.20)',
+              borderColor: 'rgba(3,93,87,0.40)',
+              color: 'rgba(255,255,255,0.95)',
             }}
           >
             <span
               className="inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: 'var(--mint)' }}
+              style={{ backgroundColor: '#035D57' }}
               aria-hidden="true"
             />
             Faith-Driven Telehealth &middot; Oklahoma City, OK
@@ -74,7 +74,7 @@ export default function HeroSection() {
             style={{ color: '#ffffff' }}
           >
             Affordable Online{' '}
-            <span style={{ color: 'var(--mint)' }}>Doctor Visits</span>
+            <span style={{ color: '#035D57' }}>Doctor Visits</span>
             <br className="hidden sm:block" /> in Oklahoma City
           </h1>
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
             >
               <item.icon
                 className="h-4 w-4 flex-shrink-0"
-                style={{ color: 'var(--mint)' }}
+                style={{ color: '#035D57' }}
                 aria-hidden="true"
               />
               <span

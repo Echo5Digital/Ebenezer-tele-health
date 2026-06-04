@@ -96,8 +96,8 @@ export default function ProviderSection() {
             <figure
               className="rounded-xl p-6 border-l-4 mt-2"
               style={{
-                backgroundColor: 'rgba(184,232,220,0.15)',
-                borderColor: 'var(--primary)',
+                backgroundColor: 'rgba(153,217,217,0.15)',
+                borderColor: '#035D57',
               }}
             >
               <Quote

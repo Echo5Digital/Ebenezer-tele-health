@@ -47,7 +47,7 @@ export default function Header() {
       <div
         className="px-3 sm:px-5 lg:px-6 py-3 transition-all duration-300"
         style={isTransparent ? {} : {
-          background: 'linear-gradient(180deg, rgba(184,232,220,0.22) 0%, rgba(255,255,255,0.97) 100%)',
+          background: 'linear-gradient(180deg, rgba(3,93,87,0.08) 0%, rgba(255,255,255,0.97) 100%)',
           backdropFilter: 'blur(18px)',
           WebkitBackdropFilter: 'blur(18px)',
         }}
@@ -57,14 +57,14 @@ export default function Header() {
           className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-5 sm:px-7 h-[68px] transition-all duration-300"
           aria-label="Global"
           style={isTransparent ? {
-            background: 'transparent',
+            background: '#035D57',
             border: '1px solid rgba(255,255,255,0.15)',
           } : {
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(184,232,220,0.18) 100%)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(153,217,217,0.15) 100%)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
-            border: '1px solid rgba(42,122,111,0.18)',
-            boxShadow: '0 4px 24px rgba(42,122,111,0.10), inset 0 1px 0 rgba(255,255,255,0.8)',
+            border: '1px solid rgba(3,93,87,0.18)',
+            boxShadow: '0 4px 24px rgba(3,93,87,0.10), inset 0 1px 0 rgba(255,255,255,0.8)',
           }}
         >
           {/* Logo */}
@@ -158,11 +158,11 @@ export default function Header() {
             role="dialog"
             aria-modal="true"
             style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(184,232,220,0.18) 100%)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(153,217,217,0.12) 100%)',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
-              border: '1px solid rgba(42,122,111,0.18)',
-              boxShadow: '0 8px 32px rgba(42,122,111,0.12), inset 0 1px 0 rgba(255,255,255,0.8)',
+              border: '1px solid rgba(3,93,87,0.18)',
+              boxShadow: '0 8px 32px rgba(3,93,87,0.12), inset 0 1px 0 rgba(255,255,255,0.8)',
             }}
           >
             <div className="px-4 py-4">

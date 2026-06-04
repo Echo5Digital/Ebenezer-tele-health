@@ -8,39 +8,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        /*
-         * IMPORTANT: These color values are placeholders.
-         * Extract exact HEX values from the Ebenezer Telehealth logo
-         * and update both here AND the CSS variables in app/globals.css.
-         */
         primary: {
-          DEFAULT: '#2A7A6F',
-          dark: '#1E5C54',
+          DEFAULT: '#035D57',
+          dark: '#024843',
           foreground: '#ffffff',
         },
         navy: {
-          DEFAULT: '#1C2B40',
+          DEFAULT: '#035D57',
           foreground: '#ffffff',
         },
         mint: {
-          DEFAULT: '#B8E8DC',
-          foreground: '#1C2B40',
+          DEFAULT: '#99D9D9',
+          foreground: '#035D57',
         },
         seafoam: {
-          DEFAULT: '#8CCBBF',
-          foreground: '#1C2B40',
+          DEFAULT: '#99D9D9',
+          foreground: '#035D57',
         },
         cream: {
-          DEFAULT: '#EDF7F4',
-          foreground: '#1C2B40',
+          DEFAULT: '#E8F7F7',
+          foreground: '#035D57',
         },
         'deep-teal': {
-          DEFAULT: '#0E3D38',
+          DEFAULT: '#024843',
           foreground: '#ffffff',
         },
         border: 'hsl(214.3 31.8% 91.4%)',
         input: 'hsl(214.3 31.8% 91.4%)',
-        ring: 'hsl(170 48% 32%)',
+        ring: 'hsl(178 93% 19%)',
         background: 'hsl(0 0% 100%)',
         foreground: 'hsl(222.2 84% 4.9%)',
         secondary: {

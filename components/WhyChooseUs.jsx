@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
     >
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: 'rgba(237,247,244,0.70)' }}
+        style={{ backgroundColor: 'rgba(232,247,247,0.72)' }}
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
           <div className="flex items-center justify-center lg:justify-end">
             <div
               className="relative w-full max-w-sm rounded-2xl p-8"
-              style={{ backgroundColor: '#ffffff', border: '1px solid rgba(42,122,111,0.2)' }}
+              style={{ backgroundColor: '#ffffff', border: '1px solid rgba(3,93,87,0.20)' }}
             >
               {/* Stats / trust signals */}
               <div className="space-y-6">
@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
                 </div>
                 <div
                   className="border-t"
-                  style={{ borderColor: 'rgba(42,122,111,0.2)' }}
+                  style={{ borderColor: 'rgba(3,93,87,0.20)' }}
                 />
                 <div className="text-center">
                   <div
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
                 </div>
                 <div
                   className="border-t"
-                  style={{ borderColor: 'rgba(42,122,111,0.2)' }}
+                  style={{ borderColor: 'rgba(3,93,87,0.20)' }}
                 />
                 <div className="text-center">
                   <div

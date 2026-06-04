@@ -28,7 +28,7 @@ export default function WeightLossPage() {
         className="relative bg-white"
         style={{
           background:
-            'linear-gradient(135deg, rgba(184,232,220,0.12) 0%, #ffffff 60%)',
+            'linear-gradient(135deg, rgba(153,217,217,0.12) 0%, #ffffff 60%)',
         }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -86,8 +86,8 @@ export default function WeightLossPage() {
           <div
             className="rounded-xl border px-6 py-6"
             style={{
-              borderColor: 'rgba(42,122,111,0.2)',
-              backgroundColor: 'rgba(184,232,220,0.12)',
+              borderColor: 'rgba(3,93,87,0.20)',
+              backgroundColor: 'rgba(153,217,217,0.12)',
             }}
           >
             <p className="hero-answer-line">
@@ -136,8 +136,8 @@ export default function WeightLossPage() {
             <div
               className="rounded-2xl p-8"
               style={{
-                backgroundColor: 'rgba(184,232,220,0.15)',
-                border: '1px solid rgba(42,122,111,0.15)',
+                backgroundColor: 'rgba(153,217,217,0.15)',
+                border: '1px solid rgba(3,93,87,0.15)',
               }}
             >
               <h3

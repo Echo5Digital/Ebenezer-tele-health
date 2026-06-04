@@ -27,14 +27,14 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section style={{ backgroundColor: 'var(--deep-teal)' }} aria-labelledby="services-heading">
+    <section style={{ backgroundColor: '#024843' }} aria-labelledby="services-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--mint)' }}
+            style={{ color: '#99D9D9' }}
           >
             What We Treat
           </span>
@@ -75,18 +75,18 @@ export default function ServicesSection() {
               className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all"
               style={{
                 background: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(184,232,220,0.18)',
+                border: '1px solid rgba(153,217,217,0.20)',
                 backdropFilter: 'blur(8px)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(184,232,220,0.15)' }}
+                style={{ backgroundColor: 'rgba(153,217,217,0.18)' }}
                 aria-hidden="true"
               >
                 <service.icon
                   className="h-6 w-6"
-                  style={{ color: 'var(--mint)' }}
+                  style={{ color: '#99D9D9' }}
                 />
               </div>
 
@@ -107,7 +107,7 @@ export default function ServicesSection() {
               <Link
                 href={`/${service.slug}`}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold mt-1 group"
-                style={{ color: 'var(--mint)' }}
+                style={{ color: '#99D9D9' }}
                 aria-label={`Learn more about ${service.title}`}
               >
                 Learn More
@@ -134,7 +134,7 @@ export default function ServicesSection() {
             <a
               href="tel:+14053498188"
               className="font-semibold"
-              style={{ color: 'var(--mint)' }}
+              style={{ color: '#99D9D9' }}
             >
               call (405) 349-8188
             </a>

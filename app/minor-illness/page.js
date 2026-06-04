@@ -31,7 +31,7 @@ export default function MinorIllnessPage() {
         className="relative bg-white"
         style={{
           background:
-            'linear-gradient(135deg, rgba(184,232,220,0.12) 0%, #ffffff 60%)',
+            'linear-gradient(135deg, rgba(153,217,217,0.12) 0%, #ffffff 60%)',
         }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -70,7 +70,7 @@ export default function MinorIllnessPage() {
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
               style={{
-                backgroundColor: 'rgba(184,232,220,0.4)',
+                backgroundColor: 'rgba(153,217,217,0.40)',
                 color: 'var(--primary-dark)',
               }}
             >
@@ -99,8 +99,8 @@ export default function MinorIllnessPage() {
           <div
             className="rounded-xl border px-6 py-6"
             style={{
-              borderColor: 'rgba(42,122,111,0.2)',
-              backgroundColor: 'rgba(184,232,220,0.12)',
+              borderColor: 'rgba(3,93,87,0.20)',
+              backgroundColor: 'rgba(153,217,217,0.12)',
             }}
           >
             <p className="hero-answer-line">
@@ -148,8 +148,8 @@ export default function MinorIllnessPage() {
               <div
                 className="rounded-2xl p-8 mb-6"
                 style={{
-                  backgroundColor: 'rgba(184,232,220,0.15)',
-                  border: '1px solid rgba(42,122,111,0.15)',
+                  backgroundColor: 'rgba(153,217,217,0.15)',
+                  border: '1px solid rgba(3,93,87,0.15)',
                 }}
               >
                 <h3
@@ -169,8 +169,8 @@ export default function MinorIllnessPage() {
               <div
                 className="rounded-2xl p-8"
                 style={{
-                  backgroundColor: 'rgba(28,43,64,0.04)',
-                  border: '1px solid rgba(28,43,64,0.1)',
+                  backgroundColor: 'rgba(3,93,87,0.04)',
+                  border: '1px solid rgba(3,93,87,0.10)',
                 }}
               >
                 <h3

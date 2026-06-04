@@ -22,7 +22,7 @@ export default function AnswerBlock() {
            */}
           <p
             className="hero-answer-line text-base md:text-lg leading-relaxed"
-            style={{ color: 'var(--navy)' }}
+            style={{ color: '#035D57' }}
           >
             Ebenezer Telehealth is a faith-driven telehealth practice based in
             Oklahoma City, OK.{' '}
