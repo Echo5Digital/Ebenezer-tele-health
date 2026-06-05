@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, MapPin, Globe, Mail, ArrowUpRight } from 'lucide-react'
+import { Phone, MapPin, Mail, ArrowUpRight } from 'lucide-react'
 
 const serviceLinks = [
   { name: "Women's Health", href: '/womens-health' },
@@ -24,8 +24,8 @@ export default function Footer() {
       className="text-white"
       role="contentinfo"
       style={{
-        backgroundColor: '#02403B',
-        background: 'linear-gradient(180deg, #02403B 0%, #024843 40%, #035D57 100%)',
+        backgroundColor: '#010E0C',
+        background: 'linear-gradient(180deg, #010E0C 0%, #011C18 40%, #02403B 100%)',
       }}
     >
       {/* Primary color top accent line */}
@@ -44,26 +44,19 @@ export default function Footer() {
 
           {/* ── Col 1: Brand ── */}
           <div>
-            <Link href="/" aria-label="Ebenezer Telehealth — Home" className="inline-block mb-6">
-              <div
-                className="rounded-xl"
-                style={{
-                  background: 'rgba(255,255,255,0.95)',
-                  padding: '8px 16px',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.25)',
-                }}
-              >
+            <Link href="/" aria-label="Ebenezer Telehealth — Home" className="inline-block mb-5">
+              <div className="rounded-xl overflow-hidden">
                 <Image
                   src="/ebenezer_logo.webp"
                   alt="Ebenezer Telehealth"
-                  width={160}
-                  height={64}
-                  className="h-10 w-auto object-contain"
+                  width={360}
+                  height={144}
+                  className="h-36 w-auto object-contain"
                 />
               </div>
             </Link>
 
-            <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'rgba(255,255,255,0.55)' }}>
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
               Faith-driven, compassionate telehealth for women and families across Oklahoma.
               Led by Dr. Susan George, DNP, APRN, BC-ADM.
             </p>
@@ -129,19 +122,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              {/* Website */}
-              <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
-                <div
-                  className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
-                  aria-hidden="true"
-                >
-                  <Globe className="h-3.5 w-3.5" style={{ color: '#99D9D9' }} />
-                </div>
-                <span>ebenezertelehealth.com</span>
-              </div>
-
-              {/* Hours */}
+{/* Hours */}
               <p className="text-xs pl-10" style={{ color: 'rgba(255,255,255,0.28)' }}>
                 [Hours — to be confirmed]
               </p>

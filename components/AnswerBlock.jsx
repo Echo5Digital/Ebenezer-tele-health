@@ -7,12 +7,26 @@
 export default function AnswerBlock() {
   return (
     <section
-      style={{ backgroundColor: 'var(--cream)' }}
+      className="relative overflow-hidden"
       aria-label="About Ebenezer Telehealth"
+      style={{
+        backgroundImage: 'url(/block_bg.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+      {/* Subtle white overlay — keeps dark teal text crisp over the light image */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(255,255,255,0.38)' }}
+        aria-hidden="true"
+      />
+
+      {/* max-w-7xl + same padding as HeroSection — aligns text at the same left edge */}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+        {/* max-w-3xl matches the hero content column width */}
         <div
-          className="border-l-4 pl-5 md:pl-6"
+          className="max-w-3xl border-l-4 pl-5 md:pl-6"
           style={{ borderColor: 'var(--primary)' }}
         >
           {/* AEO entity statement — speakable schema target */}

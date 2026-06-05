@@ -126,7 +126,7 @@ export default function ProviderSection() {
           <div className="flex flex-col items-center gap-5 order-1 lg:order-2">
             <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
               <Image
-                src="/doc_img.webp"
+                src="/Dr_OKC.webp"
                 alt="Dr. Susan George, DNP, APRN — Provider at Ebenezer Telehealth, Oklahoma City"
                 fill
                 className="object-cover object-center"

@@ -44,28 +44,19 @@ export default function Header() {
       />
 
       {/* Backdrop wrapper */}
-      <div
-        className="px-3 sm:px-5 lg:px-6 py-3 transition-all duration-300"
-        style={isTransparent ? {} : {
-          background: 'rgba(255, 255, 255, 0.98)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-          boxShadow: '0 1px 4px rgba(0,0,0,0.05)',
-        }}
-      >
+      <div className="px-3 sm:px-5 lg:px-6 py-3">
         {/* Floating nav card */}
         <nav
-          className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-5 sm:px-7 h-[68px] transition-all duration-300"
+          className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-5 sm:px-7 h-[100px] transition-all duration-300"
           aria-label="Global"
-          style={isTransparent ? {
-            background: '#035D57',
-            border: '1px solid rgba(255,255,255,0.15)',
-          } : {
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(153,217,217,0.25) 100%)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            border: '1px solid rgba(3,93,87,0.18)',
-            boxShadow: '0 4px 24px rgba(3,93,87,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(153,217,217,0.18) 100%)',
+            backdropFilter: 'blur(24px)',
+            WebkitBackdropFilter: 'blur(24px)',
+            border: '1px solid rgba(3,93,87,0.15)',
+            boxShadow: scrolled
+              ? '0 4px 24px rgba(3,93,87,0.12), inset 0 1px 0 rgba(255,255,255,0.9)'
+              : '0 2px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.9)',
           }}
         >
           {/* Logo */}
@@ -74,21 +65,14 @@ export default function Header() {
             className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
             aria-label="Ebenezer Telehealth — Home"
           >
-            <div
-              className="rounded-xl transition-all duration-300"
-              style={isTransparent ? {
-                background: 'rgba(255,255,255,0.92)',
-                padding: '5px 12px',
-                boxShadow: '0 2px 16px rgba(0,0,0,0.2)',
-              } : {}}
-            >
+            <div className="rounded-xl overflow-hidden">
               <Image
-                src="/ebenezer_logo.webp"
+                src="/ebenezer_logo_2.webp"
                 alt="Ebenezer Telehealth"
-                width={108}
+                width={100}
                 height={100}
                 priority
-                className="h-11 w-auto object-contain"
+                className="h-[100px] w-auto object-contain"
               />
             </div>
           </Link>
@@ -100,13 +84,9 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`text-xs font-bold uppercase tracking-widest transition-colors ${
-                  isTransparent
-                    ? pathname === item.href
-                      ? 'text-white'
-                      : 'text-white/70 hover:text-white'
-                    : pathname === item.href
+                  pathname === item.href
                     ? 'text-primary'
-                    : 'text-gray-500 hover:text-gray-800'
+                    : 'text-gray-900 hover:text-primary'
                 }`}
               >
                 {item.name}
@@ -118,9 +98,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+14053498188"
-              className={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors ${
-                isTransparent ? 'text-white/70 hover:text-white' : 'text-gray-500 hover:text-primary'
-              }`}
+              className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors text-gray-900 hover:text-primary"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
               (405)&nbsp;349-8188
@@ -138,9 +116,7 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className={`lg:hidden rounded-full p-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
-              isTransparent ? 'text-white/85 hover:bg-white/10' : 'text-gray-500 hover:bg-gray-100'
-            }`}
+            className="lg:hidden rounded-full p-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary text-gray-900 hover:bg-gray-100"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}

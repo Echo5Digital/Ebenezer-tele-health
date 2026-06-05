@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { ShieldCheck, DollarSign, MapPin, Clock } from 'lucide-react'
 
 const trustItems = [
@@ -24,32 +23,31 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden -mt-[80px] min-h-[600px] md:min-h-[80vh]"
+      className="relative overflow-hidden -mt-[128px] min-h-[600px] md:min-h-[80vh]"
       style={{ backgroundColor: '#035D57' }}
       aria-label="Hero"
     >
-      {/* Background image at 0.5 opacity */}
+      {/* Video background */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 opacity-15">
-          <Image
-            src="/ez-home-bg.webp"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        {/* Gradient overlay for text legibility */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/ez_bg_video.mp4" type="video/mp4" />
+        </video>
+        {/* Teal overlay — same color theme, light enough to show video, dark enough for text */}
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'linear-gradient(135deg, rgba(2, 72, 67, 0.85) 0%, rgba(3, 93, 87, 0.65) 100%)',
+            background: 'linear-gradient(135deg, rgba(2,72,67,0.72) 0%, rgba(3,93,87,0.55) 100%)',
           }}
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[140px] pb-24 md:pt-[160px] md:pb-32">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[188px] pb-24 md:pt-[208px] md:pb-32">
         <div className="max-w-3xl">
           {/* Pre-headline badge */}
           <div
