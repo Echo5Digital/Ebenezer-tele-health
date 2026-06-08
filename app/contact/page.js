@@ -1,192 +1,507 @@
-import { Phone, MapPin, Globe, Clock, CalendarDays } from 'lucide-react'
+import { Phone, MapPin, Mail, Clock, CalendarDays, Globe, CheckCircle, CreditCard, Shield } from 'lucide-react'
 
 export const metadata = {
-  title: 'Book a Telehealth Visit | Ebenezer Telehealth Oklahoma City',
+  title: 'Contact Ebenezer Telehealth | Book a Visit',
   description:
-    'Book an online doctor visit with Ebenezer Telehealth. Call (405) 349-8188 or book online. Serving patients throughout Oklahoma. Cash-pay, no insurance required.',
+    'Book an online visit with Ebenezer Telehealth or contact us. Serving all of Oklahoma. Call (405) 349-8188 or book online today.',
   alternates: {
     canonical: 'https://ebenezertelehealth.com/contact',
   },
+  robots: { index: true, follow: true },
+}
+
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Ebenezer Telehealth',
+  url: 'https://ebenezertelehealth.com/contact',
+  mainEntity: { '@id': 'https://ebenezertelehealth.com/#organization' },
+}
+
+// TODO: Replace with your OptiMantra booking URL once available.
+// When updated to an external URL, restore target="_blank" rel="noopener noreferrer"
+// on the booking <a> elements below.
+// e.g. 'https://app.optimantra.com/patient_portal/open_scheduling/...'
+const BOOKING_URL = '#book'
+
+const PHONE     = '(405) 349-8188'
+const PHONE_HREF = 'tel:+14053498188'
+const EMAIL     = 'contact@ebenezertelehealth.com'
+
+const OKLAHOMA_CITIES = [
+  'Oklahoma City',
+  'Tulsa',
+  'Edmond',
+  'Norman',
+  'Moore',
+  'Owasso',
+  'Lawton',
+  'Stillwater',
+  'Broken Arrow',
+  'And everywhere in between',
+]
+
+/* ─── Small reusable icon wrapper ─────────────────────────────────── */
+function IconBox({ children }) {
+  return (
+    <div
+      className="flex-shrink-0 h-9 w-9 rounded-xl flex items-center justify-center"
+      style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+      aria-hidden="true"
+    >
+      {children}
+    </div>
+  )
+}
+
+/* ─── Info row inside the "Our Information" card ─────────────────── */
+function InfoRow({ icon, label, children }) {
+  return (
+    <div className="flex items-start gap-4 px-6 py-4">
+      <IconBox>{icon}</IconBox>
+      <div className="min-w-0 flex-1">
+        <p
+          className="text-[11px] font-bold uppercase tracking-widest leading-none"
+          style={{ color: 'rgba(3,93,87,0.55)' }}
+        >
+          {label}
+        </p>
+        <div className="mt-1">{children}</div>
+      </div>
+    </div>
+  )
 }
 
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-2xl">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+
+      {/* ═══════════════════════════════════════════════════════
+          HERO — heading + dual CTAs + trust chips
+      ═══════════════════════════════════════════════════════ */}
+      <section className="bg-white border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+
+          <span
+            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+            style={{ color: 'var(--primary)' }}
+          >
+            Contact &amp; Booking
+          </span>
+
+          <h1
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ color: 'var(--navy)' }}
+          >
+            Contact Ebenezer Telehealth
+          </h1>
+
+          <p className="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+            Ready to book a visit or have a question? We&apos;re here to help.
+          </p>
+
+          {/* Dual CTA row */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={BOOKING_URL}
+              className="btn-primary inline-flex items-center justify-center gap-2.5"
+              aria-label="Book your telehealth appointment online"
             >
-              Contact &amp; Booking
+              <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+              Book Online Now
+            </a>
+            <a
+              href={PHONE_HREF}
+              className="btn-outline inline-flex items-center justify-center gap-2.5"
+              aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+            >
+              <Phone className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+              Call (405) 349-8188
+            </a>
+          </div>
+
+          {/* Trust chips */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2.5 mt-7 text-sm text-gray-500">
+            <span className="flex items-center gap-2">
+              <CheckCircle
+                className="h-4 w-4 flex-shrink-0"
+                style={{ color: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              Serving all of Oklahoma
             </span>
-            <h1
-              className="text-4xl md:text-5xl font-bold mb-5"
-              style={{ color: 'var(--navy)' }}
+            <span className="flex items-center gap-2">
+              <CreditCard
+                className="h-4 w-4 flex-shrink-0"
+                style={{ color: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              Cash-pay · no insurance needed
+            </span>
+            <span className="flex items-center gap-2">
+              <Shield
+                className="h-4 w-4 flex-shrink-0"
+                style={{ color: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              HIPAA-secure video visits
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          MAIN GRID — Book + Call (left) | Our Information (right)
+      ═══════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden" id="book">
+        {/* ── Gray-50 base — preserves original section colour ── */}
+        <div className="absolute inset-0 bg-gray-50" aria-hidden="true" />
+
+        {/* ── Background image at exactly 0.5 opacity ── */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/body_bg2.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.5,
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
+
+            {/* ── Left: Book Your Visit + Call Us ─────────────────── */}
+            <div className="flex flex-col gap-8">
+
+              {/* ─ Book Your Visit ─ */}
+              <article
+                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+                aria-labelledby="book-heading"
+              >
+                {/* Card header */}
+                <div className="flex items-center gap-4 px-8 py-6 border-b border-gray-50">
+                  <IconBox>
+                    <CalendarDays
+                      className="h-5 w-5"
+                      style={{ color: 'var(--primary)' }}
+                    />
+                  </IconBox>
+                  <h2
+                    id="book-heading"
+                    className="text-2xl font-bold"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    Book Your Visit
+                  </h2>
+                </div>
+
+                {/* Card body */}
+                <div className="px-8 py-7">
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Schedule your telehealth appointment online — it takes just a
+                    few minutes. All visits are conducted via secure video. No
+                    waiting room, no driving required.
+                  </p>
+
+                  {/* Primary CTA */}
+                  <a
+                    href={BOOKING_URL}
+                    className="btn-primary inline-flex items-center gap-2.5"
+                    aria-label="Book your telehealth appointment online"
+                  >
+                    <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                    Book Online Now
+                  </a>
+
+                  {/*
+                   * ─────────────────────────────────────────────────────
+                   * TODO: Replace this placeholder with the OptiMantra
+                   * embedded scheduling widget:
+                   *
+                   * <iframe
+                   *   src="https://app.optimantra.com/patient_portal/..."
+                   *   width="100%"
+                   *   height="700"
+                   *   frameBorder="0"
+                   *   title="Book a telehealth appointment"
+                   *   className="w-full rounded-xl mt-6"
+                   * />
+                   * ─────────────────────────────────────────────────────
+                   */}
+                  <div
+                    className="mt-6 rounded-xl flex flex-col items-center justify-center py-16 gap-3 text-center"
+                    style={{
+                      backgroundColor: 'rgba(153,217,217,0.10)',
+                      border: '2px dashed rgba(3,93,87,0.20)',
+                    }}
+                    aria-hidden="true"
+                  >
+                    <CalendarDays
+                      className="h-10 w-10"
+                      style={{ color: 'var(--primary)', opacity: 0.35 }}
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-gray-500">
+                        OptiMantra scheduling widget
+                      </p>
+                      <p className="text-xs text-gray-400 mt-1 max-w-xs mx-auto">
+                        Replace this placeholder with your embedded booking widget
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-gray-500 mt-5 text-center">
+                    Prefer to call?{' '}
+                    <a
+                      href={PHONE_HREF}
+                      className="font-semibold"
+                      style={{ color: 'var(--primary)' }}
+                    >
+                      {PHONE}
+                    </a>
+                  </p>
+                </div>
+              </article>
+
+              {/* ─ Call Us ─ */}
+              <article
+                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+                aria-labelledby="call-heading"
+              >
+                {/* Card header */}
+                <div className="flex items-center gap-4 px-8 py-6 border-b border-gray-50">
+                  <IconBox>
+                    <Phone
+                      className="h-5 w-5"
+                      style={{ color: 'var(--primary)' }}
+                    />
+                  </IconBox>
+                  <h2
+                    id="call-heading"
+                    className="text-2xl font-bold"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    Call Us
+                  </h2>
+                </div>
+
+                {/* Card body */}
+                <div className="px-8 py-7">
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Prefer to schedule by phone or have a question before
+                    booking? Give us a call — we&apos;d love to hear from you.
+                  </p>
+
+                  {/* Large tappable phone number */}
+                  <a
+                    href={PHONE_HREF}
+                    className="flex items-center justify-center sm:justify-start gap-3 w-full sm:w-auto rounded-2xl px-7 py-4 text-white font-bold transition-all hover:-translate-y-0.5 active:translate-y-0"
+                    style={{
+                      backgroundColor: 'var(--primary)',
+                      boxShadow: '0 4px 20px rgba(3,93,87,0.28)',
+                      fontSize: 'clamp(1.25rem, 3.5vw, 1.75rem)',
+                      lineHeight: 1.2,
+                    }}
+                    aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+                  >
+                    <Phone
+                      className="h-6 w-6 flex-shrink-0"
+                      aria-hidden="true"
+                    />
+                    (405) 349-8188
+                  </a>
+                  <p className="text-xs text-gray-400 mt-3">
+                    Tap to call on mobile
+                  </p>
+                </div>
+              </article>
+
+            </div>{/* end left col */}
+
+            {/* ── Right: Our Information (sticky) ─────────────────── */}
+            <aside
+              className="lg:sticky lg:top-32"
+              aria-label="Practice contact information"
             >
-              Book Your Visit
-            </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Ready to see Dr. Susan George? Book online or call us directly.
-              Same-day appointments are often available.
-            </p>
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+
+                {/* Card header */}
+                <div
+                  className="px-6 py-5 border-b border-gray-50"
+                >
+                  <h2
+                    className="text-lg font-bold"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    Our Information
+                  </h2>
+                </div>
+
+                {/* Info rows — divide-y keeps every row perfectly aligned */}
+                <address className="not-italic divide-y divide-gray-50">
+
+                  <InfoRow
+                    icon={<Globe className="h-4 w-4" style={{ color: 'var(--primary)' }} />}
+                    label="Practice"
+                  >
+                    <p className="text-sm font-semibold text-gray-800">
+                      Ebenezer Telehealth
+                    </p>
+                  </InfoRow>
+
+                  <InfoRow
+                    icon={<MapPin className="h-4 w-4" style={{ color: 'var(--primary)' }} />}
+                    label="Address"
+                  >
+                    <p className="text-sm text-gray-700 leading-snug">
+                      Oklahoma City, OK
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      [Street address — coming soon]
+                    </p>
+                  </InfoRow>
+
+                  <InfoRow
+                    icon={<Phone className="h-4 w-4" style={{ color: 'var(--primary)' }} />}
+                    label="Phone"
+                  >
+                    <a
+                      href={PHONE_HREF}
+                      className="text-sm font-semibold hover:underline"
+                      style={{ color: 'var(--primary)' }}
+                    >
+                      {PHONE}
+                    </a>
+                  </InfoRow>
+
+                  <InfoRow
+                    icon={<Mail className="h-4 w-4" style={{ color: 'var(--primary)' }} />}
+                    label="Email"
+                  >
+                    <a
+                      href={`mailto:${EMAIL}`}
+                      className="text-sm font-medium hover:underline break-all"
+                      style={{ color: 'var(--primary)' }}
+                    >
+                      {EMAIL}
+                    </a>
+                  </InfoRow>
+
+                  <InfoRow
+                    icon={<Clock className="h-4 w-4" style={{ color: 'var(--primary)' }} />}
+                    label="Hours"
+                  >
+                    <p className="text-xs text-gray-400">
+                      [Hours — to be confirmed]
+                    </p>
+                  </InfoRow>
+
+                </address>
+
+                {/* Service area footer strip */}
+                <div
+                  className="px-6 py-4"
+                  style={{
+                    backgroundColor: 'rgba(153,217,217,0.12)',
+                    borderTop: '1px solid rgba(3,93,87,0.08)',
+                  }}
+                >
+                  <p
+                    className="text-[11px] font-bold uppercase tracking-widest leading-none mb-1"
+                    style={{ color: 'var(--primary)' }}
+                  >
+                    Service Area
+                  </p>
+                  <p
+                    className="text-sm font-semibold"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    All of Oklahoma
+                  </p>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Telehealth — no travel required
+                  </p>
+                </div>
+
+              </div>
+            </aside>
+
           </div>
         </div>
       </section>
 
-      {/* Contact grid */}
-      <section className="bg-gray-50">
+      {/* ═══════════════════════════════════════════════════════
+          SERVING ALL OF OKLAHOMA
+      ═══════════════════════════════════════════════════════ */}
+      <section className="bg-white" aria-labelledby="service-area-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            {/* Booking widget placeholder */}
-            <div
-              id="book"
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col gap-5"
-            >
+            {/* Left: heading + body + city pills */}
+            <div>
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                Service Area
+              </span>
               <h2
-                className="text-2xl font-bold"
+                id="service-area-heading"
+                className="text-2xl md:text-3xl font-bold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Book Online
+                Serving All of Oklahoma
               </h2>
-              <p className="text-gray-600">
-                Select a time that works for you. All visits are conducted via
-                secure video — no driving, no waiting room.
+              <p className="text-gray-600 leading-relaxed mb-6">
+                We provide telehealth services to patients across the entire
+                state — including Oklahoma City, Tulsa, Edmond, Norman, Moore,
+                Owasso, Lawton, Stillwater, Broken Arrow, and all rural
+                communities.
               </p>
 
-              {/*
-               * TODO: Replace the placeholder below with your booking widget.
-               * Options: Jane App, Calendly, Healthie, Simple Practice, Hint Health, etc.
-               * Example: <iframe src="https://your-booking-url.com" />
-               */}
               <div
-                className="rounded-xl flex items-center justify-center py-16 text-center"
-                style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
-                  border: '2px dashed rgba(3,93,87,0.25)',
-                }}
+                className="flex flex-wrap gap-2"
+                aria-label="Oklahoma cities we serve"
               >
-                <div>
-                  <CalendarDays
-                    className="h-12 w-12 mx-auto mb-3"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <p className="font-semibold" style={{ color: 'var(--navy)' }}>
-                    Booking Widget — Placeholder
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1 max-w-xs">
-                    Replace this section with your online booking system
-                    (Calendly, Jane App, etc.)
-                  </p>
-                </div>
+                {OKLAHOMA_CITIES.map((city) => (
+                  <span
+                    key={city}
+                    className="inline-block text-sm font-medium px-3 py-1.5 rounded-full"
+                    style={{
+                      backgroundColor: 'rgba(153,217,217,0.20)',
+                      color: 'var(--primary)',
+                      border: '1px solid rgba(3,93,87,0.15)',
+                    }}
+                  >
+                    {city}
+                  </span>
+                ))}
               </div>
-
-              <p className="text-sm text-gray-500 text-center">
-                Prefer to call? Reach us at{' '}
-                <a
-                  href="tel:+14053498188"
-                  className="font-semibold"
-                  style={{ color: 'var(--primary)' }}
-                >
-                  (405) 349-8188
-                </a>
-              </p>
             </div>
 
-            {/* Contact info */}
-            <div className="flex flex-col gap-6">
-              {/* NAP card */}
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-7">
-                <h2
-                  className="text-xl font-bold mb-5"
-                  style={{ color: 'var(--navy)' }}
-                >
-                  Contact Information
-                </h2>
-
-                <address className="not-italic space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Phone
-                      className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800">Phone</p>
-                      <a
-                        href="tel:+14053498188"
-                        className="text-base font-semibold hover:text-primary transition-colors"
-                        style={{ color: 'var(--primary)' }}
-                      >
-                        (405) 349-8188
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <MapPin
-                      className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800">Location</p>
-                      <p className="text-gray-600">
-                        Ebenezer Telehealth<br />
-                        Oklahoma City, OK<br />
-                        <span className="text-gray-400 text-sm">
-                          [Full address — coming soon]
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Globe
-                      className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800">Website</p>
-                      <p className="text-gray-600">ebenezertelehealth.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Clock
-                      className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800">Hours</p>
-                      <p className="text-gray-400 text-sm">
-                        [Hours — to be confirmed]
-                      </p>
-                    </div>
-                  </div>
-                </address>
-              </div>
-
-              {/* Cash-pay note */}
+            {/* Right: Cash-pay note */}
+            <div className="flex flex-col gap-5">
               <div
-                className="rounded-2xl p-6"
+                className="rounded-2xl p-7"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
-                  border: '1px solid rgba(3,93,87,0.20)',
+                  backgroundColor: 'rgba(153,217,217,0.10)',
+                  border: '1px solid rgba(3,93,87,0.14)',
                 }}
               >
-                <h3
+                <p
                   className="text-base font-semibold mb-2"
                   style={{ color: 'var(--navy)' }}
                 >
                   Cash-Pay Practice
-                </h3>
+                </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   No insurance required. You&apos;ll know your full cost before
                   booking — no surprise bills. We accept cash, credit, and debit
@@ -194,22 +509,29 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Service area */}
               <div
-                className="rounded-2xl p-6 border border-gray-100 bg-white"
+                className="rounded-2xl p-7"
+                style={{
+                  backgroundColor: 'rgba(3,93,87,0.04)',
+                  border: '1px solid rgba(3,93,87,0.09)',
+                }}
               >
-                <h3
+                <p
                   className="text-base font-semibold mb-2"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Serving All of Oklahoma
-                </h3>
+                  Not a Medical Emergency?
+                </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  As a telehealth practice, we can see patients located anywhere
-                  in the state of Oklahoma at the time of their visit.
+                  Our telehealth services are designed for non-emergency
+                  conditions. If you are experiencing a medical emergency,
+                  call&nbsp;
+                  <strong>911</strong> or go to your nearest emergency room
+                  immediately.
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>

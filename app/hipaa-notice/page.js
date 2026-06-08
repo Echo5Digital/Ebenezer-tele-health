@@ -18,7 +18,7 @@ export default function HipaaNoticePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-white">
+      <section className="bg-white -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"

@@ -20,12 +20,20 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
+  // Scroll listener — attached once for the lifetime of the root layout
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // On every route change: close mobile menu + re-evaluate scroll position
+  // (Header lives in the root layout and does NOT remount between pages)
+  useEffect(() => {
+    setMobileMenuOpen(false)
+    setScrolled(window.scrollY > 60)
+  }, [pathname])
 
   // Transparent only on the home page where the dark hero provides contrast.
   // On all other pages the body background is light, so the glass card is always shown.

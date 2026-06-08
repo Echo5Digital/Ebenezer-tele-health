@@ -23,7 +23,7 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden -mt-[92px] sm:-mt-[108px] lg:-mt-[128px] min-h-[600px] md:min-h-[80vh]"
+      className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] min-h-[600px] md:min-h-[80vh]"
       style={{ backgroundColor: '#035D57' }}
       aria-label="Hero"
     >

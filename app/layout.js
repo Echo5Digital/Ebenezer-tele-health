@@ -71,8 +71,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen antialiased">
         <Header />
-        {/* pt-[128px] offsets the fixed header (4px accent + 24px wrapper padding + 100px nav); pb-16 offsets the fixed mobile bottom bar */}
-        <main className="pt-[128px] pb-16 lg:pb-0">{children}</main>
+        {/* pt matches actual header height per breakpoint:
+            mobile 96px  (4px accent + 12px py-top + 68px nav + 12px py-bot)
+            sm    112px  (4 + 12 + 84 + 12)
+            lg    128px  (4 + 12 + 100 + 12)
+            pb-16 offsets the fixed mobile bottom bar                        */}
+        <main className="pt-[96px] sm:pt-[112px] lg:pt-[128px] pb-16 lg:pb-0">{children}</main>
         <Footer />
         <MobileBottomBar />
       </body>

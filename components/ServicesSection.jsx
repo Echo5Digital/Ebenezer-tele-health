@@ -28,10 +28,23 @@ const services = [
 export default function ServicesSection() {
   return (
     <section
-      className="bg-white"
+      className="relative overflow-hidden"
       aria-labelledby="services-heading"
+      style={{
+        backgroundImage: "url('/service_bg.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      {/* Overlay — keeps cards legible while letting bg texture show */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(255,255,255,0.55)' }}
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12 md:mb-14">
