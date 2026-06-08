@@ -24,52 +24,37 @@ const faqs = [
   },
   {
     id: 'faq-2',
-    question: 'Do I need insurance to see a doctor online at Ebenezer Telehealth?',
+    question: 'Do I need insurance?',
     answer:
-      "No. Ebenezer Telehealth is a transparent cash-pay practice, so you'll know your cost upfront with no surprise bills.",
+      "No. We're a transparent cash-pay practice, so you know your cost upfront with no surprise bills.",
     extra: null,
   },
   {
     id: 'faq-3',
-    question: 'Where in Oklahoma can I be seen by Ebenezer Telehealth?',
+    question: 'Where in Oklahoma can I be seen?',
     answer:
-      "Anywhere in Oklahoma, as long as you're physically located in the state at the time of your visit.",
+      "Anywhere in the state, as long as you're physically in Oklahoma at the time of your visit.",
     extra: null,
   },
   {
     id: 'faq-4',
-    question: 'What can I be treated for online?',
+    question: 'Do you prescribe weight-loss medications like semaglutide?',
     answer:
-      "Women's health, weight loss management, and many minor illnesses.",
-    extra: (
-      <p className="mt-2 text-sm text-gray-500">
-        See our service pages for full details:{' '}
-        <Link href="/womens-health" className="underline hover:text-primary">
-          Women&apos;s Health
-        </Link>
-        {' · '}
-        <Link href="/weight-loss" className="underline hover:text-primary">
-          Weight Loss
-        </Link>
-        {' · '}
-        <Link href="/minor-illness" className="underline hover:text-primary">
-          Minor Illness
-        </Link>
-      </p>
-    ),
+      'Yes, when medically appropriate. We evaluate for GLP-1 medications and other options as part of our medical weight-loss program.',
+    extra: null,
   },
   {
     id: 'faq-5',
     question: 'Can I get a prescription?',
     answer:
-      'Yes, when medically appropriate — sent electronically to your preferred pharmacy.',
+      'Yes — sent electronically to your preferred pharmacy.',
     extra: null,
   },
   {
     id: 'faq-6',
     question: 'How soon can I be seen?',
     answer:
-      'Same-day telehealth appointments in Oklahoma are often available. Book online or call (405) 349-8188.',
+      'Same-day appointments are often available. Book online or call (405) 349-8188.',
     extra: null,
   },
 ]

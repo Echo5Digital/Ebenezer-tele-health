@@ -3,19 +3,9 @@ import { CheckCircle2, Info } from 'lucide-react'
 
 const plans = [
   {
-    name: 'Minor Illness Visit',
-    price: 'TBD',
-    description: 'Online evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
-    features: [
-      'Video visit with Dr. Susan George',
-      'Diagnosis & treatment plan',
-      'Electronic prescriptions when appropriate',
-      'Same-day availability',
-    ],
-  },
-  {
     name: "Women's Health Visit",
-    price: 'TBD',
+    price: '$150',
+    followUp: '$50',
     description: "Comprehensive virtual care for women's health needs including birth control, hormonal health, and more.",
     features: [
       'Video visit with Dr. Susan George',
@@ -23,11 +13,12 @@ const plans = [
       'Prescriptions sent to pharmacy',
       'Private & HIPAA-compliant',
     ],
-    featured: true,
+    featured: false,
   },
   {
     name: 'Weight Loss Consult',
-    price: 'TBD',
+    price: '$250–$300',
+    followUp: '$50',
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
       'Video visit with Dr. Susan George',
@@ -35,12 +26,26 @@ const plans = [
       'Ongoing management support',
       'Clinical — not a quick-fix program',
     ],
+    featured: true,
+  },
+  {
+    name: 'Minor Illness Visit',
+    price: '$50',
+    followUp: null,
+    description: 'Online evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
+    features: [
+      'Video visit with Dr. Susan George',
+      'Diagnosis & treatment plan',
+      'Electronic prescriptions when appropriate',
+      'Same-day availability',
+    ],
+    featured: false,
   },
 ]
 
 export default function PricingSection() {
   return (
-    <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="pricing-heading">
+    <section id="pricing" style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
@@ -63,8 +68,7 @@ export default function PricingSection() {
             Ebenezer Telehealth is a cash-pay telehealth practice in Oklahoma
             City &mdash; no insurance required, ever. The exact cost of your
             visit is confirmed before you book, with no hidden fees and no
-            surprise bills. Pricing varies by service type; rates are disclosed
-            at scheduling.
+            surprise bills.
           </p>
         </div>
 
@@ -80,7 +84,7 @@ export default function PricingSection() {
               }`}
               style={
                 plan.featured
-                   ? {
+                  ? {
                       background:
                         'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
                       borderColor: 'rgba(3,93,87,0.30)',
@@ -108,13 +112,25 @@ export default function PricingSection() {
               </div>
 
               <div>
-                <span
-                  className="text-4xl font-bold"
-                  style={{ color: 'var(--primary)' }}
-                >
-                  {plan.price}
-                </span>
-                <span className="text-sm text-gray-500 ml-2">/ visit</span>
+                <div className="flex items-baseline gap-2">
+                  <span
+                    className="text-3xl sm:text-4xl font-bold"
+                    style={{ color: 'var(--primary)' }}
+                  >
+                    {plan.price}
+                  </span>
+                  <span className="text-sm text-gray-500">initial visit</span>
+                </div>
+                {plan.followUp ? (
+                  <p className="mt-1 text-sm text-gray-500">
+                    Follow-up:{' '}
+                    <span className="font-semibold" style={{ color: 'var(--navy)' }}>
+                      {plan.followUp}
+                    </span>
+                  </p>
+                ) : (
+                  <p className="mt-1 text-sm text-gray-400">No follow-up required</p>
+                )}
               </div>
 
               <ul className="space-y-2.5 flex-1">

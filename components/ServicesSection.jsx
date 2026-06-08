@@ -3,68 +3,51 @@ import { HeartHandshake, Scale, Thermometer, ArrowRight } from 'lucide-react'
 
 const services = [
   {
+    icon: Scale,
+    title: 'Medical Weight Loss Clinic — Online',
+    slug: 'weight-loss',
+    description:
+      'A medically supervised weight-loss program built around your metabolic health — including GLP-1 medication management — overseen by Dr. George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
+  },
+  {
     icon: HeartHandshake,
     title: "Women's Health Telehealth",
     slug: 'womens-health',
     description:
-      'Discreet, compassionate virtual care for the things that matter most — birth control, UTIs, hormonal and reproductive health, postpartum support, and more. Led by a provider who specializes in women\'s health.',
-  },
-  {
-    icon: Scale,
-    title: 'Online Weight Loss Management',
-    slug: 'weight-loss',
-    description:
-      'A medically guided weight-loss plan built around your metabolic health — overseen by Dr. Susan George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick-fix gimmick.',
+      "Discreet, compassionate virtual care for birth control, PCOS, menopause, hormonal health, and more — led by a provider who specializes in women's health. Initial visits from $150.",
   },
   {
     icon: Thermometer,
     title: 'Treatment for Minor Illnesses',
     slug: 'minor-illness',
     description:
-      'Feel better without leaving home. Get evaluated and treated online for common concerns like sinus infections, colds and flu, UTIs, and other minor illnesses — often same day.',
+      'Feel better without leaving home. Get evaluated and treated online for sinus infections, colds and flu, UTIs, allergies, and other minor illnesses — often same day. Visits $50.',
   },
 ]
 
 export default function ServicesSection() {
   return (
-    <section style={{ backgroundColor: '#024843' }} aria-labelledby="services-heading">
+    <section
+      className="bg-white"
+      aria-labelledby="services-heading"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: '#99D9D9' }}
+            style={{ color: 'var(--primary)' }}
           >
-            What We Treat
+            Our Services
           </span>
           <h2
             id="services-heading"
-            className="text-3xl md:text-4xl font-bold mb-5"
-            style={{ color: '#ffffff' }}
+            className="text-3xl md:text-4xl font-bold"
+            style={{ color: 'var(--navy)' }}
           >
-            What Can a Telehealth Doctor Treat Online?
+            Online Care for Oklahoma Women and Families
           </h2>
-          {/* AEO answer-first paragraph — ~44 words, direct answer before elaboration */}
-          <p
-            className="text-base md:text-lg max-w-2xl mx-auto"
-            style={{ color: 'rgba(255,255,255,0.92)' }}
-          >
-            Dr. Susan George, DNP, APRN, treats{' '}
-            <strong className="font-semibold" style={{ color: '#ffffff' }}>
-              women&apos;s health
-            </strong>{' '}
-            concerns, manages{' '}
-            <strong className="font-semibold" style={{ color: '#ffffff' }}>
-              online weight loss
-            </strong>
-            , and evaluates{' '}
-            <strong className="font-semibold" style={{ color: '#ffffff' }}>
-              minor illnesses
-            </strong>{' '}
-            via secure video from anywhere in Oklahoma. All visits are cash-pay.
-            No insurance required. The exact visit cost is confirmed before you book.
-          </p>
         </div>
 
         {/* Service cards */}
@@ -72,34 +55,32 @@ export default function ServicesSection() {
           {services.map((service) => (
             <article
               key={service.slug}
-              className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all"
+              className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all bg-white"
               style={{
-                background: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(153,217,217,0.20)',
-                backdropFilter: 'blur(8px)',
+                border: '1px solid rgba(3,93,87,0.12)',
+                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(153,217,217,0.18)' }}
+                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
                 aria-hidden="true"
               >
                 <service.icon
                   className="h-6 w-6"
-                  style={{ color: '#99D9D9' }}
+                  style={{ color: 'var(--primary)' }}
                 />
               </div>
 
               <h3
                 className="text-xl font-semibold leading-snug"
-                style={{ color: '#ffffff' }}
+                style={{ color: 'var(--navy)' }}
               >
                 {service.title}
               </h3>
 
               <p
-                className="text-sm leading-relaxed flex-1"
-                style={{ color: 'rgba(255,255,255,0.88)' }}
+                className="text-sm leading-relaxed flex-1 text-gray-600"
               >
                 {service.description}
               </p>
@@ -107,10 +88,10 @@ export default function ServicesSection() {
               <Link
                 href={`/${service.slug}`}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold mt-1 group"
-                style={{ color: '#99D9D9' }}
+                style={{ color: 'var(--primary)' }}
                 aria-label={`Learn more about ${service.title}`}
               >
-                Learn More
+                Learn more
                 <ArrowRight
                   className="h-4 w-4 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
@@ -122,19 +103,19 @@ export default function ServicesSection() {
 
         {/* Post-services CTA */}
         <div className="mt-12 text-center">
-          <p className="mb-5" style={{ color: 'rgba(255,255,255,0.88)' }}>
+          <p className="mb-5 text-gray-600">
             Not sure which service is right for you? Get in touch and we&apos;ll
             help.
           </p>
           <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
             Book Your Visit
           </Link>
-          <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.85)' }}>
+          <p className="mt-3 text-sm text-gray-500">
             or{' '}
             <a
               href="tel:+14053498188"
               className="font-semibold"
-              style={{ color: '#99D9D9' }}
+              style={{ color: 'var(--primary)' }}
             >
               call (405) 349-8188
             </a>

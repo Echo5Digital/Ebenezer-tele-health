@@ -7,9 +7,10 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Phone, ArrowUpRight } from 'lucide-react'
 
 const navigation = [
-  { name: "Women's Health", href: '/womens-health' },
   { name: 'Weight Loss', href: '/weight-loss' },
+  { name: "Women's Health", href: '/womens-health' },
   { name: 'Minor Illness', href: '/minor-illness' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -47,7 +48,7 @@ export default function Header() {
       <div className="px-3 sm:px-5 lg:px-6 py-3">
         {/* Floating nav card */}
         <nav
-          className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-5 sm:px-7 h-[100px] transition-all duration-300"
+          className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-4 sm:px-7 h-[68px] sm:h-[84px] lg:h-[100px] transition-all duration-300"
           aria-label="Global"
           style={{
             background: 'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(153,217,217,0.18) 100%)',
@@ -72,13 +73,13 @@ export default function Header() {
                 width={100}
                 height={100}
                 priority
-                className="h-[100px] w-auto object-contain"
+                className="h-[56px] sm:h-[72px] lg:h-[100px] w-auto object-contain"
               />
             </div>
           </Link>
 
           {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -94,15 +95,8 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:+14053498188"
-              className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors text-gray-900 hover:text-primary"
-            >
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              (405)&nbsp;349-8188
-            </a>
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95"

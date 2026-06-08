@@ -28,7 +28,7 @@ export default function FinalCTA() {
           Ready to See a Provider Today?
         </h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-          Compassionate, affordable telehealth for Oklahoma women and
+          Compassionate, affordable online care for Oklahoma women and
           families — without the wait.
         </p>
 

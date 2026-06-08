@@ -14,28 +14,27 @@ const steps = [
           style={{ color: '#99D9D9' }}
         >
           call (405) 349-8188
-        </a>{' '}
-        to schedule at a time that works for you.
+        </a>
+        .
       </>
     ),
   },
   {
     number: '02',
     title: 'Complete a Quick Intake',
-    description:
-      'Share your health history and tell us what\'s going on — it only takes a few minutes.',
+    description: 'Share your history and what\'s going on.',
   },
   {
     number: '03',
-    title: 'Meet with Dr. Susan George',
+    title: 'Meet with Dr. George',
     description:
-      'Connect by secure video from anywhere in Oklahoma. A private, real medical consultation.',
+      'Connect by secure video from anywhere in Oklahoma.',
   },
   {
     number: '04',
     title: 'Get Your Plan',
     description:
-      'Receive your diagnosis, treatment plan, and prescriptions sent electronically to your pharmacy.',
+      'Diagnosis, treatment, and prescriptions sent to your pharmacy.',
   },
 ]
 
@@ -71,7 +70,7 @@ export default function HowItWorks() {
             className="text-3xl md:text-4xl font-bold mb-5"
             style={{ color: '#ffffff' }}
           >
-            How Do Online Doctor Visits in Oklahoma Work?
+            Getting Care Online Is Simple
           </h2>
           {/* AEO answer-first paragraph — ~45 words, direct answer before elaboration */}
           <p

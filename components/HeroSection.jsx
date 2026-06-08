@@ -23,7 +23,7 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden -mt-[128px] min-h-[600px] md:min-h-[80vh]"
+      className="relative overflow-hidden -mt-[92px] sm:-mt-[108px] lg:-mt-[128px] min-h-[600px] md:min-h-[80vh]"
       style={{ backgroundColor: '#035D57' }}
       aria-label="Hero"
     >
@@ -47,7 +47,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[188px] pb-24 md:pt-[208px] md:pb-32">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] sm:pt-[168px] lg:pt-[208px] pb-16 sm:pb-24 md:pb-32">
         <div className="max-w-3xl">
           {/* Pre-headline badge */}
           <div
@@ -73,7 +73,7 @@ export default function HeroSection() {
           >
             Affordable Online{' '}
             <span style={{ color: '#99D9D9' }}>Doctor Visits</span>
-            <br className="hidden sm:block" /> in Oklahoma City
+            <br className="hidden sm:block" /> in Oklahoma
           </h1>
 
           {/* Subheadline */}

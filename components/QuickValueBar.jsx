@@ -9,12 +9,12 @@ const valueCards = [
   {
     icon: Receipt,
     title: 'Honest, upfront pricing.',
-    body: "Flat cash-pay fees. You'll know the cost before you book — no surprise bills.",
+    body: "Flat cash-pay fees starting at $50. You'll know the cost before you book.",
   },
   {
     icon: Wifi,
     title: 'Care from anywhere in Oklahoma.',
-    body: 'Skip the drive and the waiting room. Connect via secure telehealth from anywhere in Oklahoma.',
+    body: 'Skip the drive and the waiting room. Connect securely from home.',
   },
   {
     icon: Heart,

@@ -11,6 +11,8 @@ const serviceLinks = [
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy-policy' },
   { name: 'HIPAA Notice', href: '/hipaa-notice' },
+  { name: 'Terms of Use', href: '/terms' },
+  { name: 'Telehealth Consent', href: '/telehealth-consent' },
 ]
 
 const sectionHeadingStyle = {
@@ -51,7 +53,7 @@ export default function Footer() {
                   alt="Ebenezer Telehealth"
                   width={360}
                   height={144}
-                  className="h-36 w-auto object-contain"
+                  className="h-20 sm:h-28 lg:h-36 w-auto object-contain"
                 />
               </div>
             </Link>
@@ -116,7 +118,7 @@ export default function Footer() {
                 </div>
                 <a
                   href="mailto:contact@ebenezertelehealth.com"
-                  className="font-medium transition-colors hover:text-white"
+                  className="font-medium transition-colors hover:text-white break-all"
                 >
                   contact@ebenezertelehealth.com
                 </a>
