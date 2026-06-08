@@ -255,8 +255,25 @@ export default function PricingPage() {
       {/* ════════════════════════════════════════════════════════
           HERO
       ════════════════════════════════════════════════════════ */}
-      <section className="bg-white border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <section
+        className="relative overflow-hidden border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        style={{
+          backgroundImage: "url('/pricing_banner.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Teal-tinted overlay — keeps image visible, matches brand color */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(153,217,217,0.20) 0%, rgba(255,255,255,0.75) 65%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="max-w-3xl">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"

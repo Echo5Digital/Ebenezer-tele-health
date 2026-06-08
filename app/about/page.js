@@ -106,25 +106,55 @@ export default function AboutPage() {
       {/* ════════════════════════════════════════════════════════
           HERO
       ════════════════════════════════════════════════════════ */}
-      <section className="bg-white border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              About Us
-            </span>
-            <h1
-              className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
-              style={{ color: 'var(--navy)' }}
-            >
-              About Ebenezer Telehealth&nbsp;&mdash; Meet Dr. Susan George
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              Faith-driven, evidence-based telehealth care for women and families
-              across Oklahoma.
-            </p>
+      <section
+        className="relative overflow-hidden border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        style={{
+          backgroundImage: "url('/about.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Mobile: uniform light overlay for readability */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(255,255,255,0.87)' }}
+          aria-hidden="true"
+        />
+        {/* Desktop: teal-tinted left (image shows) → white-ish right (text readable) */}
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(3,93,87,0.42) 0%, rgba(255,255,255,0.86) 52%)',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Empty left col — banner image visible on desktop */}
+            <div className="hidden lg:block" aria-hidden="true" />
+
+            {/* Content shifted to the right */}
+            <div>
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                About Us
+              </span>
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
+                style={{ color: 'var(--navy)' }}
+              >
+                About Ebenezer Telehealth&nbsp;&mdash; Meet Dr. Susan George
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                Faith-driven, evidence-based telehealth care for women and families
+                across Oklahoma.
+              </p>
+            </div>
           </div>
         </div>
       </section>

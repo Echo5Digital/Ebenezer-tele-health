@@ -147,3 +147,50 @@
     background-color: rgba(255, 255, 255, 0.25);
   }
 }
+
+/* ─── Scroll-triggered entrance animations ──────── */
+.anim-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.60s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.60s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.anim-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+/* Stagger delays — applied to grid children automatically */
+.anim-up.sd-1  { transition-delay: 0.07s; }
+.anim-up.sd-2  { transition-delay: 0.14s; }
+.anim-up.sd-3  { transition-delay: 0.21s; }
+.anim-up.sd-4  { transition-delay: 0.28s; }
+.anim-up.sd-5  { transition-delay: 0.35s; }
+
+/* Respect user motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .anim-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ─── Card hover lift — service pages only ───────── */
+body.service-page .rounded-2xl {
+  transition-property: transform, box-shadow;
+  transition-duration: 0.22s;
+  transition-timing-function: ease;
+}
+body.service-page .rounded-2xl:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(3, 93, 87, 0.13);
+}
+
+/* Icon containers — scale on parent hover */
+body.service-page .rounded-2xl:hover .rounded-xl {
+  transform: scale(1.08);
+  transition: transform 0.22s ease;
+}

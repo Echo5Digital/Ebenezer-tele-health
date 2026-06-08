@@ -83,75 +83,105 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════════════════════
           HERO — heading + dual CTAs + trust chips
       ═══════════════════════════════════════════════════════ */}
-      <section className="bg-white border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <section
+        className="relative overflow-hidden border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        style={{
+          backgroundImage: "url('/contact_banner.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Mobile: uniform light overlay for readability */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(255,255,255,0.87)' }}
+          aria-hidden="true"
+        />
+        {/* Desktop: teal-tinted left (image shows) → white-ish right (text readable) */}
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(3,93,87,0.55) 0%, rgba(255,255,255,0.90) 52%)',
+          }}
+          aria-hidden="true"
+        />
 
-          <span
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
-          >
-            Contact &amp; Booking
-          </span>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Empty left col — image + teal tint visible on desktop */}
+            <div className="hidden lg:block" aria-hidden="true" />
 
-          <h1
-            className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ color: 'var(--navy)' }}
-          >
-            Contact Ebenezer Telehealth
-          </h1>
+            {/* Content shifted to the right */}
+            <div>
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                Contact &amp; Booking
+              </span>
 
-          <p className="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
-            Ready to book a visit or have a question? We&apos;re here to help.
-          </p>
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
+              >
+                Contact Ebenezer Telehealth
+              </h1>
 
-          {/* Dual CTA row */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href={BOOKING_URL}
-              className="btn-primary inline-flex items-center justify-center gap-2.5"
-              aria-label="Book your telehealth appointment online"
-            >
-              <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-              Book Online Now
-            </a>
-            <a
-              href={PHONE_HREF}
-              className="btn-outline inline-flex items-center justify-center gap-2.5"
-              aria-label="Call Ebenezer Telehealth at (405) 349-8188"
-            >
-              <Phone className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-              Call (405) 349-8188
-            </a>
+              <p className="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+                Ready to book a visit or have a question? We&apos;re here to help.
+              </p>
+
+              {/* Dual CTA row */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={BOOKING_URL}
+                  className="btn-primary inline-flex items-center justify-center gap-2.5"
+                  aria-label="Book your telehealth appointment online"
+                >
+                  <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                  Book Online Now
+                </a>
+                <a
+                  href={PHONE_HREF}
+                  className="btn-outline inline-flex items-center justify-center gap-2.5"
+                  aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+                >
+                  <Phone className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                  Call (405) 349-8188
+                </a>
+              </div>
+
+              {/* Trust chips */}
+              <div className="flex flex-wrap gap-x-6 gap-y-2.5 mt-7 text-sm text-gray-500">
+                <span className="flex items-center gap-2">
+                  <CheckCircle
+                    className="h-4 w-4 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  Serving all of Oklahoma
+                </span>
+                <span className="flex items-center gap-2">
+                  <CreditCard
+                    className="h-4 w-4 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  Cash-pay · no insurance needed
+                </span>
+                <span className="flex items-center gap-2">
+                  <Shield
+                    className="h-4 w-4 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  HIPAA-secure video visits
+                </span>
+              </div>
+            </div>
           </div>
-
-          {/* Trust chips */}
-          <div className="flex flex-wrap gap-x-6 gap-y-2.5 mt-7 text-sm text-gray-500">
-            <span className="flex items-center gap-2">
-              <CheckCircle
-                className="h-4 w-4 flex-shrink-0"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-              Serving all of Oklahoma
-            </span>
-            <span className="flex items-center gap-2">
-              <CreditCard
-                className="h-4 w-4 flex-shrink-0"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-              Cash-pay · no insurance needed
-            </span>
-            <span className="flex items-center gap-2">
-              <Shield
-                className="h-4 w-4 flex-shrink-0"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-              HIPAA-secure video visits
-            </span>
-          </div>
-
         </div>
       </section>
 

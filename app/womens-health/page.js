@@ -72,90 +72,130 @@ export default function WomensHealthPage() {
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative bg-white -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
         style={{
-          background:
-            'linear-gradient(135deg, rgba(153,217,217,0.12) 0%, #ffffff 60%)',
+          backgroundImage: "url('/women_health.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            {/* Breadcrumb */}
-            <nav
-              className="flex items-center gap-2 text-sm text-gray-500 mb-6"
-              aria-label="Breadcrumb"
-            >
-              <Link href="/" className="hover:text-primary transition-colors">
-                Home
-              </Link>
-              <span aria-hidden="true">/</span>
-              <span style={{ color: 'var(--primary)' }}>Women&apos;s Health</span>
-            </nav>
+        {/* Mobile: uniform light overlay for readability */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(255,255,255,0.93)' }}
+          aria-hidden="true"
+        />
+        {/* Desktop: white-ish left (text readable) → teal-tinted right (image shows) */}
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.86) 48%, rgba(3,93,87,0.38) 100%)',
+          }}
+          aria-hidden="true"
+        />
 
-            {/* Label */}
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Women&apos;s Health Telehealth
-            </span>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Content anchored to the left */}
+            <div>
+              {/* Breadcrumb */}
+              <nav
+                className="flex items-center gap-2 text-sm text-gray-500 mb-6"
+                aria-label="Breadcrumb"
+              >
+                <Link href="/" className="hover:text-primary transition-colors">
+                  Home
+                </Link>
+                <span aria-hidden="true">/</span>
+                <span style={{ color: 'var(--primary)' }}>Women&apos;s Health</span>
+              </nav>
 
-            <h1
-              className="text-4xl md:text-5xl font-bold mb-5"
-              style={{ color: 'var(--navy)' }}
-            >
-              Women&apos;s Health Care — Virtual, Private &amp; Personalized
-            </h1>
+              {/* Label */}
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                Women&apos;s Health Telehealth
+              </span>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
-              Discreet, compassionate virtual care for the health issues that
-              matter most to you. Led by Dr. Susan George, DNP, APRN — a
-              women&apos;s health specialist serving women across Oklahoma from
-              the comfort and privacy of home.
-            </p>
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-5"
+                style={{ color: 'var(--navy)' }}
+              >
+                Women&apos;s Health Care — Virtual, Private &amp; Personalized
+              </h1>
 
-            {/* HIPAA badge */}
-            <div
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
-              style={{
-                backgroundColor: 'rgba(153,217,217,0.40)',
-                color: 'var(--primary-dark)',
-              }}
-            >
-              <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-              Private, discreet &amp; HIPAA-secure
+              <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                Discreet, compassionate virtual care for the health issues that
+                matter most to you. Led by Dr. Susan George, DNP, APRN — a
+                women&apos;s health specialist serving women across Oklahoma from
+                the comfort and privacy of home.
+              </p>
+
+              {/* HIPAA badge */}
+              <div
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
+                style={{
+                  backgroundColor: 'rgba(153,217,217,0.40)',
+                  color: 'var(--primary-dark)',
+                }}
+              >
+                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                Private, discreet &amp; HIPAA-secure
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/contact"
+                  className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+                >
+                  Book Your Visit
+                </Link>
+                <a
+                  href="tel:+14053498188"
+                  className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+                >
+                  Call (405) 349-8188
+                </a>
+              </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/contact"
-                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Book Your Visit
-              </Link>
-              <a
-                href="tel:+14053498188"
-                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Call (405) 349-8188
-              </a>
-            </div>
+            {/* Empty right col — image visible on desktop */}
+            <div className="hidden lg:block" aria-hidden="true" />
           </div>
         </div>
       </section>
 
       {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/answer_block.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.78) 48%, rgba(3,93,87,0.28) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div
-            className="rounded-xl border px-6 py-6"
-            style={{
-              borderColor: 'rgba(3,93,87,0.20)',
-              backgroundColor: 'rgba(153,217,217,0.12)',
-            }}
+            className="max-w-3xl border-l-4 pl-5 md:pl-6"
+            style={{ borderColor: 'var(--primary)' }}
           >
-            <p className="hero-answer-line">
+            <p
+              className="hero-answer-line text-base md:text-lg leading-relaxed"
+              style={{ color: '#035D57' }}
+            >
               Ebenezer Telehealth provides women&apos;s health telehealth
               services across Oklahoma, led by Dr. Susan George, DNP, APRN. We
               offer confidential, cash-pay virtual visits for birth control,

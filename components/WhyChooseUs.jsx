@@ -27,27 +27,29 @@ export default function WhyChooseUs() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
 
           {/* Label pill */}
-          <div
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-5"
-            style={{
-              backgroundColor: 'rgba(3,93,87,0.08)',
-              border: '1px solid rgba(3,93,87,0.15)',
-            }}
-          >
-            <span
-              className="h-1.5 w-1.5 rounded-full flex-shrink-0"
-              style={{ backgroundColor: 'var(--primary)' }}
-              aria-hidden="true"
-            />
-            <span
-              className="text-xs font-semibold uppercase tracking-widest"
-              style={{ color: 'var(--primary)' }}
+          <div className="flex justify-center mb-5">
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5"
+              style={{
+                backgroundColor: 'rgba(3,93,87,0.08)',
+                border: '1px solid rgba(3,93,87,0.15)',
+              }}
             >
-              Why Ebenezer
-            </span>
+              <span
+                className="h-1.5 w-1.5 rounded-full flex-shrink-0"
+                style={{ backgroundColor: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              <span
+                className="text-xs font-semibold uppercase tracking-widest"
+                style={{ color: 'var(--primary)' }}
+              >
+                Why Ebenezer
+              </span>
+            </div>
           </div>
 
           <h2
@@ -59,7 +61,7 @@ export default function WhyChooseUs() {
           </h2>
 
           {/* Decorative accent line */}
-          <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+          <div className="flex items-center justify-center gap-2 mb-6" aria-hidden="true">
             <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
             <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.25)' }} />
             <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.12)' }} />
@@ -71,7 +73,7 @@ export default function WhyChooseUs() {
             drives, crowded waiting rooms, or confusing bills.
           </p>
 
-          <ul className="space-y-3.5" role="list">
+          <ul className="space-y-3.5 text-left" role="list">
             {bullets.map((bullet) => (
               <li key={bullet} className="flex items-start gap-3">
                 <div

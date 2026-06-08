@@ -75,10 +75,10 @@ const steps = [
 ]
 
 const oklahomaCities = [
-  { name: 'Oklahoma City', href: '/weight-loss/oklahoma-city' },
-  { name: 'Tulsa', href: '/weight-loss/tulsa' },
-  { name: 'Moore', href: '/weight-loss/moore' },
-  { name: 'Owasso', href: '/weight-loss/owasso' },
+  { name: 'Oklahoma City', href: '/weight-loss-okc' },
+  { name: 'Tulsa', href: '/weight-loss-tulsa' },
+  { name: 'Moore', href: '/weight-loss-moore' },
+  { name: 'Owasso', href: '/weight-loss-owasso' },
 ]
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
@@ -274,16 +274,32 @@ export default function WeightLossPage() {
       </section>
 
       {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/answer_block.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(153,217,217,0.25) 0%, rgba(255,255,255,0.72) 60%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div
-            className="rounded-xl border px-6 py-6"
-            style={{
-              borderColor: 'rgba(3,93,87,0.20)',
-              backgroundColor: 'rgba(153,217,217,0.12)',
-            }}
+            className="max-w-3xl border-l-4 pl-5 md:pl-6"
+            style={{ borderColor: 'var(--primary)' }}
           >
-            <p className="hero-answer-line">
+            <p
+              className="hero-answer-line text-base md:text-lg leading-relaxed"
+              style={{ color: '#035D57' }}
+            >
               Ebenezer Telehealth is a medical weight loss clinic serving
               patients across Oklahoma through secure telehealth visits. We
               offer medically supervised weight-loss programs — including
@@ -682,8 +698,22 @@ export default function WeightLossPage() {
       </section>
 
       {/* ── WHO IS THIS FOR ──────────────────────────────────────── */}
-      <section className="bg-white" aria-labelledby="who-for-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="who-for-heading"
+        style={{
+          backgroundImage: "url('/weight_loss_img.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(255,255,255,0.78)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
             <div>

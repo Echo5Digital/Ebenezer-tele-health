@@ -163,13 +163,24 @@ export default function MinorIllnessPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative bg-white -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
         style={{
-          background:
-            'linear-gradient(135deg, rgba(153,217,217,0.12) 0%, #ffffff 60%)',
+          backgroundImage: "url('/minor_ill.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        {/* Teal-tinted overlay — matches brand color, image clearly visible */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(153,217,217,0.40) 0%, rgba(255,255,255,0.82) 60%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl">
             {/* Breadcrumb */}
             <nav
@@ -237,16 +248,32 @@ export default function MinorIllnessPage() {
       </section>
 
       {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/answer_block.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(153,217,217,0.38) 0%, rgba(255,255,255,0.72) 60%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div
-            className="rounded-xl border px-6 py-6"
-            style={{
-              borderColor: 'rgba(3,93,87,0.20)',
-              backgroundColor: 'rgba(153,217,217,0.12)',
-            }}
+            className="max-w-3xl border-l-4 pl-5 md:pl-6"
+            style={{ borderColor: 'var(--primary)' }}
           >
-            <p className="hero-answer-line">
+            <p
+              className="hero-answer-line text-base md:text-lg leading-relaxed"
+              style={{ color: '#035D57' }}
+            >
               Ebenezer Telehealth provides same-day online treatment for minor
               illnesses to patients across Oklahoma. Common conditions include
               sinus infections, cold and flu, UTIs, allergies, pink eye, rashes,

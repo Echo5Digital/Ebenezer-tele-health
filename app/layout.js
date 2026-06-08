@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileBottomBar from '@/components/MobileBottomBar'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
             sm    112px  (4 + 12 + 84 + 12)
             lg    128px  (4 + 12 + 100 + 12)
             pb-16 offsets the fixed mobile bottom bar                        */}
+        <ScrollAnimations />
         <main className="pt-[96px] sm:pt-[112px] lg:pt-[128px] pb-16 lg:pb-0">{children}</main>
         <Footer />
         <MobileBottomBar />
