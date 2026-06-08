@@ -199,13 +199,30 @@ export default function WeightLossPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative bg-white -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
         style={{
-          background:
-            'linear-gradient(135deg, rgba(153,217,217,0.12) 0%, #ffffff 60%)',
+          backgroundImage: "url('/location_bg.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        {/* Mobile overlay — flat white for readability */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(255,255,255,0.88)' }}
+          aria-hidden="true"
+        />
+        {/* Desktop overlay — teal gradient, content left / image visible right */}
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 48%, rgba(153,217,217,0.35) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl">
             {/* Breadcrumb */}
             <nav
