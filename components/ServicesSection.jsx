@@ -4,24 +4,24 @@ import { HeartHandshake, Scale, Thermometer, ArrowRight } from 'lucide-react'
 const services = [
   {
     icon: Scale,
-    title: 'Medical Weight Loss Clinic — Online',
+    title: 'Medical Weight Loss Clinic Online',
     slug: 'weight-loss',
     description:
-      'A medically supervised weight-loss program built around your metabolic health — including GLP-1 medication management — overseen by Susan George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
+      'A medically supervised weight-loss program built around your metabolic health, including GLP-1 medication management, overseen by Susan George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
   },
   {
     icon: HeartHandshake,
     title: "Women's Health Telehealth",
     slug: 'womens-health',
     description:
-      "Discreet, compassionate virtual care for birth control, PCOS, menopause, hormonal health, and more — led by a provider who specializes in women's health. Initial visits from $150.",
+      "Discreet, compassionate virtual care for birth control, PCOS, menopause, hormonal health, and more, led by a provider who specializes in women's health. Initial visits from $150.",
   },
   {
     icon: Thermometer,
     title: 'Treatment for Minor Illnesses',
     slug: 'minor-illness',
     description:
-      'Feel better without leaving home. Get evaluated and treated online for sinus infections, colds and flu, UTIs, allergies, and other minor illnesses — often same day. Visits $50.',
+      'Feel better without leaving home. Get evaluated and treated online for sinus infections, colds and flu, UTIs, allergies, and other minor illnesses, often same day. Visits $50.',
   },
 ]
 

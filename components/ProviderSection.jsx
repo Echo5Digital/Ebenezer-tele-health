@@ -5,7 +5,7 @@ import { Award, MapPin, Quote } from 'lucide-react'
 const credentials = [
   { label: 'Doctor of Nursing Practice (DNP)' },
   { label: 'Advanced Practice Registered Nurse (APRN)' },
-  { label: 'Board Certified — Advanced Diabetes Management (BC-ADM)' },
+  { label: 'Board Certified in Advanced Diabetes Management (BC-ADM)' },
   { label: "Women's Health Specialist" },
   { label: 'Service Area: Oklahoma (statewide)' },
 ]
@@ -75,7 +75,7 @@ export default function ProviderSection() {
                   />
                   {/* TODO: Add license number once confirmed */}
                   <span className="text-sm text-gray-400">
-                    License Number: [placeholder — to be added]
+                    License Number: [placeholder, to be added]
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -85,7 +85,7 @@ export default function ProviderSection() {
                   />
                   {/* TODO: Add years practicing once confirmed */}
                   <span className="text-sm text-gray-400">
-                    Years Practicing: [placeholder — to be added]
+                    Years Practicing: [placeholder, to be added]
                   </span>
                 </li>
               </ul>
@@ -121,14 +121,14 @@ export default function ProviderSection() {
                 from home.&rdquo;
               </blockquote>
               <figcaption className="mt-3 text-sm font-semibold" style={{ color: 'var(--navy)' }}>
-                — Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                Susan George, DNP, APRN, BC-ADM, Online Practitioner
               </figcaption>
             </figure>
 
             {/* Location */}
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <MapPin className="h-4 w-4 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
-              Based in Oklahoma City, OK — serving patients throughout Oklahoma via secure telehealth
+              Based in Oklahoma City, OK, serving patients throughout Oklahoma via secure telehealth
             </div>
           </div>
 
@@ -137,7 +137,7 @@ export default function ProviderSection() {
             <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
               <Image
                 src="/dr-susan-george-oklahoma-telehealth.webp"
-                alt="Susan George, DNP, APRN — online practitioner at Ebenezer"
+                alt="Susan George, DNP, APRN, online practitioner at Ebenezer"
                 fill
                 className="object-cover object-center"
                 priority

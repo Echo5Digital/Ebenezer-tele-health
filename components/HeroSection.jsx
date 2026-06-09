@@ -53,9 +53,9 @@ export default function HeroSection() {
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 border"
             style={{
-              backgroundColor: 'rgba(151,206,204,0.15)',
-              borderColor: 'rgba(151,206,204,0.30)',
-              color: '#97CECC',
+              backgroundColor: 'rgba(255,255,255,0.14)',
+              borderColor: 'rgba(255,255,255,0.35)',
+              color: '#ffffff',
             }}
           >
             <span
@@ -81,7 +81,7 @@ export default function HeroSection() {
             className="text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
             style={{ color: 'rgba(255,255,255,0.92)' }}
           >
-            Faith-driven, compassionate telehealth for women and families —
+            Faith-driven, compassionate telehealth for women and families,
             from anywhere in Oklahoma. See a trusted provider online for{' '}
             <strong className="font-semibold" style={{ color: '#ffffff' }}>
               women&apos;s health

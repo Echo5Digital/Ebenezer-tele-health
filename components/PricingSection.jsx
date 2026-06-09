@@ -24,7 +24,7 @@ const plans = [
       'Video visit with Susan George, DNP, APRN',
       'Personalized metabolic health plan',
       'Ongoing management support',
-      'Clinical — not a quick-fix program',
+      'Clinically supervised, not a quick-fix program',
     ],
     featured: true,
   },
@@ -66,7 +66,7 @@ export default function PricingSection() {
           {/* AEO answer-first paragraph — ~43 words, direct answer before cards */}
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Ebenezer Telehealth is a cash-pay telehealth practice in Oklahoma
-            City &mdash; no insurance required, ever. The exact cost of your
+            City. No insurance required, ever. The exact cost of your
             visit is confirmed before you book, with no hidden fees and no
             surprise bills.
           </p>
@@ -174,7 +174,7 @@ export default function PricingSection() {
             We currently operate on a{' '}
             <strong>cash-pay basis</strong>. Insurance options are coming as we
             expand to in-person and additional telehealth services. Exact prices
-            will be displayed at booking — no hidden fees.{' '}
+            will be displayed at booking, no hidden fees.{' '}
             As telehealth services are provided remotely, payment is currently
             accepted via credit and debit cards only.
           </p>

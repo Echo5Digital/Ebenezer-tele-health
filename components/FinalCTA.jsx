@@ -29,7 +29,7 @@ export default function FinalCTA() {
         </h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
           Compassionate, affordable online care for Oklahoma women and
-          families — without the wait.
+          families, without the wait.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
