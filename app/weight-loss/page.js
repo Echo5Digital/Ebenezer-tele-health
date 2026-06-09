@@ -57,7 +57,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Dr. George by Video',
+    title: 'Meet Susan George by Video',
     description: 'Secure video visit for a comprehensive metabolic evaluation.',
   },
   {
@@ -218,7 +218,7 @@ export default function WeightLossPage() {
           className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 48%, rgba(153,217,217,0.35) 100%)',
+              'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 48%, rgba(151,206,204,0.35) 100%)',
           }}
           aria-hidden="true"
         />
@@ -254,7 +254,7 @@ export default function WeightLossPage() {
             <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
               A medically supervised, evidence-based weight-loss program —
               including GLP-1 medication management — delivered by secure video
-              from anywhere in Oklahoma. Overseen by Dr. Susan George, DNP,
+              from anywhere in Oklahoma. Overseen by Susan George, DNP,
               APRN, BC-ADM, who is Board Certified in Advanced Diabetes
               Management.
             </p>
@@ -263,8 +263,8 @@ export default function WeightLossPage() {
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.40)',
-                color: 'var(--primary-dark)',
+                backgroundColor: 'rgba(151,206,204,0.40)',
+                color: 'var(--navy)',
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
@@ -296,7 +296,7 @@ export default function WeightLossPage() {
         style={{
           backgroundImage: "url('/answer_block.webp')",
           backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
+          backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -304,7 +304,7 @@ export default function WeightLossPage() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(153,217,217,0.25) 0%, rgba(255,255,255,0.72) 60%)',
+              'linear-gradient(135deg, rgba(151,206,204,0.25) 0%, rgba(255,255,255,0.72) 60%)',
           }}
           aria-hidden="true"
         />
@@ -315,14 +315,14 @@ export default function WeightLossPage() {
           >
             <p
               className="hero-answer-line text-base md:text-lg leading-relaxed"
-              style={{ color: '#035D57' }}
+              style={{ color: '#1AA6B7' }}
             >
               Ebenezer Telehealth is a medical weight loss clinic serving
               patients across Oklahoma through secure telehealth visits. We
               offer medically supervised weight-loss programs — including
               semaglutide and other GLP-1 medications — with personalized care
               plans, responsible medication management, and ongoing support, led
-              by Dr. Susan George, DNP, APRN, BC-ADM. Initial consultations
+              by Susan George, DNP, APRN, BC-ADM. Initial consultations
               start at $250.
             </p>
           </div>
@@ -354,11 +354,11 @@ export default function WeightLossPage() {
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(3,93,87,0.25)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
-                style={{ backgroundColor: 'rgba(3,93,87,0.12)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
               />
             </div>
           </div>
@@ -369,13 +369,13 @@ export default function WeightLossPage() {
                 Medical weight loss is a clinically guided approach to losing
                 weight under the supervision of a licensed healthcare provider —
                 not a quick fix, a fad diet, or a med-spa gimmick. At Ebenezer
-                Telehealth, Dr. George evaluates your metabolic health, medical
+                Telehealth, Susan George evaluates your metabolic health, medical
                 history, and goals, then builds a personalized plan that may
                 include GLP-1 medications (such as semaglutide), lifestyle
                 guidance, and ongoing monitoring.
               </p>
               <p className="text-base text-gray-600 leading-relaxed">
-                Because Dr. George is Board Certified in Advanced Diabetes
+                Because Susan George is Board Certified in Advanced Diabetes
                 Management, you get genuine metabolic expertise — the clinical
                 knowledge to manage insulin resistance, metabolic syndrome, and
                 the hormonal factors that make weight loss harder than willpower
@@ -386,14 +386,14 @@ export default function WeightLossPage() {
             <div
               className="rounded-2xl p-8"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.15)',
-                border: '1px solid rgba(3,93,87,0.15)',
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.15)',
               }}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div
                   className="inline-flex h-10 w-10 items-center justify-center rounded-xl flex-shrink-0"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.10)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
                   aria-hidden="true"
                 >
                   <ShieldCheck
@@ -414,7 +414,7 @@ export default function WeightLossPage() {
                 behind weight gain — insulin resistance, hormonal factors, and
                 medication management. Commercially marketed programs
                 don&apos;t account for your individual health history,
-                metabolism, or medications. Dr. George does.
+                metabolism, or medications. Susan George does.
               </p>
               <Link href="/contact" className="btn-primary text-sm">
                 Book a Consultation
@@ -458,8 +458,8 @@ export default function WeightLossPage() {
               className="rounded-2xl p-8 border flex flex-col"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                borderColor: 'rgba(3,93,87,0.30)',
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
               }}
             >
               <div className="mb-6">
@@ -506,8 +506,8 @@ export default function WeightLossPage() {
               className="rounded-2xl p-8 border flex flex-col"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                borderColor: 'rgba(3,93,87,0.30)',
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
               }}
             >
               <div className="mb-6">
@@ -564,8 +564,8 @@ export default function WeightLossPage() {
             <div
               className="mt-6 rounded-xl p-5 flex items-start gap-3"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.15)',
-                border: '1px solid rgba(3,93,87,0.20)',
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.20)',
               }}
               role="note"
             >
@@ -626,11 +626,11 @@ export default function WeightLossPage() {
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.25)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.12)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
 
@@ -645,14 +645,14 @@ export default function WeightLossPage() {
                 significant results in clinical trials, but they&apos;re not
                 for everyone — and they&apos;re most effective when combined
                 with a supervised clinical plan, not prescribed in isolation.
-                Dr. George evaluates whether GLP-1 therapy is right for you
+                Susan George evaluates whether GLP-1 therapy is right for you
                 based on your health profile, not a one-size-fits-all
                 questionnaire.
               </p>
               <p className="text-base text-gray-600 leading-relaxed">
                 We use pharmaceutical-grade semaglutide, with medications
                 shipped directly to you. Your dosing is managed and titrated by
-                Dr. George through regular follow-up visits.
+                Susan George through regular follow-up visits.
               </p>
             </div>
 
@@ -660,8 +660,8 @@ export default function WeightLossPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
-                  border: '1px solid rgba(3,93,87,0.15)',
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.15)',
                 }}
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -688,8 +688,8 @@ export default function WeightLossPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(3,93,87,0.04)',
-                  border: '1px solid rgba(3,93,87,0.12)',
+                  backgroundColor: 'rgba(26,166,183,0.04)',
+                  border: '1px solid rgba(26,166,183,0.12)',
                 }}
               >
                 <h3
@@ -699,7 +699,7 @@ export default function WeightLossPage() {
                   Not a One-Size-Fits-All Prescription
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  Not every patient is a candidate for GLP-1 therapy. Dr.
+                  Not every patient is a candidate for GLP-1 therapy. Susan
                   George evaluates your full health profile — medical history,
                   current medications, labs, and goals — before recommending
                   any medication. If semaglutide isn&apos;t right for you,
@@ -754,11 +754,11 @@ export default function WeightLossPage() {
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.25)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.12)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
@@ -773,7 +773,7 @@ export default function WeightLossPage() {
                   <li key={reason} className="flex items-start gap-3">
                     <div
                       className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: 'rgba(3,93,87,0.10)' }}
+                      style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
                       aria-hidden="true"
                     >
                       <CheckCircle2
@@ -792,8 +792,8 @@ export default function WeightLossPage() {
             <div
               className="rounded-2xl p-8"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.10)',
-                border: '1px solid rgba(3,93,87,0.12)',
+                backgroundColor: 'rgba(151,206,204,0.10)',
+                border: '1px solid rgba(26,166,183,0.12)',
               }}
             >
               <h3
@@ -822,12 +822,12 @@ export default function WeightLossPage() {
       {/* ── MEET YOUR PROVIDER ───────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: '#035D57' }}
+        style={{ backgroundColor: '#1AA6B7' }}
         aria-labelledby="provider-heading"
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(3,93,87,0.40)' }}
+          style={{ backgroundColor: 'rgba(26,166,183,0.40)' }}
           aria-hidden="true"
         />
 
@@ -835,7 +835,7 @@ export default function WeightLossPage() {
           <div className="max-w-3xl mx-auto text-center">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: '#99D9D9' }}
+              style={{ color: '#97CECC' }}
             >
               Your Provider
             </span>
@@ -852,7 +852,7 @@ export default function WeightLossPage() {
             >
               Your weight-loss care is led by{' '}
               <strong style={{ color: '#ffffff' }}>
-                Dr. Susan George, DNP, APRN, BC-ADM
+                Susan George, DNP, APRN, BC-ADM, Online Practitioner
               </strong>{' '}
               — a Doctor of Nursing Practice who is Board Certified in Advanced
               Diabetes Management. That certification means real expertise in
@@ -879,9 +879,9 @@ export default function WeightLossPage() {
               </p>
               <footer
                 className="text-sm font-semibold"
-                style={{ color: '#99D9D9' }}
+                style={{ color: '#97CECC' }}
               >
-                — Dr. Susan George, DNP, APRN, BC-ADM
+                — Susan George, DNP, APRN, BC-ADM, Online Practitioner
               </footer>
             </blockquote>
           </div>
@@ -934,8 +934,8 @@ export default function WeightLossPage() {
                 className="rounded-2xl p-6 flex flex-col gap-4"
                 style={{
                   background: 'rgba(255,255,255,0.88)',
-                  border: '1px solid rgba(3,93,87,0.12)',
-                  boxShadow: '0 2px 12px rgba(3,93,87,0.06)',
+                  border: '1px solid rgba(26,166,183,0.12)',
+                  boxShadow: '0 2px 12px rgba(26,166,183,0.06)',
                 }}
               >
                 <div
@@ -1011,11 +1011,11 @@ export default function WeightLossPage() {
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.25)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.12)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -1041,8 +1041,8 @@ export default function WeightLossPage() {
                     href={city.href}
                     className="flex items-center gap-3 rounded-xl px-5 py-4 bg-white hover:-translate-y-0.5 transition-all duration-200 group"
                     style={{
-                      border: '1px solid rgba(3,93,87,0.12)',
-                      boxShadow: '0 2px 8px rgba(3,93,87,0.06)',
+                      border: '1px solid rgba(26,166,183,0.12)',
+                      boxShadow: '0 2px 8px rgba(26,166,183,0.06)',
                     }}
                   >
                     <MapPin
@@ -1153,13 +1153,13 @@ export default function WeightLossPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <HeartHandshake
@@ -1178,7 +1178,7 @@ export default function WeightLossPage() {
                   <span
                     className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
+                      backgroundColor: 'rgba(151,206,204,0.30)',
                       color: 'var(--primary)',
                     }}
                   >
@@ -1209,13 +1209,13 @@ export default function WeightLossPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <Thermometer
@@ -1234,7 +1234,7 @@ export default function WeightLossPage() {
                   <span
                     className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
+                      backgroundColor: 'rgba(151,206,204,0.30)',
                       color: 'var(--primary)',
                     }}
                   >

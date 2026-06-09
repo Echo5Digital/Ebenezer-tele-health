@@ -36,10 +36,10 @@ export default function AnswerBlock() {
            */}
           <p
             className="hero-answer-line text-base md:text-lg leading-relaxed"
-            style={{ color: '#035D57' }}
+            style={{ color: '#1AA6B7' }}
           >
             Ebenezer Telehealth is a faith-driven, Oklahoma City&ndash;based
-            telehealth practice led by Dr. Susan George, DNP, APRN, BC-ADM,
+            telehealth practice led by Susan George, DNP, APRN, BC-ADM, Online Practitioner,
             offering affordable cash-pay online visits for{' '}
             <strong style={{ color: 'var(--primary)' }}>weight loss management</strong>,{' '}
             <strong style={{ color: 'var(--primary)' }}>women&apos;s health</strong>, and{' '}

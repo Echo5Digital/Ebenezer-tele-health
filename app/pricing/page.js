@@ -269,7 +269,7 @@ export default function PricingPage() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(153,217,217,0.20) 0%, rgba(255,255,255,0.75) 65%)',
+              'linear-gradient(135deg, rgba(151,206,204,0.20) 0%, rgba(255,255,255,0.75) 65%)',
           }}
           aria-hidden="true"
         />
@@ -313,8 +313,8 @@ export default function PricingPage() {
                   key={chip.label}
                   className="flex items-center gap-2 rounded-full px-4 py-2"
                   style={{
-                    backgroundColor: 'rgba(153,217,217,0.18)',
-                    border: '1px solid rgba(3,93,87,0.18)',
+                    backgroundColor: 'rgba(151,206,204,0.18)',
+                    border: '1px solid rgba(26,166,183,0.18)',
                   }}
                 >
                   <span className="text-xs font-medium text-gray-600">
@@ -365,8 +365,8 @@ export default function PricingPage() {
                 aria-label={`${service.name} pricing`}
                 style={{
                   border: service.featured
-                    ? '1.5px solid rgba(3,93,87,0.35)'
-                    : '1px solid rgba(3,93,87,0.12)',
+                    ? '1.5px solid rgba(26,166,183,0.35)'
+                    : '1px solid rgba(26,166,183,0.12)',
                 }}
               >
                 {/* Service header bar */}
@@ -374,8 +374,8 @@ export default function PricingPage() {
                   className="px-6 py-4 flex items-center justify-between gap-4 flex-wrap"
                   style={{
                     background: service.featured
-                      ? 'linear-gradient(135deg, #035D57 0%, #024843 100%)'
-                      : 'linear-gradient(135deg, rgba(3,93,87,0.88) 0%, rgba(2,72,67,0.94) 100%)',
+                      ? 'linear-gradient(135deg, #1AA6B7 0%, #1AA6B7 100%)'
+                      : 'linear-gradient(135deg, rgba(26,166,183,0.88) 0%, rgba(26,166,183,0.94) 100%)',
                   }}
                 >
                   <h3 className="text-lg md:text-xl font-bold text-white">
@@ -391,13 +391,13 @@ export default function PricingPage() {
                 {/* Column headers — visible on sm+ only */}
                 <div
                   className="hidden sm:grid sm:grid-cols-[1.5fr_0.75fr_2.25fr] px-6 py-3 border-b border-gray-100"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.04)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.04)' }}
                 >
                   {['Visit Type', 'Price', "What's Included"].map((col) => (
                     <p
                       key={col}
                       className="text-[11px] font-bold uppercase tracking-widest"
-                      style={{ color: 'rgba(3,93,87,0.55)' }}
+                      style={{ color: 'rgba(26,166,183,0.55)' }}
                     >
                       {col}
                     </p>
@@ -420,8 +420,8 @@ export default function PricingPage() {
           <div
             className="mt-8 rounded-xl p-5 flex items-start gap-3"
             style={{
-              backgroundColor: 'rgba(153,217,217,0.15)',
-              border: '1px solid rgba(3,93,87,0.20)',
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
             }}
             role="note"
           >
@@ -433,7 +433,7 @@ export default function PricingPage() {
             <p className="text-sm text-gray-700 leading-relaxed">
               Prices listed are your <strong>total cost</strong> for each
               visit — no hidden fees, no additional charges. Payment is due at
-              the time of booking. We accept cash, credit, and debit cards.
+              the time of booking. We accept cash, credit, and debit cards. As telehealth services are provided remotely, payment is currently accepted via credit and debit cards only.
             </p>
           </div>
 
@@ -486,8 +486,8 @@ export default function PricingPage() {
                   key={item.title}
                   className="rounded-2xl p-5 flex flex-col gap-3"
                   style={{
-                    backgroundColor: 'rgba(153,217,217,0.12)',
-                    border: '1px solid rgba(3,93,87,0.10)',
+                    backgroundColor: 'rgba(151,206,204,0.12)',
+                    border: '1px solid rgba(26,166,183,0.10)',
                   }}
                 >
                   <CheckCircle2

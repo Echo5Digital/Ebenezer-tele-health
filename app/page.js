@@ -4,6 +4,7 @@ import AnswerBlock from '@/components/AnswerBlock'
 import QuickValueBar from '@/components/QuickValueBar'
 import ServicesSection from '@/components/ServicesSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import Testimonials from '@/components/Testimonials'
 import ProviderSection from '@/components/ProviderSection'
 import HowItWorks from '@/components/HowItWorks'
 import PricingSection from '@/components/PricingSection'
@@ -28,6 +29,7 @@ export default function HomePage() {
       <QuickValueBar />
       <ServicesSection />
       <WhyChooseUs />
+      <Testimonials />
       <ProviderSection />
       <HowItWorks />
       <PricingSection />

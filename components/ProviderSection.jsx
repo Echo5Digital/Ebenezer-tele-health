@@ -27,7 +27,7 @@ export default function ProviderSection() {
             className="text-3xl md:text-4xl font-bold"
             style={{ color: 'var(--navy)' }}
           >
-            Meet Dr. Susan George, DNP, APRN
+            Meet Susan George, DNP, APRN, Online Practitioner
           </h2>
         </div>
 
@@ -37,14 +37,14 @@ export default function ProviderSection() {
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Your care at Ebenezer Telehealth is led by Dr. Susan George, a
+                Your care at Ebenezer Telehealth is led by Susan George, a
                 Doctor of Nursing Practice and Advanced Practice Registered Nurse
                 who specializes in women&apos;s health and is Board Certified in
                 Advanced Diabetes Management (BC-ADM).
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
                 With a deep commitment to compassionate, faith-driven medicine,
-                Dr. George provides accessible, affordable care to women and
+                Susan George provides accessible, affordable care to women and
                 families across Oklahoma.
               </p>
             </div>
@@ -89,14 +89,25 @@ export default function ProviderSection() {
                   </span>
                 </li>
               </ul>
+              {/* Credentialing notice */}
+              <p
+                className="text-sm text-gray-600 mt-3 rounded-lg px-4 py-3"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.20)',
+                }}
+              >
+                Currently in the credentialing process and will soon be accepting major
+                commercial and government insurance plans.
+              </p>
             </div>
 
             {/* Provider quote */}
             <figure
               className="rounded-xl p-6 border-l-4 mt-2"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.15)',
-                borderColor: '#035D57',
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                borderColor: '#1AA6B7',
               }}
             >
               <Quote
@@ -110,7 +121,7 @@ export default function ProviderSection() {
                 from home.&rdquo;
               </blockquote>
               <figcaption className="mt-3 text-sm font-semibold" style={{ color: 'var(--navy)' }}>
-                — Dr. Susan George, DNP, APRN, BC-ADM
+                — Susan George, DNP, APRN, BC-ADM, Online Practitioner
               </figcaption>
             </figure>
 
@@ -125,8 +136,8 @@ export default function ProviderSection() {
           <div className="flex flex-col items-center gap-5 order-1 lg:order-2">
             <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
               <Image
-                src="/Dr_OKC.webp"
-                alt="Dr. Susan George, DNP, APRN — Provider at Ebenezer Telehealth, Oklahoma City"
+                src="/dr-susan-george-oklahoma-telehealth.webp"
+                alt="Susan George, DNP, APRN — online practitioner at Ebenezer"
                 fill
                 className="object-cover object-center"
                 priority

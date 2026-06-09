@@ -27,24 +27,28 @@ const placeholderTestimonials = [
 
 export default function Testimonials() {
   return (
-    <section style={{ backgroundColor: '#035D57' }} aria-labelledby="testimonials-heading">
+    <section style={{ backgroundColor: '#1AA6B7' }} aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
         {/* Heading */}
         <div className="text-center mb-12">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: '#99D9D9' }}
+            style={{ color: '#97CECC' }}
           >
             Patient Stories
           </span>
+          {/* TODO: Replace X with client-provided review count. */}
           <h2
             id="testimonials-heading"
             className="text-3xl md:text-4xl font-bold"
             style={{ color: '#ffffff' }}
           >
-            What Our Patients Say
+            [X] Reviews
           </h2>
+          <p className="mt-2 text-base" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            What Our Patients Say
+          </p>
         </div>
 
         {/* Testimonial cards */}
@@ -62,8 +66,8 @@ export default function Testimonials() {
               <div
                 className="inline-block self-start rounded-full px-3 py-1 text-xs font-semibold"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.22)',
-                  color: '#99D9D9',
+                  backgroundColor: 'rgba(151,206,204,0.22)',
+                  color: '#97CECC',
                 }}
               >
                 Client review placeholder
@@ -93,7 +97,7 @@ export default function Testimonials() {
                 <div
                   className="h-9 w-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
                   style={{
-                    backgroundColor: 'rgba(153,217,217,0.28)',
+                    backgroundColor: 'rgba(151,206,204,0.28)',
                     color: '#ffffff',
                   }}
                   aria-hidden="true"

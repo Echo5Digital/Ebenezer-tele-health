@@ -1,75 +1,178 @@
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, ShieldCheck, Info, Scale, Thermometer } from 'lucide-react'
+import Image from 'next/image'
+import { CheckCircle2, ShieldCheck, Info, Award } from 'lucide-react'
 import WomensHealthFAQAccordion from './WomensHealthFAQAccordion'
 
 export const metadata = {
-  title: "Women's Health Telehealth Oklahoma City | Ebenezer Telehealth",
+  title: "Women's Health Telehealth in Oklahoma | Ebenezer Telehealth",
   description:
-    "Discreet, compassionate women's health telehealth in Oklahoma. Birth control, UTIs, hormonal health, PCOS, menopause & more. Led by Dr. Susan George, DNP, APRN. Cash-pay, no insurance needed.",
+    "Online women's health care across Oklahoma — birth control, PCOS, menopause & hormones. See Dr. Susan George, DNP, APRN. Cash-pay from $150. Book online.",
   alternates: {
     canonical: 'https://ebenezertelehealth.com/womens-health',
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can I get birth control online in Oklahoma?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Ebenezer Telehealth provides contraceptive counseling and prescriptions by secure video across Oklahoma. We offer all hormonal and non-hormonal options — including pills, patches, rings, injections, IUDs, and implants — with prescriptions sent electronically to your preferred pharmacy.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you treat PCOS and menopause online?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Both are core services at Ebenezer Telehealth. We offer comprehensive PCOS management including hormonal and metabolic assessment and medication management, and individualized menopause and perimenopause care with hormonal and non-hormonal options and ongoing symptom tracking.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Do I need insurance for a women's health visit?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "No. We are cash-pay with transparent pricing — $150 initial visit, $50 follow-up. You will know your full cost before you book. No surprise bills, no insurance claims, no pre-authorization delays. We are in the process of becoming credentialed with major insurance plans.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Where in Oklahoma can I be seen for women's health?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Anywhere in Oklahoma — including Oklahoma City, Tulsa, Edmond, Norman, Lawton, and rural communities — as long as you're in Oklahoma at the time of your visit. Telehealth removes geographic barriers so women across metro and rural Oklahoma can access specialized care.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you send prescriptions to my pharmacy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Prescriptions are sent electronically to any pharmacy in Oklahoma when appropriate. After your virtual visit, Dr. Susan George will send any prescriptions directly to your preferred pharmacy so you can pick them up without extra steps.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Are women's health visits private?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All visits are HIPAA-compliant and confidential, conducted via an encrypted, secure video platform. You speak only with Dr. Susan George — no rotating staff, no third-party networks. Your health information is never shared without your explicit consent.',
+      },
+    },
+  ],
+}
+
 const conditions = [
-  'Birth control consultation & management',
-  'Urinary tract infections (UTIs)',
-  'Hormonal imbalances & irregular cycles',
-  'PCOS (Polycystic Ovary Syndrome)',
-  'Vaginal infections (yeast, bacterial vaginosis)',
-  'Menopause & perimenopause symptom management',
-  'Postpartum support & recovery',
-  'Thyroid health monitoring',
-  'Sexual health & dysfunction',
-  'Mood changes related to hormones',
-  'PMS & PMDD management',
-  'Preventive care guidance',
+  'Birth control and contraception counseling',
+  'PCOS (polycystic ovary syndrome) management',
+  'Menopause and perimenopause symptoms',
+  'Hormonal imbalances affecting mood, energy, and cycles',
+  'Irregular or painful periods',
+  'Prescription management and follow-up care',
 ]
 
-const pricingFeatures = [
-  'Comprehensive symptom review & full health history',
-  'Lab orders included when clinically appropriate',
-  'Personalized treatment plan from Dr. Susan George',
-  'Electronic prescriptions sent to your preferred pharmacy',
+const birthControlServices = [
+  'Pills, patches, rings, injections, IUDs, and implants',
+  'Emergency contraception counseling',
+  'Ongoing prescription management and follow-up',
+]
+
+const menopauseServices = [
+  'Hormone therapy when clinically appropriate',
+  'Non-hormonal medications and alternatives',
+  'Lifestyle and nutrition guidance',
+  'Ongoing symptom tracking and plan adjustments',
+]
+
+const menopauseSymptoms = [
+  'Hot flashes and night sweats',
+  'Mood changes and sleep disturbances',
+  'Weight or metabolic shifts',
+]
+
+const pcosServices = [
+  'Evaluation of menstrual irregularities and symptoms',
+  'Metabolic and hormonal assessment',
+  'Medication management — cycle regulation and insulin-sensitizing options',
+  'Weight-management strategies',
 ]
 
 const steps = [
   {
     number: '01',
     title: 'Book Your Visit',
-    description:
-      'Book online or call (405) 349-8188 — same-day and next-day appointments often available.',
+    description: 'Book online or call (405) 349-8188.',
   },
   {
     number: '02',
     title: 'Complete Your Intake',
     description:
-      'Fill out a brief health intake covering your symptoms, history, and current medications.',
+      'Complete a quick, private intake about your symptoms and history.',
   },
   {
     number: '03',
-    title: 'Meet Dr. George by Video',
-    description:
-      'Connect securely with Dr. Susan George, DNP, APRN, for a thorough, private evaluation.',
+    title: 'Meet Susan George by Video',
+    description: 'Meet Susan George by secure video from anywhere in Oklahoma.',
   },
   {
     number: '04',
-    title: 'Receive Your Treatment Plan',
+    title: 'Get Your Plan',
     description:
-      'Get prescriptions, lab orders, or personalized recommendations sent promptly after your visit.',
+      'Get your evaluation, any needed lab orders, and prescriptions sent to your pharmacy.',
   },
 ]
 
+const pricingInitialFeatures = [
+  'Comprehensive symptom review and full health history',
+  'Lab orders included when clinically appropriate',
+  'Lab result interpretation',
+  'Personalized treatment plan',
+]
+
+const pricingFollowupFeatures = [
+  'Ongoing assessment',
+  'Lab review and monitoring',
+  'Treatment adjustments',
+  'Continued support',
+]
+
 const whyPoints = [
-  "Discuss sensitive health topics from the comfort and privacy of your own home — no waiting room, no awkward encounters.",
-  "Led by Dr. Susan George, a women's health specialist — not a generalist. She understands the nuance of women's health needs.",
-  "Transparent $150 initial visit — no insurance required, no surprise billing, no hidden fees.",
-  "Lab orders and prescriptions sent directly to a lab or pharmacy near you, anywhere in Oklahoma.",
+  {
+    title: "A provider who specializes in women's health",
+    description: 'Every visit is with Susan George — not a generalist.',
+  },
+  {
+    title: 'Care from anywhere in Oklahoma',
+    description: 'Metro or rural, no long drives required.',
+  },
+  {
+    title: 'Transparent cash pricing',
+    description: '$150 initial · $50 follow-up · no surprise bills.',
+  },
+  {
+    title: 'Private, secure, HIPAA-compliant visits',
+    description: 'Confidential, encrypted video — every time.',
+  },
+  {
+    title: 'Compassionate, dignified, faith-driven care',
+    description: null,
+  },
 ]
 
 export default function WomensHealthPage() {
   return (
     <>
+      {/* JSON-LD FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
@@ -80,25 +183,24 @@ export default function WomensHealthPage() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Mobile: uniform light overlay for readability */}
+        {/* Mobile overlay */}
         <div
           className="absolute inset-0 lg:hidden"
           style={{ backgroundColor: 'rgba(255,255,255,0.93)' }}
           aria-hidden="true"
         />
-        {/* Desktop: white-ish left (text readable) → teal-tinted right (image shows) */}
+        {/* Desktop gradient */}
         <div
           className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.86) 48%, rgba(3,93,87,0.38) 100%)',
+              'linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.86) 48%, rgba(26,166,183,0.38) 100%)',
           }}
           aria-hidden="true"
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* Content anchored to the left */}
             <div>
               {/* Breadcrumb */}
               <nav
@@ -109,61 +211,56 @@ export default function WomensHealthPage() {
                   Home
                 </Link>
                 <span aria-hidden="true">/</span>
-                <span style={{ color: 'var(--primary)' }}>Women&apos;s Health</span>
+                <span style={{ color: 'var(--primary)' }}>
+                  Women&apos;s Health
+                </span>
               </nav>
 
-              {/* Label */}
-              <span
-                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-                style={{ color: 'var(--primary)' }}
-              >
-                Women&apos;s Health Telehealth
-              </span>
-
               <h1
-                className="text-4xl md:text-5xl font-bold mb-5"
+                className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                Women&apos;s Health Care — Virtual, Private &amp; Personalized
+                Women&apos;s Health Telehealth —{' '}
+                <span className="block sm:inline">
+                  Care for Women Across Oklahoma
+                </span>
               </h1>
 
               <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
-                Discreet, compassionate virtual care for the health issues that
-                matter most to you. Led by Dr. Susan George, DNP, APRN — a
-                women&apos;s health specialist serving women across Oklahoma from
-                the comfort and privacy of home.
+                Compassionate, evidence-based virtual care for birth control,
+                PCOS, menopause, and hormonal health — from anywhere in
+                Oklahoma. See a provider who specializes in women&apos;s health,
+                with transparent cash pricing and no insurance hurdles.
               </p>
 
-              {/* HIPAA badge */}
               <div
                 className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.40)',
-                  color: 'var(--primary-dark)',
+                  backgroundColor: 'rgba(151,206,204,0.40)',
+                  color: 'var(--navy)',
                 }}
               >
                 <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-                Private, discreet &amp; HIPAA-secure
+                Private, secure &amp; HIPAA-compliant
               </div>
 
-              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact"
-                  className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+                  className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto text-center"
                 >
                   Book Your Visit
                 </Link>
                 <a
                   href="tel:+14053498188"
-                  className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+                  className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto text-center"
                 >
                   Call (405) 349-8188
                 </a>
               </div>
             </div>
 
-            {/* Empty right col — image visible on desktop */}
+            {/* Empty right col — image shows on desktop */}
             <div className="hidden lg:block" aria-hidden="true" />
           </div>
         </div>
@@ -175,32 +272,39 @@ export default function WomensHealthPage() {
         style={{
           backgroundImage: "url('/answer_block.webp')",
           backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
+        {/* Mobile: light overlay — lets image show while keeping text readable */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(255,255,255,0.76)' }}
+          aria-hidden="true"
+        />
+        {/* Desktop: readable white on left, image fully visible centre-right */}
+        <div
+          className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.78) 48%, rgba(3,93,87,0.28) 100%)',
+              'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 30%, rgba(255,255,255,0.18) 54%, rgba(26,166,183,0.08) 100%)',
           }}
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div
-            className="max-w-3xl border-l-4 pl-5 md:pl-6"
+            className="max-w-2xl border-l-4 pl-5 md:pl-6"
             style={{ borderColor: 'var(--primary)' }}
           >
             <p
-              className="hero-answer-line text-base md:text-lg leading-relaxed"
-              style={{ color: '#035D57' }}
+              className="answer-line text-base md:text-lg leading-relaxed"
+              style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Telehealth provides women&apos;s health telehealth
-              services across Oklahoma, led by Dr. Susan George, DNP, APRN. We
-              offer confidential, cash-pay virtual visits for birth control,
-              UTIs, hormonal health, PCOS, menopause, and more — from the
-              privacy of your own home.
+              Ebenezer Telehealth provides online women&apos;s health care to
+              women across Oklahoma — including birth control, PCOS, menopause,
+              and hormonal management — through secure video visits with
+              Susan George, DNP, APRN, who specializes in women&apos;s health.
+              Cash-pay visits start at $150.
             </p>
           </div>
         </div>
@@ -209,259 +313,348 @@ export default function WomensHealthPage() {
       {/* ── WHAT WE TREAT ────────────────────────────────────────── */}
       <section className="bg-white" aria-labelledby="conditions-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-
-          {/* Section header — full width */}
           <div className="mb-10 md:mb-14">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Conditions
-            </span>
             <h2
               id="conditions-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Women&apos;s Health Conditions We Treat Online
+              Online Women&apos;s Health Care for Every Stage of Life
             </h2>
-            {/* Decorative accent line — matches WhyChooseUs pattern */}
             <div className="flex items-center gap-2 mb-5" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.12)' }} />
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
             </div>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
-              Dr. Susan George brings focused women&apos;s health expertise to
-              every virtual visit. She carefully reviews your symptoms, medical
-              history, and relevant health factors to provide informed,
-              individualized care — all through the convenience of a secure
-              video visit.
+              We provide accessible, evidence-based telemedicine designed to
+              support women through every stage of life — with personalized
+              treatment, compassionate guidance, and convenient virtual visits
+              that fit your schedule, wherever you are in Oklahoma.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+          <div
+            className="rounded-2xl p-7 md:p-8 max-w-2xl"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.08)',
+              border: '1px solid rgba(26,166,183,0.12)',
+            }}
+          >
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-5"
+              style={{ color: 'var(--primary)' }}
+            >
+              Common reasons women see us online
+            </p>
+            <ul className="space-y-4">
+              {conditions.map((condition) => (
+                <li key={condition} className="flex items-start gap-3">
+                  <CheckCircle2
+                    className="h-5 w-5 mt-0.5 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  <span className="text-gray-700 leading-snug">{condition}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
 
-            {/* Conditions list — styled card for visual balance */}
+      {/* ── BIRTH CONTROL & CONTRACEPTION ────────────────────────── */}
+      <section
+        id="birth-control"
+        aria-labelledby="birth-control-heading"
+        style={{ backgroundColor: 'var(--cream)' }}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Text content */}
+            <div>
+              <h2
+                id="birth-control-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
+              >
+                Online Birth Control Consultations in Oklahoma
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+
+              {/* Answer-first AEO block */}
+              <div
+                className="border-l-4 pl-4 mb-7"
+                style={{ borderColor: 'var(--primary)' }}
+              >
+                <p
+                  className="text-base md:text-lg font-medium leading-relaxed"
+                  style={{ color: '#1AA6B7' }}
+                >
+                  Yes — you can get birth control online in Oklahoma through
+                  Ebenezer Telehealth. We provide contraceptive counseling and
+                  prescriptions by secure video, helping you choose the method
+                  that fits your health, lifestyle, and goals.
+                </p>
+              </div>
+
+              <p className="text-base text-gray-600 leading-relaxed">
+                We offer comprehensive counseling on all hormonal and
+                non-hormonal options. Our goal is to give you clear information
+                so you can make confident decisions about your reproductive
+                health.
+              </p>
+            </div>
+
+            {/* Services list */}
             <div
-              className="rounded-2xl p-7 md:p-8 h-full"
+              className="rounded-2xl p-7 md:p-8"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.08)',
-                border: '1px solid rgba(3,93,87,0.12)',
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                border: '1px solid rgba(26,166,183,0.15)',
+                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+              }}
+            >
+              <ul className="space-y-4">
+                {birthControlServices.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-gray-700 leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MENOPAUSE MANAGEMENT ─────────────────────────────────── */}
+      <section
+        id="menopause"
+        aria-labelledby="menopause-heading"
+        style={{ backgroundColor: 'rgba(151,206,204,0.10)' }}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Services card — left on desktop */}
+            <div
+              className="rounded-2xl p-7 md:p-8 order-2 lg:order-1"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.80)',
+                border: '1px solid rgba(26,166,183,0.15)',
+                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+              }}
+            >
+              <h3
+                className="text-base font-semibold uppercase tracking-wide mb-5"
+                style={{ color: 'var(--primary)' }}
+              >
+                Your personalized plan may include
+              </h3>
+              <ul className="space-y-3 mb-7">
+                {menopauseServices.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-gray-700 leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div
+                className="rounded-xl p-4"
+                style={{
+                  backgroundColor: 'rgba(26,166,183,0.06)',
+                  border: '1px solid rgba(26,166,183,0.12)',
+                }}
+              >
+                <p
+                  className="text-sm font-semibold mb-2"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  We commonly help with:
+                </p>
+                <ul className="space-y-1.5">
+                  {menopauseSymptoms.map((symptom) => (
+                    <li
+                      key={symptom}
+                      className="flex items-center gap-2 text-sm text-gray-700"
+                    >
+                      <span
+                        className="h-1.5 w-1.5 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: 'var(--primary)' }}
+                        aria-hidden="true"
+                      />
+                      {symptom}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Text content — right on desktop */}
+            <div className="order-1 lg:order-2">
+              <h2
+                id="menopause-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
+              >
+                Menopause &amp; Hormone Management — Hormonal and Non-Hormonal
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+
+              {/* Answer-first AEO block */}
+              <div
+                className="border-l-4 pl-4 mb-7"
+                style={{ borderColor: 'var(--primary)' }}
+              >
+                <p
+                  className="text-base md:text-lg font-medium leading-relaxed"
+                  style={{ color: '#1AA6B7' }}
+                >
+                  Menopause is a natural transition, but the symptoms can
+                  disrupt daily life. We provide individualized virtual care
+                  to help Oklahoma women manage menopause and perimenopause
+                  comfortably — with hormonal or non-hormonal options based on
+                  what&apos;s right for you.
+                </p>
+              </div>
+
+              <p className="text-base text-gray-600 leading-relaxed">
+                We evaluate symptoms, review lab results when needed, and build
+                a personalized plan. Every recommendation is individualized —
+                because no two women experience menopause the same way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PCOS MANAGEMENT ──────────────────────────────────────── */}
+      <section
+        id="pcos"
+        aria-labelledby="pcos-heading"
+        className="bg-white"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Text content */}
+            <div>
+              <h2
+                id="pcos-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
+              >
+                PCOS Treatment &amp; Management Online
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+
+              {/* Answer-first AEO block */}
+              <div
+                className="border-l-4 pl-4 mb-7"
+                style={{ borderColor: 'var(--primary)' }}
+              >
+                <p
+                  className="text-base md:text-lg font-medium leading-relaxed"
+                  style={{ color: '#1AA6B7' }}
+                >
+                  PCOS affects hormones, metabolism, and reproductive health.
+                  Ebenezer Telehealth offers comprehensive virtual PCOS care to
+                  Oklahoma women — helping you manage symptoms today and reduce
+                  long-term health risks.
+                </p>
+              </div>
+
+              <p className="text-base text-gray-600 leading-relaxed">
+                Because Susan George is also Board Certified in Advanced Diabetes
+                Management (BC-ADM), you get genuine metabolic expertise — not
+                a one-size-fits-all script. We build a sustainable,
+                individualized plan for both short-term relief and long-term
+                health.
+              </p>
+            </div>
+
+            {/* PCOS services list */}
+            <div
+              className="rounded-2xl p-7 md:p-8"
+              style={{
+                backgroundColor: 'rgba(151,206,204,0.08)',
+                border: '1px solid rgba(26,166,183,0.12)',
               }}
             >
               <p
                 className="text-xs font-semibold uppercase tracking-widest mb-5"
                 style={{ color: 'var(--primary)' }}
               >
-                Common conditions we treat by video visit
+                Our PCOS services include
               </p>
               <ul className="space-y-4">
-                {conditions.map((condition) => (
-                  <li key={condition} className="flex items-start gap-3">
+                {pcosServices.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
                     <CheckCircle2
                       className="h-5 w-5 mt-0.5 flex-shrink-0"
                       style={{ color: 'var(--primary)' }}
                       aria-hidden="true"
                     />
-                    <span className="text-gray-700 leading-snug">{condition}</span>
+                    <span className="text-gray-700 leading-snug">{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Info boxes */}
-            <div className="flex flex-col gap-5">
-              <div
-                className="rounded-2xl p-6"
-                style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
-                  border: '1px solid rgba(3,93,87,0.15)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <Info
-                    className="h-5 w-5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <h3
-                    className="text-base font-semibold"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    What your initial visit includes
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Your $150 initial visit includes a thorough symptom review
-                  and health history, lab orders when clinically appropriate,
-                  lab result interpretation, and a personalized treatment plan.
-                  Dr. George takes time to listen and understand your full
-                  picture before recommending any next steps.
-                </p>
-              </div>
-
-              <div
-                className="rounded-2xl p-6"
-                style={{
-                  backgroundColor: 'rgba(153,217,217,0.10)',
-                  border: '1px solid rgba(3,93,87,0.12)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <ShieldCheck
-                    className="h-5 w-5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <h3
-                    className="text-base font-semibold"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    Your privacy is our priority
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Every visit is conducted via a HIPAA-compliant, encrypted
-                  video platform. You speak only with Dr. Susan George — no
-                  rotating staff, no third-party networks. Sensitive health
-                  conversations stay strictly between you and your provider.
-                </p>
-              </div>
-
-              <div
-                className="rounded-2xl p-6"
-                style={{
-                  backgroundColor: 'rgba(3,93,87,0.04)',
-                  border: '1px solid rgba(3,93,87,0.12)',
-                }}
-              >
-                <h3
-                  className="text-base font-semibold mb-2"
-                  style={{ color: 'var(--navy)' }}
-                >
-                  Cash-pay. No insurance required.
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  You&apos;ll know your full cost before you book — $150 initial
-                  visit, $50 follow-ups. No surprise bills, no insurance claims,
-                  no pre-authorization delays.
-                </p>
-                <Link href="/contact" className="btn-primary text-sm">
-                  Book a Women&apos;s Health Visit
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRICING ──────────────────────────────────────────────── */}
-      <section
-        id="pricing"
-        style={{ backgroundColor: 'var(--cream)' }}
-        aria-labelledby="pricing-heading"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-
-          <div className="text-center mb-10">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Pricing
-            </span>
-            <h2
-              id="pricing-heading"
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: 'var(--navy)' }}
-            >
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
-              No insurance required. No hidden fees. Know your cost before you
-              book.
-            </p>
-          </div>
-
-          <div className="max-w-lg mx-auto">
-            {/* Pricing card */}
-            <div
-              className="rounded-2xl p-8 border"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                borderColor: 'rgba(3,93,87,0.30)',
-              }}
-            >
-              <div className="mb-6">
-                <h3
-                  className="text-xl font-semibold mb-1"
-                  style={{ color: 'var(--navy)' }}
-                >
-                  Initial Women&apos;s Health Visit
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Comprehensive evaluation, lab orders when appropriate, and a
-                  personalized treatment plan.
-                </p>
-              </div>
-
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2">
-                  <span
-                    className="text-5xl font-bold"
-                    style={{ color: 'var(--primary)' }}
-                  >
-                    $150
-                  </span>
-                  <span className="text-sm text-gray-500">initial visit</span>
-                </div>
-                <p className="mt-1 text-sm text-gray-400">
-                  Follow-up visits $50 — no additional consultation fee
-                </p>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                {pricingFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5">
-                    <CheckCircle2
-                      className="h-4 w-4 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <span className="text-sm text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/contact"
-                className="btn-primary text-base w-full"
-              >
-                Book Your Visit
-              </Link>
-            </div>
-
-            {/* Cash-pay note */}
-            <div
-              className="mt-6 rounded-xl p-5 flex items-start gap-3"
-              style={{
-                backgroundColor: 'rgba(153,217,217,0.15)',
-                border: '1px solid rgba(3,93,87,0.20)',
-              }}
-              role="note"
-            >
-              <Info
-                className="h-5 w-5 mt-0.5 flex-shrink-0"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-              <p className="text-sm text-gray-700">
-                We operate on a <strong>cash-pay basis</strong>. No insurance
-                claims, no surprise bills. The exact price is confirmed before
-                you book.
-              </p>
             </div>
           </div>
         </div>
@@ -470,53 +663,33 @@ export default function WomensHealthPage() {
       {/* ── HOW IT WORKS ─────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: '#035D57' }}
+        style={{ backgroundColor: '#1AA6B7' }}
         aria-labelledby="how-it-works-heading"
       >
-        {/* Overlay */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(3,93,87,0.40)' }}
+          style={{ backgroundColor: 'rgba(26,166,183,0.40)' }}
           aria-hidden="true"
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-
-          {/* Heading */}
           <div className="text-center mb-12 md:mb-14">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: '#99D9D9' }}
-            >
-              How It Works
-            </span>
             <h2
               id="how-it-works-heading"
-              className="text-3xl md:text-4xl font-bold mb-5"
+              className="text-3xl md:text-4xl font-bold"
               style={{ color: '#ffffff' }}
             >
-              How a Women&apos;s Health Visit Works
+              How an Online Women&apos;s Health Visit Works
             </h2>
-            <p
-              className="text-base md:text-lg max-w-2xl mx-auto"
-              style={{ color: 'rgba(255,255,255,0.90)' }}
-            >
-              Getting women&apos;s health care online is simple, private, and
-              often available same or next day. Book your visit, complete your
-              intake, and connect with Dr. George by secure video — from
-              anywhere in Oklahoma.
-            </p>
           </div>
 
-          {/* Steps grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {steps.map((step, index) => (
               <div key={step.number} className="relative flex flex-col gap-4">
-                {/* Desktop connector line */}
                 {index < steps.length - 1 && (
                   <div
                     className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                    style={{ backgroundColor: 'rgba(153,217,217,0.22)' }}
+                    style={{ backgroundColor: 'rgba(151,206,204,0.22)' }}
                     aria-hidden="true"
                   />
                 )}
@@ -553,7 +726,6 @@ export default function WomensHealthPage() {
             ))}
           </div>
 
-          {/* CTA */}
           <div className="text-center">
             <Link
               href="/contact"
@@ -561,24 +733,248 @@ export default function WomensHealthPage() {
             >
               Book Your Visit
             </Link>
-            <p
-              className="mt-3 text-sm"
-              style={{ color: 'rgba(255,255,255,0.85)' }}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRICING ──────────────────────────────────────────────── */}
+      <section
+        id="pricing"
+        style={{ backgroundColor: 'var(--cream)' }}
+        aria-labelledby="pricing-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="text-center mb-10">
+            <h2
+              id="pricing-heading"
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: 'var(--navy)' }}
             >
-              or{' '}
-              <a
-                href="tel:+14053498188"
-                className="font-semibold"
-                style={{ color: '#99D9D9' }}
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
+              No insurance needed. You&apos;ll always know the cost before you
+              book.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Initial Visit Card */}
+            <div
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
+              style={{
+                background:
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
+              }}
+            >
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--navy)' }}
               >
-                call (405) 349-8188
-              </a>
+                Women&apos;s Health Initial Visit
+              </h3>
+              <p className="text-sm text-gray-600 mb-5">
+                Comprehensive symptom review, lab orders, lab interpretation,
+                and a personalized treatment plan.
+              </p>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  $150
+                </span>
+                <span className="text-sm text-gray-500">initial visit</span>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingInitialFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <CheckCircle2
+                      className="h-4 w-4 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="btn-primary text-base w-full text-center"
+              >
+                Book Your Visit
+              </Link>
+            </div>
+
+            {/* Follow-up Card */}
+            <div
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                borderColor: 'rgba(26,166,183,0.20)',
+              }}
+            >
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--navy)' }}
+              >
+                Women&apos;s Health Follow-Up Visit
+              </h3>
+              <p className="text-sm text-gray-600 mb-5">
+                Ongoing assessment, lab review and monitoring, treatment
+                adjustments, and continued support.
+              </p>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  $50
+                </span>
+                <span className="text-sm text-gray-500">follow-up</span>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingFollowupFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <CheckCircle2
+                      className="h-4 w-4 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="btn-outline text-base w-full text-center"
+              >
+                Book Your Visit
+              </Link>
+            </div>
+          </div>
+
+          {/* Cash-pay note */}
+          <div
+            className="mt-8 max-w-3xl mx-auto rounded-xl p-5 flex items-start gap-3"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
+            }}
+            role="note"
+          >
+            <Info
+              className="h-5 w-5 mt-0.5 flex-shrink-0"
+              style={{ color: 'var(--primary)' }}
+              aria-hidden="true"
+            />
+            <p className="text-sm text-gray-700">
+              We currently operate{' '}
+              <strong>cash-pay</strong>. Insurance options are coming as we
+              expand — we are in the process of becoming credentialed with major
+              insurance plans.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── WHY VIRTUAL WOMEN'S HEALTH CARE ──────────────────────── */}
+      {/* ── MEET YOUR PROVIDER ───────────────────────────────────── */}
+      <section className="bg-white" aria-labelledby="provider-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Text content */}
+            <div>
+              <h2
+                id="provider-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
+              >
+                Meet Susan George, DNP, APRN, Online Practitioner
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+
+              <p className="text-base text-gray-600 leading-relaxed mb-8">
+                Your women&apos;s health care is led by Susan George, a
+                Doctor of Nursing Practice and Advanced Practice Registered
+                Nurse who specializes in women&apos;s health and is Board
+                Certified in Advanced Diabetes Management (BC-ADM). She
+                delivers compassionate, faith-driven, evidence-based care to
+                women across Oklahoma — with the integrity, dignity, and
+                personal attention every patient deserves.
+              </p>
+
+              {/* Quote */}
+              <blockquote
+                className="relative rounded-2xl p-6"
+                style={{
+                  background:
+                    'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.15) 100%)',
+                  border: '1px solid rgba(26,166,183,0.15)',
+                }}
+              >
+                <span
+                  className="absolute top-4 left-5 text-5xl font-serif leading-none select-none"
+                  style={{ color: 'rgba(26,166,183,0.20)' }}
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </span>
+                <p
+                  className="relative text-base md:text-lg italic leading-relaxed pl-6"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  Every woman deserves honest, compassionate care she can
+                  actually access — wherever she lives in Oklahoma.
+                </p>
+                <footer className="mt-3 pl-6">
+                  <cite
+                    className="text-sm font-semibold not-italic"
+                    style={{ color: 'var(--primary)' }}
+                  >
+                    — Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                  </cite>
+                </footer>
+              </blockquote>
+            </div>
+
+            {/* Doctor photo */}
+            <div className="flex justify-center lg:justify-end">
+              <div
+                className="relative w-full max-w-sm lg:max-w-none overflow-hidden rounded-2xl"
+                style={{
+                  border: '1px solid rgba(26,166,183,0.12)',
+                  boxShadow: '0 8px 40px rgba(26,166,183,0.12)',
+                }}
+              >
+                <Image
+                  src="/dr-susan-george-oklahoma-telehealth.webp"
+                  alt="Susan George, DNP, APRN — Women's Health Online Practitioner at Ebenezer Telehealth, Oklahoma"
+                  width={520}
+                  height={620}
+                  className="w-full h-auto object-cover"
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY EBENEZER ─────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
         aria-labelledby="why-heading"
@@ -591,71 +987,79 @@ export default function WomensHealthPage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.80)' }}
+          style={{ backgroundColor: 'rgba(232,247,247,0.82)' }}
           aria-hidden="true"
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
 
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Why Telehealth
-            </span>
-
+          {/* Heading */}
+          <div className="mb-10 md:mb-14 max-w-2xl">
             <h2
               id="why-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Why Choose Virtual Women&apos;s Health Care?
+              Why Oklahoma Women Choose Ebenezer Telehealth
             </h2>
-
-            {/* Decorative accent line */}
-            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+            <div className="flex items-center gap-2" aria-hidden="true">
               <div
                 className="h-[3px] w-10 rounded-full"
                 style={{ backgroundColor: 'var(--primary)' }}
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(3,93,87,0.25)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
-                style={{ backgroundColor: 'rgba(3,93,87,0.12)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
               />
             </div>
-
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-              Women&apos;s health is personal. Many patients feel more
-              comfortable discussing sensitive topics — birth control, menstrual
-              concerns, hormonal health, sexual health — in the privacy of their
-              own home rather than a clinical waiting room. Telehealth removes
-              the barriers of geography, scheduling, and discomfort, making it
-              easier to get the specialized care you need on your own terms.
-            </p>
-
-            <ul className="space-y-3.5" role="list">
-              {whyPoints.map((point) => (
-                <li key={point} className="flex items-start gap-3">
-                  <div
-                    className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(3,93,87,0.10)' }}
-                    aria-hidden="true"
-                  >
-                    <CheckCircle2
-                      className="h-3.5 w-3.5"
-                      style={{ color: 'var(--primary)' }}
-                    />
-                  </div>
-                  <span className="text-gray-700 leading-relaxed">{point}</span>
-                </li>
-              ))}
-            </ul>
           </div>
+
+          {/* 2-col card grid — 5th card spans full width as a closing statement */}
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5" role="list">
+            {whyPoints.map((point, index) => (
+              <li
+                key={point.title}
+                className={`group flex gap-5 rounded-2xl p-6 md:p-7 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg${index === 4 ? ' sm:col-span-2 sm:max-w-[calc(50%-10px)]' : ''}`}
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.84)',
+                  border: '1px solid rgba(255,255,255,0.92)',
+                  borderLeft: '3px solid var(--primary)',
+                  boxShadow: '0 2px 18px rgba(26,166,183,0.09)',
+                }}
+              >
+                {/* Number badge */}
+                <div
+                  className="flex-shrink-0 h-11 w-11 rounded-xl flex items-center justify-center text-sm font-bold"
+                  style={{
+                    backgroundColor: 'rgba(26,166,183,0.10)',
+                    color: 'var(--primary)',
+                  }}
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+
+                {/* Text */}
+                <div className="min-w-0">
+                  <p
+                    className="font-semibold leading-snug"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    {point.title}
+                  </p>
+                  {point.description && (
+                    <p className="mt-1 text-sm text-gray-600 leading-relaxed">
+                      {point.description}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -677,14 +1081,7 @@ export default function WomensHealthPage() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-
           <div className="text-center mb-12">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              FAQ
-            </span>
             <h2
               id="faq-heading"
               className="text-3xl md:text-4xl font-bold"
@@ -695,156 +1092,6 @@ export default function WomensHealthPage() {
           </div>
 
           <WomensHealthFAQAccordion />
-
-          {/* CTAs below FAQ */}
-          <div className="text-center mt-10">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Book Your Visit
-              </Link>
-              <a
-                href="tel:+14053498188"
-                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Call (405) 349-8188
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── OTHER SERVICES ───────────────────────────────────────── */}
-      <section
-        style={{ backgroundColor: 'var(--cream)' }}
-        aria-labelledby="wh-other-services-heading"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center mb-10 md:mb-12">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Also at Ebenezer
-            </span>
-            <h2
-              id="wh-other-services-heading"
-              className="text-3xl md:text-4xl font-bold"
-              style={{ color: 'var(--navy)' }}
-            >
-              Explore Our Other Services
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Weight Loss card */}
-            <article
-              className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
-              style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
-              }}
-            >
-              <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
-                aria-hidden="true"
-              >
-                <Scale className="h-6 w-6" style={{ color: 'var(--primary)' }} />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3
-                    className="text-xl font-semibold leading-snug"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    Medical Weight Loss Management
-                  </h3>
-                  <span
-                    className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
-                    style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
-                      color: 'var(--primary)',
-                    }}
-                  >
-                    from $250
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  A medically supervised program built around your metabolic
-                  health — including GLP-1 medication management — overseen by
-                  Dr. George, BC-ADM certified.
-                </p>
-              </div>
-              <Link
-                href="/weight-loss"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold group"
-                style={{ color: 'var(--primary)' }}
-                aria-label="Learn more about Medical Weight Loss Management"
-              >
-                Learn more
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
-            </article>
-
-            {/* Minor Illness card */}
-            <article
-              className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
-              style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
-              }}
-            >
-              <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
-                aria-hidden="true"
-              >
-                <Thermometer className="h-6 w-6" style={{ color: 'var(--primary)' }} />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3
-                    className="text-xl font-semibold leading-snug"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    Minor Illness Treatment
-                  </h3>
-                  <span
-                    className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
-                    style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
-                      color: 'var(--primary)',
-                    }}
-                  >
-                    $50/visit
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  Feel better without leaving home. Get evaluated and treated
-                  online for sinus infections, colds, UTIs, allergies, and
-                  other minor illnesses — often same day.
-                </p>
-              </div>
-              <Link
-                href="/minor-illness"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold group"
-                style={{ color: 'var(--primary)' }}
-                aria-label="Learn more about Minor Illness Treatment"
-              >
-                Learn more
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
-            </article>
-          </div>
         </div>
       </section>
 
@@ -872,11 +1119,11 @@ export default function WomensHealthPage() {
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{ color: 'var(--primary)' }}
           >
-            Ready for Compassionate Women&apos;s Health Care?
+            Ready to See a Women&apos;s Health Provider Online?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Private, specialized telehealth for women across Oklahoma. $150
-            initial visit — no insurance required, no waiting room.
+            Compassionate, affordable women&apos;s health care for women across
+            Oklahoma — without the wait.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -895,8 +1142,8 @@ export default function WomensHealthPage() {
           </div>
 
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)
-            349-8188 &middot; ebenezertelehealth.com
+            Ebenezer Telehealth &middot; Serving women statewide across Oklahoma
+            &middot; (405) 349-8188 &middot; ebenezertelehealth.com
           </p>
         </div>
       </section>

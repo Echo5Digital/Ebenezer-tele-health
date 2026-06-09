@@ -42,7 +42,7 @@ const faqs = [
     id: 'wl-faq-5',
     question: 'How is Ebenezer Telehealth different from a med spa?',
     answer:
-      'Dr. George is a Board Certified Doctor of Nursing Practice with metabolic expertise — not an aesthetics provider. Your care is medically supervised with real follow-up, dose titration, and ongoing monitoring.',
+      'Susan George is a Board Certified Doctor of Nursing Practice with metabolic expertise — not an aesthetics provider. Your care is medically supervised with real follow-up, dose titration, and ongoing monitoring.',
   },
   {
     id: 'wl-faq-6',

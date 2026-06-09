@@ -1,7 +1,7 @@
 import { CheckCircle2 } from 'lucide-react'
 
 const bullets = [
-  'You see a real, named provider every time — Dr. Susan George, DNP, APRN, BC-ADM.',
+  'You see a real, named provider every time — Susan George, DNP, APRN, BC-ADM, Online Practitioner.',
   'Transparent cash pricing so you can make a confident decision before you book.',
   'Convenient and private — secure, HIPAA-compliant visits from wherever you are in Oklahoma.',
   'Medically guided weight loss with a provider Board Certified in Advanced Diabetes Management.',
@@ -34,8 +34,8 @@ export default function WhyChooseUs() {
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5"
               style={{
-                backgroundColor: 'rgba(3,93,87,0.08)',
-                border: '1px solid rgba(3,93,87,0.15)',
+                backgroundColor: 'rgba(26,166,183,0.08)',
+                border: '1px solid rgba(26,166,183,0.15)',
               }}
             >
               <span
@@ -63,8 +63,8 @@ export default function WhyChooseUs() {
           {/* Decorative accent line */}
           <div className="flex items-center justify-center gap-2 mb-6" aria-hidden="true">
             <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.25)' }} />
-            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.12)' }} />
+            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
+            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
           </div>
 
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
               <li key={bullet} className="flex items-start gap-3">
                 <div
                   className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.10)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
                   aria-hidden="true"
                 >
                   <CheckCircle2

@@ -16,8 +16,8 @@ const legalLinks = [
 ]
 
 const sectionHeadingStyle = {
-  color: '#99D9D9',
-  borderBottom: '1px solid rgba(153,217,217,0.20)',
+  color: '#97CECC',
+  borderBottom: '1px solid rgba(151,206,204,0.20)',
 }
 
 export default function Footer() {
@@ -26,15 +26,15 @@ export default function Footer() {
       className="text-white"
       role="contentinfo"
       style={{
-        backgroundColor: '#010E0C',
-        background: 'linear-gradient(180deg, #010E0C 0%, #011C18 40%, #02403B 100%)',
+        backgroundColor: '#063B45',
+        background: 'linear-gradient(180deg, #062F38 0%, #08404E 40%, #0A4D5C 100%)',
       }}
     >
       {/* Primary color top accent line */}
       <div
         className="h-1 w-full"
         style={{
-          background: 'linear-gradient(90deg, #035D57 0%, #99D9D9 50%, #035D57 100%)',
+          background: 'linear-gradient(90deg, #1AA6B7 0%, #97CECC 50%, #1AA6B7 100%)',
         }}
         aria-hidden="true"
       />
@@ -60,7 +60,7 @@ export default function Footer() {
 
             <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
               Faith-driven, compassionate telehealth for women and families across Oklahoma.
-              Led by Dr. Susan George, DNP, APRN, BC-ADM.
+              Led by Susan George, DNP, APRN, BC-ADM, Online Practitioner.
             </p>
           </div>
 
@@ -78,10 +78,10 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
+                  style={{ backgroundColor: 'rgba(151,206,204,0.12)' }}
                   aria-hidden="true"
                 >
-                  <MapPin className="h-3.5 w-3.5"                   style={{ color: '#99D9D9' }} />
+                  <MapPin className="h-3.5 w-3.5"                   style={{ color: '#97CECC' }} />
                 </div>
                 <div>
                   <strong className="text-white font-semibold block mb-0.5">Ebenezer Telehealth</strong>
@@ -97,10 +97,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
+                  style={{ backgroundColor: 'rgba(151,206,204,0.12)' }}
                   aria-hidden="true"
                 >
-                  <Phone className="h-3.5 w-3.5" style={{ color: '#99D9D9' }} />
+                  <Phone className="h-3.5 w-3.5" style={{ color: '#97CECC' }} />
                 </div>
                 <a href="tel:+14053498188" className="font-medium transition-colors hover:text-white">
                   (405) 349-8188
@@ -111,10 +111,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(153,217,217,0.12)' }}
+                  style={{ backgroundColor: 'rgba(151,206,204,0.12)' }}
                   aria-hidden="true"
                 >
-                  <Mail className="h-3.5 w-3.5" style={{ color: '#99D9D9' }} />
+                  <Mail className="h-3.5 w-3.5" style={{ color: '#97CECC' }} />
                 </div>
                 <a
                   href="mailto:contact@ebenezertelehealth.com"
@@ -126,7 +126,7 @@ export default function Footer() {
 
 {/* Hours */}
               <p className="text-xs pl-10" style={{ color: 'rgba(255,255,255,0.28)' }}>
-                [Hours — to be confirmed]
+                Available most days of the week and most Saturdays.
               </p>
             </address>
           </div>
@@ -149,7 +149,7 @@ export default function Footer() {
                   >
                     <ArrowUpRight
                       className="h-3.5 w-3.5 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      style={{ color: '#99D9D9' }}
+                      style={{ color: '#97CECC' }}
                       aria-hidden="true"
                     />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>

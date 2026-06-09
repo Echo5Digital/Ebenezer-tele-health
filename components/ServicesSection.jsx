@@ -7,7 +7,7 @@ const services = [
     title: 'Medical Weight Loss Clinic — Online',
     slug: 'weight-loss',
     description:
-      'A medically supervised weight-loss program built around your metabolic health — including GLP-1 medication management — overseen by Dr. George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
+      'A medically supervised weight-loss program built around your metabolic health — including GLP-1 medication management — overseen by Susan George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
   },
   {
     icon: HeartHandshake,
@@ -70,13 +70,13 @@ export default function ServicesSection() {
               key={service.slug}
               className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all bg-white"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <service.icon

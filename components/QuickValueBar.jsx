@@ -4,7 +4,7 @@ const valueCards = [
   {
     icon: UserCheck,
     title: 'Real, credentialed provider.',
-    body: 'Every visit is with Dr. Susan George, DNP, APRN — not a faceless network.',
+    body: 'Every visit is with Susan George, DNP, APRN — not a faceless network.',
   },
   {
     icon: Receipt,
@@ -25,7 +25,7 @@ const valueCards = [
 
 export default function QuickValueBar() {
   return (
-    <section style={{ backgroundColor: '#035D57' }} aria-label="Why choose Ebenezer Telehealth">
+    <section style={{ backgroundColor: '#1AA6B7' }} aria-label="Why choose Ebenezer Telehealth">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {valueCards.map((card) => (
@@ -39,12 +39,12 @@ export default function QuickValueBar() {
             >
               <div
                 className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
-                style={{ backgroundColor: 'rgba(153,217,217,0.20)' }}
+                style={{ backgroundColor: 'rgba(151,206,204,0.20)' }}
                 aria-hidden="true"
               >
                 <card.icon
                   className="h-5 w-5"
-                  style={{ color: '#99D9D9' }}
+                  style={{ color: '#97CECC' }}
                 />
               </div>
               <h3

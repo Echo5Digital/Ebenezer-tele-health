@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export const metadata = {
   title: 'Terms of Use | Ebenezer Telehealth',
@@ -10,7 +10,7 @@ export const metadata = {
   robots: { index: true, follow: true },
 }
 
-const EFFECTIVE_DATE = 'June 1, 2025'
+const EFFECTIVE_DATE = 'June 1, 2026'
 const CONTACT_EMAIL = 'contact@ebenezertelehealth.com'
 const PHONE = '(405) 349-8188'
 
@@ -110,8 +110,8 @@ export default function TermsOfUsePage() {
               <div
                 className="rounded-xl p-5 mb-4"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
-                  border: '1px solid rgba(3,93,87,0.20)',
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.20)',
                 }}
               >
                 <p className="font-semibold text-gray-800">
@@ -411,8 +411,8 @@ export default function TermsOfUsePage() {
             <div
               className="rounded-xl p-5"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.15)',
-                border: '1px solid rgba(3,93,87,0.20)',
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.20)',
               }}
             >
               <p className="text-sm text-gray-600">

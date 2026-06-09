@@ -23,7 +23,7 @@ const conditions = [
 ]
 
 const pricingFeatures = [
-  'Same-day video visit with Dr. Susan George, DNP, APRN',
+  'Same-day video visit with Susan George, DNP, APRN',
   'Thorough evaluation, diagnosis & treatment recommendations',
   'Electronic prescriptions sent to your preferred pharmacy',
   'No insurance needed — cash-pay transparency',
@@ -44,9 +44,9 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Dr. George by Video',
+    title: 'Meet Susan George by Video',
     description:
-      'Connect securely with Dr. Susan George for evaluation and diagnosis.',
+      'Connect securely with Susan George, DNP, APRN, for evaluation and diagnosis.',
   },
   {
     number: '04',
@@ -164,19 +164,25 @@ export default function MinorIllnessPage() {
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
-        style={{
-          backgroundImage: "url('/minor_ill.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        {/* Background image — mirrored horizontally */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/minor_ill.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            transform: 'scaleX(-1)',
+          }}
+          aria-hidden="true"
+        />
         {/* Teal-tinted overlay — matches brand color, image clearly visible */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(153,217,217,0.40) 0%, rgba(255,255,255,0.82) 60%)',
+              'linear-gradient(135deg, rgba(151,206,204,0.40) 0%, rgba(255,255,255,0.82) 60%)',
           }}
           aria-hidden="true"
         />
@@ -220,8 +226,8 @@ export default function MinorIllnessPage() {
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.40)',
-                color: 'var(--primary-dark)',
+                backgroundColor: 'rgba(151,206,204,0.40)',
+                color: 'var(--navy)',
               }}
             >
               <Clock className="h-4 w-4" aria-hidden="true" />
@@ -251,9 +257,9 @@ export default function MinorIllnessPage() {
       <section
         className="relative overflow-hidden"
         style={{
-          backgroundImage: "url('/answer_block.webp')",
+          backgroundImage: "url('/answer_block2.webp')",
           backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -261,25 +267,27 @@ export default function MinorIllnessPage() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(153,217,217,0.38) 0%, rgba(255,255,255,0.72) 60%)',
+              'linear-gradient(to left, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.60) 50%, rgba(151,206,204,0.18) 100%)',
           }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div
-            className="max-w-3xl border-l-4 pl-5 md:pl-6"
-            style={{ borderColor: 'var(--primary)' }}
-          >
-            <p
-              className="hero-answer-line text-base md:text-lg leading-relaxed"
-              style={{ color: '#035D57' }}
+          <div className="flex justify-end">
+            <div
+              className="max-w-xl border-l-4 pl-5 md:pl-6"
+              style={{ borderColor: 'var(--primary)' }}
             >
-              Ebenezer Telehealth provides same-day online treatment for minor
-              illnesses to patients across Oklahoma. Common conditions include
-              sinus infections, cold and flu, UTIs, allergies, pink eye, rashes,
-              and stomach issues. Visits are $50 cash-pay with Dr. Susan George,
-              DNP, APRN, and prescriptions are sent to your preferred pharmacy.
-            </p>
+              <p
+                className="hero-answer-line text-base md:text-lg leading-relaxed"
+                style={{ color: '#1AA6B7' }}
+              >
+                Ebenezer Telehealth provides same-day online treatment for minor
+                illnesses to patients across Oklahoma. Common conditions include
+                sinus infections, cold and flu, UTIs, allergies, pink eye, rashes,
+                and stomach issues. Visits are $50 cash-pay with Susan George,
+                DNP, APRN, and prescriptions are sent to your preferred pharmacy.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -306,13 +314,13 @@ export default function MinorIllnessPage() {
             {/* Decorative accent line — matches WhyChooseUs pattern */}
             <div className="flex items-center gap-2 mb-5" aria-hidden="true">
               <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(3,93,87,0.12)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
             </div>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
               We provide thorough evaluation and treatment for a wide range of
               minor illnesses through convenient telemedicine visits. During
-              your appointment, Dr. George carefully assesses your condition by
+              your appointment, Susan George carefully assesses your condition by
               reviewing your symptoms, medical history, and any relevant
               details — allowing for informed clinical decisions while keeping
               care accessible and efficient.
@@ -325,8 +333,8 @@ export default function MinorIllnessPage() {
             <div
               className="rounded-2xl p-7 md:p-8 h-full"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.08)',
-                border: '1px solid rgba(3,93,87,0.12)',
+                backgroundColor: 'rgba(151,206,204,0.08)',
+                border: '1px solid rgba(26,166,183,0.12)',
               }}
             >
               <p
@@ -354,8 +362,8 @@ export default function MinorIllnessPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
-                  border: '1px solid rgba(3,93,87,0.15)',
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.15)',
                 }}
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -376,7 +384,7 @@ export default function MinorIllnessPage() {
                   in-person evaluation — is necessary, we&apos;ll guide you to
                   the appropriate facility and review results promptly. If your
                   condition requires urgent or emergency care beyond telehealth,
-                  Dr. George will advise you clearly on the next steps.
+                  Susan George will advise you clearly on the next steps.
                 </p>
               </div>
 
@@ -407,8 +415,8 @@ export default function MinorIllnessPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(3,93,87,0.04)',
-                  border: '1px solid rgba(3,93,87,0.12)',
+                  backgroundColor: 'rgba(26,166,183,0.04)',
+                  border: '1px solid rgba(26,166,183,0.12)',
                 }}
               >
                 <h3
@@ -465,8 +473,8 @@ export default function MinorIllnessPage() {
               className="rounded-2xl p-8 border"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                borderColor: 'rgba(3,93,87,0.30)',
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
               }}
             >
               <div className="mb-6">
@@ -523,8 +531,8 @@ export default function MinorIllnessPage() {
             <div
               className="mt-6 rounded-xl p-5 flex items-start gap-3"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.15)',
-                border: '1px solid rgba(3,93,87,0.20)',
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.20)',
               }}
               role="note"
             >
@@ -546,13 +554,13 @@ export default function MinorIllnessPage() {
       {/* ── HOW IT WORKS ─────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: '#035D57' }}
+        style={{ backgroundColor: '#1AA6B7' }}
         aria-labelledby="how-it-works-heading"
       >
         {/* Overlay */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(3,93,87,0.40)' }}
+          style={{ backgroundColor: 'rgba(26,166,183,0.40)' }}
           aria-hidden="true"
         />
 
@@ -562,7 +570,7 @@ export default function MinorIllnessPage() {
           <div className="text-center mb-12 md:mb-14">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: '#99D9D9' }}
+              style={{ color: '#97CECC' }}
             >
               How It Works
             </span>
@@ -578,7 +586,7 @@ export default function MinorIllnessPage() {
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
               Getting evaluated and treated online is simple. Book your visit,
-              describe your symptoms, and meet Dr. George by secure video —
+              describe your symptoms, and meet Susan George by secure video —
               often the same day. Prescriptions are sent directly to your
               preferred Oklahoma pharmacy.
             </p>
@@ -592,7 +600,7 @@ export default function MinorIllnessPage() {
                 {index < steps.length - 1 && (
                   <div
                     className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                    style={{ backgroundColor: 'rgba(153,217,217,0.22)' }}
+                    style={{ backgroundColor: 'rgba(151,206,204,0.22)' }}
                     aria-hidden="true"
                   />
                 )}
@@ -645,7 +653,7 @@ export default function MinorIllnessPage() {
               <a
                 href="tel:+14053498188"
                 className="font-semibold"
-                style={{ color: '#99D9D9' }}
+                style={{ color: '#97CECC' }}
               >
                 call (405) 349-8188
               </a>
@@ -686,7 +694,7 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Why See an Online Doctor for a Minor Illness?
+              Why See an Online Practitioner for a Minor Illness?
             </h2>
 
             {/* Decorative accent line */}
@@ -697,11 +705,11 @@ export default function MinorIllnessPage() {
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(3,93,87,0.25)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
-                style={{ backgroundColor: 'rgba(3,93,87,0.12)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
               />
             </div>
 
@@ -720,7 +728,7 @@ export default function MinorIllnessPage() {
                 <li key={point} className="flex items-start gap-3">
                   <div
                     className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(3,93,87,0.10)' }}
+                    style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
                     aria-hidden="true"
                   >
                     <CheckCircle2
@@ -820,13 +828,13 @@ export default function MinorIllnessPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <HeartHandshake className="h-6 w-6" style={{ color: 'var(--primary)' }} />
@@ -842,7 +850,7 @@ export default function MinorIllnessPage() {
                   <span
                     className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
+                      backgroundColor: 'rgba(151,206,204,0.30)',
                       color: 'var(--primary)',
                     }}
                   >
@@ -873,13 +881,13 @@ export default function MinorIllnessPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <Scale className="h-6 w-6" style={{ color: 'var(--primary)' }} />
@@ -895,7 +903,7 @@ export default function MinorIllnessPage() {
                   <span
                     className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
+                      backgroundColor: 'rgba(151,206,204,0.30)',
                       color: 'var(--primary)',
                     }}
                   >
@@ -905,7 +913,7 @@ export default function MinorIllnessPage() {
                 <p className="text-sm leading-relaxed text-gray-600">
                   A medically supervised program built around your metabolic
                   health — including GLP-1 medication management — overseen by
-                  Dr. George, BC-ADM certified.
+                  Susan George, BC-ADM certified.
                 </p>
               </div>
               <Link

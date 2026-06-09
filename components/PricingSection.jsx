@@ -8,7 +8,7 @@ const plans = [
     followUp: '$50',
     description: "Comprehensive virtual care for women's health needs including birth control, hormonal health, and more.",
     features: [
-      'Video visit with Dr. Susan George',
+      'Video visit with Susan George, DNP, APRN',
       "Women's health specialty care",
       'Prescriptions sent to pharmacy',
       'Private & HIPAA-compliant',
@@ -21,7 +21,7 @@ const plans = [
     followUp: '$50',
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
-      'Video visit with Dr. Susan George',
+      'Video visit with Susan George, DNP, APRN',
       'Personalized metabolic health plan',
       'Ongoing management support',
       'Clinical — not a quick-fix program',
@@ -34,7 +34,7 @@ const plans = [
     followUp: null,
     description: 'Online evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
     features: [
-      'Video visit with Dr. Susan George',
+      'Video visit with Susan George, DNP, APRN',
       'Diagnosis & treatment plan',
       'Electronic prescriptions when appropriate',
       'Same-day availability',
@@ -86,8 +86,8 @@ export default function PricingSection() {
                 plan.featured
                   ? {
                       background:
-                        'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                      borderColor: 'rgba(3,93,87,0.30)',
+                        'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                      borderColor: 'rgba(26,166,183,0.30)',
                     }
                   : {}
               }
@@ -160,8 +160,8 @@ export default function PricingSection() {
         <div
           className="mt-10 rounded-xl p-5 flex items-start gap-3"
           style={{
-            backgroundColor: 'rgba(153,217,217,0.15)',
-            border: '1px solid rgba(3,93,87,0.20)',
+            backgroundColor: 'rgba(151,206,204,0.15)',
+            border: '1px solid rgba(26,166,183,0.20)',
           }}
           role="note"
         >
@@ -174,7 +174,9 @@ export default function PricingSection() {
             We currently operate on a{' '}
             <strong>cash-pay basis</strong>. Insurance options are coming as we
             expand to in-person and additional telehealth services. Exact prices
-            will be displayed at booking — no hidden fees.
+            will be displayed at booking — no hidden fees.{' '}
+            As telehealth services are provided remotely, payment is currently
+            accepted via credit and debit cards only.
           </p>
         </div>
       </div>

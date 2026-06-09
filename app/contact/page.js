@@ -46,7 +46,7 @@ function IconBox({ children }) {
   return (
     <div
       className="flex-shrink-0 h-9 w-9 rounded-xl flex items-center justify-center"
-      style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+      style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
       aria-hidden="true"
     >
       {children}
@@ -62,7 +62,7 @@ function InfoRow({ icon, label, children }) {
       <div className="min-w-0 flex-1">
         <p
           className="text-[11px] font-bold uppercase tracking-widest leading-none"
-          style={{ color: 'rgba(3,93,87,0.55)' }}
+          style={{ color: 'rgba(26,166,183,0.55)' }}
         >
           {label}
         </p>
@@ -103,7 +103,7 @@ export default function ContactPage() {
           className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(3,93,87,0.55) 0%, rgba(255,255,255,0.90) 52%)',
+              'linear-gradient(to right, rgba(26,166,183,0.55) 0%, rgba(255,255,255,0.90) 52%)',
           }}
           aria-hidden="true"
         />
@@ -269,8 +269,8 @@ export default function ContactPage() {
                   <div
                     className="mt-6 rounded-xl flex flex-col items-center justify-center py-16 gap-3 text-center"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.10)',
-                      border: '2px dashed rgba(3,93,87,0.20)',
+                      backgroundColor: 'rgba(151,206,204,0.10)',
+                      border: '2px dashed rgba(26,166,183,0.20)',
                     }}
                     aria-hidden="true"
                   >
@@ -336,7 +336,7 @@ export default function ContactPage() {
                     className="flex items-center justify-center sm:justify-start gap-3 w-full sm:w-auto rounded-2xl px-7 py-4 text-white font-bold transition-all hover:-translate-y-0.5 active:translate-y-0"
                     style={{
                       backgroundColor: 'var(--primary)',
-                      boxShadow: '0 4px 20px rgba(3,93,87,0.28)',
+                      boxShadow: '0 4px 20px rgba(26,166,183,0.28)',
                       fontSize: 'clamp(1.25rem, 3.5vw, 1.75rem)',
                       lineHeight: 1.2,
                     }}
@@ -430,7 +430,7 @@ export default function ContactPage() {
                     label="Hours"
                   >
                     <p className="text-xs text-gray-400">
-                      [Hours — to be confirmed]
+                      Available most days of the week and most Saturdays.
                     </p>
                   </InfoRow>
 
@@ -440,8 +440,8 @@ export default function ContactPage() {
                 <div
                   className="px-6 py-4"
                   style={{
-                    backgroundColor: 'rgba(153,217,217,0.12)',
-                    borderTop: '1px solid rgba(3,93,87,0.08)',
+                    backgroundColor: 'rgba(151,206,204,0.12)',
+                    borderTop: '1px solid rgba(26,166,183,0.08)',
                   }}
                 >
                   <p
@@ -506,9 +506,9 @@ export default function ContactPage() {
                     key={city}
                     className="inline-block text-sm font-medium px-3 py-1.5 rounded-full"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.20)',
+                      backgroundColor: 'rgba(151,206,204,0.20)',
                       color: 'var(--primary)',
-                      border: '1px solid rgba(3,93,87,0.15)',
+                      border: '1px solid rgba(26,166,183,0.15)',
                     }}
                   >
                     {city}
@@ -522,8 +522,8 @@ export default function ContactPage() {
               <div
                 className="rounded-2xl p-7"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.10)',
-                  border: '1px solid rgba(3,93,87,0.14)',
+                  backgroundColor: 'rgba(151,206,204,0.10)',
+                  border: '1px solid rgba(26,166,183,0.14)',
                 }}
               >
                 <p
@@ -542,8 +542,8 @@ export default function ContactPage() {
               <div
                 className="rounded-2xl p-7"
                 style={{
-                  backgroundColor: 'rgba(3,93,87,0.04)',
-                  border: '1px solid rgba(3,93,87,0.09)',
+                  backgroundColor: 'rgba(26,166,183,0.04)',
+                  border: '1px solid rgba(26,166,183,0.09)',
                 }}
               >
                 <p

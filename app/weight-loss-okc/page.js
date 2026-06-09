@@ -46,7 +46,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Dr. George by Video',
+    title: 'Meet Susan George by Video',
     description: 'Secure video evaluation — no commute required.',
   },
   {
@@ -204,8 +204,8 @@ export default function WeightLossOKCPage() {
             <div
               className="rounded-xl border px-6 py-5 mb-6"
               style={{
-                borderColor: 'rgba(3,93,87,0.20)',
-                backgroundColor: 'rgba(153,217,217,0.12)',
+                borderColor: 'rgba(26,166,183,0.20)',
+                backgroundColor: 'rgba(151,206,204,0.12)',
               }}
             >
               <p className="hero-answer-line">
@@ -213,7 +213,7 @@ export default function WeightLossOKCPage() {
                 care to patients in Oklahoma City, OK through secure telehealth
                 visits. Our program includes personalized plans, semaglutide
                 and GLP-1 medication management, and ongoing support — led by
-                Dr. Susan George, DNP, APRN, BC-ADM. Initial consultations
+                Susan George, DNP, APRN, BC-ADM. Initial consultations
                 start at $250.
               </p>
             </div>
@@ -221,7 +221,7 @@ export default function WeightLossOKCPage() {
             <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
               Looking for a weight loss clinic in Oklahoma City? Ebenezer
               Telehealth brings medical weight loss care directly to you — no
-              drive, no waiting room. Dr. Susan George, a Board Certified
+              drive, no waiting room. Susan George, a Board Certified
               provider specializing in metabolic health, evaluates your goals
               and health profile by secure video, builds a personalized plan,
               and manages your medication (including semaglutide and other GLP-1
@@ -232,8 +232,8 @@ export default function WeightLossOKCPage() {
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
               style={{
-                backgroundColor: 'rgba(153,217,217,0.40)',
-                color: 'var(--primary-dark)',
+                backgroundColor: 'rgba(151,206,204,0.40)',
+                color: 'var(--navy)',
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
@@ -292,8 +292,8 @@ export default function WeightLossOKCPage() {
               className="rounded-2xl p-8 border flex flex-col"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                borderColor: 'rgba(3,93,87,0.30)',
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
               }}
             >
               <h3
@@ -333,8 +333,8 @@ export default function WeightLossOKCPage() {
               className="rounded-2xl p-8 border flex flex-col"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(3,93,87,0.06) 0%, rgba(153,217,217,0.18) 100%)',
-                borderColor: 'rgba(3,93,87,0.30)',
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
               }}
             >
               <h3
@@ -380,8 +380,8 @@ export default function WeightLossOKCPage() {
           <div
             className="max-w-4xl mx-auto mt-6 rounded-xl p-5 flex items-start gap-3"
             style={{
-              backgroundColor: 'rgba(153,217,217,0.15)',
-              border: '1px solid rgba(3,93,87,0.20)',
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
             }}
             role="note"
           >
@@ -402,19 +402,19 @@ export default function WeightLossOKCPage() {
       {/* ── HOW IT WORKS ─────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: '#035D57' }}
+        style={{ backgroundColor: '#1AA6B7' }}
         aria-labelledby="okc-how-heading"
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(3,93,87,0.40)' }}
+          style={{ backgroundColor: 'rgba(26,166,183,0.40)' }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-12 md:mb-14">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: '#99D9D9' }}
+              style={{ color: '#97CECC' }}
             >
               How It Works
             </span>
@@ -440,7 +440,7 @@ export default function WeightLossOKCPage() {
                 {index < steps.length - 1 && (
                   <div
                     className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                    style={{ backgroundColor: 'rgba(153,217,217,0.22)' }}
+                    style={{ backgroundColor: 'rgba(151,206,204,0.22)' }}
                     aria-hidden="true"
                   />
                 )}
@@ -483,7 +483,7 @@ export default function WeightLossOKCPage() {
               <a
                 href="tel:+14053498188"
                 className="font-semibold"
-                style={{ color: '#99D9D9' }}
+                style={{ color: '#97CECC' }}
               >
                 call (405) 349-8188
               </a>
@@ -573,13 +573,13 @@ export default function WeightLossOKCPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <Scale className="h-6 w-6" style={{ color: 'var(--primary)' }} />
@@ -614,13 +614,13 @@ export default function WeightLossOKCPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <HeartHandshake
@@ -639,7 +639,7 @@ export default function WeightLossOKCPage() {
                   <span
                     className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
+                      backgroundColor: 'rgba(151,206,204,0.30)',
                       color: 'var(--primary)',
                     }}
                   >
@@ -668,13 +668,13 @@ export default function WeightLossOKCPage() {
             <article
               className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
               style={{
-                border: '1px solid rgba(3,93,87,0.12)',
-                boxShadow: '0 2px 16px rgba(3,93,87,0.07)',
+                border: '1px solid rgba(26,166,183,0.12)',
+                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
                 <Thermometer
@@ -693,7 +693,7 @@ export default function WeightLossOKCPage() {
                   <span
                     className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      backgroundColor: 'rgba(153,217,217,0.30)',
+                      backgroundColor: 'rgba(151,206,204,0.30)',
                       color: 'var(--primary)',
                     }}
                   >

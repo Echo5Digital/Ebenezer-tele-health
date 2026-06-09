@@ -59,12 +59,12 @@ export default function Header() {
           className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-4 sm:px-7 h-[68px] sm:h-[84px] lg:h-[100px] transition-all duration-300"
           aria-label="Global"
           style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(153,217,217,0.18) 100%)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(151,206,204,0.18) 100%)',
             backdropFilter: 'blur(24px)',
             WebkitBackdropFilter: 'blur(24px)',
-            border: '1px solid rgba(3,93,87,0.15)',
+            border: '1px solid rgba(26,166,183,0.15)',
             boxShadow: scrolled
-              ? '0 4px 24px rgba(3,93,87,0.12), inset 0 1px 0 rgba(255,255,255,0.9)'
+              ? '0 4px 24px rgba(26,166,183,0.12), inset 0 1px 0 rgba(255,255,255,0.9)'
               : '0 2px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.9)',
           }}
         >
@@ -137,11 +137,11 @@ export default function Header() {
             role="dialog"
             aria-modal="true"
             style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(153,217,217,0.12) 100%)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(151,206,204,0.12) 100%)',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
-              border: '1px solid rgba(3,93,87,0.18)',
-              boxShadow: '0 8px 32px rgba(3,93,87,0.12), inset 0 1px 0 rgba(255,255,255,0.8)',
+              border: '1px solid rgba(26,166,183,0.18)',
+              boxShadow: '0 8px 32px rgba(26,166,183,0.12), inset 0 1px 0 rgba(255,255,255,0.8)',
             }}
           >
             <div className="px-4 py-4">

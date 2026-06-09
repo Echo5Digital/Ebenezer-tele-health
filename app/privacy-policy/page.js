@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export const metadata = {
   title: 'Privacy Policy | Ebenezer Telehealth',
@@ -10,7 +10,7 @@ export const metadata = {
   robots: { index: true, follow: true },
 }
 
-const EFFECTIVE_DATE = 'June 1, 2025'
+const EFFECTIVE_DATE = 'June 1, 2026'
 const CONTACT_EMAIL = 'contact@ebenezertelehealth.com'
 const PHONE = '(405) 349-8188'
 const SITE_URL = 'https://ebenezertelehealth.com'
@@ -277,8 +277,8 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p>
                 Our website and telehealth services are not directed toward
-                children under the age of 13. We do not knowingly collect
-                personal information from children under 13. If you believe we
+                children under the age of 18. We do not knowingly collect
+                personal information from children under 18. If you believe we
                 have inadvertently collected such information, please contact us
                 immediately.
               </p>

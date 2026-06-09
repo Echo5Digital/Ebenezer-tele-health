@@ -14,7 +14,7 @@ export default function MobileBottomBar() {
         <a
           href="tel:+14053498188"
           className="flex flex-1 items-center justify-center gap-2 text-sm font-semibold text-white transition-opacity active:opacity-80"
-          style={{ backgroundColor: '#035D57' }}
+          style={{ backgroundColor: '#1AA6B7' }}
           aria-label="Call Ebenezer Telehealth at (405) 349-8188"
         >
           <Phone className="h-4 w-4" aria-hidden="true" />
@@ -23,7 +23,7 @@ export default function MobileBottomBar() {
         <Link
           href="/contact"
           className="flex flex-1 items-center justify-center gap-2 text-sm font-semibold text-white transition-opacity active:opacity-80"
-          style={{ backgroundColor: '#99D9D9', color: '#035D57' }}
+          style={{ backgroundColor: '#97CECC', color: '#063B45' }}
           aria-label="Book your telehealth visit"
         >
           <CalendarDays className="h-4 w-4" aria-hidden="true" />

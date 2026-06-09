@@ -9,28 +9,28 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#035D57',
-          dark: '#024843',
+          DEFAULT: '#1AA6B7',
+          dark: '#3FE0D0',
           foreground: '#ffffff',
         },
         navy: {
-          DEFAULT: '#035D57',
+          DEFAULT: '#0B3D47',
           foreground: '#ffffff',
         },
         mint: {
-          DEFAULT: '#99D9D9',
+          DEFAULT: '#97CECC',
           foreground: '#035D57',
         },
         seafoam: {
-          DEFAULT: '#99D9D9',
+          DEFAULT: '#62C2CC',
           foreground: '#035D57',
         },
         cream: {
           DEFAULT: '#E8F7F7',
-          foreground: '#035D57',
+          foreground: '#1AA6B7',
         },
         'deep-teal': {
-          DEFAULT: '#024843',
+          DEFAULT: '#4CD0D0',
           foreground: '#ffffff',
         },
         border: 'hsl(214.3 31.8% 91.4%)',

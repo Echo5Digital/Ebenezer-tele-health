@@ -16,39 +16,39 @@ import {
 const faqs = [
   {
     id: 'wh-faq-1',
-    question: 'Can I get birth control prescribed online in Oklahoma?',
+    question: 'Can I get birth control online in Oklahoma?',
     answer:
-      "Yes. Dr. Susan George can evaluate your contraceptive needs, discuss all available options — including oral pills, patches, and injections — and prescribe birth control during a virtual visit. No in-person appointment is required for most contraceptive management needs.",
+      'Yes. We provide contraceptive counseling and prescriptions by secure video, sent to your pharmacy. Susan George can review your health history, discuss all hormonal and non-hormonal options, and send a prescription electronically to any pharmacy in Oklahoma — no in-person visit required.',
   },
   {
     id: 'wh-faq-2',
-    question: 'Can Dr. George diagnose and treat hormonal imbalances or PCOS virtually?',
+    question: 'Do you treat PCOS and menopause online?',
     answer:
-      'Yes. Dr. George conducts a thorough virtual evaluation and can order lab work to assess hormone levels, thyroid function, and other relevant markers. Based on your results and symptoms, she develops a personalized treatment plan — all managed through secure telehealth.',
+      'Yes — both are core services at Ebenezer Telehealth. We offer comprehensive PCOS management including hormonal and metabolic assessment, medication management, and weight-management strategies. For menopause and perimenopause, we provide individualized care with hormonal and non-hormonal options based on what is right for you.',
   },
   {
     id: 'wh-faq-3',
-    question: "What is included in the $150 initial women's health visit?",
+    question: "Do I need insurance for a women's health visit?",
     answer:
-      'Your initial visit includes a comprehensive symptom review and full health history, lab orders when clinically appropriate, lab result interpretation, and a personalized treatment plan. Dr. George takes time to understand your full picture before recommending any course of action.',
+      "No. We're cash-pay with transparent pricing — $150 initial visit, $50 follow-up. You'll know your full cost before you book. No surprise bills, no insurance claims, no pre-authorization delays. We are in the process of becoming credentialed with major insurance plans.",
   },
   {
     id: 'wh-faq-4',
-    question: "Is my women's health visit completely private and confidential?",
+    question: "Where in Oklahoma can I be seen for women's health?",
     answer:
-      'Yes. All visits are conducted via a HIPAA-compliant, encrypted video platform. You speak only with Dr. Susan George — no rotating staff, no third-party networks. Your health information is never shared without your explicit consent.',
+      "Anywhere in the state — including Oklahoma City, Tulsa, Edmond, Norman, Lawton, and rural communities — as long as you're in Oklahoma at the time of your visit. Telehealth removes geographic barriers so women across metro and rural Oklahoma can access specialized women's health care.",
   },
   {
     id: 'wh-faq-5',
-    question: "Do I need a physical exam for women's health telehealth?",
+    question: 'Can you send prescriptions to my pharmacy?',
     answer:
-      "Many women's health concerns — including hormonal health, birth control management, UTIs, menopause symptoms, and more — can be thoroughly evaluated via telehealth without an in-person exam. If Dr. George determines that an in-person evaluation is clinically necessary, she will advise you clearly and help coordinate appropriate care.",
+      'Yes, electronically to any pharmacy in Oklahoma when appropriate. After your visit, Susan George will send any prescriptions directly to your preferred pharmacy so you can pick them up without any extra steps.',
   },
   {
     id: 'wh-faq-6',
-    question: 'What if I need lab work or a prescription?',
+    question: "Are women's health visits private?",
     answer:
-      'Lab orders are included in your initial visit when clinically appropriate. Dr. George will direct you to a convenient lab anywhere in Oklahoma and review your results promptly. Prescriptions are sent electronically to your preferred Oklahoma pharmacy.',
+      'Yes — all visits are HIPAA-compliant and confidential. Every visit is conducted via an encrypted, secure video platform. You speak only with Susan George — no rotating staff, no third-party networks. Your health information is never shared without your explicit consent.',
   },
 ]
 

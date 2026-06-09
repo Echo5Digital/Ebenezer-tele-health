@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --primary: #035D57;
-    --primary-dark: #024843;
-    --navy: #035D57;
-    --mint: #99D9D9;
-    --seafoam: #99D9D9;
+    --primary: #1AA6B7;
+    --primary-dark: #3FE0D0;
+    --navy: #0B3D47;
+    --mint: #97CECC;
+    --seafoam: #62C2CC;
     --cream: #E8F7F7;
-    --deep-teal: #024843;
+    --deep-teal: #4CD0D0;
 
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -97,12 +97,12 @@
     border-radius: 0.625rem;
     padding: 0.75rem 1.75rem;
     transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
-    box-shadow: 0 2px 8px rgba(3, 93, 87, 0.30);
+    box-shadow: 0 2px 8px rgba(26, 166, 183, 0.30);
   }
 
   .btn-primary:hover {
     background-color: var(--primary-dark);
-    box-shadow: 0 4px 16px rgba(3, 93, 87, 0.40);
+    box-shadow: 0 4px 16px rgba(26, 166, 183, 0.40);
     transform: translateY(-1px);
   }
 
@@ -186,7 +186,7 @@ body.service-page .rounded-2xl {
 }
 body.service-page .rounded-2xl:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(3, 93, 87, 0.13);
+  box-shadow: 0 12px 32px rgba(26, 166, 183, 0.13);
 }
 
 /* Icon containers — scale on parent hover */

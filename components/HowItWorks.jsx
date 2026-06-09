@@ -11,7 +11,7 @@ const steps = [
         <a
           href="tel:+14053498188"
           className="font-semibold underline"
-          style={{ color: '#99D9D9' }}
+          style={{ color: '#97CECC' }}
         >
           call (405) 349-8188
         </a>
@@ -26,7 +26,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet with Dr. George',
+    title: 'Meet with Susan George',
     description:
       'Connect by secure video from anywhere in Oklahoma.',
   },
@@ -42,7 +42,7 @@ export default function HowItWorks() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ backgroundColor: '#035D57' }}
+      style={{ backgroundColor: '#1AA6B7' }}
       aria-labelledby="how-heading"
     >
       {/* Background video — loops between 2 s and 7 s for smooth playback */}
@@ -51,7 +51,7 @@ export default function HowItWorks() {
       {/* Dark overlay — keeps all text and cards clearly legible */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: 'rgba(3,93,87,0.50)' }}
+        style={{ backgroundColor: 'rgba(26,166,183,0.50)' }}
         aria-hidden="true"
       />
 
@@ -61,7 +61,7 @@ export default function HowItWorks() {
         <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: '#99D9D9' }}
+            style={{ color: '#97CECC' }}
           >
             How It Works
           </span>
@@ -81,11 +81,11 @@ export default function HowItWorks() {
             <a
               href="tel:+14053498188"
               className="font-semibold underline"
-              style={{ color: '#99D9D9' }}
+              style={{ color: '#97CECC' }}
             >
               call (405) 349-8188
             </a>
-            , complete a short health intake, then meet Dr. Susan George by
+            , complete a short health intake, then meet Susan George, DNP, APRN, by
             secure video from anywhere in Oklahoma. The visit is a real medical
             consultation. You receive a diagnosis, treatment plan, and
             prescriptions sent electronically to your pharmacy when appropriate.
@@ -100,7 +100,7 @@ export default function HowItWorks() {
               {index < steps.length - 1 && (
                 <div
                   className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                  style={{ backgroundColor: 'rgba(153,217,217,0.22)' }}
+                  style={{ backgroundColor: 'rgba(151,206,204,0.22)' }}
                   aria-hidden="true"
                 />
               )}
@@ -148,7 +148,7 @@ export default function HowItWorks() {
             <a
               href="tel:+14053498188"
               className="font-semibold"
-              style={{ color: '#99D9D9' }}
+              style={{ color: '#97CECC' }}
             >
               call (405) 349-8188
             </a>

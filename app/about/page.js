@@ -6,7 +6,7 @@ import { Award, CreditCard, Globe, Heart, MapPin, Quote, ShieldCheck, User } fro
 export const metadata = {
   title: 'About Ebenezer Telehealth | Dr. Susan George, DNP, APRN',
   description:
-    'Meet Dr. Susan George, DNP, APRN, BC-ADM — the provider behind Ebenezer Telehealth. Faith-driven, compassionate telehealth care for Oklahoma women and families.',
+    'Meet Susan George, DNP, APRN, BC-ADM — the provider behind Ebenezer Telehealth. Faith-driven, compassionate telehealth care for Oklahoma women and families.',
   alternates: {
     canonical: 'https://ebenezertelehealth.com/about',
   },
@@ -88,7 +88,7 @@ const aboutPageSchema = {
     ],
     worksFor: { '@id': 'https://ebenezertelehealth.com/#organization' },
     // TODO: Update image URL to final optimised asset path when confirmed
-    image: 'https://ebenezertelehealth.com/Dr_OKC.webp',
+    image: 'https://ebenezertelehealth.com/dr-susan-george-oklahoma-telehealth.webp',
   },
 }
 
@@ -126,7 +126,7 @@ export default function AboutPage() {
           className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(3,93,87,0.42) 0%, rgba(255,255,255,0.86) 52%)',
+              'linear-gradient(to right, rgba(26,166,183,0.42) 0%, rgba(255,255,255,0.86) 52%)',
           }}
           aria-hidden="true"
         />
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                About Ebenezer Telehealth&nbsp;&mdash; Meet Dr. Susan George
+                About Ebenezer Telehealth&nbsp;&mdash; Meet Susan George, DNP, APRN, Online Practitioner
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Faith-driven, evidence-based telehealth care for women and families
@@ -188,7 +188,7 @@ export default function AboutPage() {
           <div
             className="rounded-xl p-6 border-l-4"
             style={{
-              backgroundColor: 'rgba(153,217,217,0.15)',
+              backgroundColor: 'rgba(151,206,204,0.15)',
               borderColor: 'var(--primary)',
             }}
           >
@@ -197,7 +197,7 @@ export default function AboutPage() {
               founded on the mission of delivering faith-driven, compassionate
               healthcare to women and families. The practice is led by{' '}
               <strong className="font-semibold text-gray-900">
-                Dr. Susan George, DNP, APRN, BC-ADM
+                Susan George, DNP, APRN, BC-ADM
               </strong>
               , and offers cash-pay online visits for weight loss management,
               women&apos;s health, and minor illnesses across the state of Oklahoma.
@@ -231,18 +231,18 @@ export default function AboutPage() {
                   className="text-3xl md:text-4xl font-bold mb-5"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Dr. Susan George, DNP, APRN, BC-ADM
+                  Susan George, DNP, APRN, BC-ADM, Online Practitioner
                 </h2>
                 <div className="space-y-4">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Dr. Susan George is a Doctor of Nursing Practice (DNP) and
+                    Susan George is a Doctor of Nursing Practice (DNP) and
                     Advanced Practice Registered Nurse (APRN) who founded Ebenezer
                     Telehealth to bring affordable, compassionate care to women and
                     families who need it &mdash; without the barriers of long drives,
                     overcrowded clinics, or confusing bills.
                   </p>
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Dr. George specializes in women&apos;s health and is Board
+                    Susan George specializes in women&apos;s health and is Board
                     Certified in Advanced Diabetes Management (BC-ADM), a credential
                     that reflects deep expertise in metabolic health &mdash; including
                     the hormonal and insulin-related factors that affect weight, energy,
@@ -303,7 +303,7 @@ export default function AboutPage() {
               <figure
                 className="rounded-xl p-6 border-l-4"
                 style={{
-                  backgroundColor: 'rgba(153,217,217,0.15)',
+                  backgroundColor: 'rgba(151,206,204,0.15)',
                   borderColor: 'var(--primary)',
                 }}
               >
@@ -322,7 +322,7 @@ export default function AboutPage() {
                   className="mt-3 text-sm font-semibold"
                   style={{ color: 'var(--navy)' }}
                 >
-                  &mdash; Dr. Susan George, DNP, APRN, BC-ADM
+                  &mdash; Susan George, DNP, APRN, BC-ADM, Online Practitioner
                 </figcaption>
               </figure>
 
@@ -342,8 +342,8 @@ export default function AboutPage() {
             <div className="flex flex-col items-center gap-5 order-1 lg:order-2">
               <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
                 <Image
-                  src="/Dr_OKC.webp"
-                  alt="Dr. Susan George, DNP, APRN — Provider at Ebenezer Telehealth, Oklahoma City"
+                  src="/dr-susan-george-oklahoma-telehealth.webp"
+                  alt="Dr. Susan George, DNP, APRN — online practitioner at Ebenezer"
                   fill
                   className="object-cover object-center"
                   priority
@@ -403,11 +403,11 @@ export default function AboutPage() {
               <div
                 key={title}
                 className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-none rounded-2xl p-6 flex flex-col gap-4 bg-white shadow-sm"
-                style={{ border: '1px solid rgba(3,93,87,0.10)' }}
+                style={{ border: '1px solid rgba(26,166,183,0.10)' }}
               >
                 <div
                   className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: 'rgba(3,93,87,0.08)' }}
+                  style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                   aria-hidden="true"
                 >
                   <Icon className="h-5 w-5" style={{ color: 'var(--primary)' }} />
@@ -456,7 +456,7 @@ export default function AboutPage() {
             Ready to Experience the Difference?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Book your visit with Dr. Susan George &mdash; same-day appointments often
+            Book your visit with Susan George &mdash; same-day appointments often
             available.
           </p>
 

@@ -4,7 +4,7 @@ import { ShieldCheck, DollarSign, MapPin, Clock } from 'lucide-react'
 const trustItems = [
   {
     icon: ShieldCheck,
-    text: 'Led by Dr. Susan George, DNP, APRN',
+    text: 'Led by Susan George, DNP, APRN, Online Practitioner',
   },
   {
     icon: DollarSign,
@@ -24,7 +24,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] min-h-[600px] md:min-h-[80vh]"
-      style={{ backgroundColor: '#035D57' }}
+      style={{ backgroundColor: '#1AA6B7' }}
       aria-label="Hero"
     >
       {/* Video background */}
@@ -42,7 +42,7 @@ export default function HeroSection() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, rgba(2,72,67,0.72) 0%, rgba(3,93,87,0.55) 100%)',
+            background: 'linear-gradient(135deg, rgba(26,166,183,0.72) 0%, rgba(26,166,183,0.55) 100%)',
           }}
         />
       </div>
@@ -53,14 +53,14 @@ export default function HeroSection() {
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 border"
             style={{
-              backgroundColor: 'rgba(153,217,217,0.15)',
-              borderColor: 'rgba(153,217,217,0.30)',
-              color: '#99D9D9',
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              borderColor: 'rgba(151,206,204,0.30)',
+              color: '#97CECC',
             }}
           >
             <span
               className="inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: '#99D9D9' }}
+              style={{ backgroundColor: '#97CECC' }}
               aria-hidden="true"
             />
             Faith-Driven Telehealth &middot; Oklahoma City, OK
@@ -71,8 +71,8 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
             style={{ color: '#ffffff' }}
           >
-            Affordable Online{' '}
-            <span style={{ color: '#99D9D9' }}>Doctor Visits</span>
+            Affordable{' '}
+            <span style={{ color: '#97CECC' }}>Online Practitioner Visits</span>
             <br className="hidden sm:block" /> in Oklahoma
           </h1>
 
@@ -120,7 +120,7 @@ export default function HeroSection() {
             >
               <item.icon
                 className="h-4 w-4 flex-shrink-0"
-                style={{ color: '#99D9D9' }}
+                style={{ color: '#97CECC' }}
                 aria-hidden="true"
               />
               <span
