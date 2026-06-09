@@ -105,14 +105,16 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center flex-shrink-0">
-            <Link
-              href="/contact"
+            <a
+              href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95"
               style={{ backgroundColor: 'var(--primary)' }}
             >
               Book Your Visit
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -176,15 +178,17 @@ export default function Header() {
                   />
                   Call (405) 349-8188
                 </a>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-full py-3 text-sm font-bold uppercase tracking-widest text-white transition-all hover:opacity-90"
                   style={{ backgroundColor: 'var(--primary)' }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Book Your Visit
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

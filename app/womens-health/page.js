@@ -269,25 +269,25 @@ export default function WomensHealthPage() {
       {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/answer_block.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
-        {/* Mobile: light overlay — lets image show while keeping text readable */}
+        {/* Background image */}
         <div
-          className="absolute inset-0 lg:hidden"
-          style={{ backgroundColor: 'rgba(255,255,255,0.76)' }}
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/answer_block3.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 65%',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.2,
+          }}
           aria-hidden="true"
         />
-        {/* Desktop: readable white on left, image fully visible centre-right */}
+        {/* Desktop: white on left for text readability, clear on right so image shows */}
         <div
           className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 30%, rgba(255,255,255,0.18) 54%, rgba(26,166,183,0.08) 100%)',
+              'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.80) 22%, rgba(255,255,255,0.05) 44%, transparent 58%, transparent 100%)',
           }}
           aria-hidden="true"
         />
@@ -306,68 +306,6 @@ export default function WomensHealthPage() {
               Susan George, DNP, APRN, who specializes in women&apos;s health.
               Cash-pay visits start at $150.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHAT WE TREAT ────────────────────────────────────────── */}
-      <section className="bg-white" aria-labelledby="conditions-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="mb-10 md:mb-14">
-            <h2
-              id="conditions-heading"
-              className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
-            >
-              Online Women&apos;s Health Care for Every Stage of Life
-            </h2>
-            <div className="flex items-center gap-2 mb-5" aria-hidden="true">
-              <div
-                className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
-              />
-              <div
-                className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
-              />
-              <div
-                className="h-[3px] w-2 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
-              />
-            </div>
-            <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
-              We provide accessible, evidence-based telemedicine designed to
-              support women through every stage of life — with personalized
-              treatment, compassionate guidance, and convenient virtual visits
-              that fit your schedule, wherever you are in Oklahoma.
-            </p>
-          </div>
-
-          <div
-            className="rounded-2xl p-7 md:p-8 max-w-2xl"
-            style={{
-              backgroundColor: 'rgba(151,206,204,0.08)',
-              border: '1px solid rgba(26,166,183,0.12)',
-            }}
-          >
-            <p
-              className="text-xs font-semibold uppercase tracking-widest mb-5"
-              style={{ color: 'var(--primary)' }}
-            >
-              Common reasons women see us online
-            </p>
-            <ul className="space-y-4">
-              {conditions.map((condition) => (
-                <li key={condition} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="h-5 w-5 mt-0.5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <span className="text-gray-700 leading-snug">{condition}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -450,6 +388,68 @@ export default function WomensHealthPage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT WE TREAT ────────────────────────────────────────── */}
+      <section className="bg-white" aria-labelledby="conditions-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="mb-10 md:mb-14">
+            <h2
+              id="conditions-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Online Women&apos;s Health Care for Every Stage of Life
+            </h2>
+            <div className="flex items-center gap-2 mb-5" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
+              We provide accessible, evidence-based telemedicine designed to
+              support women through every stage of life — with personalized
+              treatment, compassionate guidance, and convenient virtual visits
+              that fit your schedule, wherever you are in Oklahoma.
+            </p>
+          </div>
+
+          <div
+            className="rounded-2xl p-7 md:p-8 max-w-2xl"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.08)',
+              border: '1px solid rgba(26,166,183,0.12)',
+            }}
+          >
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-5"
+              style={{ color: 'var(--primary)' }}
+            >
+              Common reasons women see us online
+            </p>
+            <ul className="space-y-4">
+              {conditions.map((condition) => (
+                <li key={condition} className="flex items-start gap-3">
+                  <CheckCircle2
+                    className="h-5 w-5 mt-0.5 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  <span className="text-gray-700 leading-snug">{condition}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

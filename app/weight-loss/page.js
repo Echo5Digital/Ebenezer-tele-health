@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   CheckCircle2,
   ArrowRight,
@@ -820,70 +821,105 @@ export default function WeightLossPage() {
       </section>
 
       {/* ── MEET YOUR PROVIDER ───────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        style={{ backgroundColor: '#1AA6B7' }}
-        aria-labelledby="provider-heading"
-      >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(26,166,183,0.40)' }}
-          aria-hidden="true"
-        />
+      <section className="bg-white" aria-labelledby="provider-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl mx-auto text-center">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: '#97CECC' }}
-            >
-              Your Provider
-            </span>
-            <h2
-              id="provider-heading"
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{ color: '#ffffff' }}
-            >
-              Led by a Board Certified Provider
-            </h2>
-            <p
-              className="text-base md:text-lg leading-relaxed mb-8"
-              style={{ color: 'rgba(255,255,255,0.90)' }}
-            >
-              Your weight-loss care is led by{' '}
-              <strong style={{ color: '#ffffff' }}>
+            {/* Text content */}
+            <div>
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                Your Provider
+              </span>
+              <h2
+                id="provider-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
+              >
                 Susan George, DNP, APRN, BC-ADM, Online Practitioner
-              </strong>{' '}
-              — a Doctor of Nursing Practice who is Board Certified in Advanced
-              Diabetes Management. That certification means real expertise in
-              the metabolic science behind weight gain and weight loss — insulin
-              resistance, hormonal factors, and medication management — not just
-              writing scripts.
-            </p>
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
 
-            {/* Quote */}
-            <blockquote
-              className="rounded-2xl p-8 text-left"
-              style={{
-                background: 'rgba(255,255,255,0.08)',
-                border: '1px solid rgba(255,255,255,0.12)',
-              }}
-            >
-              <p
-                className="text-lg md:text-xl italic leading-relaxed mb-4"
-                style={{ color: 'rgba(255,255,255,0.95)' }}
-              >
-                &ldquo;Weight loss is a medical issue, not a willpower issue.
-                Every patient deserves a plan built around their actual health
-                — not a one-size-fits-all prescription.&rdquo;
+              <p className="text-base text-gray-600 leading-relaxed mb-8">
+                Your weight-loss care is led by Susan George, a Doctor of
+                Nursing Practice and Advanced Practice Registered Nurse who is
+                Board Certified in Advanced Diabetes Management (BC-ADM). That
+                certification means real metabolic expertise — insulin
+                resistance, hormonal factors, and medication management — not
+                just writing scripts. She delivers evidence-based, personalized
+                care to patients across Oklahoma with integrity and compassion.
               </p>
-              <footer
-                className="text-sm font-semibold"
-                style={{ color: '#97CECC' }}
+
+              {/* Quote */}
+              <blockquote
+                className="relative rounded-2xl p-6"
+                style={{
+                  background:
+                    'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.15) 100%)',
+                  border: '1px solid rgba(26,166,183,0.15)',
+                }}
               >
-                — Susan George, DNP, APRN, BC-ADM, Online Practitioner
-              </footer>
-            </blockquote>
+                <span
+                  className="absolute top-4 left-5 text-5xl font-serif leading-none select-none"
+                  style={{ color: 'rgba(26,166,183,0.20)' }}
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </span>
+                <p
+                  className="relative text-base md:text-lg italic leading-relaxed pl-6"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  Weight loss is a medical issue, not a willpower issue. Every
+                  patient deserves a plan built around their actual health —
+                  not a one-size-fits-all prescription.
+                </p>
+                <footer className="mt-3 pl-6">
+                  <cite
+                    className="text-sm font-semibold not-italic"
+                    style={{ color: 'var(--primary)' }}
+                  >
+                    — Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                  </cite>
+                </footer>
+              </blockquote>
+            </div>
+
+            {/* Doctor photo */}
+            <div className="flex justify-center lg:justify-end">
+              <div
+                className="relative w-full max-w-sm lg:max-w-none overflow-hidden rounded-2xl"
+                style={{
+                  border: '1px solid rgba(26,166,183,0.12)',
+                  boxShadow: '0 8px 40px rgba(26,166,183,0.12)',
+                }}
+              >
+                <Image
+                  src="/dr-susan-george-oklahoma-telehealth.webp"
+                  alt="Susan George, DNP, APRN — Medical Weight Loss Online Practitioner at Ebenezer Telehealth, Oklahoma"
+                  width={520}
+                  height={620}
+                  className="w-full h-auto object-cover"
+                  priority={false}
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -984,10 +1020,23 @@ export default function WeightLossPage() {
 
       {/* ── SERVING ALL OF OKLAHOMA ──────────────────────────────── */}
       <section
-        style={{ backgroundColor: 'var(--cream)' }}
+        className="relative overflow-hidden"
+        style={{ backgroundColor: '#ffffff' }}
         aria-labelledby="serving-heading"
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        {/* Background image — pinned to the far right */}
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            backgroundImage: "url('/weight_loss_bg.webp')",
+            backgroundSize: 'auto 100%',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.18,
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
             <div>

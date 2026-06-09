@@ -18,11 +18,7 @@ const contactPageSchema = {
   mainEntity: { '@id': 'https://ebenezertelehealth.com/#organization' },
 }
 
-// TODO: Replace with your OptiMantra booking URL once available.
-// When updated to an external URL, restore target="_blank" rel="noopener noreferrer"
-// on the booking <a> elements below.
-// e.g. 'https://app.optimantra.com/patient_portal/open_scheduling/...'
-const BOOKING_URL = '#book'
+const BOOKING_URL = 'https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09'
 
 const PHONE     = '(405) 349-8188'
 const PHONE_HREF = 'tel:+14053498188'
@@ -137,6 +133,8 @@ export default function ContactPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary inline-flex items-center justify-center gap-2.5"
                   aria-label="Book your telehealth appointment online"
                 >
@@ -244,49 +242,14 @@ export default function ContactPage() {
                   {/* Primary CTA */}
                   <a
                     href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-primary inline-flex items-center gap-2.5"
                     aria-label="Book your telehealth appointment online"
                   >
                     <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                     Book Online Now
                   </a>
-
-                  {/*
-                   * ─────────────────────────────────────────────────────
-                   * TODO: Replace this placeholder with the OptiMantra
-                   * embedded scheduling widget:
-                   *
-                   * <iframe
-                   *   src="https://app.optimantra.com/patient_portal/..."
-                   *   width="100%"
-                   *   height="700"
-                   *   frameBorder="0"
-                   *   title="Book a telehealth appointment"
-                   *   className="w-full rounded-xl mt-6"
-                   * />
-                   * ─────────────────────────────────────────────────────
-                   */}
-                  <div
-                    className="mt-6 rounded-xl flex flex-col items-center justify-center py-16 gap-3 text-center"
-                    style={{
-                      backgroundColor: 'rgba(151,206,204,0.10)',
-                      border: '2px dashed rgba(26,166,183,0.20)',
-                    }}
-                    aria-hidden="true"
-                  >
-                    <CalendarDays
-                      className="h-10 w-10"
-                      style={{ color: 'var(--primary)', opacity: 0.35 }}
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-500">
-                        OptiMantra scheduling widget
-                      </p>
-                      <p className="text-xs text-gray-400 mt-1 max-w-xs mx-auto">
-                        Replace this placeholder with your embedded booking widget
-                      </p>
-                    </div>
-                  </div>
 
                   <p className="text-sm text-gray-500 mt-5 text-center">
                     Prefer to call?{' '}
