@@ -38,11 +38,11 @@ export default function HeroSection() {
         >
           <source src="/ez_bg_video.mp4" type="video/mp4" />
         </video>
-        {/* Teal overlay — same color theme, light enough to show video, dark enough for text */}
+        {/* Dark overlay — keeps video clearly visible while maintaining text contrast */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, rgba(26,166,183,0.72) 0%, rgba(26,166,183,0.55) 100%)',
+            background: 'linear-gradient(135deg, rgba(11,61,71,0.58) 0%, rgba(11,61,71,0.35) 100%)',
           }}
         />
       </div>
