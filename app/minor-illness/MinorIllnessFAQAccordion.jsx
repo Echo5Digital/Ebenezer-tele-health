@@ -18,7 +18,7 @@ const faqs = [
     id: 'mi-faq-1',
     question: 'Can I really be treated for a sinus infection online?',
     answer:
-      "Yes. Most minor illnesses can be evaluated and treated by video. If Susan George determines you need in-person care or testing, she'll guide you to the right facility.",
+      "Yes. Most minor illnesses can be evaluated and treated by video. If Dr. George determines you need in-person care or testing, she'll guide you to the right facility.",
   },
   {
     id: 'mi-faq-2',
@@ -47,7 +47,7 @@ const faqs = [
     id: 'mi-faq-6',
     question: 'What if my condition is more serious?',
     answer:
-      "If your symptoms require urgent or emergency care beyond telehealth, Susan George will tell you clearly and help you find the right next step.",
+      "If your symptoms require urgent or emergency care beyond telehealth, Dr. George will tell you clearly and help you find the right next step.",
   },
 ]
 

@@ -23,7 +23,7 @@ const conditions = [
 ]
 
 const pricingFeatures = [
-  'Same-day video visit with Susan George, DNP, APRN',
+  'Same-day video visit with Dr. Susan George',
   'Thorough evaluation, diagnosis & treatment recommendations',
   'Electronic prescriptions sent to your preferred pharmacy',
   'No insurance needed — cash-pay transparency',
@@ -44,9 +44,9 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Susan George by Video',
+    title: 'Meet Dr. George by Video',
     description:
-      'Connect securely with Susan George, DNP, APRN, for evaluation and diagnosis.',
+      'Connect securely with Dr. George, DNP, APRN, for evaluation and diagnosis.',
   },
   {
     number: '04',
@@ -284,7 +284,7 @@ export default function MinorIllnessPage() {
                 Ebenezer Telehealth provides same-day online treatment for minor
                 illnesses to patients across Oklahoma. Common conditions include
                 sinus infections, cold and flu, UTIs, allergies, pink eye, rashes,
-                and stomach issues. Visits are $50 cash-pay with Susan George,
+                and stomach issues. Visits are $50 cash-pay with Dr. George,
                 DNP, APRN, and prescriptions are sent to your preferred pharmacy.
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function MinorIllnessPage() {
             <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
               We provide thorough evaluation and treatment for a wide range of
               minor illnesses through convenient telemedicine visits. During
-              your appointment, Susan George carefully assesses your condition by
+              your appointment, Dr. George carefully assesses your condition by
               reviewing your symptoms, medical history, and any relevant
               details — allowing for informed clinical decisions while keeping
               care accessible and efficient.
@@ -384,7 +384,7 @@ export default function MinorIllnessPage() {
                   in-person evaluation — is necessary, we&apos;ll guide you to
                   the appropriate facility and review results promptly. If your
                   condition requires urgent or emergency care beyond telehealth,
-                  Susan George will advise you clearly on the next steps.
+                  Dr. George will advise you clearly on the next steps.
                 </p>
               </div>
 
@@ -586,7 +586,7 @@ export default function MinorIllnessPage() {
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
               Getting evaluated and treated online is simple. Book your visit,
-              describe your symptoms, and meet Susan George by secure video —
+              describe your symptoms, and meet Dr. George by secure video —
               often the same day. Prescriptions are sent directly to your
               preferred Oklahoma pharmacy.
             </p>
@@ -694,7 +694,7 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Why See an Online Practitioner for a Minor Illness?
+              Why See an Online Doctor for a Minor Illness?
             </h2>
 
             {/* Decorative accent line */}
@@ -913,7 +913,7 @@ export default function MinorIllnessPage() {
                 <p className="text-sm leading-relaxed text-gray-600">
                   A medically supervised program built around your metabolic
                   health — including GLP-1 medication management — overseen by
-                  Susan George, BC-ADM certified.
+                  Dr. George, BC-ADM certified.
                 </p>
               </div>
               <Link

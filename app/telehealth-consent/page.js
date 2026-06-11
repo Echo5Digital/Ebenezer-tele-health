@@ -314,7 +314,7 @@ export default function TelehealthConsentPage() {
                   className="font-semibold text-gray-900"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Susan George, DNP, APRN, BC-ADM
+                  Dr. Susan George, DNP, APRN, BC-ADM
                 </p>
                 <ul className="mt-2 space-y-1 text-sm text-gray-600">
                   <li>Doctor of Nursing Practice (DNP)</li>

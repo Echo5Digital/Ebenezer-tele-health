@@ -46,7 +46,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Susan George by Video',
+    title: 'Meet Dr. George by Video',
     description: 'Secure video evaluation — no commute required.',
   },
   {
@@ -213,7 +213,7 @@ export default function WeightLossOKCPage() {
                 care to patients in Oklahoma City, OK through secure telehealth
                 visits. Our program includes personalized plans, semaglutide
                 and GLP-1 medication management, and ongoing support — led by
-                Susan George, DNP, APRN, BC-ADM. Initial consultations
+                Dr. Susan George, DNP, APRN, BC-ADM. Initial consultations
                 start at $250.
               </p>
             </div>
@@ -221,7 +221,7 @@ export default function WeightLossOKCPage() {
             <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
               Looking for a weight loss clinic in Oklahoma City? Ebenezer
               Telehealth brings medical weight loss care directly to you — no
-              drive, no waiting room. Susan George, a Board Certified
+              drive, no waiting room. Dr. Susan George, a Board Certified
               provider specializing in metabolic health, evaluates your goals
               and health profile by secure video, builds a personalized plan,
               and manages your medication (including semaglutide and other GLP-1

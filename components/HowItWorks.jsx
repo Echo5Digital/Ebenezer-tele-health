@@ -26,7 +26,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet with Susan George',
+    title: 'Meet with Dr. George',
     description:
       'Connect by secure video from anywhere in Oklahoma.',
   },
@@ -85,7 +85,7 @@ export default function HowItWorks() {
             >
               call (405) 349-8188
             </a>
-            , complete a short health intake, then meet Susan George, DNP, APRN, by
+            , complete a short health intake, then meet Dr. Susan George by
             secure video from anywhere in Oklahoma. The visit is a real medical
             consultation. You receive a diagnosis, treatment plan, and
             prescriptions sent electronically to your pharmacy when appropriate.

@@ -4,7 +4,7 @@ const valueCards = [
   {
     icon: UserCheck,
     title: 'Real, credentialed provider.',
-    body: 'Every visit is with Susan George, DNP, APRN, not a faceless network.',
+    body: 'Every visit is with Dr. Susan George, DNP, APRN, not a faceless network.',
   },
   {
     icon: Receipt,

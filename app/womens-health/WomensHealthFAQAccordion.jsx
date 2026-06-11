@@ -18,7 +18,7 @@ const faqs = [
     id: 'wh-faq-1',
     question: 'Can I get birth control online in Oklahoma?',
     answer:
-      'Yes. We provide contraceptive counseling and prescriptions by secure video, sent to your pharmacy. Susan George can review your health history, discuss all hormonal and non-hormonal options, and send a prescription electronically to any pharmacy in Oklahoma — no in-person visit required.',
+      'Yes. We provide contraceptive counseling and prescriptions by secure video, sent to your pharmacy. Dr. George can review your health history, discuss all hormonal and non-hormonal options, and send a prescription electronically to any pharmacy in Oklahoma — no in-person visit required.',
   },
   {
     id: 'wh-faq-2',
@@ -42,13 +42,13 @@ const faqs = [
     id: 'wh-faq-5',
     question: 'Can you send prescriptions to my pharmacy?',
     answer:
-      'Yes, electronically to any pharmacy in Oklahoma when appropriate. After your visit, Susan George will send any prescriptions directly to your preferred pharmacy so you can pick them up without any extra steps.',
+      'Yes, electronically to any pharmacy in Oklahoma when appropriate. After your visit, Dr. George will send any prescriptions directly to your preferred pharmacy so you can pick them up without any extra steps.',
   },
   {
     id: 'wh-faq-6',
     question: "Are women's health visits private?",
     answer:
-      'Yes — all visits are HIPAA-compliant and confidential. Every visit is conducted via an encrypted, secure video platform. You speak only with Susan George — no rotating staff, no third-party networks. Your health information is never shared without your explicit consent.',
+      'Yes — all visits are HIPAA-compliant and confidential. Every visit is conducted via an encrypted, secure video platform. You speak only with Dr. George — no rotating staff, no third-party networks. Your health information is never shared without your explicit consent.',
   },
 ]
 

@@ -116,8 +116,8 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Susan George by Video',
-    description: 'Meet Susan George by secure video from anywhere in Oklahoma.',
+    title: 'Meet Dr. George by Video',
+    description: 'Meet Dr. George by secure video from anywhere in Oklahoma.',
   },
   {
     number: '04',
@@ -144,7 +144,7 @@ const pricingFollowupFeatures = [
 const whyPoints = [
   {
     title: "A provider who specializes in women's health",
-    description: 'Every visit is with Susan George — not a generalist.',
+    description: 'Every visit is with Dr. George — not a generalist.',
   },
   {
     title: 'Care from anywhere in Oklahoma',
@@ -303,7 +303,7 @@ export default function WomensHealthPage() {
               Ebenezer Telehealth provides online women&apos;s health care to
               women across Oklahoma — including birth control, PCOS, menopause,
               and hormonal management — through secure video visits with
-              Susan George, DNP, APRN, who specializes in women&apos;s health.
+              Dr. Susan George, DNP, APRN, who specializes in women&apos;s health.
               Cash-pay visits start at $150.
             </p>
           </div>
@@ -621,7 +621,7 @@ export default function WomensHealthPage() {
               </div>
 
               <p className="text-base text-gray-600 leading-relaxed">
-                Because Susan George is also Board Certified in Advanced Diabetes
+                Because Dr. George is also Board Certified in Advanced Diabetes
                 Management (BC-ADM), you get genuine metabolic expertise — not
                 a one-size-fits-all script. We build a sustainable,
                 individualized plan for both short-term relief and long-term
@@ -890,7 +890,7 @@ export default function WomensHealthPage() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Meet Susan George, DNP, APRN, Online Practitioner
+                Meet Dr. Susan George, DNP, APRN
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
@@ -908,7 +908,7 @@ export default function WomensHealthPage() {
               </div>
 
               <p className="text-base text-gray-600 leading-relaxed mb-8">
-                Your women&apos;s health care is led by Susan George, a
+                Your women&apos;s health care is led by Dr. Susan George, a
                 Doctor of Nursing Practice and Advanced Practice Registered
                 Nurse who specializes in women&apos;s health and is Board
                 Certified in Advanced Diabetes Management (BC-ADM). She
@@ -945,7 +945,7 @@ export default function WomensHealthPage() {
                     className="text-sm font-semibold not-italic"
                     style={{ color: 'var(--primary)' }}
                   >
-                    — Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                    — Dr. Susan George, DNP, APRN, BC-ADM
                   </cite>
                 </footer>
               </blockquote>
@@ -962,7 +962,7 @@ export default function WomensHealthPage() {
               >
                 <Image
                   src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Susan George, DNP, APRN — Women's Health Online Practitioner at Ebenezer Telehealth, Oklahoma"
+                  alt="Dr. Susan George, DNP, APRN — Women's Health Doctor at Ebenezer Telehealth, Oklahoma"
                   width={520}
                   height={620}
                   className="w-full h-auto object-cover"

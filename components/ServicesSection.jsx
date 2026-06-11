@@ -7,7 +7,7 @@ const services = [
     title: 'Medical Weight Loss Clinic Online',
     slug: 'weight-loss',
     description:
-      'A medically supervised weight-loss program built around your metabolic health, including GLP-1 medication management, overseen by Susan George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
+      'A medically supervised weight-loss program built around your metabolic health, including GLP-1 medication management, overseen by Dr. George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
   },
   {
     icon: HeartHandshake,

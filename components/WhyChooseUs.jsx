@@ -1,7 +1,7 @@
 import { CheckCircle2 } from 'lucide-react'
 
 const bullets = [
-  'You see a real, named provider every time: Susan George, DNP, APRN, BC-ADM, Online Practitioner.',
+  'You see a real, named provider every time: Dr. Susan George, DNP, APRN, BC-ADM.',
   'Transparent cash pricing so you can make a confident decision before you book.',
   'Convenient and private: secure, HIPAA-compliant visits from wherever you are in Oklahoma.',
   'Medically guided weight loss with a provider Board Certified in Advanced Diabetes Management.',

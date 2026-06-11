@@ -4,7 +4,7 @@ import { ShieldCheck, DollarSign, MapPin, Clock } from 'lucide-react'
 const trustItems = [
   {
     icon: ShieldCheck,
-    text: 'Led by Susan George, DNP, APRN, Online Practitioner',
+    text: 'Led by Dr. Susan George, DNP, APRN',
   },
   {
     icon: DollarSign,
@@ -72,7 +72,7 @@ export default function HeroSection() {
             style={{ color: '#ffffff' }}
           >
             Affordable{' '}
-            <span style={{ color: '#97CECC' }}>Online Practitioner Visits</span>
+            <span style={{ color: '#97CECC' }}>Online Doctor Visits</span>
             <br className="hidden sm:block" /> in Oklahoma
           </h1>
 

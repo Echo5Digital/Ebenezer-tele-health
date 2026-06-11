@@ -27,7 +27,7 @@ export default function ProviderSection() {
             className="text-3xl md:text-4xl font-bold"
             style={{ color: 'var(--navy)' }}
           >
-            Meet Susan George, DNP, APRN, Online Practitioner
+            Meet Dr. Susan George, DNP, APRN
           </h2>
         </div>
 
@@ -37,14 +37,14 @@ export default function ProviderSection() {
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Your care at Ebenezer Telehealth is led by Susan George, a
+                Your care at Ebenezer Telehealth is led by Dr. Susan George, a
                 Doctor of Nursing Practice and Advanced Practice Registered Nurse
                 who specializes in women&apos;s health and is Board Certified in
                 Advanced Diabetes Management (BC-ADM).
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
                 With a deep commitment to compassionate, faith-driven medicine,
-                Susan George provides accessible, affordable care to women and
+                Dr. George provides accessible, affordable care to women and
                 families across Oklahoma.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function ProviderSection() {
                 from home.&rdquo;
               </blockquote>
               <figcaption className="mt-3 text-sm font-semibold" style={{ color: 'var(--navy)' }}>
-                Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                Dr. Susan George, DNP, APRN, BC-ADM
               </figcaption>
             </figure>
 
@@ -137,7 +137,7 @@ export default function ProviderSection() {
             <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
               <Image
                 src="/dr-susan-george-oklahoma-telehealth.webp"
-                alt="Susan George, DNP, APRN, online practitioner at Ebenezer"
+                alt="Dr. Susan George, DNP, APRN, online doctor at Ebenezer"
                 fill
                 className="object-cover object-center"
                 priority

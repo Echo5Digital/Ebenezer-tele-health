@@ -60,7 +60,7 @@ export default function Footer() {
 
             <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
               Faith-driven, compassionate telehealth for women and families across Oklahoma.
-              Led by Susan George, DNP, APRN, BC-ADM, Online Practitioner.
+              Led by Dr. Susan George, DNP, APRN, BC-ADM.
             </p>
           </div>
 

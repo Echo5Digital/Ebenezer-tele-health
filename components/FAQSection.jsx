@@ -19,7 +19,7 @@ const faqs = [
     id: 'faq-1',
     question: 'Is an online visit with Ebenezer a real medical appointment?',
     answer:
-      'Yes. You meet directly with Susan George, DNP, APRN, for a private, secure consultation, and receive a real diagnosis, treatment plan, and prescriptions when appropriate.',
+      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private, secure consultation, and receive a real diagnosis, treatment plan, and prescriptions when appropriate.',
     extra: null,
   },
   {

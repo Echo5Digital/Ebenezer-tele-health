@@ -58,7 +58,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Meet Susan George by Video',
+    title: 'Meet Dr. George by Video',
     description: 'Secure video visit for a comprehensive metabolic evaluation.',
   },
   {
@@ -255,7 +255,7 @@ export default function WeightLossPage() {
             <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
               A medically supervised, evidence-based weight-loss program —
               including GLP-1 medication management — delivered by secure video
-              from anywhere in Oklahoma. Overseen by Susan George, DNP,
+              from anywhere in Oklahoma. Overseen by Dr. Susan George, DNP,
               APRN, BC-ADM, who is Board Certified in Advanced Diabetes
               Management.
             </p>
@@ -323,7 +323,7 @@ export default function WeightLossPage() {
               offer medically supervised weight-loss programs — including
               semaglutide and other GLP-1 medications — with personalized care
               plans, responsible medication management, and ongoing support, led
-              by Susan George, DNP, APRN, BC-ADM. Initial consultations
+              by Dr. Susan George, DNP, APRN, BC-ADM. Initial consultations
               start at $250.
             </p>
           </div>
@@ -370,13 +370,13 @@ export default function WeightLossPage() {
                 Medical weight loss is a clinically guided approach to losing
                 weight under the supervision of a licensed healthcare provider —
                 not a quick fix, a fad diet, or a med-spa gimmick. At Ebenezer
-                Telehealth, Susan George evaluates your metabolic health, medical
+                Telehealth, Dr. George evaluates your metabolic health, medical
                 history, and goals, then builds a personalized plan that may
                 include GLP-1 medications (such as semaglutide), lifestyle
                 guidance, and ongoing monitoring.
               </p>
               <p className="text-base text-gray-600 leading-relaxed">
-                Because Susan George is Board Certified in Advanced Diabetes
+                Because Dr. George is Board Certified in Advanced Diabetes
                 Management, you get genuine metabolic expertise — the clinical
                 knowledge to manage insulin resistance, metabolic syndrome, and
                 the hormonal factors that make weight loss harder than willpower
@@ -415,7 +415,7 @@ export default function WeightLossPage() {
                 behind weight gain — insulin resistance, hormonal factors, and
                 medication management. Commercially marketed programs
                 don&apos;t account for your individual health history,
-                metabolism, or medications. Susan George does.
+                metabolism, or medications. Dr. George does.
               </p>
               <Link href="/contact" className="btn-primary text-sm">
                 Book a Consultation
@@ -646,14 +646,14 @@ export default function WeightLossPage() {
                 significant results in clinical trials, but they&apos;re not
                 for everyone — and they&apos;re most effective when combined
                 with a supervised clinical plan, not prescribed in isolation.
-                Susan George evaluates whether GLP-1 therapy is right for you
+                Dr. George evaluates whether GLP-1 therapy is right for you
                 based on your health profile, not a one-size-fits-all
                 questionnaire.
               </p>
               <p className="text-base text-gray-600 leading-relaxed">
                 We use pharmaceutical-grade semaglutide, with medications
                 shipped directly to you. Your dosing is managed and titrated by
-                Susan George through regular follow-up visits.
+                Dr. George through regular follow-up visits.
               </p>
             </div>
 
@@ -838,7 +838,7 @@ export default function WeightLossPage() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                Dr. Susan George, DNP, APRN, BC-ADM
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
@@ -856,7 +856,7 @@ export default function WeightLossPage() {
               </div>
 
               <p className="text-base text-gray-600 leading-relaxed mb-8">
-                Your weight-loss care is led by Susan George, a Doctor of
+                Your weight-loss care is led by Dr. Susan George, a Doctor of
                 Nursing Practice and Advanced Practice Registered Nurse who is
                 Board Certified in Advanced Diabetes Management (BC-ADM). That
                 certification means real metabolic expertise — insulin
@@ -894,7 +894,7 @@ export default function WeightLossPage() {
                     className="text-sm font-semibold not-italic"
                     style={{ color: 'var(--primary)' }}
                   >
-                    — Susan George, DNP, APRN, BC-ADM, Online Practitioner
+                    — Dr. Susan George, DNP, APRN, BC-ADM
                   </cite>
                 </footer>
               </blockquote>
@@ -911,7 +911,7 @@ export default function WeightLossPage() {
               >
                 <Image
                   src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Susan George, DNP, APRN — Medical Weight Loss Online Practitioner at Ebenezer Telehealth, Oklahoma"
+                  alt="Dr. Susan George, DNP, APRN — Medical Weight Loss Doctor at Ebenezer Telehealth, Oklahoma"
                   width={520}
                   height={620}
                   className="w-full h-auto object-cover"
