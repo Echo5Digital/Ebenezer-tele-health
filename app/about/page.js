@@ -179,9 +179,9 @@ export default function AboutPage() {
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
             Ebenezer Telehealth exists to deliver accessible, compassionate, and
-            quality healthcare to women and families across Oklahoma &mdash; anytime,
-            anywhere. We believe every patient deserves care delivered with integrity,
-            dignity, and a personal touch that reflects our heart of faith.
+            quality healthcare to women and families across Oklahoma. We believe every
+            patient deserves care delivered with integrity, dignity, and a personal
+            touch that reflects our heart of faith.
           </p>
 
           {/* Answer-first AEO/GEO paragraph */}

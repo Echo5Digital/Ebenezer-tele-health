@@ -77,7 +77,7 @@ const conditions = [
 ]
 
 const birthControlServices = [
-  'Pills, patches, rings, injections, IUDs, and implants',
+  'Pills, patches, and rings',
   'Emergency contraception counseling',
   'Ongoing prescription management and follow-up',
 ]
@@ -393,8 +393,18 @@ export default function WomensHealthPage() {
       </section>
 
       {/* ── WHAT WE TREAT ────────────────────────────────────────── */}
-      <section className="bg-white" aria-labelledby="conditions-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <section className="relative overflow-hidden bg-white" aria-labelledby="conditions-heading">
+        {/* Background image */}
+        <Image
+          src="/womens-health-02.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center pointer-events-none"
+          style={{ opacity: 1 }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="mb-10 md:mb-14">
             <h2
               id="conditions-heading"

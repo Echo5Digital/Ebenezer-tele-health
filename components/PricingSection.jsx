@@ -12,6 +12,7 @@ const plans = [
       "Women's health specialty care",
       'Prescriptions sent to pharmacy',
       'Private & HIPAA-compliant',
+      'The cost includes required lab work.',
     ],
     featured: false,
   },
@@ -23,6 +24,8 @@ const plans = [
     features: [
       'Video visit with Dr. Susan George',
       'Personalized metabolic health plan',
+      'The cost includes the medication and lab work',
+      'GLP-1 shipped directly to your home',
       'Ongoing management support',
       'Clinically supervised, not a quick-fix program',
     ],
