@@ -68,26 +68,6 @@ export default function ProviderSection() {
                     <span className="text-sm text-gray-700">{cred.label}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-2.5">
-                  <Award
-                    className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-300"
-                    aria-hidden="true"
-                  />
-                  {/* TODO: Add license number once confirmed */}
-                  <span className="text-sm text-gray-400">
-                    License Number: [placeholder, to be added]
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Award
-                    className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-300"
-                    aria-hidden="true"
-                  />
-                  {/* TODO: Add years practicing once confirmed */}
-                  <span className="text-sm text-gray-400">
-                    Years Practicing: [placeholder, to be added]
-                  </span>
-                </li>
               </ul>
               {/* Credentialing notice */}
               <p

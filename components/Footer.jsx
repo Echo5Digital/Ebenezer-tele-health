@@ -86,10 +86,6 @@ export default function Footer() {
                 <div>
                   <strong className="text-white font-semibold block mb-0.5">Ebenezer Telehealth</strong>
                   Oklahoma City, OK
-                  <br />
-                  <span className="text-xs" style={{ color: 'rgba(255,255,255,0.30)' }}>
-                    [Full address — coming soon]
-                  </span>
                 </div>
               </div>
 
@@ -184,10 +180,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li className="text-xs pt-2" style={{ color: 'rgba(255,255,255,0.25)' }}>
-                {/* TODO: Add license number once confirmed */}
-                License: [License # — placeholder]
-              </li>
             </ul>
           </div>
 

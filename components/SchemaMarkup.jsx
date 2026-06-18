@@ -2,32 +2,32 @@ const faqItems = [
   {
     question: 'Is an online visit with Ebenezer a real medical appointment?',
     answer:
-      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private, secure consultation — and receive a real diagnosis, treatment plan, and prescriptions when appropriate.',
+      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private telehealth consultation just like an in-person medical appointment.',
   },
   {
     question: 'Do I need insurance to see a doctor online at Ebenezer Telehealth?',
     answer:
-      "No. Ebenezer Telehealth is a transparent cash-pay practice, so you'll know your cost upfront with no surprise bills.",
+      'No. Ebenezer Telehealth is a transparent cash-pay practice, so insurance is not required.',
   },
   {
     question: 'Where in Oklahoma can I be seen by Ebenezer Telehealth?',
     answer:
-      "Anywhere in Oklahoma, as long as you're physically located in the state at the time of your visit.",
+      'Anywhere in Oklahoma, as long as you are physically located in the state during your telehealth appointment.',
   },
   {
-    question: 'What can I be treated for online?',
+    question: 'Do you prescribe weight-loss medications like semaglutide?',
     answer:
-      "Women's health, weight loss management, and many minor illnesses including sinus infections, colds, flu, and UTIs.",
+      'Yes, when medically appropriate. We evaluate patients for GLP-1 medications and other evidence-based weight-loss treatments.',
   },
   {
     question: 'Can I get a prescription?',
     answer:
-      'Yes, when medically appropriate — sent electronically to your preferred pharmacy.',
+      'Yes. Prescriptions are sent electronically to your preferred pharmacy when clinically appropriate.',
   },
   {
     question: 'How soon can I be seen?',
     answer:
-      'Same-day telehealth appointments in Oklahoma are often available. Book online or call (405) 349-8188.',
+      'Same-day appointments are often available. Contact us or book online to check current availability.',
   },
 ]
 
@@ -41,62 +41,35 @@ const schemaGraph = {
       name: 'Ebenezer Telehealth',
       alternateName: 'Ebenezer Clinic',
       description:
-        "Faith-driven, Oklahoma City-based telehealth practice offering affordable cash-pay online visits for women's health, weight loss management, and minor illnesses to patients across Oklahoma.",
+        "Faith-driven, Oklahoma City-based telehealth practice offering primary care, women's health, weight loss management, and treatment for minor illnesses throughout Oklahoma.",
       url: 'https://ebenezertelehealth.com',
       telephone: '+14053498188',
       priceRange: '$$',
-      // TODO: Replace with actual office/provider photo URL supplied by client
-      // image: 'https://ebenezertelehealth.com/[office-or-provider-photo].jpg',
-      // TODO: Replace with actual logo URL supplied by client
-      // logo: 'https://ebenezertelehealth.com/[logo].png',
+      image: 'https://ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
+      logo: 'https://ebenezertelehealth.com/images/ebenezer_logo.webp',
       // schema.org MedicalSpecialty enum values
       medicalSpecialty: ['PrimaryCare', 'Gynecologic'],
       address: {
         '@type': 'PostalAddress',
-        // TODO: Add street address once confirmed by client
-        // streetAddress: '[CLIENT TO PROVIDE]',
         addressLocality: 'Oklahoma City',
         addressRegion: 'OK',
-        // TODO: Add ZIP code once confirmed by client
-        // postalCode: '[CLIENT TO PROVIDE]',
         addressCountry: 'US',
       },
-      // TODO: Add GPS coordinates once confirmed by client
-      // geo: {
-      //   '@type': 'GeoCoordinates',
-      //   latitude: '[CLIENT TO PROVIDE]',
-      //   longitude: '[CLIENT TO PROVIDE]',
-      // },
       areaServed: {
         '@type': 'State',
         name: 'Oklahoma',
         sameAs: 'https://en.wikipedia.org/wiki/Oklahoma',
       },
-      // TODO: Add Google Business Profile / Maps URL once provided by client
-      // hasMap: '[CLIENT TO PROVIDE]',
-      // TODO: Uncomment and fill in hours once confirmed by client
-      // openingHoursSpecification: [
-      //   {
-      //     '@type': 'OpeningHoursSpecification',
-      //     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      //     opens: '[CLIENT TO PROVIDE e.g. 09:00]',
-      //     closes: '[CLIENT TO PROVIDE e.g. 17:00]',
-      //   },
-      // ],
       availableService: [
+        { '@type': 'MedicalProcedure', name: 'Medical Weight Loss Management' },
         { '@type': 'MedicalProcedure', name: "Women's Health Telehealth" },
-        { '@type': 'MedicalProcedure', name: 'Online Weight Loss Management' },
         { '@type': 'MedicalProcedure', name: 'Minor Illness Treatment' },
       ],
       makesOffer: [
-        {
-          '@type': 'Offer',
-          name: 'Telehealth Visit (Cash-Pay)',
-          priceCurrency: 'USD',
-          // TODO: Add visit price once confirmed by client
-          // price: '[CLIENT TO PROVIDE]',
-          availability: 'https://schema.org/InStock',
-        },
+        { '@type': 'Offer', name: 'Weight Loss Initial Consultation' },
+        { '@type': 'Offer', name: "Women's Health Initial Visit" },
+        { '@type': 'Offer', name: 'Minor Illness Visit' },
+        { '@type': 'Offer', name: 'Follow-Up Visit' },
       ],
       employee: {
         '@type': 'Person',
@@ -107,27 +80,22 @@ const schemaGraph = {
         hasCredential: [
           {
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'Doctor of Nursing Practice (DNP)',
+            credentialCategory: 'DNP',
           },
           {
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'Advanced Practice Registered Nurse (APRN)',
+            credentialCategory: 'APRN',
           },
           {
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'Board Certified in Advanced Diabetes Management (BC-ADM)',
+            credentialCategory: 'BC',
           },
         ],
-        knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management'],
+        knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
+        image: 'https://ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
       },
       paymentAccepted: 'Cash, Credit Card',
       currenciesAccepted: 'USD',
-      // TODO: Uncomment and add social/profile URLs once provided by client
-      // sameAs: [
-      //   '[CLIENT TO PROVIDE - Google Business Profile URL]',
-      //   '[CLIENT TO PROVIDE - Facebook URL]',
-      //   '[CLIENT TO PROVIDE - Instagram URL]',
-      // ],
     },
 
     // ── 2. WebSite ────────────────────────────────────────────────────────────
@@ -156,18 +124,19 @@ const schemaGraph = {
       hasCredential: [
         {
           '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'Doctor of Nursing Practice (DNP)',
+          credentialCategory: 'DNP',
         },
         {
           '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'Advanced Practice Registered Nurse (APRN)',
+          credentialCategory: 'APRN',
         },
         {
           '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'Board Certified in Advanced Diabetes Management (BC-ADM)',
+          credentialCategory: 'BC',
         },
       ],
-      knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management'],
+      knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
+      image: 'https://ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
       areaServed: { '@type': 'State', name: 'Oklahoma' },
     },
 
@@ -232,7 +201,6 @@ const schemaGraph = {
       about: { '@id': 'https://ebenezertelehealth.com/#organization' },
       speakable: {
         '@type': 'SpeakableSpecification',
-        // Matches .hero-answer-line (AnswerBlock) and .faq-answer (FAQSection)
         cssSelector: ['.hero-answer-line', '.faq-answer'],
       },
     },

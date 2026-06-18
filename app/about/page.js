@@ -277,25 +277,6 @@ export default function AboutPage() {
                       <span className="text-sm text-gray-700">{cred}</span>
                     </li>
                   ))}
-                  {/* Placeholders — fill in once confirmed */}
-                  <li className="flex items-start gap-2.5">
-                    <Award
-                      className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-300"
-                      aria-hidden="true"
-                    />
-                    <span className="text-sm text-gray-400">
-                      License Number: [to be added]
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Award
-                      className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-300"
-                      aria-hidden="true"
-                    />
-                    <span className="text-sm text-gray-400">
-                      Years Practicing: [to be added]
-                    </span>
-                  </li>
                 </ul>
               </div>
 

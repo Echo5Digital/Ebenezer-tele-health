@@ -357,9 +357,6 @@ export default function ContactPage() {
                     <p className="text-sm text-gray-700 leading-snug">
                       Oklahoma City, OK
                     </p>
-                    <p className="text-xs text-gray-400 mt-0.5">
-                      [Street address — coming soon]
-                    </p>
                   </InfoRow>
 
                   <InfoRow
