@@ -193,11 +193,7 @@ export default function Footer() {
             color: 'rgba(255,255,255,0.30)',
           }}
         >
-          <p>
-            &copy; {new Date().getFullYear()} Ebenezer Telehealth &middot; Oklahoma City, OK &middot;{' '}
-            (405) 349-8188
-          </p>
-          <p className="text-center">
+          <p className="text-center sm:text-left">
             &copy; 2026 Created with{' '}
             <a
               href="https://www.echo5digital.com/"
@@ -209,7 +205,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="text-center sm:text-right">
-            Telehealth services provided in Oklahoma only.
+            Telehealth services provided in Oklahoma only.{' '}
             Not a substitute for emergency care.
           </p>
         </div>
