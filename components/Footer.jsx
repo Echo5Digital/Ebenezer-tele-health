@@ -197,6 +197,17 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ebenezer Telehealth &middot; Oklahoma City, OK &middot;{' '}
             (405) 349-8188
           </p>
+          <p className="text-center">
+            &copy; 2026 Created with{' '}
+            <a
+              href="https://www.echo5digital.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-white"
+            >
+              Echo5 Digital
+            </a>
+          </p>
           <p className="text-center sm:text-right">
             Telehealth services provided in Oklahoma only.
             Not a substitute for emergency care.
