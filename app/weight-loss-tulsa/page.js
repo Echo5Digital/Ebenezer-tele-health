@@ -10,7 +10,7 @@ import {
 import WeightLossLocationFAQAccordion from '@/components/WeightLossLocationFAQAccordion'
 
 export const metadata = {
-  title: 'Weight Loss Clinic in Tulsa, OK | Ebenezer Telehealth',
+  title: 'Weight Loss Clinic in Tulsa, OK',
   description:
     'Medical weight loss in Tulsa, OK — semaglutide, GLP-1 meds & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250. Book online today.',
   alternates: {

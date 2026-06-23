@@ -72,7 +72,7 @@ export default function HeroSection() {
             style={{ color: '#ffffff' }}
           >
             Affordable{' '}
-            <span style={{ color: '#97CECC' }}>Online Doctor Visits</span>
+            <span style={{ color: '#97CECC' }}>Online Medical Care</span>
             <br className="hidden sm:block" /> in Oklahoma
           </h1>
 

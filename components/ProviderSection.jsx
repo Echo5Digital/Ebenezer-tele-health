@@ -117,7 +117,7 @@ export default function ProviderSection() {
             <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
               <Image
                 src="/dr-susan-george-oklahoma-telehealth.webp"
-                alt="Dr. Susan George, DNP, APRN, online doctor at Ebenezer"
+                alt="Dr. Susan George, DNP, APRN — provider at Ebenezer Telehealth in Oklahoma"
                 fill
                 className="object-cover object-center"
                 priority

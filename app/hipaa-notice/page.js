@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'HIPAA Notice of Privacy Practices | Ebenezer Telehealth',
+  title: 'HIPAA Notice of Privacy Practices',
   description:
     'HIPAA Notice of Privacy Practices for Ebenezer Telehealth. Learn how we use and disclose your protected health information (PHI) and your patient rights.',
   alternates: {

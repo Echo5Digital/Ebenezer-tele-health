@@ -14,7 +14,7 @@ import {
 import WeightLossFAQAccordion from './WeightLossFAQAccordion'
 
 export const metadata = {
-  title: 'Medical Weight Loss Clinic in Oklahoma | Ebenezer Telehealth',
+  title: 'Medical Weight Loss Clinic in Oklahoma',
   description:
     'Medically supervised weight loss in Oklahoma — semaglutide, GLP-1 medications & personalized plans. Led by a Board Certified provider. From $250. Book online.',
   alternates: {

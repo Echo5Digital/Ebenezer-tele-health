@@ -1,7 +1,7 @@
 ﻿import Link from 'next/link'
 
 export const metadata = {
-  title: 'Terms of Use | Ebenezer Telehealth',
+  title: 'Terms of Use',
   description:
     'Terms of Use for Ebenezer Telehealth. Review the scope of our Oklahoma-only telehealth services, user responsibilities, limitation of liability, and governing law.',
   alternates: {

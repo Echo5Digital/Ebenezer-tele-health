@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowLeft, Phone } from 'lucide-react'
 
 export const metadata = {
-  title: 'Page Not Found | Ebenezer Telehealth',
+  title: 'Page Not Found',
   description: 'The page you are looking for could not be found.',
 }
 

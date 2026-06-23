@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Telehealth Informed Consent | Ebenezer Telehealth',
+  title: 'Telehealth Informed Consent',
   description:
     'Telehealth Informed Consent for Ebenezer Telehealth. Understand the nature, benefits, limitations, and risks of telehealth services and your rights as a patient.',
   alternates: {

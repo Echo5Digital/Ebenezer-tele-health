@@ -1,7 +1,7 @@
 ﻿import Link from 'next/link'
 
 export const metadata = {
-  title: 'Privacy Policy | Ebenezer Telehealth',
+  title: 'Privacy Policy',
   description:
     'Privacy Policy for Ebenezer Telehealth. Learn how we collect, use, and protect your personal and health information.',
   alternates: {

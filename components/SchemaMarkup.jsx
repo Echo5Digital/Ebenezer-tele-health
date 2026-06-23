@@ -1,5 +1,10 @@
 const faqItems = [
   {
+    question: 'Is this like seeing a doctor?',
+    answer:
+      "Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions from a licensed provider — Dr. Susan George, DNP, APRN — the same standard of care you'd receive at an in-person clinic.",
+  },
+  {
     question: 'Is an online visit with Ebenezer a real medical appointment?',
     answer:
       'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private telehealth consultation just like an in-person medical appointment.',
@@ -88,7 +93,7 @@ const schemaGraph = {
           },
           {
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'BC',
+            credentialCategory: 'BC-ADM',
           },
         ],
         knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
@@ -105,7 +110,7 @@ const schemaGraph = {
       name: 'Ebenezer Telehealth',
       url: 'https://ebenezertelehealth.com',
       description:
-        "Affordable online doctor visits in Oklahoma City. Cash-pay telehealth for women's health, weight loss & minor illness. Led by Dr. Susan George, DNP, APRN, BC-ADM.",
+        "Affordable online medical care in Oklahoma City. Cash-pay telehealth for women's health, weight loss & minor illness. Led by Dr. Susan George, DNP, APRN, BC-ADM.",
       inLanguage: 'en-US',
       publisher: { '@id': 'https://ebenezertelehealth.com/#organization' },
     },
@@ -132,7 +137,7 @@ const schemaGraph = {
         },
         {
           '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'BC',
+          credentialCategory: 'BC-ADM',
         },
       ],
       knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
@@ -194,9 +199,9 @@ const schemaGraph = {
       '@type': 'WebPage',
       '@id': 'https://ebenezertelehealth.com/#webpage',
       url: 'https://ebenezertelehealth.com',
-      name: 'Online Doctor in Oklahoma City | Ebenezer Telehealth',
+      name: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
       description:
-        "See a trusted online doctor in Oklahoma City. Affordable cash-pay telehealth for women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
+        "Get trusted online medical care in Oklahoma City. Affordable cash-pay telehealth for women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
       isPartOf: { '@id': 'https://ebenezertelehealth.com/#website' },
       about: { '@id': 'https://ebenezertelehealth.com/#organization' },
       speakable: {

@@ -3,7 +3,7 @@ import { CheckCircle2, Info } from 'lucide-react'
 import PricingFAQAccordion from './PricingFAQAccordion'
 
 export const metadata = {
-  title: 'Telehealth Pricing | Ebenezer Telehealth — Oklahoma',
+  title: 'Telehealth Pricing — Oklahoma',
   description:
     "Transparent cash-pay telehealth pricing. Weight loss from $250, women's health from $150, minor illness $50. No insurance required. See full pricing.",
   alternates: {

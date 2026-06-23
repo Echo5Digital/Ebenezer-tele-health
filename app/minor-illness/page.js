@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight, Clock, Info, AlertCircle, HeartHandshake, Sca
 import MinorIllnessFAQAccordion from './MinorIllnessFAQAccordion'
 
 export const metadata = {
-  title: 'Online Minor Illness Treatment in Oklahoma | Ebenezer Telehealth',
+  title: 'Online Minor Illness Treatment in Oklahoma',
   description:
     'Same-day virtual care for minor illnesses across Oklahoma — sinus infections, cold & flu, UTIs, allergies & more. $50 per visit. Book online or call today.',
   alternates: {
@@ -694,7 +694,7 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Why See an Online Doctor for a Minor Illness?
+              Why Choose Online Medical Care for a Minor Illness?
             </h2>
 
             {/* Decorative accent line */}

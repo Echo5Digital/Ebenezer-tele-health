@@ -4,7 +4,7 @@ import { CheckCircle2, ShieldCheck, Info, Award } from 'lucide-react'
 import WomensHealthFAQAccordion from './WomensHealthFAQAccordion'
 
 export const metadata = {
-  title: "Women's Health Telehealth in Oklahoma | Ebenezer Telehealth",
+  title: "Women's Health Telehealth in Oklahoma",
   description:
     "Online women's health care across Oklahoma — birth control, PCOS, menopause & hormones. See Dr. Susan George, DNP, APRN. Cash-pay from $150. Book online.",
   alternates: {

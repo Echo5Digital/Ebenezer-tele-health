@@ -16,6 +16,13 @@ import {
 
 const faqs = [
   {
+    id: 'faq-0',
+    question: 'Is this like seeing a doctor?',
+    answer:
+      "Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions from a licensed provider — Dr. Susan George, DNP, APRN — the same standard of care you'd receive at an in-person clinic.",
+    extra: null,
+  },
+  {
     id: 'faq-1',
     question: 'Is an online visit with Ebenezer a real medical appointment?',
     answer:
