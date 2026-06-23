@@ -42,16 +42,16 @@ const schemaGraph = {
     // ── 1. MedicalBusiness (primary entity, also serves as Organization) ──────
     {
       '@type': 'MedicalBusiness',
-      '@id': 'https://ebenezertelehealth.com/#organization',
+      '@id': 'https://www.ebenezertelehealth.com/#organization',
       name: 'Ebenezer Telehealth',
       alternateName: 'Ebenezer Clinic',
       description:
         "Faith-driven, Oklahoma City-based telehealth practice offering primary care, women's health, weight loss management, and treatment for minor illnesses throughout Oklahoma.",
-      url: 'https://ebenezertelehealth.com',
+      url: 'https://www.ebenezertelehealth.com',
       telephone: '+14053498188',
       priceRange: '$$',
-      image: 'https://ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
-      logo: 'https://ebenezertelehealth.com/images/ebenezer_logo.webp',
+      image: 'https://www.ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
+      logo: 'https://www.ebenezertelehealth.com/images/ebenezer_logo.webp',
       // schema.org MedicalSpecialty enum values
       medicalSpecialty: ['PrimaryCare', 'Gynecologic'],
       address: {
@@ -78,7 +78,7 @@ const schemaGraph = {
       ],
       employee: {
         '@type': 'Person',
-        '@id': 'https://ebenezertelehealth.com/#dr-susan-george',
+        '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
         name: 'Dr. Susan George',
         honorificPrefix: 'Dr.',
         jobTitle: 'Doctor of Nursing Practice (DNP), APRN',
@@ -97,7 +97,7 @@ const schemaGraph = {
           },
         ],
         knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
-        image: 'https://ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
+        image: 'https://www.ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
       },
       paymentAccepted: 'Cash, Credit Card',
       currenciesAccepted: 'USD',
@@ -106,26 +106,26 @@ const schemaGraph = {
     // ── 2. WebSite ────────────────────────────────────────────────────────────
     {
       '@type': 'WebSite',
-      '@id': 'https://ebenezertelehealth.com/#website',
+      '@id': 'https://www.ebenezertelehealth.com/#website',
       name: 'Ebenezer Telehealth',
-      url: 'https://ebenezertelehealth.com',
+      url: 'https://www.ebenezertelehealth.com',
       description:
         "Affordable online medical care in Oklahoma City. Cash-pay telehealth for women's health, weight loss & minor illness. Led by Dr. Susan George, DNP, APRN, BC-ADM.",
       inLanguage: 'en-US',
-      publisher: { '@id': 'https://ebenezertelehealth.com/#organization' },
+      publisher: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
     },
 
     // ── 3. Person — Dr. Susan George ─────────────────────────────────────────
     {
       '@type': 'Person',
-      '@id': 'https://ebenezertelehealth.com/#dr-susan-george',
+      '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
       name: 'Susan George',
       honorificPrefix: 'Dr.',
       honorificSuffix: 'DNP, APRN, BC-ADM',
       jobTitle: 'Doctor of Nursing Practice, Advanced Practice Registered Nurse',
       description:
         "Dr. Susan George is a Doctor of Nursing Practice and Advanced Practice Registered Nurse specializing in women's health and Board Certified in Advanced Diabetes Management (BC-ADM). She provides accessible, affordable telehealth care to women and families across Oklahoma.",
-      worksFor: { '@id': 'https://ebenezertelehealth.com/#organization' },
+      worksFor: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       hasCredential: [
         {
           '@type': 'EducationalOccupationalCredential',
@@ -141,49 +141,49 @@ const schemaGraph = {
         },
       ],
       knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
-      image: 'https://ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
+      image: 'https://www.ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
       areaServed: { '@type': 'State', name: 'Oklahoma' },
     },
 
     // ── 4–6. Individual Service nodes (richer data for service pages) ─────────
     {
       '@type': 'Service',
-      '@id': 'https://ebenezertelehealth.com/#service-womens-health',
+      '@id': 'https://www.ebenezertelehealth.com/#service-womens-health',
       name: "Women's Health Telehealth",
       description:
         "Discreet, compassionate virtual care for women's health including birth control, UTIs, hormonal health, reproductive health, and postpartum support. Led by Dr. Susan George, DNP, APRN, who specializes in women's health.",
-      provider: { '@id': 'https://ebenezertelehealth.com/#organization' },
+      provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://ebenezertelehealth.com/womens-health',
+      url: 'https://www.ebenezertelehealth.com/womens-health',
       serviceType: "Women's Health",
     },
     {
       '@type': 'Service',
-      '@id': 'https://ebenezertelehealth.com/#service-weight-loss',
+      '@id': 'https://www.ebenezertelehealth.com/#service-weight-loss',
       name: 'Online Weight Loss Management',
       description:
         'Medically guided weight-loss management overseen by Dr. Susan George, DNP, APRN, BC-ADM. Clinical care focused on metabolic health for patients across Oklahoma.',
-      provider: { '@id': 'https://ebenezertelehealth.com/#organization' },
+      provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://ebenezertelehealth.com/weight-loss',
+      url: 'https://www.ebenezertelehealth.com/weight-loss',
       serviceType: 'Weight Loss Management',
     },
     {
       '@type': 'Service',
-      '@id': 'https://ebenezertelehealth.com/#service-minor-illness',
+      '@id': 'https://www.ebenezertelehealth.com/#service-minor-illness',
       name: 'Treatment for Minor Illnesses',
       description:
         'Online evaluation and treatment for common minor illnesses including sinus infections, colds, flu, and UTIs. Often available same-day.',
-      provider: { '@id': 'https://ebenezertelehealth.com/#organization' },
+      provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://ebenezertelehealth.com/minor-illness',
+      url: 'https://www.ebenezertelehealth.com/minor-illness',
       serviceType: 'Minor Illness Treatment',
     },
 
     // ── 7. FAQPage ────────────────────────────────────────────────────────────
     {
       '@type': 'FAQPage',
-      '@id': 'https://ebenezertelehealth.com/#faq',
+      '@id': 'https://www.ebenezertelehealth.com/#faq',
       mainEntity: faqItems.map((item) => ({
         '@type': 'Question',
         name: item.question,
@@ -197,13 +197,13 @@ const schemaGraph = {
     // ── 8. WebPage — speakable spec for voice/AEO ────────────────────────────
     {
       '@type': 'WebPage',
-      '@id': 'https://ebenezertelehealth.com/#webpage',
-      url: 'https://ebenezertelehealth.com',
+      '@id': 'https://www.ebenezertelehealth.com/#webpage',
+      url: 'https://www.ebenezertelehealth.com',
       name: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
       description:
         "Get trusted online medical care in Oklahoma City. Affordable cash-pay telehealth for women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
-      isPartOf: { '@id': 'https://ebenezertelehealth.com/#website' },
-      about: { '@id': 'https://ebenezertelehealth.com/#organization' },
+      isPartOf: { '@id': 'https://www.ebenezertelehealth.com/#website' },
+      about: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.hero-answer-line', '.faq-answer'],

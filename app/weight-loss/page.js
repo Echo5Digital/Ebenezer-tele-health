@@ -18,7 +18,7 @@ export const metadata = {
   description:
     'Medically supervised weight loss in Oklahoma — semaglutide, GLP-1 medications & personalized plans. Led by a Board Certified provider. From $250. Book online.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/weight-loss',
+    canonical: 'https://www.ebenezertelehealth.com/weight-loss',
   },
 }
 
@@ -90,8 +90,8 @@ const weightLossPageSchema = {
   name: 'Medical Weight Loss Clinic in Oklahoma',
   description:
     'Medically supervised weight loss in Oklahoma — semaglutide, GLP-1 medications & personalized plans. Led by a Board Certified provider. From $250.',
-  url: 'https://ebenezertelehealth.com/weight-loss',
-  mainEntityOfPage: 'https://ebenezertelehealth.com/weight-loss',
+  url: 'https://www.ebenezertelehealth.com/weight-loss',
+  mainEntityOfPage: 'https://www.ebenezertelehealth.com/weight-loss',
   specialty: 'Endocrinology',
   about: {
     '@type': 'MedicalProcedure',
@@ -100,7 +100,7 @@ const weightLossPageSchema = {
     description:
       'Medically supervised weight loss program including GLP-1/semaglutide medication management, personalized plans, and ongoing monitoring led by Dr. Susan George, DNP, APRN, BC-ADM.',
   },
-  provider: { '@id': 'https://ebenezertelehealth.com/#dr-susan-george' },
+  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
   areaServed: { '@type': 'State', name: 'Oklahoma' },
   offers: [
     {

@@ -6,6 +6,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://ebenezertelehealth.com/sitemap.xml',
+    sitemap: 'https://www.ebenezertelehealth.com/sitemap.xml',
   }
 }

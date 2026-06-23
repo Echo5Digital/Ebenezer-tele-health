@@ -8,7 +8,7 @@ export const metadata = {
   description:
     'Meet Susan George, DNP, APRN, BC-ADM — the provider behind Ebenezer Telehealth. Faith-driven, compassionate telehealth care for Oklahoma women and families.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/about',
+    canonical: 'https://www.ebenezertelehealth.com/about',
   },
 }
 
@@ -56,10 +56,10 @@ const aboutPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'About Ebenezer Telehealth',
-  url: 'https://ebenezertelehealth.com/about',
+  url: 'https://www.ebenezertelehealth.com/about',
   mainEntity: {
     '@type': 'Person',
-    '@id': 'https://ebenezertelehealth.com/#dr-susan-george',
+    '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
     name: 'Dr. Susan George',
     honorificPrefix: 'Dr.',
     jobTitle: 'Doctor of Nursing Practice (DNP), APRN',
@@ -86,9 +86,9 @@ const aboutPageSchema = {
       'Minor Illness Treatment',
       'Telehealth',
     ],
-    worksFor: { '@id': 'https://ebenezertelehealth.com/#organization' },
+    worksFor: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
     // TODO: Update image URL to final optimised asset path when confirmed
-    image: 'https://ebenezertelehealth.com/dr-susan-george-oklahoma-telehealth.webp',
+    image: 'https://www.ebenezertelehealth.com/dr-susan-george-oklahoma-telehealth.webp',
   },
 }
 

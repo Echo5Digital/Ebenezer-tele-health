@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'HIPAA Notice of Privacy Practices for Ebenezer Telehealth. Learn how we use and disclose your protected health information (PHI) and your patient rights.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/hipaa-notice',
+    canonical: 'https://www.ebenezertelehealth.com/hipaa-notice',
   },
   robots: { index: true, follow: true },
 }

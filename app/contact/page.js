@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Book an online visit with Ebenezer Telehealth or contact us. Serving all of Oklahoma. Call (405) 349-8188 or book online today.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/contact',
+    canonical: 'https://www.ebenezertelehealth.com/contact',
   },
   robots: { index: true, follow: true },
 }
@@ -14,8 +14,8 @@ const contactPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact Ebenezer Telehealth',
-  url: 'https://ebenezertelehealth.com/contact',
-  mainEntity: { '@id': 'https://ebenezertelehealth.com/#organization' },
+  url: 'https://www.ebenezertelehealth.com/contact',
+  mainEntity: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
 }
 
 const BOOKING_URL = 'https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09'

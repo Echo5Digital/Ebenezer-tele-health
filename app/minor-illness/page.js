@@ -7,7 +7,7 @@ export const metadata = {
   description:
     'Same-day virtual care for minor illnesses across Oklahoma — sinus infections, cold & flu, UTIs, allergies & more. $50 per visit. Book online or call today.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/minor-illness',
+    canonical: 'https://www.ebenezertelehealth.com/minor-illness',
   },
 }
 
@@ -71,7 +71,7 @@ const minorIllnessPageSchema = {
   name: 'Online Minor Illness Treatment in Oklahoma',
   description:
     'Same-day virtual care for minor illnesses across Oklahoma — sinus infections, cold & flu, UTIs, allergies & more. $50 per visit.',
-  url: 'https://ebenezertelehealth.com/minor-illness',
+  url: 'https://www.ebenezertelehealth.com/minor-illness',
   about: {
     '@type': 'MedicalProcedure',
     name: 'Minor Illness Treatment',
@@ -79,7 +79,7 @@ const minorIllnessPageSchema = {
     description:
       'Same-day telehealth evaluation and treatment for common minor illnesses including sinus infections, UTIs, cold and flu, allergies, pink eye, rashes, and stomach issues.',
   },
-  provider: { '@id': 'https://ebenezertelehealth.com/#dr-susan-george' },
+  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
   areaServed: { '@type': 'State', name: 'Oklahoma' },
   offers: [
     {

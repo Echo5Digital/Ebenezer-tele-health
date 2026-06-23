@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Terms of Use for Ebenezer Telehealth. Review the scope of our Oklahoma-only telehealth services, user responsibilities, limitation of liability, and governing law.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/terms',
+    canonical: 'https://www.ebenezertelehealth.com/terms',
   },
   robots: { index: true, follow: true },
 }
@@ -54,7 +54,7 @@ export default function TermsOfUsePage() {
                 These Terms of Use (&ldquo;Terms&rdquo;) govern your access to
                 and use of the Ebenezer Telehealth website at{' '}
                 <a
-                  href="https://ebenezertelehealth.com"
+                  href="https://www.ebenezertelehealth.com"
                   className="font-medium underline"
                   style={{ color: 'var(--primary)' }}
                 >

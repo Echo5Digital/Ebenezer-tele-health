@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Online women's health care across Oklahoma — birth control, PCOS, menopause & hormones. See Dr. Susan George, DNP, APRN. Cash-pay from $150. Book online.",
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/womens-health',
+    canonical: 'https://www.ebenezertelehealth.com/womens-health',
   },
 }
 

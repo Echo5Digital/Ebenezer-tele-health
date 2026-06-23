@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Transparent cash-pay telehealth pricing. Weight loss from $250, women's health from $150, minor illness $50. No insurance required. See full pricing.",
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/pricing',
+    canonical: 'https://www.ebenezertelehealth.com/pricing',
   },
   robots: { index: true, follow: true },
 }
@@ -90,7 +90,7 @@ const pricingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Telehealth Pricing — Ebenezer Telehealth',
-  url: 'https://ebenezertelehealth.com/pricing',
+  url: 'https://www.ebenezertelehealth.com/pricing',
   mainEntity: {
     '@type': 'ItemList',
     name: 'Ebenezer Telehealth Services and Pricing',

@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Medical weight loss in Owasso, OK — semaglutide, GLP-1 meds & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250. Book online today.',
   alternates: {
-    canonical: 'https://ebenezertelehealth.com/weight-loss-owasso',
+    canonical: 'https://www.ebenezertelehealth.com/weight-loss-owasso',
   },
 }
 
@@ -86,8 +86,8 @@ const pageSchema = {
   name: 'Weight Loss Clinic in Owasso, OK',
   description:
     'Medical weight loss in Owasso, OK — semaglutide, GLP-1 medications & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250.',
-  url: 'https://ebenezertelehealth.com/weight-loss-owasso',
-  provider: { '@id': 'https://ebenezertelehealth.com/#dr-susan-george' },
+  url: 'https://www.ebenezertelehealth.com/weight-loss-owasso',
+  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
   about: {
     '@type': 'MedicalProcedure',
     name: 'Medical Weight Loss in Owasso',
