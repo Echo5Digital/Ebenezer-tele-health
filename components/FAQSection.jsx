@@ -16,52 +16,45 @@ import {
 
 const faqs = [
   {
-    id: 'faq-0',
-    question: 'Is this like seeing a doctor?',
-    answer:
-      "Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions from a licensed provider — Dr. Susan George, DNP, APRN — the same standard of care you'd receive at an in-person clinic.",
-    extra: null,
-  },
-  {
     id: 'faq-1',
     question: 'Is an online visit with Ebenezer a real medical appointment?',
     answer:
-      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private, secure consultation, and receive a real diagnosis, treatment plan, and prescriptions when appropriate.',
+      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private telehealth consultation just like an in-person medical appointment.',
     extra: null,
   },
   {
     id: 'faq-2',
     question: 'Do I need insurance?',
     answer:
-      "No. We're a transparent cash-pay practice, so you know your cost upfront with no surprise bills.",
+      'No. Ebenezer Telehealth is a transparent cash-pay practice, so insurance is not required.',
     extra: null,
   },
   {
     id: 'faq-3',
     question: 'Where in Oklahoma can I be seen?',
     answer:
-      "Anywhere in the state, as long as you're physically in Oklahoma at the time of your visit.",
+      'Anywhere in Oklahoma, as long as you are physically located in the state during your telehealth appointment.',
     extra: null,
   },
   {
     id: 'faq-4',
     question: 'Do you prescribe weight-loss medications like semaglutide?',
     answer:
-      'Yes, when medically appropriate. We evaluate for GLP-1 medications and other options as part of our medical weight-loss program.',
+      'Yes, when medically appropriate. We evaluate patients for GLP-1 medications and other evidence-based weight-loss treatments.',
     extra: null,
   },
   {
     id: 'faq-5',
     question: 'Can I get a prescription?',
     answer:
-      'Yes, sent electronically to your preferred pharmacy.',
+      'Yes. Prescriptions are sent electronically to your preferred pharmacy when clinically appropriate.',
     extra: null,
   },
   {
     id: 'faq-6',
     question: 'How soon can I be seen?',
     answer:
-      'Same-day appointments are often available. Book online or call (405) 349-8188.',
+      'Same-day appointments are often available. Contact us or book online to check current availability.',
     extra: null,
   },
 ]
