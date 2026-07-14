@@ -1,38 +1,38 @@
 const faqItems = [
   {
+    question: 'Do you offer telehealth in Oklahoma City and statewide?',
+    answer:
+      'Yes. We provide telehealth visits across all of Oklahoma, plus in-person appointments in Oklahoma City on Saturdays by appointment.',
+  },
+  {
     question: 'Is this like seeing a doctor?',
     answer:
-      "Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions from a licensed provider — Dr. Susan George, DNP, APRN — the same standard of care you'd receive at an in-person clinic.",
+      'Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions when appropriate from a licensed, Board Certified provider.',
   },
   {
-    question: 'Is an online visit with Ebenezer a real medical appointment?',
+    question: 'Do I need insurance?',
     answer:
-      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private telehealth consultation just like an in-person medical appointment.',
+      "No. We're a cash-pay clinic with transparent pricing, so you know your cost before you book.",
   },
   {
-    question: 'Do I need insurance to see a doctor online at Ebenezer Telehealth?',
+    question: 'What areas do you serve?',
     answer:
-      'No. Ebenezer Telehealth is a transparent cash-pay practice, so insurance is not required.',
+      "In-person visits are in Oklahoma City; telehealth is available anywhere in Oklahoma as long as you're in the state at the time of your visit.",
   },
   {
-    question: 'Where in Oklahoma can I be seen by Ebenezer Telehealth?',
+    question: 'What do you treat?',
     answer:
-      'Anywhere in Oklahoma, as long as you are physically located in the state during your telehealth appointment.',
-  },
-  {
-    question: 'Do you prescribe weight-loss medications like semaglutide?',
-    answer:
-      'Yes, when medically appropriate. We evaluate patients for GLP-1 medications and other evidence-based weight-loss treatments.',
-  },
-  {
-    question: 'Can I get a prescription?',
-    answer:
-      'Yes. Prescriptions are sent electronically to your preferred pharmacy when clinically appropriate.',
+      "Medical weight loss, women's health, and minor illnesses. For anything outside our scope, we'll guide you to the right care.",
   },
   {
     question: 'How soon can I be seen?',
     answer:
-      'Same-day appointments are often available. Contact us or book online to check current availability.',
+      'Same-day telehealth visits are often available. Ask about in person Saturday appointments in Oklahoma City.',
+  },
+  {
+    question: 'What if I have a medical emergency?',
+    answer:
+      'Ebenezer Telehealth is not for emergencies. Call 911 or go to your nearest emergency room.',
   },
 ]
 
@@ -46,7 +46,7 @@ const schemaGraph = {
       name: 'Ebenezer Telehealth',
       alternateName: 'Ebenezer Clinic',
       description:
-        "Faith-driven, Oklahoma City-based telehealth practice offering primary care, women's health, weight loss management, and treatment for minor illnesses throughout Oklahoma.",
+        "Ebenezer Telehealth is a medical clinic in Oklahoma City offering telehealth across Oklahoma and in-person appointments on Saturdays. We provide online medical care for weight loss management, women's health, and minor illnesses — led by an experienced, Board Certified provider, with transparent cash-pay pricing and no insurance required.",
       url: 'https://www.ebenezertelehealth.com',
       telephone: '+14053498188',
       priceRange: '$$',
@@ -110,7 +110,7 @@ const schemaGraph = {
       name: 'Ebenezer Telehealth',
       url: 'https://www.ebenezertelehealth.com',
       description:
-        "Affordable online medical care in Oklahoma City. Cash-pay telehealth for women's health, weight loss & minor illness. Led by Dr. Susan George, DNP, APRN, BC-ADM.",
+        "Telehealth in Oklahoma City & online across Oklahoma — plus in-person visits by appointment. Weight loss, women's health & minor illness. Book or call (405) 349-8188.",
       inLanguage: 'en-US',
       publisher: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
     },
@@ -124,7 +124,7 @@ const schemaGraph = {
       honorificSuffix: 'DNP, APRN, BC-ADM',
       jobTitle: 'Doctor of Nursing Practice, Advanced Practice Registered Nurse',
       description:
-        "Dr. Susan George is a Doctor of Nursing Practice and Advanced Practice Registered Nurse specializing in women's health and Board Certified in Advanced Diabetes Management (BC-ADM). She provides accessible, affordable telehealth care to women and families across Oklahoma.",
+        "Dr. Susan George, DNP, APRN, BC-ADM is a Doctor of Nursing Practice who specializes in women's health and is Board Certified in Advanced Diabetes Management. She leads Ebenezer Telehealth, a cash-pay medical clinic in Oklahoma City offering in-person Saturday appointments and telehealth across Oklahoma.",
       worksFor: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       hasCredential: [
         {
@@ -149,9 +149,9 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': 'https://www.ebenezertelehealth.com/#service-womens-health',
-      name: "Women's Health Telehealth",
+      name: "Women's Health",
       description:
-        "Discreet, compassionate virtual care for women's health including birth control, UTIs, hormonal health, reproductive health, and postpartum support. Led by Dr. Susan George, DNP, APRN, who specializes in women's health.",
+        "Compassionate, private care for birth control, PCOS, menopause, and hormonal health, from a practice that specializes in women's health. See us in person in Oklahoma City on Saturdays or online anywhere in Oklahoma.",
       provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
       url: 'https://www.ebenezertelehealth.com/womens-health',
@@ -160,9 +160,9 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': 'https://www.ebenezertelehealth.com/#service-weight-loss',
-      name: 'Online Weight Loss Management',
+      name: 'Medical Weight Loss',
       description:
-        'Medically guided weight-loss management overseen by Dr. Susan George, DNP, APRN, BC-ADM. Clinical care focused on metabolic health for patients across Oklahoma.',
+        'A clinically guided weight-loss program built around your metabolic health — not a quick fix. When appropriate, your plan may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
       provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
       url: 'https://www.ebenezertelehealth.com/weight-loss',
@@ -171,9 +171,9 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': 'https://www.ebenezertelehealth.com/#service-minor-illness',
-      name: 'Treatment for Minor Illnesses',
+      name: 'Minor Illness',
       description:
-        'Online evaluation and treatment for common minor illnesses including sinus infections, colds, flu, and UTIs. Often available same-day.',
+        'Feel better without the urgent-care wait. Get evaluated and treated for sinus infections, UTIs, cold and flu, and other everyday illnesses — same day when available.',
       provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
       url: 'https://www.ebenezertelehealth.com/minor-illness',
@@ -199,9 +199,9 @@ const schemaGraph = {
       '@type': 'WebPage',
       '@id': 'https://www.ebenezertelehealth.com/#webpage',
       url: 'https://www.ebenezertelehealth.com',
-      name: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
+      name: 'Telehealth & In-Person Care in Oklahoma City | Ebenezer Telehealth',
       description:
-        "Get trusted online medical care in Oklahoma City. Affordable cash-pay telehealth for women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
+        "Telehealth in Oklahoma City & online across Oklahoma — plus in-person visits by appointment. Weight loss, women's health & minor illness. Book or call (405) 349-8188.",
       isPartOf: { '@id': 'https://www.ebenezertelehealth.com/#website' },
       about: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
       speakable: {

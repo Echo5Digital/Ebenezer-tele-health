@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Award, MapPin, Quote } from 'lucide-react'
@@ -37,10 +38,9 @@ export default function ProviderSection() {
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Your care at Ebenezer Telehealth is led by Dr. Susan George, a
-                Doctor of Nursing Practice and Advanced Practice Registered Nurse
-                who specializes in women&apos;s health and is Board Certified in
-                Advanced Diabetes Management (BC-ADM).
+                Our care is led by Dr. Susan George, DNP, APRN, BC-ADM - a
+                Doctor of Nursing Practice who specializes in women&apos;s health and is Board
+                Certified in Advanced Diabetes Management.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
                 With a deep commitment to compassionate, faith-driven medicine,
@@ -110,6 +110,10 @@ export default function ProviderSection() {
               <MapPin className="h-4 w-4 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
               Based in Oklahoma City, OK, serving patients throughout Oklahoma via secure telehealth
             </div>
+
+            <Link href="/about" className="btn-outline text-sm self-start">
+              Learn more about our practice &rarr;
+            </Link>
           </div>
 
           {/* Provider photo — RIGHT on desktop */}

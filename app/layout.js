@@ -19,11 +19,13 @@ export const metadata = {
   description:
     "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
   keywords: [
+    'telehealth Oklahoma City',
     'online medical care Oklahoma',
+    'medical clinic Oklahoma City',
+    'cash pay clinic OKC',
     'telehealth Oklahoma',
+    "women's health clinic OKC",
     'virtual doctor Oklahoma',
-    'cash pay telehealth Oklahoma',
-    "women's health telehealth",
     'weight loss management online',
     'minor illness treatment',
     'Dr Susan George DNP APRN',

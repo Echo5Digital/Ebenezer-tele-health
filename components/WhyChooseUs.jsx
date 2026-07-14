@@ -1,11 +1,12 @@
+import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 
 const bullets = [
-  'You see a real, named provider every time: Dr. Susan George, DNP, APRN, BC-ADM.',
-  'Transparent cash pricing so you can make a confident decision before you book.',
-  'Convenient and private: secure, HIPAA-compliant visits from wherever you are in Oklahoma.',
-  'Medically guided weight loss with a provider Board Certified in Advanced Diabetes Management.',
-  "Especially for women and families, with a provider who specializes in women's health.",
+  'Work with an experienced, credentialed provider - Dr. Susan George, DNP, APRN, BC-ADM.',
+  'Two ways to be seen: in person on Saturdays in Oklahoma City, or telehealth across Oklahoma.',
+  null,
+  'A women\'s health focus backed by real metabolic expertise.',
+  'Care delivered with warmth, dignity, and a heart of faith.',
 ]
 
 export default function WhyChooseUs() {
@@ -57,7 +58,7 @@ export default function WhyChooseUs() {
             className="text-3xl md:text-4xl font-bold mb-3"
             style={{ color: 'var(--navy)' }}
           >
-            Why Oklahomans Choose Ebenezer Telehealth
+            Why Oklahomans Choose Us
           </h2>
 
           {/* Decorative accent line */}
@@ -74,8 +75,8 @@ export default function WhyChooseUs() {
           </p>
 
           <ul className="space-y-3.5 text-left" role="list">
-            {bullets.map((bullet) => (
-              <li key={bullet} className="flex items-start gap-3">
+            {bullets.map((bullet, index) => (
+              <li key={index} className="flex items-start gap-3">
                 <div
                   className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full flex items-center justify-center"
                   style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
@@ -86,7 +87,20 @@ export default function WhyChooseUs() {
                     style={{ color: 'var(--primary)' }}
                   />
                 </div>
-                <span className="text-gray-700 leading-relaxed">{bullet}</span>
+                {index === 2 ? (
+                  <span className="text-gray-700 leading-relaxed">
+                    A transparent cash-pay clinic. Know your cost before you book.{' '}
+                    <Link
+                      href="/pricing"
+                      className="font-semibold underline"
+                      style={{ color: 'var(--primary)' }}
+                    >
+                      See Pricing &rarr;
+                    </Link>
+                  </span>
+                ) : (
+                  <span className="text-gray-700 leading-relaxed">{bullet}</span>
+                )}
               </li>
             ))}
           </ul>

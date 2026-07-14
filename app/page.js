@@ -2,6 +2,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import HeroSection from '@/components/HeroSection'
 import AnswerBlock from '@/components/AnswerBlock'
 import QuickValueBar from '@/components/QuickValueBar'
+import IntroParagraph from '@/components/IntroParagraph'
 import ServicesSection from '@/components/ServicesSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Testimonials from '@/components/Testimonials'
@@ -12,9 +13,9 @@ import FAQSection from '@/components/FAQSection'
 import FinalCTA from '@/components/FinalCTA'
 
 export const metadata = {
-  title: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
+  title: 'Telehealth & In-Person Care in Oklahoma City | Ebenezer Telehealth',
   description:
-    "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
+    "Telehealth in Oklahoma City & online across Oklahoma — plus in-person visits by appointment. Weight loss, women's health & minor illness. Book or call (405) 349-8188.",
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com',
   },
@@ -27,11 +28,12 @@ export default function HomePage() {
       <HeroSection />
       <AnswerBlock />
       <QuickValueBar />
+      <IntroParagraph />
       <ServicesSection />
       <WhyChooseUs />
-      <Testimonials />
-      <ProviderSection />
       <HowItWorks />
+      <ProviderSection />
+      <Testimonials />
       <PricingSection />
       <FAQSection />
       <FinalCTA />

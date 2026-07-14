@@ -4,37 +4,26 @@ import VideoBackground from '@/components/VideoBackground'
 const steps = [
   {
     number: '01',
-    title: 'Book Your Visit',
-    description: (
-      <>
-        Book your visit online or{' '}
-        <a
-          href="tel:+14053498188"
-          className="font-semibold underline"
-          style={{ color: '#97CECC' }}
-        >
-          call (405) 349-8188
-        </a>
-        .
-      </>
-    ),
+    title: 'Choose Your Visit',
+    description:
+      'An in-person Saturday appointment in Oklahoma City, or a telehealth visit anytime.',
   },
   {
     number: '02',
-    title: 'Complete a Quick Intake',
-    description: 'Share your history and what\'s going on.',
+    title: 'Complete a Short Intake',
+    description: 'Complete a short intake so we understand your history and what\'s going on.',
   },
   {
     number: '03',
-    title: 'Meet with Dr. George',
+    title: 'Meet Your Provider',
     description:
-      'Connect by secure video from anywhere in Oklahoma.',
+      'Meet your provider in person or by secure video.',
   },
   {
     number: '04',
     title: 'Get Your Plan',
     description:
-      'Diagnosis, treatment, and prescriptions sent to your pharmacy.',
+      'Evaluation, treatment, and prescriptions sent to your pharmacy when appropriate.',
   },
 ]
 
@@ -70,7 +59,7 @@ export default function HowItWorks() {
             className="text-3xl md:text-4xl font-bold mb-5"
             style={{ color: '#ffffff' }}
           >
-            Getting Care Online Is Simple
+            Getting Online Medical Care Is Simple
           </h2>
           {/* AEO answer-first paragraph — ~45 words, direct answer before elaboration */}
           <p
@@ -141,7 +130,7 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="text-center">
           <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
-            Book Your Visit
+            Book Your Appointment
           </Link>
           <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.85)' }}>
             or{' '}

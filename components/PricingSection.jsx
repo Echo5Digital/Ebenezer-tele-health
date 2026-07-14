@@ -4,7 +4,7 @@ import { CheckCircle2, Info } from 'lucide-react'
 const plans = [
   {
     name: "Women's Health Visit",
-    price: '$150',
+    price: 'from $150',
     followUp: '$50',
     description: "Comprehensive virtual care for women's health needs including birth control, hormonal health, and more.",
     features: [
@@ -18,13 +18,12 @@ const plans = [
   },
   {
     name: 'Weight Loss Consult',
-    price: '$250–$300',
+    price: 'from $250',
     followUp: '$50',
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
       'Video visit with Dr. Susan George',
       'Personalized metabolic health plan',
-      'The cost includes the medication and lab work',
       'GLP-1 shipped directly to your home',
       'Ongoing management support',
       'Clinically supervised, not a quick-fix program',
@@ -122,7 +121,6 @@ export default function PricingSection() {
                   >
                     {plan.price}
                   </span>
-                  <span className="text-sm text-gray-500">initial visit</span>
                 </div>
                 {plan.followUp ? (
                   <p className="mt-1 text-sm text-gray-500">
@@ -157,6 +155,13 @@ export default function PricingSection() {
               </Link>
             </div>
           ))}
+        </div>
+
+        {/* See full pricing link */}
+        <div className="mt-8 text-center">
+          <Link href="/pricing" className="btn-outline text-sm">
+            See full pricing &rarr;
+          </Link>
         </div>
 
         {/* Insurance notice */}

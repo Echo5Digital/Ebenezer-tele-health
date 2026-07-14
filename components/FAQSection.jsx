@@ -17,44 +17,51 @@ import {
 const faqs = [
   {
     id: 'faq-1',
-    question: 'Is an online visit with Ebenezer a real medical appointment?',
+    question: 'Do you offer telehealth in Oklahoma City and statewide?',
     answer:
-      'Yes. You meet directly with Dr. Susan George, DNP, APRN, for a private telehealth consultation just like an in-person medical appointment.',
+      'Yes. We provide telehealth visits across all of Oklahoma, plus in-person appointments in Oklahoma City on Saturdays by appointment.',
     extra: null,
   },
   {
     id: 'faq-2',
-    question: 'Do I need insurance?',
+    question: 'Is this like seeing a doctor?',
     answer:
-      'No. Ebenezer Telehealth is a transparent cash-pay practice, so insurance is not required.',
+      'Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions when appropriate from a licensed, Board Certified provider.',
     extra: null,
   },
   {
     id: 'faq-3',
-    question: 'Where in Oklahoma can I be seen?',
+    question: 'Do I need insurance?',
     answer:
-      'Anywhere in Oklahoma, as long as you are physically located in the state during your telehealth appointment.',
+      "No. We're a cash-pay clinic with transparent pricing, so you know your cost before you book.",
     extra: null,
   },
   {
     id: 'faq-4',
-    question: 'Do you prescribe weight-loss medications like semaglutide?',
+    question: 'What areas do you serve?',
     answer:
-      'Yes, when medically appropriate. We evaluate patients for GLP-1 medications and other evidence-based weight-loss treatments.',
+      "In-person visits are in Oklahoma City; telehealth is available anywhere in Oklahoma as long as you're in the state at the time of your visit.",
     extra: null,
   },
   {
     id: 'faq-5',
-    question: 'Can I get a prescription?',
+    question: 'What do you treat?',
     answer:
-      'Yes. Prescriptions are sent electronically to your preferred pharmacy when clinically appropriate.',
+      "Medical weight loss, women's health, and minor illnesses. For anything outside our scope, we'll guide you to the right care.",
     extra: null,
   },
   {
     id: 'faq-6',
     question: 'How soon can I be seen?',
     answer:
-      'Same-day appointments are often available. Contact us or book online to check current availability.',
+      'Same-day telehealth visits are often available. Ask about in person Saturday appointments in Oklahoma City.',
+    extra: null,
+  },
+  {
+    id: 'faq-7',
+    question: 'What if I have a medical emergency?',
+    answer:
+      'Ebenezer Telehealth is not for emergencies. Call 911 or go to your nearest emergency room.',
     extra: null,
   },
 ]

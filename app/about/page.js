@@ -4,9 +4,11 @@ import { Badge } from '@/components/ui/badge'
 import { Award, CreditCard, Globe, Heart, MapPin, Quote, ShieldCheck, User } from 'lucide-react'
 
 export const metadata = {
-  title: 'About Ebenezer Telehealth | Dr. Susan George, DNP, APRN',
+  title: {
+    absolute: 'About Ebenezer Telehealth | Dr. Susan George, DNP, APRN — OKC',
+  },
   description:
-    'Meet Susan George, DNP, APRN, BC-ADM — the provider behind Ebenezer Telehealth. Faith-driven, compassionate telehealth care for Oklahoma women and families.',
+    'Meet Dr. Susan George, DNP, APRN, BC-ADM — a women\'s health nurse practitioner in OKC providing in-person and online care across Oklahoma. Board Certified in diabetes management.',
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/about',
   },
@@ -18,8 +20,8 @@ const CREDENTIALS = [
   'Doctor of Nursing Practice (DNP)',
   'Advanced Practice Registered Nurse (APRN)',
   'Board Certified in Advanced Diabetes Management (BC-ADM)',
-  "Specialized in Women's Health",
-  'Licensed in the State of Oklahoma',
+  "Women's Health Provider serving Oklahoma City",
+  'In-person care in OKC + telehealth across Oklahoma',
 ]
 
 const VALUES = [
@@ -62,9 +64,9 @@ const aboutPageSchema = {
     '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
     name: 'Dr. Susan George',
     honorificPrefix: 'Dr.',
-    jobTitle: 'Doctor of Nursing Practice (DNP), APRN',
+    jobTitle: "Women's Health Nurse Practitioner, DNP, APRN, BC-ADM",
     description:
-      'Dr. Susan George is a Doctor of Nursing Practice and Advanced Practice Registered Nurse who founded Ebenezer Telehealth to bring affordable, compassionate care to women and families across Oklahoma. She specializes in women\'s health and is Board Certified in Advanced Diabetes Management (BC-ADM).',
+      'Dr. Susan George is a Doctor of Nursing Practice (DNP) and Advanced Practice Registered Nurse (APRN) who founded Ebenezer Telehealth to bring honest, personal care to women and families in Oklahoma. As a nurse practitioner in Oklahoma City, she specializes in women\'s health and is Board Certified in Advanced Diabetes Management (BC-ADM). Ebenezer Telehealth offers in-person care on Saturdays in OKC and telehealth across Oklahoma.',
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',
@@ -148,7 +150,7 @@ export default function AboutPage() {
                 className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                About Ebenezer Telehealth&nbsp;&mdash; Meet Dr. Susan George, DNP, APRN
+                About Ebenezer Telehealth&nbsp;&mdash; Dr. Susan George, DNP, APRN (Oklahoma City)
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Faith-driven, evidence-based telehealth care for women and families
@@ -178,10 +180,11 @@ export default function AboutPage() {
             Our Mission
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Ebenezer Telehealth exists to deliver accessible, compassionate, and
-            quality healthcare to women and families across Oklahoma. We believe every
-            patient deserves care delivered with integrity, dignity, and a personal
-            touch that reflects our heart of faith.
+            Ebenezer Telehealth exists to make quality, compassionate healthcare
+            accessible to Oklahoma women and families &mdash; whether in person here
+            in Oklahoma City or online from wherever you are. We believe care should
+            be delivered with integrity, dignity, and a personal touch that reflects
+            our heart of faith.
           </p>
 
           {/* Answer-first AEO/GEO paragraph */}
@@ -193,14 +196,14 @@ export default function AboutPage() {
             }}
           >
             <p className="text-base text-gray-700 leading-relaxed">
-              Ebenezer Telehealth is an Oklahoma City-based telehealth practice
-              founded on the mission of delivering faith-driven, compassionate
-              healthcare to women and families. The practice is led by{' '}
+              Ebenezer Telehealth is an Oklahoma City medical practice serving women
+              and families with in-person care on Saturdays in OKC and telehealth
+              across Oklahoma. Our care is led by{' '}
               <strong className="font-semibold text-gray-900">
                 Dr. Susan George, DNP, APRN, BC-ADM
-              </strong>
-              , and offers cash-pay online visits for weight loss management,
-              women&apos;s health, and minor illnesses across the state of Oklahoma.
+              </strong>{' '}
+              &mdash; a women&apos;s health nurse practitioner in Oklahoma City who
+              is Board Certified in Advanced Diabetes Management.
             </p>
           </div>
         </div>
@@ -231,29 +234,21 @@ export default function AboutPage() {
                   className="text-3xl md:text-4xl font-bold mb-5"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Dr. Susan George, DNP, APRN, BC-ADM
+                  Dr. Susan George, DNP, APRN &mdash; a Women&apos;s Health Nurse
+                  Practitioner in OKC
                 </h2>
                 <div className="space-y-4">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                     Dr. Susan George is a Doctor of Nursing Practice (DNP) and
                     Advanced Practice Registered Nurse (APRN) who founded Ebenezer
-                    Telehealth to bring affordable, compassionate care to women and
-                    families who need it &mdash; without the barriers of long drives,
-                    overcrowded clinics, or confusing bills.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Dr. George specializes in women&apos;s health and is Board
-                    Certified in Advanced Diabetes Management (BC-ADM), a credential
-                    that reflects deep expertise in metabolic health &mdash; including
-                    the hormonal and insulin-related factors that affect weight, energy,
-                    and overall well-being. This combination of women&apos;s health
-                    specialization and metabolic expertise is what makes Ebenezer
-                    Telehealth&apos;s approach to care distinctive.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Her approach is grounded in evidence-based medicine, delivered with
-                    warmth, respect, and the conviction that every patient deserves to
-                    be heard.
+                    Telehealth to bring honest, personal care to the people who need
+                    it. As a nurse practitioner in OKC, she specializes in
+                    women&apos;s health and is Board Certified in Advanced Diabetes
+                    Management (BC-ADM) &mdash; a credential reflecting deep expertise
+                    in metabolic health, including the hormonal and insulin-related
+                    factors that affect weight and well-being. It&apos;s this
+                    combination &mdash; women&apos;s health plus real metabolic
+                    knowledge &mdash; that shapes how she cares for every patient.
                   </p>
                 </div>
               </div>
@@ -294,10 +289,10 @@ export default function AboutPage() {
                   aria-hidden="true"
                 />
                 <blockquote className="text-gray-700 italic leading-relaxed">
-                  &ldquo;I started Ebenezer Telehealth because I believe healthcare
-                  should be honest, affordable, and accessible to every woman and
-                  family in Oklahoma &mdash; regardless of where they live or what
-                  insurance they carry.&rdquo;
+                  &ldquo;I want every woman and family in Oklahoma to have honest,
+                  compassionate care they can actually access &mdash; whether
+                  that&apos;s sitting across from me on a Saturday or meeting
+                  online from home.&rdquo;
                 </blockquote>
                 <figcaption
                   className="mt-3 text-sm font-semibold"
@@ -314,8 +309,8 @@ export default function AboutPage() {
                   style={{ color: 'var(--primary)' }}
                   aria-hidden="true"
                 />
-                Based in Oklahoma City, OK &mdash; serving patients throughout Oklahoma
-                via secure telehealth
+                Based in Oklahoma City, OK. Serving patients throughout Oklahoma
+                via in-person care on Saturdays and secure telehealth.
               </div>
             </div>
 

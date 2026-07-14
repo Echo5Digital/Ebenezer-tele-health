@@ -4,24 +4,27 @@ import { HeartHandshake, Scale, Thermometer, ArrowRight } from 'lucide-react'
 const services = [
   {
     icon: Scale,
-    title: 'Medical Weight Loss Clinic Online',
+    title: 'Medical Weight Loss',
     slug: 'weight-loss',
+    linkText: 'Explore weight loss',
     description:
-      'A medically supervised weight-loss program built around your metabolic health, including GLP-1 medication management, overseen by Dr. George, who is Board Certified in Advanced Diabetes Management. Real clinical care, not a quick fix. Initial consultations from $250.',
+      'A clinically guided weight-loss program built around your metabolic health — not a quick fix. When appropriate, your plan may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
   },
   {
     icon: HeartHandshake,
-    title: "Women's Health Telehealth",
+    title: "Women's Health",
     slug: 'womens-health',
+    linkText: "Explore women's health",
     description:
-      "Discreet, compassionate virtual care for birth control, PCOS, menopause, hormonal health, and more, led by a provider who specializes in women's health. Initial visits from $150.",
+      'Compassionate, private care for birth control, PCOS, menopause, and hormonal health, from a practice that specializes in women\'s health. See us in person in Oklahoma City or online anywhere in Oklahoma.',
   },
   {
     icon: Thermometer,
-    title: 'Treatment for Minor Illnesses',
+    title: 'Minor Illness',
     slug: 'minor-illness',
+    linkText: 'Explore minor illness care',
     description:
-      'Feel better without leaving home. Get evaluated and treated online for sinus infections, colds and flu, UTIs, allergies, and other minor illnesses, often same day. Visits $50.',
+      'Feel better without the urgent-care wait. Get evaluated and treated for sinus infections, UTIs, cold and flu, and other everyday illnesses — same day when available.',
   },
 ]
 
@@ -59,7 +62,7 @@ export default function ServicesSection() {
             className="text-3xl md:text-4xl font-bold"
             style={{ color: 'var(--navy)' }}
           >
-            Online Care for Oklahoma Women and Families
+            Online Medical Care for Oklahoma Women and Families
           </h2>
         </div>
 
@@ -104,7 +107,7 @@ export default function ServicesSection() {
                 style={{ color: 'var(--primary)' }}
                 aria-label={`Learn more about ${service.title}`}
               >
-                Learn more
+                {service.linkText}
                 <ArrowRight
                   className="h-4 w-4 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"

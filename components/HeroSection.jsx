@@ -71,9 +71,8 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
             style={{ color: '#ffffff' }}
           >
-            Affordable{' '}
-            <span style={{ color: '#97CECC' }}>Online Medical Care</span>
-            <br className="hidden sm:block" /> in Oklahoma
+            Telehealth in Oklahoma City{' '}
+            <span style={{ color: '#97CECC' }}>In-Person & Online Medical Care</span>
           </h1>
 
           {/* Subheadline */}
@@ -81,20 +80,8 @@ export default function HeroSection() {
             className="text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
             style={{ color: 'rgba(255,255,255,0.92)' }}
           >
-            Faith-driven, compassionate telehealth for women and families,
-            from anywhere in Oklahoma. See a trusted provider online for{' '}
-            <strong className="font-semibold" style={{ color: '#ffffff' }}>
-              women&apos;s health
-            </strong>
-            ,{' '}
-            <strong className="font-semibold" style={{ color: '#ffffff' }}>
-              weight loss management
-            </strong>
-            , and{' '}
-            <strong className="font-semibold" style={{ color: '#ffffff' }}>
-              minor illnesses
-            </strong>
-            . Transparent cash pricing, no insurance hassles.
+            Real medical care that fits your life - see us in person on Saturdays in
+            Oklahoma City, or connect by telehealth from anywhere in Oklahoma. Weight loss, women&apos;s health, and minor illness care with honest, cash-pay pricing and no insurance required.
           </p>
 
           {/* CTA Buttons */}

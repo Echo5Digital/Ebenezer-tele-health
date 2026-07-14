@@ -38,13 +38,14 @@ export default function AnswerBlock() {
             className="hero-answer-line text-base md:text-lg leading-relaxed"
             style={{ color: '#1AA6B7' }}
           >
-            Ebenezer Telehealth is a faith-driven, Oklahoma City&ndash;based
-            telehealth practice led by Dr. Susan George, DNP, APRN, BC-ADM,
-            offering affordable cash-pay online visits for{' '}
+            Ebenezer Telehealth is a medical clinic in Oklahoma City offering telehealth across
+            Oklahoma and in-person appointments in OKC on Saturdays. We provide online medical
+            care for{' '}
             <strong style={{ color: 'var(--primary)' }}>weight loss management</strong>,{' '}
             <strong style={{ color: 'var(--primary)' }}>women&apos;s health</strong>, and{' '}
             <strong style={{ color: 'var(--primary)' }}>minor illnesses</strong>{' '}
-            to patients across Oklahoma.
+            led by an experienced, Board Certified provider, with transparent cash-pay
+            pricing and no insurance required.
           </p>
         </div>
       </div>
