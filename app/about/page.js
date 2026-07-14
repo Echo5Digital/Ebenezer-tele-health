@@ -33,7 +33,7 @@ const VALUES = [
   {
     icon: Globe,
     title: 'Accessible Telemedicine',
-    body: 'We serve patients across all of Oklahoma — metro and rural — through convenient, secure video visits.',
+    body: 'We serve patients across all of Oklahoma, metro and rural, through convenient, secure video visits.',
   },
   {
     icon: CreditCard,
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                About Ebenezer Telehealth&nbsp;&mdash; Dr. Susan George, DNP, APRN (Oklahoma City)
+                About Ebenezer Telehealth: Dr. Susan George, DNP, APRN (Oklahoma City)
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Faith-driven, evidence-based telehealth care for women and families
@@ -181,7 +181,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
             Ebenezer Telehealth exists to make quality, compassionate healthcare
-            accessible to Oklahoma women and families &mdash; whether in person here
+            accessible to Oklahoma women and families, whether in person here
             in Oklahoma City or online from wherever you are. We believe care should
             be delivered with integrity, dignity, and a personal touch that reflects
             our heart of faith.
@@ -201,8 +201,8 @@ export default function AboutPage() {
               across Oklahoma. Our care is led by{' '}
               <strong className="font-semibold text-gray-900">
                 Dr. Susan George, DNP, APRN, BC-ADM
-              </strong>{' '}
-              &mdash; a women&apos;s health nurse practitioner in Oklahoma City who
+              </strong>
+              , a women&apos;s health nurse practitioner in Oklahoma City who
               is Board Certified in Advanced Diabetes Management.
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
                   className="text-3xl md:text-4xl font-bold mb-5"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Dr. Susan George, DNP, APRN &mdash; a Women&apos;s Health Nurse
+                  Dr. Susan George, DNP, APRN, a Women&apos;s Health Nurse
                   Practitioner in OKC
                 </h2>
                 <div className="space-y-4">
@@ -244,11 +244,11 @@ export default function AboutPage() {
                     Telehealth to bring honest, personal care to the people who need
                     it. As a nurse practitioner in OKC, she specializes in
                     women&apos;s health and is Board Certified in Advanced Diabetes
-                    Management (BC-ADM) &mdash; a credential reflecting deep expertise
+                    Management (BC-ADM), a credential reflecting deep expertise
                     in metabolic health, including the hormonal and insulin-related
                     factors that affect weight and well-being. It&apos;s this
-                    combination &mdash; women&apos;s health plus real metabolic
-                    knowledge &mdash; that shapes how she cares for every patient.
+                    combination of women&apos;s health plus real metabolic
+                    knowledge that shapes how she cares for every patient.
                   </p>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                 />
                 <blockquote className="text-gray-700 italic leading-relaxed">
                   &ldquo;I want every woman and family in Oklahoma to have honest,
-                  compassionate care they can actually access &mdash; whether
+                  compassionate care they can actually access, whether
                   that&apos;s sitting across from me on a Saturday or meeting
                   online from home.&rdquo;
                 </blockquote>
@@ -298,7 +298,7 @@ export default function AboutPage() {
                   className="mt-3 text-sm font-semibold"
                   style={{ color: 'var(--navy)' }}
                 >
-                  &mdash; Dr. Susan George, DNP, APRN, BC-ADM
+                  Dr. Susan George, DNP, APRN, BC-ADM
                 </figcaption>
               </figure>
 
@@ -319,7 +319,7 @@ export default function AboutPage() {
               <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
                 <Image
                   src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Dr. Susan George, DNP, APRN — provider at Ebenezer Telehealth in Oklahoma"
+                  alt="Dr. Susan George, DNP, APRN, provider at Ebenezer Telehealth in Oklahoma"
                   fill
                   className="object-cover object-center"
                   priority
@@ -432,7 +432,7 @@ export default function AboutPage() {
             Ready to Experience the Difference?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Book your visit with Dr. Susan George &mdash; same-day appointments often
+            Book your visit with Dr. Susan George. Same-day appointments often
             available.
           </p>
 
