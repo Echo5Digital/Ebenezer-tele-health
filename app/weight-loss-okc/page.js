@@ -10,27 +10,24 @@ import {
 import WeightLossLocationFAQAccordion from '@/components/WeightLossLocationFAQAccordion'
 
 export const metadata = {
-  title: 'Weight Loss Clinic in Oklahoma City, OK',
+  title: 'Weight Loss Clinic in OKC | In-Person & Online',
   description:
-    'Medical weight loss in Oklahoma City, OK — semaglutide, GLP-1 meds & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250. Book online today.',
+    'Weight loss clinic in OKC: semaglutide & GLP-1 plans, in-person Saturdays or online anytime. Board Certified provider. From $250. Book or call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/weight-loss-okc',
   },
 }
 
 const initialIncludes = [
-  'Comprehensive health evaluation and metabolic assessment',
+  'Full health and metabolic evaluation',
   'Personalized weight-loss plan',
-  'Medication management (including GLP-1/semaglutide when appropriate)',
-  'Weight-loss medications shipped directly to you',
   'Lab orders when needed',
 ]
 
 const followUpIncludes = [
-  'Progress review and dose titration',
-  'Side-effect monitoring',
-  'Nutrition guidance',
-  'Ongoing support and plan adjustments',
+  'Progress review',
+  'Dose adjustments if you\'re on medication',
+  'Ongoing support',
 ]
 
 const steps = [
@@ -47,7 +44,7 @@ const steps = [
   {
     number: '03',
     title: 'Meet Dr. George by Video',
-    description: 'Secure video evaluation — no commute required.',
+    description: 'Secure video evaluation, no commute required.',
   },
   {
     number: '04',
@@ -60,21 +57,21 @@ const steps = [
 const faqs = [
   {
     id: 'okc-faq-1',
-    question: 'Can I see a weight loss doctor online in Oklahoma City?',
+    question: 'Is there a weight loss clinic near me in OKC?',
     answer:
-      'Yes. Ebenezer Telehealth serves Oklahoma City and all of Oklahoma via secure telehealth.',
+      'Yes. In-person Saturdays in Oklahoma City, plus online visits statewide.',
   },
   {
     id: 'okc-faq-2',
-    question: 'Do you prescribe semaglutide to patients in Oklahoma City?',
+    question: 'Can I get semaglutide in Oklahoma City?',
     answer:
-      'Yes, when medically appropriate. Medications are shipped directly to your address.',
+      'When medically appropriate, after evaluation.',
   },
   {
     id: 'okc-faq-3',
-    question: 'How much does it cost?',
+    question: 'What does it cost?',
     answer:
-      'Initial consultation: $250–$300. Follow-ups: $50. Cash-pay, no insurance required.',
+      '$250–$300 initial, $50 follow-ups, medication billed separately.',
   },
 ]
 
@@ -83,27 +80,42 @@ const faqs = [
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: 'Weight Loss Clinic in Oklahoma City, OK',
+  name: 'Weight Loss Clinic in OKC | In-Person & Online',
   description:
-    'Medical weight loss in Oklahoma City, OK — semaglutide, GLP-1 medications & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250.',
+    'Weight loss clinic in OKC offering semaglutide and GLP-1 plans when medically appropriate. In-person Saturdays in Oklahoma City or online anytime statewide. Board Certified provider. From $250. Medication billed separately.',
   url: 'https://www.ebenezertelehealth.com/weight-loss-okc',
   provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
   about: {
     '@type': 'MedicalProcedure',
     name: 'Medical Weight Loss in Oklahoma City',
     procedureType: 'https://schema.org/TherapeuticProcedure',
+    description:
+      'Medically supervised weight loss led by Dr. Susan George, DNP, APRN, BC-ADM. Available in person on Saturdays in Oklahoma City or via telehealth statewide anytime. Semaglutide and GLP-1 medications available when medically appropriate after provider evaluation.',
+    followup: 'Follow-up visits at $50. Progress review, dose adjustments if on medication, and ongoing support.',
   },
-  areaServed: {
-    '@type': 'City',
-    name: 'Oklahoma City',
-    containedInPlace: { '@type': 'State', name: 'Oklahoma' },
+  availableService: {
+    '@type': 'MedicalTherapy',
+    name: 'Semaglutide and GLP-1 Weight Loss Treatment',
+    description:
+      'Semaglutide and GLP-1 receptor agonist therapy available in Oklahoma City for patients who qualify after a full health and metabolic evaluation. Whether it is right for you depends on your health history.',
   },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Oklahoma City',
+      containedInPlace: { '@type': 'State', name: 'Oklahoma' },
+    },
+    {
+      '@type': 'State',
+      name: 'Oklahoma',
+    },
+  ],
   offers: [
     {
       '@type': 'Offer',
       name: 'Weight Loss Initial Consultation',
       description:
-        'Comprehensive evaluation, personalized weight-loss plan, medication management including GLP-1/semaglutide when appropriate, medications shipped to you, and lab orders when needed.',
+        'Full health and metabolic evaluation, personalized weight-loss plan, and lab orders when needed. Medication, if prescribed, is billed separately on a cash-pay basis.',
       priceCurrency: 'USD',
       price: '250',
       priceSpecification: {
@@ -118,7 +130,7 @@ const pageSchema = {
       '@type': 'Offer',
       name: 'Weight Loss Follow-Up Visit',
       description:
-        'Progress review, dose titration, side-effect monitoring, nutrition guidance, and ongoing support and plan adjustments.',
+        'Progress review, dose adjustments if on medication, and ongoing support. Medication billed separately. Cash-pay, no insurance required.',
       priceCurrency: 'USD',
       price: '50',
       availability: 'https://schema.org/InStock',
@@ -190,14 +202,14 @@ export default function WeightLossOKCPage() {
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
               style={{ color: 'var(--primary)' }}
             >
-              Weight Loss Clinic — Oklahoma City, OK
+              Weight Loss Clinic · Oklahoma City, OK
             </span>
 
             <h1
               className="text-4xl md:text-5xl font-bold mb-5"
               style={{ color: 'var(--navy)' }}
             >
-              Weight Loss Clinic in Oklahoma City — Online Medical Weight Loss
+              Weight Loss Clinic in OKC: In-Person &amp; Online
             </h1>
 
             {/* Answer-first AEO */}
@@ -209,23 +221,23 @@ export default function WeightLossOKCPage() {
               }}
             >
               <p className="hero-answer-line">
-                Ebenezer Telehealth provides medically supervised weight loss
-                care to patients in Oklahoma City, OK through secure telehealth
-                visits. Our program includes personalized plans, semaglutide
-                and GLP-1 medication management, and ongoing support — led by
-                Dr. Susan George, DNP, APRN, BC-ADM. Initial consultations
-                start at $250.
+                Looking for a weight loss clinic in OKC? Ebenezer Telehealth
+                offers medical weight loss in Oklahoma City with a Board
+                Certified provider, in person on Saturdays or online anytime.
+                Plans may include semaglutide and GLP-1 medications when
+                appropriate. Consultations start at $250; medication billed
+                separately.
               </p>
             </div>
 
             <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
-              Looking for a weight loss clinic in Oklahoma City? Ebenezer
-              Telehealth brings medical weight loss care directly to you — no
-              drive, no waiting room. Dr. Susan George, a Board Certified
-              provider specializing in metabolic health, evaluates your goals
-              and health profile by secure video, builds a personalized plan,
-              and manages your medication (including semaglutide and other GLP-1
-              options when appropriate) with regular follow-up visits.
+              If you&apos;ve searched &ldquo;weight loss clinic near me&rdquo;
+              in Oklahoma City, you&apos;ve probably found a lot of med spas and
+              pop-up programs. Our OKC weight loss clinic is different: your
+              care is led by a Board Certified provider who treats weight as the
+              medical, metabolic issue it is. See us in person on a Saturday
+              right here in Oklahoma City, or get started online. Whichever is
+              easier.
             </p>
 
             {/* Badge */}
@@ -237,7 +249,7 @@ export default function WeightLossOKCPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available — From $250
+              GLP-1 &amp; Semaglutide Available · From $250
             </div>
 
             {/* CTAs */}
@@ -286,10 +298,10 @@ export default function WeightLossOKCPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Initial card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Initial Consultation Card */}
             <div
-              className="rounded-2xl p-8 border flex flex-col"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
                 background:
                   'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
@@ -297,14 +309,11 @@ export default function WeightLossOKCPage() {
               }}
             >
               <h3
-                className="text-xl font-semibold mb-1"
+                className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
                 Initial Consultation
               </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                Comprehensive evaluation and program setup.
-              </p>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
@@ -314,7 +323,7 @@ export default function WeightLossOKCPage() {
                 </span>
                 <span className="text-sm text-gray-500">– $300</span>
               </div>
-              <ul className="space-y-3 flex-1">
+              <ul className="space-y-3 mb-8 flex-1">
                 {initialIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2
@@ -326,26 +335,28 @@ export default function WeightLossOKCPage() {
                   </li>
                 ))}
               </ul>
+              <Link
+                href="/contact"
+                className="btn-primary text-base w-full text-center"
+              >
+                Book Your Consultation
+              </Link>
             </div>
 
-            {/* Follow-up card */}
+            {/* Follow-Up Visits Card */}
             <div
-              className="rounded-2xl p-8 border flex flex-col"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
-                background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                borderColor: 'rgba(26,166,183,0.30)',
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                borderColor: 'rgba(26,166,183,0.20)',
               }}
             >
               <h3
-                className="text-xl font-semibold mb-1"
+                className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
                 Follow-Up Visits
               </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                Ongoing monitoring, dose adjustments, and support.
-              </p>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
@@ -355,7 +366,7 @@ export default function WeightLossOKCPage() {
                 </span>
                 <span className="text-sm text-gray-500">per visit</span>
               </div>
-              <ul className="space-y-3 flex-1 mb-8">
+              <ul className="space-y-3 mb-8 flex-1">
                 {followUpIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2
@@ -369,32 +380,126 @@ export default function WeightLossOKCPage() {
               </ul>
               <Link
                 href="/contact"
-                className="btn-primary text-base w-full mt-auto"
+                className="btn-outline text-base w-full text-center"
               >
                 Book Your Consultation
               </Link>
             </div>
           </div>
 
-          {/* Cash-pay note */}
-          <div
-            className="max-w-4xl mx-auto mt-6 rounded-xl p-5 flex items-start gap-3"
-            style={{
-              backgroundColor: 'rgba(151,206,204,0.15)',
-              border: '1px solid rgba(26,166,183,0.20)',
-            }}
-            role="note"
-          >
-            <Info
-              className="h-5 w-5 mt-0.5 flex-shrink-0"
+          {/* Medication note */}
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="mt-6 rounded-xl p-5 flex items-start gap-3"
+              style={{
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.20)',
+              }}
+              role="note"
+            >
+              <Info
+                className="h-5 w-5 mt-0.5 flex-shrink-0"
+                style={{ color: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              <p className="text-sm text-gray-700">
+                <strong>Medication</strong> is billed separately if prescribed.
+                We operate on a <strong>cash-pay basis</strong> with no insurance
+                required, no hidden fees.
+              </p>
+            </div>
+
+            <div className="mt-6 text-center">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-1.5 text-base font-semibold group"
+                style={{ color: 'var(--primary)' }}
+              >
+                See pricing
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEMAGLUTIDE NEAR ME ──────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="okc-semaglutide-heading"
+        style={{
+          backgroundImage: "url('/semaglitude.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 50%, rgba(232,247,247,0.40) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="max-w-2xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
               style={{ color: 'var(--primary)' }}
-              aria-hidden="true"
-            />
-            <p className="text-sm text-gray-700">
-              All visits are by <strong>secure video</strong> from anywhere in
-              Oklahoma. Medications shipped directly to you.{' '}
-              <strong>Cash-pay only</strong> — no insurance required.
+            >
+              Semaglutide &amp; GLP-1
+            </span>
+            <h2
+              id="okc-semaglutide-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Semaglutide Near Me in Oklahoma City
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              For OKC patients who qualify, semaglutide and other GLP-1 options
+              can be part of your plan after a provider evaluation. Whether
+              it&apos;s right for you depends on your health history.
             </p>
+            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5"
+              >
+                Book Your OKC Visit
+              </Link>
+              <Link
+                href="/contact"
+                className="text-base font-semibold"
+                style={{ color: 'var(--primary)' }}
+              >
+                Ask About Saturday Appointments
+              </Link>
+              <a
+                href="tel:+14053498188"
+                className="text-base font-semibold text-gray-700 hover:text-primary transition-colors"
+              >
+                Call (405) 349-8188
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -429,7 +534,7 @@ export default function WeightLossOKCPage() {
               className="text-base md:text-lg max-w-2xl mx-auto"
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
-              Four steps from booking to your personalized plan — all via
+              Four steps from booking to your personalized plan, all via
               secure video, no commute required.
             </p>
           </div>
@@ -521,7 +626,7 @@ export default function WeightLossOKCPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Frequently Asked Questions — Weight Loss in Oklahoma City
+              Frequently Asked Questions: Weight Loss in Oklahoma City
             </h2>
           </div>
 
@@ -592,7 +697,7 @@ export default function WeightLossOKCPage() {
                   Full Weight Loss Program
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-600">
-                  Learn everything about our medical weight loss program —
+                  Learn everything about our medical weight loss program:
                   semaglutide, GLP-1 management, and what to expect at every
                   step.
                 </p>
@@ -746,7 +851,7 @@ export default function WeightLossOKCPage() {
             Ready to Start Your Weight Loss Journey in Oklahoma City?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Medically supervised weight loss — GLP-1 medications, personalized
+            Medically supervised weight loss. GLP-1 medications, personalized
             plans, real follow-up. Starting at $250.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

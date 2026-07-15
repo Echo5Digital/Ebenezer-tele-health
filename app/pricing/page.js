@@ -3,9 +3,11 @@ import { CheckCircle2, Info } from 'lucide-react'
 import PricingFAQAccordion from './PricingFAQAccordion'
 
 export const metadata = {
-  title: 'Telehealth Pricing — Oklahoma',
+  title: {
+    absolute: 'Telehealth Cost Without Insurance in Oklahoma | Ebenezer Pricing',
+  },
   description:
-    "Transparent cash-pay telehealth pricing. Weight loss from $250, women's health from $150, minor illness $50. No insurance required. See full pricing.",
+    "Telehealth cost without insurance in Oklahoma, a cash-pay clinic in OKC. Weight loss from $250, women's health from $150, minor illness $50. Transparent, no surprises.",
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/pricing',
   },
@@ -68,7 +70,7 @@ const SERVICES = [
 const CASH_PAY_BENEFITS = [
   {
     title: 'No Surprise Bills',
-    body: 'Your price is confirmed at booking. What you see is exactly what you pay — always.',
+    body: 'Your price is confirmed at booking. What you see is exactly what you pay. Always.',
   },
   {
     title: 'No Pre-Authorization',
@@ -76,7 +78,7 @@ const CASH_PAY_BENEFITS = [
   },
   {
     title: 'No Insurance Denials',
-    body: 'Your care is between you and your provider — not an insurance adjuster.',
+    body: 'Your care is between you and your provider, not an insurance adjuster.',
   },
   {
     title: 'HSA / FSA Accepted',
@@ -89,7 +91,7 @@ const CASH_PAY_BENEFITS = [
 const pricingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Telehealth Pricing — Ebenezer Telehealth',
+  name: 'Telehealth Cost Without Insurance in Oklahoma | Ebenezer Pricing',
   url: 'https://www.ebenezertelehealth.com/pricing',
   mainEntity: {
     '@type': 'ItemList',
@@ -149,42 +151,42 @@ const pricingFAQSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do I need insurance for Ebenezer Telehealth?',
+      name: 'How much does telehealth cost without insurance in Oklahoma?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. All visits are cash-pay with flat pricing. No insurance is needed.',
+        text: "Women's health $150, weight loss $250–$300, minor illness $50. Follow-ups $50. No insurance required.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Are there any hidden fees?',
+      name: 'How much does semaglutide cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. The prices listed are your total cost for the visit.',
+        text: "Medication is billed separately and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does semaglutide cost through Ebenezer?',
+      name: 'Are there hidden fees?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The initial weight loss consultation ($250–$300) includes medication management and medications shipped to you. Follow-up visits for ongoing management are $50.',
+        text: 'No. The listed visit prices are your total visit cost.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I use an HSA or FSA?',
+      name: 'Can I use an HSA/FSA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In most cases, yes. Telehealth visits typically qualify. Check with your plan administrator.',
+        text: 'Often yes. Check with your plan administrator.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Will Ebenezer Telehealth accept insurance in the future?',
+      name: 'Is in-person the same price as online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We are working toward credentialing with major insurance plans and will announce availability when ready.',
+        text: "Yes. Visit pricing is the same whether you're seen in Oklahoma City or online.",
       },
     },
   ],
@@ -285,8 +287,8 @@ export default function PricingPage() {
               className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
               style={{ color: 'var(--navy)' }}
             >
-              Transparent Telehealth Pricing&nbsp;— Know Your Cost Before You
-              Book
+              Telehealth Cost Without Insurance in Oklahoma: Transparent
+              Pricing
             </h1>
 
             {/* Answer-first AEO/GEO paragraph */}
@@ -328,6 +330,97 @@ export default function PricingPage() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════
+          ANSWER BLOCK
+      ════════════════════════════════════════════════════════ */}
+      <section
+        className="relative overflow-hidden"
+        aria-label="Telehealth cost without insurance in Oklahoma"
+        style={{
+          backgroundImage: 'url(/block_bg.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(255,255,255,0.38)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+          <div
+            className="max-w-3xl border-l-4 pl-5 md:pl-6"
+            style={{ borderColor: 'var(--primary)' }}
+          >
+            <p
+              className="hero-answer-line text-base md:text-lg leading-relaxed"
+              style={{ color: '#1AA6B7' }}
+            >
+              Ebenezer Telehealth is a cash-pay clinic in OKC with transparent
+              pricing and no insurance required.{' '}
+              <strong style={{ color: 'var(--primary)' }}>
+                Women&apos;s health visits start at $150
+              </strong>
+              ,{' '}
+              <strong style={{ color: 'var(--primary)' }}>
+                weight loss consultations are $250&ndash;$300
+              </strong>
+              , and{' '}
+              <strong style={{ color: 'var(--primary)' }}>
+                minor illness visits are $50
+              </strong>
+              . Follow-ups are $50. Weight-loss medication, if prescribed, is
+              billed separately.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════
+          BODY PARAGRAPH
+      ════════════════════════════════════════════════════════ */}
+      <section
+        className="relative overflow-hidden"
+        aria-label="About telehealth cost without insurance in Oklahoma"
+        style={{
+          backgroundImage: "url('/body_bg2.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <div className="flex justify-center">
+            <div
+              className="max-w-2xl w-full rounded-2xl px-8 py-10 md:px-12 md:py-12 text-center shadow-sm"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.82)',
+                border: '1px solid rgba(26,166,183,0.18)',
+              }}
+            >
+              <p
+                className="text-base md:text-lg leading-relaxed"
+                style={{ color: 'var(--navy)' }}
+              >
+                Wondering what telehealth costs without insurance in Oklahoma?
+                We keep it simple. As a cash-pay clinic serving OKC and the
+                whole state, we show you the price before you book. No
+                surprise bills, no billing runaround, just{' '}
+                <strong style={{ color: 'var(--primary)' }}>
+                  affordable medical care in Oklahoma City
+                </strong>{' '}
+                and beyond.
+              </p>
             </div>
           </div>
         </div>
@@ -432,11 +525,55 @@ export default function PricingPage() {
             />
             <p className="text-sm text-gray-700 leading-relaxed">
               Prices listed are your <strong>total cost</strong> for each
-              visit — no hidden fees, no additional charges. Payment is due at
+              visit. No hidden fees, no additional charges. Payment is due at
               the time of booking. We accept cash, credit, and debit cards. As telehealth services are provided remotely, payment is currently accepted via credit and debit cards only.
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════
+          SEMAGLUTIDE COST
+      ════════════════════════════════════════════════════════ */}
+      <section
+        className="relative overflow-hidden border-t border-gray-100"
+        aria-labelledby="semaglutide-heading"
+        style={{
+          backgroundImage: "url('/semaglitude.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(255,255,255,0.55)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Weight Loss Medication
+            </span>
+            <h2
+              id="semaglutide-heading"
+              className="text-3xl md:text-4xl font-bold mb-5"
+              style={{ color: 'var(--navy)' }}
+            >
+              Semaglutide Cost in Oklahoma
+            </h2>
+            <p className="text-gray-800 leading-relaxed">
+              If GLP-1 or semaglutide medication is part of your plan, it is
+              billed separately from your visit fee. Semaglutide cost in
+              Oklahoma depends on your evaluation and the option you and your
+              provider choose together. We&apos;ll be transparent about costs
+              before anything is prescribed.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -466,16 +603,13 @@ export default function PricingPage() {
                 Why Cash-Pay?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Cash-pay means you know exactly what you&apos;ll pay before your
-                visit — no surprise bills, no pre-authorization, no insurance
-                denials. For many patients, our flat fees are less than an
-                insured urgent care copay, and you skip the billing complexity
+                For many patients, our flat fees cost less than an insured
+                urgent care copay, and you skip the billing complexity
                 entirely.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                We are currently a cash-pay practice. We are in the process of
-                becoming credentialed with major insurance plans and will update
-                this page when insurance options become available.
+                We&apos;re working toward accepting insurance as the practice
+                grows and will update this page when that&apos;s available.
               </p>
             </div>
 

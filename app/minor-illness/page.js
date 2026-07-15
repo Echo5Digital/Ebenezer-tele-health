@@ -3,9 +3,9 @@ import { CheckCircle2, ArrowRight, Clock, Info, AlertCircle, HeartHandshake, Sca
 import MinorIllnessFAQAccordion from './MinorIllnessFAQAccordion'
 
 export const metadata = {
-  title: 'Online Minor Illness Treatment in Oklahoma',
+  title: 'Urgent Care Alternative in Oklahoma City',
   description:
-    'Same-day virtual care for minor illnesses across Oklahoma — sinus infections, cold & flu, UTIs, allergies & more. $50 per visit. Book online or call today.',
+    'An urgent care alternative in Oklahoma City for minor illness - sinus infections, UTIs, cold & flu. In-person or online, same day. $50 per visit. (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/minor-illness',
   },
@@ -26,7 +26,7 @@ const pricingFeatures = [
   'Same-day video visit with Dr. Susan George',
   'Thorough evaluation, diagnosis & treatment recommendations',
   'Electronic prescriptions sent to your preferred pharmacy',
-  'No insurance needed — cash-pay transparency',
+  'No insurance needed. Cash-pay transparency.',
 ]
 
 const steps = [
@@ -34,7 +34,7 @@ const steps = [
     number: '01',
     title: 'Book Your Visit',
     description:
-      'Book online or call (405) 349-8188 — same-day appointments often available.',
+      'Book online or call (405) 349-8188. Same-day appointments often available.',
   },
   {
     number: '02',
@@ -57,8 +57,8 @@ const steps = [
 ]
 
 const whyPoints = [
-  'Skip the waiting room — get evaluated from your couch, often the same day you book.',
-  '$50 vs. a typical urgent care copay — no surprise bills, no insurance required.',
+  'Skip the waiting room. Get evaluated from your couch, often the same day you book.',
+  '$50 vs. a typical urgent care copay. No surprise bills, no insurance required.',
   'Avoid exposure to other illnesses by staying home and getting care virtually.',
   'Prescriptions sent directly to your preferred pharmacy anywhere in Oklahoma.',
 ]
@@ -68,9 +68,9 @@ const whyPoints = [
 const minorIllnessPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: 'Online Minor Illness Treatment in Oklahoma',
+  name: 'Urgent Care Alternative in Oklahoma City | Ebenezer Telehealth',
   description:
-    'Same-day virtual care for minor illnesses across Oklahoma — sinus infections, cold & flu, UTIs, allergies & more. $50 per visit.',
+    'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. $50 per visit.',
   url: 'https://www.ebenezertelehealth.com/minor-illness',
   about: {
     '@type': 'MedicalProcedure',
@@ -99,50 +99,50 @@ const minorIllnessFAQSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I be treated for a sinus infection online?',
+      name: 'Can I get online UTI treatment or sinus infection treatment in Oklahoma?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Most minor illnesses can be evaluated and treated by video. If Dr. George determines you need in-person care or testing, she'll guide you to the right facility.",
+        text: 'Yes. Most minor illnesses can be evaluated online, with prescriptions sent to your pharmacy when appropriate.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I get an antibiotic prescribed online?',
+      name: 'Is this a walk-in alternative in OKC?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, when clinically appropriate and within telemedicine scope. Prescriptions are sent electronically to your preferred pharmacy.',
+        text: 'Yes. A same-day clinic option in person on Saturdays in Oklahoma City, or online across the state.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How fast can I be seen for a minor illness?',
+      name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Same-day appointments are often available. Book online or call (405) 349-8188.',
+        text: '$50 per visit. No insurance required.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a minor illness visit cost?',
+      name: 'Can I get a prescription or refill?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '$50 per visit, cash-pay. No insurance needed.',
+        text: 'When clinically appropriate, prescriptions and basic refills can be provided.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Where in Oklahoma do you treat minor illnesses?',
+      name: 'How fast can I be seen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Anywhere in Oklahoma — OKC, Tulsa, Edmond, Norman, Lawton, rural communities, and everywhere in between.',
+        text: 'Same-day online visits are often available.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What if my condition is more serious than expected?',
+      name: "What if it's an emergency?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If your symptoms require urgent or emergency care beyond telehealth, Dr. George will tell you clearly and help you find the right next step.',
+        text: 'This service is not for emergencies. Call 911 or go to the nearest ER.',
       },
     },
   ],
@@ -212,13 +212,13 @@ export default function MinorIllnessPage() {
               className="text-4xl md:text-5xl font-bold mb-5"
               style={{ color: 'var(--navy)' }}
             >
-              Online Treatment for Minor Illnesses — Same-Day Care in Oklahoma
+              Urgent Care Alternative in Oklahoma City: Minor Illness Care
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
               Feel better without leaving home. Get evaluated and treated online
-              for common illnesses — sinus infections, cold and flu, UTIs,
-              allergies, rashes, and more — often same day. $50 per visit, no
+              for common illnesses: sinus infections, cold and flu, UTIs,
+              allergies, rashes, and more. Often same day. $50 per visit, no
               insurance needed.
             </p>
 
@@ -281,11 +281,58 @@ export default function MinorIllnessPage() {
                 className="hero-answer-line text-base md:text-lg leading-relaxed"
                 style={{ color: '#1AA6B7' }}
               >
-                Ebenezer Telehealth provides same-day online treatment for minor
-                illnesses to patients across Oklahoma. Common conditions include
-                sinus infections, cold and flu, UTIs, allergies, pink eye, rashes,
-                and stomach issues. Visits are $50 cash-pay with Dr. George,
-                DNP, APRN, and prescriptions are sent to your preferred pharmacy.
+                Ebenezer Telehealth is an urgent care alternative in Oklahoma City
+                for non-emergency minor illnesses, including sinus infections,
+                UTIs, cold and flu, allergies, sore throat, and minor skin
+                concerns. As a same-day clinic in Oklahoma City and a walk-in
+                alternative in OKC, we see you in person on Saturdays or online,
+                often the same day, for $50. This service is not for medical
+                emergencies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BODY PARAGRAPH ───────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-label="Urgent care alternative in Oklahoma City"
+        style={{
+          backgroundImage: "url('/body_bg2.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <div className="flex justify-center">
+            <div
+              className="max-w-2xl w-full rounded-2xl px-8 py-10 md:px-12 md:py-12 text-center shadow-sm"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.82)',
+                border: '1px solid rgba(26,166,183,0.18)',
+              }}
+            >
+              <p
+                className="text-base md:text-lg leading-relaxed"
+                style={{ color: 'var(--navy)' }}
+              >
+                When you&apos;re sick, the last thing you want is a long wait at
+                urgent care surrounded by other sick people. For everyday,
+                non-emergency illnesses, Ebenezer Telehealth is a faster, simpler{' '}
+                <strong style={{ color: 'var(--primary)' }}>
+                  walk-in alternative in OKC
+                </strong>
+                . Get evaluated and treated by our provider, in person on a
+                Saturday in Oklahoma City or online from your couch, often the
+                same day, for a flat{' '}
+                <strong style={{ color: 'var(--primary)' }}>$50</strong>.
               </p>
             </div>
           </div>
@@ -322,7 +369,7 @@ export default function MinorIllnessPage() {
               minor illnesses through convenient telemedicine visits. During
               your appointment, Dr. George carefully assesses your condition by
               reviewing your symptoms, medical history, and any relevant
-              details — allowing for informed clinical decisions while keeping
+              details, allowing for informed clinical decisions while keeping
               care accessible and efficient.
             </p>
           </div>
@@ -355,6 +402,15 @@ export default function MinorIllnessPage() {
                   </li>
                 ))}
               </ul>
+              <div
+                className="mt-6 pt-5"
+                style={{ borderTop: '1px solid rgba(26,166,183,0.15)' }}
+              >
+                <p className="text-sm text-gray-500 leading-relaxed italic">
+                  If your situation needs in-person testing or a higher level
+                  of care, we&apos;ll point you in the right direction.
+                </p>
+              </div>
             </div>
 
             {/* Info boxes */}
@@ -380,35 +436,11 @@ export default function MinorIllnessPage() {
                   </h3>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  If additional testing — such as lab work, imaging, or
-                  in-person evaluation — is necessary, we&apos;ll guide you to
+                  If additional testing such as lab work, imaging, or
+                  in-person evaluation is necessary, we&apos;ll guide you to
                   the appropriate facility and review results promptly. If your
                   condition requires urgent or emergency care beyond telehealth,
                   Dr. George will advise you clearly on the next steps.
-                </p>
-              </div>
-
-              <div
-                className="rounded-2xl p-6"
-                style={{
-                  backgroundColor: 'rgba(254,242,242,0.90)',
-                  border: '1px solid rgba(239,68,68,0.15)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <AlertCircle
-                    className="h-5 w-5 flex-shrink-0 text-red-500"
-                    aria-hidden="true"
-                  />
-                  <h3 className="text-base font-semibold text-gray-800">
-                    Emergency symptoms? Call 911.
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Telehealth is ideal for non-emergency illnesses. If you are
-                  experiencing chest pain, difficulty breathing, severe
-                  bleeding, or any other emergency symptoms, call 911 or go to
-                  your nearest emergency room immediately.
                 </p>
               </div>
 
@@ -439,6 +471,132 @@ export default function MinorIllnessPage() {
         </div>
       </section>
 
+      {/* ── SAME-DAY CLINIC / URGENT CARE ALTERNATIVE ────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="same-day-clinic-heading"
+        style={{
+          backgroundImage: "url('/minor-illness-same-day.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom right',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(232,247,247,0.80) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Same-Day Clinic · OKC
+            </span>
+            <h2
+              id="same-day-clinic-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              A Same-Day Clinic and Urgent Care Alternative in OKC
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              For non-emergency illnesses, our visits are quicker and more
+              affordable than a typical urgent-care trip, with prescriptions
+              sent straight to your pharmacy when appropriate. Need{' '}
+              <strong style={{ color: 'var(--navy)' }}>
+                online UTI treatment in Oklahoma
+              </strong>{' '}
+              or{' '}
+              <strong style={{ color: 'var(--navy)' }}>
+                sinus infection treatment in OKC
+              </strong>
+              ? Both can often be handled the same day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHEN TO SEEK EMERGENCY CARE ──────────────────────────── */}
+      <section
+        aria-labelledby="emergency-care-heading"
+        style={{ backgroundColor: 'rgba(254,242,242,0.60)' }}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="flex flex-col items-center text-center">
+
+            {/* Alert card */}
+            <div
+              className="w-full max-w-2xl rounded-2xl p-8 md:p-10 mb-8"
+              style={{
+                backgroundColor: '#ffffff',
+                border: '2px solid rgba(239,68,68,0.30)',
+                boxShadow: '0 4px 24px rgba(239,68,68,0.10)',
+              }}
+            >
+              {/* Icon + heading */}
+              <div className="flex flex-col items-center gap-3 mb-5">
+                <div
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-full"
+                  style={{ backgroundColor: 'rgba(239,68,68,0.10)' }}
+                  aria-hidden="true"
+                >
+                  <AlertCircle className="h-6 w-6 text-red-500" />
+                </div>
+                <h2
+                  id="emergency-care-heading"
+                  className="text-2xl md:text-3xl font-bold text-gray-800"
+                >
+                  When to Seek Emergency Care
+                </h2>
+              </div>
+
+              {/* Divider */}
+              <div
+                className="h-px w-16 mx-auto mb-5"
+                style={{ backgroundColor: 'rgba(239,68,68,0.25)' }}
+                aria-hidden="true"
+              />
+
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                Minor illness care is not for emergencies. If you have chest
+                pain, difficulty breathing, severe bleeding, signs of stroke,
+                or any life-threatening symptoms,{' '}
+                <strong className="text-red-600">call 911</strong> or go to
+                your nearest emergency room immediately.
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Get Care Without Waiting at Urgent Care
+              </Link>
+              <a
+                href="tel:+14053498188"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Call (405) 349-8188
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── PRICING ──────────────────────────────────────────────── */}
       <section
         id="pricing"
@@ -459,7 +617,7 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--navy)' }}
             >
-              Simple Pricing — $50 Per Visit
+              Simple Pricing: $50 Per Visit
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
               No insurance required. No hidden fees. You know the cost before
@@ -586,7 +744,7 @@ export default function MinorIllnessPage() {
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
               Getting evaluated and treated online is simple. Book your visit,
-              describe your symptoms, and meet Dr. George by secure video —
+              describe your symptoms, and meet Dr. George by secure video,
               often the same day. Prescriptions are sent directly to your
               preferred Oklahoma pharmacy.
             </p>
@@ -717,8 +875,8 @@ export default function MinorIllnessPage() {
               When you&apos;re sick with a sinus infection, UTI, or cold, the
               last thing you want is to drive to a clinic, sit in a waiting
               room, and expose yourself to more illness. Telehealth lets you get
-              evaluated and treated from your couch — often the same day you
-              book — with a prescription sent directly to your pharmacy.
+              evaluated and treated from your couch, often the same day you
+              book, with a prescription sent directly to your pharmacy.
               It&apos;s faster, cheaper ($50 vs. a typical urgent care copay),
               and you skip the exposure and the commute.
             </p>
@@ -775,7 +933,7 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Minor Illness Telehealth — FAQs
+              Minor Illness Telehealth FAQs
             </h2>
           </div>
 
@@ -859,7 +1017,7 @@ export default function MinorIllnessPage() {
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
                   Discreet, compassionate virtual care for birth control, PCOS,
-                  menopause, hormonal health, and more — led by a provider who
+                  menopause, hormonal health, and more, led by a provider who
                   specializes in women&apos;s health.
                 </p>
               </div>
@@ -912,7 +1070,7 @@ export default function MinorIllnessPage() {
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
                   A medically supervised program built around your metabolic
-                  health — including GLP-1 medication management — overseen by
+                  health, including GLP-1 medication management, overseen by
                   Dr. George, BC-ADM certified.
                 </p>
               </div>
@@ -961,7 +1119,7 @@ export default function MinorIllnessPage() {
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Same-day virtual care for minor illnesses across Oklahoma. $50 per
-            visit — no insurance required, no waiting room.
+            visit. No insurance required, no waiting room.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

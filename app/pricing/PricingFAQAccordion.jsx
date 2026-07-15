@@ -9,24 +9,24 @@ import {
 
 const PRICING_FAQS = [
   {
-    q: 'Do I need insurance?',
-    a: 'No. All visits are cash-pay with flat pricing. No insurance is needed.',
+    q: 'How much does telehealth cost without insurance in Oklahoma?',
+    a: "Women's health $150, weight loss $250–$300, minor illness $50. Follow-ups $50. No insurance required.",
   },
   {
-    q: 'Are there any hidden fees?',
-    a: 'No. The prices listed are your total cost for the visit.',
+    q: 'How much does semaglutide cost?',
+    a: "Medication is billed separately and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
   },
   {
-    q: 'How much does semaglutide cost through Ebenezer?',
-    a: 'The initial weight loss consultation ($250–$300) includes medication management and medications shipped to you. Follow-up visits for ongoing management are $50.',
+    q: 'Are there hidden fees?',
+    a: 'No. The listed visit prices are your total visit cost.',
   },
   {
-    q: 'Can I use an HSA or FSA?',
-    a: 'In most cases, yes — telehealth visits typically qualify. Check with your plan administrator.',
+    q: 'Can I use an HSA/FSA?',
+    a: 'Often yes. Check with your plan administrator.',
   },
   {
-    q: 'Will you accept insurance in the future?',
-    a: 'We are working toward credentialing with major insurance plans and will announce availability when ready.',
+    q: 'Is in-person the same price as online?',
+    a: 'Yes. Visit pricing is the same whether you\'re seen in Oklahoma City or online.',
   },
 ]
 

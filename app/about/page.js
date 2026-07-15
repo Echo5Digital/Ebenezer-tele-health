@@ -150,7 +150,15 @@ export default function AboutPage() {
                 className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                About Ebenezer Telehealth: Dr. Susan George, DNP, APRN (Oklahoma City)
+                About Ebenezer Telehealth
+                <br />
+                <span className="text-3xl md:text-4xl" style={{ color: 'var(--primary)' }}>
+                  Dr. Susan George, DNP, APRN
+                </span>
+                <br />
+                <span className="text-2xl md:text-3xl font-medium text-gray-500">
+                  Oklahoma City
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Faith-driven, evidence-based telehealth care for women and families

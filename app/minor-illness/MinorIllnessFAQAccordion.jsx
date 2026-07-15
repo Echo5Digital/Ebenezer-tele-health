@@ -16,38 +16,37 @@ import {
 const faqs = [
   {
     id: 'mi-faq-1',
-    question: 'Can I really be treated for a sinus infection online?',
+    question: 'Can I get online UTI treatment or sinus infection treatment in Oklahoma?',
     answer:
-      "Yes. Most minor illnesses can be evaluated and treated by video. If Dr. George determines you need in-person care or testing, she'll guide you to the right facility.",
+      'Yes. Most minor illnesses can be evaluated online, with prescriptions sent to your pharmacy when appropriate.',
   },
   {
     id: 'mi-faq-2',
-    question: 'Can I get an antibiotic prescribed online?',
+    question: 'Is this a walk-in alternative in OKC?',
     answer:
-      'Yes, when clinically appropriate and within telemedicine scope. Prescriptions are sent electronically to your preferred pharmacy.',
+      'Yes. A same-day clinic option in person on Saturdays in Oklahoma City, or online across the state.',
   },
   {
     id: 'mi-faq-3',
-    question: 'How fast can I be seen?',
-    answer:
-      'Same-day appointments are often available. Book online or call (405) 349-8188.',
+    question: 'How much does it cost?',
+    answer: '$50 per visit. No insurance required.',
   },
   {
     id: 'mi-faq-4',
-    question: 'How much does it cost?',
-    answer: '$50 per visit, cash-pay. No insurance needed.',
+    question: 'Can I get a prescription or refill?',
+    answer:
+      'When clinically appropriate, prescriptions and basic refills can be provided.',
   },
   {
     id: 'mi-faq-5',
-    question: 'Where in Oklahoma do you serve?',
-    answer:
-      'Anywhere in the state — OKC, Tulsa, Edmond, Norman, Lawton, rural communities, and everywhere in between.',
+    question: 'How fast can I be seen?',
+    answer: 'Same-day online visits are often available.',
   },
   {
     id: 'mi-faq-6',
-    question: 'What if my condition is more serious?',
+    question: 'What if it\'s an emergency?',
     answer:
-      "If your symptoms require urgent or emergency care beyond telehealth, Dr. George will tell you clearly and help you find the right next step.",
+      'This service is not for emergencies. Call 911 or go to the nearest ER.',
   },
 ]
 

@@ -10,27 +10,24 @@ import {
 import WeightLossLocationFAQAccordion from '@/components/WeightLossLocationFAQAccordion'
 
 export const metadata = {
-  title: 'Weight Loss Clinic in Tulsa, OK',
+  title: 'Weight Loss Clinic in Tulsa, OK | Online Medical Weight Loss',
   description:
-    'Medical weight loss in Tulsa, OK — semaglutide, GLP-1 meds & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250. Book online today.',
+    'Weight loss clinic for Tulsa, OK: semaglutide & GLP-1 plans through secure online visits with a Board Certified provider. From $250. Book or call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/weight-loss-tulsa',
   },
 }
 
 const initialIncludes = [
-  'Comprehensive health evaluation and metabolic assessment',
+  'Full health and metabolic evaluation',
   'Personalized weight-loss plan',
-  'Medication management (including GLP-1/semaglutide when appropriate)',
-  'Weight-loss medications shipped directly to you',
   'Lab orders when needed',
 ]
 
 const followUpIncludes = [
-  'Progress review and dose titration',
-  'Side-effect monitoring',
-  'Nutrition guidance',
-  'Ongoing support and plan adjustments',
+  'Progress review',
+  'Dose adjustments if you\'re on medication',
+  'Ongoing support',
 ]
 
 const steps = [
@@ -47,7 +44,7 @@ const steps = [
   {
     number: '03',
     title: 'Meet Dr. George by Video',
-    description: 'Secure video evaluation — no commute required.',
+    description: 'Secure video evaluation, no commute required.',
   },
   {
     number: '04',
@@ -60,21 +57,21 @@ const steps = [
 const faqs = [
   {
     id: 'tulsa-faq-1',
-    question: 'Can I see a weight loss doctor online in Tulsa?',
+    question: 'Do you have a Tulsa office?',
     answer:
-      'Yes. Ebenezer Telehealth serves Tulsa and all of Oklahoma via secure telehealth.',
+      'No. We serve Tulsa through secure online visits.',
   },
   {
     id: 'tulsa-faq-2',
-    question: 'Do you prescribe semaglutide to patients in Tulsa?',
+    question: 'Can I get semaglutide in Tulsa through telehealth?',
     answer:
-      'Yes, when medically appropriate. Medications are shipped directly to your address.',
+      'When medically appropriate, after evaluation. Medication is billed separately and shipped to you.',
   },
   {
     id: 'tulsa-faq-3',
-    question: 'How much does it cost?',
+    question: 'What does it cost?',
     answer:
-      'Initial consultation: $250–$300. Follow-ups: $50. Cash-pay, no insurance required.',
+      '$250\u2013$300 initial, $50 follow-ups.',
   },
 ]
 
@@ -83,27 +80,42 @@ const faqs = [
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: 'Weight Loss Clinic in Tulsa, OK',
+  name: 'Weight Loss Clinic in Tulsa, OK | Online Medical Weight Loss',
   description:
-    'Medical weight loss in Tulsa, OK — semaglutide, GLP-1 medications & personalized plans via telehealth. Led by Dr. Susan George, DNP. From $250.',
+    'Weight loss clinic for Tulsa, OK: semaglutide and GLP-1 plans through secure online visits with a Board Certified provider. Oklahoma City-based practice serving Tulsa via telehealth. No Tulsa office. From $250. Medication billed separately.',
   url: 'https://www.ebenezertelehealth.com/weight-loss-tulsa',
   provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
   about: {
     '@type': 'MedicalProcedure',
-    name: 'Medical Weight Loss in Tulsa',
+    name: 'Medical Weight Loss for Tulsa Patients',
     procedureType: 'https://schema.org/TherapeuticProcedure',
+    description:
+      'Medically supervised weight loss via secure online visits, led by Dr. Susan George, DNP, APRN, BC-ADM. Board Certified provider builds a personalized plan around your metabolism and history. Semaglutide and GLP-1 medications available when medically appropriate after evaluation. Medication billed separately and shipped to you.',
+    followup: 'Follow-up visits at $50. Progress review, dose adjustments if on medication, and ongoing support.',
   },
-  areaServed: {
-    '@type': 'City',
-    name: 'Tulsa',
-    containedInPlace: { '@type': 'State', name: 'Oklahoma' },
+  availableService: {
+    '@type': 'MedicalTherapy',
+    name: 'Semaglutide and GLP-1 Weight Loss Treatment via Telehealth',
+    description:
+      'Semaglutide and GLP-1 receptor agonist therapy available to Tulsa patients through secure telehealth visits when medically appropriate after provider evaluation. Medication billed separately and shipped directly to the patient.',
   },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Tulsa',
+      containedInPlace: { '@type': 'State', name: 'Oklahoma' },
+    },
+    {
+      '@type': 'State',
+      name: 'Oklahoma',
+    },
+  ],
   offers: [
     {
       '@type': 'Offer',
       name: 'Weight Loss Initial Consultation',
       description:
-        'Comprehensive evaluation, personalized weight-loss plan, medication management including GLP-1/semaglutide when appropriate, medications shipped to you, and lab orders when needed.',
+        'Full health and metabolic evaluation, personalized weight-loss plan, and lab orders when needed. Medication, if prescribed, is billed separately on a cash-pay basis.',
       priceCurrency: 'USD',
       price: '250',
       priceSpecification: {
@@ -118,7 +130,7 @@ const pageSchema = {
       '@type': 'Offer',
       name: 'Weight Loss Follow-Up Visit',
       description:
-        'Progress review, dose titration, side-effect monitoring, nutrition guidance, and ongoing support and plan adjustments.',
+        'Progress review, dose adjustments if on medication, and ongoing support. Medication billed separately. Cash-pay, no insurance required.',
       priceCurrency: 'USD',
       price: '50',
       availability: 'https://schema.org/InStock',
@@ -190,14 +202,14 @@ export default function WeightLossTulsaPage() {
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
               style={{ color: 'var(--primary)' }}
             >
-              Weight Loss Clinic — Tulsa, OK
+              Weight Loss Clinic · Tulsa, OK
             </span>
 
             <h1
               className="text-4xl md:text-5xl font-bold mb-5"
               style={{ color: 'var(--navy)' }}
             >
-              Weight Loss Clinic in Tulsa — Online Medical Weight Loss
+              Weight Loss Clinic in Tulsa, OK: Online Medical Weight Loss
             </h1>
 
             {/* Answer-first AEO */}
@@ -209,22 +221,22 @@ export default function WeightLossTulsaPage() {
               }}
             >
               <p className="hero-answer-line">
-                Ebenezer Telehealth provides medically supervised weight loss
-                care to patients in Tulsa, OK through secure telehealth visits.
-                Our program includes personalized plans, semaglutide and GLP-1
-                medication management, and ongoing support — led by Susan
-                George, DNP, APRN, BC-ADM. Initial consultations start at $250.
+                Tulsa patients can access medically supervised weight loss
+                through secure online visits with Ebenezer Telehealth. Our
+                Board Certified provider builds a personalized plan that may
+                include semaglutide or GLP-1 medications when appropriate.
+                Consultations start at $250; medication billed separately.
               </p>
             </div>
 
             <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
-              Looking for a weight loss clinic in Tulsa? Ebenezer Telehealth
-              brings medical weight loss care directly to you — no drive, no
-              waiting room. Dr. Susan George, a Board Certified provider
-              specializing in metabolic health, evaluates your goals and health
-              profile by secure video, builds a personalized plan, and manages
-              your medication (including semaglutide and other GLP-1 options
-              when appropriate) with regular follow-up visits.
+              You don&apos;t have to drive across Tulsa or wait weeks for an
+              appointment to get real weight-loss support. As an online weight
+              loss clinic serving Tulsa, Ebenezer Telehealth connects you with
+              your provider by secure video, builds a plan around your
+              metabolism and history, and supports you with ongoing follow-up
+              from home. (We&apos;re an Oklahoma City-based practice serving
+              Tulsa via telehealth; there&apos;s no Tulsa office.)
             </p>
 
             {/* Badge */}
@@ -236,7 +248,7 @@ export default function WeightLossTulsaPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available — From $250
+              GLP-1 &amp; Semaglutide Available · From $250
             </div>
 
             {/* CTAs */}
@@ -277,7 +289,7 @@ export default function WeightLossTulsaPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--navy)' }}
             >
-              What&apos;s Included in Your Weight Loss Program
+              What&apos;s Included in Your Tulsa Weight Loss Program
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
               No insurance required. No hidden fees. Transparent pricing for
@@ -285,10 +297,10 @@ export default function WeightLossTulsaPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Initial card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Initial Consultation Card */}
             <div
-              className="rounded-2xl p-8 border flex flex-col"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
                 background:
                   'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
@@ -296,14 +308,11 @@ export default function WeightLossTulsaPage() {
               }}
             >
               <h3
-                className="text-xl font-semibold mb-1"
+                className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
                 Initial Consultation
               </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                Comprehensive evaluation and program setup.
-              </p>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
@@ -313,7 +322,7 @@ export default function WeightLossTulsaPage() {
                 </span>
                 <span className="text-sm text-gray-500">– $300</span>
               </div>
-              <ul className="space-y-3 flex-1">
+              <ul className="space-y-3 mb-8 flex-1">
                 {initialIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2
@@ -325,26 +334,28 @@ export default function WeightLossTulsaPage() {
                   </li>
                 ))}
               </ul>
+              <Link
+                href="/contact"
+                className="btn-primary text-base w-full text-center"
+              >
+                Book Your Consultation
+              </Link>
             </div>
 
-            {/* Follow-up card */}
+            {/* Follow-Up Visits Card */}
             <div
-              className="rounded-2xl p-8 border flex flex-col"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
-                background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                borderColor: 'rgba(26,166,183,0.30)',
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                borderColor: 'rgba(26,166,183,0.20)',
               }}
             >
               <h3
-                className="text-xl font-semibold mb-1"
+                className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
                 Follow-Up Visits
               </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                Ongoing monitoring, dose adjustments, and support.
-              </p>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
@@ -354,7 +365,7 @@ export default function WeightLossTulsaPage() {
                 </span>
                 <span className="text-sm text-gray-500">per visit</span>
               </div>
-              <ul className="space-y-3 flex-1 mb-8">
+              <ul className="space-y-3 mb-8 flex-1">
                 {followUpIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2
@@ -368,32 +379,48 @@ export default function WeightLossTulsaPage() {
               </ul>
               <Link
                 href="/contact"
-                className="btn-primary text-base w-full mt-auto"
+                className="btn-outline text-base w-full text-center"
               >
                 Book Your Consultation
               </Link>
             </div>
           </div>
 
-          {/* Cash-pay note */}
-          <div
-            className="max-w-4xl mx-auto mt-6 rounded-xl p-5 flex items-start gap-3"
-            style={{
-              backgroundColor: 'rgba(151,206,204,0.15)',
-              border: '1px solid rgba(26,166,183,0.20)',
-            }}
-            role="note"
-          >
-            <Info
-              className="h-5 w-5 mt-0.5 flex-shrink-0"
-              style={{ color: 'var(--primary)' }}
-              aria-hidden="true"
-            />
-            <p className="text-sm text-gray-700">
-              All visits are by <strong>secure video</strong> from anywhere in
-              Oklahoma. Medications shipped directly to you.{' '}
-              <strong>Cash-pay only</strong> — no insurance required.
-            </p>
+          {/* Medication note */}
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="mt-6 rounded-xl p-5 flex items-start gap-3"
+              style={{
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.20)',
+              }}
+              role="note"
+            >
+              <Info
+                className="h-5 w-5 mt-0.5 flex-shrink-0"
+                style={{ color: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              <p className="text-sm text-gray-700">
+                <strong>Medication</strong> is billed separately if prescribed.
+                We operate on a <strong>cash-pay basis</strong> with no insurance
+                required, no hidden fees.
+              </p>
+            </div>
+
+            <div className="mt-6 text-center">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-1.5 text-base font-semibold group"
+                style={{ color: 'var(--primary)' }}
+              >
+                See pricing
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -425,12 +452,25 @@ export default function WeightLossTulsaPage() {
               How It Works for Tulsa Patients
             </h2>
             <p
-              className="text-base md:text-lg max-w-2xl mx-auto"
+              className="text-base md:text-lg max-w-2xl mx-auto mb-4"
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
-              Four steps from booking to your personalized plan — all via
-              secure video, no commute required.
+              Book online, complete your intake, meet your provider by video,
+              and get your plan. Medication, if prescribed, ships to you.
+              Initial consult $250&ndash;$300; follow-ups $50; medication billed
+              separately.
             </p>
+            <Link
+              href="/weight-loss"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold group"
+              style={{ color: '#97CECC' }}
+            >
+              See the full program
+              <ArrowRight
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -473,26 +513,24 @@ export default function WeightLossTulsaPage() {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="btn-primary text-base px-8 py-3.5">
-              Book Your Consultation
+              Start Your Online Visit
             </Link>
-            <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              or{' '}
-              <a
-                href="tel:+14053498188"
-                className="font-semibold"
-                style={{ color: '#97CECC' }}
-              >
-                call (405) 349-8188
-              </a>
-            </p>
+            <a
+              href="tel:+14053498188"
+              className="text-base font-semibold"
+              style={{ color: '#97CECC' }}
+            >
+              Call (405) 349-8188
+            </a>
           </div>
         </div>
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────── */}
       <section
+        id="faq"
         className="relative overflow-hidden"
         aria-labelledby="tulsa-faq-heading"
         style={{
@@ -520,7 +558,7 @@ export default function WeightLossTulsaPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Frequently Asked Questions — Weight Loss in Tulsa
+              Frequently Asked Questions: Online Weight Loss &amp; Semaglutide in Tulsa
             </h2>
           </div>
 
@@ -590,7 +628,7 @@ export default function WeightLossTulsaPage() {
                   Full Weight Loss Program
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-600">
-                  Learn everything about our medical weight loss program —
+                  Learn everything about our medical weight loss program:
                   semaglutide, GLP-1 management, and what to expect at every
                   step.
                 </p>
@@ -739,11 +777,12 @@ export default function WeightLossTulsaPage() {
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{ color: 'var(--primary)' }}
           >
-            Ready to Start Your Weight Loss Journey in Tulsa?
+              Start Your Online Weight Loss Journey in Tulsa, OK
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Medically supervised weight loss — GLP-1 medications, personalized
-            plans, real follow-up. Starting at $250.
+            Our Tulsa weight loss clinic is fully online. Semaglutide and
+            GLP-1 plans when appropriate, personalized care, real follow-up.
+            Starting at $250.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

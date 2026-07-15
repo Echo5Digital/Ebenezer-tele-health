@@ -4,12 +4,66 @@ import { CheckCircle2, ShieldCheck, Info, Award } from 'lucide-react'
 import WomensHealthFAQAccordion from './WomensHealthFAQAccordion'
 
 export const metadata = {
-  title: "Women's Health Telehealth in Oklahoma",
+  title: "Women's Health Clinic in Oklahoma City",
   description:
-    "Online women's health care across Oklahoma — birth control, PCOS, menopause & hormones. See Dr. Susan George, DNP, APRN. Cash-pay from $150. Book online.",
+    "Women's health clinic in Oklahoma City - birth control, PCOS, menopause & more. In-person by appointment or women's telehealth statewide. From $150. (405) 349 8188.",
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/womens-health',
   },
+}
+
+const womensHealthPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: "Women's Health Clinic in Oklahoma City | Ebenezer Telehealth",
+  description:
+    "Women's health clinic in Oklahoma City offering birth control, PCOS treatment, menopause care, and hormonal health support. In-person on Saturdays in OKC or by telehealth across Oklahoma. Cash-pay from $150.",
+  url: 'https://www.ebenezertelehealth.com/womens-health',
+  about: {
+    '@type': 'MedicalProcedure',
+    name: "Women's Health Care",
+    procedureType: 'https://schema.org/TherapeuticProcedure',
+    description:
+      "Comprehensive women's health services including birth control and contraceptive counseling, PCOS management, menopause and perimenopause care, hormonal and reproductive health, and related lab work. Available in person on Saturdays in Oklahoma City or by telehealth across Oklahoma.",
+  },
+  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  areaServed: { '@type': 'State', name: 'Oklahoma' },
+  availableService: [
+    {
+      '@type': 'MedicalTherapy',
+      name: 'Birth Control and Contraceptive Counseling',
+    },
+    {
+      '@type': 'MedicalTherapy',
+      name: 'PCOS Treatment and Management',
+    },
+    {
+      '@type': 'MedicalTherapy',
+      name: 'Menopause and Perimenopause Care',
+    },
+    {
+      '@type': 'MedicalTherapy',
+      name: 'Hormonal and Reproductive Health',
+    },
+  ],
+  offers: [
+    {
+      '@type': 'Offer',
+      name: "Women's Health Initial Visit",
+      priceCurrency: 'USD',
+      price: '150',
+      description:
+        'Comprehensive symptom review, lab orders when clinically appropriate, lab result interpretation, and personalized treatment plan.',
+    },
+    {
+      '@type': 'Offer',
+      name: "Women's Health Follow-Up Visit",
+      priceCurrency: 'USD',
+      price: '50',
+      description:
+        'Ongoing assessment, lab review and monitoring, treatment adjustments, and continued support.',
+    },
+  ],
 }
 
 const faqSchema = {
@@ -18,50 +72,50 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I get birth control online in Oklahoma?',
+      name: 'Can I get birth control in Oklahoma City or online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Ebenezer Telehealth provides contraceptive counseling and prescriptions by secure video across Oklahoma. We offer all hormonal and non-hormonal options — including pills, patches, rings, injections, IUDs, and implants — with prescriptions sent electronically to your preferred pharmacy.',
+        text: "Yes. In person on Saturdays in OKC or by women's telehealth across Oklahoma. Prescriptions go to your pharmacy.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you treat PCOS and menopause online?',
+      name: 'Do you treat PCOS and menopause?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Both are core services at Ebenezer Telehealth. We offer comprehensive PCOS management including hormonal and metabolic assessment and medication management, and individualized menopause and perimenopause care with hormonal and non-hormonal options and ongoing symptom tracking.',
+        text: "Yes. PCOS treatment and menopause care are core parts of our women's health services.",
       },
     },
     {
       '@type': 'Question',
-      name: "Do I need insurance for a women's health visit?",
+      name: 'Is this a good OBGYN alternative?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "No. We are cash-pay with transparent pricing — $150 initial visit, $50 follow-up. You will know your full cost before you book. No surprise bills, no insurance claims, no pre-authorization delays. We are in the process of becoming credentialed with major insurance plans.",
+        text: "For many everyday needs, yes. For concerns needing a specialist or procedures, we'll refer you appropriately.",
       },
     },
     {
       '@type': 'Question',
-      name: "Where in Oklahoma can I be seen for women's health?",
+      name: "How much does a women's health visit cost?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Anywhere in Oklahoma — including Oklahoma City, Tulsa, Edmond, Norman, Lawton, and rural communities — as long as you're in Oklahoma at the time of your visit. Telehealth removes geographic barriers so women across metro and rural Oklahoma can access specialized care.",
+        text: 'Initial visits are $150; follow-ups are $50. No insurance required.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you send prescriptions to my pharmacy?',
+      name: 'Are visits private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Prescriptions are sent electronically to any pharmacy in Oklahoma when appropriate. After your virtual visit, Dr. Susan George will send any prescriptions directly to your preferred pharmacy so you can pick them up without extra steps.',
+        text: 'Yes. All visits are confidential and HIPAA-compliant.',
       },
     },
     {
       '@type': 'Question',
-      name: "Are women's health visits private?",
+      name: 'What if my symptoms are severe?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. All visits are HIPAA-compliant and confidential, conducted via an encrypted, secure video platform. You speak only with Dr. Susan George — no rotating staff, no third-party networks. Your health information is never shared without your explicit consent.',
+        text: 'For severe or emergency symptoms, call 911 or go to your nearest ER.',
       },
     },
   ],
@@ -98,7 +152,7 @@ const menopauseSymptoms = [
 const pcosServices = [
   'Evaluation of menstrual irregularities and symptoms',
   'Metabolic and hormonal assessment',
-  'Medication management — cycle regulation and insulin-sensitizing options',
+  'Medication management: cycle regulation and insulin-sensitizing options',
   'Weight-management strategies',
 ]
 
@@ -144,7 +198,7 @@ const pricingFollowupFeatures = [
 const whyPoints = [
   {
     title: "A provider who specializes in women's health",
-    description: 'Every visit is with Dr. George — not a generalist.',
+    description: 'Every visit is with Dr. George, not a generalist.',
   },
   {
     title: 'Care from anywhere in Oklahoma',
@@ -156,7 +210,7 @@ const whyPoints = [
   },
   {
     title: 'Private, secure, HIPAA-compliant visits',
-    description: 'Confidential, encrypted video — every time.',
+    description: 'Confidential, encrypted video, every time.',
   },
   {
     title: 'Compassionate, dignified, faith-driven care',
@@ -167,7 +221,11 @@ const whyPoints = [
 export default function WomensHealthPage() {
   return (
     <>
-      {/* JSON-LD FAQ Schema */}
+      {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(womensHealthPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -220,17 +278,18 @@ export default function WomensHealthPage() {
                 className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                Women&apos;s Health Telehealth —{' '}
+                Women&apos;s Health Clinic in Oklahoma City{' '}
                 <span className="block sm:inline">
-                  Care for Women Across Oklahoma
+                  In-Person &amp; Online
                 </span>
               </h1>
 
               <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
-                Compassionate, evidence-based virtual care for birth control,
-                PCOS, menopause, and hormonal health — from anywhere in
-                Oklahoma. See a provider who specializes in women&apos;s health,
-                with transparent cash pricing and no insurance hurdles.
+                Compassionate, evidence-based care for birth control, PCOS,
+                menopause, and hormonal health. In-person in Oklahoma City or
+                by secure video anywhere in Oklahoma. See a provider who
+                specializes in women&apos;s health, with transparent cash
+                pricing and no insurance hurdles.
               </p>
 
               <div
@@ -300,12 +359,87 @@ export default function WomensHealthPage() {
               className="answer-line text-base md:text-lg leading-relaxed"
               style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Telehealth provides online women&apos;s health care to
-              women across Oklahoma — including birth control, PCOS, menopause,
-              and hormonal management — through secure video visits with
-              Dr. Susan George, DNP, APRN, who specializes in women&apos;s health.
-              Cash-pay visits start at $150.
+              Ebenezer Telehealth is a women&apos;s health clinic in Oklahoma
+              City offering in-person visits on Saturdays and women&apos;s
+              telehealth across Oklahoma. We provide birth control in Oklahoma
+              City, PCOS treatment, menopause care, and hormonal health support.
+              Visits start at $150.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INTRO ─────────────────────────────────────────────────── */}
+      <section className="bg-white" aria-label="Introduction">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Left — text */}
+            <div>
+              <p
+                className="text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                About Our Clinic
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mt-3">
+                Women&apos;s health deserves a provider who listens. As a
+                women&apos;s health clinic in Oklahoma City, we take time to
+                understand what&apos;s really going on, whether that&apos;s
+                finding the right birth control, managing PCOS, navigating
+                menopause, or sorting out a hormonal issue that&apos;s been
+                dismissed elsewhere. See us in person on Saturdays in Oklahoma
+                City, or use women&apos;s telehealth from anywhere in the state.
+                Your care is led by Dr. Susan George, DNP, APRN, a
+                women&apos;s health specialist.
+              </p>
+            </div>
+
+            {/* Right — trust-signal card */}
+            <div
+              className="rounded-2xl p-7 md:p-8"
+              style={{
+                background:
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                border: '1px solid rgba(26,166,183,0.20)',
+                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+              }}
+            >
+              <ul className="space-y-5">
+                {[
+                  {
+                    label: 'In-Person Saturdays',
+                    detail: 'Oklahoma City, by appointment',
+                  },
+                  {
+                    label: 'Telehealth Statewide',
+                    detail: 'Secure video visits from anywhere in Oklahoma',
+                  },
+                  {
+                    label: 'From $150',
+                    detail: 'Transparent cash pricing, no surprise bills',
+                  },
+                ].map((item) => (
+                  <li key={item.label} className="flex items-start gap-4">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p
+                        className="font-semibold leading-snug"
+                        style={{ color: 'var(--navy)' }}
+                      >
+                        {item.label}
+                      </p>
+                      <p className="text-sm text-gray-600 mt-0.5">
+                        {item.detail}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -351,7 +485,7 @@ export default function WomensHealthPage() {
                   className="text-base md:text-lg font-medium leading-relaxed"
                   style={{ color: '#1AA6B7' }}
                 >
-                  Yes — you can get birth control online in Oklahoma through
+                  Yes. You can get birth control online in Oklahoma through
                   Ebenezer Telehealth. We provide contraceptive counseling and
                   prescriptions by secure video, helping you choose the method
                   that fits your health, lifestyle, and goals.
@@ -429,7 +563,7 @@ export default function WomensHealthPage() {
             </div>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
               We provide accessible, evidence-based telemedicine designed to
-              support women through every stage of life — with personalized
+              support women through every stage of life, with personalized
               treatment, compassionate guidance, and convenient virtual visits
               that fit your schedule, wherever you are in Oklahoma.
             </p>
@@ -460,6 +594,110 @@ export default function WomensHealthPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT WE HELP WITH ────────────────────────────────────── */}
+      <section
+        aria-labelledby="what-we-help-heading"
+        style={{ backgroundColor: 'rgba(151,206,204,0.10)' }}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="text-center mb-8 md:mb-10">
+            <h2
+              id="what-we-help-heading"
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: 'var(--navy)' }}
+            >
+              What We Help With
+            </h2>
+            <div className="flex items-center justify-center gap-2" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+          </div>
+          <div
+            className="rounded-2xl p-7 md:p-8 max-w-3xl mx-auto text-center"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.80)',
+              border: '1px solid rgba(26,166,183,0.15)',
+              boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+            }}
+          >
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              Birth control and contraceptive counseling, PCOS management,
+              menopause and perimenopause care, hormonal and reproductive health
+              concerns, and related lab work with results reviewed personally. For
+              concerns outside our scope, we&apos;ll help you find the right
+              specialist.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OBGYN ALTERNATIVE ────────────────────────────────────── */}
+      <section
+        aria-labelledby="obgyn-alt-heading"
+        style={{ backgroundColor: 'var(--cream)' }}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <h2
+            id="obgyn-alt-heading"
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{ color: 'var(--navy)' }}
+          >
+            An OBGYN Alternative in OKC for Everyday Women&apos;s Health
+          </h2>
+          <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+            <div
+              className="h-[3px] w-10 rounded-full"
+              style={{ backgroundColor: 'var(--primary)' }}
+            />
+            <div
+              className="h-[3px] w-4 rounded-full"
+              style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+            />
+            <div
+              className="h-[3px] w-2 rounded-full"
+              style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+            />
+          </div>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mb-10">
+            For many everyday women&apos;s health needs, you don&apos;t need to
+            wait months for a specialist. As an accessible OBGYN alternative in
+            OKC, we offer personal care in Oklahoma City or online, often
+            much sooner.
+          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/contact"
+              className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto text-center"
+            >
+              Book a Women&apos;s Health Visit
+            </Link>
+            <Link
+              href="/contact"
+              className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto text-center"
+            >
+              Ask About Saturday OKC Appointments
+            </Link>
+            <a
+              href="tel:+14053498188"
+              className="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-primary font-semibold text-base transition-colors w-full sm:w-auto px-7 py-3.5"
+            >
+              Call (405) 349-8188
+            </a>
           </div>
         </div>
       </section>
@@ -538,7 +776,7 @@ export default function WomensHealthPage() {
                 className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Menopause &amp; Hormone Management — Hormonal and Non-Hormonal
+                Menopause &amp; Hormone Management: Hormonal and Non-Hormonal
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
@@ -567,14 +805,14 @@ export default function WomensHealthPage() {
                   Menopause is a natural transition, but the symptoms can
                   disrupt daily life. We provide individualized virtual care
                   to help Oklahoma women manage menopause and perimenopause
-                  comfortably — with hormonal or non-hormonal options based on
+                  comfortably, with hormonal or non-hormonal options based on
                   what&apos;s right for you.
                 </p>
               </div>
 
               <p className="text-base text-gray-600 leading-relaxed">
                 We evaluate symptoms, review lab results when needed, and build
-                a personalized plan. Every recommendation is individualized —
+                a personalized plan. Every recommendation is individualized,
                 because no two women experience menopause the same way.
               </p>
             </div>
@@ -625,14 +863,14 @@ export default function WomensHealthPage() {
                 >
                   PCOS affects hormones, metabolism, and reproductive health.
                   Ebenezer Telehealth offers comprehensive virtual PCOS care to
-                  Oklahoma women — helping you manage symptoms today and reduce
+                  Oklahoma women, helping you manage symptoms today and reduce
                   long-term health risks.
                 </p>
               </div>
 
               <p className="text-base text-gray-600 leading-relaxed">
                 Because Dr. George is also Board Certified in Advanced Diabetes
-                Management (BC-ADM), you get genuine metabolic expertise — not
+                Management (BC-ADM), you get genuine metabolic expertise, not
                 a one-size-fits-all script. We build a sustainable,
                 individualized plan for both short-term relief and long-term
                 health.
@@ -882,7 +1120,7 @@ export default function WomensHealthPage() {
             <p className="text-sm text-gray-700">
               We currently operate{' '}
               <strong>cash-pay</strong>. Insurance options are coming as we
-              expand — we are in the process of becoming credentialed with major
+              expand. We are in the process of becoming credentialed with major
               insurance plans.
             </p>
           </div>
@@ -923,7 +1161,7 @@ export default function WomensHealthPage() {
                 Nurse who specializes in women&apos;s health and is Board
                 Certified in Advanced Diabetes Management (BC-ADM). She
                 delivers compassionate, faith-driven, evidence-based care to
-                women across Oklahoma — with the integrity, dignity, and
+                women across Oklahoma, with the integrity, dignity, and
                 personal attention every patient deserves.
               </p>
 
@@ -948,14 +1186,14 @@ export default function WomensHealthPage() {
                   style={{ color: 'var(--navy)' }}
                 >
                   Every woman deserves honest, compassionate care she can
-                  actually access — wherever she lives in Oklahoma.
+                  actually access, wherever she lives in Oklahoma.
                 </p>
                 <footer className="mt-3 pl-6">
                   <cite
                     className="text-sm font-semibold not-italic"
                     style={{ color: 'var(--primary)' }}
                   >
-                    — Dr. Susan George, DNP, APRN, BC-ADM
+                    Dr. Susan George, DNP, APRN, BC-ADM
                   </cite>
                 </footer>
               </blockquote>
@@ -1097,7 +1335,7 @@ export default function WomensHealthPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Women&apos;s Health Telehealth — FAQs
+              Women&apos;s Health Telehealth FAQs
             </h2>
           </div>
 
@@ -1133,7 +1371,7 @@ export default function WomensHealthPage() {
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Compassionate, affordable women&apos;s health care for women across
-            Oklahoma — without the wait.
+            Oklahoma, without the wait.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -1152,7 +1390,7 @@ export default function WomensHealthPage() {
           </div>
 
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Serving women statewide across Oklahoma
+            Ebenezer Telehealth &middot; Women&apos;s Health Clinic in Oklahoma City &middot; Telehealth statewide
             &middot; (405) 349-8188 &middot; ebenezertelehealth.com
           </p>
         </div>

@@ -14,34 +14,31 @@ import {
 import WeightLossFAQAccordion from './WeightLossFAQAccordion'
 
 export const metadata = {
-  title: 'Medical Weight Loss Clinic in Oklahoma',
+  title: 'Weight Loss Clinic in Oklahoma City',
   description:
-    'Medically supervised weight loss in Oklahoma — semaglutide, GLP-1 medications & personalized plans. Led by a Board Certified provider. From $250. Book online.',
+    'Medical weight loss clinic in Oklahoma City. Semaglutide and GLP-1 plans, in-person or online statewide. Board Certified provider. From $250. Call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezertelehealth.com/weight-loss',
   },
 }
 
-const initialIncludes = [
-  'Comprehensive health evaluation and metabolic assessment',
+const pricingInitialFeatures = [
+  'Full health and metabolic evaluation',
   'Personalized weight-loss plan',
-  'Medication management (including GLP-1/semaglutide when appropriate)',
-  'Weight-loss medications shipped directly to you',
   'Lab orders when needed',
 ]
 
-const followUpIncludes = [
-  'Progress review and dose titration',
-  'Side-effect monitoring',
-  'Nutrition guidance',
-  'Ongoing support and plan adjustments',
+const pricingFollowUpFeatures = [
+  'Progress review',
+  'Dose adjustments if you\'re on medication',
+  'Ongoing support',
 ]
 
 const whoForReasons = [
   'Difficulty losing weight despite diet and exercise',
   'Interest in GLP-1 medications like semaglutide',
   'Insulin resistance or metabolic syndrome',
-  'Wanting a real provider — not a faceless online pill mill',
+  'Wanting a real provider, not a faceless online pill mill',
 ]
 
 const steps = [
@@ -87,9 +84,9 @@ const oklahomaCities = [
 const weightLossPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: 'Medical Weight Loss Clinic in Oklahoma',
+  name: 'Weight Loss Clinic in Oklahoma City: Medical Weight Loss',
   description:
-    'Medically supervised weight loss in Oklahoma — semaglutide, GLP-1 medications & personalized plans. Led by a Board Certified provider. From $250.',
+    'Medical weight loss clinic in Oklahoma City. Semaglutide and GLP-1 plans when medically appropriate, available in person on Saturdays in OKC or online statewide. Board Certified provider. From $250. Medication billed separately.',
   url: 'https://www.ebenezertelehealth.com/weight-loss',
   mainEntityOfPage: 'https://www.ebenezertelehealth.com/weight-loss',
   specialty: 'Endocrinology',
@@ -98,16 +95,19 @@ const weightLossPageSchema = {
     name: 'Medical Weight Loss Management',
     procedureType: 'https://schema.org/TherapeuticProcedure',
     description:
-      'Medically supervised weight loss program including GLP-1/semaglutide medication management, personalized plans, and ongoing monitoring led by Dr. Susan George, DNP, APRN, BC-ADM.',
+      'Medically supervised weight loss program including GLP-1/semaglutide evaluation and management when appropriate, personalized plans, and ongoing monitoring. Available in person on Saturdays in Oklahoma City and via telehealth statewide. Led by Dr. Susan George, DNP, APRN, BC-ADM.',
   },
   provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
-  areaServed: { '@type': 'State', name: 'Oklahoma' },
+  areaServed: [
+    { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+    { '@type': 'State', name: 'Oklahoma' },
+  ],
   offers: [
     {
       '@type': 'Offer',
       name: 'Weight Loss Initial Consultation',
       description:
-        'Comprehensive evaluation, personalized weight-loss plan, medication management including GLP-1/semaglutide when appropriate, medications shipped to you, and lab orders when needed.',
+        'Full health and metabolic evaluation, personalized weight-loss plan, and lab orders when needed. Medication, if prescribed, is billed separately.',
       priceCurrency: 'USD',
       price: '250',
       priceSpecification: {
@@ -122,7 +122,7 @@ const weightLossPageSchema = {
       '@type': 'Offer',
       name: 'Weight Loss Follow-Up Visit',
       description:
-        'Progress review, dose titration, side-effect monitoring, nutrition guidance, and ongoing support and plan adjustments.',
+        'Progress review, dose adjustments if on medication, and ongoing support. Medication costs are billed separately.',
       priceCurrency: 'USD',
       price: '50',
       availability: 'https://schema.org/InStock',
@@ -139,47 +139,47 @@ const weightLossFAQSchema = {
       name: 'Do you prescribe semaglutide for weight loss in Oklahoma?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Ebenezer Telehealth evaluates for semaglutide and other GLP-1 receptor agonist medications when clinically appropriate. Medications are shipped directly to you.',
+        text: 'When medically appropriate, yes. Eligibility depends on your health history and a provider evaluation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does the weight loss program cost?',
+      name: 'How much does the program cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Initial consultation is $250–$300 and includes evaluation, personalized weight-loss plan, medication management, and medications shipped to you. Follow-up visits are $50.',
+        text: 'Initial consultation is $250–$300; follow-ups are $50. Medication, if prescribed, is billed separately.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do I need insurance for weight loss treatment?',
+      name: 'Is there a weight loss clinic near me in OKC?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Ebenezer Telehealth is cash-pay with transparent pricing. You will know the full cost before you book.',
+        text: 'Yes. In person on Saturdays in Oklahoma City, and online statewide.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Where in Oklahoma can I access the weight loss program?',
+      name: 'Can I do medical weight loss entirely online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Anywhere in Oklahoma — including OKC, Tulsa, Moore, Owasso, Edmond, Norman, Lawton, and rural communities — as long as you are in Oklahoma at the time of your visit.',
+        text: 'Yes, across Oklahoma.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How is Ebenezer Telehealth different from a med spa?',
+      name: 'Is this a quick fix?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Dr. George is a Board Certified Doctor of Nursing Practice with metabolic expertise — not an aesthetics provider. Your care is medically supervised with real follow-up, dose titration, and ongoing monitoring.',
+        text: 'No. It\'s a medically supervised program with real follow-up.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What if weight loss medication is not right for me?',
+      name: 'What if medication isn\'t right for me?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We will tell you. Not every patient is a candidate for GLP-1 therapy. We evaluate honestly and recommend the best path for your health.',
+        text: 'We\'ll tell you honestly and focus on the approach that fits your health.',
       },
     },
   ],
@@ -249,12 +249,12 @@ export default function WeightLossPage() {
               className="text-4xl md:text-5xl font-bold mb-5"
               style={{ color: 'var(--navy)' }}
             >
-              Medical Weight Loss Clinic — Online Care Across Oklahoma
+              Weight Loss Clinic in Oklahoma City: Medical Weight Loss
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
-              A medically supervised, evidence-based weight-loss program —
-              including GLP-1 medication management — delivered by secure video
+              A medically supervised, evidence-based weight-loss program
+              including GLP-1 medication management, delivered by secure video
               from anywhere in Oklahoma. Overseen by Dr. Susan George, DNP,
               APRN, BC-ADM, who is Board Certified in Advanced Diabetes
               Management.
@@ -269,7 +269,7 @@ export default function WeightLossPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available — From $250
+              GLP-1 &amp; Semaglutide Available. From $250
             </div>
 
             {/* CTAs */}
@@ -318,13 +318,12 @@ export default function WeightLossPage() {
               className="hero-answer-line text-base md:text-lg leading-relaxed"
               style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Telehealth is a medical weight loss clinic serving
-              patients across Oklahoma through secure telehealth visits. We
-              offer medically supervised weight-loss programs — including
-              semaglutide and other GLP-1 medications — with personalized care
-              plans, responsible medication management, and ongoing support, led
-              by Dr. Susan George, DNP, APRN, BC-ADM. Initial consultations
-              start at $250.
+              Ebenezer Telehealth is a weight loss clinic in Oklahoma City
+              offering medically supervised weight loss in person and by
+              telehealth across Oklahoma. Our GLP-1 weight loss program in
+              Oklahoma may include semaglutide when appropriate, led by a Board
+              Certified provider. Initial consultations start at $250;
+              medication, if prescribed, is billed separately.
             </p>
           </div>
         </div>
@@ -334,53 +333,45 @@ export default function WeightLossPage() {
       <section className="bg-white" aria-labelledby="what-is-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
 
-          <div className="mb-10 md:mb-14">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Our Approach
-            </span>
-            <h2
-              id="what-is-heading"
-              className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
-            >
-              What Is Medical Weight Loss at Ebenezer Telehealth?
-            </h2>
-            <div className="flex items-center gap-2 mb-5" aria-hidden="true">
-              <div
-                className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
-              />
-              <div
-                className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
-              />
-              <div
-                className="h-[3px] w-2 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
-              />
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                Our Approach
+              </span>
+              <h2
+                id="what-is-heading"
+                className="text-3xl md:text-4xl font-bold mb-3"
+                style={{ color: 'var(--navy)' }}
+              >
+                What Is Medical Weight Loss in OKC?
+              </h2>
+              <div className="flex items-center gap-2 mb-5" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 Medical weight loss is a clinically guided approach to losing
-                weight under the supervision of a licensed healthcare provider —
-                not a quick fix, a fad diet, or a med-spa gimmick. At Ebenezer
-                Telehealth, Dr. George evaluates your metabolic health, medical
-                history, and goals, then builds a personalized plan that may
-                include GLP-1 medications (such as semaglutide), lifestyle
-                guidance, and ongoing monitoring.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Because Dr. George is Board Certified in Advanced Diabetes
-                Management, you get genuine metabolic expertise — the clinical
-                knowledge to manage insulin resistance, metabolic syndrome, and
-                the hormonal factors that make weight loss harder than willpower
-                alone.
+                weight under the care of a licensed provider, not a fad diet
+                or a one-size-fits-all program. At our Oklahoma City weight loss
+                clinic, we look at your full picture: your health history, your
+                metabolism, and what&apos;s gotten in the way before. Our
+                provider is Board Certified in Advanced Diabetes Management,
+                which means real understanding of the metabolic and hormonal
+                factors like insulin resistance that make weight loss harder
+                than willpower alone.
               </p>
             </div>
 
@@ -412,7 +403,7 @@ export default function WeightLossPage() {
               <p className="text-gray-600 mb-5 leading-relaxed text-sm md:text-base">
                 The Board Certified in Advanced Diabetes Management (BC-ADM)
                 credential represents real expertise in the metabolic science
-                behind weight gain — insulin resistance, hormonal factors, and
+                behind weight gain: insulin resistance, hormonal factors, and
                 medication management. Commercially marketed programs
                 don&apos;t account for your individual health history,
                 metabolism, or medications. Dr. George does.
@@ -421,6 +412,77 @@ export default function WeightLossPage() {
                 Book a Consultation
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEMAGLUTIDE & GLP-1 (NEW) ────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="semaglutide-heading"
+        style={{
+          backgroundImage: "url('/semaglitude.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(232,247,247,0.60)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="max-w-4xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Semaglutide &amp; GLP-1
+            </span>
+            <h2
+              id="semaglutide-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Semaglutide and GLP-1{' '}
+              <br />
+              Weight Loss in Oklahoma
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
+              Ebenezer Telehealth may prescribe semaglutide and other GLP-1
+              medications for weight loss in Oklahoma City and statewide when
+              it&apos;s medically appropriate for you. GLP-1 weight loss
+              medications work with your body&apos;s natural appetite and
+              blood-sugar signals, and they&apos;ve shown meaningful results for
+              many people. They aren&apos;t right for everyone, though.
+              Whether they&apos;re a fit depends on your health history and a
+              provider evaluation.
+            </p>
+            <p className="text-base text-gray-700 leading-relaxed mb-8">
+              If you&apos;ve searched &ldquo;semaglutide near me,&rdquo;
+              here&apos;s the honest version: we&apos;ll talk through whether
+              GLP-1 therapy makes sense for you rather than handing everyone the
+              same prescription. If medication is part of your plan, its cost is
+              billed separately from your visit.
+            </p>
+            <Link href="/contact" className="btn-primary text-base px-7 py-3.5">
+              Get Evaluated for GLP-1 Therapy
+            </Link>
           </div>
         </div>
       </section>
@@ -453,115 +515,97 @@ export default function WeightLossPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {/* Initial Consultation Card */}
             <div
-              className="rounded-2xl p-8 border flex flex-col"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
                 background:
                   'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
                 borderColor: 'rgba(26,166,183,0.30)',
               }}
             >
-              <div className="mb-6">
-                <h3
-                  className="text-xl font-semibold mb-1"
-                  style={{ color: 'var(--navy)' }}
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--navy)' }}
+              >
+                Initial Consultation
+              </h3>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: 'var(--primary)' }}
                 >
-                  Initial Consultation
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Your first visit — comprehensive evaluation and program setup.
-                </p>
+                  $250
+                </span>
+                <span className="text-sm text-gray-500">– $300</span>
               </div>
-
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2">
-                  <span
-                    className="text-5xl font-bold"
-                    style={{ color: 'var(--primary)' }}
-                  >
-                    $250
-                  </span>
-                  <span className="text-sm text-gray-500">– $300</span>
-                </div>
-                <p className="mt-1 text-sm text-gray-400">per visit</p>
-              </div>
-
-              <ul className="space-y-3 flex-1">
-                {initialIncludes.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingInitialFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
                       style={{ color: 'var(--primary)' }}
                       aria-hidden="true"
                     />
-                    <span className="text-sm text-gray-700">{item}</span>
+                    <span className="text-sm text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
+              <Link
+                href="/contact"
+                className="btn-primary text-base w-full text-center"
+              >
+                Book Your Consultation
+              </Link>
             </div>
 
             {/* Follow-Up Visits Card */}
             <div
-              className="rounded-2xl p-8 border flex flex-col"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
-                background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                borderColor: 'rgba(26,166,183,0.30)',
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                borderColor: 'rgba(26,166,183,0.20)',
               }}
             >
-              <div className="mb-6">
-                <h3
-                  className="text-xl font-semibold mb-1"
-                  style={{ color: 'var(--navy)' }}
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--navy)' }}
+              >
+                Follow-Up Visits
+              </h3>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: 'var(--primary)' }}
                 >
-                  Follow-Up Visits
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Ongoing monitoring, dose adjustments, and support.
-                </p>
+                  $50
+                </span>
+                <span className="text-sm text-gray-500">per visit</span>
               </div>
-
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2">
-                  <span
-                    className="text-5xl font-bold"
-                    style={{ color: 'var(--primary)' }}
-                  >
-                    $50
-                  </span>
-                  <span className="text-sm text-gray-500">per visit</span>
-                </div>
-                <p className="mt-1 text-sm text-gray-400">
-                  Regular follow-ups recommended
-                </p>
-              </div>
-
-              <ul className="space-y-3 flex-1 mb-8">
-                {followUpIncludes.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingFollowUpFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
                       style={{ color: 'var(--primary)' }}
                       aria-hidden="true"
                     />
-                    <span className="text-sm text-gray-700">{item}</span>
+                    <span className="text-sm text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
-
               <Link
                 href="/contact"
-                className="btn-primary text-base w-full mt-auto"
+                className="btn-outline text-base w-full text-center"
               >
                 Book Your Consultation
               </Link>
             </div>
           </div>
 
-          {/* Cash-pay note */}
-          <div className="max-w-4xl mx-auto">
+          {/* Medication note */}
+          <div className="max-w-3xl mx-auto">
             <div
               className="mt-6 rounded-xl p-5 flex items-start gap-3"
               style={{
@@ -576,22 +620,35 @@ export default function WeightLossPage() {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                All visits are by <strong>secure video</strong> from anywhere
-                in Oklahoma. Prescriptions and medications are sent directly to
-                you. We operate on a <strong>cash-pay basis</strong> — no
-                insurance required, no hidden fees.
+                <strong>Medication</strong> is billed separately if prescribed.
+                We operate on a <strong>cash-pay basis</strong> with no insurance
+                required, no hidden fees.
               </p>
+            </div>
+
+            <div className="mt-6 text-center">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-1.5 text-base font-semibold group"
+                style={{ color: 'var(--primary)' }}
+              >
+                See pricing
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SEMAGLUTIDE & GLP-1 ──────────────────────────────────── */}
+      {/* ── IN PERSON OR ONLINE ──────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        aria-labelledby="glp1-heading"
+        aria-labelledby="in-person-heading"
         style={{
-          backgroundImage: "url('/body_bg.webp')",
+          backgroundImage: "url('/in-person-online.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -599,118 +656,57 @@ export default function WeightLossPage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.80)' }}
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 45%, rgba(255,255,255,0.20) 100%)',
+          }}
           aria-hidden="true"
         />
-
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
-            <div>
-              <span
-                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-                style={{ color: 'var(--primary)' }}
-              >
-                GLP-1 Medications
-              </span>
-              <h2
-                id="glp1-heading"
-                className="text-3xl md:text-4xl font-bold mb-3"
-                style={{ color: 'var(--navy)' }}
-              >
-                Semaglutide and GLP-1 Weight Loss Medications in Oklahoma
-              </h2>
-              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-                <div
-                  className="h-[3px] w-10 rounded-full"
-                  style={{ backgroundColor: 'var(--primary)' }}
-                />
-                <div
-                  className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
-                />
-                <div
-                  className="h-[3px] w-2 rounded-full"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
-                />
-              </div>
-
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5 font-medium">
-                Yes — Ebenezer Telehealth prescribes semaglutide and other
-                GLP-1 receptor agonist medications for weight loss when
-                medically appropriate, delivered to patients across Oklahoma.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-5">
-                GLP-1 medications work by mimicking a natural hormone that
-                regulates appetite and blood sugar. They&apos;ve shown
-                significant results in clinical trials, but they&apos;re not
-                for everyone — and they&apos;re most effective when combined
-                with a supervised clinical plan, not prescribed in isolation.
-                Dr. George evaluates whether GLP-1 therapy is right for you
-                based on your health profile, not a one-size-fits-all
-                questionnaire.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed">
-                We use pharmaceutical-grade semaglutide, with medications
-                shipped directly to you. Your dosing is managed and titrated by
-                Dr. George through regular follow-up visits.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-5">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              In Person or Online
+            </span>
+            <h2
+              id="in-person-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              A Weight Loss Clinic Near You: In OKC or Online
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
               <div
-                className="rounded-2xl p-6"
-                style={{
-                  backgroundColor: 'rgba(151,206,204,0.15)',
-                  border: '1px solid rgba(26,166,183,0.15)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <Syringe
-                    className="h-5 w-5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <h3
-                    className="text-base font-semibold"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    How GLP-1 Medications Work
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  GLP-1 receptor agonists mimic a gut hormone that signals
-                  satiety to the brain, slows gastric emptying, and helps
-                  regulate blood sugar — making it easier to eat less and lose
-                  weight with real metabolic support behind you.
-                </p>
-              </div>
-
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
               <div
-                className="rounded-2xl p-6"
-                style={{
-                  backgroundColor: 'rgba(26,166,183,0.04)',
-                  border: '1px solid rgba(26,166,183,0.12)',
-                }}
-              >
-                <h3
-                  className="text-base font-semibold mb-2"
-                  style={{ color: 'var(--navy)' }}
-                >
-                  Not a One-Size-Fits-All Prescription
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  Not every patient is a candidate for GLP-1 therapy. Susan
-                  George evaluates your full health profile — medical history,
-                  current medications, labs, and goals — before recommending
-                  any medication. If semaglutide isn&apos;t right for you,
-                  she&apos;ll tell you and recommend the best path forward.
-                </p>
-                <Link href="/contact" className="btn-primary text-sm">
-                  Get Evaluated for GLP-1 Therapy
-                </Link>
-              </div>
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
             </div>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              See us in person on Saturdays in Oklahoma City, or start entirely
+              online from anywhere in Oklahoma, including Tulsa, Moore, Owasso,
+              Edmond, Norman, and rural communities.
+            </p>
+            <Link
+              href="/weight-loss-okc"
+              className="inline-flex items-center gap-1.5 text-base font-semibold group"
+              style={{ color: 'var(--primary)' }}
+            >
+              Weight Loss Clinic in Oklahoma City
+              <ArrowRight
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </Link>
           </div>
         </div>
       </section>
@@ -764,7 +760,7 @@ export default function WeightLossPage() {
               </div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
                 Our program is designed for adults across Oklahoma who want a
-                medically guided approach to weight loss — whether you&apos;ve
+                medically guided approach to weight loss. If you&apos;ve
                 struggled with diets, have metabolic health concerns, or want
                 clinical support and accountability. Common reasons patients
                 come to us include:
@@ -804,9 +800,9 @@ export default function WeightLossPage() {
                 When Telehealth Isn&apos;t Enough
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                If your situation requires care beyond telehealth scope — such
+                If your situation requires care beyond telehealth scope, such
                 as bariatric surgery evaluation, complex in-person assessment,
-                or additional labs — we&apos;ll tell you clearly and help you
+                or additional labs, we&apos;ll tell you clearly and help you
                 find the right next step. We don&apos;t push patients into
                 programs that aren&apos;t right for them.
               </p>
@@ -859,8 +855,8 @@ export default function WeightLossPage() {
                 Your weight-loss care is led by Dr. Susan George, a Doctor of
                 Nursing Practice and Advanced Practice Registered Nurse who is
                 Board Certified in Advanced Diabetes Management (BC-ADM). That
-                certification means real metabolic expertise — insulin
-                resistance, hormonal factors, and medication management — not
+                certification means real metabolic expertise: insulin
+                resistance, hormonal factors, and medication management. Not
                 just writing scripts. She delivers evidence-based, personalized
                 care to patients across Oklahoma with integrity and compassion.
               </p>
@@ -886,7 +882,7 @@ export default function WeightLossPage() {
                   style={{ color: 'var(--navy)' }}
                 >
                   Weight loss is a medical issue, not a willpower issue. Every
-                  patient deserves a plan built around their actual health —
+                  patient deserves a plan built around their actual health,
                   not a one-size-fits-all prescription.
                 </p>
                 <footer className="mt-3 pl-6">
@@ -894,7 +890,7 @@ export default function WeightLossPage() {
                     className="text-sm font-semibold not-italic"
                     style={{ color: 'var(--primary)' }}
                   >
-                    — Dr. Susan George, DNP, APRN, BC-ADM
+                    Dr. Susan George, DNP, APRN, BC-ADM
                   </cite>
                 </footer>
               </blockquote>
@@ -957,7 +953,7 @@ export default function WeightLossPage() {
               How to Start Your Weight Loss Program
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Five steps from initial consultation to ongoing support — all via
+              Five steps from initial consultation to ongoing support, all via
               secure video from anywhere in Oklahoma.
             </p>
           </div>
@@ -1068,11 +1064,11 @@ export default function WeightLossPage() {
                 />
               </div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Ebenezer Telehealth serves patients in every part of Oklahoma —
+                Ebenezer Telehealth serves patients in every part of Oklahoma,
                 including Oklahoma City, Tulsa, Moore, Owasso, Edmond, Norman,
                 Lawton, Stillwater, Broken Arrow, and rural communities. No
-                long drives. No waiting rooms. Just real medical weight loss
-                care from wherever you are.
+                long drives. No waiting rooms. Real medical weight loss care
+                from wherever you are.
               </p>
             </div>
 
@@ -1149,7 +1145,7 @@ export default function WeightLossPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Weight Loss Telehealth — FAQs
+              Weight Loss Telehealth FAQs
             </h2>
           </div>
 
@@ -1236,7 +1232,7 @@ export default function WeightLossPage() {
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
                   Discreet, compassionate virtual care for birth control, PCOS,
-                  menopause, hormonal health, and more — led by a provider who
+                  menopause, hormonal health, and more, led by a provider who
                   specializes in women&apos;s health.
                 </p>
               </div>
@@ -1293,7 +1289,7 @@ export default function WeightLossPage() {
                 <p className="text-sm leading-relaxed text-gray-600">
                   Feel better without leaving home. Get evaluated and treated
                   online for sinus infections, colds, UTIs, allergies, and
-                  other minor illnesses — often same day.
+                  other minor illnesses, often same day.
                 </p>
               </div>
               <Link
@@ -1340,7 +1336,7 @@ export default function WeightLossPage() {
             Ready to Start Your Weight Loss Journey?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Medically supervised weight loss across Oklahoma — GLP-1
+            Medically supervised weight loss across Oklahoma. GLP-1
             medications, personalized plans, and real follow-up care. Starting
             at $250.
           </p>
