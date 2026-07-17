@@ -58,8 +58,10 @@ const contactPageSchema = {
       email: 'contact@ebenezertelehealth.com',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Oklahoma City',
+        streetAddress: '7415 NW 23rd Street',
+        addressLocality: 'Bethany',
         addressRegion: 'OK',
+        postalCode: '73008',
         addressCountry: 'US',
       },
       areaServed: [
@@ -648,7 +650,7 @@ export default function ContactPage() {
                     label="Location"
                   >
                     <p className="text-sm text-gray-700 leading-snug">
-                      Oklahoma City, OK
+                      7415 NW 23rd Street, Bethany, OK 73008
                     </p>
                     <p className="text-xs text-gray-500 mt-0.5">
                       In-person visits on Saturdays by appointment

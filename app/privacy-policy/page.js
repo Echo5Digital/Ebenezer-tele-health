@@ -333,7 +333,7 @@ export default function PrivacyPolicyPage() {
                 <p className="font-semibold" style={{ color: 'var(--navy)' }}>
                   Ebenezer Telehealth
                 </p>
-                <p>Oklahoma City, OK</p>
+                <p>7415 NW 23rd Street, Bethany, OK 73008</p>
                 <p>
                   Phone:{' '}
                   <a

@@ -85,7 +85,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <strong className="text-white font-semibold block mb-0.5">Ebenezer Telehealth</strong>
-                  Oklahoma City, OK
+                  7415 NW 23rd Street, Bethany, OK 73008
                 </div>
               </div>
 

@@ -56,8 +56,10 @@ const schemaGraph = {
       medicalSpecialty: ['PrimaryCare', 'Gynecologic'],
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Oklahoma City',
+        streetAddress: '7415 NW 23rd Street',
+        addressLocality: 'Bethany',
         addressRegion: 'OK',
+        postalCode: '73008',
         addressCountry: 'US',
       },
       areaServed: {

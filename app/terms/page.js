@@ -383,7 +383,7 @@ export default function TermsOfUsePage() {
                 >
                   Ebenezer Telehealth
                 </p>
-                <p>Oklahoma City, OK</p>
+                <p>7415 NW 23rd Street, Bethany, OK 73008</p>
                 <p>
                   Phone:{' '}
                   <a
