@@ -113,10 +113,10 @@ export default function Footer() {
                   <Mail className="h-3.5 w-3.5" style={{ color: '#97CECC' }} />
                 </div>
                 <a
-                  href="mailto:contact@ebenezertelehealth.com"
+                  href="mailto:ebenezertelehealth@gmail.com"
                   className="font-medium transition-colors hover:text-white break-all"
                 >
-                  contact@ebenezertelehealth.com
+                  ebenezertelehealth@gmail.com
                 </a>
               </div>
 

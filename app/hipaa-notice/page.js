@@ -11,7 +11,7 @@ export const metadata = {
 }
 
 const EFFECTIVE_DATE = 'June 1, 2026'
-const CONTACT_EMAIL = 'contact@ebenezertelehealth.com'
+const CONTACT_EMAIL = 'ebenezertelehealth@gmail.com'
 const PHONE = '(405) 349-8188'
 
 export default function HipaaNoticePage() {
