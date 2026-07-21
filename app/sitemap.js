@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.ebenezertelehealth.com'
+  const baseUrl = 'https://www.ebenezerhealthclinic.com'
 
   return [
     {

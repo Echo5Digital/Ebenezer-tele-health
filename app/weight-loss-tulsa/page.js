@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Weight loss clinic for Tulsa, OK: semaglutide & GLP-1 plans through secure online visits with a Board Certified provider. From $250. Book or call (405) 349-8188.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/weight-loss-tulsa',
+    canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-tulsa',
   },
 }
 
@@ -83,8 +83,8 @@ const pageSchema = {
   name: 'Weight Loss Clinic in Tulsa, OK | Online Medical Weight Loss',
   description:
     'Weight loss clinic for Tulsa, OK: semaglutide and GLP-1 plans through secure online visits with a Board Certified provider. Oklahoma City-based practice serving Tulsa via telehealth. No Tulsa office. From $250. Medication billed separately.',
-  url: 'https://www.ebenezertelehealth.com/weight-loss-tulsa',
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  url: 'https://www.ebenezerhealthclinic.com/weight-loss-tulsa',
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: {
     '@type': 'MedicalProcedure',
     name: 'Medical Weight Loss for Tulsa Patients',
@@ -800,7 +800,7 @@ export default function WeightLossTulsaPage() {
           </div>
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Tulsa, OK &middot; (405) 349-8188
-            &middot; ebenezertelehealth.com
+            &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

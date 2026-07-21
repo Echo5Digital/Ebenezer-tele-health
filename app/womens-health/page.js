@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Women's health clinic in Oklahoma City - birth control, PCOS, menopause & more. In-person by appointment or women's telehealth statewide. From $150. (405) 349 8188.",
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/womens-health',
+    canonical: 'https://www.ebenezerhealthclinic.com/womens-health',
   },
 }
 
@@ -18,7 +18,7 @@ const womensHealthPageSchema = {
   name: "Women's Health Clinic in Oklahoma City | Ebenezer Telehealth",
   description:
     "Women's health clinic in Oklahoma City offering birth control, PCOS treatment, menopause care, and hormonal health support. In-person on Saturdays in OKC or by telehealth across Oklahoma. Cash-pay from $150.",
-  url: 'https://www.ebenezertelehealth.com/womens-health',
+  url: 'https://www.ebenezerhealthclinic.com/womens-health',
   about: {
     '@type': 'MedicalProcedure',
     name: "Women's Health Care",
@@ -26,7 +26,7 @@ const womensHealthPageSchema = {
     description:
       "Comprehensive women's health services including birth control and contraceptive counseling, PCOS management, menopause and perimenopause care, hormonal and reproductive health, and related lab work. Available in person on Saturdays in Oklahoma City or by telehealth across Oklahoma.",
   },
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   areaServed: { '@type': 'State', name: 'Oklahoma' },
   availableService: [
     {
@@ -1391,7 +1391,7 @@ export default function WomensHealthPage() {
 
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Women&apos;s Health Clinic in Oklahoma City &middot; Telehealth statewide
-            &middot; (405) 349-8188 &middot; ebenezertelehealth.com
+            &middot; (405) 349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

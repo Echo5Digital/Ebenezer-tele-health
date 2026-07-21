@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Weight loss clinic in OKC: semaglutide & GLP-1 plans, in-person Saturdays or online anytime. Board Certified provider. From $250. Book or call (405) 349-8188.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/weight-loss-okc',
+    canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-okc',
   },
 }
 
@@ -83,8 +83,8 @@ const pageSchema = {
   name: 'Weight Loss Clinic in OKC | In-Person & Online',
   description:
     'Weight loss clinic in OKC offering semaglutide and GLP-1 plans when medically appropriate. In-person Saturdays in Oklahoma City or online anytime statewide. Board Certified provider. From $250. Medication billed separately.',
-  url: 'https://www.ebenezertelehealth.com/weight-loss-okc',
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  url: 'https://www.ebenezerhealthclinic.com/weight-loss-okc',
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: {
     '@type': 'MedicalProcedure',
     name: 'Medical Weight Loss in Oklahoma City',
@@ -870,7 +870,7 @@ export default function WeightLossOKCPage() {
           </div>
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)
-            349-8188 &middot; ebenezertelehealth.com
+            349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Privacy Policy for Ebenezer Telehealth. Learn how we collect, use, and protect your personal and health information.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/privacy-policy',
+    canonical: 'https://www.ebenezerhealthclinic.com/privacy-policy',
   },
   robots: { index: true, follow: true },
 }
@@ -13,7 +13,7 @@ export const metadata = {
 const EFFECTIVE_DATE = 'June 1, 2026'
 const CONTACT_EMAIL = 'contact@ebenezertelehealth.com'
 const PHONE = '(405) 349-8188'
-const SITE_URL = 'https://www.ebenezertelehealth.com'
+const SITE_URL = 'https://www.ebenezerhealthclinic.com'
 
 export default function PrivacyPolicyPage() {
   return (
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
                   className="font-medium underline"
                   style={{ color: 'var(--primary)' }}
                 >
-                  ebenezertelehealth.com
+                  ebenezerhealthclinic.com
                 </a>{' '}
                 and any related services we provide.
               </p>

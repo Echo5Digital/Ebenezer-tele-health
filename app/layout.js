@@ -34,14 +34,14 @@ export const metadata = {
   authors: [{ name: 'Dr. Susan George, DNP, APRN' }],
   creator: 'Ebenezer Telehealth',
   publisher: 'Ebenezer Telehealth',
-  metadataBase: new URL('https://www.ebenezertelehealth.com'),
+  metadataBase: new URL('https://www.ebenezerhealthclinic.com'),
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com',
+    canonical: 'https://www.ebenezerhealthclinic.com',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.ebenezertelehealth.com',
+    url: 'https://www.ebenezerhealthclinic.com',
     siteName: 'Ebenezer Telehealth',
     title: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
     description:

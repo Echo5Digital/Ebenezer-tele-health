@@ -42,16 +42,16 @@ const schemaGraph = {
     // ── 1. MedicalBusiness (primary entity, also serves as Organization) ──────
     {
       '@type': 'MedicalBusiness',
-      '@id': 'https://www.ebenezertelehealth.com/#organization',
+      '@id': 'https://www.ebenezerhealthclinic.com/#organization',
       name: 'Ebenezer Telehealth',
       alternateName: 'Ebenezer Clinic',
       description:
         "Ebenezer Telehealth is a medical clinic in Oklahoma City offering telehealth across Oklahoma and in-person appointments on Saturdays. We provide online medical care for weight loss management, women's health, and minor illnesses — led by an experienced, Board Certified provider, with transparent cash-pay pricing and no insurance required.",
-      url: 'https://www.ebenezertelehealth.com',
+      url: 'https://www.ebenezerhealthclinic.com',
       telephone: '+14053498188',
       priceRange: '$$',
-      image: 'https://www.ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
-      logo: 'https://www.ebenezertelehealth.com/images/ebenezer_logo.webp',
+      image: 'https://www.ebenezerhealthclinic.com/images/dr-susan-george-oklahoma-telehealth.webp',
+      logo: 'https://www.ebenezerhealthclinic.com/images/ebenezer_logo.webp',
       // schema.org MedicalSpecialty enum values
       medicalSpecialty: ['PrimaryCare', 'Gynecologic'],
       address: {
@@ -80,7 +80,7 @@ const schemaGraph = {
       ],
       employee: {
         '@type': 'Person',
-        '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
+        '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george',
         name: 'Dr. Susan George',
         honorificPrefix: 'Dr.',
         jobTitle: 'Doctor of Nursing Practice (DNP), APRN',
@@ -99,7 +99,7 @@ const schemaGraph = {
           },
         ],
         knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
-        image: 'https://www.ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
+        image: 'https://www.ebenezerhealthclinic.com/images/dr-susan-george-oklahoma-telehealth.webp',
       },
       paymentAccepted: 'Cash, Credit Card',
       currenciesAccepted: 'USD',
@@ -108,26 +108,26 @@ const schemaGraph = {
     // ── 2. WebSite ────────────────────────────────────────────────────────────
     {
       '@type': 'WebSite',
-      '@id': 'https://www.ebenezertelehealth.com/#website',
+      '@id': 'https://www.ebenezerhealthclinic.com/#website',
       name: 'Ebenezer Telehealth',
-      url: 'https://www.ebenezertelehealth.com',
+      url: 'https://www.ebenezerhealthclinic.com',
       description:
         "Telehealth in Oklahoma City & online across Oklahoma — plus in-person visits by appointment. Weight loss, women's health & minor illness. Book or call (405) 349-8188.",
       inLanguage: 'en-US',
-      publisher: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      publisher: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
     },
 
     // ── 3. Person — Dr. Susan George ─────────────────────────────────────────
     {
       '@type': 'Person',
-      '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
+      '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george',
       name: 'Susan George',
       honorificPrefix: 'Dr.',
       honorificSuffix: 'DNP, APRN, BC-ADM',
       jobTitle: 'Doctor of Nursing Practice, Advanced Practice Registered Nurse',
       description:
         "Dr. Susan George, DNP, APRN, BC-ADM is a Doctor of Nursing Practice who specializes in women's health and is Board Certified in Advanced Diabetes Management. She leads Ebenezer Telehealth, a cash-pay medical clinic in Oklahoma City offering in-person Saturday appointments and telehealth across Oklahoma.",
-      worksFor: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      worksFor: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       hasCredential: [
         {
           '@type': 'EducationalOccupationalCredential',
@@ -143,49 +143,49 @@ const schemaGraph = {
         },
       ],
       knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
-      image: 'https://www.ebenezertelehealth.com/images/dr-susan-george-oklahoma-telehealth.webp',
+      image: 'https://www.ebenezerhealthclinic.com/images/dr-susan-george-oklahoma-telehealth.webp',
       areaServed: { '@type': 'State', name: 'Oklahoma' },
     },
 
     // ── 4–6. Individual Service nodes (richer data for service pages) ─────────
     {
       '@type': 'Service',
-      '@id': 'https://www.ebenezertelehealth.com/#service-womens-health',
+      '@id': 'https://www.ebenezerhealthclinic.com/#service-womens-health',
       name: "Women's Health",
       description:
         "Compassionate, private care for birth control, PCOS, menopause, and hormonal health, from a practice that specializes in women's health. See us in person in Oklahoma City on Saturdays or online anywhere in Oklahoma.",
-      provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://www.ebenezertelehealth.com/womens-health',
+      url: 'https://www.ebenezerhealthclinic.com/womens-health',
       serviceType: "Women's Health",
     },
     {
       '@type': 'Service',
-      '@id': 'https://www.ebenezertelehealth.com/#service-weight-loss',
+      '@id': 'https://www.ebenezerhealthclinic.com/#service-weight-loss',
       name: 'Medical Weight Loss',
       description:
         'A clinically guided weight-loss program built around your metabolic health — not a quick fix. When appropriate, your plan may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
-      provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://www.ebenezertelehealth.com/weight-loss',
+      url: 'https://www.ebenezerhealthclinic.com/weight-loss',
       serviceType: 'Weight Loss Management',
     },
     {
       '@type': 'Service',
-      '@id': 'https://www.ebenezertelehealth.com/#service-minor-illness',
+      '@id': 'https://www.ebenezerhealthclinic.com/#service-minor-illness',
       name: 'Minor Illness',
       description:
         'Feel better without the urgent-care wait. Get evaluated and treated for sinus infections, UTIs, cold and flu, and other everyday illnesses — same day when available.',
-      provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://www.ebenezertelehealth.com/minor-illness',
+      url: 'https://www.ebenezerhealthclinic.com/minor-illness',
       serviceType: 'Minor Illness Treatment',
     },
 
     // ── 7. FAQPage ────────────────────────────────────────────────────────────
     {
       '@type': 'FAQPage',
-      '@id': 'https://www.ebenezertelehealth.com/#faq',
+      '@id': 'https://www.ebenezerhealthclinic.com/#faq',
       mainEntity: faqItems.map((item) => ({
         '@type': 'Question',
         name: item.question,
@@ -199,13 +199,13 @@ const schemaGraph = {
     // ── 8. WebPage — speakable spec for voice/AEO ────────────────────────────
     {
       '@type': 'WebPage',
-      '@id': 'https://www.ebenezertelehealth.com/#webpage',
-      url: 'https://www.ebenezertelehealth.com',
+      '@id': 'https://www.ebenezerhealthclinic.com/#webpage',
+      url: 'https://www.ebenezerhealthclinic.com',
       name: 'Telehealth & In-Person Care in Oklahoma City | Ebenezer Telehealth',
       description:
         "Telehealth in Oklahoma City & online across Oklahoma — plus in-person visits by appointment. Weight loss, women's health & minor illness. Book or call (405) 349-8188.",
-      isPartOf: { '@id': 'https://www.ebenezertelehealth.com/#website' },
-      about: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      isPartOf: { '@id': 'https://www.ebenezerhealthclinic.com/#website' },
+      about: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.hero-answer-line', '.faq-answer'],

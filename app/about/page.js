@@ -10,7 +10,7 @@ export const metadata = {
   description:
     'Meet Dr. Susan George, DNP, APRN, BC-ADM — a women\'s health nurse practitioner in OKC providing in-person and online care across Oklahoma. Board Certified in diabetes management.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/about',
+    canonical: 'https://www.ebenezerhealthclinic.com/about',
   },
 }
 
@@ -58,10 +58,10 @@ const aboutPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'About Ebenezer Telehealth',
-  url: 'https://www.ebenezertelehealth.com/about',
+  url: 'https://www.ebenezerhealthclinic.com/about',
   mainEntity: {
     '@type': 'Person',
-    '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
+    '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george',
     name: 'Dr. Susan George',
     honorificPrefix: 'Dr.',
     jobTitle: "Women's Health Nurse Practitioner, DNP, APRN, BC-ADM",
@@ -88,9 +88,9 @@ const aboutPageSchema = {
       'Minor Illness Treatment',
       'Telehealth',
     ],
-    worksFor: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+    worksFor: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
     // TODO: Update image URL to final optimised asset path when confirmed
-    image: 'https://www.ebenezertelehealth.com/dr-susan-george-oklahoma-telehealth.webp',
+    image: 'https://www.ebenezerhealthclinic.com/dr-susan-george-oklahoma-telehealth.webp',
   },
 }
 
@@ -462,7 +462,7 @@ export default function AboutPage() {
 
           {/* NAP reinforcement */}
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)&nbsp;349-8188 &middot; ebenezertelehealth.com
+            Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)&nbsp;349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

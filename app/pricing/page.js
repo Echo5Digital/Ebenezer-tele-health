@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Telehealth cost without insurance in Oklahoma, a cash-pay clinic in OKC. Weight loss from $250, women's health from $150, minor illness $50. Transparent, no surprises.",
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/pricing',
+    canonical: 'https://www.ebenezerhealthclinic.com/pricing',
   },
   robots: { index: true, follow: true },
 }
@@ -92,7 +92,7 @@ const pricingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Telehealth Cost Without Insurance in Oklahoma | Ebenezer Pricing',
-  url: 'https://www.ebenezertelehealth.com/pricing',
+  url: 'https://www.ebenezerhealthclinic.com/pricing',
   mainEntity: {
     '@type': 'ItemList',
     name: 'Ebenezer Telehealth Services and Pricing',
@@ -742,7 +742,7 @@ export default function PricingPage() {
 
           {/* NAP reinforcement — matches FinalCTA */}
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)&nbsp;349-8188 &middot; ebenezertelehealth.com
+            Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)&nbsp;349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ export const metadata = {
   description:
     'Book a medical clinic appointment in Oklahoma City, or book telehealth across Oklahoma. Call (405) 349-8188 or book online with Ebenezer Telehealth.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/contact',
+    canonical: 'https://www.ebenezerhealthclinic.com/contact',
   },
   robots: { index: true, follow: true },
 }
@@ -19,13 +19,13 @@ const contactPageSchema = {
     // ── 1. ContactPage ────────────────────────────────────────────────────────
     {
       '@type': 'ContactPage',
-      '@id': 'https://www.ebenezertelehealth.com/contact#webpage',
+      '@id': 'https://www.ebenezerhealthclinic.com/contact#webpage',
       name: 'Book an Oklahoma City Appointment | Ebenezer Telehealth Contact',
-      url: 'https://www.ebenezertelehealth.com/contact',
+      url: 'https://www.ebenezerhealthclinic.com/contact',
       description:
         'Book a medical clinic appointment in Oklahoma City on Saturdays, or book telehealth from anywhere in Oklahoma. Call (405) 349-8188 or book online with Ebenezer Telehealth.',
-      isPartOf: { '@id': 'https://www.ebenezertelehealth.com/#website' },
-      about: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      isPartOf: { '@id': 'https://www.ebenezerhealthclinic.com/#website' },
+      about: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.answer-first'],
@@ -51,9 +51,9 @@ const contactPageSchema = {
     // ── 2. MedicalBusiness — contact signals for this page ───────────────────
     {
       '@type': 'MedicalBusiness',
-      '@id': 'https://www.ebenezertelehealth.com/#organization',
+      '@id': 'https://www.ebenezerhealthclinic.com/#organization',
       name: 'Ebenezer Telehealth',
-      url: 'https://www.ebenezertelehealth.com',
+      url: 'https://www.ebenezerhealthclinic.com',
       telephone: '+14053498188',
       email: 'contact@ebenezertelehealth.com',
       address: {
@@ -129,20 +129,20 @@ const contactPageSchema = {
         {
           '@type': 'MedicalProcedure',
           name: "Women's Health Telehealth",
-          provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+          provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
         },
         {
           '@type': 'MedicalProcedure',
           name: 'Medical Weight Loss Management',
-          provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+          provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
         },
         {
           '@type': 'MedicalProcedure',
           name: 'Minor Illness Treatment',
-          provider: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+          provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
         },
       ],
-      employee: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+      employee: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
       paymentAccepted: 'Cash, Credit Card, Debit Card',
       currenciesAccepted: 'USD',
       priceRange: '$$',
@@ -151,12 +151,12 @@ const contactPageSchema = {
     // ── 3. Person — Dr. Susan George ─────────────────────────────────────────
     {
       '@type': 'Person',
-      '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george',
+      '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george',
       name: 'Susan George',
       honorificPrefix: 'Dr.',
       honorificSuffix: 'DNP, APRN, BC-ADM',
       jobTitle: 'Doctor of Nursing Practice, Advanced Practice Registered Nurse',
-      worksFor: { '@id': 'https://www.ebenezertelehealth.com/#organization' },
+      worksFor: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
     },
 

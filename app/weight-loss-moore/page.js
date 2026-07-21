@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Weight loss clinic for Moore, OK: online visits statewide, plus in-person appointments a short drive away in Oklahoma City. From $250. Call (405) 349-8188.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/weight-loss-moore',
+    canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-moore',
   },
 }
 
@@ -83,8 +83,8 @@ const pageSchema = {
   name: 'Weight Loss Clinic in Moore, OK | Online & Nearby In-Person',
   description:
     'Weight loss clinic for Moore, OK: online visits statewide anytime, plus in-person Saturday appointments a short drive away in Oklahoma City. Board Certified provider. From $250. Medication billed separately.',
-  url: 'https://www.ebenezertelehealth.com/weight-loss-moore',
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  url: 'https://www.ebenezerhealthclinic.com/weight-loss-moore',
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: {
     '@type': 'MedicalProcedure',
     name: 'Medical Weight Loss for Moore, OK Patients',
@@ -883,7 +883,7 @@ export default function WeightLossMoorePage() {
           </div>
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Moore, OK &middot; (405) 349-8188
-            &middot; ebenezertelehealth.com
+            &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Telehealth Informed Consent for Ebenezer Telehealth. Understand the nature, benefits, limitations, and risks of telehealth services and your rights as a patient.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/telehealth-consent',
+    canonical: 'https://www.ebenezerhealthclinic.com/telehealth-consent',
   },
   robots: { index: true, follow: true },
 }

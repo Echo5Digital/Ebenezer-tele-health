@@ -18,7 +18,7 @@ export const metadata = {
   description:
     'Medical weight loss clinic in Oklahoma City. Semaglutide and GLP-1 plans, in-person or online statewide. Board Certified provider. From $250. Call (405) 349-8188.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/weight-loss',
+    canonical: 'https://www.ebenezerhealthclinic.com/weight-loss',
   },
 }
 
@@ -87,8 +87,8 @@ const weightLossPageSchema = {
   name: 'Weight Loss Clinic in Oklahoma City: Medical Weight Loss',
   description:
     'Medical weight loss clinic in Oklahoma City. Semaglutide and GLP-1 plans when medically appropriate, available in person on Saturdays in OKC or online statewide. Board Certified provider. From $250. Medication billed separately.',
-  url: 'https://www.ebenezertelehealth.com/weight-loss',
-  mainEntityOfPage: 'https://www.ebenezertelehealth.com/weight-loss',
+  url: 'https://www.ebenezerhealthclinic.com/weight-loss',
+  mainEntityOfPage: 'https://www.ebenezerhealthclinic.com/weight-loss',
   specialty: 'Endocrinology',
   about: {
     '@type': 'MedicalProcedure',
@@ -97,7 +97,7 @@ const weightLossPageSchema = {
     description:
       'Medically supervised weight loss program including GLP-1/semaglutide evaluation and management when appropriate, personalized plans, and ongoing monitoring. Available in person on Saturdays in Oklahoma City and via telehealth statewide. Led by Dr. Susan George, DNP, APRN, BC-ADM.',
   },
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   areaServed: [
     { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
     { '@type': 'State', name: 'Oklahoma' },
@@ -1358,7 +1358,7 @@ export default function WeightLossPage() {
 
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)
-            349-8188 &middot; ebenezertelehealth.com
+            349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

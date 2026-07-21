@@ -7,7 +7,7 @@ export const metadata = {
   description:
     'An urgent care alternative in Oklahoma City for minor illness - sinus infections, UTIs, cold & flu. In-person or online, same day. $50 per visit. (405) 349-8188.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/minor-illness',
+    canonical: 'https://www.ebenezerhealthclinic.com/minor-illness',
   },
 }
 
@@ -71,7 +71,7 @@ const minorIllnessPageSchema = {
   name: 'Urgent Care Alternative in Oklahoma City | Ebenezer Telehealth',
   description:
     'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. $50 per visit.',
-  url: 'https://www.ebenezertelehealth.com/minor-illness',
+  url: 'https://www.ebenezerhealthclinic.com/minor-illness',
   about: {
     '@type': 'MedicalProcedure',
     name: 'Minor Illness Treatment',
@@ -79,7 +79,7 @@ const minorIllnessPageSchema = {
     description:
       'Same-day telehealth evaluation and treatment for common minor illnesses including sinus infections, UTIs, cold and flu, allergies, pink eye, rashes, and stomach issues.',
   },
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   areaServed: { '@type': 'State', name: 'Oklahoma' },
   offers: [
     {
@@ -1139,7 +1139,7 @@ export default function MinorIllnessPage() {
 
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)
-            349-8188 &middot; ebenezertelehealth.com
+            349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

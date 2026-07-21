@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Weight loss clinic for Owasso, OK: semaglutide & GLP-1 plans through secure online visits with a Board Certified provider. From $250. Book or call (405) 349-8188.',
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com/weight-loss-owasso',
+    canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-owasso',
   },
 }
 
@@ -83,8 +83,8 @@ const pageSchema = {
   name: 'Weight Loss Clinic in Owasso, OK | Online Medical Weight Loss',
   description:
     'Weight loss clinic for Owasso, OK: semaglutide and GLP-1 plans through secure online visits with a Board Certified provider. No Owasso office. Cash-pay, no insurance required. From $250.',
-  url: 'https://www.ebenezertelehealth.com/weight-loss-owasso',
-  provider: { '@id': 'https://www.ebenezertelehealth.com/#dr-susan-george' },
+  url: 'https://www.ebenezerhealthclinic.com/weight-loss-owasso',
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: [
     {
       '@type': 'MedicalTherapy',
@@ -802,7 +802,7 @@ export default function WeightLossOwassoPage() {
           </div>
           <p className="mt-10 text-sm text-gray-500">
             Ebenezer Telehealth &middot; Owasso, OK &middot; (405) 349-8188
-            &middot; ebenezertelehealth.com
+            &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

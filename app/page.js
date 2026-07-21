@@ -17,7 +17,7 @@ export const metadata = {
   description:
     "Telehealth in Oklahoma City & online across Oklahoma — plus in-person visits by appointment. Weight loss, women's health & minor illness. Book or call (405) 349-8188.",
   alternates: {
-    canonical: 'https://www.ebenezertelehealth.com',
+    canonical: 'https://www.ebenezerhealthclinic.com',
   },
 }
 
