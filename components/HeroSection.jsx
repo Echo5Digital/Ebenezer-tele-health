@@ -71,8 +71,8 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
             style={{ color: '#ffffff' }}
           >
-            Telehealth in Oklahoma City{' '}
-            <span style={{ color: '#97CECC' }}>In-Person & Online Medical Care</span>
+            Medical Clinic in Oklahoma City{' '}
+            <span style={{ color: '#97CECC' }}>Walk-Ins &amp; Telehealth</span>
           </h1>
 
           {/* Subheadline */}
@@ -80,8 +80,10 @@ export default function HeroSection() {
             className="text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
             style={{ color: 'rgba(255,255,255,0.92)' }}
           >
-            Real medical care that fits your life - see us in person on Saturdays in
-            Oklahoma City, or connect by telehealth from anywhere in Oklahoma. Weight loss, women&apos;s health, and minor illness care with honest, cash-pay pricing and no insurance required.
+            Real medical care that fits your life. Walk in to our Oklahoma City clinic or
+            connect by telehealth from anywhere in Oklahoma. Primary care, weight loss, women&apos;s
+            health, minor illness, injections, and IV therapy, with honest cash-pay pricing and no
+            insurance required.
           </p>
 
           {/* CTA Buttons */}

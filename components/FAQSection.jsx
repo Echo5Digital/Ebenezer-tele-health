@@ -17,51 +17,37 @@ import {
 const faqs = [
   {
     id: 'faq-1',
-    question: 'Do you offer telehealth in Oklahoma City and statewide?',
+    question: 'Do you take walk-ins?',
     answer:
-      'Yes. We provide telehealth visits across all of Oklahoma, plus in-person appointments in Oklahoma City on Saturdays by appointment.',
+      'Yes. Walk-ins are welcome at our Oklahoma City clinic. You can also book ahead or start a telehealth visit.',
     extra: null,
   },
   {
     id: 'faq-2',
-    question: 'Is this like seeing a doctor?',
+    question: 'Do you offer telehealth too?',
     answer:
-      'Yes. You receive a full medical evaluation, diagnosis, treatment plan, and prescriptions when appropriate from a licensed, Board Certified provider.',
+      'Yes. Telehealth visits are available across Oklahoma for care that works online.',
     extra: null,
   },
   {
     id: 'faq-3',
     question: 'Do I need insurance?',
     answer:
-      "No. We're a cash-pay clinic with transparent pricing, so you know your cost before you book.",
+      "No. We're a cash-pay clinic with transparent pricing.",
     extra: null,
   },
   {
     id: 'faq-4',
-    question: 'What areas do you serve?',
+    question: 'What do you treat?',
     answer:
-      "In-person visits are in Oklahoma City; telehealth is available anywhere in Oklahoma as long as you're in the state at the time of your visit.",
+      "Primary care, weight loss, women's health, minor illness, injections, and IV therapy.",
     extra: null,
   },
   {
     id: 'faq-5',
-    question: 'What do you treat?',
+    question: 'What if I have an emergency?',
     answer:
-      "Medical weight loss, women's health, and minor illnesses. For anything outside our scope, we'll guide you to the right care.",
-    extra: null,
-  },
-  {
-    id: 'faq-6',
-    question: 'How soon can I be seen?',
-    answer:
-      'Same-day telehealth visits are often available. Ask about in person Saturday appointments in Oklahoma City.',
-    extra: null,
-  },
-  {
-    id: 'faq-7',
-    question: 'What if I have a medical emergency?',
-    answer:
-      'Ebenezer Telehealth is not for emergencies. Call 911 or go to your nearest emergency room.',
+      "We're not an emergency service. Call 911 or go to your nearest ER.",
     extra: null,
   },
 ]

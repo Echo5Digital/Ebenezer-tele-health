@@ -4,26 +4,26 @@ import VideoBackground from '@/components/VideoBackground'
 const steps = [
   {
     number: '01',
-    title: 'Choose Your Visit',
+    title: 'Walk In or Book',
     description:
-      'An in-person Saturday appointment in Oklahoma City, or a telehealth visit anytime.',
+      'Visit our Oklahoma City clinic, book ahead, or start a telehealth visit. Whichever works best for you.',
   },
   {
     number: '02',
     title: 'Complete a Short Intake',
-    description: 'Complete a short intake so we understand your history and what\'s going on.',
+    description: 'Fill out a brief intake so we understand your health history and what brings you in.',
   },
   {
     number: '03',
     title: 'Meet Your Provider',
     description:
-      'Meet your provider in person or by secure video.',
+      'Connect with Dr. Susan George in person at our clinic or by secure video from anywhere in Oklahoma.',
   },
   {
     number: '04',
     title: 'Get Your Plan',
     description:
-      'Evaluation, treatment, and prescriptions sent to your pharmacy when appropriate.',
+      'Receive your evaluation, treatment plan, and prescriptions sent to your pharmacy when appropriate.',
   },
 ]
 
@@ -59,25 +59,26 @@ export default function HowItWorks() {
             className="text-3xl md:text-4xl font-bold mb-5"
             style={{ color: '#ffffff' }}
           >
-            Getting Online Medical Care Is Simple
+            Getting Care Is Simple
           </h2>
           {/* AEO answer-first paragraph — ~45 words, direct answer before elaboration */}
           <p
             className="text-base md:text-lg max-w-2xl mx-auto"
             style={{ color: 'rgba(255,255,255,0.92)' }}
           >
-            Book online or{' '}
+            Walk in to our Oklahoma City clinic, book ahead, or start a
+            telehealth visit. Then complete a short intake and meet your
+            provider in person or by secure video. You&apos;ll receive a real
+            medical evaluation, a treatment plan, and prescriptions sent to
+            your pharmacy when appropriate. Questions?{' '}
             <a
               href="tel:+14053498188"
               className="font-semibold underline"
               style={{ color: '#97CECC' }}
             >
-              call (405) 349-8188
+              Call (405) 349-8188
             </a>
-            , complete a short health intake, then meet Dr. Susan George by
-            secure video from anywhere in Oklahoma. The visit is a real medical
-            consultation. You receive a diagnosis, treatment plan, and
-            prescriptions sent electronically to your pharmacy when appropriate.
+            .
           </p>
         </div>
 

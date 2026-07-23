@@ -13,8 +13,8 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
-    template: '%s | Ebenezer Telehealth',
+    default: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
+    template: '%s | Ebenezer Health Clinic',
   },
   description:
     "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
@@ -43,13 +43,13 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.ebenezerhealthclinic.com',
     siteName: 'Ebenezer Telehealth',
-    title: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
+    title: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
     description:
       "Get trusted online medical care in Oklahoma City. Affordable cash-pay telehealth for women's health, weight loss & minor illness.",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Online Medical Care in Oklahoma City | Ebenezer Telehealth',
+    title: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
     description:
       "Affordable cash-pay telehealth in Oklahoma. Women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
   },

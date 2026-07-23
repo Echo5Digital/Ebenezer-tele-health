@@ -3,16 +3,20 @@ import Image from 'next/image'
 import { Phone, MapPin, Mail, ArrowUpRight } from 'lucide-react'
 
 const serviceLinks = [
-  { name: "Women's Health", href: '/womens-health' },
-  { name: 'Weight Loss Management', href: '/weight-loss' },
+  { name: 'Primary Care',            href: '/primary-care' },
+  { name: 'Medical Weight Loss',     href: '/weight-loss' },
+  { name: "Women's Health",          href: '/womens-health' },
   { name: 'Minor Illness Treatment', href: '/minor-illness' },
+  { name: 'Vitamin & B12 Injections', href: '/injections' },
+  { name: 'IV Therapy & Hydration',  href: '/iv-therapy' },
+  { name: 'Televisits (Telehealth)', href: '/telehealth' },
 ]
 
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy-policy' },
   { name: 'HIPAA Notice', href: '/hipaa-notice' },
   { name: 'Terms of Use', href: '/terms' },
-  { name: 'Telehealth Consent', href: '/telehealth-consent' },
+  { name: 'Informed Consent', href: '/consent' },
 ]
 
 const sectionHeadingStyle = {

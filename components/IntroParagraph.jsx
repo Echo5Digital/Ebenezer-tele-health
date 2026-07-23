@@ -26,13 +26,13 @@ export default function IntroParagraph() {
             className="text-base md:text-lg leading-relaxed"
             style={{ color: '#1AA6B7' }}
           >
-            Finding good medical care shouldn&apos;t mean long waits, confusing bills, or
-            driving across town to a crowded waiting room. At Ebenezer Telehealth, we built
-            our practice to make quality care simpler for Oklahoma women and families. As a
-            cash-pay clinic serving OKC and the whole state, we give you two easy ways to be
-            seen: in person on Saturdays here in Oklahoma City, or by secure telehealth video
-            from anywhere in Oklahoma. You&apos;ll always work with a trusted, credentialed
-            provider and always know your cost before you book.
+            Good medical care shouldn&apos;t mean long waits, confusing bills, or driving
+            across town to sit in a crowded waiting room. Ebenezer Health Clinic makes it
+            simpler: as a walk-in medical clinic in Oklahoma City, we welcome you in person,
+            and for care that works online, we offer telehealth anywhere in Oklahoma.
+            Whether you need primary care, a weight-loss plan, women&apos;s health, or
+            same-day help for a minor illness, you&apos;ll work with a trusted, credentialed
+            provider and always know your cost before you&apos;re seen.
           </p>
         </div>
       </div>

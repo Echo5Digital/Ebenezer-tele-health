@@ -1,0 +1,621 @@
+import Link from 'next/link'
+import { CheckCircle2, Info, AlertCircle, Droplets } from 'lucide-react'
+import IVTherapyFAQAccordion from './IVTherapyFAQAccordion'
+
+export const metadata = {
+  title: 'IV Therapy & Hydration in Oklahoma City',
+  description:
+    'IV therapy and hydration in Oklahoma City at Ebenezer Health Clinic. Provider-evaluated fluids and nutrient support. Walk-ins welcome. Book or call (405) 349-8188.',
+  alternates: {
+    canonical: 'https://www.ebenezerhealthclinic.com/iv-therapy',
+  },
+}
+
+// ─── Schema ───────────────────────────────────────────────────────────────────
+
+const ivTherapyPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'IV Therapy & Hydration in Oklahoma City | Ebenezer Health Clinic',
+  description:
+    'IV therapy and hydration in Oklahoma City at Ebenezer Health Clinic. Provider-evaluated fluids and nutrient support given in person. Walk-ins welcome. Cash-pay, no insurance required.',
+  url: 'https://www.ebenezerhealthclinic.com/iv-therapy',
+  about: {
+    '@type': 'MedicalProcedure',
+    name: 'IV Hydration Therapy',
+    procedureType: 'https://schema.org/TherapeuticProcedure',
+    description:
+      'In-person IV hydration and nutrient support given after a provider evaluation at our Oklahoma City clinic. IV therapy provides hydration and nutrient support. It is not a treatment or cure for any illness and does not replace medical care.',
+  },
+  provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
+  areaServed: {
+    '@type': 'City',
+    name: 'Oklahoma City',
+    containedIn: { '@type': 'State', name: 'Oklahoma' },
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'IV Therapy Visit',
+      priceCurrency: 'USD',
+      description:
+        'In-person IV therapy visit including provider evaluation. Cash-pay, no insurance required. Contact clinic for current pricing.',
+    },
+  ],
+}
+
+const ivTherapyFAQSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Where is IV therapy given?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "In person at our Oklahoma City clinic. It isn't available by telehealth.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need an appointment for IV therapy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Walk in, or book ahead.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does IV therapy cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'IV therapy is cash-pay. Contact the clinic for current pricing. No insurance required.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does IV therapy cure illness or hangovers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "No. It provides hydration and nutrient support after a provider evaluation and isn't a treatment for any condition.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is IV therapy safe for everyone?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Not always. That's why every IV is preceded by a provider evaluation.",
+      },
+    },
+  ],
+}
+
+export default function IVTherapyPage() {
+  return (
+    <>
+      {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ivTherapyPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ivTherapyFAQSchema) }}
+      />
+
+      {/* ── HERO ─────────────────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+      >
+        {/* Background image */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/iv-therapy-hero.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          aria-hidden="true"
+        />
+        {/* Overlay: solid left → transparent right so text is always legible */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(105deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.60) 65%, rgba(255,255,255,0.10) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-36 md:py-52">
+          <div className="max-w-3xl">
+            {/* Breadcrumb */}
+            <nav
+              className="flex items-center gap-2 text-sm text-gray-500 mb-6"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/" className="hover:text-primary transition-colors">
+                Home
+              </Link>
+              <span aria-hidden="true">/</span>
+              <span style={{ color: 'var(--primary)' }}>IV Therapy</span>
+            </nav>
+
+            {/* Label */}
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              IV Therapy &amp; Hydration · Oklahoma City
+            </span>
+
+            <h1
+              className="text-4xl md:text-5xl font-bold mb-5"
+              style={{ color: 'var(--navy)' }}
+            >
+              IV Therapy &amp; Hydration in Oklahoma City
+            </h1>
+
+            {/* Walk-in badge */}
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
+              style={{
+                backgroundColor: 'rgba(151,206,204,0.40)',
+                color: 'var(--navy)',
+              }}
+            >
+              <Droplets className="h-4 w-4" aria-hidden="true" />
+              In-person only · Walk-ins welcome
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Book IV Therapy
+              </Link>
+              <a
+                href="tel:+14053498188"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Call (405) 349-8188
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/answer_block.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.60) 50%, rgba(151,206,204,0.18) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="flex justify-start">
+            <div
+              className="max-w-xl border-l-4 pl-5 md:pl-6"
+              style={{ borderColor: 'var(--primary)' }}
+            >
+              <p
+                className="hero-answer-line text-base md:text-lg leading-relaxed"
+                style={{ color: '#1AA6B7' }}
+              >
+                Ebenezer Health Clinic offers IV therapy and hydration in Oklahoma
+                City. Provider-evaluated fluids and nutrient support given in
+                person at our OKC clinic. Walk-ins are welcome, with cash-pay
+                pricing and no insurance required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BODY PARAGRAPH ───────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-label="IV hydration Oklahoma City"
+        style={{
+          backgroundImage: "url('/body_bg.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <div className="flex justify-center">
+            <div
+              className="max-w-2xl w-full rounded-2xl px-8 py-10 md:px-12 md:py-12 text-center shadow-sm"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.82)',
+                border: '1px solid rgba(26,166,183,0.18)',
+              }}
+            >
+              <p
+                className="text-base md:text-lg leading-relaxed"
+                style={{ color: 'var(--navy)' }}
+              >
+                When you&apos;re run down or dehydrated,{' '}
+                <strong style={{ color: 'var(--primary)' }}>
+                  IV hydration
+                </strong>{' '}
+                can help you feel more like yourself. At our{' '}
+                <strong style={{ color: 'var(--primary)' }}>
+                  Oklahoma City clinic
+                </strong>
+                , IV therapy is given in a comfortable setting after a provider
+                evaluation to make sure it&apos;s appropriate for you. It&apos;s
+                an in-person visit. Walk in or book ahead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── IV OPTIONS ────────────────────────────────────────────── */}
+      <section className="bg-white" aria-labelledby="iv-options-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+
+          {/* Section header */}
+          <div className="mb-10 md:mb-14">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              What We Offer
+            </span>
+            <h2
+              id="iv-options-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              IV Options
+            </h2>
+            <div className="flex items-center gap-2 mb-5" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
+              Each IV is given after a provider evaluation to confirm it&apos;s
+              appropriate for you. Contact the clinic for our current IV menu and
+              availability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+
+            {/* IV menu list */}
+            <div
+              className="rounded-2xl p-7 md:p-8 h-full"
+              style={{
+                backgroundColor: 'rgba(151,206,204,0.08)',
+                border: '1px solid rgba(26,166,183,0.12)',
+              }}
+            >
+              <p
+                className="text-xs font-semibold uppercase tracking-widest mb-5"
+                style={{ color: 'var(--primary)' }}
+              >
+                Available IV options: contact us to confirm current menu
+              </p>
+              <ul className="space-y-4">
+                {[
+                  'Basic hydration IV',
+                  'Vitamin and nutrient blend IV',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-gray-700 leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div
+                className="mt-6 pt-5"
+                style={{ borderTop: '1px solid rgba(26,166,183,0.15)' }}
+              >
+                <p className="text-sm text-gray-500 leading-relaxed italic">
+                  Each IV is given after a brief provider evaluation. Contact us
+                  to confirm what&apos;s currently available.
+                </p>
+              </div>
+            </div>
+
+            {/* Info boxes */}
+            <div className="flex flex-col gap-5">
+              <div
+                className="rounded-2xl p-6"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.15)',
+                }}
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <Info
+                    className="h-5 w-5 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  <h3
+                    className="text-base font-semibold"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    In-person only
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  IV therapy is given in person at our Oklahoma City clinic.
+                  It is not available by telehealth. Walk in when it works for
+                  you, or book ahead for a confirmed time.
+                </p>
+              </div>
+
+              <div
+                className="rounded-2xl p-6"
+                style={{
+                  backgroundColor: 'rgba(26,166,183,0.04)',
+                  border: '1px solid rgba(26,166,183,0.12)',
+                }}
+              >
+                <h3
+                  className="text-base font-semibold mb-2"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  Provider-evaluated. Cash-pay.
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed mb-5">
+                  Every IV visit begins with a provider evaluation to make sure
+                  it&apos;s the right choice for you. Simple cash-pay pricing.
+                  No insurance required, no surprise bills.
+                </p>
+                <Link href="/contact" className="btn-primary text-sm">
+                  Book IV Therapy
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT TO EXPECT ────────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="what-to-expect-heading"
+        style={{
+          backgroundImage: "url('/in-person-online.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(255,255,255,0.93) 0%, rgba(232,247,247,0.82) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Your Visit
+            </span>
+            <h2
+              id="what-to-expect-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              What to Expect
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              A relaxed in-clinic visit: a brief evaluation, then your IV, monitored
+              by our team. Cash-pay pricing, no insurance required.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Walk-Ins Welcome
+              </Link>
+              <a
+                href="tel:+14053498188"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Call (405) 349-8188
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── IMPORTANT: PLEASE READ ────────────────────────────────── */}
+      <section
+        aria-labelledby="important-notice-heading"
+        style={{ backgroundColor: 'rgba(254,242,242,0.60)' }}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="flex flex-col items-center text-center">
+
+            {/* Notice card */}
+            <div
+              className="w-full max-w-2xl rounded-2xl p-8 md:p-10 mb-8"
+              style={{
+                backgroundColor: '#ffffff',
+                border: '2px solid rgba(239,68,68,0.30)',
+                boxShadow: '0 4px 24px rgba(239,68,68,0.10)',
+              }}
+            >
+              {/* Icon + heading */}
+              <div className="flex flex-col items-center gap-3 mb-5">
+                <div
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-full"
+                  style={{ backgroundColor: 'rgba(239,68,68,0.10)' }}
+                  aria-hidden="true"
+                >
+                  <AlertCircle className="h-6 w-6 text-red-500" />
+                </div>
+                <h2
+                  id="important-notice-heading"
+                  className="text-2xl md:text-3xl font-bold text-gray-800"
+                >
+                  Important: Please Read
+                </h2>
+              </div>
+
+              {/* Divider */}
+              <div
+                className="h-px w-16 mx-auto mb-5"
+                style={{ backgroundColor: 'rgba(239,68,68,0.25)' }}
+                aria-hidden="true"
+              />
+
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                IV therapy at Ebenezer Health Clinic provides hydration and nutrient
+                support. It is{' '}
+                <strong className="text-red-600">
+                  not a treatment or cure for any illness
+                </strong>{' '}
+                and does not replace medical care. Whether IV therapy is appropriate
+                depends on a provider evaluation. IV therapy is{' '}
+                <strong className="text-red-600">not for medical emergencies</strong>.{' '}
+                If you have severe dehydration, a high fever, difficulty breathing,
+                or another urgent concern,{' '}
+                <strong className="text-red-600">
+                  seek in-person medical or emergency care right away.
+                </strong>
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Book IV Therapy
+              </Link>
+              <a
+                href="tel:+14053498188"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Call (405) 349-8188
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ──────────────────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="faq-heading"
+        style={{
+          backgroundImage: "url('/body_bg.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+
+          <div className="text-center mb-12">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              FAQ
+            </span>
+            <h2
+              id="faq-heading"
+              className="text-3xl md:text-4xl font-bold"
+              style={{ color: 'var(--navy)' }}
+            >
+              IV Therapy FAQs
+            </h2>
+          </div>
+
+          <IVTherapyFAQAccordion />
+
+          {/* CTAs below FAQ */}
+          <div className="text-center mt-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Book IV Therapy
+              </Link>
+              <a
+                href="tel:+14053498188"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Call (405) 349-8188
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </>
+  )
+}

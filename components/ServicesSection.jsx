@@ -1,14 +1,22 @@
 import Link from 'next/link'
-import { HeartHandshake, Scale, Thermometer, ArrowRight } from 'lucide-react'
+import { HeartHandshake, Scale, Thermometer, ArrowRight, Stethoscope, Syringe, Droplets, Monitor } from 'lucide-react'
 
 const services = [
+  {
+    icon: Stethoscope,
+    title: 'Primary Care',
+    slug: 'primary-care',
+    linkText: 'Explore primary care',
+    description:
+      'Ongoing, relationship-based care for everyday health needs: checkups, chronic condition management, preventive screenings, and more. Walk in to our Oklahoma City clinic or see us by telehealth across Oklahoma.',
+  },
   {
     icon: Scale,
     title: 'Medical Weight Loss',
     slug: 'weight-loss',
     linkText: 'Explore weight loss',
     description:
-      'A clinically guided weight-loss program built around your metabolic health — not a quick fix. When appropriate, your plan may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
+      'A clinically guided weight-loss program built around your metabolic health, not a quick fix. When appropriate, your plan may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
   },
   {
     icon: HeartHandshake,
@@ -16,7 +24,7 @@ const services = [
     slug: 'womens-health',
     linkText: "Explore women's health",
     description:
-      'Compassionate, private care for birth control, PCOS, menopause, and hormonal health, from a practice that specializes in women\'s health. See us in person in Oklahoma City or online anywhere in Oklahoma.',
+      "Compassionate, private care for birth control, PCOS, menopause, and hormonal health, from a practice that specializes in women's health. See us in person in Oklahoma City or online anywhere in Oklahoma.",
   },
   {
     icon: Thermometer,
@@ -24,7 +32,31 @@ const services = [
     slug: 'minor-illness',
     linkText: 'Explore minor illness care',
     description:
-      'Feel better without the urgent-care wait. Get evaluated and treated for sinus infections, UTIs, cold and flu, and other everyday illnesses — same day when available.',
+      'Feel better without the urgent-care wait. Get evaluated and treated for sinus infections, UTIs, cold and flu, and other everyday illnesses. Same-day appointments available.',
+  },
+  {
+    icon: Syringe,
+    title: 'Vitamin & B12 Injections',
+    slug: 'injections',
+    linkText: 'Explore injections',
+    description:
+      'Targeted vitamin and B12 shots to support energy, metabolism, and overall wellness. Administered in-clinic in Oklahoma City after a brief provider evaluation.',
+  },
+  {
+    icon: Droplets,
+    title: 'IV Therapy & Hydration',
+    slug: 'iv-therapy',
+    linkText: 'Explore IV therapy',
+    description:
+      'Customized IV drip therapy delivering fluids, vitamins, and nutrients directly into the bloodstream for rapid absorption and recovery. Available at our Oklahoma City clinic.',
+  },
+  {
+    icon: Monitor,
+    title: 'Televisits (Telehealth)',
+    slug: 'telehealth',
+    linkText: 'Explore telehealth',
+    description:
+      'See a provider from the comfort of home via secure video, available statewide across Oklahoma. Convenient for follow-ups, prescription refills, and most non-emergency concerns.',
   },
 ]
 
@@ -62,16 +94,16 @@ export default function ServicesSection() {
             className="text-3xl md:text-4xl font-bold"
             style={{ color: 'var(--navy)' }}
           >
-            Online Medical Care for Oklahoma Women and Families
+            Medical Care That Fits Your Life
           </h2>
         </div>
 
         {/* Service cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {services.map((service) => (
             <article
               key={service.slug}
-              className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all bg-white"
+              className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all bg-white w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               style={{
                 border: '1px solid rgba(26,166,183,0.12)',
                 boxShadow: '0 2px 16px rgba(26,166,183,0.07)',

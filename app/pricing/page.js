@@ -26,6 +26,7 @@ const SERVICES = [
         price: '$250–$300',
         included:
           'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), medications shipped to you, lab orders when needed.',
+        includedNote: 'Medication is billed separately if prescribed.',
       },
       {
         type: 'Follow-Up Visit',
@@ -232,7 +233,17 @@ function PricingRow({ row, isLast }) {
           <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 sm:hidden mb-1">
             What&apos;s Included
           </p>
-          <p className="text-sm text-gray-600 leading-relaxed">{row.included}</p>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            {row.included}
+            {row.includedNote && (
+              <span
+                className="ml-1 text-xs font-semibold"
+                style={{ color: 'var(--primary)' }}
+              >
+                ({row.includedNote})
+              </span>
+            )}
+          </p>
         </div>
       </div>
     </div>

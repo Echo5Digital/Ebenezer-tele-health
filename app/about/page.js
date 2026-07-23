@@ -5,7 +5,7 @@ import { Award, CreditCard, Globe, Heart, MapPin, Quote, ShieldCheck, User } fro
 
 export const metadata = {
   title: {
-    absolute: 'About Ebenezer Telehealth | Dr. Susan George, DNP, APRN — OKC',
+    absolute: 'About Ebenezer Health Clinic | Dr. Susan George, DNP, APRN — OKC',
   },
   description:
     'Meet Dr. Susan George, DNP, APRN, BC-ADM — a women\'s health nurse practitioner in OKC providing in-person and online care across Oklahoma. Board Certified in diabetes management.',

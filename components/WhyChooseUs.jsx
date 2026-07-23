@@ -2,11 +2,10 @@ import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 
 const bullets = [
-  'Work with an experienced, credentialed provider - Dr. Susan George, DNP, APRN, BC-ADM.',
-  'Two ways to be seen: in person on Saturdays in Oklahoma City, or telehealth across Oklahoma.',
-  null,
-  'A women\'s health focus backed by real metabolic expertise.',
-  'Care delivered with warmth, dignity, and a heart of faith.',
+  { text: 'A real walk-in clinic in Oklahoma City, plus telehealth statewide.' },
+  { text: 'An experienced, credentialed provider: Dr. Susan George, DNP, APRN, BC-ADM.' },
+  { text: 'Transparent cash-pay pricing. Know your cost before you\'re seen.', link: true },
+  { text: 'Care delivered with warmth, dignity, and a heart of faith.' },
 ]
 
 export default function WhyChooseUs() {
@@ -69,9 +68,9 @@ export default function WhyChooseUs() {
           </div>
 
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-            Ebenezer Telehealth was built to make quality medical care
-            accessible to women and families across Oklahoma, without long
-            drives, crowded waiting rooms, or confusing bills.
+            Ebenezer Health Clinic was built to make quality medical care
+            accessible to patients across Oklahoma, without long drives,
+            crowded waiting rooms, or confusing bills.
           </p>
 
           <ul className="space-y-3.5 text-left" role="list">
@@ -87,9 +86,9 @@ export default function WhyChooseUs() {
                     style={{ color: 'var(--primary)' }}
                   />
                 </div>
-                {index === 2 ? (
+                {bullet.link ? (
                   <span className="text-gray-700 leading-relaxed">
-                    A transparent cash-pay clinic. Know your cost before you book.{' '}
+                    {bullet.text}{' '}
                     <Link
                       href="/pricing"
                       className="font-semibold underline"
@@ -99,7 +98,7 @@ export default function WhyChooseUs() {
                     </Link>
                   </span>
                 ) : (
-                  <span className="text-gray-700 leading-relaxed">{bullet}</span>
+                  <span className="text-gray-700 leading-relaxed">{bullet.text}</span>
                 )}
               </li>
             ))}

@@ -38,13 +38,14 @@ export default function AnswerBlock() {
             className="hero-answer-line text-base md:text-lg leading-relaxed"
             style={{ color: '#1AA6B7' }}
           >
-            Ebenezer Telehealth is a medical clinic in Oklahoma City offering telehealth across
-            Oklahoma and in-person appointments in OKC on Saturdays. We provide online medical
-            care for{' '}
-            <strong style={{ color: 'var(--primary)' }}>weight loss management</strong>,{' '}
-            <strong style={{ color: 'var(--primary)' }}>women&apos;s health</strong>, and{' '}
-            <strong style={{ color: 'var(--primary)' }}>minor illnesses</strong>{' '}
-            led by an experienced, Board Certified provider, with transparent cash-pay
+            Ebenezer Health Clinic is a walk-in medical clinic in Oklahoma City offering{' '}
+            <strong style={{ color: 'var(--primary)' }}>primary care</strong>,{' '}
+            <strong style={{ color: 'var(--primary)' }}>medical weight loss</strong>,{' '}
+            <strong style={{ color: 'var(--primary)' }}>women&apos;s health</strong>,{' '}
+            <strong style={{ color: 'var(--primary)' }}>minor illness care</strong>,{' '}
+            <strong style={{ color: 'var(--primary)' }}>injections</strong>, and{' '}
+            <strong style={{ color: 'var(--primary)' }}>IV therapy</strong>{' '}
+            and telehealth across Oklahoma. Walk-ins are welcome, with transparent cash-pay
             pricing and no insurance required.
           </p>
         </div>

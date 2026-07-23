@@ -63,7 +63,7 @@ export default function sitemap() {
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/telehealth-consent`,
+      url: `${baseUrl}/consent`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,

@@ -2,7 +2,7 @@ import { Phone, MapPin, Mail, Clock, CalendarDays, Globe, CheckCircle, CreditCar
 
 export const metadata = {
   title: {
-    absolute: 'Book an Oklahoma City Appointment | Ebenezer Telehealth Contact',
+    absolute: 'Book an Oklahoma City Appointment | Ebenezer Health Clinic',
   },
   description:
     'Book a medical clinic appointment in Oklahoma City, or book telehealth across Oklahoma. Call (405) 349-8188 or book online with Ebenezer Telehealth.',
