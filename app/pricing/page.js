@@ -4,10 +4,10 @@ import PricingFAQAccordion from './PricingFAQAccordion'
 
 export const metadata = {
   title: {
-    absolute: 'Telehealth Cost Without Insurance in Oklahoma | Ebenezer Pricing',
+    absolute: 'Pricing | Cash-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
   },
   description:
-    "Telehealth cost without insurance in Oklahoma, a cash-pay clinic in OKC. Weight loss from $250, women's health from $150, minor illness $50. Transparent, no surprises.",
+    "Cash-pay pricing at our Oklahoma City clinic — weight loss from $250, women's health from $150, minor illness $50, plus primary care, injections & IV therapy. No insurance needed.",
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/pricing',
   },
@@ -92,7 +92,7 @@ const CASH_PAY_BENEFITS = [
 const pricingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Telehealth Cost Without Insurance in Oklahoma | Ebenezer Pricing',
+  name: 'Pricing | Cash-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
   url: 'https://www.ebenezerhealthclinic.com/pricing',
   mainEntity: {
     '@type': 'ItemList',
@@ -286,7 +286,7 @@ export default function PricingPage() {
           }}
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36">
           <div className="max-w-3xl">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
@@ -298,24 +298,11 @@ export default function PricingPage() {
               className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
               style={{ color: 'var(--navy)' }}
             >
-              Telehealth Cost Without Insurance in Oklahoma: Transparent
-              Pricing
+              Transparent Pricing: Oklahoma City Clinic &amp; Telehealth
             </h1>
 
-            {/* Answer-first AEO/GEO paragraph */}
-            <p className="text-lg text-gray-600 leading-relaxed hero-answer-line">
-              Ebenezer Telehealth offers transparent, flat-fee cash-pay pricing
-              for all telehealth visits. Weight loss initial consultations are{' '}
-              <strong className="font-semibold text-gray-800">$250–$300</strong>
-              , women&apos;s health initial visits are{' '}
-              <strong className="font-semibold text-gray-800">$150</strong>, and
-              minor illness visits are{' '}
-              <strong className="font-semibold text-gray-800">$50</strong>. No
-              insurance is required, and there are no surprise bills.
-            </p>
-
             {/* Quick-scan price chips */}
-            <div className="flex flex-wrap gap-3 mt-7">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 mt-7">
               {[
                 { label: 'Weight Loss', price: '$250–$300' },
                 { label: "Women's Health", price: '$150' },
@@ -324,7 +311,7 @@ export default function PricingPage() {
               ].map((chip) => (
                 <div
                   key={chip.label}
-                  className="flex items-center gap-2 rounded-full px-4 py-2"
+                  className="flex items-center justify-between sm:justify-start gap-2 rounded-full px-4 py-2"
                   style={{
                     backgroundColor: 'rgba(151,206,204,0.18)',
                     border: '1px solid rgba(26,166,183,0.18)',
@@ -372,21 +359,25 @@ export default function PricingPage() {
               className="hero-answer-line text-base md:text-lg leading-relaxed"
               style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Telehealth is a cash-pay clinic in OKC with transparent
-              pricing and no insurance required.{' '}
+              Ebenezer Health Clinic is a cash-pay medical clinic in Oklahoma
+              City with transparent pricing and no insurance required.{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                Women&apos;s health visits start at $150
+                Women&apos;s health from $150
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                weight loss consultations are $250&ndash;$300
+                weight loss $250&ndash;$300
               </strong>
-              , and{' '}
+              ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                minor illness visits are $50
+                minor illness $50
               </strong>
-              . Follow-ups are $50. Weight-loss medication, if prescribed, is
-              billed separately.
+              ,{' '}
+              <strong style={{ color: 'var(--primary)' }}>
+                follow-ups $50
+              </strong>
+              . Primary care, injections, and IV therapy pricing below.
+              Weight-loss medication, if prescribed, is billed separately.
             </p>
           </div>
         </div>

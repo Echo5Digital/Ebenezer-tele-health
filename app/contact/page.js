@@ -2,10 +2,10 @@ import { Phone, MapPin, Mail, Clock, CalendarDays, Globe, CheckCircle, CreditCar
 
 export const metadata = {
   title: {
-    absolute: 'Book an Oklahoma City Appointment | Ebenezer Health Clinic',
+    absolute: 'Walk-In Clinic in Oklahoma City | Book or Visit | Ebenezer Health Clinic',
   },
   description:
-    'Book a medical clinic appointment in Oklahoma City, or book telehealth across Oklahoma. Call (405) 349-8188 or book online with Ebenezer Telehealth.',
+    'Visit our walk-in clinic in Oklahoma City, book an appointment, or start a telehealth visit across Oklahoma. Call (405) 349-8188 or book online.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/contact',
   },
@@ -23,7 +23,7 @@ const contactPageSchema = {
       name: 'Book an Oklahoma City Appointment | Ebenezer Telehealth Contact',
       url: 'https://www.ebenezerhealthclinic.com/contact',
       description:
-        'Book a medical clinic appointment in Oklahoma City on Saturdays, or book telehealth from anywhere in Oklahoma. Call (405) 349-8188 or book online with Ebenezer Telehealth.',
+        'Visit our walk-in clinic in Oklahoma City or book telehealth from anywhere in Oklahoma. Call (405) 349-8188 or book online with Ebenezer Health Clinic.',
       isPartOf: { '@id': 'https://www.ebenezerhealthclinic.com/#website' },
       about: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       speakable: {
@@ -94,7 +94,7 @@ const contactPageSchema = {
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: 'Saturday',
-          description: 'In-person appointments in Oklahoma City, Saturdays by appointment',
+          description: 'Walk-in clinic visits in Oklahoma City at 7415 NW 23rd Street, Bethany, OK',
         },
         {
           '@type': 'OpeningHoursSpecification',
@@ -108,7 +108,7 @@ const contactPageSchema = {
         {
           '@type': 'MedicalProcedure',
           name: 'In-Person Medical Clinic Appointment',
-          description: 'Saturday in-person appointments at our Oklahoma City medical clinic.',
+          description: 'Walk-in visits at our Oklahoma City area medical clinic in Bethany, OK.',
           availableAtOrFrom: {
             '@type': 'Place',
             address: {
@@ -267,7 +267,7 @@ export default function ContactPage() {
                 className="text-4xl md:text-5xl font-bold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Book a Medical Clinic Appointment in Oklahoma City &amp; Online
+                Walk-In Clinic in Oklahoma City: Visit, Book, or Go Online
               </h1>
 
               {/* CTA row */}
@@ -300,7 +300,7 @@ export default function ContactPage() {
                     style={{ color: 'var(--primary)' }}
                     aria-hidden="true"
                   />
-                  In-person Saturdays · Oklahoma City
+                  Walk-in clinic · Oklahoma City area
                 </span>
                 <span className="flex items-center gap-2">
                   <CreditCard
@@ -354,9 +354,9 @@ export default function ContactPage() {
                 className="answer-first text-base md:text-lg font-medium leading-relaxed mb-3"
                 style={{ color: '#1AA6B7' }}
               >
-                Book an appointment with Ebenezer Telehealth two ways: an
-                in-person medical clinic appointment in Oklahoma City on
-                Saturdays, or book telehealth from anywhere in Oklahoma. Call{' '}
+                Ebenezer Health Clinic welcomes walk-ins at our Oklahoma City
+                location, appointments if you prefer to plan ahead, and
+                telehealth visits across Oklahoma. Call{' '}
                 <a
                   href={PHONE_HREF}
                   className="font-bold hover:underline"
@@ -370,11 +370,10 @@ export default function ContactPage() {
                 className="text-base leading-relaxed"
                 style={{ color: '#1AA6B7' }}
               >
-                Ready to be seen? Choose what works for you: an in-person
-                Saturday appointment here in Oklahoma City, or a secure online
-                visit from home. Whether you need a women&apos;s health clinic
-                near you or online medical care statewide, you&apos;ll be cared
-                for by Dr. Susan George.
+                Getting care is easy. Choose what works for you: walk in to
+                our Oklahoma City clinic, book a visit ahead of time, or start
+                a secure telehealth visit from anywhere in Oklahoma. Either
+                way, you&apos;ll be cared for by a credentialed provider.
               </p>
             </div>
           </div>
@@ -431,7 +430,7 @@ export default function ContactPage() {
                 <div className="px-8 py-7">
                   <p className="text-gray-600 leading-relaxed mb-6">
                     Schedule your visit in just a few minutes. Choose an
-                    in-person Saturday appointment in Oklahoma City or a
+                    in-person visit at our Oklahoma City clinic or a
                     telehealth visit from anywhere in Oklahoma, all booked
                     securely through our online portal.
                   </p>
@@ -448,7 +447,7 @@ export default function ContactPage() {
                   </a>
 
                   <p className="text-sm text-gray-500 mt-5 text-center">
-                    Want a Saturday Oklahoma City appointment?{' '}
+                    Prefer to visit us in person?{' '}
                     <a
                       href={PHONE_HREF}
                       className="font-semibold hover:underline"
@@ -558,17 +557,17 @@ export default function ContactPage() {
                         </p>
                       </div>
                       <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                        Oklahoma City, Saturdays by appointment. Ask about
-                        availability when you book.
+                        Walk-in visits at our Oklahoma City clinic. Ask about
+                        availability when you call.
                       </p>
                       <a
                         href={PHONE_HREF}
                         className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline"
                         style={{ color: 'var(--primary)' }}
-                        aria-label="Ask about Saturday appointments in Oklahoma City"
+                        aria-label="Call to check walk-in clinic availability in Oklahoma City"
                       >
                         <Phone className="h-3.5 w-3.5 flex-shrink-0" aria-hidden="true" />
-                        Ask About Saturday Appointments
+                        Call to Check Availability
                       </a>
                     </div>
 
@@ -653,7 +652,7 @@ export default function ContactPage() {
                       7415 NW 23rd Street, Bethany, OK 73008
                     </p>
                     <p className="text-xs text-gray-500 mt-0.5">
-                      In-person visits on Saturdays by appointment
+                      Walk-in clinic visits welcome
                     </p>
                   </InfoRow>
 
@@ -691,7 +690,7 @@ export default function ContactPage() {
                       Telehealth: most days
                     </p>
                     <p className="text-xs text-gray-500 mt-0.5">
-                      In-person: Saturdays by appointment
+                      In-person: walk-in clinic visits
                     </p>
                   </InfoRow>
 
@@ -836,10 +835,10 @@ export default function ContactPage() {
                 <a
                   href={PHONE_HREF}
                   className="btn-outline inline-flex items-center justify-center gap-2.5"
-                  aria-label="Ask about Saturday appointments in Oklahoma City"
+                  aria-label="Call to ask about walk-in clinic visits in Oklahoma City"
                 >
                   <Phone className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-                  Ask About Saturday Appointments
+                  Call About Walk-In Visits
                 </a>
               </div>
 
