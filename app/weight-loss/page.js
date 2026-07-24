@@ -62,7 +62,7 @@ const steps = [
     number: '04',
     title: 'Receive Your Plan',
     description:
-      'Personalized program, medication shipped directly to you, and follow-up schedule.',
+      'Personalized program and follow-up schedule. If medication is prescribed, it is arranged through a licensed pharmacy.',
   },
   {
     number: '05',

@@ -24,7 +24,7 @@ const plans = [
     features: [
       'Video visit with Dr. Susan George',
       'Personalized metabolic health plan',
-      'GLP-1 shipped directly to your home',
+      'GLP-1 options when medically appropriate',
       'Ongoing management support',
       'Clinically supervised, not a quick-fix program',
     ],

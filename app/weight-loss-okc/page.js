@@ -50,7 +50,7 @@ const steps = [
     number: '04',
     title: 'Get Your Plan + Meds',
     description:
-      'Your personalized plan and medications shipped to you in Oklahoma City, OK.',
+      'Your personalized plan is ready after your visit. If medication is prescribed, it\'s arranged through a licensed pharmacy.',
   },
 ]
 
@@ -95,9 +95,9 @@ const pageSchema = {
   },
   availableService: {
     '@type': 'MedicalTherapy',
-    name: 'Semaglutide and GLP-1 Weight Loss Treatment',
+    name: 'Medically Supervised Weight Loss Treatment',
     description:
-      'Semaglutide and GLP-1 receptor agonist therapy available in Oklahoma City for patients who qualify after a full health and metabolic evaluation. Whether it is right for you depends on your health history.',
+      'Medically supervised weight loss available in Oklahoma City. GLP-1 options considered for patients who qualify after a full health and metabolic evaluation. Whether medication is appropriate depends on your health history.',
   },
   areaServed: [
     {
@@ -249,7 +249,7 @@ export default function WeightLossOKCPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available · From $250
+              Medically Supervised Weight Loss · From $250
             </div>
 
             {/* CTAs */}
@@ -698,7 +698,7 @@ export default function WeightLossOKCPage() {
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-600">
                   Learn everything about our medical weight loss program:
-                  semaglutide, GLP-1 management, and what to expect at every
+                  medically supervised weight loss and what to expect at every
                   step.
                 </p>
               </div>

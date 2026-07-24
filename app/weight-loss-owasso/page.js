@@ -50,7 +50,7 @@ const steps = [
     number: '04',
     title: 'Get Your Plan + Meds',
     description:
-      'Your personalized plan and medications shipped to you in Owasso, OK.',
+      'Your personalized plan is ready after your visit. If medication is prescribed, it\'s arranged through a licensed pharmacy.',
   },
 ]
 
@@ -93,7 +93,7 @@ const pageSchema = {
     },
     {
       '@type': 'MedicalProcedure',
-      name: 'Semaglutide and GLP-1 Weight Loss Treatment',
+      name: 'Medically Supervised Weight Loss Treatment',
       procedureType: 'https://schema.org/TherapeuticProcedure',
     },
   ],
@@ -101,7 +101,7 @@ const pageSchema = {
     '@type': 'MedicalTherapy',
     name: 'Online Medical Weight Loss for Owasso, OK (Telehealth)',
     description:
-      'Secure video visits with a Board Certified provider for personalized weight-loss plans, GLP-1 and semaglutide management when medically appropriate, and ongoing follow-up. Serving Owasso and all of Oklahoma via telehealth. No in-person Owasso office.',
+      'Secure video visits with a Board Certified provider for personalized weight-loss plans, medically supervised weight loss when appropriate, and ongoing follow-up. Serving Owasso and all of Oklahoma via telehealth. No in-person Owasso office.',
   },
   areaServed: [
     {
@@ -249,7 +249,7 @@ export default function WeightLossOwassoPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available · From $250
+              Medically Supervised Weight Loss · From $250
             </div>
 
             {/* CTAs */}
@@ -456,8 +456,8 @@ export default function WeightLossOwassoPage() {
               className="text-base md:text-lg max-w-2xl mx-auto mb-4"
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
-              Book online, meet your provider by video, and get your plan.
-              Medication, if prescribed, ships to you.
+              Book online, meet your provider by video, and get your personalized plan.
+              If medication is prescribed, it is arranged through a licensed pharmacy.
             </p>
             <Link
               href="/weight-loss"
@@ -560,7 +560,7 @@ export default function WeightLossOwassoPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Frequently Asked Questions: Online Weight Loss &amp; Semaglutide in Owasso
+              Frequently Asked Questions: Online Weight Loss in Owasso
             </h2>
           </div>
 
@@ -631,7 +631,7 @@ export default function WeightLossOwassoPage() {
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-600">
                   Learn everything about our medical weight loss program:
-                  semaglutide, GLP-1 management, and what to expect at every
+                  medically supervised weight loss and what to expect at every
                   step.
                 </p>
               </div>
@@ -782,8 +782,8 @@ export default function WeightLossOwassoPage() {
             Start Your Online Weight Loss Journey in Owasso, OK
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Our Owasso weight loss clinic is fully online. Semaglutide and
-            GLP-1 plans when appropriate, personalized care, real follow-up.
+            Our Owasso weight loss clinic is fully online. Personalized,
+            medically supervised weight loss with real follow-up.
             Starting at $250.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -25,7 +25,7 @@ const SERVICES = [
         type: 'Initial Consultation',
         price: '$250–$300',
         included:
-          'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), medications shipped to you, lab orders when needed.',
+          'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), lab orders when needed.',
         includedNote: 'Medication is billed separately if prescribed.',
       },
       {
@@ -108,7 +108,7 @@ const pricingPageSchema = {
           maxPrice: '300',
         },
         description:
-          'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), medications shipped to you, lab orders when needed.',
+          'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), lab orders when needed.',
       },
       {
         '@type': 'Offer',

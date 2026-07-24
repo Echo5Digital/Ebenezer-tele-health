@@ -50,7 +50,7 @@ const steps = [
     number: '04',
     title: 'Get Your Plan + Meds',
     description:
-      'Your personalized plan and medications shipped to you in Moore, OK.',
+      'Your personalized plan is ready after your visit. If medication is prescribed, it\'s arranged through a licensed pharmacy.',
   },
 ]
 
@@ -90,14 +90,14 @@ const pageSchema = {
     name: 'Medical Weight Loss for Moore, OK Patients',
     procedureType: 'https://schema.org/TherapeuticProcedure',
     description:
-      'Medically supervised weight loss led by Dr. Susan George, DNP, APRN, BC-ADM. Moore patients can start online from home or come in person on Saturdays at our nearby Oklahoma City location. Semaglutide and GLP-1 medications available when medically appropriate after provider evaluation. Medication billed separately.',
+      'Medically supervised weight loss led by Dr. Susan George, DNP, APRN, BC-ADM. Moore patients can start online from home or come in person on Saturdays at our nearby Oklahoma City location. GLP-1 options available when medically appropriate after provider evaluation. Medication billed separately.',
     followup: 'Follow-up visits at $50. Progress review, dose adjustments if on medication, and ongoing support.',
   },
   availableService: {
     '@type': 'MedicalTherapy',
-    name: 'Semaglutide and GLP-1 Weight Loss Treatment near Moore, OK',
+    name: 'Medically Supervised Weight Loss near Moore, OK',
     description:
-      'Semaglutide and GLP-1 receptor agonist therapy available to Moore, OK patients via telehealth or in-person at our Oklahoma City location, when medically appropriate after provider evaluation. Medication billed separately.',
+      'Medically supervised weight loss available to Moore, OK patients via telehealth or in-person at our Oklahoma City location, when medically appropriate after provider evaluation. Medication billed separately.',
   },
   areaServed: [
     {
@@ -252,7 +252,7 @@ export default function WeightLossMoorePage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available · From $250
+              Medically Supervised Weight Loss · From $250
             </div>
 
             {/* CTAs */}
@@ -712,7 +712,7 @@ export default function WeightLossMoorePage() {
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-600">
                   Learn everything about our medical weight loss program:
-                  semaglutide, GLP-1 management, and what to expect at every
+                  medically supervised weight loss and what to expect at every
                   step.
                 </p>
               </div>
@@ -864,8 +864,8 @@ export default function WeightLossMoorePage() {
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Online or in-person in Oklahoma City, just up the road from Moore.
-            Semaglutide and GLP-1 plans when appropriate, personalized care,
-            real follow-up. Starting at $250.
+            Personalized, medically supervised weight loss with real follow-up.
+            Starting at $250.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

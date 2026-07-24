@@ -50,7 +50,7 @@ const steps = [
     number: '04',
     title: 'Get Your Plan + Meds',
     description:
-      'Your personalized plan and medications shipped to you in Tulsa, OK.',
+      'Your personalized plan is ready after your visit. If medication is prescribed, it\'s arranged through a licensed pharmacy.',
   },
 ]
 
@@ -65,7 +65,7 @@ const faqs = [
     id: 'tulsa-faq-2',
     question: 'Can I get semaglutide in Tulsa through telehealth?',
     answer:
-      'When medically appropriate, after evaluation. Medication is billed separately and shipped to you.',
+      'When medically appropriate, after evaluation. Medication, if prescribed, is billed separately and arranged through a licensed pharmacy.',
   },
   {
     id: 'tulsa-faq-3',
@@ -90,14 +90,14 @@ const pageSchema = {
     name: 'Medical Weight Loss for Tulsa Patients',
     procedureType: 'https://schema.org/TherapeuticProcedure',
     description:
-      'Medically supervised weight loss via secure online visits, led by Dr. Susan George, DNP, APRN, BC-ADM. Board Certified provider builds a personalized plan around your metabolism and history. Semaglutide and GLP-1 medications available when medically appropriate after evaluation. Medication billed separately and shipped to you.',
+      'Medically supervised weight loss via secure online visits, led by Dr. Susan George, DNP, APRN, BC-ADM. Board Certified provider builds a personalized plan around your metabolism and history. GLP-1 options available when medically appropriate after evaluation. Medication billed separately if prescribed.',
     followup: 'Follow-up visits at $50. Progress review, dose adjustments if on medication, and ongoing support.',
   },
   availableService: {
     '@type': 'MedicalTherapy',
-    name: 'Semaglutide and GLP-1 Weight Loss Treatment via Telehealth',
+    name: 'Medically Supervised Weight Loss via Telehealth',
     description:
-      'Semaglutide and GLP-1 receptor agonist therapy available to Tulsa patients through secure telehealth visits when medically appropriate after provider evaluation. Medication billed separately and shipped directly to the patient.',
+      'Medically supervised weight loss available to Tulsa patients through secure telehealth visits when medically appropriate after provider evaluation. Medication billed separately if prescribed.',
   },
   areaServed: [
     {
@@ -248,7 +248,7 @@ export default function WeightLossTulsaPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available · From $250
+              Medically Supervised Weight Loss · From $250
             </div>
 
             {/* CTAs */}
@@ -456,7 +456,8 @@ export default function WeightLossTulsaPage() {
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
               Book online, complete your intake, meet your provider by video,
-              and get your plan. Medication, if prescribed, ships to you.
+              and get your personalized plan. If medication is prescribed, it is
+              arranged through a licensed pharmacy.
               Initial consult $250&ndash;$300; follow-ups $50; medication billed
               separately.
             </p>
@@ -558,7 +559,7 @@ export default function WeightLossTulsaPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Frequently Asked Questions: Online Weight Loss &amp; Semaglutide in Tulsa
+              Frequently Asked Questions: Online Weight Loss in Tulsa
             </h2>
           </div>
 
@@ -629,7 +630,7 @@ export default function WeightLossTulsaPage() {
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-600">
                   Learn everything about our medical weight loss program:
-                  semaglutide, GLP-1 management, and what to expect at every
+                  medically supervised weight loss and what to expect at every
                   step.
                 </p>
               </div>
@@ -780,8 +781,8 @@ export default function WeightLossTulsaPage() {
               Start Your Online Weight Loss Journey in Tulsa, OK
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Our Tulsa weight loss clinic is fully online. Semaglutide and
-            GLP-1 plans when appropriate, personalized care, real follow-up.
+            Our Tulsa weight loss clinic is fully online. Personalized,
+            medically supervised weight loss with real follow-up.
             Starting at $250.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
