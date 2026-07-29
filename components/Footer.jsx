@@ -88,7 +88,7 @@ export default function Footer() {
                   <MapPin className="h-3.5 w-3.5"                   style={{ color: '#97CECC' }} />
                 </div>
                 <div>
-                  <strong className="text-white font-semibold block mb-0.5">Ebenezer Telehealth</strong>
+                  <strong className="text-white font-semibold block mb-0.5">Ebenezerhealth Clinic</strong>
                   7415 NW 23rd Street, Bethany, OK 73008
                 </div>
               </div>
