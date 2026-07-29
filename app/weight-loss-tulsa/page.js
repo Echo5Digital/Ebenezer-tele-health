@@ -800,7 +800,7 @@ export default function WeightLossTulsaPage() {
             </a>
           </div>
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Tulsa, OK &middot; (405) 349-8188
+            Ebenezerhealth Clinic &middot; Tulsa, OK &middot; (405) 349-8188
             &middot; ebenezerhealthclinic.com
           </p>
         </div>

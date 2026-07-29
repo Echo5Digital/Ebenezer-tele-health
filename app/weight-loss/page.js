@@ -1357,7 +1357,7 @@ export default function WeightLossPage() {
           </div>
 
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Oklahoma City, OK &middot; (405)
+            Ebenezerhealth Clinic &middot; Oklahoma City, OK &middot; (405)
             349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>

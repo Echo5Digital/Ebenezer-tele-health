@@ -1390,7 +1390,7 @@ export default function WomensHealthPage() {
           </div>
 
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Women&apos;s Health Clinic in Oklahoma City &middot; Telehealth statewide
+            Ebenezerhealth Clinic &middot; Women&apos;s Health Clinic in Oklahoma City &middot; Telehealth statewide
             &middot; (405) 349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>

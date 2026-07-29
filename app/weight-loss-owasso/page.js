@@ -801,7 +801,7 @@ export default function WeightLossOwassoPage() {
             </a>
           </div>
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Owasso, OK &middot; (405) 349-8188
+            Ebenezerhealth Clinic &middot; Owasso, OK &middot; (405) 349-8188
             &middot; ebenezerhealthclinic.com
           </p>
         </div>

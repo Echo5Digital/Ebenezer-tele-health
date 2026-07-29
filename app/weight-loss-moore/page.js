@@ -882,7 +882,7 @@ export default function WeightLossMoorePage() {
             </a>
           </div>
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezer Telehealth &middot; Moore, OK &middot; (405) 349-8188
+            Ebenezerhealth Clinic &middot; Moore, OK &middot; (405) 349-8188
             &middot; ebenezerhealthclinic.com
           </p>
         </div>
