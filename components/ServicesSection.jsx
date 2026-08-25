@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { HeartHandshake, Scale, Thermometer, ArrowRight, Stethoscope, Syringe, Droplets, Monitor } from 'lucide-react'
+import { HeartHandshake, Scale, Thermometer, ArrowRight, Stethoscope, Syringe, Droplets, Monitor, Info } from 'lucide-react'
 
 const services = [
   {
@@ -41,6 +41,7 @@ const services = [
     linkText: 'Explore injections',
     description:
       'Targeted vitamin and B12 shots to support energy, metabolism, and overall wellness. Administered in-clinic in Oklahoma City after a brief provider evaluation.',
+    comingSoon: true,
   },
   {
     icon: Droplets,
@@ -49,6 +50,7 @@ const services = [
     linkText: 'Explore IV therapy',
     description:
       'Customized IV drip therapy delivering fluids, vitamins, and nutrients directly into the bloodstream for rapid absorption and recovery. Available at our Oklahoma City clinic.',
+    comingSoon: true,
   },
   {
     icon: Monitor,
@@ -103,12 +105,31 @@ export default function ServicesSection() {
           {services.map((service) => (
             <article
               key={service.slug}
-              className="rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all bg-white w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              className="relative rounded-2xl p-7 flex flex-col gap-4 hover:-translate-y-0.5 transition-all bg-white w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               style={{
                 border: '1px solid rgba(26,166,183,0.12)',
                 boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
+              {service.comingSoon && (
+                <div className="group/info absolute top-4 right-4 z-10">
+                  <button
+                    type="button"
+                    className="flex h-7 w-7 items-center justify-center rounded-full transition-colors hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
+                    aria-label={`${service.title} launch info`}
+                  >
+                    <Info className="h-5 w-5" style={{ color: '#DC2626' }} />
+                  </button>
+                  <div
+                    role="tooltip"
+                    className="pointer-events-none absolute right-0 top-full mt-2 w-48 sm:w-56 max-w-[70vw] rounded-lg bg-white p-3 text-xs leading-snug text-gray-700 opacity-0 shadow-lg transition-opacity duration-200 group-hover/info:opacity-100 group-focus-within/info:opacity-100"
+                    style={{ border: '1px solid rgba(220,38,38,0.25)' }}
+                  >
+                    This service is scheduled to launch in October 2026.
+                  </div>
+                </div>
+              )}
+
               <div
                 className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
                 style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}

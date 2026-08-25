@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, MapPin, Mail, ArrowUpRight } from 'lucide-react'
+import { Phone, MapPin, Mail, ArrowUpRight, Facebook, Instagram } from 'lucide-react'
+
+const socialLinks = [
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61574508671023', Icon: Facebook },
+  { name: 'Instagram', href: 'https://www.instagram.com/ebenezertelehealth/', Icon: Instagram },
+]
 
 const serviceLinks = [
   { name: 'Primary Care',            href: '/primary-care' },
@@ -66,6 +71,27 @@ export default function Footer() {
               Faith-driven, compassionate telehealth for women and families across Oklahoma.
               Led by Dr. Susan George, DNP, APRN, BC-ADM.
             </p>
+
+            {/* Social links */}
+            <div className="flex items-center gap-3 mt-6">
+              {socialLinks.map(({ name, href, Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  className="social-link flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-lg flex items-center justify-center transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2"
+                  style={{
+                    backgroundColor: 'rgba(151,206,204,0.12)',
+                    color: '#97CECC',
+                    '--tw-ring-color': '#97CECC',
+                  }}
+                >
+                  <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: 'currentColor' }} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* ── Col 2: Contact ── */}

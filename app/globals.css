@@ -194,3 +194,10 @@ body.service-page .rounded-2xl:hover .rounded-xl {
   transform: scale(1.08);
   transition: transform 0.22s ease;
 }
+
+/* Footer — social icon hover/focus */
+.social-link:hover,
+.social-link:focus-visible {
+  background-color: #1AA6B7 !important;
+  color: #ffffff !important;
+}
