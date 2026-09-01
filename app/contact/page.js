@@ -55,7 +55,7 @@ const contactPageSchema = {
       name: 'Ebenezer Telehealth',
       url: 'https://www.ebenezerhealthclinic.com',
       telephone: '+14053498188',
-      email: 'ebenezertelehealth@gmail.com',
+      email: 'ebenezerhealth@outlook.com',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '7415 NW 23rd Street',
@@ -84,7 +84,7 @@ const contactPageSchema = {
         },
         {
           '@type': 'ContactPoint',
-          email: 'ebenezertelehealth@gmail.com',
+          email: 'ebenezerhealth@outlook.com',
           contactType: 'customer service',
           areaServed: 'US-OK',
           availableLanguage: 'English',
@@ -167,7 +167,7 @@ const BOOKING_URL = 'https://www.optimantra.com/optimus/patient/patientaccess/se
 
 const PHONE      = '(405) 349-8188'
 const PHONE_HREF = 'tel:+14053498188'
-const EMAIL      = 'ebenezertelehealth@gmail.com'
+const EMAIL      = 'ebenezerhealth@outlook.com'
 
 const OKLAHOMA_CITIES = [
   'Oklahoma City',

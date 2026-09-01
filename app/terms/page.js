@@ -206,11 +206,11 @@ export default function TermsPage() {
                 </p>
                 <p>
                   <a
-                    href="mailto:ebenezertelehealth@gmail.com"
+                    href="mailto:ebenezerhealth@outlook.com"
                     className="font-medium"
                     style={{ color: 'var(--primary)' }}
                   >
-                    ebenezertelehealth@gmail.com
+                    ebenezerhealth@outlook.com
                   </a>
                 </p>
               </address>

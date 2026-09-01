@@ -214,11 +214,11 @@ export default function PrivacyPolicyPage() {
                 You may request access to or correction of your information,
                 and opt out of non-essential communications. Contact us at{' '}
                 <a
-                  href="mailto:ebenezertelehealth@gmail.com"
+                  href="mailto:ebenezerhealth@outlook.com"
                   className="font-medium underline"
                   style={{ color: 'var(--primary)' }}
                 >
-                  ebenezertelehealth@gmail.com
+                  ebenezerhealth@outlook.com
                 </a>{' '}
                 or{' '}
                 <a
@@ -297,11 +297,11 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p>
                   <a
-                    href="mailto:ebenezertelehealth@gmail.com"
+                    href="mailto:ebenezerhealth@outlook.com"
                     className="font-medium"
                     style={{ color: 'var(--primary)' }}
                   >
-                    ebenezertelehealth@gmail.com
+                    ebenezerhealth@outlook.com
                   </a>
                 </p>
               </address>

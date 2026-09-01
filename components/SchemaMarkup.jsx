@@ -37,7 +37,7 @@ const schemaGraph = {
         "Ebenezer Health Clinic is a walk-in medical clinic in Oklahoma City offering primary care, medical weight loss, women's health, minor illness care, injections, and IV therapy — plus telehealth across Oklahoma. Walk-ins welcome. Transparent cash-pay pricing. No insurance required.",
       url: 'https://www.ebenezerhealthclinic.com',
       telephone: '+14053498188',
-      email: 'ebenezertelehealth@gmail.com',
+      email: 'ebenezerhealth@outlook.com',
       priceRange: '$$',
       image: 'https://www.ebenezerhealthclinic.com/images/dr-susan-george-oklahoma-telehealth.webp',
       logo: 'https://www.ebenezerhealthclinic.com/images/ebenezer_logo.webp',
