@@ -12,22 +12,18 @@ import WeightLossLocationFAQAccordion from '@/components/WeightLossLocationFAQAc
 export const metadata = {
   title: 'Weight Loss Clinic in OKC | In-Person & Online',
   description:
-    'Weight loss clinic in OKC: semaglutide & GLP-1 plans, in-person Saturdays or online anytime. Board Certified provider. From $250. Book or call (405) 349-8188.',
+    'Weight loss clinic in OKC: semaglutide & GLP-1 plans, in-person Saturdays or online anytime. Board Certified provider. $100/month. Book or call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-okc',
   },
 }
 
-const initialIncludes = [
+const programIncludes = [
   'Full health and metabolic evaluation',
   'Personalized weight-loss plan',
-  'Lab orders when needed',
-]
-
-const followUpIncludes = [
-  'Progress review',
-  'Dose adjustments if you\'re on medication',
-  'Ongoing support',
+  'Initial labs included',
+  'Prescriptions sent to Lilly Direct Pharmacy',
+  'Ongoing monitoring and support',
 ]
 
 const steps = [
@@ -71,7 +67,7 @@ const faqs = [
     id: 'okc-faq-3',
     question: 'What does it cost?',
     answer:
-      '$250–$300 initial, $50 follow-ups, medication billed separately.',
+      '$100 per month, which includes initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient.',
   },
 ]
 
@@ -82,7 +78,7 @@ const pageSchema = {
   '@type': 'MedicalWebPage',
   name: 'Weight Loss Clinic in OKC | In-Person & Online',
   description:
-    'Weight loss clinic in OKC offering semaglutide and GLP-1 plans when medically appropriate. In-person Saturdays in Oklahoma City or online anytime statewide. Board Certified provider. From $250. Medication billed separately.',
+    'Weight loss clinic in OKC offering semaglutide and GLP-1 plans when medically appropriate. In-person Saturdays in Oklahoma City or online anytime statewide. Board Certified provider. $100/month, includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Medication billed separately.',
   url: 'https://www.ebenezerhealthclinic.com/weight-loss-okc',
   provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: {
@@ -91,7 +87,6 @@ const pageSchema = {
     procedureType: 'https://schema.org/TherapeuticProcedure',
     description:
       'Medically supervised weight loss led by Dr. Susan George, DNP, APRN, BC-ADM. Available in person on Saturdays in Oklahoma City or via telehealth statewide anytime. Semaglutide and GLP-1 medications available when medically appropriate after provider evaluation.',
-    followup: 'Follow-up visits at $50. Progress review, dose adjustments if on medication, and ongoing support.',
   },
   availableService: {
     '@type': 'MedicalTherapy',
@@ -113,26 +108,17 @@ const pageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'Weight Loss Initial Consultation',
+      name: 'Weight Loss Monthly Program',
       description:
-        'Full health and metabolic evaluation, personalized weight-loss plan, and lab orders when needed. Medication, if prescribed, is billed separately on a cash-pay basis.',
+        'Full health and metabolic evaluation, personalized weight-loss plan, initial labs, and prescriptions sent to Lilly Direct Pharmacy, with ongoing monitoring and support. Weight loss medication is billed separately to the patient.',
       priceCurrency: 'USD',
-      price: '250',
+      price: '100',
       priceSpecification: {
-        '@type': 'PriceSpecification',
-        minPrice: '250',
-        maxPrice: '300',
+        '@type': 'UnitPriceSpecification',
+        price: '100',
         priceCurrency: 'USD',
+        unitCode: 'MON',
       },
-      availability: 'https://schema.org/InStock',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Weight Loss Follow-Up Visit',
-      description:
-        'Progress review, dose adjustments if on medication, and ongoing support. Medication billed separately. Cash-pay, no insurance required.',
-      priceCurrency: 'USD',
-      price: '50',
       availability: 'https://schema.org/InStock',
     },
   ],
@@ -225,8 +211,10 @@ export default function WeightLossOKCPage() {
                 offers medical weight loss in Oklahoma City with a Board
                 Certified provider, in person on Saturdays or online anytime.
                 Plans may include semaglutide and GLP-1 medications when
-                appropriate. Consultations start at $250; medication billed
-                separately.
+                appropriate. The program is $100 per month, which includes
+                initial labs and prescriptions sent to Lilly Direct Pharmacy;
+                the weight loss medication itself is billed separately to the
+                patient.
               </p>
             </div>
 
@@ -249,7 +237,7 @@ export default function WeightLossOKCPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              Medically Supervised Weight Loss · From $250
+              Medically Supervised Weight Loss · $100/month
             </div>
 
             {/* CTAs */}
@@ -298,8 +286,8 @@ export default function WeightLossOKCPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Initial Consultation Card */}
+          <div className="max-w-md mx-auto">
+            {/* Monthly Program Card */}
             <div
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
@@ -312,19 +300,19 @@ export default function WeightLossOKCPage() {
                 className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
-                Initial Consultation
+                Weight Loss Program
               </h3>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
                   style={{ color: 'var(--primary)' }}
                 >
-                  $250
+                  $100
                 </span>
-                <span className="text-sm text-gray-500">– $300</span>
+                <span className="text-sm text-gray-500">per month</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {initialIncludes.map((item) => (
+                {programIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
@@ -338,49 +326,6 @@ export default function WeightLossOKCPage() {
               <Link
                 href="/contact"
                 className="btn-primary text-base w-full text-center"
-              >
-                Book Your Consultation
-              </Link>
-            </div>
-
-            {/* Follow-Up Visits Card */}
-            <div
-              className="rounded-2xl p-7 md:p-8 border flex flex-col"
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.85)',
-                borderColor: 'rgba(26,166,183,0.20)',
-              }}
-            >
-              <h3
-                className="text-lg font-semibold mb-1"
-                style={{ color: 'var(--navy)' }}
-              >
-                Follow-Up Visits
-              </h3>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span
-                  className="text-5xl font-bold"
-                  style={{ color: 'var(--primary)' }}
-                >
-                  $50
-                </span>
-                <span className="text-sm text-gray-500">per visit</span>
-              </div>
-              <ul className="space-y-3 mb-8 flex-1">
-                {followUpIncludes.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2
-                      className="h-4 w-4 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <span className="text-sm text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="btn-outline text-base w-full text-center"
               >
                 Book Your Consultation
               </Link>
@@ -403,9 +348,9 @@ export default function WeightLossOKCPage() {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                <strong>Medication</strong> is billed separately if prescribed.
-                We operate on a <strong>cash-pay basis</strong> with no insurance
-                required, no hidden fees.
+                <strong>Weight loss medication</strong> is billed separately
+                to the patient. We operate on a <strong>cash-pay basis</strong>{' '}
+                with no insurance required, no hidden fees.
               </p>
             </div>
 
@@ -802,7 +747,7 @@ export default function WeightLossOKCPage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    $50/visit
+                    $75/visit
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -852,7 +797,7 @@ export default function WeightLossOKCPage() {
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Medically supervised weight loss. GLP-1 medications, personalized
-            plans, real follow-up. Starting at $250.
+            plans, real follow-up. $100 per month.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

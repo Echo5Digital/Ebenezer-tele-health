@@ -24,7 +24,7 @@ const faqs = [
     id: 'wl-faq-2',
     question: 'How much does the program cost?',
     answer:
-      'Initial consultation is $250–$300; follow-ups are $50. Medication, if prescribed, is billed separately.',
+      '$100 per month, which includes initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient.',
   },
   {
     id: 'wl-faq-3',

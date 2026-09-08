@@ -12,22 +12,18 @@ import WeightLossLocationFAQAccordion from '@/components/WeightLossLocationFAQAc
 export const metadata = {
   title: 'Weight Loss Clinic in Moore, OK | Online & Nearby In-Person',
   description:
-    'Weight loss clinic for Moore, OK: online visits statewide, plus in-person appointments a short drive away in Oklahoma City. From $250. Call (405) 349-8188.',
+    'Weight loss clinic for Moore, OK: online visits statewide, plus in-person appointments a short drive away in Oklahoma City. $100/month. Call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-moore',
   },
 }
 
-const initialIncludes = [
+const programIncludes = [
   'Full health and metabolic evaluation',
   'Personalized weight-loss plan',
-  'Lab orders when needed',
-]
-
-const followUpIncludes = [
-  'Progress review',
-  'Dose adjustments if you\'re on medication',
-  'Ongoing support',
+  'Initial labs included',
+  'Prescriptions sent to Lilly Direct Pharmacy',
+  'Ongoing monitoring and support',
 ]
 
 const steps = [
@@ -71,7 +67,7 @@ const faqs = [
     id: 'moore-faq-3',
     question: 'What does it cost?',
     answer:
-      '$250\u2013$300 initial, $50 follow-ups, medication billed separately.',
+      '$100 per month, which includes initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient.',
   },
 ]
 
@@ -82,7 +78,7 @@ const pageSchema = {
   '@type': 'MedicalWebPage',
   name: 'Weight Loss Clinic in Moore, OK | Online & Nearby In-Person',
   description:
-    'Weight loss clinic for Moore, OK: online visits statewide anytime, plus in-person Saturday appointments a short drive away in Oklahoma City. Board Certified provider. From $250. Medication billed separately.',
+    'Weight loss clinic for Moore, OK: online visits statewide anytime, plus in-person Saturday appointments a short drive away in Oklahoma City. Board Certified provider. $100/month, includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Medication billed separately.',
   url: 'https://www.ebenezerhealthclinic.com/weight-loss-moore',
   provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: {
@@ -91,7 +87,6 @@ const pageSchema = {
     procedureType: 'https://schema.org/TherapeuticProcedure',
     description:
       'Medically supervised weight loss led by Dr. Susan George, DNP, APRN, BC-ADM. Moore patients can start online from home or come in person on Saturdays at our nearby Oklahoma City location. GLP-1 options available when medically appropriate after provider evaluation. Medication billed separately.',
-    followup: 'Follow-up visits at $50. Progress review, dose adjustments if on medication, and ongoing support.',
   },
   availableService: {
     '@type': 'MedicalTherapy',
@@ -118,26 +113,17 @@ const pageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'Weight Loss Initial Consultation',
+      name: 'Weight Loss Monthly Program',
       description:
-        'Full health and metabolic evaluation, personalized weight-loss plan, and lab orders when needed. Available online or in-person Saturdays in Oklahoma City. Medication, if prescribed, is billed separately on a cash-pay basis.',
+        'Full health and metabolic evaluation, personalized weight-loss plan, initial labs, and prescriptions sent to Lilly Direct Pharmacy, with ongoing monitoring and support. Weight loss medication is billed separately to the patient.',
       priceCurrency: 'USD',
-      price: '250',
+      price: '100',
       priceSpecification: {
-        '@type': 'PriceSpecification',
-        minPrice: '250',
-        maxPrice: '300',
+        '@type': 'UnitPriceSpecification',
+        price: '100',
         priceCurrency: 'USD',
+        unitCode: 'MON',
       },
-      availability: 'https://schema.org/InStock',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Weight Loss Follow-Up Visit',
-      description:
-        'Progress review, dose adjustments if on medication, and ongoing support. Medication billed separately. Cash-pay, no insurance required.',
-      priceCurrency: 'USD',
-      price: '50',
       availability: 'https://schema.org/InStock',
     },
   ],
@@ -231,7 +217,9 @@ export default function WeightLossMoorePage() {
                 we&apos;re just up the road in Oklahoma City, in-person Saturday
                 appointments are an easy option too. Our Board Certified provider
                 may include semaglutide or GLP-1 medications when appropriate.
-                From $250; medication billed separately.
+                The program is $100 per month, which includes initial labs and
+                prescriptions sent to Lilly Direct Pharmacy; the weight loss
+                medication itself is billed separately to the patient.
               </p>
             </div>
 
@@ -252,7 +240,7 @@ export default function WeightLossMoorePage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              Medically Supervised Weight Loss · From $250
+              Medically Supervised Weight Loss · $100/month
             </div>
 
             {/* CTAs */}
@@ -301,8 +289,8 @@ export default function WeightLossMoorePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Initial Consultation Card */}
+          <div className="max-w-md mx-auto">
+            {/* Monthly Program Card */}
             <div
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
@@ -315,19 +303,19 @@ export default function WeightLossMoorePage() {
                 className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
-                Initial Consultation
+                Weight Loss Program
               </h3>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
                   style={{ color: 'var(--primary)' }}
                 >
-                  $250
+                  $100
                 </span>
-                <span className="text-sm text-gray-500">– $300</span>
+                <span className="text-sm text-gray-500">per month</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {initialIncludes.map((item) => (
+                {programIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
@@ -341,49 +329,6 @@ export default function WeightLossMoorePage() {
               <Link
                 href="/contact"
                 className="btn-primary text-base w-full text-center"
-              >
-                Book Your Consultation
-              </Link>
-            </div>
-
-            {/* Follow-Up Visits Card */}
-            <div
-              className="rounded-2xl p-7 md:p-8 border flex flex-col"
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.85)',
-                borderColor: 'rgba(26,166,183,0.20)',
-              }}
-            >
-              <h3
-                className="text-lg font-semibold mb-1"
-                style={{ color: 'var(--navy)' }}
-              >
-                Follow-Up Visits
-              </h3>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span
-                  className="text-5xl font-bold"
-                  style={{ color: 'var(--primary)' }}
-                >
-                  $50
-                </span>
-                <span className="text-sm text-gray-500">per visit</span>
-              </div>
-              <ul className="space-y-3 mb-8 flex-1">
-                {followUpIncludes.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2
-                      className="h-4 w-4 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <span className="text-sm text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="btn-outline text-base w-full text-center"
               >
                 Book Your Consultation
               </Link>
@@ -406,9 +351,9 @@ export default function WeightLossMoorePage() {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                <strong>Medication</strong> is billed separately if prescribed.
-                We operate on a <strong>cash-pay basis</strong> with no insurance
-                required, no hidden fees.
+                <strong>Weight loss medication</strong> is billed separately
+                to the patient. We operate on a <strong>cash-pay basis</strong>{' '}
+                with no insurance required, no hidden fees.
               </p>
             </div>
 
@@ -814,7 +759,7 @@ export default function WeightLossMoorePage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    $50/visit
+                    $75/visit
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -865,7 +810,7 @@ export default function WeightLossMoorePage() {
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Online or in-person in Oklahoma City, just up the road from Moore.
             Personalized, medically supervised weight loss with real follow-up.
-            Starting at $250.
+            $100 per month.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

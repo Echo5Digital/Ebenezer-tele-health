@@ -29,7 +29,7 @@ const faqs = [
   {
     id: 'mi-faq-3',
     question: 'How much does it cost?',
-    answer: '$50 per visit. No insurance required.',
+    answer: '$75 per visit. No insurance required.',
   },
   {
     id: 'mi-faq-4',

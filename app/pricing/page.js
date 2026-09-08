@@ -7,7 +7,7 @@ export const metadata = {
     absolute: 'Pricing | Cash-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
   },
   description:
-    "Cash-pay pricing at our Oklahoma City clinic — weight loss from $250, women's health from $150, minor illness $50, plus primary care, injections & IV therapy. No insurance needed.",
+    "Cash-pay pricing at our Oklahoma City clinic — weight loss $100/month, women's health from $150, minor illness $75, plus primary care, injections & IV therapy. No insurance needed.",
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/pricing',
   },
@@ -22,17 +22,11 @@ const SERVICES = [
     featured: true,
     rows: [
       {
-        type: 'Initial Consultation',
-        price: '$250–$300',
+        type: 'Monthly Program',
+        price: '$100/month',
         included:
-          'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), lab orders when needed.',
-        includedNote: 'Medication is billed separately if prescribed.',
-      },
-      {
-        type: 'Follow-Up Visit',
-        price: '$50',
-        included:
-          'Progress review, dose titration, side-effect monitoring, nutrition guidance, ongoing support.',
+          'Includes initial labs and prescriptions sent to Lilly Direct Pharmacy.',
+        includedNote: 'Weight loss medication is billed separately to the patient.',
       },
     ],
   },
@@ -60,7 +54,7 @@ const SERVICES = [
     rows: [
       {
         type: 'Visit',
-        price: '$50',
+        price: '$75',
         included:
           'Same-day evaluation, treatment recommendations, prescriptions when appropriate.',
       },
@@ -100,23 +94,17 @@ const pricingPageSchema = {
     itemListElement: [
       {
         '@type': 'Offer',
-        name: 'Weight Loss Initial Consultation',
+        name: 'Weight Loss Monthly Program',
         priceCurrency: 'USD',
+        price: '100',
         priceSpecification: {
-          '@type': 'PriceSpecification',
-          minPrice: '250',
-          maxPrice: '300',
+          '@type': 'UnitPriceSpecification',
+          price: '100',
+          priceCurrency: 'USD',
+          unitCode: 'MON',
         },
         description:
-          'Comprehensive evaluation, personalized weight-loss plan, medication management (including semaglutide/GLP-1 when appropriate), lab orders when needed.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Weight Loss Follow-Up Visit',
-        priceCurrency: 'USD',
-        price: '50',
-        description:
-          'Progress review, dose titration, side-effect monitoring, nutrition guidance, ongoing support.',
+          'Includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Weight loss medication is billed separately to the patient.',
       },
       {
         '@type': 'Offer',
@@ -138,7 +126,7 @@ const pricingPageSchema = {
         '@type': 'Offer',
         name: 'Minor Illness Visit',
         priceCurrency: 'USD',
-        price: '50',
+        price: '75',
         description:
           'Same-day evaluation, treatment recommendations, prescriptions when appropriate.',
       },
@@ -155,7 +143,7 @@ const pricingFAQSchema = {
       name: 'How much does telehealth cost without insurance in Oklahoma?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Women's health $150, weight loss $250–$300, minor illness $50. Follow-ups $50. No insurance required.",
+        text: "Women's health $150, weight loss $100/month, minor illness $75. No insurance required.",
       },
     },
     {
@@ -163,7 +151,7 @@ const pricingFAQSchema = {
       name: 'How much does semaglutide cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Medication is billed separately and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
+        text: "The $100/month program fee covers initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
       },
     },
     {
@@ -304,10 +292,9 @@ export default function PricingPage() {
             {/* Quick-scan price chips */}
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 mt-7">
               {[
-                { label: 'Weight Loss', price: '$250–$300' },
+                { label: 'Weight Loss', price: '$100/month' },
                 { label: "Women's Health", price: '$150' },
-                { label: 'Minor Illness', price: '$50' },
-                { label: 'Follow-Up (any)', price: '$50' },
+                { label: 'Minor Illness', price: '$75' },
               ].map((chip) => (
                 <div
                   key={chip.label}
@@ -366,18 +353,16 @@ export default function PricingPage() {
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                weight loss $250&ndash;$300
+                weight loss $100/month
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                minor illness $50
-              </strong>
-              ,{' '}
-              <strong style={{ color: 'var(--primary)' }}>
-                follow-ups $50
+                minor illness $75
               </strong>
               . Primary care, injections, and IV therapy pricing below.
-              Weight-loss medication, if prescribed, is billed separately.
+              The weight loss program fee includes initial labs and
+              prescriptions sent to Lilly Direct Pharmacy; the weight-loss
+              medication itself is billed separately to the patient.
             </p>
           </div>
         </div>

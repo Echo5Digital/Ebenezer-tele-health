@@ -17,22 +17,22 @@ const plans = [
     featured: false,
   },
   {
-    name: 'Weight Loss Consult',
-    price: 'from $250',
-    followUp: '$50',
+    name: 'Weight Loss Program',
+    price: '$100/month',
+    followUp: null,
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
       'Video visit with Dr. Susan George',
-      'Personalized metabolic health plan',
-      'GLP-1 options when medically appropriate',
+      'Includes initial labs',
+      'Prescriptions sent to Lilly Direct Pharmacy',
       'Ongoing management support',
-      'Clinically supervised, not a quick-fix program',
+      'Weight loss medication billed separately to patient',
     ],
     featured: true,
   },
   {
     name: 'Minor Illness Visit',
-    price: '$50',
+    price: '$75',
     followUp: null,
     description: 'Online evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
     features: [
@@ -129,9 +129,7 @@ export default function PricingSection() {
                       {plan.followUp}
                     </span>
                   </p>
-                ) : (
-                  <p className="mt-1 text-sm text-gray-400">No follow-up required</p>
-                )}
+                ) : null}
               </div>
 
               <ul className="space-y-2.5 flex-1">

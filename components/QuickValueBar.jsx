@@ -9,7 +9,7 @@ const valueCards = [
   {
     icon: Receipt,
     title: 'Honest, upfront pricing.',
-    body: "Flat cash-pay fees starting at $50. You'll know the cost before you book.",
+    body: "Flat cash-pay fees starting at $75. You'll know the cost before you book.",
   },
   {
     icon: Wifi,
