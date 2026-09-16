@@ -111,16 +111,14 @@ export default function Header() {
             className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
             aria-label="Ebenezer Health Clinic — Home"
           >
-            <div className="rounded-xl overflow-hidden">
-              <Image
-                src="/ebenezerhealth-clinic.webp"
-                alt="Ebenezer Health Clinic"
-                width={100}
-                height={100}
-                priority
-                className="h-[84px] sm:h-[100px] lg:h-[116px] w-auto object-contain"
-              />
-            </div>
+            <Image
+              src="/ebenezerhealth-clinic.webp"
+              alt="Ebenezer Health Clinic"
+              width={100}
+              height={100}
+              priority
+              className="h-[104px] sm:h-[124px] lg:h-[144px] w-auto object-contain"
+            />
           </Link>
 
           {/* ── Desktop nav links ─────────────────────────────── */}
