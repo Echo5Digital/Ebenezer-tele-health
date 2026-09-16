@@ -8,7 +8,7 @@ export default function AnswerBlock() {
   return (
     <section
       className="relative overflow-hidden"
-      aria-label="About Ebenezer Telehealth"
+      aria-label="About Ebenezer Health Clinic"
       style={{
         backgroundImage: 'url(/block_bg.webp)',
         backgroundSize: 'cover',
@@ -46,7 +46,7 @@ export default function AnswerBlock() {
             <strong style={{ color: 'var(--primary)' }}>injections</strong>, and{' '}
             <strong style={{ color: 'var(--primary)' }}>IV therapy</strong>{' '}
             and telehealth across Oklahoma. Walk-ins are welcome, with transparent cash-pay
-            pricing and no insurance required.
+            pricing, and we now accept Medicare and major commercial insurance plans.
           </p>
         </div>
       </div>

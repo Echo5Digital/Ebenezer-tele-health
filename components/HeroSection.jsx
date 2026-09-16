@@ -23,7 +23,7 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] min-h-[600px] md:min-h-[80vh]"
+      className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] min-h-[600px] md:min-h-[80vh]"
       style={{ backgroundColor: '#1AA6B7' }}
       aria-label="Hero"
     >
@@ -47,7 +47,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] sm:pt-[168px] lg:pt-[208px] pb-16 sm:pb-24 md:pb-32">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[152px] sm:pt-[184px] lg:pt-[224px] pb-16 sm:pb-24 md:pb-32">
         <div className="max-w-3xl">
           {/* Pre-headline badge */}
           <div
@@ -63,7 +63,7 @@ export default function HeroSection() {
               style={{ backgroundColor: '#97CECC' }}
               aria-hidden="true"
             />
-            Faith-Driven Telehealth &middot; Oklahoma City, OK
+            Faith-Driven Health Clinic &middot; Oklahoma City, OK
           </div>
 
           {/* H1 */}
@@ -82,8 +82,8 @@ export default function HeroSection() {
           >
             Real medical care that fits your life. Walk in to our Oklahoma City clinic or
             connect by telehealth from anywhere in Oklahoma. Primary care, weight loss, women&apos;s
-            health, minor illness, injections, and IV therapy, with honest cash-pay pricing and no
-            insurance required.
+            health, minor illness, injections, and IV therapy, with honest cash-pay pricing.
+            We now accept Medicare and major commercial insurance plans.
           </p>
 
           {/* CTA Buttons */}

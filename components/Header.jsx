@@ -93,7 +93,7 @@ export default function Header() {
 
         {/* ── Floating nav card ───────────────────────────────── */}
         <nav
-          className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-4 sm:px-6 lg:px-8 h-[68px] sm:h-[84px] lg:h-[100px] transition-all duration-300"
+          className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-4 sm:px-6 lg:px-8 h-[84px] sm:h-[100px] lg:h-[116px] transition-all duration-300"
           aria-label="Global"
           style={{
             background:           'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(151,206,204,0.18) 100%)',
@@ -109,16 +109,16 @@ export default function Header() {
           <Link
             href="/"
             className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
-            aria-label="Ebenezer Telehealth — Home"
+            aria-label="Ebenezer Health Clinic — Home"
           >
             <div className="rounded-xl overflow-hidden">
               <Image
-                src="/ebenezer_logo_2.webp"
-                alt="Ebenezer Telehealth"
+                src="/ebenezerhealth-clinic.webp"
+                alt="Ebenezer Health Clinic"
                 width={100}
                 height={100}
                 priority
-                className="h-[52px] sm:h-[68px] lg:h-[88px] w-auto object-contain"
+                className="h-[84px] sm:h-[100px] lg:h-[116px] w-auto object-contain"
               />
             </div>
           </Link>
@@ -129,7 +129,7 @@ export default function Header() {
             {/* Home */}
             <Link
               href="/"
-              className={`px-3 py-2 rounded-lg text-[11px] xl:text-xs font-bold uppercase tracking-widest transition-colors ${
+              className={`px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors ${
                 pathname === '/' ? 'text-primary' : 'text-gray-800 hover:text-primary'
               }`}
             >
@@ -141,7 +141,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setServicesOpen((v) => !v)}
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-[11px] xl:text-xs font-bold uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                   isServicesActive || servicesOpen
                     ? 'text-primary'
                     : 'text-gray-800 hover:text-primary'
@@ -270,7 +270,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 rounded-lg text-[11px] xl:text-xs font-bold uppercase tracking-widest transition-colors ${
+                className={`px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors ${
                   pathname === item.href
                     ? 'text-primary'
                     : 'text-gray-800 hover:text-primary'
@@ -287,7 +287,7 @@ export default function Header() {
               href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-4 xl:px-6 py-2.5 xl:py-3 text-[11px] xl:text-xs font-bold uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
+              className="inline-flex items-center gap-2 rounded-full px-4 xl:px-6 py-2.5 xl:py-3 text-xs xl:text-sm font-bold uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
               style={{ backgroundColor: 'var(--primary)' }}
             >
               Book Your Visit

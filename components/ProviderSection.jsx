@@ -77,8 +77,8 @@ export default function ProviderSection() {
                   border: '1px solid rgba(26,166,183,0.20)',
                 }}
               >
-                Currently in the credentialing process and will soon be accepting major
-                commercial and government insurance plans.
+                Now accepting Medicare and major commercial insurance plans, in
+                addition to transparent cash-pay pricing.
               </p>
             </div>
 
@@ -121,7 +121,7 @@ export default function ProviderSection() {
             <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
               <Image
                 src="/dr-susan-george-oklahoma-telehealth.webp"
-                alt="Dr. Susan George, DNP, APRN — provider at Ebenezer Telehealth in Oklahoma"
+                alt="Dr. Susan George, DNP, APRN — provider at Ebenezer Health Clinic in Oklahoma"
                 fill
                 className="object-cover object-center"
                 priority

@@ -63,14 +63,14 @@ export default function PricingSection() {
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{ color: 'var(--navy)' }}
           >
-            How Much Does a Telehealth Visit Cost Without Insurance?
+            How Much Does a Telehealth Visit Cost?
           </h2>
-          {/* AEO answer-first paragraph — ~43 words, direct answer before cards */}
+          {/* AEO answer-first paragraph — direct answer before cards */}
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Ebenezer Telehealth is a cash-pay telehealth practice in Oklahoma
-            City. No insurance required, ever. The exact cost of your
-            visit is confirmed before you book, with no hidden fees and no
-            surprise bills.
+            Ebenezer Health Clinic offers transparent cash-pay pricing in Oklahoma
+            City, and we now accept Medicare and major commercial insurance
+            plans. The exact cost of your visit is confirmed before you book,
+            with no hidden fees and no surprise bills.
           </p>
         </div>
 
@@ -177,12 +177,10 @@ export default function PricingSection() {
             aria-hidden="true"
           />
           <p className="text-sm text-gray-700">
-            We currently operate on a{' '}
-            <strong>cash-pay basis</strong>. Insurance options are coming as we
-            expand to in-person and additional telehealth services. Exact prices
-            will be displayed at booking, no hidden fees.{' '}
-            As telehealth services are provided remotely, payment is currently
-            accepted via credit and debit cards only.
+            We offer{' '}
+            <strong>transparent cash-pay pricing</strong>, and we now accept
+            Medicare and major commercial insurance plans. Exact prices
+            will be displayed at booking, no hidden fees.
           </p>
         </div>
       </div>

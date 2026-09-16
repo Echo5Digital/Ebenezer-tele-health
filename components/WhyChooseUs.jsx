@@ -4,7 +4,7 @@ import { CheckCircle2 } from 'lucide-react'
 const bullets = [
   { text: 'A real walk-in clinic in Oklahoma City, plus telehealth statewide.' },
   { text: 'An experienced, credentialed provider: Dr. Susan George, DNP, APRN, BC-ADM.' },
-  { text: 'Transparent cash-pay pricing. Know your cost before you\'re seen.', link: true },
+  { text: 'Transparent cash-pay pricing, plus Medicare and major commercial insurance accepted.', link: true },
   { text: 'Care delivered with warmth, dignity, and a heart of faith.' },
 ]
 

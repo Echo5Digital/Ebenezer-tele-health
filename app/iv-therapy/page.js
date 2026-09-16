@@ -106,7 +106,7 @@ export default function IVTherapyPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         {/* Background image */}
         <div

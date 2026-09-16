@@ -33,7 +33,7 @@ const faqs = [
     id: 'faq-3',
     question: 'Do I need insurance?',
     answer:
-      "No. We're a cash-pay clinic with transparent pricing.",
+      "No. We offer transparent cash-pay pricing, and we also accept Medicare and major commercial insurance plans.",
     extra: null,
   },
   {

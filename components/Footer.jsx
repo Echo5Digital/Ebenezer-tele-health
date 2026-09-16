@@ -55,11 +55,11 @@ export default function Footer() {
 
           {/* ── Col 1: Brand ── */}
           <div>
-            <Link href="/" aria-label="Ebenezer Telehealth — Home" className="inline-block mb-5">
+            <Link href="/" aria-label="Ebenezer Health Clinic — Home" className="inline-block mb-5">
               <div className="rounded-xl overflow-hidden">
                 <Image
-                  src="/ebenezer_logo.webp"
-                  alt="Ebenezer Telehealth"
+                  src="/ebenezerhealth-clinic-okc.webp"
+                  alt="Ebenezer Health Clinic"
                   width={360}
                   height={144}
                   className="h-20 sm:h-28 lg:h-36 w-auto object-contain"

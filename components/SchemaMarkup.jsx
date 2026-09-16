@@ -11,7 +11,7 @@ const faqItems = [
   },
   {
     question: 'Do I need insurance?',
-    answer: "No. We're a cash-pay clinic with transparent pricing.",
+    answer: "No. We offer transparent cash-pay pricing, and we also accept Medicare and major commercial insurance plans.",
   },
   {
     question: 'What do you treat?',
@@ -32,15 +32,15 @@ const schemaGraph = {
       '@type': 'MedicalClinic',
       '@id': 'https://www.ebenezerhealthclinic.com/#organization',
       name: 'Ebenezer Health Clinic',
-      alternateName: 'Ebenezer Telehealth',
+      alternateName: 'Ebenezer Health Clinic',
       description:
-        "Ebenezer Health Clinic is a walk-in medical clinic in Oklahoma City offering primary care, medical weight loss, women's health, minor illness care, injections, and IV therapy — plus telehealth across Oklahoma. Walk-ins welcome. Transparent cash-pay pricing. No insurance required.",
+        "Ebenezer Health Clinic is a walk-in medical clinic in Oklahoma City offering primary care, medical weight loss, women's health, minor illness care, injections, and IV therapy — plus telehealth across Oklahoma. Walk-ins welcome. Transparent cash-pay pricing. Medicare and major commercial insurance accepted.",
       url: 'https://www.ebenezerhealthclinic.com',
       telephone: '+14053498188',
       email: 'ebenezerhealth@outlook.com',
       priceRange: '$$',
       image: 'https://www.ebenezerhealthclinic.com/images/dr-susan-george-oklahoma-telehealth.webp',
-      logo: 'https://www.ebenezerhealthclinic.com/images/ebenezer_logo.webp',
+      logo: 'https://www.ebenezerhealthclinic.com/ebenezerhealth-clinic-okc.webp',
       medicalSpecialty: ['PrimaryCare', 'Gynecologic'],
       address: {
         '@type': 'PostalAddress',
@@ -108,7 +108,7 @@ const schemaGraph = {
         knowsAbout: ["Women's Health", 'Weight Loss Management', 'Diabetes Management', 'Primary Care'],
         image: 'https://www.ebenezerhealthclinic.com/images/dr-susan-george-oklahoma-telehealth.webp',
       },
-      paymentAccepted: 'Cash, Credit Card',
+      paymentAccepted: 'Cash, Credit Card, Medicare, Commercial Insurance',
       currenciesAccepted: 'USD',
     },
 

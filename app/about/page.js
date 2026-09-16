@@ -57,7 +57,7 @@ const VALUES = [
 const aboutPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Ebenezer Telehealth',
+  name: 'About Ebenezer Health Clinic',
   url: 'https://www.ebenezerhealthclinic.com/about',
   mainEntity: {
     '@type': 'Person',
@@ -66,7 +66,7 @@ const aboutPageSchema = {
     honorificPrefix: 'Dr.',
     jobTitle: "Women's Health Nurse Practitioner, DNP, APRN, BC-ADM",
     description:
-      'Dr. Susan George is a Doctor of Nursing Practice (DNP) and Advanced Practice Registered Nurse (APRN) who founded Ebenezer Telehealth to bring honest, personal care to women and families in Oklahoma. As a nurse practitioner in Oklahoma City, she specializes in women\'s health and is Board Certified in Advanced Diabetes Management (BC-ADM). Ebenezer Telehealth offers in-person care on Saturdays in OKC and telehealth across Oklahoma.',
+      'Dr. Susan George is a Doctor of Nursing Practice (DNP) and Advanced Practice Registered Nurse (APRN) who founded Ebenezer Health Clinic to bring honest, personal care to women and families in Oklahoma. As a nurse practitioner in Oklahoma City, she specializes in women\'s health and is Board Certified in Advanced Diabetes Management (BC-ADM). Ebenezer Health Clinic offers in-person care on Saturdays in OKC and telehealth across Oklahoma.',
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',
@@ -109,7 +109,7 @@ export default function AboutPage() {
           HERO
       ════════════════════════════════════════════════════════ */}
       <section
-        className="relative overflow-hidden border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden border-b border-gray-100 -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/about.webp')",
           backgroundSize: 'cover',
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
                 style={{ color: 'var(--navy)' }}
               >
-                About Ebenezer Telehealth
+                About Ebenezer Health Clinic
                 <br />
                 <span className="text-3xl md:text-4xl" style={{ color: 'var(--primary)' }}>
                   Dr. Susan George, DNP, APRN
@@ -188,7 +188,7 @@ export default function AboutPage() {
             Our Mission
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Ebenezer Telehealth exists to make quality, compassionate healthcare
+            Ebenezer Health Clinic exists to make quality, compassionate healthcare
             accessible to Oklahoma women and families, whether in person here
             in Oklahoma City or online from wherever you are. We believe care should
             be delivered with integrity, dignity, and a personal touch that reflects
@@ -204,7 +204,7 @@ export default function AboutPage() {
             }}
           >
             <p className="text-base text-gray-700 leading-relaxed">
-              Ebenezer Telehealth is an Oklahoma City medical practice serving women
+              Ebenezer Health Clinic is an Oklahoma City medical practice serving women
               and families with in-person care on Saturdays in OKC and telehealth
               across Oklahoma. Our care is led by{' '}
               <strong className="font-semibold text-gray-900">
@@ -327,7 +327,7 @@ export default function AboutPage() {
               <div className="relative w-full max-w-sm lg:max-w-full mx-auto rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
                 <Image
                   src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Dr. Susan George, DNP, APRN, provider at Ebenezer Telehealth in Oklahoma"
+                  alt="Dr. Susan George, DNP, APRN, provider at Ebenezer Health Clinic in Oklahoma"
                   fill
                   className="object-cover object-center"
                   priority
@@ -454,7 +454,7 @@ export default function AboutPage() {
             <a
               href="tel:+14053498188"
               className="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-primary font-semibold text-base transition-colors w-full sm:w-auto"
-              aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+              aria-label="Call Ebenezer Health Clinic at (405) 349-8188"
             >
               Call (405) 349-8188
             </a>

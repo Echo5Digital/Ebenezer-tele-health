@@ -151,7 +151,7 @@ export default function WeightLossOwassoPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/location_bg.webp')",
           backgroundSize: 'cover',
@@ -209,7 +209,7 @@ export default function WeightLossOwassoPage() {
               }}
             >
               <p className="hero-answer-line">
-                Ebenezer Telehealth serves Owasso, OK patients through secure
+                Ebenezer Health Clinic serves Owasso, OK patients through secure
                 online visits with a Board Certified provider. We offer
                 personalized medical weight-loss plans, including semaglutide
                 and GLP-1 medication management when medically appropriate.
@@ -220,7 +220,7 @@ export default function WeightLossOwassoPage() {
             </div>
 
             <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
-              Ebenezer Telehealth brings medical weight-loss care to Owasso
+              Ebenezer Health Clinic brings medical weight-loss care to Owasso
               through convenient online visits with no long drive and no waiting
               room. A Board Certified provider evaluates your goals and health
               profile by secure video, builds a personalized plan, and manages
@@ -549,7 +549,7 @@ export default function WeightLossOwassoPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              More From Ebenezer Telehealth
+              More From Ebenezer Health Clinic
             </h2>
           </div>
 

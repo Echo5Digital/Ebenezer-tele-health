@@ -149,7 +149,7 @@ export default function WeightLossTulsaPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/location_bg.webp')",
           backgroundSize: 'cover',
@@ -208,7 +208,7 @@ export default function WeightLossTulsaPage() {
             >
               <p className="hero-answer-line">
                 Tulsa patients can access medically supervised weight loss
-                through secure online visits with Ebenezer Telehealth. Our
+                through secure online visits with Ebenezer Health Clinic. Our
                 Board Certified provider builds a personalized plan that may
                 include semaglutide or GLP-1 medications when appropriate.
                 The program is $100 per month, which includes initial labs
@@ -220,7 +220,7 @@ export default function WeightLossTulsaPage() {
             <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
               You don&apos;t have to drive across Tulsa or wait weeks for an
               appointment to get real weight-loss support. As an online weight
-              loss clinic serving Tulsa, Ebenezer Telehealth connects you with
+              loss clinic serving Tulsa, Ebenezer Health Clinic connects you with
               your provider by secure video, builds a plan around your
               metabolism and history, and supports you with ongoing follow-up
               from home. (We&apos;re an Oklahoma City-based practice serving
@@ -547,7 +547,7 @@ export default function WeightLossTulsaPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              More From Ebenezer Telehealth
+              More From Ebenezer Health Clinic
             </h2>
           </div>
 

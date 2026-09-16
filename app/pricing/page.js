@@ -90,7 +90,7 @@ const pricingPageSchema = {
   url: 'https://www.ebenezerhealthclinic.com/pricing',
   mainEntity: {
     '@type': 'ItemList',
-    name: 'Ebenezer Telehealth Services and Pricing',
+    name: 'Ebenezer Health Clinic Services and Pricing',
     itemListElement: [
       {
         '@type': 'Offer',
@@ -257,7 +257,7 @@ export default function PricingPage() {
           HERO
       ════════════════════════════════════════════════════════ */}
       <section
-        className="relative overflow-hidden border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden border-b border-gray-100 -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/pricing_banner.webp')",
           backgroundSize: 'cover',
@@ -721,7 +721,7 @@ export default function PricingPage() {
             <a
               href="tel:+14053498188"
               className="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-primary font-semibold text-base transition-colors w-full sm:w-auto"
-              aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+              aria-label="Call Ebenezer Health Clinic at (405) 349-8188"
             >
               Call (405) 349-8188
             </a>

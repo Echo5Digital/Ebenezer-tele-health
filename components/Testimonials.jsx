@@ -6,7 +6,7 @@ import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 const reviews = [
   {
     id: 1,
-    text: "Getting birth control online seemed like a stretch at first, but Ebenezer Telehealth made it genuinely easy. Susan George listened carefully and walked me through every option without rushing. My prescription was at my pharmacy the same afternoon. Living 45 minutes from the city, this kind of access is a real game-changer.",
+    text: "Getting birth control online seemed like a stretch at first, but Ebenezer Health Clinic made it genuinely easy. Susan George listened carefully and walked me through every option without rushing. My prescription was at my pharmacy the same afternoon. Living 45 minutes from the city, this kind of access is a real game-changer.",
     author: 'Jennifer M.',
     location: 'Edmond, OK',
     service: "Women's Health",
@@ -15,7 +15,7 @@ const reviews = [
   },
   {
     id: 2,
-    text: "Had a bad sinus infection and couldn't get in anywhere for three days. Found Ebenezer Telehealth, booked online, and was seen within the hour. Susan George was professional and thorough. My prescription was sent straight to my pharmacy. Seventy-five dollars, done in 30 minutes, feeling better the next day. This is how healthcare should work.",
+    text: "Had a bad sinus infection and couldn't get in anywhere for three days. Found Ebenezer Health Clinic, booked online, and was seen within the hour. Susan George was professional and thorough. My prescription was sent straight to my pharmacy. Seventy-five dollars, done in 30 minutes, feeling better the next day. This is how healthcare should work.",
     author: 'Marcus T.',
     location: 'Oklahoma City, OK',
     service: 'Minor Illness',
@@ -31,7 +31,7 @@ const reviews = [
   },
   {
     id: 4,
-    text: "I needed PCOS management and was dreading a months-long wait for a specialist. Ebenezer Telehealth got me seen in days. Susan George ordered labs, reviewed the results with me personally, and adjusted my treatment plan based on my actual numbers. Highly recommend for any woman dealing with hormonal health issues.",
+    text: "I needed PCOS management and was dreading a months-long wait for a specialist. Ebenezer Health Clinic got me seen in days. Susan George ordered labs, reviewed the results with me personally, and adjusted my treatment plan based on my actual numbers. Highly recommend for any woman dealing with hormonal health issues.",
     author: 'Rachel K.',
     location: 'Norman, OK',
     service: "Women's Health",

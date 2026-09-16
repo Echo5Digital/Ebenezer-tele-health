@@ -149,7 +149,7 @@ export default function WeightLossOKCPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/location_bg.webp')",
           backgroundSize: 'cover',
@@ -207,7 +207,7 @@ export default function WeightLossOKCPage() {
               }}
             >
               <p className="hero-answer-line">
-                Looking for a weight loss clinic in OKC? Ebenezer Telehealth
+                Looking for a weight loss clinic in OKC? Ebenezer Health Clinic
                 offers medical weight loss in Oklahoma City with a Board
                 Certified provider, in person on Saturdays or online anytime.
                 Plans may include semaglutide and GLP-1 medications when
@@ -614,7 +614,7 @@ export default function WeightLossOKCPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              More From Ebenezer Telehealth
+              More From Ebenezer Health Clinic
             </h2>
           </div>
 

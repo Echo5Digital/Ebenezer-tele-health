@@ -20,7 +20,7 @@ const contactPageSchema = {
     {
       '@type': 'ContactPage',
       '@id': 'https://www.ebenezerhealthclinic.com/contact#webpage',
-      name: 'Book an Oklahoma City Appointment | Ebenezer Telehealth Contact',
+      name: 'Book an Oklahoma City Appointment | Ebenezer Health Clinic Contact',
       url: 'https://www.ebenezerhealthclinic.com/contact',
       description:
         'Visit our walk-in clinic in Oklahoma City or book telehealth from anywhere in Oklahoma. Call (405) 349-8188 or book online with Ebenezer Health Clinic.',
@@ -43,7 +43,7 @@ const contactPageSchema = {
               'https://schema.org/MobileWebPlatform',
             ],
           },
-          result: { '@type': 'Reservation', name: 'Appointment at Ebenezer Telehealth' },
+          result: { '@type': 'Reservation', name: 'Appointment at Ebenezer Health Clinic' },
         },
       ],
     },
@@ -52,7 +52,7 @@ const contactPageSchema = {
     {
       '@type': 'MedicalBusiness',
       '@id': 'https://www.ebenezerhealthclinic.com/#organization',
-      name: 'Ebenezer Telehealth',
+      name: 'Ebenezer Health Clinic',
       url: 'https://www.ebenezerhealthclinic.com',
       telephone: '+14053498188',
       email: 'ebenezerhealth@outlook.com',
@@ -225,7 +225,7 @@ export default function ContactPage() {
           HERO — H1 + answer-first + body + CTAs + trust chips
       ═══════════════════════════════════════════════════════ */}
       <section
-        className="relative overflow-hidden border-b border-gray-100 -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden border-b border-gray-100 -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/contact_banner.webp')",
           backgroundSize: 'cover',
@@ -285,7 +285,7 @@ export default function ContactPage() {
                 <a
                   href={PHONE_HREF}
                   className="btn-outline inline-flex items-center justify-center gap-2.5"
-                  aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+                  aria-label="Call Ebenezer Health Clinic at (405) 349-8188"
                 >
                   <Phone className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                   Call {PHONE}
@@ -329,7 +329,7 @@ export default function ContactPage() {
       ═══════════════════════════════════════════════════════ */}
       <section
         className="relative overflow-hidden"
-        aria-label="How to book with Ebenezer Telehealth"
+        aria-label="How to book with Ebenezer Health Clinic"
         style={{
           backgroundImage: "url('/contact-answer.webp')",
           backgroundSize: 'cover',
@@ -497,7 +497,7 @@ export default function ContactPage() {
                       fontSize: 'clamp(1.25rem, 3.5vw, 1.75rem)',
                       lineHeight: 1.2,
                     }}
-                    aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+                    aria-label="Call Ebenezer Health Clinic at (405) 349-8188"
                   >
                     <Phone
                       className="h-6 w-6 flex-shrink-0"
@@ -640,7 +640,7 @@ export default function ContactPage() {
                     label="Practice"
                   >
                     <p className="text-sm font-semibold text-gray-800">
-                      Ebenezer Telehealth
+                      Ebenezer Health Clinic
                     </p>
                   </InfoRow>
 

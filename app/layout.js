@@ -29,11 +29,11 @@ export const metadata = {
     'weight loss management online',
     'minor illness treatment',
     'Dr Susan George DNP APRN',
-    'Ebenezer Telehealth',
+    'Ebenezer Health Clinic',
   ],
   authors: [{ name: 'Dr. Susan George, DNP, APRN' }],
-  creator: 'Ebenezer Telehealth',
-  publisher: 'Ebenezer Telehealth',
+  creator: 'Ebenezer Health Clinic',
+  publisher: 'Ebenezer Health Clinic',
   metadataBase: new URL('https://www.ebenezerhealthclinic.com'),
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com',
@@ -42,19 +42,21 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.ebenezerhealthclinic.com',
-    siteName: 'Ebenezer Telehealth',
+    siteName: 'Ebenezer Health Clinic',
     title: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
     description:
-      "Get trusted online medical care in Oklahoma City. Affordable cash-pay telehealth for women's health, weight loss & minor illness.",
+      "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
+    images: ['/ebenezerhealth-clinic-okc.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
     description:
-      "Affordable cash-pay telehealth in Oklahoma. Women's health, weight loss & minor illness. Book online or call (405) 349-8188.",
+      "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
+    images: ['/ebenezerhealth-clinic-okc.webp'],
   },
   icons: {
-    icon: '/ebenezer_logo_2.webp',
+    icon: '/ebenezerhealth-clinic.webp',
   },
   robots: {
     index: true,
@@ -75,12 +77,12 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen antialiased">
         <Header />
         {/* pt matches actual header height per breakpoint:
-            mobile 96px  (4px accent + 12px py-top + 68px nav + 12px py-bot)
-            sm    112px  (4 + 12 + 84 + 12)
-            lg    128px  (4 + 12 + 100 + 12)
+            mobile 112px (4px accent + 12px py-top + 84px nav + 12px py-bot)
+            sm    128px  (4 + 12 + 100 + 12)
+            lg    144px  (4 + 12 + 116 + 12)
             pb-16 offsets the fixed mobile bottom bar                        */}
         <ScrollAnimations />
-        <main className="pt-[96px] sm:pt-[112px] lg:pt-[128px] pb-16 lg:pb-0">{children}</main>
+        <main className="pt-[112px] sm:pt-[128px] lg:pt-[144px] pb-16 lg:pb-0">{children}</main>
         <Footer />
         <MobileBottomBar />
       </body>

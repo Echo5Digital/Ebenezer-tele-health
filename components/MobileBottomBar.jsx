@@ -15,7 +15,7 @@ export default function MobileBottomBar() {
           href="tel:+14053498188"
           className="flex flex-1 items-center justify-center gap-2 text-sm font-semibold text-white transition-opacity active:opacity-80"
           style={{ backgroundColor: '#1AA6B7' }}
-          aria-label="Call Ebenezer Telehealth at (405) 349-8188"
+          aria-label="Call Ebenezer Health Clinic at (405) 349-8188"
         >
           <Phone className="h-4 w-4" aria-hidden="true" />
           Call Now

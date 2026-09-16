@@ -9,7 +9,7 @@ const valueCards = [
   {
     icon: Receipt,
     title: 'Honest, upfront pricing.',
-    body: "Flat cash-pay fees starting at $75. You'll know the cost before you book.",
+    body: "Flat cash-pay fees starting at $75, or use your insurance. We accept Medicare and major commercial plans.",
   },
   {
     icon: Wifi,
@@ -25,7 +25,7 @@ const valueCards = [
 
 export default function QuickValueBar() {
   return (
-    <section style={{ backgroundColor: '#1AA6B7' }} aria-label="Why choose Ebenezer Telehealth">
+    <section style={{ backgroundColor: '#1AA6B7' }} aria-label="Why choose Ebenezer Health Clinic">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {valueCards.map((card) => (

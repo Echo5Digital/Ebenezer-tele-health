@@ -15,7 +15,7 @@ export const metadata = {
 const womensHealthPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: "Women's Health Clinic in Oklahoma City | Ebenezer Telehealth",
+  name: "Women's Health Clinic in Oklahoma City | Ebenezer Health Clinic",
   description:
     "Women's health clinic in Oklahoma City offering birth control, PCOS treatment, menopause care, and hormonal health support. In-person on Saturdays in OKC or by telehealth across Oklahoma. Cash-pay from $150.",
   url: 'https://www.ebenezerhealthclinic.com/womens-health',
@@ -233,7 +233,7 @@ export default function WomensHealthPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/women_health.webp')",
           backgroundSize: 'cover',
@@ -359,7 +359,7 @@ export default function WomensHealthPage() {
               className="answer-line text-base md:text-lg leading-relaxed"
               style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Telehealth is a women&apos;s health clinic in Oklahoma
+              Ebenezer Health Clinic is a women&apos;s health clinic in Oklahoma
               City offering in-person visits on Saturdays and women&apos;s
               telehealth across Oklahoma. We provide birth control in Oklahoma
               City, PCOS treatment, menopause care, and hormonal health support.
@@ -486,7 +486,7 @@ export default function WomensHealthPage() {
                   style={{ color: '#1AA6B7' }}
                 >
                   Yes. You can get birth control online in Oklahoma through
-                  Ebenezer Telehealth. We provide contraceptive counseling and
+                  Ebenezer Health Clinic. We provide contraceptive counseling and
                   prescriptions by secure video, helping you choose the method
                   that fits your health, lifestyle, and goals.
                 </p>
@@ -862,7 +862,7 @@ export default function WomensHealthPage() {
                   style={{ color: '#1AA6B7' }}
                 >
                   PCOS affects hormones, metabolism, and reproductive health.
-                  Ebenezer Telehealth offers comprehensive virtual PCOS care to
+                  Ebenezer Health Clinic offers comprehensive virtual PCOS care to
                   Oklahoma women, helping you manage symptoms today and reduce
                   long-term health risks.
                 </p>
@@ -1210,7 +1210,7 @@ export default function WomensHealthPage() {
               >
                 <Image
                   src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Dr. Susan George, DNP, APRN — Women's Health Doctor at Ebenezer Telehealth, Oklahoma"
+                  alt="Dr. Susan George, DNP, APRN — Women's Health Doctor at Ebenezer Health Clinic, Oklahoma"
                   width={520}
                   height={620}
                   className="w-full h-auto object-cover"
@@ -1248,7 +1248,7 @@ export default function WomensHealthPage() {
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Why Oklahoma Women Choose Ebenezer Telehealth
+              Why Oklahoma Women Choose Ebenezer Health Clinic
             </h2>
             <div className="flex items-center gap-2" aria-hidden="true">
               <div

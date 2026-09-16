@@ -187,7 +187,7 @@ export default function WeightLossPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/location_bg.webp')",
           backgroundSize: 'cover',
@@ -305,7 +305,7 @@ export default function WeightLossPage() {
               className="hero-answer-line text-base md:text-lg leading-relaxed"
               style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Telehealth is a weight loss clinic in Oklahoma City
+              Ebenezer Health Clinic is a weight loss clinic in Oklahoma City
               offering medically supervised weight loss in person and by
               telehealth across Oklahoma. Our GLP-1 weight loss program in
               Oklahoma may include semaglutide when appropriate, led by a Board
@@ -453,7 +453,7 @@ export default function WeightLossPage() {
               />
             </div>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-              Ebenezer Telehealth may prescribe semaglutide and other GLP-1
+              Ebenezer Health Clinic may prescribe semaglutide and other GLP-1
               medications for weight loss in Oklahoma City and statewide when
               it&apos;s medically appropriate for you. GLP-1 weight loss
               medications work with your body&apos;s natural appetite and
@@ -853,7 +853,7 @@ export default function WeightLossPage() {
               >
                 <Image
                   src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Dr. Susan George, DNP, APRN — Medical Weight Loss Doctor at Ebenezer Telehealth, Oklahoma"
+                  alt="Dr. Susan George, DNP, APRN — Medical Weight Loss Doctor at Ebenezer Health Clinic, Oklahoma"
                   width={520}
                   height={620}
                   className="w-full h-auto object-cover"
@@ -1010,7 +1010,7 @@ export default function WeightLossPage() {
                 />
               </div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Ebenezer Telehealth serves patients in every part of Oklahoma,
+                Ebenezer Health Clinic serves patients in every part of Oklahoma,
                 including Oklahoma City, Tulsa, Moore, Owasso, Edmond, Norman,
                 Lawton, Stillwater, Broken Arrow, and rural communities. No
                 long drives. No waiting rooms. Real medical weight loss care

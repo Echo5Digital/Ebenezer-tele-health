@@ -68,7 +68,7 @@ const whyPoints = [
 const minorIllnessPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: 'Urgent Care Alternative in Oklahoma City | Ebenezer Telehealth',
+  name: 'Urgent Care Alternative in Oklahoma City | Ebenezer Health Clinic',
   description:
     'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. $75 per visit.',
   url: 'https://www.ebenezerhealthclinic.com/minor-illness',
@@ -163,7 +163,7 @@ export default function MinorIllnessPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         {/* Background image — mirrored horizontally */}
         <div
@@ -281,7 +281,7 @@ export default function MinorIllnessPage() {
                 className="hero-answer-line text-base md:text-lg leading-relaxed"
                 style={{ color: '#1AA6B7' }}
               >
-                Ebenezer Telehealth is an urgent care alternative in Oklahoma City
+                Ebenezer Health Clinic is an urgent care alternative in Oklahoma City
                 for non-emergency minor illnesses, including sinus infections,
                 UTIs, cold and flu, allergies, sore throat, and minor skin
                 concerns. As a same-day clinic in Oklahoma City and a walk-in
@@ -325,7 +325,7 @@ export default function MinorIllnessPage() {
               >
                 When you&apos;re sick, the last thing you want is a long wait at
                 urgent care surrounded by other sick people. For everyday,
-                non-emergency illnesses, Ebenezer Telehealth is a faster, simpler{' '}
+                non-emergency illnesses, Ebenezer Health Clinic is a faster, simpler{' '}
                 <strong style={{ color: 'var(--primary)' }}>
                   walk-in alternative in OKC
                 </strong>

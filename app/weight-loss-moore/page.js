@@ -154,7 +154,7 @@ export default function WeightLossMoorePage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden -mt-[96px] sm:-mt-[112px] lg:-mt-[128px] pt-[96px] sm:pt-[112px] lg:pt-[128px]"
+        className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
         style={{
           backgroundImage: "url('/location_bg.webp')",
           backgroundSize: 'cover',
@@ -213,7 +213,7 @@ export default function WeightLossMoorePage() {
             >
               <p className="hero-answer-line">
                 Moore patients can access medically supervised weight loss with
-                Ebenezer Telehealth through secure online visits. And because
+                Ebenezer Health Clinic through secure online visits. And because
                 we&apos;re just up the road in Oklahoma City, in-person Saturday
                 appointments are an easy option too. Our Board Certified provider
                 may include semaglutide or GLP-1 medications when appropriate.
@@ -629,7 +629,7 @@ export default function WeightLossMoorePage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              More From Ebenezer Telehealth
+              More From Ebenezer Health Clinic
             </h2>
           </div>
 
