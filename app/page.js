@@ -15,7 +15,7 @@ import FinalCTA from '@/components/FinalCTA'
 export const metadata = {
   title: 'Medical Clinic in Oklahoma City | Walk-Ins & Telehealth | Ebenezer Health Clinic',
   description:
-    'Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women\'s health, primary care, IV therapy & more. (405) 349-8188.',
+    'Ebenezer Health Clinic, a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women\'s health, primary care, IV therapy & more. (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com',
   },
