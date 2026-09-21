@@ -17,7 +17,7 @@ export const metadata = {
     template: '%s | Ebenezer Health Clinic',
   },
   description:
-    "Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
+    "Ebenezer Health Clinic, a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
   keywords: [
     'telehealth Oklahoma City',
     'online medical care Oklahoma',
@@ -45,14 +45,14 @@ export const metadata = {
     siteName: 'Ebenezer Health Clinic',
     title: 'Medical Clinic in Oklahoma City | Walk-Ins & Telehealth | Ebenezer Health Clinic',
     description:
-      "Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
+      "Ebenezer Health Clinic, a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
     images: ['/ebenezerhealth-clinic-okc.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Medical Clinic in Oklahoma City | Walk-Ins & Telehealth | Ebenezer Health Clinic',
     description:
-      "Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
+      "Ebenezer Health Clinic, a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
     images: ['/ebenezerhealth-clinic-okc.webp'],
   },
   icons: {
