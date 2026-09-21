@@ -13,11 +13,11 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
+    default: 'Medical Clinic in Oklahoma City | Walk-Ins & Telehealth',
     template: '%s | Ebenezer Health Clinic',
   },
   description:
-    "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
+    "Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
   keywords: [
     'telehealth Oklahoma City',
     'online medical care Oklahoma',
@@ -43,16 +43,16 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.ebenezerhealthclinic.com',
     siteName: 'Ebenezer Health Clinic',
-    title: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
+    title: 'Medical Clinic in Oklahoma City | Walk-Ins & Telehealth | Ebenezer Health Clinic',
     description:
-      "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
+      "Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
     images: ['/ebenezerhealth-clinic-okc.webp'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Online Medical Care in Oklahoma City | Ebenezer Health Clinic',
+    title: 'Medical Clinic in Oklahoma City | Walk-Ins & Telehealth | Ebenezer Health Clinic',
     description:
-      "Get trusted online medical care in Oklahoma. Affordable cash-pay telehealth for weight loss, women's health & minor illness. Book online or call (405) 349-8188.",
+      "Ebenezer Health Clinic — a walk-in medical clinic in Oklahoma City plus telehealth across Oklahoma. Weight loss, women's health, primary care, IV therapy & more. (405) 349-8188.",
     images: ['/ebenezerhealth-clinic-okc.webp'],
   },
   icons: {
