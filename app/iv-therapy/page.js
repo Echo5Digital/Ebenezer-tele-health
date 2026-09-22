@@ -542,7 +542,7 @@ export default function IVTherapyPage() {
                   nutrients as part of a wellness routine.
                 </p>
 
-                <div className="mt-auto grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 mb-4">
                   <div
                     className="rounded-xl px-4 py-3 text-center bg-white"
                     style={{ border: '1px solid rgba(59,130,246,0.18)' }}
@@ -558,6 +558,14 @@ export default function IVTherapyPage() {
                     <p className="text-lg font-bold" style={{ color: '#3B82F6' }}>$150</p>
                   </div>
                 </div>
+
+                <Link
+                  href="/iv-therapy/myers-cocktail"
+                  className="mt-auto inline-flex items-center gap-1 text-sm font-semibold underline"
+                  style={{ color: '#3B82F6' }}
+                >
+                  Learn more about the Myers&apos; Cocktail IV &rarr;
+                </Link>
               </div>
             </article>
 
@@ -592,7 +600,7 @@ export default function IVTherapyPage() {
                   nutrient intake as part of their routine.
                 </p>
 
-                <div className="mt-auto grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 mb-4">
                   <div
                     className="rounded-xl px-4 py-3 text-center bg-white"
                     style={{ border: '1px solid rgba(26,166,183,0.20)' }}
@@ -608,6 +616,14 @@ export default function IVTherapyPage() {
                     <p className="text-lg font-bold" style={{ color: 'var(--primary)' }}>$150</p>
                   </div>
                 </div>
+
+                <Link
+                  href="/iv-therapy/beauty-blend"
+                  className="mt-auto inline-flex items-center gap-1 text-sm font-semibold underline"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  Learn more about the Beauty Blend IV &rarr;
+                </Link>
               </div>
             </article>
 
@@ -919,6 +935,12 @@ export default function IVTherapyPage() {
             Related Pages
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-semibold">
+            <Link href="/iv-therapy/myers-cocktail" className="transition-colors" style={{ color: 'var(--primary)' }}>
+              Myers&apos; Cocktail IV &rarr;
+            </Link>
+            <Link href="/iv-therapy/beauty-blend" className="transition-colors" style={{ color: 'var(--primary)' }}>
+              Beauty Blend IV &rarr;
+            </Link>
             <Link href="/pricing" className="transition-colors" style={{ color: 'var(--primary)' }}>
               See Full Pricing &rarr;
             </Link>
