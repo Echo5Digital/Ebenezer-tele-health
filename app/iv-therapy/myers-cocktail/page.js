@@ -160,15 +160,6 @@ export default function MyersCocktailPage() {
           priority
           className="object-cover"
         />
-        {/* Overlay: solid left → transparent right so text is always legible */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(105deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.58) 40%, rgba(255,255,255,0.35) 65%, rgba(255,255,255,0.05) 100%)',
-          }}
-          aria-hidden="true"
-        />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-36 md:py-52">
           <div className="max-w-3xl">
             {/* Breadcrumb */}
@@ -456,18 +447,10 @@ export default function MyersCocktailPage() {
         aria-labelledby="what-to-expect-heading"
       >
         <Image
-          src="/in-person-online.webp"
-          alt="In-person and telehealth care background at Ebenezer Health Clinic Oklahoma City"
+          src="/what to expect.png"
+          alt="What to expect at your Myers' Cocktail IV visit at Ebenezer Health Clinic Oklahoma City"
           fill
           className="object-cover"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(135deg, rgba(255,255,255,0.93) 0%, rgba(232,247,247,0.82) 100%)',
-          }}
-          aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="max-w-3xl">

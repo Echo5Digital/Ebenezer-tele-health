@@ -456,18 +456,10 @@ export default function BeautyBlendPage() {
         aria-labelledby="what-to-expect-heading"
       >
         <Image
-          src="/in-person-online.webp"
-          alt="In-person and telehealth care background at Ebenezer Health Clinic Oklahoma City"
+          src="/what to expect.png"
+          alt="What to expect at your Beauty Blend IV visit at Ebenezer Health Clinic Oklahoma City"
           fill
           className="object-cover"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(135deg, rgba(255,255,255,0.93) 0%, rgba(232,247,247,0.82) 100%)',
-          }}
-          aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="max-w-3xl">
