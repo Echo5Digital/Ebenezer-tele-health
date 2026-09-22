@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Droplets, Leaf, HeartPulse, Users, Info, AlertCircle, CalendarCheck, UserCheck, MonitorSmartphone } from 'lucide-react'
 import MyersCocktailFAQAccordion from './MyersCocktailFAQAccordion'
 
@@ -152,15 +153,12 @@ export default function MyersCocktailPage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         {/* Background image */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/MyersCocktailIVinOklahomaCity.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-          aria-hidden="true"
+        <Image
+          src="/MyersCocktailIVinOklahomaCity.png"
+          alt="Myers' Cocktail IV therapy bag at Ebenezer Health Clinic in Oklahoma City"
+          fill
+          priority
+          className="object-cover"
         />
         {/* Overlay: solid left → transparent right so text is always legible */}
         <div
@@ -248,15 +246,13 @@ export default function MyersCocktailPage() {
       </section>
 
       {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/answer_block.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <section className="relative overflow-hidden">
+        <Image
+          src="/answer_block.webp"
+          alt="Soft clinic-blue background for the Myers' Cocktail IV Oklahoma City summary"
+          fill
+          className="object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -290,13 +286,13 @@ export default function MyersCocktailPage() {
       <section
         className="relative overflow-hidden"
         aria-label="Myers Cocktail IV Oklahoma City"
-        style={{
-          backgroundImage: "url('/body_bg.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        <Image
+          src="/body_bg.webp"
+          alt="Light teal background pattern for the Myers' Cocktail IV overview section"
+          fill
+          className="object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
@@ -458,13 +454,13 @@ export default function MyersCocktailPage() {
       <section
         className="relative overflow-hidden"
         aria-labelledby="what-to-expect-heading"
-        style={{
-          backgroundImage: "url('/in-person-online.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        <Image
+          src="/in-person-online.webp"
+          alt="In-person and telehealth care background at Ebenezer Health Clinic Oklahoma City"
+          fill
+          className="object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -679,13 +675,13 @@ export default function MyersCocktailPage() {
       <section
         className="relative overflow-hidden"
         aria-labelledby="faq-heading"
-        style={{
-          backgroundImage: "url('/body_bg.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        <Image
+          src="/body_bg.webp"
+          alt="Light teal background pattern for the Myers' Cocktail IV frequently asked questions"
+          fill
+          className="object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
