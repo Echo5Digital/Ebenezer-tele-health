@@ -726,17 +726,17 @@ export default function BeautyBlendPage() {
               aria-label="Related IV therapy links"
               style={{ color: 'var(--primary)' }}
             >
-              <Link href="/iv-therapy" className="underline hover:opacity-80">IV Therapy</Link>
+              <Link href="/iv-therapy" className="hover:opacity-80">IV Therapy</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/iv-therapy/myers-cocktail" className="underline hover:opacity-80">Myers&apos; Cocktail IV</Link>
+              <Link href="/iv-therapy/myers-cocktail" className="hover:opacity-80">Myers&apos; Cocktail IV</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/injections" className="underline hover:opacity-80">Injections</Link>
+              <Link href="/injections" className="hover:opacity-80">Injections</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/pricing" className="underline hover:opacity-80">Pricing</Link>
+              <Link href="/pricing" className="hover:opacity-80">Pricing</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/telehealth" className="underline hover:opacity-80">Telehealth</Link>
+              <Link href="/telehealth" className="hover:opacity-80">Telehealth</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/contact" className="underline hover:opacity-80">Book / Contact</Link>
+              <Link href="/contact" className="hover:opacity-80">Book / Contact</Link>
             </nav>
           </div>
         </div>
