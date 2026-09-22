@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Info, AlertCircle, Droplets, Video, Sparkles, Syringe } from 'lucide-react'
 import IVTherapyFAQAccordion from './IVTherapyFAQAccordion'
 
@@ -235,15 +236,13 @@ export default function IVTherapyPage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         {/* Background image */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/iv-therapy-hydration.webp')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-          aria-hidden="true"
+        <Image
+          src="/iv-therapy-hydration.webp"
+          alt="IV hydration bag set up in a treatment room at Ebenezer Health Clinic"
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover object-center pointer-events-none"
         />
         {/* Overlay: solid left → transparent right so text is always legible */}
         <div
@@ -330,15 +329,14 @@ export default function IVTherapyPage() {
       </section>
 
       {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/answer_block.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <section className="relative overflow-hidden">
+        <Image
+          src="/answer_block.webp"
+          alt="Provider preparing IV therapy supplies at Ebenezer Health Clinic"
+          fill
+          sizes="100vw"
+          className="object-cover object-center pointer-events-none"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -374,13 +372,14 @@ export default function IVTherapyPage() {
       <section
         className="relative overflow-hidden"
         aria-label="IV hydration Oklahoma City"
-        style={{
-          backgroundImage: "url('/body_bg.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        <Image
+          src="/body_bg.webp"
+          alt="Calming clinic interior at Ebenezer Health Clinic"
+          fill
+          sizes="100vw"
+          className="object-cover object-center pointer-events-none"
+        />
         <div
           className="absolute inset-0"
           style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
@@ -739,13 +738,14 @@ export default function IVTherapyPage() {
       <section
         className="relative overflow-hidden"
         aria-labelledby="what-to-expect-heading"
-        style={{
-          backgroundImage: "url('/in-person-online.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        <Image
+          src="/in-person-online.webp"
+          alt="Patient meeting a provider both in person and by telehealth video visit"
+          fill
+          sizes="100vw"
+          className="object-cover object-center pointer-events-none"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -961,13 +961,14 @@ export default function IVTherapyPage() {
       <section
         className="relative overflow-hidden"
         aria-labelledby="faq-heading"
-        style={{
-          backgroundImage: "url('/body_bg.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
+        <Image
+          src="/body_bg.webp"
+          alt="Calming clinic interior at Ebenezer Health Clinic"
+          fill
+          sizes="100vw"
+          className="object-cover object-center pointer-events-none"
+        />
         <div
           className="absolute inset-0"
           style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
