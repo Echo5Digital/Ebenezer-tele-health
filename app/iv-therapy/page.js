@@ -112,7 +112,7 @@ export default function IVTherapyPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/iv-therapy-hero.webp')",
+            backgroundImage: "url('/iv-therapy-hydration.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -167,23 +167,6 @@ export default function IVTherapyPage() {
             >
               <Droplets className="h-4 w-4" aria-hidden="true" />
               In-person only · Walk-ins welcome
-            </div>
-
-            {/* Launch notice */}
-            <div
-              className="flex items-start gap-2.5 rounded-xl px-4 py-3 text-sm mb-8 max-w-xl"
-              style={{
-                backgroundColor: 'rgba(254,242,242,0.90)',
-                border: '1px solid rgba(239,68,68,0.25)',
-                color: '#B91C1C',
-              }}
-              role="alert"
-            >
-              <AlertCircle className="h-4 w-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
-              <span className="leading-snug">
-                IV Therapy &amp; Hydration Services will be available beginning
-                October 2026.
-              </span>
             </div>
 
             {/* CTAs */}

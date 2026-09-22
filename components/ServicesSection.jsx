@@ -41,7 +41,6 @@ const services = [
     linkText: 'Explore injections',
     description:
       'Targeted vitamin and B12 shots to support energy, metabolism, and overall wellness. Administered in-clinic in Oklahoma City after a brief provider evaluation.',
-    comingSoon: true,
   },
   {
     icon: Droplets,
@@ -50,7 +49,6 @@ const services = [
     linkText: 'Explore IV therapy',
     description:
       'Customized IV drip therapy delivering fluids, vitamins, and nutrients directly into the bloodstream for rapid absorption and recovery. Available at our Oklahoma City clinic.',
-    comingSoon: true,
   },
   {
     icon: Monitor,
