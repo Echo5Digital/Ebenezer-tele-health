@@ -155,7 +155,7 @@ export default function MyersCocktailPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/iv-therapy-hydration.webp')",
+            backgroundImage: "url('/MyersCocktailIVinOklahomaCity.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -167,7 +167,7 @@ export default function MyersCocktailPage() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(105deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.60) 65%, rgba(255,255,255,0.10) 100%)',
+              'linear-gradient(105deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.58) 40%, rgba(255,255,255,0.35) 65%, rgba(255,255,255,0.05) 100%)',
           }}
           aria-hidden="true"
         />
