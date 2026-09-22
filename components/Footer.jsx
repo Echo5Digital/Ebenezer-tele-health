@@ -68,8 +68,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
-              Faith-driven, compassionate telehealth for women and families across Oklahoma.
-              Led by Dr. Susan George, DNP, APRN, BC-ADM.
+              A full walk-in clinic serving individuals and families across Oklahoma,
+              plus telehealth statewide. Led by Dr. Susan George, DNP, APRN, BC-ADM.
             </p>
 
             {/* Social links */}
@@ -114,7 +114,7 @@ export default function Footer() {
                   <MapPin className="h-3.5 w-3.5"                   style={{ color: '#97CECC' }} />
                 </div>
                 <div>
-                  <strong className="text-white font-semibold block mb-0.5">Ebenezerhealth Clinic</strong>
+                  <strong className="text-white font-semibold block mb-0.5">Ebenezer Health Clinic</strong>
                   7415 NW 23rd Street, Bethany, OK 73008
                 </div>
               </div>

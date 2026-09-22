@@ -362,7 +362,11 @@ export default function PricingPage() {
               . Primary care, injections, and IV therapy pricing below.
               The weight loss program fee includes initial labs and
               prescriptions sent to Lilly Direct Pharmacy; the weight-loss
-              medication itself is billed separately to the patient.
+              medication itself is billed separately to the patient. See our{' '}
+              <Link href="/iv-therapy" className="font-semibold" style={{ color: 'var(--primary)' }}>
+                IV Therapy &amp; Myers&apos; Cocktail menu &rarr;
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -729,7 +733,7 @@ export default function PricingPage() {
 
           {/* NAP reinforcement — matches FinalCTA */}
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezerhealth Clinic &middot; Oklahoma City, OK &middot; (405)&nbsp;349-8188 &middot; ebenezerhealthclinic.com
+            Ebenezer Health Clinic &middot; Oklahoma City, OK &middot; (405)&nbsp;349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>
       </section>

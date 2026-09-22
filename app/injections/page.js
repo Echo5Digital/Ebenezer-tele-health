@@ -341,6 +341,13 @@ export default function InjectionsPage() {
                   Each injection is given after a brief provider evaluation.
                   Contact us to confirm what&apos;s currently available.
                 </p>
+                <p className="text-sm text-gray-500 leading-relaxed italic mt-2">
+                  Looking for IV hydration or Myers&apos; Cocktail instead?
+                  See our{' '}
+                  <Link href="/iv-therapy" className="font-semibold not-italic" style={{ color: 'var(--primary)' }}>
+                    IV Therapy page &rarr;
+                  </Link>
+                </p>
               </div>
             </div>
 
