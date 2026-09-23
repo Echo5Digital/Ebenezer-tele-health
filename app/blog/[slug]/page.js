@@ -58,12 +58,28 @@ export default function BlogPostPage({ params }) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
   }
 
+  const faqSchema = post.faqs?.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  } : null
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* ════════════════════════════════════════════════════════
           HERO
@@ -193,6 +209,42 @@ export default function BlogPostPage({ params }) {
                     <p className="text-sm text-gray-600 leading-relaxed">
                       {post.callout.body}
                     </p>
+                  </div>
+                </div>
+              )}
+
+              {post.faqs?.length > 0 && (
+                <div className="mb-10">
+                  <h2
+                    className="text-xl md:text-2xl font-bold mb-4"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-3">
+                    {post.faqs.map((faq) => (
+                      <details
+                        key={faq.question}
+                        className="group rounded-xl border border-gray-100 px-5 py-4 [&::-webkit-details-marker]:hidden"
+                      >
+                        <summary
+                          className="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-sm"
+                          style={{ color: 'var(--navy)' }}
+                        >
+                          {faq.question}
+                          <span
+                            className="flex-shrink-0 h-6 w-6 rounded-full flex items-center justify-center text-base leading-none transition-transform group-open:rotate-45"
+                            style={{ backgroundColor: 'rgba(26,166,183,0.1)', color: 'var(--primary)' }}
+                            aria-hidden="true"
+                          >
+                            +
+                          </span>
+                        </summary>
+                        <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </details>
+                    ))}
                   </div>
                 </div>
               )}
