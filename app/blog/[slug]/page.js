@@ -6,9 +6,7 @@ import {
   Calendar,
   Clock,
   Facebook,
-  Twitter,
-  Linkedin,
-  Link2,
+  Instagram,
   HeartPulse,
   Search,
   User,
@@ -290,20 +288,28 @@ export default function BlogPostPage({ params }) {
                 </span>
                 <div className="flex items-center gap-2">
                   {[
-                    { Icon: Facebook, label: 'Share on Facebook' },
-                    { Icon: Twitter, label: 'Share on Twitter' },
-                    { Icon: Linkedin, label: 'Share on LinkedIn' },
-                    { Icon: Link2, label: 'Copy link' },
-                  ].map(({ Icon, label }) => (
-                    <button
+                    {
+                      Icon: Facebook,
+                      label: 'Share on Facebook',
+                      href: 'https://www.facebook.com/people/Ebenezer-Telehealth/61574508671023/',
+                    },
+                    {
+                      Icon: Instagram,
+                      label: 'Follow on Instagram',
+                      href: 'https://www.instagram.com/ebenezertelehealth/',
+                    },
+                  ].map(({ Icon, label, href }) => (
+                    <a
                       key={label}
-                      type="button"
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={label}
                       className="h-9 w-9 rounded-full flex items-center justify-center text-white transition-opacity hover:opacity-90"
                       style={{ backgroundColor: 'var(--navy)' }}
                     >
                       <Icon className="h-4 w-4" aria-hidden="true" />
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>
