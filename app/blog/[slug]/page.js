@@ -23,6 +23,16 @@ import {
 
 const SITE_URL = 'https://www.ebenezerhealthclinic.com'
 
+// Accepts either the current shape (paragraphs: string[]) or the older
+// single-string shape (body: string) still used by a few existing posts —
+// avoids a one-time data migration for content published before paragraphs
+// were split out.
+function getParagraphs(entry) {
+  if (entry?.paragraphs) return entry.paragraphs
+  if (entry?.body) return [entry.body]
+  return []
+}
+
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }))
 }
@@ -194,16 +204,20 @@ export default function BlogPostPage({ params }) {
                             <p className="font-bold text-sm mb-2" style={{ color: 'var(--navy)' }}>
                               {card.heading}
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                              {card.body}
-                            </p>
+                            <div className="text-sm text-gray-600 leading-relaxed space-y-2">
+                              {getParagraphs(card).map((para, pi) => (
+                                <p key={pi} dangerouslySetInnerHTML={{ __html: para }} />
+                              ))}
+                            </div>
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <p className="text-base text-gray-600 leading-relaxed">
-                        {section.body}
-                      </p>
+                      <div className="text-base text-gray-600 leading-relaxed space-y-4">
+                        {getParagraphs(section).map((para, pi) => (
+                          <p key={pi} dangerouslySetInnerHTML={{ __html: para }} />
+                        ))}
+                      </div>
                     )}
                   </div>
                 ))}
@@ -224,9 +238,11 @@ export default function BlogPostPage({ params }) {
                     <p className="font-bold mb-1" style={{ color: 'var(--navy)' }}>
                       {post.callout.heading}
                     </p>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {post.callout.body}
-                    </p>
+                    <div className="text-sm text-gray-600 leading-relaxed space-y-2">
+                      {getParagraphs(post.callout).map((para, pi) => (
+                        <p key={pi} dangerouslySetInnerHTML={{ __html: para }} />
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
