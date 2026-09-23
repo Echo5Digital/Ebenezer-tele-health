@@ -184,9 +184,27 @@ export default function BlogPostPage({ params }) {
                       <span style={{ color: 'var(--primary)' }}>{i + 1}.</span>
                       {section.heading}
                     </h2>
-                    <p className="text-base text-gray-600 leading-relaxed">
-                      {section.body}
-                    </p>
+                    {section.cards ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        {section.cards.map((card) => (
+                          <div
+                            key={card.heading}
+                            className="rounded-xl border border-gray-100 p-5"
+                          >
+                            <p className="font-bold text-sm mb-2" style={{ color: 'var(--navy)' }}>
+                              {card.heading}
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                              {card.body}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-base text-gray-600 leading-relaxed">
+                        {section.body}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
