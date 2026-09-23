@@ -74,7 +74,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen antialiased" suppressHydrationWarning>
         <Header />
         {/* pt matches actual header height per breakpoint:
             mobile 112px (4px accent + 12px py-top + 84px nav + 12px py-bot)

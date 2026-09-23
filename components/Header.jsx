@@ -41,6 +41,7 @@ const allServiceHrefs = serviceItems.flatMap((item) => [
 const mainNav = [
   { name: 'Pricing', href: '/pricing' },
   { name: 'About',   href: '/about' },
+  { name: 'Blog',    href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
 
