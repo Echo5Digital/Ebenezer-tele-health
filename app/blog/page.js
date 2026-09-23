@@ -30,13 +30,19 @@ const blogPageSchema = {
   publisher: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
 }
 
-export default function BlogPage() {
+const POSTS_PER_PAGE = 6
+
+export default function BlogPage({ searchParams }) {
   const posts = getAllPosts()
   const heroPost = posts[0]
-  const latestPosts = posts.slice(0, 3)
   const featuredPost = getFeaturedPost()
   const recentPosts = getRecentPosts(heroPost?.slug, 3)
   const categories = getCategoryCounts()
+
+  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE))
+  const currentPage = Math.min(totalPages, Math.max(1, parseInt(searchParams?.page, 10) || 1))
+  const pageStart = (currentPage - 1) * POSTS_PER_PAGE
+  const latestPosts = posts.slice(pageStart, pageStart + POSTS_PER_PAGE)
 
   return (
     <>
@@ -118,11 +124,15 @@ export default function BlogPage() {
                 Latest Articles
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                 {latestPosts.map((post) => (
                   <ArticleCard key={post.slug} post={post} />
                 ))}
               </div>
+
+              {totalPages > 1 && (
+                <Pagination currentPage={currentPage} totalPages={totalPages} />
+              )}
 
               {featuredPost && (
                 <>
@@ -353,6 +363,62 @@ function ArticleCard({ post }) {
         </Link>
       </div>
     </article>
+  )
+}
+
+function Pagination({ currentPage, totalPages }) {
+  const pageHref = (n) => (n === 1 ? '/blog' : `/blog?page=${n}`)
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+
+  return (
+    <nav
+      className="flex items-center justify-center gap-2 mb-16"
+      aria-label="Blog pagination"
+    >
+      <Link
+        href={pageHref(Math.max(1, currentPage - 1))}
+        aria-disabled={currentPage === 1}
+        className={`inline-flex items-center justify-center h-10 w-10 rounded-lg border transition-colors ${
+          currentPage === 1
+            ? 'pointer-events-none opacity-40 border-gray-200'
+            : 'border-gray-200 hover:border-primary hover:text-primary'
+        }`}
+        style={{ color: 'var(--navy)' }}
+      >
+        <ArrowRight className="h-4 w-4 rotate-180" aria-hidden="true" />
+        <span className="sr-only">Previous page</span>
+      </Link>
+
+      {pages.map((n) => (
+        <Link
+          key={n}
+          href={pageHref(n)}
+          aria-current={n === currentPage ? 'page' : undefined}
+          className="inline-flex items-center justify-center h-10 w-10 rounded-lg text-sm font-bold transition-colors"
+          style={
+            n === currentPage
+              ? { backgroundColor: 'var(--primary)', color: '#fff' }
+              : { color: 'var(--navy)' }
+          }
+        >
+          {n}
+        </Link>
+      ))}
+
+      <Link
+        href={pageHref(Math.min(totalPages, currentPage + 1))}
+        aria-disabled={currentPage === totalPages}
+        className={`inline-flex items-center justify-center h-10 w-10 rounded-lg border transition-colors ${
+          currentPage === totalPages
+            ? 'pointer-events-none opacity-40 border-gray-200'
+            : 'border-gray-200 hover:border-primary hover:text-primary'
+        }`}
+        style={{ color: 'var(--navy)' }}
+      >
+        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        <span className="sr-only">Next page</span>
+      </Link>
+    </nav>
   )
 }
 
