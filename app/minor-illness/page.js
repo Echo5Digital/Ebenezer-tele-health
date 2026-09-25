@@ -5,7 +5,7 @@ import MinorIllnessFAQAccordion from './MinorIllnessFAQAccordion'
 export const metadata = {
   title: 'Urgent Care Alternative in Oklahoma City',
   description:
-    'An urgent care alternative in Oklahoma City for minor illness - sinus infections, UTIs, cold & flu. In-person or online, same day. $75 per visit. (405) 349-8188.',
+    'An urgent care alternative in Oklahoma City for minor illness - sinus infections, UTIs, cold & flu. In-person or online, same day. From $50 per visit. (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/minor-illness',
   },
@@ -25,7 +25,7 @@ const conditions = [
 const pricingFeatures = [
   'Same-day video visit with Dr. Susan George',
   'Thorough evaluation, diagnosis & treatment recommendations',
-  'Electronic prescriptions sent to your preferred pharmacy',
+  'Electronic prescriptions sent to your preferred pharmacy (including 24-hour pharmacies like Walgreens and CVS for televisits)',
   'No insurance needed. Cash-pay transparency.',
 ]
 
@@ -58,9 +58,9 @@ const steps = [
 
 const whyPoints = [
   'Skip the waiting room. Get evaluated from your couch, often the same day you book.',
-  '$75 vs. a typical urgent care copay. No surprise bills, no insurance required.',
+  '$50 televisit vs. a typical urgent care copay. No surprise bills, no insurance required.',
   'Avoid exposure to other illnesses by staying home and getting care virtually.',
-  'Prescriptions sent directly to your preferred pharmacy anywhere in Oklahoma.',
+  'Prescriptions sent directly to your preferred 24-hour pharmacy, primarily Walgreens or CVS.',
 ]
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
@@ -70,7 +70,7 @@ const minorIllnessPageSchema = {
   '@type': 'MedicalWebPage',
   name: 'Urgent Care Alternative in Oklahoma City | Ebenezer Health Clinic',
   description:
-    'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. $75 per visit.',
+    'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. From $50 per visit.',
   url: 'https://www.ebenezerhealthclinic.com/minor-illness',
   about: {
     '@type': 'MedicalProcedure',
@@ -84,11 +84,32 @@ const minorIllnessPageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'Minor Illness Visit',
+      name: 'Minor Illness Televisit',
       priceCurrency: 'USD',
-      price: '75',
+      price: '50',
       description:
         'Same-day telehealth evaluation, treatment recommendations, and prescriptions when appropriate.',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Minor Illness In-Person Visit (Without Testing)',
+      priceCurrency: 'USD',
+      price: '50',
+      description:
+        'Same-day in-clinic evaluation, treatment recommendations, and prescriptions when appropriate.',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Minor Illness In-Person Visit (With Testing)',
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: '80',
+        maxPrice: '100',
+        priceCurrency: 'USD',
+      },
+      description:
+        'In-clinic evaluation plus testing, treatment recommendations, and prescriptions when appropriate.',
     },
   ],
 }
@@ -118,7 +139,7 @@ const minorIllnessFAQSchema = {
       name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '$75 per visit. No insurance required.',
+        text: 'Televisits and in-person visits without testing are $50. In-person visits that require testing range from $80 to $100. No insurance required.',
       },
     },
     {
@@ -218,7 +239,7 @@ export default function MinorIllnessPage() {
             <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
               Feel better without leaving home. Get evaluated and treated online
               for common illnesses: sinus infections, cold and flu, UTIs,
-              allergies, rashes, and more. Often same day. $75 per visit, no
+              allergies, rashes, and more. Often same day. From $50 per visit, no
               insurance needed.
             </p>
 
@@ -286,7 +307,8 @@ export default function MinorIllnessPage() {
                 UTIs, cold and flu, allergies, sore throat, and minor skin
                 concerns. As a same-day clinic in Oklahoma City and a walk-in
                 alternative in OKC, we see you in person on Saturdays or online,
-                often the same day, for $75. This service is not for medical
+                often the same day, for $50 (in-person visits requiring testing
+                range from $80 to $100). This service is not for medical
                 emergencies.
               </p>
             </div>
@@ -331,8 +353,9 @@ export default function MinorIllnessPage() {
                 </strong>
                 . Get evaluated and treated by our provider, in person on a
                 Saturday in Oklahoma City or online from your couch, often the
-                same day, for a flat{' '}
-                <strong style={{ color: 'var(--primary)' }}>$75</strong>.
+                same day, starting at{' '}
+                <strong style={{ color: 'var(--primary)' }}>$50</strong>{' '}
+                (in-person visits requiring testing range from $80 to $100).
               </p>
             </div>
           </div>
@@ -617,7 +640,7 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--navy)' }}
             >
-              Simple Pricing: $75 Per Visit
+              Simple Pricing: From $50 Per Visit
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
               No insurance required. No hidden fees. You know the cost before
@@ -643,25 +666,24 @@ export default function MinorIllnessPage() {
                   Minor Illness Visit
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Includes same-day virtual evaluation, treatment
-                  recommendations, and prescriptions when appropriate and
-                  within telemedicine scope.
+                  Same-day evaluation, treatment recommendations, and
+                  prescriptions when appropriate.
                 </p>
               </div>
 
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2">
-                  <span
-                    className="text-5xl font-bold"
-                    style={{ color: 'var(--primary)' }}
-                  >
-                    $75
-                  </span>
-                  <span className="text-sm text-gray-500">per visit</span>
+              <div className="mb-6 flex flex-col gap-3">
+                <div className="flex items-baseline justify-between rounded-xl bg-white px-4 py-3" style={{ border: '1px solid rgba(26,166,183,0.18)' }}>
+                  <span className="text-sm font-semibold text-gray-700">Televisit</span>
+                  <span className="text-2xl font-bold" style={{ color: 'var(--primary)' }}>$50</span>
                 </div>
-                <p className="mt-1 text-sm text-gray-400">
-                  No follow-up required for most minor illnesses
-                </p>
+                <div className="flex items-baseline justify-between rounded-xl bg-white px-4 py-3" style={{ border: '1px solid rgba(26,166,183,0.18)' }}>
+                  <span className="text-sm font-semibold text-gray-700">In-Person (without testing)</span>
+                  <span className="text-2xl font-bold" style={{ color: 'var(--primary)' }}>$50</span>
+                </div>
+                <div className="flex items-baseline justify-between rounded-xl bg-white px-4 py-3" style={{ border: '1px solid rgba(26,166,183,0.18)' }}>
+                  <span className="text-sm font-semibold text-gray-700">In-Person (with testing)</span>
+                  <span className="text-2xl font-bold" style={{ color: 'var(--primary)' }}>$80 – $100</span>
+                </div>
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -877,7 +899,7 @@ export default function MinorIllnessPage() {
               room, and expose yourself to more illness. Telehealth lets you get
               evaluated and treated from your couch, often the same day you
               book, with a prescription sent directly to your pharmacy.
-              It&apos;s faster, cheaper ($75 vs. a typical urgent care copay),
+              It&apos;s faster, cheaper ($50 televisit vs. a typical urgent care copay),
               and you skip the exposure and the commute.
             </p>
 
@@ -1012,7 +1034,7 @@ export default function MinorIllnessPage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    from $150
+                    from $50
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -1118,8 +1140,8 @@ export default function MinorIllnessPage() {
             Ready to Feel Better Today?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Same-day virtual care for minor illnesses across Oklahoma. $75 per
-            visit. No insurance required, no waiting room.
+            Same-day virtual care for minor illnesses across Oklahoma. From $50
+            per visit. No insurance required, no waiting room.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

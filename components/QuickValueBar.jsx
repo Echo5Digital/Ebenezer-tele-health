@@ -9,7 +9,7 @@ const valueCards = [
   {
     icon: Receipt,
     title: 'Honest, upfront pricing.',
-    body: "Flat cash-pay fees starting at $75, or use your insurance. We accept Medicare and major commercial plans.",
+    body: "Flat cash-pay fees starting at $50, or use your insurance. We accept Medicare and major commercial plans.",
   },
   {
     icon: Wifi,

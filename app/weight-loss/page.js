@@ -1173,7 +1173,7 @@ export default function WeightLossPage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    from $150
+                    from $50
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -1229,7 +1229,7 @@ export default function WeightLossPage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    $75/visit
+                    from $50
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">

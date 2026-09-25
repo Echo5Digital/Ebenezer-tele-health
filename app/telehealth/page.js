@@ -348,7 +348,8 @@ export default function TelehealthPage() {
             </div>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
               Book online, complete a short intake, and meet your provider by secure
-              video. Prescriptions are sent to your pharmacy when appropriate.
+              video. Prescriptions are sent to your pharmacy when appropriate,
+              including 24-hour pharmacies such as Walgreens and CVS.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link

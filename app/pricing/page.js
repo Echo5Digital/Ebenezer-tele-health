@@ -7,7 +7,7 @@ export const metadata = {
     absolute: 'Pricing | Cash-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
   },
   description:
-    "Cash-pay pricing at our Oklahoma City clinic — weight loss $100/month, women's health from $150, minor illness $75, plus primary care, injections & IV therapy. No insurance needed.",
+    "Cash-pay pricing at our Oklahoma City clinic — weight loss $100/month, women's health from $50, minor illness from $50, plus primary care, injections & IV therapy. No insurance needed.",
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/pricing',
   },
@@ -35,13 +35,19 @@ const SERVICES = [
     featured: false,
     rows: [
       {
-        type: 'Initial Visit',
-        price: '$150',
+        type: 'Televisit',
+        price: '$50',
+        included:
+          'Secure video visit, symptom review, prescriptions sent to your preferred pharmacy when appropriate.',
+      },
+      {
+        type: 'In-Person Initial Visit',
+        price: '$75',
         included:
           'Comprehensive symptom review, lab orders included, lab interpretation, personalized treatment plan.',
       },
       {
-        type: 'Follow-Up Visit',
+        type: 'In-Person Follow-Up',
         price: '$50',
         included:
           'Ongoing assessment, lab review and monitoring, treatment adjustments, continued support.',
@@ -53,10 +59,22 @@ const SERVICES = [
     featured: false,
     rows: [
       {
-        type: 'Visit',
-        price: '$75',
+        type: 'Televisit',
+        price: '$50',
         included:
-          'Same-day evaluation, treatment recommendations, prescriptions when appropriate.',
+          'Same-day video evaluation, treatment recommendations, prescriptions when appropriate.',
+      },
+      {
+        type: 'In-Person (Without Testing)',
+        price: '$50',
+        included:
+          'Same-day in-clinic evaluation, treatment recommendations, prescriptions when appropriate.',
+      },
+      {
+        type: 'In-Person (With Testing)',
+        price: '$80 – $100',
+        included:
+          'In-clinic evaluation plus testing (e.g. rapid strep, flu, UTI), treatment recommendations, prescriptions when appropriate.',
       },
     ],
   },
@@ -108,15 +126,23 @@ const pricingPageSchema = {
       },
       {
         '@type': 'Offer',
-        name: "Women's Health Initial Visit",
+        name: "Women's Health Televisit",
         priceCurrency: 'USD',
-        price: '150',
+        price: '50',
+        description:
+          'Secure video visit, symptom review, prescriptions sent to your preferred pharmacy when appropriate.',
+      },
+      {
+        '@type': 'Offer',
+        name: "Women's Health In-Person Initial Visit",
+        priceCurrency: 'USD',
+        price: '75',
         description:
           'Comprehensive symptom review, lab orders included, lab interpretation, personalized treatment plan.',
       },
       {
         '@type': 'Offer',
-        name: "Women's Health Follow-Up Visit",
+        name: "Women's Health In-Person Follow-Up",
         priceCurrency: 'USD',
         price: '50',
         description:
@@ -124,11 +150,32 @@ const pricingPageSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Minor Illness Visit',
+        name: 'Minor Illness Televisit',
         priceCurrency: 'USD',
-        price: '75',
+        price: '50',
         description:
-          'Same-day evaluation, treatment recommendations, prescriptions when appropriate.',
+          'Same-day video evaluation, treatment recommendations, prescriptions when appropriate.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Minor Illness In-Person (Without Testing)',
+        priceCurrency: 'USD',
+        price: '50',
+        description:
+          'Same-day in-clinic evaluation, treatment recommendations, prescriptions when appropriate.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Minor Illness In-Person (With Testing)',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: '80',
+          maxPrice: '100',
+          priceCurrency: 'USD',
+        },
+        description:
+          'In-clinic evaluation plus testing (e.g. rapid strep, flu, UTI), treatment recommendations, prescriptions when appropriate.',
       },
     ],
   },
@@ -143,7 +190,7 @@ const pricingFAQSchema = {
       name: 'How much does telehealth cost without insurance in Oklahoma?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Women's health $150, weight loss $100/month, minor illness $75. No insurance required.",
+        text: "Women's health televisits are $50, weight loss is $100/month, and minor illness televisits are $50. No insurance required.",
       },
     },
     {
@@ -175,7 +222,7 @@ const pricingFAQSchema = {
       name: 'Is in-person the same price as online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Visit pricing is the same whether you're seen in Oklahoma City or online.",
+        text: "For most visits, yes. Minor illness and women's health televisits and standard in-person visits are both $50. In-person minor illness visits that require testing range from $80 to $100.",
       },
     },
   ],
@@ -293,8 +340,8 @@ export default function PricingPage() {
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 mt-7">
               {[
                 { label: 'Weight Loss', price: '$100/month' },
-                { label: "Women's Health", price: '$150' },
-                { label: 'Minor Illness', price: '$75' },
+                { label: "Women's Health", price: 'From $50' },
+                { label: 'Minor Illness', price: 'From $50' },
               ].map((chip) => (
                 <div
                   key={chip.label}
@@ -349,7 +396,7 @@ export default function PricingPage() {
               Ebenezer Health Clinic is a cash-pay medical clinic in Oklahoma
               City with transparent pricing and no insurance required.{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                Women&apos;s health from $150
+                Women&apos;s health from $50
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
@@ -357,7 +404,7 @@ export default function PricingPage() {
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                minor illness $75
+                minor illness from $50
               </strong>
               . Primary care, injections, and IV therapy pricing below.
               The weight loss program fee includes initial labs and
@@ -518,6 +565,26 @@ export default function PricingPage() {
               Prices listed are your <strong>total cost</strong> for each
               visit. No hidden fees, no additional charges. Payment is due at
               the time of booking. We accept cash, credit, and debit cards. As telehealth services are provided remotely, payment is currently accepted via credit and debit cards only.
+            </p>
+          </div>
+
+          {/* Pharmacy note */}
+          <div
+            className="mt-4 rounded-xl p-5 flex items-start gap-3"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
+            }}
+            role="note"
+          >
+            <Info
+              className="h-5 w-5 mt-0.5 flex-shrink-0"
+              style={{ color: 'var(--primary)' }}
+              aria-hidden="true"
+            />
+            <p className="text-sm text-gray-700 leading-relaxed">
+              For televisit patients, prescriptions can be sent to 24-hour
+              pharmacies, primarily Walgreens and CVS.
             </p>
           </div>
 
