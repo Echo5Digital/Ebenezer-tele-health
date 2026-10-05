@@ -4,22 +4,22 @@ import { CheckCircle2, Info } from 'lucide-react'
 const plans = [
   {
     name: "Women's Health Visit",
-    price: 'from $150',
-    followUp: '$50',
+    price: 'from $50',
+    note: 'In-person initial $75 · Follow-up $50',
     description: "Comprehensive virtual care for women's health needs including birth control, hormonal health, and more.",
     features: [
       'Video visit with Dr. Susan George',
       "Women's health specialty care",
       'Prescriptions sent to pharmacy',
       'Private & HIPAA-compliant',
-      'The cost includes required lab work.',
+      'In-person initial visit includes required lab work.',
     ],
     featured: false,
   },
   {
     name: 'Weight Loss Program',
     price: '$100/month',
-    followUp: null,
+    note: null,
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
       'Video visit with Dr. Susan George',
@@ -32,11 +32,11 @@ const plans = [
   },
   {
     name: 'Minor Illness Visit',
-    price: '$75',
-    followUp: null,
-    description: 'Online evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
+    price: 'from $50',
+    note: 'In-person with testing $80 – $100',
+    description: 'Online or in-person evaluation and treatment for sinus infections, colds, flu, UTIs, and more.',
     features: [
-      'Video visit with Dr. Susan George',
+      'Video or in-person visit with Dr. Susan George',
       'Diagnosis & treatment plan',
       'Electronic prescriptions when appropriate',
       'Same-day availability',
@@ -122,11 +122,10 @@ export default function PricingSection() {
                     {plan.price}
                   </span>
                 </div>
-                {plan.followUp ? (
+                {plan.note ? (
                   <p className="mt-1 text-sm text-gray-500">
-                    Follow-up:{' '}
                     <span className="font-semibold" style={{ color: 'var(--navy)' }}>
-                      {plan.followUp}
+                      {plan.note}
                     </span>
                   </p>
                 ) : null}

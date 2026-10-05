@@ -19,7 +19,7 @@ const faqs = [
     id: 'wh-faq-1',
     question: 'Can I get birth control in Oklahoma City or online?',
     answer:
-      "Yes. In person on Saturdays in OKC or by women's telehealth across Oklahoma. Prescriptions go to your pharmacy.",
+      "Yes. In person on Saturdays in OKC or by women's telehealth across Oklahoma. Prescriptions go to your preferred pharmacy, including 24-hour pharmacies like Walgreens and CVS for televisit patients.",
   },
   {
     id: 'wh-faq-2',
@@ -38,7 +38,7 @@ const faqs = [
     question: 'How much does a women\'s health visit cost?',
     answerJSX: true,
     answer:
-      'Initial visits are $150; follow-ups are $50. No insurance required.',
+      'Televisits are $50, in-person initial visits are $75, and in-person follow-ups are $50. No insurance required.',
   },
   {
     id: 'wh-faq-5',

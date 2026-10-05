@@ -5,7 +5,7 @@ import InjectionsFAQAccordion from './InjectionsFAQAccordion'
 export const metadata = {
   title: 'Vitamin & B12 Injections in Oklahoma City',
   description:
-    'Vitamin, B12 & wellness injections in Oklahoma City at Ebenezer Health Clinic. Provider-evaluated, walk-ins welcome. Cash-pay. Book or call (405) 349-8188.',
+    'Vitamin, B12 & wellness injections in Oklahoma City at Ebenezer Health Clinic. $50 per injection, provider-evaluated, walk-ins welcome. Cash-pay. Book or call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/injections',
   },
@@ -36,10 +36,11 @@ const injectionsPageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'Vitamin Injection Visit',
+      name: 'IM Injection',
       priceCurrency: 'USD',
+      price: '50',
       description:
-        'In-person injection visit including brief provider evaluation. Cash-pay, no insurance required. Contact clinic for current pricing.',
+        'In-person injection visit including brief provider evaluation. Cash-pay, no insurance required.',
     },
   ],
 }
@@ -69,7 +70,7 @@ const injectionsFAQSchema = {
       name: 'What does a vitamin injection cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Injections are cash-pay. Contact the clinic for current per-injection pricing. No insurance required.',
+        text: 'IM injections are $50, cash-pay. No insurance required.',
       },
     },
     {
@@ -294,9 +295,8 @@ export default function InjectionsPage() {
               />
             </div>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
-              Each injection is given after a provider evaluation to confirm it&apos;s
-              a good fit for you. Contact the clinic for our current injection menu
-              and availability.
+              Each injection is $50 and given after a provider evaluation to
+              confirm it&apos;s a good fit for you.
             </p>
           </div>
 
@@ -314,7 +314,7 @@ export default function InjectionsPage() {
                 className="text-xs font-semibold uppercase tracking-widest mb-5"
                 style={{ color: 'var(--primary)' }}
               >
-                Available injections: contact us to confirm current menu
+                Available injections &mdash; $50 each
               </p>
               <ul className="space-y-4">
                 {[
@@ -338,8 +338,15 @@ export default function InjectionsPage() {
                 style={{ borderTop: '1px solid rgba(26,166,183,0.15)' }}
               >
                 <p className="text-sm text-gray-500 leading-relaxed italic">
-                  Each injection is given after a brief provider evaluation.
-                  Contact us to confirm what&apos;s currently available.
+                  Each injection is $50 and given after a brief provider
+                  evaluation.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed italic mt-2">
+                  Looking for IV hydration or Myers&apos; Cocktail instead?
+                  See our{' '}
+                  <Link href="/iv-therapy" className="font-semibold not-italic" style={{ color: 'var(--primary)' }}>
+                    IV Therapy page &rarr;
+                  </Link>
                 </p>
               </div>
             </div>

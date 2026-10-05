@@ -29,7 +29,7 @@ const faqs = [
     id: 'inj-faq-3',
     question: 'What does it cost?',
     answer:
-      'Injections are cash-pay. Contact the clinic for current per-injection pricing. No insurance required.',
+      'IM injections are $50, cash-pay. No insurance required.',
   },
   {
     id: 'inj-faq-4',

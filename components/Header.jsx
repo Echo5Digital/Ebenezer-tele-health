@@ -7,24 +7,289 @@ import { usePathname } from 'next/navigation'
 import {
   Menu, X, Phone, ArrowUpRight, ChevronDown,
   Stethoscope, Scale, Heart, Thermometer,
-  Syringe, Droplets, Monitor,
+  Syringe, Droplets, Monitor, Sparkles,
 } from 'lucide-react'
 
-const serviceItems = [
-  { name: 'Primary Care',        href: '/primary-care',  icon: Stethoscope, desc: 'In-person & telehealth' },
-  { name: 'Medical Weight Loss', href: '/weight-loss',   icon: Scale,        desc: 'Provider-guided plans'  },
-  { name: "Women's Health",      href: '/womens-health', icon: Heart,        desc: 'Care built for women'   },
-  { name: 'Minor Illness',       href: '/minor-illness', icon: Thermometer,  desc: 'Quick same-day care'    },
-  { name: 'Injections',          href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots'   },
-  { name: 'IV Therapy',          href: '/iv-therapy',    icon: Droplets,     desc: 'Hydration & nutrients'  },
-  { name: 'Televisits',          href: '/telehealth',    icon: Monitor,      desc: 'See a provider online'  },
+// Left/right columns are explicit (not auto-flowed) so IV Therapy's nested
+// submenu can sit in its own column without shifting the other column's rows.
+const serviceColumnLeft = [
+  { name: 'Primary Care',   href: '/primary-care',  icon: Stethoscope, desc: 'In-person & telehealth' },
+  { name: "Women's Health", href: '/womens-health', icon: Heart,        desc: 'Care built for women'   },
+  { name: 'Injections',     href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots'   },
+  { name: 'Televisits',     href: '/telehealth',    icon: Monitor,      desc: 'See a provider online'  },
 ]
+
+const serviceColumnRight = [
+  { name: 'Medical Weight Loss', href: '/weight-loss',   icon: Scale,       desc: 'Provider-guided plans' },
+  { name: 'Minor Illness',       href: '/minor-illness', icon: Thermometer, desc: 'Quick same-day care'    },
+  {
+    name: 'IV Therapy',          href: '/iv-therapy',    icon: Droplets,    desc: 'Hydration & nutrients',
+    children: [
+      { name: "Myers' Cocktail IV", href: '/iv-therapy/myers-cocktail', icon: Droplets, desc: 'Vitamin & mineral IV blend' },
+      { name: 'Beauty Blend IV',    href: '/iv-therapy/beauty-blend',   icon: Sparkles, desc: 'Biotin, B-complex & vitamin C' },
+    ],
+  },
+]
+
+const serviceItems = [...serviceColumnLeft, ...serviceColumnRight]
+
+const allServiceHrefs = serviceItems.flatMap((item) => [
+  item.href,
+  ...(item.children ? item.children.map((child) => child.href) : []),
+])
 
 const mainNav = [
   { name: 'Pricing', href: '/pricing' },
   { name: 'About',   href: '/about' },
+  { name: 'Blog',    href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
+
+/* One row in the desktop Services dropdown column, plus its optional
+   indented submenu (used only by IV Therapy today). When the row has
+   children, the row itself still links straight to the parent page —
+   only the chevron button toggles the submenu open/closed. */
+function ServiceMenuItem({ item, pathname, onNavigate }) {
+  const [expanded, setExpanded] = useState(false)
+  const Icon         = item.icon
+  const isActive      = pathname === item.href
+  const hasActiveChild = item.children?.some((child) => pathname === child.href)
+  const isOpen        = expanded || hasActiveChild
+
+  return (
+    <div>
+      <div
+        className={`group flex items-center gap-1 rounded-xl transition-all duration-150 ${
+          isActive ? 'bg-primary/8' : 'hover:bg-gray-50'
+        }`}
+        style={isActive ? { backgroundColor: 'rgba(26,166,183,0.08)' } : {}}
+      >
+        <Link
+          href={item.href}
+          role="menuitem"
+          onClick={onNavigate}
+          className="flex flex-1 min-w-0 items-center gap-3 px-3.5 py-3"
+        >
+          {/* Icon badge */}
+          <div
+            className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center transition-colors duration-150"
+            style={{
+              backgroundColor: isActive
+                ? 'rgba(26,166,183,0.15)'
+                : 'rgba(26,166,183,0.07)',
+            }}
+          >
+            <Icon
+              className="h-4 w-4 transition-colors duration-150"
+              style={{ color: isActive ? 'var(--primary)' : 'rgba(26,166,183,0.75)' }}
+              aria-hidden="true"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="min-w-0">
+            <p
+              className="text-[12px] font-bold leading-tight truncate transition-colors duration-150"
+              style={{ color: isActive ? 'var(--primary)' : '#1a202c' }}
+            >
+              {item.name}
+            </p>
+            <p
+              className="text-[10px] font-medium leading-tight mt-0.5 truncate"
+              style={{ color: 'rgba(11,61,71,0.45)' }}
+            >
+              {item.desc}
+            </p>
+          </div>
+        </Link>
+
+        {item.children && (
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={isOpen}
+            aria-label={`${isOpen ? 'Hide' : 'Show'} ${item.name} services`}
+            className="flex-shrink-0 h-8 w-8 mr-2 rounded-lg flex items-center justify-center transition-colors duration-150 hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          >
+            <ChevronDown
+              className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+              style={{ color: 'rgba(26,166,183,0.75)' }}
+              aria-hidden="true"
+            />
+          </button>
+        )}
+      </div>
+
+      {/* Submenu: e.g. IV Therapy's child pages, indented beneath it */}
+      {item.children && isOpen && (
+        <div
+          className="ml-[23px] mt-1 mb-1.5 pl-[17px] space-y-1"
+          style={{ borderLeft: '1px dashed rgba(26,166,183,0.30)' }}
+        >
+          {item.children.map((child) => {
+            const ChildIcon     = child.icon
+            const isChildActive = pathname === child.href
+            return (
+              <Link
+                key={child.name}
+                href={child.href}
+                role="menuitem"
+                onClick={onNavigate}
+                className={`group flex items-center gap-3 rounded-xl px-3.5 py-2.5 transition-all duration-150 ${
+                  isChildActive ? 'bg-primary/8' : 'hover:bg-gray-50'
+                }`}
+                style={isChildActive ? { backgroundColor: 'rgba(26,166,183,0.08)' } : {}}
+              >
+                <div
+                  className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center transition-colors duration-150"
+                  style={{
+                    backgroundColor: isChildActive
+                      ? 'rgba(26,166,183,0.15)'
+                      : 'rgba(26,166,183,0.07)',
+                  }}
+                >
+                  <ChildIcon
+                    className="h-3.5 w-3.5 transition-colors duration-150"
+                    style={{ color: isChildActive ? 'var(--primary)' : 'rgba(26,166,183,0.75)' }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p
+                    className="text-[12px] font-bold leading-tight truncate transition-colors duration-150"
+                    style={{ color: isChildActive ? 'var(--primary)' : '#1a202c' }}
+                  >
+                    {child.name}
+                  </p>
+                  <p
+                    className="text-[10px] font-medium leading-tight mt-0.5 truncate"
+                    style={{ color: 'rgba(11,61,71,0.45)' }}
+                  >
+                    {child.desc}
+                  </p>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
+}
+
+/* Mobile-menu equivalent of ServiceMenuItem: same click-to-expand chevron
+   pattern, sized for touch and using the mobile accordion's row styling. */
+function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
+  const [expanded, setExpanded] = useState(false)
+  const Icon          = item.icon
+  const isActive       = pathname === item.href
+  const hasActiveChild = item.children?.some((child) => pathname === child.href)
+  const isOpen         = expanded || hasActiveChild
+
+  return (
+    <div>
+      <div
+        className={`flex items-center gap-1 transition-colors ${
+          isActive ? 'bg-primary/8' : 'hover:bg-gray-50'
+        } ${!isLast && !item.children ? 'border-b' : ''}`}
+        style={{
+          backgroundColor: isActive ? 'rgba(26,166,183,0.08)' : undefined,
+          borderColor:     'rgba(26,166,183,0.09)',
+        }}
+      >
+        <Link
+          href={item.href}
+          className="flex flex-1 min-w-0 items-center gap-3 px-4 py-3"
+          onClick={onNavigate}
+        >
+          <div
+            className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center"
+            style={{ backgroundColor: isActive ? 'rgba(26,166,183,0.15)' : 'rgba(26,166,183,0.08)' }}
+          >
+            <Icon
+              className="h-4 w-4"
+              style={{ color: isActive ? 'var(--primary)' : 'rgba(26,166,183,0.65)' }}
+              aria-hidden="true"
+            />
+          </div>
+          <div>
+            <p
+              className="text-sm font-bold leading-tight"
+              style={{ color: isActive ? 'var(--primary)' : '#1a202c' }}
+            >
+              {item.name}
+            </p>
+            <p className="text-xs font-medium mt-0.5" style={{ color: 'rgba(11,61,71,0.45)' }}>
+              {item.desc}
+            </p>
+          </div>
+        </Link>
+
+        {item.children && (
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={isOpen}
+            aria-label={`${isOpen ? 'Hide' : 'Show'} ${item.name} services`}
+            className="flex-shrink-0 h-10 w-10 mr-1 rounded-lg flex items-center justify-center transition-colors hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          >
+            <ChevronDown
+              className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+              style={{ color: 'rgba(26,166,183,0.65)' }}
+              aria-hidden="true"
+            />
+          </button>
+        )}
+      </div>
+
+      {/* Submenu: IV Therapy's child pages, indented beneath it */}
+      {item.children && isOpen && (
+        <div
+          className={`ml-[34px] mr-2 mb-2 pl-3 space-y-0.5 ${!isLast ? 'border-b pb-2' : ''}`}
+          style={{ borderColor: 'rgba(26,166,183,0.09)', borderLeft: '1px dashed rgba(26,166,183,0.30)' }}
+        >
+          {item.children.map((child) => {
+            const ChildIcon      = child.icon
+            const isChildActive  = pathname === child.href
+            return (
+              <Link
+                key={child.name}
+                href={child.href}
+                className={`flex items-center gap-3 rounded-lg px-3.5 py-3 transition-colors ${
+                  isChildActive ? 'bg-primary/8' : 'hover:bg-gray-50'
+                }`}
+                style={{ backgroundColor: isChildActive ? 'rgba(26,166,183,0.08)' : undefined }}
+                onClick={onNavigate}
+              >
+                <div
+                  className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: isChildActive ? 'rgba(26,166,183,0.15)' : 'rgba(26,166,183,0.08)' }}
+                >
+                  <ChildIcon
+                    className="h-3.5 w-3.5"
+                    style={{ color: isChildActive ? 'var(--primary)' : 'rgba(26,166,183,0.65)' }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <div>
+                  <p
+                    className="text-sm font-bold leading-tight"
+                    style={{ color: isChildActive ? 'var(--primary)' : '#1a202c' }}
+                  >
+                    {child.name}
+                  </p>
+                  <p className="text-xs font-medium mt-0.5" style={{ color: 'rgba(11,61,71,0.45)' }}>
+                    {child.desc}
+                  </p>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default function Header() {
   const [scrolled,           setScrolled]           = useState(false)
@@ -77,7 +342,7 @@ export default function Header() {
 
   const isHomePage       = pathname === '/'
   const isTransparent    = isHomePage && !scrolled
-  const isServicesActive = serviceItems.some((item) => pathname === item.href)
+  const isServicesActive = allServiceHrefs.some((href) => pathname === href)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -160,7 +425,7 @@ export default function Header() {
               {servicesOpen && (
                 <div
                   role="menu"
-                  className="absolute top-full left-0 mt-3 w-[480px] rounded-2xl overflow-hidden z-[60]"
+                  className="absolute top-full left-0 mt-3 w-[560px] rounded-2xl overflow-hidden z-[60]"
                   style={{
                     background:           'rgba(255,255,255,0.98)',
                     backdropFilter:       'blur(24px)',
@@ -185,58 +450,30 @@ export default function Header() {
                     </span>
                   </div>
 
-                  {/* 2-column grid */}
-                  <div className="grid grid-cols-2 p-3 gap-1">
-                    {serviceItems.map((item) => {
-                      const Icon      = item.icon
-                      const isActive  = pathname === item.href
-                      return (
-                        <Link
+                  {/* 2-column layout: two independent stacks, so IV Therapy's
+                      submenu can live in the right column without shifting
+                      the left column's rows */}
+                  <div className="grid grid-cols-2 gap-1 p-3">
+                    <div className="flex flex-col gap-1">
+                      {serviceColumnLeft.map((item) => (
+                        <ServiceMenuItem
                           key={item.name}
-                          href={item.href}
-                          role="menuitem"
-                          onClick={closeServices}
-                          className={`group flex items-center gap-3 rounded-xl px-3.5 py-3 transition-all duration-150 ${
-                            isActive
-                              ? 'bg-primary/8'
-                              : 'hover:bg-gray-50'
-                          }`}
-                          style={isActive ? { backgroundColor: 'rgba(26,166,183,0.08)' } : {}}
-                        >
-                          {/* Icon badge */}
-                          <div
-                            className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center transition-colors duration-150"
-                            style={{
-                              backgroundColor: isActive
-                                ? 'rgba(26,166,183,0.15)'
-                                : 'rgba(26,166,183,0.07)',
-                            }}
-                          >
-                            <Icon
-                              className="h-4 w-4 transition-colors duration-150"
-                              style={{ color: isActive ? 'var(--primary)' : 'rgba(26,166,183,0.75)' }}
-                              aria-hidden="true"
-                            />
-                          </div>
-
-                          {/* Text */}
-                          <div className="min-w-0">
-                            <p
-                              className="text-[12px] font-bold leading-tight truncate transition-colors duration-150"
-                              style={{ color: isActive ? 'var(--primary)' : '#1a202c' }}
-                            >
-                              {item.name}
-                            </p>
-                            <p
-                              className="text-[10px] font-medium leading-tight mt-0.5 truncate"
-                              style={{ color: 'rgba(11,61,71,0.45)' }}
-                            >
-                              {item.desc}
-                            </p>
-                          </div>
-                        </Link>
-                      )
-                    })}
+                          item={item}
+                          pathname={pathname}
+                          onNavigate={closeServices}
+                        />
+                      ))}
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      {serviceColumnRight.map((item) => (
+                        <ServiceMenuItem
+                          key={item.name}
+                          item={item}
+                          pathname={pathname}
+                          onNavigate={closeServices}
+                        />
+                      ))}
+                    </div>
                   </div>
 
                   {/* Dropdown footer CTA */}
@@ -376,49 +613,15 @@ export default function Header() {
                         border:       '1px solid rgba(26,166,183,0.12)',
                       }}
                     >
-                      {serviceItems.map((item, idx) => {
-                        const Icon     = item.icon
-                        const isActive = pathname === item.href
-                        const isLast   = idx === serviceItems.length - 1
-                        return (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className={`flex items-center gap-3 px-4 py-3 transition-colors ${
-                              isActive
-                                ? 'bg-primary/8'
-                                : 'hover:bg-gray-50'
-                            } ${!isLast ? 'border-b' : ''}`}
-                            style={{
-                              backgroundColor: isActive ? 'rgba(26,166,183,0.08)' : undefined,
-                              borderColor:     'rgba(26,166,183,0.09)',
-                            }}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            <div
-                              className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center"
-                              style={{ backgroundColor: isActive ? 'rgba(26,166,183,0.15)' : 'rgba(26,166,183,0.08)' }}
-                            >
-                              <Icon
-                                className="h-4 w-4"
-                                style={{ color: isActive ? 'var(--primary)' : 'rgba(26,166,183,0.65)' }}
-                                aria-hidden="true"
-                              />
-                            </div>
-                            <div>
-                              <p
-                                className="text-sm font-bold leading-tight"
-                                style={{ color: isActive ? 'var(--primary)' : '#1a202c' }}
-                              >
-                                {item.name}
-                              </p>
-                              <p className="text-xs font-medium mt-0.5" style={{ color: 'rgba(11,61,71,0.45)' }}>
-                                {item.desc}
-                              </p>
-                            </div>
-                          </Link>
-                        )
-                      })}
+                      {serviceItems.map((item, idx) => (
+                        <MobileServiceMenuItem
+                          key={item.name}
+                          item={item}
+                          pathname={pathname}
+                          isLast={idx === serviceItems.length - 1}
+                          onNavigate={() => setMobileMenuOpen(false)}
+                        />
+                      ))}
                     </div>
                   )}
                 </div>

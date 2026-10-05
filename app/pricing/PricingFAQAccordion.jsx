@@ -10,7 +10,7 @@ import {
 const PRICING_FAQS = [
   {
     q: 'How much does telehealth cost without insurance in Oklahoma?',
-    a: "Women's health $150, weight loss $100/month, minor illness $75. No insurance required.",
+    a: "Women's health televisits are $50, weight loss is $100/month, and minor illness televisits are $50. No insurance required.",
   },
   {
     q: 'How much does semaglutide cost?',
@@ -26,7 +26,7 @@ const PRICING_FAQS = [
   },
   {
     q: 'Is in-person the same price as online?',
-    a: 'Yes. Visit pricing is the same whether you\'re seen in Oklahoma City or online.',
+    a: "For most visits, yes. Minor illness and women's health televisits and standard in-person visits are both $50. In-person minor illness visits that require testing range from $80 to $100.",
   },
 ]
 

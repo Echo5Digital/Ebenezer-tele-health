@@ -6,7 +6,7 @@ import WomensHealthFAQAccordion from './WomensHealthFAQAccordion'
 export const metadata = {
   title: "Women's Health Clinic in Oklahoma City",
   description:
-    "Women's health clinic in Oklahoma City - birth control, PCOS, menopause & more. In-person by appointment or women's telehealth statewide. From $150. (405) 349 8188.",
+    "Women's health clinic in Oklahoma City - birth control, PCOS, menopause & more. In-person by appointment or women's telehealth statewide. From $50. (405) 349 8188.",
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/womens-health',
   },
@@ -17,7 +17,7 @@ const womensHealthPageSchema = {
   '@type': 'MedicalWebPage',
   name: "Women's Health Clinic in Oklahoma City | Ebenezer Health Clinic",
   description:
-    "Women's health clinic in Oklahoma City offering birth control, PCOS treatment, menopause care, and hormonal health support. In-person on Saturdays in OKC or by telehealth across Oklahoma. Cash-pay from $150.",
+    "Women's health clinic in Oklahoma City offering birth control, PCOS treatment, menopause care, and hormonal health support. In-person on Saturdays in OKC or by telehealth across Oklahoma. Cash-pay from $50.",
   url: 'https://www.ebenezerhealthclinic.com/womens-health',
   about: {
     '@type': 'MedicalProcedure',
@@ -49,15 +49,23 @@ const womensHealthPageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: "Women's Health Initial Visit",
+      name: "Women's Health Televisit",
       priceCurrency: 'USD',
-      price: '150',
+      price: '50',
+      description:
+        'Secure video visit, symptom review, and prescriptions sent to your preferred pharmacy when appropriate.',
+    },
+    {
+      '@type': 'Offer',
+      name: "Women's Health In-Person Initial Visit",
+      priceCurrency: 'USD',
+      price: '75',
       description:
         'Comprehensive symptom review, lab orders when clinically appropriate, lab result interpretation, and personalized treatment plan.',
     },
     {
       '@type': 'Offer',
-      name: "Women's Health Follow-Up Visit",
+      name: "Women's Health In-Person Follow-Up Visit",
       priceCurrency: 'USD',
       price: '50',
       description:
@@ -99,7 +107,7 @@ const faqSchema = {
       name: "How much does a women's health visit cost?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Initial visits are $150; follow-ups are $50. No insurance required.',
+        text: 'Televisits are $50, in-person initial visits are $75, and in-person follow-ups are $50. No insurance required.',
       },
     },
     {
@@ -181,6 +189,12 @@ const steps = [
   },
 ]
 
+const pricingTelevisitFeatures = [
+  'Secure video visit with Dr. Susan George',
+  'Symptom review and consultation',
+  'Prescriptions sent to your preferred pharmacy, including 24-hour pharmacies like Walgreens and CVS',
+]
+
 const pricingInitialFeatures = [
   'Comprehensive symptom review and full health history',
   'Lab orders included when clinically appropriate',
@@ -206,7 +220,7 @@ const whyPoints = [
   },
   {
     title: 'Transparent cash pricing',
-    description: '$150 initial · $50 follow-up · no surprise bills.',
+    description: '$50 televisit · $75 in-person initial · $50 follow-up · no surprise bills.',
   },
   {
     title: 'Private, secure, HIPAA-compliant visits',
@@ -289,7 +303,7 @@ export default function WomensHealthPage() {
                 menopause, and hormonal health. In-person in Oklahoma City or
                 by secure video anywhere in Oklahoma. See a provider who
                 specializes in women&apos;s health, with transparent cash
-                pricing and no insurance hurdles.
+                pricing from $50 and no insurance hurdles.
               </p>
 
               <div
@@ -363,7 +377,7 @@ export default function WomensHealthPage() {
               City offering in-person visits on Saturdays and women&apos;s
               telehealth across Oklahoma. We provide birth control in Oklahoma
               City, PCOS treatment, menopause care, and hormonal health support.
-              Visits start at $150.
+              Visits start at $50.
             </p>
           </div>
         </div>
@@ -415,7 +429,7 @@ export default function WomensHealthPage() {
                     detail: 'Secure video visits from anywhere in Oklahoma',
                   },
                   {
-                    label: 'From $150',
+                    label: 'From $50',
                     detail: 'Transparent cash pricing, no surprise bills',
                   },
                 ].map((item) => (
@@ -1006,8 +1020,8 @@ export default function WomensHealthPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Initial Visit Card */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Televisit Card */}
             <div
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
@@ -1020,23 +1034,23 @@ export default function WomensHealthPage() {
                 className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
-                Women&apos;s Health Initial Visit
+                Televisit
               </h3>
               <p className="text-sm text-gray-600 mb-5">
-                Comprehensive symptom review, lab orders, lab interpretation,
-                and a personalized treatment plan.
+                Secure video visit, symptom review, and prescriptions sent to
+                your pharmacy when appropriate.
               </p>
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
                   style={{ color: 'var(--primary)' }}
                 >
-                  $150
+                  $50
                 </span>
-                <span className="text-sm text-gray-500">initial visit</span>
+                <span className="text-sm text-gray-500">televisit</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {pricingInitialFeatures.map((feature) => (
+                {pricingTelevisitFeatures.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
@@ -1055,6 +1069,53 @@ export default function WomensHealthPage() {
               </Link>
             </div>
 
+            {/* Initial Visit Card */}
+            <div
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                borderColor: 'rgba(26,166,183,0.20)',
+              }}
+            >
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--navy)' }}
+              >
+                In-Person Initial Visit
+              </h3>
+              <p className="text-sm text-gray-600 mb-5">
+                Comprehensive symptom review, lab orders, lab interpretation,
+                and a personalized treatment plan.
+              </p>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  $75
+                </span>
+                <span className="text-sm text-gray-500">initial visit</span>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingInitialFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <CheckCircle2
+                      className="h-4 w-4 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="btn-outline text-base w-full text-center"
+              >
+                Book Your Visit
+              </Link>
+            </div>
+
             {/* Follow-up Card */}
             <div
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
@@ -1067,7 +1128,7 @@ export default function WomensHealthPage() {
                 className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
-                Women&apos;s Health Follow-Up Visit
+                In-Person Follow-Up Visit
               </h3>
               <p className="text-sm text-gray-600 mb-5">
                 Ongoing assessment, lab review and monitoring, treatment

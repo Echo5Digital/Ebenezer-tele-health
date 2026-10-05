@@ -18,7 +18,7 @@ const faqs = [
     id: 'mi-faq-1',
     question: 'Can I get online UTI treatment or sinus infection treatment in Oklahoma?',
     answer:
-      'Yes. Most minor illnesses can be evaluated online, with prescriptions sent to your pharmacy when appropriate.',
+      'Yes. Most minor illnesses can be evaluated online, with prescriptions sent to your preferred pharmacy when appropriate, including 24-hour pharmacies like Walgreens and CVS.',
   },
   {
     id: 'mi-faq-2',
@@ -29,7 +29,8 @@ const faqs = [
   {
     id: 'mi-faq-3',
     question: 'How much does it cost?',
-    answer: '$75 per visit. No insurance required.',
+    answer:
+      'Televisits and in-person visits without testing are $50. In-person visits that require testing range from $80 to $100. No insurance required.',
   },
   {
     id: 'mi-faq-4',

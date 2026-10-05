@@ -15,7 +15,7 @@ const reviews = [
   },
   {
     id: 2,
-    text: "Had a bad sinus infection and couldn't get in anywhere for three days. Found Ebenezer Health Clinic, booked online, and was seen within the hour. Susan George was professional and thorough. My prescription was sent straight to my pharmacy. Seventy-five dollars, done in 30 minutes, feeling better the next day. This is how healthcare should work.",
+    text: "Had a bad sinus infection and couldn't get in anywhere for three days. Found Ebenezer Health Clinic, booked online, and was seen within the hour. Susan George was professional and thorough. My prescription was sent straight to my pharmacy. Fifty dollars, done in 30 minutes, feeling better the next day. This is how healthcare should work.",
     author: 'Marcus T.',
     location: 'Oklahoma City, OK',
     service: 'Minor Illness',
