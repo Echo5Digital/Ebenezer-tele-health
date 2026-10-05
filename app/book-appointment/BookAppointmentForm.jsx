@@ -9,6 +9,8 @@ const inputClass =
 
 const labelClass = 'block text-sm font-semibold mb-1'
 
+const OTHER_STATE = '__other__'
+
 const initialFormState = {
   service: '',
   ivSubService: '',
@@ -55,6 +57,9 @@ export default function BookAppointmentForm() {
       if (name === 'service' && value !== 'IV Therapy') {
         next.ivSubService = ''
       }
+      if (name === 'state' && value !== OTHER_STATE) {
+        next.stateManual = ''
+      }
       return next
     })
   }
@@ -67,7 +72,7 @@ export default function BookAppointmentForm() {
     try {
       const payload = {
         ...form,
-        state: form.stateManual.trim() || form.state,
+        state: form.state === OTHER_STATE ? form.stateManual : form.state,
       }
       delete payload.stateManual
 
@@ -211,39 +216,37 @@ export default function BookAppointmentForm() {
         />
       </Field>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Field label="City">
           <input
             type="text" name="city" value={form.city} onChange={handleChange}
             placeholder="City" required aria-required="true" className={inputClass}
           />
         </Field>
-        <Field label="Zip">
-          <input
-            type="text" name="zip" value={form.zip} onChange={handleChange}
-            placeholder="Postal Zip Code" required aria-required="true"
-            pattern="\d{5}(-\d{4})?" title="5-digit zip code" className={inputClass}
-          />
-        </Field>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="State (Select)" optional={!!form.stateManual}>
+        <Field label="State">
           <select
             name="state" value={form.state} onChange={handleChange}
-            required={!form.stateManual} aria-required={!form.stateManual} className={inputClass}
+            required aria-required="true" className={inputClass}
           >
             <option value="" disabled>Select State</option>
             {US_CA_STATES.map((s) => (
               <option key={s.value} value={s.value}>{s.label}</option>
             ))}
+            <option value={OTHER_STATE}>Other</option>
           </select>
+          {form.state === OTHER_STATE && (
+            <input
+              type="text" name="stateManual" value={form.stateManual} onChange={handleChange}
+              placeholder="Enter State / Province" required aria-required="true"
+              className={`${inputClass} mt-2`}
+            />
+          )}
         </Field>
-        <Field label="State (Enter Manually)" optional={!!form.state}>
+        <Field label="Zip">
           <input
-            type="text" name="stateManual" value={form.stateManual} onChange={handleChange}
-            placeholder="Enter State / Province" required={!form.state} aria-required={!form.state}
-            className={inputClass}
+            type="text" name="zip" value={form.zip} onChange={handleChange}
+            placeholder="Postal Zip Code" required aria-required="true"
+            pattern="\d{5}(-\d{4})?" title="5-digit zip code" className={inputClass}
           />
         </Field>
       </div>
