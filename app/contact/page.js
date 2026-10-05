@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import { Phone, MapPin, Mail, Clock, CalendarDays, Globe, CheckCircle, CreditCard, Shield, Building2 } from 'lucide-react'
+import { BOOKING_URL } from '@/lib/constants'
 
 export const metadata = {
   title: {
@@ -36,8 +38,7 @@ const contactPageSchema = {
           name: 'Book an Appointment',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate:
-              'https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09',
+            urlTemplate: 'https://www.ebenezerhealthclinic.com/book-appointment',
             actionPlatform: [
               'https://schema.org/DesktopWebPlatform',
               'https://schema.org/MobileWebPlatform',
@@ -163,8 +164,6 @@ const contactPageSchema = {
   ],
 }
 
-const BOOKING_URL = 'https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09'
-
 const PHONE      = '(405) 349-8188'
 const PHONE_HREF = 'tel:+14053498188'
 const EMAIL      = 'ebenezerhealth@outlook.com'
@@ -272,16 +271,14 @@ export default function ContactPage() {
 
               {/* CTA row */}
               <div className="flex flex-col sm:flex-row gap-3 mb-7">
-                <a
+                <Link
                   href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="btn-primary inline-flex items-center justify-center gap-2.5"
                   aria-label="Book your appointment online"
                 >
                   <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                   Book an Appointment
-                </a>
+                </Link>
                 <a
                   href={PHONE_HREF}
                   className="btn-outline inline-flex items-center justify-center gap-2.5"
@@ -435,16 +432,14 @@ export default function ContactPage() {
                     securely through our online portal.
                   </p>
 
-                  <a
+                  <Link
                     href={BOOKING_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="btn-primary inline-flex items-center gap-2.5"
                     aria-label="Book your appointment online"
                   >
                     <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                     Book Online Now
-                  </a>
+                  </Link>
 
                   <p className="text-sm text-gray-500 mt-5 text-center">
                     Prefer to visit us in person?{' '}
@@ -596,17 +591,15 @@ export default function ContactPage() {
                         Book telehealth across Oklahoma, most days. Secure video
                         visit from home, no travel required.
                       </p>
-                      <a
+                      <Link
                         href={BOOKING_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline"
                         style={{ color: 'var(--primary)' }}
                         aria-label="Book telehealth online"
                       >
                         <CalendarDays className="h-3.5 w-3.5 flex-shrink-0" aria-hidden="true" />
                         Book Telehealth Now
-                      </a>
+                      </Link>
                     </div>
 
                   </div>
@@ -822,16 +815,14 @@ export default function ContactPage() {
 
               {/* CTA cluster */}
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a
+                <Link
                   href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="btn-primary inline-flex items-center justify-center gap-2.5"
                   aria-label="Book an appointment online"
                 >
                   <CalendarDays className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                   Book an Appointment
-                </a>
+                </Link>
                 <a
                   href={PHONE_HREF}
                   className="btn-outline inline-flex items-center justify-center gap-2.5"

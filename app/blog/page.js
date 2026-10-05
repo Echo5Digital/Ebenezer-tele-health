@@ -8,6 +8,7 @@ import {
   getFeaturedPost,
   getRecentPosts,
 } from '@/lib/blogPosts'
+import { BOOKING_URL } from '@/lib/constants'
 
 export const metadata = {
   title: {
@@ -266,14 +267,12 @@ export default function BlogPage({ searchParams }) {
                   Our team is here to support your health journey with
                   compassionate, personalized care.
                 </p>
-                <a
-                  href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={BOOKING_URL}
                   className="btn-primary w-full text-sm"
                 >
                   Book Your Visit
-                </a>
+                </Link>
               </div>
             </aside>
           </div>

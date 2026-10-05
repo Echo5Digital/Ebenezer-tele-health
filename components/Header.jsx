@@ -9,6 +9,7 @@ import {
   Stethoscope, Scale, Heart, Thermometer,
   Syringe, Droplets, Monitor, Sparkles,
 } from 'lucide-react'
+import { BOOKING_URL } from '@/lib/constants'
 
 // Left/right columns are explicit (not auto-flowed) so IV Therapy's nested
 // submenu can sit in its own column without shifting the other column's rows.
@@ -484,17 +485,15 @@ export default function Header() {
                     <span className="text-[10px] font-medium" style={{ color: 'rgba(11,61,71,0.40)' }}>
                       Walk-ins welcome · Oklahoma City
                     </span>
-                    <a
-                      href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href={BOOKING_URL}
                       onClick={closeServices}
                       className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[10px] font-black uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95"
                       style={{ backgroundColor: 'var(--primary)' }}
                     >
                       Book Now
                       <ArrowUpRight className="h-3 w-3" aria-hidden="true" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -518,16 +517,14 @@ export default function Header() {
 
           {/* ── Desktop CTA ───────────────────────────────────── */}
           <div className="hidden lg:flex items-center flex-shrink-0">
-            <a
-              href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={BOOKING_URL}
               className="inline-flex items-center gap-2 rounded-full px-4 xl:px-6 py-2.5 xl:py-3 text-xs xl:text-sm font-bold uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
               style={{ backgroundColor: 'var(--primary)' }}
             >
               Book Your Visit
               <ArrowUpRight className="h-3.5 w-3.5 xl:h-4 xl:w-4 flex-shrink-0" aria-hidden="true" />
-            </a>
+            </Link>
           </div>
 
           {/* ── Mobile hamburger ──────────────────────────────── */}
@@ -656,17 +653,15 @@ export default function Header() {
                   />
                   Call (405) 349-8188
                 </a>
-                <a
-                  href="https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=RThiMDN3R1ZQUGZlYytLRUxqQ0UrZz09&lid=aFhJc2tsSlJuZjdqU0tVT1N5TWxXQT09"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={BOOKING_URL}
                   className="flex items-center justify-center gap-2 rounded-full py-3 text-sm font-bold uppercase tracking-widest text-white transition-all hover:opacity-90 min-h-[44px]"
                   style={{ backgroundColor: 'var(--primary)' }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Book Your Visit
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+                </Link>
               </div>
 
             </div>
