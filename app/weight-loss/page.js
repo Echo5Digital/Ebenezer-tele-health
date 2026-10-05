@@ -4,85 +4,155 @@ import {
   CheckCircle2,
   ArrowRight,
   Info,
-  HeartHandshake,
-  Thermometer,
-  Scale,
   MapPin,
-  ShieldCheck,
+  Phone,
+  Mail,
+  ClipboardList,
   Syringe,
 } from 'lucide-react'
 import WeightLossFAQAccordion from './WeightLossFAQAccordion'
+import Testimonials from '@/components/Testimonials'
 
 export const metadata = {
-  title: 'Weight Loss Clinic in Oklahoma City',
+  title: 'Medical Weight Loss Oklahoma City | Ebenezer Health Clinic',
   description:
-    'Medical weight loss clinic in Oklahoma City. Semaglutide and GLP-1 plans, in-person or online statewide. Board Certified provider. $100/month. Call (405) 349-8188.',
+    'Personalized medical weight loss in the Oklahoma City area with Semaglutide and Tirzepatide options for qualified patients. In-person and Oklahoma telehealth care available.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/weight-loss',
   },
 }
 
-const pricingProgramFeatures = [
-  'Full health and metabolic evaluation',
-  'Personalized weight-loss plan',
-  'Initial labs included',
-  'Prescriptions sent to Lilly Direct Pharmacy',
-  'Ongoing monitoring and support',
+const programIncludes = [
+  'Comprehensive health and weight-history review',
+  'Review of previous weight-loss attempts',
+  'Current medication and supplement review',
+  'Evaluation of weight-related health concerns',
+  'Nutrition and lifestyle assessment',
+  'Physical activity assessment',
+  'Sleep and stress review',
+  'Personalized weight-loss goals',
+  'Medication-assisted weight-loss evaluation when appropriate',
+  'Progress monitoring',
+  'Follow-up care and treatment adjustments when needed',
 ]
 
-const whoForReasons = [
-  'Difficulty losing weight despite diet and exercise',
-  'Interest in GLP-1 medications like semaglutide',
-  'Insulin resistance or metabolic syndrome',
-  'Wanting a real provider, not a faceless online pill mill',
+const biggerPictureFactors = [
+  'Eating patterns',
+  'Nutrition',
+  'Physical activity',
+  'Sleep',
+  'Stress',
+  'Previous weight-loss attempts',
+  'Current health conditions',
+  'Medications and supplements',
+  'Personal goals and motivation',
+]
+
+const whoMayBenefit = [
+  'Have struggled to lose weight through lifestyle changes alone',
+  'Have previously tried diet or exercise programs without reaching their goals',
+  'Want professional guidance with weight management',
+  'Have questions about weight-loss medications',
+  'Want a personalized approach rather than a one-size-fits-all program',
+  'Need ongoing support and progress monitoring',
+]
+
+const questionnaireTopics = [
+  'Height, current weight, and goal weight',
+  'Reason for your visit',
+  'Medical history',
+  'Previous weight-loss treatments',
+  'Current medications',
+  'Eating patterns and nutrition',
+  'Food allergies or restrictions',
+  'Physical activity',
+  'Sleep',
+  'Stress',
+  'Current symptoms',
+  'Current weight-loss medications',
+  'Medication side effects, if applicable',
+  'Short-term and long-term goals',
+  'Your readiness for medication-assisted weight loss, when appropriate',
 ]
 
 const steps = [
   {
     number: '01',
-    title: 'Book Your Consultation',
-    description: 'Schedule online or call (405) 349-8188.',
+    title: 'Schedule Your Consultation',
+    description: 'Book a medical weight-loss consultation with Ebenezer Health Clinic.',
   },
   {
     number: '02',
-    title: 'Complete Your Intake',
+    title: 'Complete Your Questionnaire',
     description:
-      'Share your health history, goals, and any prior weight-loss experience.',
+      'Complete your Weight Loss Program Patient Questionnaire before your appointment. This gives your provider important information about your health, lifestyle, previous weight-loss efforts, current medications, symptoms, and goals.',
   },
   {
     number: '03',
-    title: 'Meet Dr. George by Video',
-    description: 'Secure video visit for a comprehensive metabolic evaluation.',
+    title: 'Meet With Your Provider',
+    description:
+      'Your provider will review your questionnaire and discuss your health history, weight-management experience, challenges, and goals. If you are interested in medication-assisted weight loss, your provider can determine whether an option such as Semaglutide or Tirzepatide may be clinically appropriate.',
   },
   {
     number: '04',
-    title: 'Receive Your Plan',
+    title: 'Receive Your Personalized Plan',
     description:
-      'Personalized program and follow-up schedule. If medication is prescribed, it is arranged through a licensed pharmacy.',
+      'Based on your evaluation, your provider will develop an individualized weight-management plan. Your plan may include lifestyle recommendations, nutrition guidance, medication-assisted treatment when appropriate, and follow-up care.',
   },
   {
     number: '05',
-    title: 'Follow Up Regularly',
+    title: 'Monitor Your Progress',
     description:
-      'Included in your $100/month program: ongoing monitoring, dose adjustments, and support.',
+      'Weight management is an ongoing process. Follow-up appointments allow your provider to monitor your progress, discuss concerns or side effects, and make appropriate adjustments to your care plan.',
   },
 ]
 
-const oklahomaCities = [
-  { name: 'Oklahoma City', href: '/weight-loss-okc' },
-  { name: 'Tulsa', href: '/weight-loss-tulsa' },
-  { name: 'Moore', href: '/weight-loss-moore' },
-  { name: 'Owasso', href: '/weight-loss-owasso' },
+const whyChoosePoints = [
+  {
+    title: 'Personalized Weight-Management Plans',
+    description:
+      'Your program is developed around your health history, lifestyle, previous weight-loss experiences, and individual goals.',
+  },
+  {
+    title: 'Medication Options When Appropriate',
+    description:
+      'Eligible patients can be evaluated for medication-assisted weight loss, including Semaglutide and Tirzepatide.',
+  },
+  {
+    title: 'More Than a Prescription',
+    description:
+      'Our approach considers nutrition, activity, sleep, stress, medications, health history, and other factors relevant to weight management.',
+  },
+  {
+    title: 'Ongoing Monitoring',
+    description:
+      'Follow-up care allows your provider to evaluate your progress and adjust your plan when appropriate.',
+  },
+  {
+    title: 'Convenient Access',
+    description:
+      'Access care in person in the Oklahoma City area, with telehealth available throughout Oklahoma for appropriate services.',
+  },
 ]
+
+const providerCredentials = [
+  'Doctor of Nursing Practice (DNP)',
+  'Advanced Practice Registered Nurse (APRN)',
+  'Board Certified in Advanced Diabetes Management (BC-ADM)',
+  'In-person care in the Oklahoma City area',
+  'Telehealth throughout Oklahoma',
+]
+
+const servingAreas = ['Oklahoma City', 'Bethany', 'Edmond', 'Norman', 'Moore', 'Tulsa']
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
 const weightLossPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  name: 'Weight Loss Clinic in Oklahoma City: Medical Weight Loss',
+  name: 'Medical Weight Loss Oklahoma City | Ebenezer Health Clinic',
   description:
-    'Medical weight loss clinic in Oklahoma City. Semaglutide and GLP-1 plans when medically appropriate, available in person on Saturdays in OKC or online statewide. Board Certified provider. $100/month, includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Medication billed separately.',
+    'Personalized medical weight loss in the Oklahoma City area with Semaglutide and Tirzepatide options for qualified patients. In-person and Oklahoma telehealth care available.',
   url: 'https://www.ebenezerhealthclinic.com/weight-loss',
   mainEntityOfPage: 'https://www.ebenezerhealthclinic.com/weight-loss',
   specialty: 'Endocrinology',
@@ -91,29 +161,12 @@ const weightLossPageSchema = {
     name: 'Medical Weight Loss Management',
     procedureType: 'https://schema.org/TherapeuticProcedure',
     description:
-      'Medically supervised weight loss program including GLP-1/semaglutide evaluation and management when appropriate, personalized plans, and ongoing monitoring. Available in person on Saturdays in Oklahoma City and via telehealth statewide. Led by Dr. Susan George, DNP, APRN, BC-ADM.',
+      'Medically supervised weight-management program including individualized evaluation, lifestyle guidance, and medication-assisted weight loss with Semaglutide or Tirzepatide when clinically appropriate. Available in person in the Oklahoma City area and via telehealth throughout Oklahoma. Led by Dr. Susan George, DNP, APRN, BC-ADM.',
   },
   provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   areaServed: [
     { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
     { '@type': 'State', name: 'Oklahoma' },
-  ],
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Weight Loss Monthly Program',
-      description:
-        'Full health and metabolic evaluation, personalized weight-loss plan, initial labs, and prescriptions sent to Lilly Direct Pharmacy, with ongoing monitoring and support. Weight loss medication is billed separately to the patient.',
-      priceCurrency: 'USD',
-      price: '100',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: '100',
-        priceCurrency: 'USD',
-        unitCode: 'MON',
-      },
-      availability: 'https://schema.org/InStock',
-    },
   ],
 }
 
@@ -123,50 +176,74 @@ const weightLossFAQSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do you prescribe semaglutide for weight loss in Oklahoma?',
+      name: 'What is medical weight loss?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'When medically appropriate, yes. Eligibility depends on your health history and a provider evaluation.',
+        text: 'Medical weight loss is a clinician-guided approach to weight management that considers your health history, current medications, lifestyle, previous weight-loss attempts, and personal goals. Your individualized plan may include lifestyle guidance, medication-assisted treatment when appropriate, monitoring, and follow-up care.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does the program cost?',
+      name: 'Does Ebenezer Health Clinic offer Semaglutide?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '$100 per month, which includes initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient.',
+        text: 'Semaglutide may be considered for qualified patients as part of an individualized medical weight-management plan. Your provider will determine whether it is appropriate based on your clinical evaluation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is there a weight loss clinic near me in OKC?',
+      name: 'Does Ebenezer Health Clinic offer Tirzepatide?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. In person on Saturdays in Oklahoma City, and online statewide.',
+        text: 'Tirzepatide may also be considered for qualified patients. Your provider will review your health history, medications, goals, and other relevant factors to determine whether it may be appropriate for you.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I do medical weight loss entirely online?',
+      name: 'Which is right for me – Semaglutide or Tirzepatide?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, across Oklahoma.',
+        text: 'There is no single medication that is appropriate for everyone. Your provider will evaluate your individual health history, current medications, previous weight-loss treatments, goals, and other clinical factors before recommending an appropriate treatment option.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is this a quick fix?',
+      name: 'Do I have to take medication to join the weight-loss program?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. It\'s a medically supervised program with real follow-up.',
+        text: 'No. Medication-assisted weight loss is only one potential component of medical weight management. Your provider will discuss an individualized approach based on your needs and clinical evaluation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What if medication isn\'t right for me?',
+      name: 'What information do I need before my first appointment?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We\'ll tell you honestly and focus on the approach that fits your health.',
+        text: 'Completing the Weight Loss Program Patient Questionnaire before your appointment can help your provider understand your medical history, medications, previous weight-loss treatments, lifestyle, symptoms, and goals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I receive weight-loss care through telehealth?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Eligible consultations and follow-up appointments may be available through telehealth throughout Oklahoma. Certain evaluations or services may require an in-person visit when clinically appropriate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly will I lose weight?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Weight-loss results vary between individuals and depend on many factors, including health history, treatment approach, lifestyle, adherence, and individual response. Your provider will work with you to establish appropriate goals and monitor your progress.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will I need follow-up appointments?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Follow-up care may be recommended to monitor your progress, discuss concerns or medication side effects, and make appropriate adjustments to your treatment plan.',
       },
     },
   ],
@@ -221,55 +298,45 @@ export default function WeightLossPage() {
                 Home
               </Link>
               <span aria-hidden="true">/</span>
-              <span style={{ color: 'var(--primary)' }}>Weight Loss</span>
+              <span style={{ color: 'var(--primary)' }}>Medical Weight Loss</span>
             </nav>
 
-            {/* Label */}
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Medical Weight Loss Clinic
-            </span>
-
             <h1
-              className="text-4xl md:text-5xl font-bold mb-5"
+              className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
               style={{ color: 'var(--navy)' }}
             >
-              Weight Loss Clinic in Oklahoma City: Medical Weight Loss
+              Medical Weight Loss in Oklahoma City – Personalized Weight
+              Management
             </h1>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
-              A medically supervised, evidence-based weight-loss program
-              including GLP-1 medication management, delivered by secure video
-              from anywhere in Oklahoma. Overseen by Dr. Susan George, DNP,
-              APRN, BC-ADM, who is Board Certified in Advanced Diabetes
-              Management.
+            <p className="text-lg text-gray-600 leading-relaxed mb-5 max-w-2xl">
+              Achieve your weight-loss goals with personalized, medically
+              guided care at Ebenezer Health Clinic.
             </p>
 
-            {/* Badge */}
-            <div
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
-              style={{
-                backgroundColor: 'rgba(151,206,204,0.40)',
-                color: 'var(--navy)',
-              }}
-            >
-              <Scale className="h-4 w-4" aria-hidden="true" />
-              GLP-1 &amp; Semaglutide Available. $100/month
-            </div>
+            <p className="text-base text-gray-600 leading-relaxed mb-5 max-w-2xl">
+              Our medical weight-loss program combines clinical evaluation,
+              lifestyle guidance, ongoing support, and medication-assisted
+              weight loss, including Semaglutide and Tirzepatide when
+              clinically appropriate.
+            </p>
+
+            <p className="text-base text-gray-600 leading-relaxed mb-8 max-w-2xl">
+              Visit us in the Oklahoma City area or access eligible
+              weight-management services through telehealth across Oklahoma.
+            </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/contact"
-                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto text-center"
               >
-                Book Your Consultation
+                Start Your Weight Loss Journey
               </Link>
               <a
                 href="tel:+14053498188"
-                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto text-center"
               >
                 Call (405) 349-8188
               </a>
@@ -278,50 +345,9 @@ export default function WeightLossPage() {
         </div>
       </section>
 
-      {/* ── AEO ANSWER BLOCK ─────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/answer_block.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'right center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(135deg, rgba(151,206,204,0.25) 0%, rgba(255,255,255,0.72) 60%)',
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div
-            className="max-w-3xl border-l-4 pl-5 md:pl-6"
-            style={{ borderColor: 'var(--primary)' }}
-          >
-            <p
-              className="hero-answer-line text-base md:text-lg leading-relaxed"
-              style={{ color: '#1AA6B7' }}
-            >
-              Ebenezer Health Clinic is a weight loss clinic in Oklahoma City
-              offering medically supervised weight loss in person and by
-              telehealth across Oklahoma. Our GLP-1 weight loss program in
-              Oklahoma may include semaglutide when appropriate, led by a Board
-              Certified provider. The program is $100 per month, which
-              includes initial labs and prescriptions sent to Lilly Direct
-              Pharmacy; the weight loss medication itself is billed
-              separately to the patient.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHAT IS MEDICAL WEIGHT LOSS ──────────────────────────── */}
-      <section className="bg-white" aria-labelledby="what-is-heading">
+      {/* ── A PERSONALIZED APPROACH ──────────────────────────────── */}
+      <section className="bg-white" aria-labelledby="personalized-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div>
               <span
@@ -331,11 +357,11 @@ export default function WeightLossPage() {
                 Our Approach
               </span>
               <h2
-                id="what-is-heading"
+                id="personalized-heading"
                 className="text-3xl md:text-4xl font-bold mb-3"
                 style={{ color: 'var(--navy)' }}
               >
-                What Is Medical Weight Loss in OKC?
+                A Personalized Approach to Medical Weight Loss
               </h2>
               <div className="flex items-center gap-2 mb-5" aria-hidden="true">
                 <div
@@ -351,16 +377,18 @@ export default function WeightLossPage() {
                   style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                Weight loss is not the same for everyone. Your health history,
+                current weight, lifestyle, medications, previous weight-loss
+                attempts, symptoms, and personal goals can all influence which
+                approach may be appropriate for you.
+              </p>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Medical weight loss is a clinically guided approach to losing
-                weight under the care of a licensed provider, not a fad diet
-                or a one-size-fits-all program. At our Oklahoma City weight loss
-                clinic, we look at your full picture: your health history, your
-                metabolism, and what&apos;s gotten in the way before. Our
-                provider is Board Certified in Advanced Diabetes Management,
-                which means real understanding of the metabolic and hormonal
-                factors like insulin resistance that make weight loss harder
-                than willpower alone.
+                At Ebenezer Health Clinic, our medical weight-loss program
+                begins with an individualized evaluation. Rather than relying
+                on a one-size-fits-all plan, we work with you to understand
+                your needs and develop a personalized weight-management
+                strategy.
               </p>
             </div>
 
@@ -377,7 +405,7 @@ export default function WeightLossPage() {
                   style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
                   aria-hidden="true"
                 >
-                  <ShieldCheck
+                  <ClipboardList
                     className="h-5 w-5"
                     style={{ color: 'var(--primary)' }}
                   />
@@ -386,28 +414,131 @@ export default function WeightLossPage() {
                   className="text-xl font-semibold"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Why BC-ADM Certification Matters
+                  Your Plan, Built Around You
                 </h3>
               </div>
               <p className="text-gray-600 mb-5 leading-relaxed text-sm md:text-base">
-                The Board Certified in Advanced Diabetes Management (BC-ADM)
-                credential represents real expertise in the metabolic science
-                behind weight gain: insulin resistance, hormonal factors, and
-                medication management. Commercially marketed programs
-                don&apos;t account for your individual health history,
-                metabolism, or medications. Dr. George does.
+                Depending on your clinical evaluation, your plan may include
+                lifestyle and nutrition guidance, medication-assisted weight
+                loss, progress monitoring, and ongoing follow-up.
               </p>
               <Link href="/contact" className="btn-primary text-sm">
-                Book a Consultation
+                Start Your Weight Loss Journey
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SEMAGLUTIDE & GLP-1 (NEW) ────────────────────────────── */}
+      {/* ── WHAT'S INCLUDED ──────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden"
+        style={{ backgroundColor: 'var(--cream)' }}
+        aria-labelledby="whats-included-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="text-center mb-10">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Your Program
+            </span>
+            <h2
+              id="whats-included-heading"
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: 'var(--navy)' }}
+            >
+              What&apos;s Included in Our Medical Weight Loss Program?
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Our weight-management approach focuses on more than the number
+              on the scale. Your care may include:
+            </p>
+          </div>
+
+          <div
+            className="max-w-4xl mx-auto rounded-2xl p-7 md:p-10"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.85)',
+              border: '1px solid rgba(26,166,183,0.15)',
+              boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+            }}
+          >
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4" role="list">
+              {programIncludes.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2
+                    className="h-5 w-5 mt-0.5 flex-shrink-0"
+                    style={{ color: 'var(--primary)' }}
+                    aria-hidden="true"
+                  />
+                  <span className="text-gray-700 leading-snug">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-gray-500 mt-7 pt-6" style={{ borderTop: '1px solid rgba(26,166,183,0.12)' }}>
+              Your provider will determine which components are appropriate
+              based on your individual health needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MEDICATION-ASSISTED WEIGHT LOSS ──────────────────────── */}
+      <section className="bg-white" aria-labelledby="med-assisted-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Treatment Options
+            </span>
+            <h2
+              id="med-assisted-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Medication-Assisted Weight Loss
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              For some patients, prescription medication may be considered as
+              part of a comprehensive medical weight-management plan.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              Ebenezer Health Clinic offers evaluation for medication-assisted
+              weight loss, including Semaglutide and Tirzepatide, when
+              clinically appropriate.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Medication is not automatically recommended for every patient.
+              Your provider will review your health history, current
+              medications, previous treatments, goals, and other relevant
+              factors before determining whether medication-assisted weight
+              loss may be appropriate for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEMAGLUTIDE ───────────────────────────────────────────── */}
+      <section
+        id="semaglutide"
+        className="scroll-mt-24 relative overflow-hidden"
         aria-labelledby="semaglutide-heading"
         style={{
           backgroundImage: "url('/semaglitude.webp')",
@@ -422,21 +553,19 @@ export default function WeightLossPage() {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-4xl">
+          <div className="max-w-3xl">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
               style={{ color: 'var(--primary)' }}
             >
-              Semaglutide &amp; GLP-1
+              Semaglutide
             </span>
             <h2
               id="semaglutide-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Semaglutide and GLP-1{' '}
-              <br />
-              Weight Loss in Oklahoma
+              Semaglutide for Weight Management
             </h2>
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
               <div
@@ -452,176 +581,47 @@ export default function WeightLossPage() {
                 style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
               />
             </div>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-              Ebenezer Health Clinic may prescribe semaglutide and other GLP-1
-              medications for weight loss in Oklahoma City and statewide when
-              it&apos;s medically appropriate for you. GLP-1 weight loss
-              medications work with your body&apos;s natural appetite and
-              blood-sugar signals, and they&apos;ve shown meaningful results for
-              many people. They aren&apos;t right for everyone, though.
-              Whether they&apos;re a fit depends on your health history and a
-              provider evaluation.
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+              Semaglutide may be considered as part of a medically supervised
+              weight-management plan for appropriate patients.
+            </p>
+            <p className="text-base text-gray-700 leading-relaxed mb-4">
+              Before recommending treatment, your provider will evaluate your
+              medical history, current medications, previous weight-loss
+              efforts, symptoms, and individual health goals.
             </p>
             <p className="text-base text-gray-700 leading-relaxed mb-8">
-              If you&apos;ve searched &ldquo;semaglutide near me,&rdquo;
-              here&apos;s the honest version: we&apos;ll talk through whether
-              GLP-1 therapy makes sense for you rather than handing everyone the
-              same prescription. If medication is part of your plan, its cost is
-              billed separately from your visit.
+              If Semaglutide is appropriate for you, your provider will
+              discuss the treatment plan, monitoring, follow-up, and other
+              relevant considerations with you.
             </p>
             <Link href="/contact" className="btn-primary text-base px-7 py-3.5">
-              Get Evaluated for GLP-1 Therapy
+              Schedule a Weight Loss Consultation
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── WHAT'S INCLUDED / PRICING ────────────────────────────── */}
+      {/* ── TIRZEPATIDE ───────────────────────────────────────────── */}
       <section
-        id="pricing"
-        style={{ backgroundColor: 'var(--cream)' }}
-        aria-labelledby="whats-included-heading"
+        id="tirzepatide"
+        className="scroll-mt-24 bg-white"
+        aria-labelledby="tirzepatide-heading"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-
-          <div className="text-center mb-10">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Pricing &amp; What&apos;s Included
-            </span>
-            <h2
-              id="whats-included-heading"
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: 'var(--navy)' }}
-            >
-              What&apos;s Included in Your Weight Loss Program
-            </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
-              No insurance required. No hidden fees. Every visit includes
-              everything listed below at a transparent price.
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto">
-            {/* Monthly Program Card */}
-            <div
-              className="rounded-2xl p-7 md:p-8 border flex flex-col"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                borderColor: 'rgba(26,166,183,0.30)',
-              }}
-            >
-              <h3
-                className="text-lg font-semibold mb-1"
-                style={{ color: 'var(--navy)' }}
-              >
-                Weight Loss Program
-              </h3>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span
-                  className="text-5xl font-bold"
-                  style={{ color: 'var(--primary)' }}
-                >
-                  $100
-                </span>
-                <span className="text-sm text-gray-500">per month</span>
-              </div>
-              <ul className="space-y-3 mb-8 flex-1">
-                {pricingProgramFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5">
-                    <CheckCircle2
-                      className="h-4 w-4 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <span className="text-sm text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="btn-primary text-base w-full text-center"
-              >
-                Book Your Consultation
-              </Link>
-            </div>
-          </div>
-
-          {/* Medication note */}
-          <div className="max-w-3xl mx-auto">
-            <div
-              className="mt-6 rounded-xl p-5 flex items-start gap-3"
-              style={{
-                backgroundColor: 'rgba(151,206,204,0.15)',
-                border: '1px solid rgba(26,166,183,0.20)',
-              }}
-              role="note"
-            >
-              <Info
-                className="h-5 w-5 mt-0.5 flex-shrink-0"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-              <p className="text-sm text-gray-700">
-                <strong>Weight loss medication</strong> is billed separately
-                to the patient. We operate on a <strong>cash-pay basis</strong>{' '}
-                with no insurance required, no hidden fees.
-              </p>
-            </div>
-
-            <div className="mt-6 text-center">
-              <Link
-                href="/pricing"
-                className="inline-flex items-center gap-1.5 text-base font-semibold group"
-                style={{ color: 'var(--primary)' }}
-              >
-                See pricing
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── IN PERSON OR ONLINE ──────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        aria-labelledby="in-person-heading"
-        style={{
-          backgroundImage: "url('/in-person-online.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 45%, rgba(255,255,255,0.20) 100%)',
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
               style={{ color: 'var(--primary)' }}
             >
-              In Person or Online
+              Tirzepatide
             </span>
             <h2
-              id="in-person-heading"
+              id="tirzepatide-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              A Weight Loss Clinic Near You: In OKC or Online
+              Tirzepatide for Weight Management
             </h2>
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
               <div
@@ -637,30 +637,33 @@ export default function WeightLossPage() {
                 style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
               />
             </div>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-              See us in person on Saturdays in Oklahoma City, or start entirely
-              online from anywhere in Oklahoma, including Tulsa, Moore, Owasso,
-              Edmond, Norman, and rural communities.
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              Tirzepatide is another medication that may be considered for
+              qualified patients as part of an individualized medical
+              weight-loss program.
             </p>
-            <Link
-              href="/weight-loss-okc"
-              className="inline-flex items-center gap-1.5 text-base font-semibold group"
-              style={{ color: 'var(--primary)' }}
-            >
-              Weight Loss Clinic in Oklahoma City
-              <ArrowRight
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                aria-hidden="true"
-              />
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              Your provider will determine whether Tirzepatide may be
+              appropriate based on your health history, current medications,
+              weight-management goals, and clinical evaluation.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              If medication-assisted treatment is recommended, ongoing
+              follow-up helps your provider monitor your progress, discuss
+              concerns, and make appropriate adjustments to your treatment
+              plan.
+            </p>
+            <Link href="/contact" className="btn-primary text-base px-7 py-3.5">
+              Ask About Tirzepatide
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── WHO IS THIS FOR ──────────────────────────────────────── */}
+      {/* ── MORE THAN MEDICATION ─────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        aria-labelledby="who-for-heading"
+        aria-labelledby="more-than-med-heading"
         style={{
           backgroundImage: "url('/weight_loss_img.webp')",
           backgroundSize: 'cover',
@@ -670,12 +673,80 @@ export default function WeightLossPage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(255,255,255,0.78)' }}
+          style={{ backgroundColor: 'rgba(255,255,255,0.80)' }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--primary)' }}
+              >
+                Whole-Person Care
+              </span>
+              <h2
+                id="more-than-med-heading"
+                className="text-3xl md:text-4xl font-bold mb-3"
+                style={{ color: 'var(--navy)' }}
+              >
+                More Than Medication
+              </h2>
+              <div className="flex items-center gap-2 mb-5" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                Medication can be one component of medical weight management,
+                but sustainable weight-management care should consider the
+                broader factors that can influence your progress. At Ebenezer
+                Health Clinic, we consider areas such as:
+              </p>
+            </div>
 
+            <div
+              className="rounded-2xl p-7 md:p-8"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                border: '1px solid rgba(26,166,183,0.15)',
+                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+              }}
+            >
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-6" role="list">
+                {biggerPictureFactors.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-gray-700 leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-gray-500 pt-5" style={{ borderTop: '1px solid rgba(26,166,183,0.12)' }}>
+                By looking at the bigger picture, your provider can develop a
+                plan that better reflects your individual needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHO MAY BENEFIT ───────────────────────────────────────── */}
+      <section className="bg-white" aria-labelledby="who-benefit-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <span
                 className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
@@ -684,11 +755,11 @@ export default function WeightLossPage() {
                 Who We Serve
               </span>
               <h2
-                id="who-for-heading"
+                id="who-benefit-heading"
                 className="text-3xl md:text-4xl font-bold mb-3"
                 style={{ color: 'var(--navy)' }}
               >
-                Is Medical Weight Loss Right for You?
+                Who May Benefit From Medical Weight Loss?
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
@@ -704,15 +775,12 @@ export default function WeightLossPage() {
                   style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-                Our program is designed for adults across Oklahoma who want a
-                medically guided approach to weight loss. If you&apos;ve
-                struggled with diets, have metabolic health concerns, or want
-                clinical support and accountability. Common reasons patients
-                come to us include:
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                Our medical weight-loss program may be appropriate for adults
+                who:
               </p>
               <ul className="space-y-4" role="list">
-                {whoForReasons.map((reason) => (
+                {whoMayBenefit.map((reason) => (
                   <li key={reason} className="flex items-start gap-3">
                     <div
                       className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full flex items-center justify-center"
@@ -743,18 +811,17 @@ export default function WeightLossPage() {
                 className="text-xl font-semibold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                When Telehealth Isn&apos;t Enough
+                Eligibility Is Individual
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                If your situation requires care beyond telehealth scope, such
-                as bariatric surgery evaluation, complex in-person assessment,
-                or additional labs, we&apos;ll tell you clearly and help you
-                find the right next step. We don&apos;t push patients into
-                programs that aren&apos;t right for them.
+                Eligibility for any prescription treatment is determined
+                through an individual clinical evaluation. Your provider will
+                review your health history and goals before recommending next
+                steps.
               </p>
               <div className="mt-6">
                 <Link href="/contact" className="btn-primary text-sm">
-                  See If You Qualify
+                  Start Your Weight Loss Journey
                 </Link>
               </div>
             </div>
@@ -762,25 +829,26 @@ export default function WeightLossPage() {
         </div>
       </section>
 
-      {/* ── MEET YOUR PROVIDER ───────────────────────────────────── */}
-      <section className="bg-white" aria-labelledby="provider-heading">
+      {/* ── WEIGHT LOSS QUESTIONNAIRE ─────────────────────────────── */}
+      <section
+        style={{ backgroundColor: 'var(--cream)' }}
+        aria-labelledby="questionnaire-heading"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-            {/* Text content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div>
               <span
                 className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--primary)' }}
               >
-                Your Provider
+                Before Your Visit
               </span>
               <h2
-                id="provider-heading"
-                className="text-3xl md:text-4xl font-bold mb-4"
+                id="questionnaire-heading"
+                className="text-3xl md:text-4xl font-bold mb-3"
                 style={{ color: 'var(--navy)' }}
               >
-                Dr. Susan George, DNP, APRN, BC-ADM
+                Your Weight Loss Questionnaire
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
@@ -796,80 +864,64 @@ export default function WeightLossPage() {
                   style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
-
-              <p className="text-base text-gray-600 leading-relaxed mb-8">
-                Your weight-loss care is led by Dr. Susan George, a Doctor of
-                Nursing Practice and Advanced Practice Registered Nurse who is
-                Board Certified in Advanced Diabetes Management (BC-ADM). That
-                certification means real metabolic expertise: insulin
-                resistance, hormonal factors, and medication management. Not
-                just writing scripts. She delivers evidence-based, personalized
-                care to patients across Oklahoma with integrity and compassion.
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                Before your appointment, complete our Weight Loss Program
+                Patient Questionnaire.
               </p>
-
-              {/* Quote */}
-              <blockquote
-                className="relative rounded-2xl p-6"
-                style={{
-                  background:
-                    'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.15) 100%)',
-                  border: '1px solid rgba(26,166,183,0.15)',
-                }}
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                The questionnaire helps your provider understand your health,
+                previous weight-loss experience, lifestyle, symptoms, and
+                goals before developing your individualized plan.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                Please complete what you can. If you do not know every answer,
+                that is okay. If you prefer, our team can also assist you with
+                the questionnaire during your initial intake or free
+                consultation call.
+              </p>
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5"
               >
-                <span
-                  className="absolute top-4 left-5 text-5xl font-serif leading-none select-none"
-                  style={{ color: 'rgba(26,166,183,0.20)' }}
-                  aria-hidden="true"
-                >
-                  &ldquo;
-                </span>
-                <p
-                  className="relative text-base md:text-lg italic leading-relaxed pl-6"
-                  style={{ color: 'var(--navy)' }}
-                >
-                  Weight loss is a medical issue, not a willpower issue. Every
-                  patient deserves a plan built around their actual health,
-                  not a one-size-fits-all prescription.
-                </p>
-                <footer className="mt-3 pl-6">
-                  <cite
-                    className="text-sm font-semibold not-italic"
-                    style={{ color: 'var(--primary)' }}
-                  >
-                    Dr. Susan George, DNP, APRN, BC-ADM
-                  </cite>
-                </footer>
-              </blockquote>
+                Complete Weight Loss Questionnaire
+              </Link>
             </div>
 
-            {/* Doctor photo */}
-            <div className="flex justify-center lg:justify-end">
-              <div
-                className="relative w-full max-w-sm lg:max-w-none overflow-hidden rounded-2xl"
-                style={{
-                  border: '1px solid rgba(26,166,183,0.12)',
-                  boxShadow: '0 8px 40px rgba(26,166,183,0.12)',
-                }}
+            <div
+              className="rounded-2xl p-7 md:p-8"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                border: '1px solid rgba(26,166,183,0.15)',
+                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+              }}
+            >
+              <p
+                className="text-xs font-semibold uppercase tracking-widest mb-5"
+                style={{ color: 'var(--primary)' }}
               >
-                <Image
-                  src="/dr-susan-george-oklahoma-telehealth.webp"
-                  alt="Dr. Susan George, DNP, APRN — Medical Weight Loss Doctor at Ebenezer Health Clinic, Oklahoma"
-                  width={520}
-                  height={620}
-                  className="w-full h-auto object-cover"
-                  priority={false}
-                />
-              </div>
+                You&apos;ll be asked about areas including
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                {questionnaireTopics.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      className="h-4 w-4 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-gray-700 leading-snug text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* ── HOW TO START ─────────────────────────────────────────── */}
+      {/* ── HOW OUR PROGRAM WORKS ────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        aria-labelledby="how-to-start-heading"
+        aria-labelledby="how-it-works-heading"
         style={{
           backgroundImage: "url('/body_bg2.webp')",
           backgroundSize: 'cover',
@@ -892,19 +944,14 @@ export default function WeightLossPage() {
               How It Works
             </span>
             <h2
-              id="how-to-start-heading"
-              className="text-3xl md:text-4xl font-bold mb-5"
+              id="how-it-works-heading"
+              className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              How to Start Your Weight Loss Program
+              How Our Medical Weight Loss Program Works
             </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Five steps from initial consultation to ongoing support, all via
-              secure video from anywhere in Oklahoma.
-            </p>
           </div>
 
-          {/* Steps grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-12">
             {steps.map((step) => (
               <div
@@ -938,13 +985,12 @@ export default function WeightLossPage() {
             ))}
           </div>
 
-          {/* CTA */}
           <div className="text-center">
             <Link
               href="/contact"
               className="btn-primary text-base px-8 py-3.5"
             >
-              Book Your Consultation
+              Book Weight Loss Consultation
             </Link>
             <p className="mt-3 text-sm text-gray-600">
               or{' '}
@@ -960,40 +1006,208 @@ export default function WeightLossPage() {
         </div>
       </section>
 
-      {/* ── SERVING ALL OF OKLAHOMA ──────────────────────────────── */}
+      {/* ── IN PERSON & TELEHEALTH ───────────────────────────────── */}
       <section
-        className="relative overflow-hidden"
-        style={{ backgroundColor: '#ffffff' }}
-        aria-labelledby="serving-heading"
+        className="relative overflow-hidden bg-white"
+        aria-labelledby="in-person-heading"
       >
-        {/* Background image — pinned to the far right */}
         <div
           className="absolute inset-0 hidden lg:block"
           style={{
-            backgroundImage: "url('/weight_loss_bg.webp')",
-            backgroundSize: 'auto 100%',
-            backgroundPosition: 'right center',
+            backgroundImage: "url('/in-person-online.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.18,
+            opacity: 0.16,
           }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              In Person &amp; Telehealth
+            </span>
+            <h2
+              id="in-person-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Medical Weight Loss – In Person &amp; Through Telehealth
+            </h2>
+            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-5">
+              Ebenezer Health Clinic provides convenient access to medical
+              weight-management care for patients in Oklahoma.
+            </p>
 
+            <div className="space-y-4 mb-5">
+              <div
+                className="rounded-xl p-5 flex items-start gap-3"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.20)',
+                }}
+              >
+                <MapPin
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  style={{ color: 'var(--primary)' }}
+                  aria-hidden="true"
+                />
+                <p className="text-sm text-gray-700">
+                  <strong>In-Person Care:</strong> Visit our clinic in the
+                  Oklahoma City area.
+                </p>
+              </div>
+              <div
+                className="rounded-xl p-5 flex items-start gap-3"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.15)',
+                  border: '1px solid rgba(26,166,183,0.20)',
+                }}
+              >
+                <Syringe
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  style={{ color: 'var(--primary)' }}
+                  aria-hidden="true"
+                />
+                <p className="text-sm text-gray-700">
+                  <strong>Telehealth:</strong> Eligible weight-management
+                  consultations and follow-up care may be available through
+                  telehealth throughout Oklahoma.
+                </p>
+              </div>
+            </div>
+
+            <p className="text-sm text-gray-500">
+              Some evaluations, testing, or other aspects of care may require
+              an in-person visit when clinically appropriate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRICING & WHAT'S INCLUDED ─────────────────────────────── */}
+      <section
+        id="pricing"
+        style={{ backgroundColor: 'var(--cream)' }}
+        aria-labelledby="pricing-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="text-center mb-10">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Pricing &amp; What&apos;s Included
+            </span>
+            <h2
+              id="pricing-heading"
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: 'var(--navy)' }}
+            >
+              What&apos;s Included in Your Weight Loss Program
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              We believe in clear, transparent pricing so you understand the
+              cost of your care.
+            </p>
+          </div>
+
+          <div
+            className="max-w-2xl mx-auto rounded-2xl p-7 md:p-10 text-center"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.85)',
+              border: '1px solid rgba(26,166,183,0.15)',
+              boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+            }}
+          >
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+              Your medical weight-loss care may include your provider
+              consultation, individualized evaluation, personalized treatment
+              planning, and appropriate follow-up based on the program or
+              visit selected.
+            </p>
+
+            {/* DEVELOPER/CONTENT NOTE: Insert the clinic's current, client-confirmed
+                Medical Weight Loss pricing and package details here. Do not
+                automatically use "No insurance required" until the client confirms
+                the current insurance/payment policy specifically for the Medical
+                Weight Loss program. Medication costs should also be described
+                separately if they are not included in the consultation/program fee. */}
+
+            <div
+              className="rounded-xl p-5 flex items-start gap-3 text-left mb-8"
+              style={{
+                backgroundColor: 'rgba(151,206,204,0.15)',
+                border: '1px solid rgba(26,166,183,0.20)',
+              }}
+              role="note"
+            >
+              <Info
+                className="h-5 w-5 mt-0.5 flex-shrink-0"
+                style={{ color: 'var(--primary)' }}
+                aria-hidden="true"
+              />
+              <p className="text-sm text-gray-700">
+                Current Medical Weight Loss pricing and package details will
+                be confirmed with our team. Medication costs, when
+                applicable, are described separately from the
+                consultation/program fee.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/pricing"
+                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto text-center"
+              >
+                View Pricing
+              </Link>
+              <Link
+                href="/contact"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto text-center"
+              >
+                Schedule Your Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MEET YOUR PROVIDER ───────────────────────────────────── */}
+      <section className="bg-white" aria-labelledby="provider-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Text content */}
             <div>
               <span
                 className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--primary)' }}
               >
-                Service Area
+                Your Provider
               </span>
               <h2
-                id="serving-heading"
-                className="text-3xl md:text-4xl font-bold mb-3"
+                id="provider-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
                 style={{ color: 'var(--navy)' }}
               >
-                Weight Loss Telehealth Across Oklahoma
+                Meet Dr. Susan George, DNP, APRN, BC-ADM
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
@@ -1009,56 +1223,164 @@ export default function WeightLossPage() {
                   style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
                 />
               </div>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Ebenezer Health Clinic serves patients in every part of Oklahoma,
-                including Oklahoma City, Tulsa, Moore, Owasso, Edmond, Norman,
-                Lawton, Stillwater, Broken Arrow, and rural communities. No
-                long drives. No waiting rooms. Real medical weight loss care
-                from wherever you are.
+
+              <p className="text-base text-gray-600 leading-relaxed mb-4">
+                Medical weight-management care at Ebenezer Health Clinic is
+                led by Dr. Susan George, DNP, APRN, BC-ADM.
               </p>
+              <p className="text-base text-gray-600 leading-relaxed mb-4">
+                Dr. George is a Doctor of Nursing Practice and Advanced
+                Practice Registered Nurse who is Board Certified in Advanced
+                Diabetes Management.
+              </p>
+              <p className="text-base text-gray-600 leading-relaxed mb-8">
+                Her approach focuses on understanding each patient&apos;s
+                health history, goals, challenges, and individual needs
+                before developing a personalized care plan.
+              </p>
+
+              {/* Credentials */}
+              <div
+                className="rounded-2xl p-6"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.08)',
+                  border: '1px solid rgba(26,166,183,0.12)',
+                }}
+              >
+                <p
+                  className="text-xs font-semibold uppercase tracking-widest mb-4"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  Credentials
+                </p>
+                <ul className="space-y-3">
+                  {providerCredentials.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="h-5 w-5 mt-0.5 flex-shrink-0"
+                        style={{ color: 'var(--primary)' }}
+                        aria-hidden="true"
+                      />
+                      <span className="text-gray-700 leading-snug text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <p
-                className="text-xs font-semibold uppercase tracking-widest mb-4"
-                style={{ color: 'var(--primary)' }}
+            {/* Doctor photo */}
+            <div className="flex justify-center lg:justify-end">
+              <div
+                className="relative w-full max-w-sm lg:max-w-none overflow-hidden rounded-2xl"
+                style={{
+                  border: '1px solid rgba(26,166,183,0.12)',
+                  boxShadow: '0 8px 40px rgba(26,166,183,0.12)',
+                }}
               >
-                Weight Loss Clinic Near You
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {oklahomaCities.map((city) => (
-                  <Link
-                    key={city.name}
-                    href={city.href}
-                    className="flex items-center gap-3 rounded-xl px-5 py-4 bg-white hover:-translate-y-0.5 transition-all duration-200 group"
-                    style={{
-                      border: '1px solid rgba(26,166,183,0.12)',
-                      boxShadow: '0 2px 8px rgba(26,166,183,0.06)',
-                    }}
-                  >
-                    <MapPin
-                      className="h-4 w-4 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <span
-                      className="text-sm font-semibold flex-1"
-                      style={{ color: 'var(--navy)' }}
-                    >
-                      Weight Loss Clinic in {city.name}
-                    </span>
-                    <ArrowRight
-                      className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                  </Link>
-                ))}
+                <Image
+                  src="/dr-susan-george-oklahoma-telehealth.webp"
+                  alt="Dr. Susan George, DNP, APRN — Medical Weight Loss Provider at Ebenezer Health Clinic, Oklahoma"
+                  width={520}
+                  height={620}
+                  className="w-full h-auto object-cover"
+                  priority={false}
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── WHY CHOOSE EBENEZER ──────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="why-heading"
+        style={{
+          backgroundImage: "url('/body_bg.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(232,247,247,0.82)' }}
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="mb-10 md:mb-14 max-w-2xl">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: 'var(--primary)' }}
+            >
+              Why Ebenezer
+            </span>
+            <h2
+              id="why-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Why Choose Ebenezer Health Clinic for Medical Weight Loss?
+            </h2>
+            <div className="flex items-center gap-2" aria-hidden="true">
+              <div
+                className="h-[3px] w-10 rounded-full"
+                style={{ backgroundColor: 'var(--primary)' }}
+              />
+              <div
+                className="h-[3px] w-4 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              />
+              <div
+                className="h-[3px] w-2 rounded-full"
+                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+              />
+            </div>
+          </div>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5" role="list">
+            {whyChoosePoints.map((point, index) => (
+              <li
+                key={point.title}
+                className="group flex gap-5 rounded-2xl p-6 md:p-7 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.84)',
+                  border: '1px solid rgba(255,255,255,0.92)',
+                  borderLeft: '3px solid var(--primary)',
+                  boxShadow: '0 2px 18px rgba(26,166,183,0.09)',
+                }}
+              >
+                <div
+                  className="flex-shrink-0 h-11 w-11 rounded-xl flex items-center justify-center text-sm font-bold"
+                  style={{
+                    backgroundColor: 'rgba(26,166,183,0.10)',
+                    color: 'var(--primary)',
+                  }}
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+
+                <div className="min-w-0">
+                  <p
+                    className="font-semibold leading-snug"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    {point.title}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-600 leading-relaxed">
+                    {point.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS (live Google Reviews carousel) ──────────── */}
+      <Testimonials />
 
       {/* ── FAQ ──────────────────────────────────────────────────── */}
       <section
@@ -1078,7 +1400,6 @@ export default function WeightLossPage() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-
           <div className="text-center mb-12">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
@@ -1091,166 +1412,306 @@ export default function WeightLossPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{ color: 'var(--navy)' }}
             >
-              Weight Loss Telehealth FAQs
+              Medical Weight Loss FAQs
             </h2>
           </div>
 
           <WeightLossFAQAccordion />
+        </div>
+      </section>
 
-          {/* CTAs below FAQ */}
-          <div className="text-center mt-10">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+      {/* ── VISIT EBENEZER HEALTH CLINIC ─────────────────────────── */}
+      <section className="bg-white" aria-labelledby="visit-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Location details */}
+            <div>
+              <h2
+                id="visit-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--navy)' }}
               >
-                Book Your Consultation
-              </Link>
-              <a
-                href="tel:+14053498188"
-                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
+                Visit Ebenezer Health Clinic
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div
+                  className="h-[3px] w-10 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)' }}
+                />
+                <div
+                  className="h-[3px] w-4 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                />
+                <div
+                  className="h-[3px] w-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                />
+              </div>
+
+              <div
+                className="rounded-2xl p-7 md:p-8"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.08)',
+                  border: '1px solid rgba(26,166,183,0.12)',
+                }}
               >
-                Call (405) 349-8188
-              </a>
+                <ul className="space-y-5">
+                  <li className="flex items-start gap-4">
+                    <MapPin
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>
+                        Ebenezer Health Clinic
+                      </p>
+                      <p className="text-sm text-gray-600 mt-0.5">
+                        7415 NW 23rd Street, Bethany, OK 73008
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Phone
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>
+                        Phone
+                      </p>
+                      <a
+                        href="tel:+14053498188"
+                        className="text-sm text-gray-600 mt-0.5 hover:text-primary transition-colors"
+                      >
+                        (405) 349-8188
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Mail
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>
+                        Email
+                      </p>
+                      <a
+                        href="mailto:ebenezerhealth@outlook.com"
+                        className="text-sm text-gray-600 mt-0.5 hover:text-primary transition-colors break-all"
+                      >
+                        ebenezerhealth@outlook.com
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>
+                        In-Person Care
+                      </p>
+                      <p className="text-sm text-gray-600 mt-0.5">
+                        Oklahoma City area
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle2
+                      className="h-5 w-5 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>
+                        Telehealth
+                      </p>
+                      <p className="text-sm text-gray-600 mt-0.5">
+                        Available throughout Oklahoma for appropriate services
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 mt-8">
+                  <a
+                    href="https://www.google.com/maps/place/Ebenezer+Health+Clinic/@35.494042,-97.6437285,20.5z/data=!4m14!1m7!3m6!1s0x87b20f8f4f23cb79:0x2f141cb188297bec!2sEbenezer+Health+Clinic!8m2!3d35.494093!4d-97.643728!16s%2Fg%2F11zh1t3wkg!3m5!1s0x87b20f8f4f23cb79:0x2f141cb188297bec!8m2!3d35.494093!4d-97.643728!16s%2Fg%2F11zh1t3wkg?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline text-sm px-5 py-3 w-full sm:w-auto text-center"
+                  >
+                    Get Directions
+                  </a>
+                  <a
+                    href="tel:+14053498188"
+                    className="btn-outline text-sm px-5 py-3 w-full sm:w-auto text-center"
+                  >
+                    Call (405) 349-8188
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="btn-primary text-sm px-5 py-3 w-full sm:w-auto text-center"
+                  >
+                    Book Weight Loss Consultation
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Map embed */}
+            <div
+              className="relative w-full min-h-[320px] lg:min-h-full rounded-2xl overflow-hidden"
+              style={{ border: '1px solid rgba(26,166,183,0.15)' }}
+            >
+              <iframe
+                src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&output=embed"
+                title="Ebenezer Health Clinic location map"
+                className="absolute inset-0 h-full w-full"
+                style={{ border: 0, minHeight: '320px' }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── OTHER SERVICES ───────────────────────────────────────── */}
+      {/* ── SERVING ALL OF OKLAHOMA ──────────────────────────────── */}
       <section
-        style={{ backgroundColor: 'var(--cream)' }}
-        aria-labelledby="wl-other-services-heading"
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/oklahoma-map-bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        aria-labelledby="serving-heading"
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center mb-10 md:mb-12">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Also at Ebenezer
-            </span>
-            <h2
-              id="wl-other-services-heading"
-              className="text-3xl md:text-4xl font-bold"
-              style={{ color: 'var(--navy)' }}
-            >
-              Explore Our Other Services
-            </h2>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <h2
+            id="serving-heading"
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{ color: 'var(--navy)' }}
+          >
+            Medical Weight Loss for Patients Across Oklahoma
+          </h2>
+          <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+            <div
+              className="h-[3px] w-10 rounded-full"
+              style={{ backgroundColor: 'var(--primary)' }}
+            />
+            <div
+              className="h-[3px] w-4 rounded-full"
+              style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+            />
+            <div
+              className="h-[3px] w-2 rounded-full"
+              style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+            />
           </div>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mb-8">
+            Ebenezer Health Clinic provides in-person medical
+            weight-management care in the Oklahoma City area and telehealth
+            access for eligible patients throughout Oklahoma. Telehealth can
+            make appropriate consultations and follow-up care more accessible
+            for patients in Oklahoma City, Bethany, Edmond, Norman, Moore,
+            Tulsa, and other Oklahoma communities.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {servingAreas.map((area) => (
+              <span
+                key={area}
+                className="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold"
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.85)',
+                  color: 'var(--navy)',
+                  border: '1px solid rgba(26,166,183,0.20)',
+                }}
+              >
+                {area}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Women's Health card */}
-            <article
-              className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
+      {/* ── FEATURED INTERNAL LINKS ───────────────────────────────── */}
+      <section style={{ backgroundColor: 'var(--cream)' }} aria-labelledby="explore-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-16">
+          <h2
+            id="explore-heading"
+            className="text-xs font-semibold uppercase tracking-widest mb-8 text-center"
+            style={{ color: 'var(--primary)' }}
+          >
+            Explore Medical Weight Loss Options
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+            <Link
+              href="#semaglutide"
+              className="group flex items-center gap-4 rounded-2xl p-6 bg-white hover:-translate-y-0.5 transition-all duration-200"
               style={{
                 border: '1px solid rgba(26,166,183,0.12)',
                 boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-xl flex-shrink-0"
                 style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
-                <HeartHandshake
-                  className="h-6 w-6"
-                  style={{ color: 'var(--primary)' }}
-                />
+                <Syringe className="h-6 w-6" style={{ color: 'var(--primary)' }} />
               </div>
               <div className="flex-1">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3
-                    className="text-xl font-semibold leading-snug"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    Women&apos;s Health Telehealth
-                  </h3>
-                  <span
-                    className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
-                    style={{
-                      backgroundColor: 'rgba(151,206,204,0.30)',
-                      color: 'var(--primary)',
-                    }}
-                  >
-                    from $50
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  Discreet, compassionate virtual care for birth control, PCOS,
-                  menopause, hormonal health, and more, led by a provider who
-                  specializes in women&apos;s health.
-                </p>
+                <span
+                  className="text-base font-semibold"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  Semaglutide Weight Loss
+                </span>
               </div>
-              <Link
-                href="/womens-health"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold group"
+              <ArrowRight
+                className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1"
                 style={{ color: 'var(--primary)' }}
-                aria-label="Learn more about Women's Health Telehealth"
-              >
-                Learn more
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
-            </article>
+                aria-hidden="true"
+              />
+            </Link>
 
-            {/* Minor Illness card */}
-            <article
-              className="bg-white rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-0.5 transition-all duration-200"
+            <Link
+              href="#tirzepatide"
+              className="group flex items-center gap-4 rounded-2xl p-6 bg-white hover:-translate-y-0.5 transition-all duration-200"
               style={{
                 border: '1px solid rgba(26,166,183,0.12)',
                 boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
               }}
             >
               <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-xl flex-shrink-0"
                 style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
                 aria-hidden="true"
               >
-                <Thermometer
-                  className="h-6 w-6"
-                  style={{ color: 'var(--primary)' }}
-                />
+                <Syringe className="h-6 w-6" style={{ color: 'var(--primary)' }} />
               </div>
               <div className="flex-1">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3
-                    className="text-xl font-semibold leading-snug"
-                    style={{ color: 'var(--navy)' }}
-                  >
-                    Minor Illness Treatment
-                  </h3>
-                  <span
-                    className="flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-bold"
-                    style={{
-                      backgroundColor: 'rgba(151,206,204,0.30)',
-                      color: 'var(--primary)',
-                    }}
-                  >
-                    from $50
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  Feel better without leaving home. Get evaluated and treated
-                  online for sinus infections, colds, UTIs, allergies, and
-                  other minor illnesses, often same day.
-                </p>
+                <span
+                  className="text-base font-semibold"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  Tirzepatide Weight Loss
+                </span>
               </div>
-              <Link
-                href="/minor-illness"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold group"
+              <ArrowRight
+                className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1"
                 style={{ color: 'var(--primary)' }}
-                aria-label="Learn more about Minor Illness Treatment"
-              >
-                Learn more
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </Link>
-            </article>
+                aria-hidden="true"
+              />
+            </Link>
           </div>
         </div>
       </section>
@@ -1259,7 +1720,7 @@ export default function WeightLossPage() {
       <section
         className="relative overflow-hidden"
         style={{ backgroundColor: '#ffffff' }}
-        aria-labelledby="wl-final-cta-heading"
+        aria-labelledby="final-cta-heading"
       >
         {/* Decorative circles */}
         <div
@@ -1275,16 +1736,20 @@ export default function WeightLossPage() {
 
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
           <h2
-            id="wl-final-cta-heading"
+            id="final-cta-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{ color: 'var(--primary)' }}
           >
-            Ready to Start Your Weight Loss Journey?
+            Start Your Medical Weight Loss Journey
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Medically supervised weight loss across Oklahoma. GLP-1
-            medications, personalized plans, and real follow-up care. $100
-            per month.
+            If you are ready for a more personalized approach to weight
+            management, Ebenezer Health Clinic is here to help. Our medical
+            weight-loss program combines individualized evaluation, lifestyle
+            support, ongoing monitoring, and medication-assisted options such
+            as Semaglutide and Tirzepatide when clinically appropriate.
+            Schedule your consultation to discuss your goals and determine
+            the next step in your weight-management journey.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -1292,7 +1757,7 @@ export default function WeightLossPage() {
               href="/contact"
               className="btn-primary text-base px-8 py-3.5 w-full sm:w-auto"
             >
-              Book Your Consultation
+              Start Your Weight Loss Journey
             </Link>
             <a
               href="tel:+14053498188"
@@ -1303,7 +1768,7 @@ export default function WeightLossPage() {
           </div>
 
           <p className="mt-10 text-sm text-gray-500">
-            Ebenezerhealth Clinic &middot; Oklahoma City, OK &middot; (405)
+            Ebenezer Health Clinic &middot; Oklahoma City, OK &middot; (405)
             349-8188 &middot; ebenezerhealthclinic.com
           </p>
         </div>

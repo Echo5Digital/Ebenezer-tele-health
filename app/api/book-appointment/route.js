@@ -153,7 +153,7 @@ export async function POST(request) {
 
   try {
     await sendMail({
-      to: 'abin@echo5digital.com',
+      to: 'ebenezerhealth@outlook.com',
       subject: `New Appointment Request — ${lead.firstName} ${lead.lastName}`,
       html: buildEmailHtml(lead),
     })

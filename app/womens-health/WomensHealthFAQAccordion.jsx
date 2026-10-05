@@ -17,40 +17,64 @@ import {
 const faqs = [
   {
     id: 'wh-faq-1',
-    question: 'Can I get birth control in Oklahoma City or online?',
+    question: "What women’s health services does Ebenezer Health Clinic provide?",
     answer:
-      "Yes. In person on Saturdays in OKC or by women's telehealth across Oklahoma. Prescriptions go to your preferred pharmacy, including 24-hour pharmacies like Walgreens and CVS for televisit patients.",
+      'We provide birth control services, PCOS management, care for menstrual irregularities, menopause treatment, Pap smears, and STD testing and management.',
   },
   {
     id: 'wh-faq-2',
-    question: 'Do you treat PCOS and menopause?',
+    question: 'What birth control options are available?',
+    answerJSX: true,
     answer:
-      'Yes. PCOS treatment and menopause care are core parts of our women\'s health services.',
+      'Birth control services include oral contraceptives, Depo-Provera shots, patches, IUD insertion and removal, and Nexplanon insertion and removal. IUD and Nexplanon insertions are covered by insurance only.',
   },
   {
     id: 'wh-faq-3',
-    question: 'Is this a good OBGYN alternative?',
+    question: 'Do you provide PCOS management?',
     answer:
-      "For many everyday needs, yes. For concerns needing a specialist or procedures, we'll refer you appropriately.",
+      "Yes. Ebenezer Health Clinic provides individualized PCOS management based on your symptoms, medical history and health needs.",
   },
   {
     id: 'wh-faq-4',
-    question: 'How much does a women\'s health visit cost?',
-    answerJSX: true,
+    question: 'Can you help with irregular periods?',
     answer:
-      'Televisits are $50, in-person initial visits are $75, and in-person follow-ups are $50. No insurance required.',
+      'Yes. We evaluate and manage menstrual irregularities, including concerns about irregular, absent, heavy or painful periods.',
   },
   {
     id: 'wh-faq-5',
-    question: 'Are visits private?',
+    question: 'Do you provide menopause treatment?',
     answer:
-      'Yes. All visits are confidential and HIPAA-compliant.',
+      'Yes. Hormonal and non-hormonal menopause treatment options are available for qualified patients based on clinical evaluation. Pellet insertion will also be available beginning in December 2026 for qualified patients.',
   },
   {
     id: 'wh-faq-6',
-    question: 'What if my symptoms are severe?',
+    question: 'Do you offer Pap smears?',
     answer:
-      'For severe or emergency symptoms, call 911 or go to your nearest ER.',
+      "Yes. Pap smears are available as part of our women's health services.",
+  },
+  {
+    id: 'wh-faq-7',
+    question: 'Do you provide STD testing?',
+    answer:
+      "Yes. Ebenezer Health Clinic provides STD testing and management based on your individual needs and clinical evaluation.",
+  },
+  {
+    id: 'wh-faq-8',
+    question: 'Can I receive women’s health care through telehealth?',
+    answer:
+      'Telehealth is available throughout Oklahoma for women’s health services that can appropriately be provided virtually. Some services, examinations, screenings and procedures require an in-person visit.',
+  },
+  {
+    id: 'wh-faq-9',
+    question: 'Can I complete my questionnaire before my appointment?',
+    answer:
+      "Yes. You can complete the Women's Health Questionnaire before your visit. If you prefer, the clinic can assist you with completing it during your initial intake or free consultation call.",
+  },
+  {
+    id: 'wh-faq-10',
+    question: 'What if I am experiencing a medical emergency?',
+    answer:
+      'Ebenezer Health Clinic does not provide emergency medical services. If you are experiencing a medical emergency, call 911 or go to the nearest emergency room.',
   },
 ]
 
