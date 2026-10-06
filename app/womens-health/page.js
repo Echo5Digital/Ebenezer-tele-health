@@ -272,7 +272,7 @@ const servingAreas = ['Oklahoma City', 'Bethany', 'Edmond', 'Norman', 'Moore', '
 
 export default function WomensHealthPage() {
   return (
-    <>
+    <div className="wh-page">
       {/* JSON-LD structured data */}
       <script
         type="application/ld+json"
@@ -282,6 +282,18 @@ export default function WomensHealthPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      {/*
+        Page-scoped pink + teal blend.
+        Only affects elements inside .wh-page — shared components
+        (Header, Testimonials, Accordion primitives) keep their
+        teal styling everywhere else on the site.
+      */}
+      <style suppressHydrationWarning>{`
+        .wh-page { --pink: #E0598B; --pink-soft: #F7A8C4; --pink-blush: #FDEEF3; }
+        .wh-page .hover\\:text-primary:hover { color: var(--pink) !important; }
+        .wh-page .text-primary { color: var(--pink) !important; }
+      `}</style>
 
       {/* ── HERO ────────────────────────────────────── */}
       <section
@@ -304,7 +316,7 @@ export default function WomensHealthPage() {
           className="absolute inset-0 hidden lg:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.86) 48%, rgba(26,166,183,0.38) 100%)',
+              'linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.84) 46%, rgba(224,89,139,0.22) 78%, rgba(26,166,183,0.34) 100%)',
           }}
           aria-hidden="true"
         />
@@ -321,7 +333,7 @@ export default function WomensHealthPage() {
                   Home
                 </Link>
                 <span aria-hidden="true">/</span>
-                <span style={{ color: 'var(--primary)' }}>
+                <span style={{ color: 'var(--pink)' }}>
                   Women&apos;s Health
                 </span>
               </nav>
@@ -350,11 +362,12 @@ export default function WomensHealthPage() {
               <div
                 className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold mb-8"
                 style={{
-                  backgroundColor: 'rgba(151,206,204,0.40)',
+                  background:
+                    'linear-gradient(90deg, rgba(224,89,139,0.22) 0%, rgba(151,206,204,0.40) 100%)',
                   color: 'var(--navy)',
                 }}
               >
-                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                <ShieldCheck className="h-4 w-4" style={{ color: 'var(--pink)' }} aria-hidden="true" />
                 Private, secure &amp; HIPAA-compliant
               </div>
 
@@ -410,11 +423,11 @@ export default function WomensHealthPage() {
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
                   className="h-[3px] w-10 rounded-full"
-                  style={{ backgroundColor: 'var(--primary)' }}
+                  style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                  style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
@@ -446,9 +459,9 @@ export default function WomensHealthPage() {
               className="rounded-2xl p-7 md:p-8"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                border: '1px solid rgba(26,166,183,0.20)',
-                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+                  'linear-gradient(135deg, rgba(224,89,139,0.07) 0%, rgba(151,206,204,0.18) 100%)',
+                border: '1px solid rgba(224,89,139,0.20)',
+                boxShadow: '0 2px 20px rgba(224,89,139,0.08)',
               }}
             >
               <ul className="space-y-5">
@@ -465,11 +478,11 @@ export default function WomensHealthPage() {
                     label: 'Respectful, Private Care',
                     detail: 'Evidence-based, individualized treatment plans',
                   },
-                ].map((item) => (
+                ].map((item, index) => (
                   <li key={item.label} className="flex items-start gap-4">
                     <CheckCircle2
                       className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)' }}
                       aria-hidden="true"
                     />
                     <div>
@@ -492,7 +505,13 @@ export default function WomensHealthPage() {
       </section>
 
       {/* ── WOMEN'S HEALTH SERVICES WE PROVIDE (section heading) ── */}
-      <div style={{ backgroundColor: 'rgba(151,206,204,0.10)' }} aria-labelledby="services-heading">
+      <div
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(151,206,204,0.10) 0%, rgba(224,89,139,0.07) 100%)',
+        }}
+        aria-labelledby="services-heading"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-16">
           <div className="text-center">
             <h2
@@ -505,11 +524,11 @@ export default function WomensHealthPage() {
             <div className="flex items-center justify-center gap-2" aria-hidden="true">
               <div
                 className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
+                style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
@@ -552,14 +571,15 @@ export default function WomensHealthPage() {
                 <div
                   className="rounded-xl p-4 flex items-start gap-3"
                   style={{
-                    backgroundColor: 'rgba(151,206,204,0.15)',
-                    border: '1px solid rgba(26,166,183,0.20)',
+                    background:
+                      'linear-gradient(90deg, rgba(224,89,139,0.12) 0%, rgba(151,206,204,0.15) 100%)',
+                    border: '1px solid rgba(224,89,139,0.22)',
                   }}
                   role="note"
                 >
                   <Info
                     className="h-5 w-5 mt-0.5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
+                    style={{ color: 'var(--pink)' }}
                     aria-hidden="true"
                   />
                   <p className="text-sm text-gray-700">
@@ -582,22 +602,22 @@ export default function WomensHealthPage() {
                 className="rounded-2xl p-7 md:p-8"
                 style={{
                   backgroundColor: 'rgba(255,255,255,0.85)',
-                  border: '1px solid rgba(26,166,183,0.15)',
-                  boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+                  border: '1px solid rgba(224,89,139,0.18)',
+                  boxShadow: '0 2px 20px rgba(224,89,139,0.08)',
                 }}
               >
                 <p
                   className="text-xs font-semibold uppercase tracking-widest mb-5"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--pink)' }}
                 >
                   Our birth control services include
                 </p>
                 <ul className="space-y-4">
-                  {birthControlServices.map((item) => (
+                  {birthControlServices.map((item, index) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle2
                         className="h-5 w-5 mt-0.5 flex-shrink-0"
-                        style={{ color: 'var(--primary)' }}
+                        style={{ color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)' }}
                         aria-hidden="true"
                       />
                       <span className="text-gray-700 leading-snug">{item}</span>
@@ -611,10 +631,24 @@ export default function WomensHealthPage() {
 
       {/* ── PCOS MANAGEMENT & MENSTRUAL IRREGULARITIES ── */}
       <section
-        className="scroll-mt-24 bg-white"
+        className="scroll-mt-24 relative overflow-hidden"
         aria-label="PCOS Management and Menstrual Irregularities"
+        style={{
+          backgroundImage: "url('/answer_block3.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(255,255,255,0.90) 0%, rgba(253,238,243,0.88) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* PCOS Management */}
             <div
@@ -663,9 +697,9 @@ export default function WomensHealthPage() {
               className="scroll-mt-24 rounded-2xl p-7 md:p-10 h-full"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                border: '1px solid rgba(26,166,183,0.20)',
-                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+                  'linear-gradient(135deg, rgba(224,89,139,0.08) 0%, rgba(247,168,196,0.22) 100%)',
+                border: '1px solid rgba(224,89,139,0.22)',
+                boxShadow: '0 2px 20px rgba(224,89,139,0.09)',
               }}
             >
               <h3
@@ -689,7 +723,7 @@ export default function WomensHealthPage() {
               <Link
                 href="/womens-health/menstrual-irregularities"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold"
-                style={{ color: 'var(--primary)' }}
+                style={{ color: 'var(--pink)' }}
               >
                 Learn more about menstrual irregularities
                 <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -704,7 +738,10 @@ export default function WomensHealthPage() {
         id="menopause"
         className="scroll-mt-24"
         aria-labelledby="menopause-heading"
-        style={{ backgroundColor: 'rgba(151,206,204,0.10)' }}
+        style={{
+          background:
+            'linear-gradient(135deg, rgba(151,206,204,0.10) 0%, rgba(224,89,139,0.06) 100%)',
+        }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-stretch">
@@ -713,26 +750,47 @@ export default function WomensHealthPage() {
               <div
                 className="rounded-2xl p-7 md:p-8 flex flex-col justify-center w-full"
                 style={{
-                  backgroundColor: 'rgba(255,255,255,0.80)',
-                  border: '1px solid rgba(26,166,183,0.15)',
-                  boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+                  background:
+                    'linear-gradient(160deg, rgba(255,255,255,0.95) 0%, rgba(253,238,243,0.90) 100%)',
+                  border: '1px solid rgba(224,89,139,0.22)',
+                  boxShadow: '0 10px 30px rgba(224,89,139,0.12)',
                 }}
               >
-                <h3
-                  className="text-base font-semibold uppercase tracking-wide mb-5"
-                  style={{ color: 'var(--primary)' }}
+                <span
+                  className="inline-flex self-start items-center rounded-full px-3.5 py-1.5 text-xs font-bold uppercase tracking-wide mb-6"
+                  style={{
+                    background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)',
+                    color: '#ffffff',
+                  }}
                 >
                   We can evaluate concerns including
-                </h3>
-                <ul className="space-y-3">
-                  {menopauseConcerns.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2
-                        className="h-5 w-5 mt-0.5 flex-shrink-0"
-                        style={{ color: 'var(--primary)' }}
-                        aria-hidden="true"
-                      />
-                      <span className="text-gray-700 leading-snug">{item}</span>
+                </span>
+                <ul>
+                  {menopauseConcerns.map((item, index) => (
+                    <li
+                      key={item}
+                      className="flex items-center gap-3.5 py-3"
+                      style={{
+                        borderBottom:
+                          index < menopauseConcerns.length - 1
+                            ? '1px solid rgba(224,89,139,0.14)'
+                            : 'none',
+                      }}
+                    >
+                      <span
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-full flex-shrink-0"
+                        style={{
+                          backgroundColor:
+                            index % 2 === 0 ? 'rgba(224,89,139,0.12)' : 'rgba(26,166,183,0.12)',
+                        }}
+                      >
+                        <CheckCircle2
+                          className="h-4.5 w-4.5"
+                          style={{ color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)' }}
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="text-gray-700 leading-snug font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -751,11 +809,11 @@ export default function WomensHealthPage() {
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
                   className="h-[3px] w-10 rounded-full"
-                  style={{ backgroundColor: 'var(--primary)' }}
+                  style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                  style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
@@ -780,13 +838,14 @@ export default function WomensHealthPage() {
               <div
                 className="rounded-xl p-5"
                 style={{
-                  backgroundColor: 'rgba(26,166,183,0.08)',
-                  border: '1px solid rgba(26,166,183,0.20)',
+                  background:
+                    'linear-gradient(90deg, rgba(224,89,139,0.10) 0%, rgba(26,166,183,0.08) 100%)',
+                  border: '1px solid rgba(224,89,139,0.22)',
                 }}
               >
                 <p
                   className="text-sm font-semibold uppercase tracking-wide mb-2"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--pink)' }}
                 >
                   Coming December 2026 – Pellet Insertion
                 </p>
@@ -813,11 +872,32 @@ export default function WomensHealthPage() {
       {/* ── PAP SMEARS & SCREENING ───────────────── */}
       <section
         id="pap-smears"
-        className="scroll-mt-24 bg-white"
+        className="scroll-mt-24 relative overflow-hidden"
         aria-labelledby="pap-smear-heading"
+        style={{
+          backgroundImage: "url('/pap-smear-screening-ebenezer.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-3xl">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(100deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.30) 55%, rgba(253,238,243,0.25) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div
+            className="max-w-3xl rounded-2xl p-6 md:p-8 backdrop-blur-sm"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.90)',
+              border: '1px solid rgba(224,89,139,0.18)',
+              boxShadow: '0 8px 30px rgba(224,89,139,0.14)',
+            }}
+          >
             <h2
               id="pap-smear-heading"
               className="text-3xl md:text-4xl font-bold mb-4"
@@ -828,11 +908,11 @@ export default function WomensHealthPage() {
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
               <div
                 className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
+                style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
@@ -867,12 +947,32 @@ export default function WomensHealthPage() {
       {/* ── STD TESTING & MANAGEMENT ──────────────── */}
       <section
         id="std-testing"
-        className="scroll-mt-24"
+        className="scroll-mt-24 relative overflow-hidden"
         aria-labelledby="std-testing-heading"
-        style={{ backgroundColor: 'var(--cream)' }}
+        style={{
+          backgroundImage: "url('/STD Testing Healthcare Banner.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-3xl ml-auto text-left">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(260deg, rgba(232,247,247,0.55) 0%, rgba(232,247,247,0.30) 55%, rgba(253,238,243,0.25) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div
+            className="max-w-3xl ml-auto text-left rounded-2xl p-6 md:p-8 backdrop-blur-sm"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.90)',
+              border: '1px solid rgba(224,89,139,0.18)',
+              boxShadow: '0 8px 30px rgba(224,89,139,0.14)',
+            }}
+          >
             <h2
               id="std-testing-heading"
               className="text-3xl md:text-4xl font-bold mb-4"
@@ -883,11 +983,11 @@ export default function WomensHealthPage() {
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
               <div
                 className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
+                style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
@@ -905,7 +1005,7 @@ export default function WomensHealthPage() {
             <Link
               href="/womens-health/std-testing"
               className="inline-flex items-center justify-end gap-1.5 text-sm font-semibold w-full"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--pink)' }}
             >
               Learn more about STD testing &amp; management
               <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -933,8 +1033,8 @@ export default function WomensHealthPage() {
             className="rounded-2xl p-7 md:p-10 max-w-3xl"
             style={{
               backgroundColor: 'rgba(255,255,255,0.90)',
-              border: '1px solid rgba(26,166,183,0.15)',
-              boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+              border: '1px solid rgba(224,89,139,0.18)',
+              boxShadow: '0 2px 20px rgba(224,89,139,0.08)',
             }}
           >
             <h2
@@ -948,11 +1048,11 @@ export default function WomensHealthPage() {
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
               <div
                 className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
+                style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
@@ -979,12 +1079,17 @@ export default function WomensHealthPage() {
       {/* ── HOW YOUR VISIT WORKS ───────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: '#1AA6B7' }}
+        style={{
+          background: 'linear-gradient(120deg, #1AA6B7 0%, #1AA6B7 55%, #D1527D 140%)',
+        }}
         aria-labelledby="how-it-works-heading"
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(26,166,183,0.40)' }}
+          style={{
+            background:
+              'linear-gradient(120deg, rgba(26,166,183,0.40) 0%, rgba(224,89,139,0.30) 100%)',
+          }}
           aria-hidden="true"
         />
 
@@ -1019,7 +1124,7 @@ export default function WomensHealthPage() {
                   <div
                     className="inline-flex h-14 w-14 items-center justify-center rounded-xl text-xl font-bold"
                     style={{
-                      backgroundColor: 'var(--primary)',
+                      backgroundColor: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)',
                       color: '#ffffff',
                     }}
                   >
@@ -1081,11 +1186,11 @@ export default function WomensHealthPage() {
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
                   className="h-[3px] w-10 rounded-full"
-                  style={{ backgroundColor: 'var(--primary)' }}
+                  style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                  style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
@@ -1113,22 +1218,23 @@ export default function WomensHealthPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
+                  background:
+                    'linear-gradient(135deg, rgba(151,206,204,0.08) 0%, rgba(224,89,139,0.06) 100%)',
+                  border: '1px solid rgba(224,89,139,0.16)',
                 }}
               >
                 <p
                   className="text-xs font-semibold uppercase tracking-widest mb-4"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--pink)' }}
                 >
                   Credentials
                 </p>
                 <ul className="space-y-3">
-                  {providerCredentials.map((item) => (
+                  {providerCredentials.map((item, index) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle2
                         className="h-5 w-5 mt-0.5 flex-shrink-0"
-                        style={{ color: 'var(--primary)' }}
+                        style={{ color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)' }}
                         aria-hidden="true"
                       />
                       <span className="text-gray-700 leading-snug text-sm">{item}</span>
@@ -1143,8 +1249,8 @@ export default function WomensHealthPage() {
               <div
                 className="relative w-full max-w-sm lg:max-w-none overflow-hidden rounded-2xl"
                 style={{
-                  border: '1px solid rgba(26,166,183,0.12)',
-                  boxShadow: '0 8px 40px rgba(26,166,183,0.12)',
+                  border: '1px solid rgba(224,89,139,0.18)',
+                  boxShadow: '0 8px 40px rgba(224,89,139,0.14)',
                 }}
               >
                 <Image
@@ -1174,7 +1280,10 @@ export default function WomensHealthPage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.82)' }}
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(232,247,247,0.82) 0%, rgba(253,238,243,0.82) 100%)',
+          }}
           aria-hidden="true"
         />
 
@@ -1191,11 +1300,11 @@ export default function WomensHealthPage() {
             <div className="flex items-center gap-2" aria-hidden="true">
               <div
                 className="h-[3px] w-10 rounded-full"
-                style={{ backgroundColor: 'var(--primary)' }}
+                style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
               />
               <div
                 className="h-[3px] w-4 rounded-full"
-                style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
               />
               <div
                 className="h-[3px] w-2 rounded-full"
@@ -1213,16 +1322,16 @@ export default function WomensHealthPage() {
                 style={{
                   backgroundColor: 'rgba(255,255,255,0.84)',
                   border: '1px solid rgba(255,255,255,0.92)',
-                  borderLeft: '3px solid var(--primary)',
-                  boxShadow: '0 2px 18px rgba(26,166,183,0.09)',
+                  borderLeft: `3px solid ${index % 2 === 0 ? 'var(--pink)' : 'var(--primary)'}`,
+                  boxShadow: '0 2px 18px rgba(224,89,139,0.09)',
                 }}
               >
                 {/* Number badge */}
                 <div
                   className="flex-shrink-0 h-11 w-11 rounded-xl flex items-center justify-center text-sm font-bold"
                   style={{
-                    backgroundColor: 'rgba(26,166,183,0.10)',
-                    color: 'var(--primary)',
+                    backgroundColor: index % 2 === 0 ? 'rgba(224,89,139,0.12)' : 'rgba(26,166,183,0.10)',
+                    color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)',
                   }}
                   aria-hidden="true"
                 >
@@ -1277,8 +1386,8 @@ export default function WomensHealthPage() {
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                borderColor: 'rgba(26,166,183,0.30)',
+                  'linear-gradient(135deg, rgba(224,89,139,0.08) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(224,89,139,0.30)',
               }}
             >
               <h3
@@ -1294,18 +1403,18 @@ export default function WomensHealthPage() {
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--pink)' }}
                 >
                   $50
                 </span>
                 <span className="text-sm text-gray-500">televisit</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {pricingTelevisitFeatures.map((feature) => (
+                {pricingTelevisitFeatures.map((feature, index) => (
                   <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)' }}
                       aria-hidden="true"
                     />
                     <span className="text-sm text-gray-700">{feature}</span>
@@ -1372,7 +1481,7 @@ export default function WomensHealthPage() {
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
                 backgroundColor: 'rgba(255,255,255,0.85)',
-                borderColor: 'rgba(26,166,183,0.20)',
+                borderColor: 'rgba(224,89,139,0.22)',
               }}
             >
               <h3
@@ -1388,18 +1497,18 @@ export default function WomensHealthPage() {
               <div className="flex items-baseline gap-2 mb-6">
                 <span
                   className="text-5xl font-bold"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--pink)' }}
                 >
                   $50
                 </span>
                 <span className="text-sm text-gray-500">follow-up</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {pricingFollowupFeatures.map((feature) => (
+                {pricingFollowupFeatures.map((feature, index) => (
                   <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
                       className="h-4 w-4 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: index % 2 === 0 ? 'var(--pink)' : 'var(--primary)' }}
                       aria-hidden="true"
                     />
                     <span className="text-sm text-gray-700">{feature}</span>
@@ -1419,14 +1528,15 @@ export default function WomensHealthPage() {
           <div
             className="mt-8 max-w-3xl mx-auto rounded-xl p-5 flex items-start gap-3"
             style={{
-              backgroundColor: 'rgba(151,206,204,0.15)',
-              border: '1px solid rgba(26,166,183,0.20)',
+              background:
+                'linear-gradient(90deg, rgba(224,89,139,0.10) 0%, rgba(151,206,204,0.15) 100%)',
+              border: '1px solid rgba(224,89,139,0.20)',
             }}
             role="note"
           >
             <Info
               className="h-5 w-5 mt-0.5 flex-shrink-0"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--pink)' }}
               aria-hidden="true"
             />
             <p className="text-sm text-gray-700">
@@ -1464,7 +1574,10 @@ export default function WomensHealthPage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(232,247,247,0.52) 0%, rgba(253,238,243,0.55) 100%)',
+          }}
           aria-hidden="true"
         />
 
@@ -1499,11 +1612,11 @@ export default function WomensHealthPage() {
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
                 <div
                   className="h-[3px] w-10 rounded-full"
-                  style={{ backgroundColor: 'var(--primary)' }}
+                  style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
                 />
                 <div
                   className="h-[3px] w-4 rounded-full"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+                  style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
                 />
                 <div
                   className="h-[3px] w-2 rounded-full"
@@ -1514,15 +1627,16 @@ export default function WomensHealthPage() {
               <div
                 className="rounded-2xl p-7 md:p-8"
                 style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
+                  background:
+                    'linear-gradient(135deg, rgba(151,206,204,0.08) 0%, rgba(224,89,139,0.06) 100%)',
+                  border: '1px solid rgba(224,89,139,0.16)',
                 }}
               >
                 <ul className="space-y-5">
                   <li className="flex items-start gap-4">
                     <MapPin
                       className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: 'var(--pink)' }}
                       aria-hidden="true"
                     />
                     <div>
@@ -1555,7 +1669,7 @@ export default function WomensHealthPage() {
                   <li className="flex items-start gap-4">
                     <Mail
                       className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: 'var(--pink)' }}
                       aria-hidden="true"
                     />
                     <div>
@@ -1588,7 +1702,7 @@ export default function WomensHealthPage() {
                   <li className="flex items-start gap-4">
                     <CheckCircle2
                       className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: 'var(--pink)' }}
                       aria-hidden="true"
                     />
                     <div>
@@ -1668,11 +1782,11 @@ export default function WomensHealthPage() {
           <div className="flex items-center gap-2 mb-6" aria-hidden="true">
             <div
               className="h-[3px] w-10 rounded-full"
-              style={{ backgroundColor: 'var(--primary)' }}
+              style={{ background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)' }}
             />
             <div
               className="h-[3px] w-4 rounded-full"
-              style={{ backgroundColor: 'rgba(26,166,183,0.25)' }}
+              style={{ backgroundColor: 'rgba(224,89,139,0.25)' }}
             />
             <div
               className="h-[3px] w-2 rounded-full"
@@ -1688,14 +1802,14 @@ export default function WomensHealthPage() {
             and other areas across the state.
           </p>
           <div className="flex flex-wrap gap-3">
-            {servingAreas.map((area) => (
+            {servingAreas.map((area, index) => (
               <span
                 key={area}
                 className="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold"
                 style={{
                   backgroundColor: 'rgba(255,255,255,0.85)',
                   color: 'var(--navy)',
-                  border: '1px solid rgba(26,166,183,0.20)',
+                  border: `1px solid ${index % 2 === 0 ? 'rgba(224,89,139,0.28)' : 'rgba(26,166,183,0.20)'}`,
                 }}
               >
                 {area}
@@ -1716,13 +1830,14 @@ export default function WomensHealthPage() {
             Explore Women&apos;s Health Services
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
-            {featuredLinks.map((link) => (
+            {featuredLinks.map((link, index) => (
               <a
                 key={link.name}
                 href={link.href}
                 className="group block overflow-hidden rounded-xl transition-transform duration-200 hover:-translate-y-1"
                 style={{
-                  boxShadow: '0 2px 14px rgba(26,166,183,0.12)',
+                  boxShadow: `0 2px 14px ${index % 2 === 0 ? 'rgba(224,89,139,0.16)' : 'rgba(26,166,183,0.12)'}`,
+                  borderTop: `3px solid ${index % 2 === 0 ? 'var(--pink)' : 'var(--primary)'}`,
                 }}
               >
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -1761,7 +1876,7 @@ export default function WomensHealthPage() {
         {/* Decorative circles */}
         <div
           className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-72 w-72 rounded-full opacity-10 pointer-events-none"
-          style={{ backgroundColor: 'var(--primary)' }}
+          style={{ backgroundColor: 'var(--pink)' }}
           aria-hidden="true"
         />
         <div
@@ -1774,7 +1889,12 @@ export default function WomensHealthPage() {
           <h2
             id="final-cta-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
-            style={{ color: 'var(--primary)' }}
+            style={{
+              background: 'linear-gradient(90deg, var(--pink) 0%, var(--primary) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
           >
             Schedule Your Women&apos;s Health Visit
           </h2>
@@ -1807,6 +1927,6 @@ export default function WomensHealthPage() {
           </p>
         </div>
       </section>
-    </>
+    </div>
   )
 }
