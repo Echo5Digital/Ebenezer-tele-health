@@ -260,11 +260,11 @@ const providerCredentials = [
 ]
 
 const featuredLinks = [
-  { name: 'Birth Control', href: '#birth-control', image: '/womens-health-birth-control.webp' },
-  { name: 'PCOS Management', href: '#pcos', image: '/Womens-health-pcos-management.webp' },
-  { name: 'Menstrual Irregularities', href: '#menstrual-irregularities', image: '/womesn-health-menstrual-irregularities.webp' },
-  { name: 'Menopause Care', href: '#menopause', image: '/womens-health-menopause-care.webp' },
-  { name: 'Pap Smears', href: '#pap-smears', image: '/womens-health-pap-smears.png' },
+  { name: 'Birth Control', href: '/womens-health/birth-control', image: '/womens-health-birth-control.webp' },
+  { name: 'PCOS Management', href: '/womens-health/pcos-management', image: '/Womens-health-pcos-management.webp' },
+  { name: 'Menstrual Irregularities', href: '/womens-health/menstrual-irregularities', image: '/womens-health-menstrual-irregularities.webp' },
+  { name: 'Menopause Care', href: '/womens-health/menopause-care', image: '/womens-health-menopause-care.webp' },
+  { name: 'Pap Smears', href: '/womens-health/pap-smears', image: '/womens-health-pap-smears.png' },
   { name: 'STD Testing & Management', href: '#std-testing', image: '/womens-health-std-testing.png' },
 ]
 
@@ -567,6 +567,14 @@ export default function WomensHealthPage() {
                     insurance only.
                   </p>
                 </div>
+                <Link
+                  href="/womens-health/birth-control"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  Learn more about birth control options
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
               </div>
 
               {/* Services list */}
@@ -634,11 +642,19 @@ export default function WomensHealthPage() {
                 management based on your symptoms, medical history and
                 health needs.
               </p>
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed mb-5">
                 Your visit may include a review of your menstrual patterns,
                 medications, symptoms and other relevant health factors to
                 help your provider determine appropriate next steps.
               </p>
+              <Link
+                href="/womens-health/pcos-management"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: 'var(--primary)' }}
+              >
+                Learn more about PCOS management
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </div>
 
             {/* Menstrual Irregularities */}
@@ -665,11 +681,19 @@ export default function WomensHealthPage() {
                 periods, our provider can evaluate your symptoms and medical
                 history.
               </p>
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed mb-5">
                 Your visit may include a review of your menstrual cycle,
                 reproductive history, current medications, symptoms and
                 other factors that may be contributing to your concerns.
               </p>
+              <Link
+                href="/womens-health/menstrual-irregularities"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: 'var(--primary)' }}
+              >
+                Learn more about menstrual irregularities
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>
@@ -773,6 +797,14 @@ export default function WomensHealthPage() {
                   clinical evaluation.
                 </p>
               </div>
+              <Link
+                href="/womens-health/menopause-care"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5"
+                style={{ color: 'var(--primary)' }}
+              >
+                Learn more about menopause care
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>
@@ -815,11 +847,19 @@ export default function WomensHealthPage() {
               Ebenezer Health Clinic offers <strong>Pap smears</strong> as part of our
               women&apos;s health services.
             </p>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-5">
               Your provider can review your health history and previous
               screening information and discuss appropriate screening based
               on your individual needs.
             </p>
+            <Link
+              href="/womens-health/pap-smears"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold"
+              style={{ color: 'var(--primary)' }}
+            >
+              Learn more about Pap smears
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

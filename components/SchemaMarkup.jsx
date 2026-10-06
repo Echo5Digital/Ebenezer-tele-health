@@ -176,7 +176,7 @@ const schemaGraph = {
         'A clinically guided weight-loss program built around your metabolic health. When appropriate, may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
       provider: { '@id': 'https://www.ebenezerhealthclinic.com/#organization' },
       areaServed: { '@type': 'State', name: 'Oklahoma' },
-      url: 'https://www.ebenezerhealthclinic.com/weight-loss',
+      url: 'https://www.ebenezerhealthclinic.com/medical-weight-loss',
       serviceType: 'Weight Loss Management',
     },
     {

@@ -179,7 +179,7 @@ export default function WeightLossMoorePage() {
               </Link>
               <span aria-hidden="true">/</span>
               <Link
-                href="/weight-loss"
+                href="/medical-weight-loss"
                 className="hover:text-primary transition-colors"
                 style={{ color: 'var(--primary)' }}
               >
@@ -428,7 +428,7 @@ export default function WeightLossMoorePage() {
             </p>
             <div className="mb-6">
               <Link
-                href="/weight-loss"
+                href="/medical-weight-loss"
                 className="inline-flex items-center gap-1.5 text-base font-semibold group"
                 style={{ color: 'var(--primary)' }}
               >
@@ -662,7 +662,7 @@ export default function WeightLossMoorePage() {
                 </p>
               </div>
               <Link
-                href="/weight-loss"
+                href="/medical-weight-loss"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold group"
                 style={{ color: 'var(--primary)' }}
               >

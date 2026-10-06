@@ -176,7 +176,7 @@ export default function WeightLossOwassoPage() {
               </Link>
               <span aria-hidden="true">/</span>
               <Link
-                href="/weight-loss"
+                href="/medical-weight-loss"
                 className="hover:text-primary transition-colors"
                 style={{ color: 'var(--primary)' }}
               >
@@ -406,7 +406,7 @@ export default function WeightLossOwassoPage() {
               If medication is prescribed, it is arranged through a licensed pharmacy.
             </p>
             <Link
-              href="/weight-loss"
+              href="/medical-weight-loss"
               className="inline-flex items-center gap-1.5 text-sm font-semibold group"
               style={{ color: '#97CECC' }}
             >
@@ -582,7 +582,7 @@ export default function WeightLossOwassoPage() {
                 </p>
               </div>
               <Link
-                href="/weight-loss"
+                href="/medical-weight-loss"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold group"
                 style={{ color: 'var(--primary)' }}
               >

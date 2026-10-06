@@ -18,7 +18,7 @@ export const metadata = {
   description:
     'Personalized medical weight loss in the Oklahoma City area with Semaglutide and Tirzepatide options for qualified patients. In-person and Oklahoma telehealth care available.',
   alternates: {
-    canonical: 'https://www.ebenezerhealthclinic.com/weight-loss',
+    canonical: 'https://www.ebenezerhealthclinic.com/medical-weight-loss',
   },
 }
 
@@ -173,8 +173,8 @@ const weightLossPageSchema = {
   name: 'Medical Weight Loss Oklahoma City | Ebenezer Health Clinic',
   description:
     'Personalized medical weight loss in the Oklahoma City area with Semaglutide and Tirzepatide options for qualified patients. In-person and Oklahoma telehealth care available.',
-  url: 'https://www.ebenezerhealthclinic.com/weight-loss',
-  mainEntityOfPage: 'https://www.ebenezerhealthclinic.com/weight-loss',
+  url: 'https://www.ebenezerhealthclinic.com/medical-weight-loss',
+  mainEntityOfPage: 'https://www.ebenezerhealthclinic.com/medical-weight-loss',
   specialty: 'Endocrinology',
   about: {
     '@type': 'MedicalProcedure',

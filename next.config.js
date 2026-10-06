@@ -21,6 +21,12 @@ const nextConfig = {
         destination: 'https://www.ebenezerhealthclinic.com/:path*',
         permanent: true,
       },
+      // 301 permanent redirect: old weight-loss slug → renamed route
+      {
+        source: '/weight-loss',
+        destination: '/medical-weight-loss',
+        permanent: true,
+      },
     ]
   },
 }

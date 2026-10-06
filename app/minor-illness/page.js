@@ -1097,7 +1097,7 @@ export default function MinorIllnessPage() {
                 </p>
               </div>
               <Link
-                href="/weight-loss"
+                href="/medical-weight-loss"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold group"
                 style={{ color: 'var(--primary)' }}
                 aria-label="Learn more about Medical Weight Loss Management"

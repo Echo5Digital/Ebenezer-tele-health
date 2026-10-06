@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import {
   Menu, X, Phone, ArrowUpRight, ChevronDown,
   Stethoscope, Scale, Heart, Thermometer,
-  Syringe, Droplets, Monitor, Sparkles,
+  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck,
 } from 'lucide-react'
 import { BOOKING_URL } from '@/lib/constants'
 
@@ -15,13 +15,22 @@ import { BOOKING_URL } from '@/lib/constants'
 // submenu can sit in its own column without shifting the other column's rows.
 const serviceColumnLeft = [
   { name: 'Primary Care',   href: '/primary-care',  icon: Stethoscope, desc: 'In-person & telehealth' },
-  { name: "Women's Health", href: '/womens-health', icon: Heart,        desc: 'Care built for women'   },
+  {
+    name: "Women's Health",      href: '/womens-health', icon: Heart,  desc: 'Care built for women',
+    children: [
+      { name: 'Birth Control', href: '/womens-health/birth-control', icon: Pill, desc: 'Pills, IUD, Nexplanon & more' },
+      { name: 'PCOS Management', href: '/womens-health/pcos-management', icon: Activity, desc: 'Menstrual & hormonal care' },
+      { name: 'Menstrual Irregularities', href: '/womens-health/menstrual-irregularities', icon: Repeat, desc: 'Irregular, heavy & painful periods' },
+      { name: 'Menopause Care', href: '/womens-health/menopause-care', icon: Flame, desc: 'Hormonal & non-hormonal treatment' },
+      { name: 'Pap Smears', href: '/womens-health/pap-smears', icon: ClipboardCheck, desc: 'Women’s health screening' },
+    ],
+  },
   { name: 'Injections',     href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots'   },
   { name: 'Televisits',     href: '/telehealth',    icon: Monitor,      desc: 'See a provider online'  },
 ]
 
 const serviceColumnRight = [
-  { name: 'Medical Weight Loss', href: '/weight-loss',   icon: Scale,       desc: 'Provider-guided plans' },
+  { name: 'Medical Weight Loss', href: '/medical-weight-loss', icon: Scale, desc: 'Provider-guided plans' },
   { name: 'Minor Illness',       href: '/minor-illness', icon: Thermometer, desc: 'Quick same-day care'    },
   {
     name: 'IV Therapy',          href: '/iv-therapy',    icon: Droplets,    desc: 'Hydration & nutrients',

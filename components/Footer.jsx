@@ -8,19 +8,13 @@ const socialLinks = [
 ]
 
 const serviceLinks = [
-  { name: 'Primary Care',            href: '/primary-care' },
-  { name: 'Medical Weight Loss',     href: '/weight-loss' },
-  { name: "Women's Health",          href: '/womens-health' },
-  { name: 'Minor Illness Treatment', href: '/minor-illness' },
+  { name: 'Primary Care',             href: '/primary-care' },
+  { name: 'Medical Weight Loss',      href: '/medical-weight-loss' },
+  { name: "Women's Health",           href: '/womens-health' },
+  { name: 'Minor Illness Treatment',  href: '/minor-illness' },
   { name: 'Vitamin & B12 Injections', href: '/injections' },
-  {
-    name: 'IV Therapy & Hydration',  href: '/iv-therapy',
-    children: [
-      { name: "Myers' Cocktail IV", href: '/iv-therapy/myers-cocktail' },
-      { name: 'Beauty Blend IV',    href: '/iv-therapy/beauty-blend' },
-    ],
-  },
-  { name: 'Televisits (Telehealth)', href: '/telehealth' },
+  { name: 'IV Therapy & Hydration',   href: '/iv-therapy' },
+  { name: 'Televisits (Telehealth)',  href: '/telehealth' },
 ]
 
 const legalLinks = [
@@ -186,28 +180,6 @@ export default function Footer() {
                     />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>
                   </Link>
-
-                  {/* Submenu: IV Therapy's child pages, indented beneath it */}
-                  {link.children && (
-                    <ul className="mt-3 ml-[11px] space-y-3">
-                      {link.children.map((child) => (
-                        <li key={child.name}>
-                          <Link
-                            href={child.href}
-                            className="flex items-center gap-2 text-[13px] group transition-colors"
-                            style={{ color: 'rgba(255,255,255,0.40)' }}
-                          >
-                            <ArrowUpRight
-                              className="h-3 w-3 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                              style={{ color: '#97CECC' }}
-                              aria-hidden="true"
-                            />
-                            <span className="group-hover:text-white transition-colors">{child.name}</span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </li>
               ))}
             </ul>

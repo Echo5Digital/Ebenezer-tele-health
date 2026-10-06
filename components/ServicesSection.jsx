@@ -13,7 +13,7 @@ const services = [
   {
     icon: Scale,
     title: 'Medical Weight Loss',
-    slug: 'weight-loss',
+    slug: 'medical-weight-loss',
     linkText: 'Explore weight loss',
     description:
       'A clinically guided weight-loss program built around your metabolic health, not a quick fix. When appropriate, your plan may include GLP-1 medications like semaglutide. Available in person in Oklahoma City or by telehealth statewide.',
