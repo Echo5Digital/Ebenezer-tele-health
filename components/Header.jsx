@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import {
   Menu, X, Phone, ArrowUpRight, ChevronDown,
   Stethoscope, Scale, Heart, Thermometer,
-  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck,
+  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck, ShieldCheck,
 } from 'lucide-react'
 import { BOOKING_URL } from '@/lib/constants'
 
@@ -23,6 +23,7 @@ const serviceColumnLeft = [
       { name: 'Menstrual Irregularities', href: '/womens-health/menstrual-irregularities', icon: Repeat, desc: 'Irregular, heavy & painful periods' },
       { name: 'Menopause Care', href: '/womens-health/menopause-care', icon: Flame, desc: 'Hormonal & non-hormonal treatment' },
       { name: 'Pap Smears', href: '/womens-health/pap-smears', icon: ClipboardCheck, desc: 'Women’s health screening' },
+      { name: 'STD', href: '/womens-health/std-testing', icon: ShieldCheck, desc: 'Confidential testing & care' },
     ],
   },
   { name: 'Injections',     href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots'   },

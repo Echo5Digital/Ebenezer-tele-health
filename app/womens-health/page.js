@@ -265,7 +265,7 @@ const featuredLinks = [
   { name: 'Menstrual Irregularities', href: '/womens-health/menstrual-irregularities', image: '/womens-health-menstrual-irregularities.webp' },
   { name: 'Menopause Care', href: '/womens-health/menopause-care', image: '/womens-health-menopause-care.webp' },
   { name: 'Pap Smears', href: '/womens-health/pap-smears', image: '/womens-health-pap-smears.png' },
-  { name: 'STD Testing & Management', href: '#std-testing', image: '/womens-health-std-testing.png' },
+  { name: 'STD Testing & Management', href: '/womens-health/std-testing', image: '/womens-health-std-testing.png' },
 ]
 
 const servingAreas = ['Oklahoma City', 'Bethany', 'Edmond', 'Norman', 'Moore', 'Tulsa']
@@ -894,7 +894,7 @@ export default function WomensHealthPage() {
                 style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
               />
             </div>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-5">
               If you have concerns about a sexually transmitted disease
               (STD), Ebenezer Health Clinic provides <strong>STD testing and
               management</strong> in a private, professional and respectful clinical
@@ -902,6 +902,14 @@ export default function WomensHealthPage() {
               health history, previous testing and other relevant concerns
               and recommend appropriate testing and management.
             </p>
+            <Link
+              href="/womens-health/std-testing"
+              className="inline-flex items-center justify-end gap-1.5 text-sm font-semibold w-full"
+              style={{ color: 'var(--primary)' }}
+            >
+              Learn more about STD testing &amp; management
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>
