@@ -14,13 +14,20 @@ import WeightLossFAQAccordion from './WeightLossFAQAccordion'
 import Testimonials from '@/components/Testimonials'
 
 export const metadata = {
-  title: 'Medical Weight Loss Oklahoma City | Ebenezer Health Clinic',
+  title: 'Medical Weight Loss Oklahoma City',
   description:
     'Personalized medical weight loss in the Oklahoma City area with Semaglutide and Tirzepatide options for qualified patients. In-person and Oklahoma telehealth care available.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/weight-loss',
   },
 }
+
+const pricingProgramFeatures = [
+  'Provider consultation and individualized evaluation',
+  'Initial labs included',
+  'Prescriptions sent to Lilly Direct Pharmacy when appropriate',
+  'Ongoing monitoring and follow-up care',
+]
 
 const programIncludes = [
   'Comprehensive health and weight-history review',
@@ -144,6 +151,19 @@ const providerCredentials = [
 ]
 
 const servingAreas = ['Oklahoma City', 'Bethany', 'Edmond', 'Norman', 'Moore', 'Tulsa']
+
+const featuredLinks = [
+  {
+    name: 'Semaglutide Weight Loss',
+    href: '#semaglutide',
+    image: '/semaglutide-womens-weight-loss.jpeg',
+  },
+  {
+    name: 'Tirzepatide Weight Loss',
+    href: '#tirzepatide',
+    image: '/tirzepatide-womens-weight-loss.jpg',
+  },
+]
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
@@ -317,8 +337,8 @@ export default function WeightLossPage() {
             <p className="text-base text-gray-600 leading-relaxed mb-5 max-w-2xl">
               Our medical weight-loss program combines clinical evaluation,
               lifestyle guidance, ongoing support, and medication-assisted
-              weight loss, including Semaglutide and Tirzepatide when
-              clinically appropriate.
+              weight loss, including{' '}
+              <strong>Semaglutide and Tirzepatide when clinically appropriate</strong>.
             </p>
 
             <p className="text-base text-gray-600 leading-relaxed mb-8 max-w-2xl">
@@ -348,8 +368,8 @@ export default function WeightLossPage() {
       {/* ── A PERSONALIZED APPROACH ──────────────────────────────── */}
       <section className="bg-white" aria-labelledby="personalized-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:items-stretch">
+            <div className="flex flex-col justify-center">
               <span
                 className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--primary)' }}
@@ -393,7 +413,7 @@ export default function WeightLossPage() {
             </div>
 
             <div
-              className="rounded-2xl p-8"
+              className="rounded-2xl p-8 h-full flex flex-col justify-center"
               style={{
                 backgroundColor: 'rgba(151,206,204,0.15)',
                 border: '1px solid rgba(26,166,183,0.15)',
@@ -422,7 +442,7 @@ export default function WeightLossPage() {
                 lifestyle and nutrition guidance, medication-assisted weight
                 loss, progress monitoring, and ongoing follow-up.
               </p>
-              <Link href="/contact" className="btn-primary text-sm">
+              <Link href="/contact" className="btn-primary text-sm self-start">
                 Start Your Weight Loss Journey
               </Link>
             </div>
@@ -521,7 +541,7 @@ export default function WeightLossPage() {
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Ebenezer Health Clinic offers evaluation for medication-assisted
-              weight loss, including Semaglutide and Tirzepatide, when
+              weight loss, including <strong>Semaglutide and Tirzepatide</strong>, when
               clinically appropriate.
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -1129,30 +1149,58 @@ export default function WeightLossPage() {
             </p>
           </div>
 
-          <div
-            className="max-w-2xl mx-auto rounded-2xl p-7 md:p-10 text-center"
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.85)',
-              border: '1px solid rgba(26,166,183,0.15)',
-              boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
-            }}
-          >
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
-              Your medical weight-loss care may include your provider
-              consultation, individualized evaluation, personalized treatment
-              planning, and appropriate follow-up based on the program or
-              visit selected.
-            </p>
-
-            {/* DEVELOPER/CONTENT NOTE: Insert the clinic's current, client-confirmed
-                Medical Weight Loss pricing and package details here. Do not
-                automatically use "No insurance required" until the client confirms
-                the current insurance/payment policy specifically for the Medical
-                Weight Loss program. Medication costs should also be described
-                separately if they are not included in the consultation/program fee. */}
-
+          <div className="max-w-md mx-auto">
+            {/* Monthly Program Card */}
             <div
-              className="rounded-xl p-5 flex items-start gap-3 text-left mb-8"
+              className="rounded-2xl p-7 md:p-8 border flex flex-col"
+              style={{
+                background:
+                  'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
+                borderColor: 'rgba(26,166,183,0.30)',
+              }}
+            >
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--navy)' }}
+              >
+                Monthly Program
+              </h3>
+              <p className="text-sm text-gray-600 mb-5">
+                Includes initial labs and prescriptions sent to Lilly Direct
+                Pharmacy.
+              </p>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: 'var(--primary)' }}
+                >
+                  $100
+                </span>
+                <span className="text-sm text-gray-500">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingProgramFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <CheckCircle2
+                      className="h-4 w-4 mt-0.5 flex-shrink-0"
+                      style={{ color: 'var(--primary)' }}
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="btn-primary text-base w-full text-center"
+              >
+                Schedule Your Consultation
+              </Link>
+            </div>
+
+            {/* Medication billing note */}
+            <div
+              className="mt-6 rounded-xl p-5 flex items-start gap-3 text-left"
               style={{
                 backgroundColor: 'rgba(151,206,204,0.15)',
                 border: '1px solid rgba(26,166,183,0.20)',
@@ -1165,14 +1213,12 @@ export default function WeightLossPage() {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                Current Medical Weight Loss pricing and package details will
-                be confirmed with our team. Medication costs, when
-                applicable, are described separately from the
-                consultation/program fee.
+                Weight-loss medication is billed separately to the patient
+                and depends on the option chosen after evaluation.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/pricing"
                 className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto text-center"
@@ -1226,7 +1272,7 @@ export default function WeightLossPage() {
 
               <p className="text-base text-gray-600 leading-relaxed mb-4">
                 Medical weight-management care at Ebenezer Health Clinic is
-                led by Dr. Susan George, DNP, APRN, BC-ADM.
+                led by <strong>Dr. Susan George, DNP, APRN, BC-ADM</strong>.
               </p>
               <p className="text-base text-gray-600 leading-relaxed mb-4">
                 Dr. George is a Doctor of Nursing Practice and Advanced
@@ -1570,7 +1616,7 @@ export default function WeightLossPage() {
               style={{ border: '1px solid rgba(26,166,183,0.15)' }}
             >
               <iframe
-                src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&output=embed"
+                src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&t=k&output=embed"
                 title="Ebenezer Health Clinic location map"
                 className="absolute inset-0 h-full w-full"
                 style={{ border: 0, minHeight: '320px' }}
@@ -1652,66 +1698,39 @@ export default function WeightLossPage() {
           >
             Explore Medical Weight Loss Options
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-            <Link
-              href="#semaglutide"
-              className="group flex items-center gap-4 rounded-2xl p-6 bg-white hover:-translate-y-0.5 transition-all duration-200"
-              style={{
-                border: '1px solid rgba(26,166,183,0.12)',
-                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
-              }}
-            >
-              <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl flex-shrink-0"
-                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
-                aria-hidden="true"
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 max-w-2xl mx-auto">
+            {featuredLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="group block overflow-hidden rounded-xl transition-transform duration-200 hover:-translate-y-1"
+                style={{
+                  boxShadow: '0 2px 14px rgba(26,166,183,0.12)',
+                }}
               >
-                <Syringe className="h-6 w-6" style={{ color: 'var(--primary)' }} />
-              </div>
-              <div className="flex-1">
-                <span
-                  className="text-base font-semibold"
-                  style={{ color: 'var(--navy)' }}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={link.image}
+                    alt={link.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div
+                  className="px-3 py-3 sm:py-4 flex items-center justify-center gap-1.5"
+                  style={{ backgroundColor: 'var(--navy)' }}
                 >
-                  Semaglutide Weight Loss
-                </span>
-              </div>
-              <ArrowRight
-                className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-            </Link>
-
-            <Link
-              href="#tirzepatide"
-              className="group flex items-center gap-4 rounded-2xl p-6 bg-white hover:-translate-y-0.5 transition-all duration-200"
-              style={{
-                border: '1px solid rgba(26,166,183,0.12)',
-                boxShadow: '0 2px 16px rgba(26,166,183,0.07)',
-              }}
-            >
-              <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl flex-shrink-0"
-                style={{ backgroundColor: 'rgba(26,166,183,0.08)' }}
-                aria-hidden="true"
-              >
-                <Syringe className="h-6 w-6" style={{ color: 'var(--primary)' }} />
-              </div>
-              <div className="flex-1">
-                <span
-                  className="text-base font-semibold"
-                  style={{ color: 'var(--navy)' }}
-                >
-                  Tirzepatide Weight Loss
-                </span>
-              </div>
-              <ArrowRight
-                className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1"
-                style={{ color: 'var(--primary)' }}
-                aria-hidden="true"
-              />
-            </Link>
+                  <span className="text-xs sm:text-sm font-semibold text-white leading-snug text-center">
+                    {link.name}
+                  </span>
+                  <ArrowRight
+                    className="h-3.5 w-3.5 flex-shrink-0 text-white transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -1747,7 +1766,8 @@ export default function WeightLossPage() {
             management, Ebenezer Health Clinic is here to help. Our medical
             weight-loss program combines individualized evaluation, lifestyle
             support, ongoing monitoring, and medication-assisted options such
-            as Semaglutide and Tirzepatide when clinically appropriate.
+            as{' '}
+            <strong>Semaglutide and Tirzepatide when clinically appropriate</strong>.
             Schedule your consultation to discuss your goals and determine
             the next step in your weight-management journey.
           </p>

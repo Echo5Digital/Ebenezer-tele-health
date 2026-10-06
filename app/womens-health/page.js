@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CheckCircle2, ShieldCheck, Info, MapPin, Phone, Mail } from 'lucide-react'
+import { CheckCircle2, ShieldCheck, Info, MapPin, Phone, Mail, ArrowRight } from 'lucide-react'
 import WomensHealthFAQAccordion from './WomensHealthFAQAccordion'
 import Testimonials from '@/components/Testimonials'
 
@@ -744,8 +744,9 @@ export default function WomensHealthPage() {
                 and everyday well-being.
               </p>
               <p className="text-base text-gray-600 leading-relaxed mb-7">
-                Ebenezer Health Clinic provides both hormonal and
-                non-hormonal treatment options for qualified patients based
+                Ebenezer Health Clinic provides both{' '}
+                <strong>hormonal and non-hormonal treatment options</strong>{' '}
+                for qualified patients based
                 on individual needs and clinical evaluation. Treatment
                 recommendations are individualized based on your symptoms,
                 medical history and clinical evaluation.
@@ -766,7 +767,7 @@ export default function WomensHealthPage() {
                   Coming December 2026 – Pellet Insertion
                 </p>
                 <p className="text-sm text-gray-700 leading-relaxed">
-                  Starting in December 2026, pellet insertion will be
+                  Starting in <strong>December 2026</strong>, pellet insertion will be
                   available for qualified patients. Eligibility and treatment
                   options will be determined following an individual
                   clinical evaluation.
@@ -811,7 +812,7 @@ export default function WomensHealthPage() {
               health care.
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              Ebenezer Health Clinic offers Pap smears as part of our
+              Ebenezer Health Clinic offers <strong>Pap smears</strong> as part of our
               women&apos;s health services.
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -855,8 +856,8 @@ export default function WomensHealthPage() {
             </div>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
               If you have concerns about a sexually transmitted disease
-              (STD), Ebenezer Health Clinic provides STD testing and
-              management in a private, professional and respectful clinical
+              (STD), Ebenezer Health Clinic provides <strong>STD testing and
+              management</strong> in a private, professional and respectful clinical
               environment. Your provider can discuss your symptoms, sexual
               health history, previous testing and other relevant concerns
               and recommend appropriate testing and management.
@@ -1045,8 +1046,8 @@ export default function WomensHealthPage() {
               </div>
 
               <p className="text-base text-gray-600 leading-relaxed mb-4">
-                Women&apos;s health care at Ebenezer Health Clinic is led by
-                Dr. Susan George, DNP, APRN, BC-ADM.
+                Women&apos;s health care at Ebenezer Health Clinic is led by{' '}
+                <strong>Dr. Susan George, DNP, APRN, BC-ADM</strong>.
               </p>
               <p className="text-base text-gray-600 leading-relaxed mb-4">
                 Dr. George is a Doctor of Nursing Practice and Advanced
@@ -1584,7 +1585,7 @@ export default function WomensHealthPage() {
               style={{ border: '1px solid rgba(26,166,183,0.15)' }}
             >
               <iframe
-                src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&output=embed"
+                src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&t=k&output=embed"
                 title="Ebenezer Health Clinic location map"
                 className="absolute inset-0 h-full w-full"
                 style={{ border: 0, minHeight: '320px' }}
@@ -1686,12 +1687,16 @@ export default function WomensHealthPage() {
                   />
                 </div>
                 <div
-                  className="px-3 py-3 sm:py-4 text-center"
+                  className="px-3 py-3 sm:py-4 flex items-center justify-center gap-1.5"
                   style={{ backgroundColor: 'var(--navy)' }}
                 >
-                  <span className="text-xs sm:text-sm font-semibold text-white leading-snug">
+                  <span className="text-xs sm:text-sm font-semibold text-white leading-snug text-center">
                     {link.name}
                   </span>
+                  <ArrowRight
+                    className="h-3.5 w-3.5 flex-shrink-0 text-white transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
                 </div>
               </a>
             ))}
