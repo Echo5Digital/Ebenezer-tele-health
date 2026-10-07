@@ -14,10 +14,7 @@ const REQUIRED_FIELDS = [
   'city',
   'state',
   'zip',
-  'insurance',
-  'bookingDate',
-  'insuredId',
-  'insuredGroup',
+  'paymentMethod',
 ]
 
 const FIELD_LABELS = {
@@ -25,7 +22,6 @@ const FIELD_LABELS = {
   ivSubService: 'IV Therapy Option',
   firstName: 'First Name',
   lastName: 'Last Name',
-  preferredName: 'Preferred Name',
   email: 'Email',
   phone: 'Contact Number',
   dob: 'Date of Birth',
@@ -34,11 +30,8 @@ const FIELD_LABELS = {
   city: 'City',
   zip: 'Zip',
   state: 'State',
-  bookingDate: 'Date of Booking',
-  insurance: 'Insurance',
-  insuredId: 'Insured ID Number',
-  insuredGroup: 'Insured Group Name/No',
-  personalId: 'Personal ID',
+  paymentMethod: 'How will you be paying?',
+  message: 'Reason for Visit / Message',
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -123,7 +116,6 @@ export async function POST(request) {
     ivSubService: body.ivSubService || '',
     firstName: body.firstName,
     lastName: body.lastName,
-    preferredName: body.preferredName || '',
     email: body.email,
     phone: body.phone,
     dob: body.dob,
@@ -132,11 +124,8 @@ export async function POST(request) {
     city: body.city,
     state: body.state,
     zip: body.zip,
-    insurance: body.insurance,
-    bookingDate: body.bookingDate,
-    insuredId: body.insuredId,
-    insuredGroup: body.insuredGroup,
-    personalId: body.personalId || '',
+    paymentMethod: body.paymentMethod,
+    message: body.message || '',
     createdAt: new Date(),
   }
 
@@ -153,7 +142,7 @@ export async function POST(request) {
 
   try {
     await sendMail({
-      to: 'ebenezerhealth@outlook.com',
+      to: 'abin@echo5digital.com',
       subject: `New Appointment Request — ${lead.firstName} ${lead.lastName}`,
       html: buildEmailHtml(lead),
     })

@@ -13,7 +13,6 @@ const FIELD_LABELS = {
   ivSubService: 'IV Therapy Option',
   firstName: 'First Name',
   lastName: 'Last Name',
-  preferredName: 'Preferred Name',
   email: 'Email',
   phone: 'Contact Number',
   dob: 'Date of Birth',
@@ -22,11 +21,8 @@ const FIELD_LABELS = {
   city: 'City',
   state: 'State',
   zip: 'Zip',
-  insurance: 'Insurance',
-  bookingDate: 'Date of Booking',
-  insuredId: 'Insured ID Number',
-  insuredGroup: 'Insured Group Name/No',
-  personalId: 'Personal ID',
+  paymentMethod: 'How will you be paying?',
+  message: 'Reason for Visit / Message',
 }
 
 async function getLeads() {
@@ -79,7 +75,6 @@ export default async function AdminLeadsPage() {
                 <div className="flex flex-wrap items-center justify-between gap-2 px-6 py-4 border-b border-gray-50">
                   <h2 className="text-base font-bold" style={{ color: 'var(--navy)' }}>
                     {lead.firstName} {lead.lastName}
-                    {lead.preferredName ? ` (${lead.preferredName})` : ''}
                   </h2>
                   <span className="text-xs text-gray-500">
                     {lead.createdAt ? new Date(lead.createdAt).toLocaleString() : ''}
