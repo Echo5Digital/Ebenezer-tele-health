@@ -515,8 +515,33 @@ export default function WomensHealthPage() {
       >
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Left — text */}
-            <div>
+            {/* Left — image */}
+            <div className="flex justify-center lg:justify-start order-1">
+              <div className="relative w-full">
+                <div
+                  className="absolute -bottom-5 -left-5 h-full w-full rounded-[3rem] hidden sm:block"
+                  style={{ backgroundColor: 'var(--wh-blush)' }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="relative overflow-hidden rounded-[3rem] aspect-[4/3]"
+                  style={{ boxShadow: '0 20px 50px rgba(38,54,53,0.16)' }}
+                >
+                  <Image
+                    src="/Personalized-Womens-Health-Care.jpg"
+                    alt="Personalized women's health care for every stage of life at Ebenezer Health Clinic"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 45vw"
+                    quality={95}
+                    className="object-cover"
+                    style={{ objectPosition: 'center 30%' }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right — text */}
+            <div className="order-2">
               <span className="wh-eyebrow mb-4 block">Our Approach</span>
               <h2
                 id="intro-heading"
@@ -547,56 +572,6 @@ export default function WomensHealthPage() {
                 area, with telehealth available throughout Oklahoma for
                 services that can appropriately be provided virtually.
               </p>
-            </div>
-
-            {/* Right — trust-signal card */}
-            <div
-              className="rounded-[2rem] p-8 md:p-10"
-              style={{
-                backgroundColor: 'var(--wh-beige)',
-                border: '1px solid rgba(38,54,53,0.06)',
-              }}
-            >
-              <ul className="space-y-6">
-                {[
-                  {
-                    label: 'In-Person Care',
-                    detail: 'Oklahoma City area, by appointment',
-                  },
-                  {
-                    label: 'Telehealth Statewide',
-                    detail: 'Available throughout Oklahoma for appropriate services',
-                  },
-                  {
-                    label: 'Respectful, Private Care',
-                    detail: 'Evidence-based, individualized treatment plans',
-                  },
-                ].map((item, index) => (
-                  <li key={item.label} className="flex items-start gap-4">
-                    <span
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-full flex-shrink-0"
-                      style={{ backgroundColor: index % 2 === 0 ? 'var(--wh-blush)' : 'rgba(23,107,104,0.10)' }}
-                    >
-                      <CheckCircle2
-                        className="h-5 w-5"
-                        style={{ color: index % 2 === 0 ? 'var(--wh-rose-deep)' : 'var(--wh-teal)' }}
-                        aria-hidden="true"
-                      />
-                    </span>
-                    <div>
-                      <p
-                        className="font-semibold leading-snug"
-                        style={{ color: 'var(--wh-charcoal)' }}
-                      >
-                        {item.label}
-                      </p>
-                      <p className="text-sm mt-0.5" style={{ color: '#6b7877' }}>
-                        {item.detail}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -1716,10 +1691,31 @@ export default function WomensHealthPage() {
       {/* ── SERVING WOMEN ACROSS OKLAHOMA ────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: 'var(--wh-beige)' }}
+        style={{
+          backgroundImage: "url('/Serving-Women-in-Oklahoma.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: 'var(--wh-beige)',
+        }}
         aria-labelledby="serving-heading"
       >
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        {/* Left-to-right fade — keeps text legible over the map graphic at every viewport width */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(243,236,231,0.95) 0%, rgba(243,236,231,0.92) 45%, rgba(243,236,231,0.55) 62%, rgba(243,236,231,0) 80%)',
+          }}
+          aria-hidden="true"
+        />
+        {/* Extra full-strength wash below lg, where the map graphic sits closer to the text column */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(243,236,231,0.82)' }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
           <h2
             id="serving-heading"
             className="text-3xl md:text-4xl mb-4"
@@ -1731,7 +1727,7 @@ export default function WomensHealthPage() {
             <span className="bar-2" />
             <span className="bar-3" />
           </div>
-          <p className="text-base md:text-lg leading-relaxed max-w-3xl mb-8" style={{ color: '#4c5a59' }}>
+          <p className="text-base md:text-lg leading-relaxed max-w-xl lg:max-w-2xl mb-8" style={{ color: '#4c5a59' }}>
             Ebenezer Health Clinic provides in-person women&apos;s health
             care in the Oklahoma City area and telehealth access for
             appropriate services throughout Oklahoma. Our telehealth
