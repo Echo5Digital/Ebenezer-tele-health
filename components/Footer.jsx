@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Phone, MapPin, Mail, ArrowUpRight, Facebook, Instagram } from 'lucide-react'
 
 const socialLinks = [
@@ -24,26 +27,38 @@ const legalLinks = [
   { name: 'Informed Consent', href: '/consent' },
 ]
 
-const sectionHeadingStyle = {
-  color: '#97CECC',
-  borderBottom: '1px solid rgba(151,206,204,0.20)',
-}
-
 export default function Footer() {
+  const pathname = usePathname()
+  const isWomensHealth = pathname?.startsWith('/womens-health') ?? false
+
+  const accent = isWomensHealth ? '#F3C9D4' : '#97CECC'
+  const accentRgb = isWomensHealth ? '243,201,212' : '151,206,204'
+
+  const sectionHeadingStyle = {
+    color: accent,
+    borderBottom: `1px solid rgba(${accentRgb},0.20)`,
+  }
+
   return (
     <footer
       className="text-white"
       role="contentinfo"
-      style={{
-        backgroundColor: '#063B45',
-        background: 'linear-gradient(180deg, #062F38 0%, #08404E 40%, #0A4D5C 100%)',
-      }}
+      style={
+        isWomensHealth
+          ? { background: 'linear-gradient(180deg, #9E1C49 0%, #C2255C 50%, #D9477A 100%)' }
+          : {
+              backgroundColor: '#063B45',
+              background: 'linear-gradient(180deg, #062F38 0%, #08404E 40%, #0A4D5C 100%)',
+            }
+      }
     >
       {/* Primary color top accent line */}
       <div
         className="h-1 w-full"
         style={{
-          background: 'linear-gradient(90deg, #1AA6B7 0%, #97CECC 50%, #1AA6B7 100%)',
+          background: isWomensHealth
+            ? 'linear-gradient(90deg, #C2255C 0%, #F3C9D4 50%, #C2255C 100%)'
+            : 'linear-gradient(90deg, #1AA6B7 0%, #97CECC 50%, #1AA6B7 100%)',
         }}
         aria-hidden="true"
       />
@@ -83,9 +98,9 @@ export default function Footer() {
                   aria-label={name}
                   className="social-link flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-lg flex items-center justify-center transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2"
                   style={{
-                    backgroundColor: 'rgba(151,206,204,0.12)',
-                    color: '#97CECC',
-                    '--tw-ring-color': '#97CECC',
+                    backgroundColor: `rgba(${accentRgb},0.12)`,
+                    color: accent,
+                    '--tw-ring-color': accent,
                   }}
                 >
                   <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: 'currentColor' }} />
@@ -108,10 +123,10 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(151,206,204,0.12)' }}
+                  style={{ backgroundColor: `rgba(${accentRgb},0.12)` }}
                   aria-hidden="true"
                 >
-                  <MapPin className="h-3.5 w-3.5"                   style={{ color: '#97CECC' }} />
+                  <MapPin className="h-3.5 w-3.5"                   style={{ color: accent }} />
                 </div>
                 <div>
                   <strong className="text-white font-semibold block mb-0.5">Ebenezer Health Clinic</strong>
@@ -123,10 +138,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(151,206,204,0.12)' }}
+                  style={{ backgroundColor: `rgba(${accentRgb},0.12)` }}
                   aria-hidden="true"
                 >
-                  <Phone className="h-3.5 w-3.5" style={{ color: '#97CECC' }} />
+                  <Phone className="h-3.5 w-3.5" style={{ color: accent }} />
                 </div>
                 <a href="tel:+14053498188" className="font-medium transition-colors hover:text-white">
                   (405) 349-8188
@@ -137,10 +152,10 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(151,206,204,0.12)' }}
+                  style={{ backgroundColor: `rgba(${accentRgb},0.12)` }}
                   aria-hidden="true"
                 >
-                  <Mail className="h-3.5 w-3.5" style={{ color: '#97CECC' }} />
+                  <Mail className="h-3.5 w-3.5" style={{ color: accent }} />
                 </div>
                 <a
                   href="mailto:ebenezerhealth@outlook.com"
@@ -175,7 +190,7 @@ export default function Footer() {
                   >
                     <ArrowUpRight
                       className="h-3.5 w-3.5 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      style={{ color: '#97CECC' }}
+                      style={{ color: accent }}
                       aria-hidden="true"
                     />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>
@@ -203,7 +218,7 @@ export default function Footer() {
                   >
                     <ArrowUpRight
                       className="h-3.5 w-3.5 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      style={{ color: 'var(--mint)' }}
+                      style={{ color: accent }}
                       aria-hidden="true"
                     />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>

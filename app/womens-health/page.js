@@ -11,7 +11,6 @@ import {
   Pill,
   Activity,
   Droplet,
-  Sun,
   ClipboardCheck,
   HeartHandshake,
   Sparkles,
@@ -23,6 +22,17 @@ import {
   FileText,
   Stethoscope,
   ClipboardList,
+  Syringe,
+  Bandage,
+  PlusCircle,
+  MinusCircle,
+  RotateCcw,
+  Flame,
+  Moon,
+  Brain,
+  Droplets,
+  BedDouble,
+  Sparkle,
 } from 'lucide-react'
 import WomensHealthFAQAccordion from './WomensHealthFAQAccordion'
 import Testimonials from '@/components/Testimonials'
@@ -191,22 +201,22 @@ const faqSchema = {
 }
 
 const birthControlServices = [
-  'Oral contraceptives',
-  'Depo-Provera shots',
-  'Birth control patches',
-  'IUD insertion',
-  'Nexplanon insertion',
-  'IUD removal',
-  'Nexplanon removal',
+  { icon: Pill, label: 'Oral contraceptives' },
+  { icon: Syringe, label: 'Depo-Provera shots' },
+  { icon: Bandage, label: 'Birth control patches' },
+  { icon: PlusCircle, label: 'IUD insertion' },
+  { icon: PlusCircle, label: 'Nexplanon insertion' },
+  { icon: MinusCircle, label: 'IUD removal' },
+  { icon: RotateCcw, label: 'Nexplanon removal' },
 ]
 
 const menopauseConcerns = [
-  'Hot flashes',
-  'Night sweats',
-  'Mood changes',
-  'Vaginal dryness',
-  'Sleep difficulties',
-  'Other menopause-related symptoms',
+  { icon: Flame, label: 'Hot flashes' },
+  { icon: Moon, label: 'Night sweats' },
+  { icon: Brain, label: 'Mood changes' },
+  { icon: Droplets, label: 'Vaginal dryness' },
+  { icon: BedDouble, label: 'Sleep difficulties' },
+  { icon: Sparkle, label: 'Other menopause-related symptoms' },
 ]
 
 const steps = [
@@ -305,15 +315,6 @@ const providerCredentials = [
   "Women's Health Provider",
   'In-person care in the Oklahoma City area',
   'Telehealth throughout Oklahoma',
-]
-
-const quickNavServices = [
-  { icon: Pill, name: 'Birth Control', href: '#birth-control' },
-  { icon: Activity, name: 'PCOS Management', href: '#pcos' },
-  { icon: Droplet, name: 'Menstrual Irregularities', href: '#menstrual-irregularities' },
-  { icon: Sun, name: 'Menopause Care', href: '#menopause' },
-  { icon: ClipboardCheck, name: 'Pap Smears', href: '#pap-smears' },
-  { icon: ShieldCheck, name: 'STD Testing & Management', href: '#std-testing' },
 ]
 
 const featuredLinks = [
@@ -493,14 +494,14 @@ export default function WomensHealthPage() {
       >
         {/* Full-bleed background image using next/image for optimisation */}
         <Image
-          src="/Womens-Health-EbenezerHC.png"
+          src="/Ebenezerhealthclinic.webp"
           alt=""
           fill
           priority
           sizes="100vw"
           quality={90}
           className="object-cover hidden lg:block"
-          style={{ objectPosition: '22% 20%', transform: 'scaleX(-1)' }}
+          style={{ objectPosition: '65% 20%' }}
           aria-hidden="true"
         />
 
@@ -583,19 +584,11 @@ export default function WomensHealthPage() {
                 <br className="hidden sm:inline" />
                 in Oklahoma City
                 <span className="block mt-1">
-                  <span style={{ color: 'var(--wh-charcoal)', opacity: 0.35 }}>—</span>{' '}
                   <span className="italic" style={{ color: 'var(--wh-pink)' }}>
                     In-Person &amp; Online
                   </span>
                 </span>
               </h1>
-
-              {/* Accent rule */}
-              <div className="wh-rule mb-6" aria-hidden="true">
-                <span className="bar-1" />
-                <span className="bar-2" />
-                <span className="bar-3" />
-              </div>
 
               <p
                 className="text-lg leading-relaxed mb-4 max-w-xl"
@@ -612,10 +605,10 @@ export default function WomensHealthPage() {
               >
                 Not sure where to start?{' '}
                 <strong style={{ color: 'var(--wh-charcoal)' }}>
-                  Begin with a free initial consultation
-                </strong>{' '}
-                to discuss your concerns, ask questions, and learn more about
-                the care options available to you.
+                  Begin with a free initial consultation to discuss your
+                  concerns, ask questions, and learn more about the care
+                  options available to you.
+                </strong>
               </p>
 
               <p
@@ -691,38 +684,36 @@ export default function WomensHealthPage() {
 
       {/* ── PERSONALIZED CARE INTRO ─────────────────── */}
       <section
-        className="relative overflow-hidden bg-white"
+        className="relative overflow-hidden"
         aria-labelledby="intro-heading"
+        style={{ backgroundColor: 'var(--wh-rose-soft)' }}
       >
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Left — image */}
-            <div className="flex justify-center lg:justify-start order-1">
-              <div className="relative w-full">
-                <div
-                  className="absolute -bottom-5 -left-5 h-full w-full rounded-[3rem] hidden sm:block"
-                  style={{ backgroundColor: 'var(--wh-rose)' }}
-                  aria-hidden="true"
-                />
-                <div
-                  className="relative overflow-hidden rounded-[3rem] aspect-[4/3]"
-                  style={{ boxShadow: '0 20px 50px rgba(43,34,36,0.16)' }}
-                >
-                  <Image
-                    src="/Womens-Health-EbenezerHC2.jpg"
-                    alt="Personalized women's health care for every stage of life at Ebenezer Health Clinic"
-                    fill
-                    sizes="(max-width: 1024px) 90vw, 45vw"
-                    quality={95}
-                    className="object-cover"
-                    style={{ objectPosition: 'center 25%' }}
-                  />
-                </div>
-              </div>
-            </div>
+        {/* Full-bleed background image — photo + decorative line art baked in on the left, blank on the right for text */}
+        <Image
+          src="/womens-health-care.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={90}
+          className="object-cover hidden lg:block"
+          style={{ objectPosition: 'center' }}
+          aria-hidden="true"
+        />
 
-            {/* Right — text */}
-            <div className="order-2">
+        {/* Mobile/tablet — solid rose-soft fallback (image's left-side photo would collide with text at narrow widths) */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'var(--wh-rose-soft)' }}
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
+            {/* Spacer — lets the background photo (left side of the image) show through on desktop */}
+            <div className="hidden lg:block lg:col-span-6" aria-hidden="true" />
+
+            {/* Text content */}
+            <div className="lg:col-span-6">
               <span className="wh-eyebrow mb-4 block">Our Approach</span>
               <h2
                 id="intro-heading"
@@ -781,24 +772,38 @@ export default function WomensHealthPage() {
             </div>
           </div>
 
-          {/* Compact icon quick-nav — jumps to the matching section below */}
-          <div className="grid grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
-            {quickNavServices.map((item) => (
+          {/* Featured service cards — image + name, link to each service page */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
+            {featuredLinks.map((link) => (
               <a
-                key={item.name}
-                href={item.href}
-                className="wh-card flex flex-col items-center text-center gap-2.5 rounded-2xl bg-white px-3 py-5 md:py-6"
-                style={{ border: '1px solid rgba(194,37,92,0.10)' }}
+                key={link.name}
+                href={link.href}
+                className="wh-card group block overflow-hidden rounded-[1.5rem]"
+                style={{
+                  boxShadow: '0 4px 18px rgba(43,34,36,0.08)',
+                }}
               >
-                <span
-                  className="wh-icon-badge h-11 w-11 md:h-12 md:w-12"
-                  style={{ backgroundColor: 'var(--wh-rose-soft)' }}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={link.image}
+                    alt={link.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div
+                  className="px-3 py-3 sm:py-4 flex items-center justify-center gap-1.5"
+                  style={{ backgroundColor: 'var(--wh-pink)' }}
                 >
-                  <item.icon className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
-                </span>
-                <span className="text-xs md:text-sm font-semibold leading-snug" style={{ color: 'var(--wh-charcoal)' }}>
-                  {item.name}
-                </span>
+                  <span className="text-xs sm:text-sm font-semibold text-white leading-snug text-center">
+                    {link.name}
+                  </span>
+                  <ArrowRight
+                    className="h-3.5 w-3.5 flex-shrink-0 text-white transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </div>
               </a>
             ))}
           </div>
@@ -808,18 +813,29 @@ export default function WomensHealthPage() {
       {/* ── BIRTH CONTROL & CONTRACEPTIVE CARE ── */}
       <section
         id="birth-control"
-        className="scroll-mt-24 bg-white"
+        className="scroll-mt-24 relative overflow-hidden"
         aria-labelledby="birth-control-heading"
+        style={{
+          background:
+            'linear-gradient(135deg, var(--wh-rose-soft) 0%, var(--wh-rose-soft) 35%, #ffffff 100%)',
+        }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
               {/* Text content */}
               <div>
                 <div
-                  className="wh-icon-badge h-14 w-14 mb-5"
+                  className="wh-icon-badge relative h-14 w-14 mb-5 overflow-hidden"
                   style={{ backgroundColor: 'var(--wh-rose)' }}
                 >
-                  <Pill className="h-6 w-6" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                  <Image
+                    src="/birth_control.webp"
+                    alt=""
+                    fill
+                    sizes="56px"
+                    className="object-contain p-2.5"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3
                   id="birth-control-heading"
@@ -881,14 +897,14 @@ export default function WomensHealthPage() {
                 </p>
                 <ul className="space-y-4">
                   {birthControlServices.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                    <li key={item.label} className="flex items-start gap-3">
                       <span
                         className="wh-icon-badge h-7 w-7 mt-0.5"
                         style={{ backgroundColor: 'var(--wh-rose)' }}
                       >
-                        <Pill className="h-3.5 w-3.5" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                        <item.icon className="h-3.5 w-3.5" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                       </span>
-                      <span style={{ color: '#5a4a4e' }} className="leading-snug pt-0.5">{item}</span>
+                      <span style={{ color: '#5a4a4e' }} className="leading-snug pt-0.5">{item.label}</span>
                     </li>
                   ))}
                 </ul>
@@ -901,7 +917,10 @@ export default function WomensHealthPage() {
       <section
         className="scroll-mt-24 relative overflow-hidden"
         aria-label="PCOS Management and Menstrual Irregularities"
-        style={{ backgroundColor: 'var(--wh-beige)' }}
+        style={{
+          background:
+            'linear-gradient(90deg, var(--wh-rose-soft) 0%, var(--wh-rose-soft) 35%, #ffffff 65%, #ffffff 100%)',
+        }}
       >
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
@@ -914,10 +933,17 @@ export default function WomensHealthPage() {
               }}
             >
               <div
-                className="wh-icon-badge h-14 w-14 mb-5"
+                className="wh-icon-badge relative h-14 w-14 mb-5 overflow-hidden"
                 style={{ backgroundColor: 'var(--wh-rose)' }}
               >
-                <Activity className="h-6 w-6" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                <Image
+                  src="/pcos_management.webp"
+                  alt=""
+                  fill
+                  sizes="56px"
+                  className="object-contain p-2.5"
+                  aria-hidden="true"
+                />
               </div>
               <h3
                 id="pcos-heading"
@@ -954,14 +980,21 @@ export default function WomensHealthPage() {
               id="menstrual-irregularities"
               className="wh-card scroll-mt-24 rounded-[2rem] p-7 md:p-10 h-full"
               style={{
-                backgroundColor: 'var(--wh-rose-soft)',
+                backgroundColor: 'var(--wh-rose)',
               }}
             >
               <div
-                className="wh-icon-badge h-14 w-14 mb-5"
+                className="wh-icon-badge relative h-14 w-14 mb-5 overflow-hidden"
                 style={{ backgroundColor: '#ffffff' }}
               >
-                <Droplet className="h-6 w-6" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                <Image
+                  src="/menstrual.webp"
+                  alt=""
+                  fill
+                  sizes="56px"
+                  className="object-contain p-2.5"
+                  aria-hidden="true"
+                />
               </div>
               <h3
                 id="menstrual-heading"
@@ -1022,7 +1055,7 @@ export default function WomensHealthPage() {
                 <ul>
                   {menopauseConcerns.map((item, index) => (
                     <li
-                      key={item}
+                      key={item.label}
                       className="flex items-center gap-3.5 py-3"
                       style={{
                         borderBottom:
@@ -1035,13 +1068,13 @@ export default function WomensHealthPage() {
                         className="inline-flex h-8 w-8 items-center justify-center rounded-full flex-shrink-0"
                         style={{ backgroundColor: 'var(--wh-rose)' }}
                       >
-                        <Sun
+                        <item.icon
                           className="h-4 w-4"
                           style={{ color: 'var(--wh-pink)' }}
                           aria-hidden="true"
                         />
                       </span>
-                      <span style={{ color: '#5a4a4e' }} className="leading-snug font-medium">{item}</span>
+                      <span style={{ color: '#5a4a4e' }} className="leading-snug font-medium">{item.label}</span>
                     </li>
                   ))}
                 </ul>
@@ -1051,10 +1084,17 @@ export default function WomensHealthPage() {
             {/* Text content — right on desktop */}
             <div className="order-1 lg:order-2">
               <div
-                className="wh-icon-badge h-14 w-14 mb-5"
+                className="wh-icon-badge relative h-14 w-14 mb-5 overflow-hidden"
                 style={{ backgroundColor: 'var(--wh-rose)' }}
               >
-                <Sun className="h-6 w-6" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                <Image
+                  src="/menopause.webp"
+                  alt=""
+                  fill
+                  sizes="56px"
+                  className="object-contain p-2.5"
+                  aria-hidden="true"
+                />
               </div>
               <h2
                 id="menopause-heading"
@@ -1114,137 +1154,111 @@ export default function WomensHealthPage() {
         </div>
       </section>
 
-      {/* ── PAP SMEARS & SCREENING ───────────────── */}
+      {/* ── PAP SMEARS & STD TESTING ── */}
       <section
-        id="pap-smears"
         className="scroll-mt-24 relative overflow-hidden"
-        aria-labelledby="pap-smear-heading"
+        aria-label="Pap Smears and STD Testing"
         style={{
-          backgroundImage: "url('/pap-smear-screening-ebenezer.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          background:
+            'linear-gradient(90deg, var(--wh-rose-soft) 0%, var(--wh-rose-soft) 35%, #ffffff 65%, #ffffff 100%)',
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(100deg, rgba(255,249,251,0.60) 0%, rgba(255,249,251,0.34) 55%, rgba(243,201,212,0.30) 100%)',
-          }}
-          aria-hidden="true"
-        />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div
-            className="max-w-3xl rounded-[2rem] p-7 md:p-9 backdrop-blur-sm"
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.92)',
-              boxShadow: '0 18px 44px rgba(43,34,36,0.12)',
-            }}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Pap Smears */}
             <div
-              className="wh-icon-badge h-14 w-14 mb-5"
-              style={{ backgroundColor: 'var(--wh-rose)' }}
+              id="pap-smears"
+              className="wh-card scroll-mt-24 rounded-[2rem] p-7 md:p-10 h-full bg-white"
+              style={{
+                border: '1px solid rgba(194,37,92,0.12)',
+              }}
             >
-              <ClipboardCheck className="h-6 w-6" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+              <div
+                className="wh-icon-badge relative h-14 w-14 mb-5 overflow-hidden"
+                style={{ backgroundColor: 'var(--wh-rose)' }}
+              >
+                <Image
+                  src="/pap-smears.webp"
+                  alt=""
+                  fill
+                  sizes="56px"
+                  className="object-contain p-2.5"
+                  aria-hidden="true"
+                />
+              </div>
+              <h2
+                id="pap-smear-heading"
+                className="text-2xl md:text-3xl mb-4"
+              >
+                Pap Smears &amp; Women&apos;s Health Screening
+              </h2>
+              <p className="text-base leading-relaxed mb-4" style={{ color: '#5a4a4e' }}>
+                Preventive screening is an important part of women&apos;s
+                health care.
+              </p>
+              <p className="text-base leading-relaxed mb-4" style={{ color: '#5a4a4e' }}>
+                Ebenezer Health Clinic offers <strong style={{ color: 'var(--wh-charcoal)' }}>Pap smears</strong> as part of our
+                women&apos;s health services.
+              </p>
+              <p className="text-base leading-relaxed mb-5" style={{ color: '#5a4a4e' }}>
+                Your provider can review your health history and previous
+                screening information and discuss appropriate screening based
+                on your individual needs.
+              </p>
+              <Link
+                href="/womens-health/pap-smears"
+                className="wh-link-arrow inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: 'var(--wh-pink)' }}
+              >
+                Learn more about Pap smears
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </div>
-            <h2
-              id="pap-smear-heading"
-              className="text-3xl md:text-4xl mb-4"
-            >
-              Pap Smears &amp; Women&apos;s Health Screening
-            </h2>
-            <div className="wh-rule mb-7" aria-hidden="true">
-              <span className="bar-1" />
-              <span className="bar-2" />
-              <span className="bar-3" />
-            </div>
-            <p className="text-base md:text-lg leading-relaxed mb-4" style={{ color: '#5a4a4e' }}>
-              Preventive screening is an important part of women&apos;s
-              health care.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed mb-4" style={{ color: '#5a4a4e' }}>
-              Ebenezer Health Clinic offers <strong style={{ color: 'var(--wh-charcoal)' }}>Pap smears</strong> as part of our
-              women&apos;s health services.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed mb-5" style={{ color: '#5a4a4e' }}>
-              Your provider can review your health history and previous
-              screening information and discuss appropriate screening based
-              on your individual needs.
-            </p>
-            <Link
-              href="/womens-health/pap-smears"
-              className="wh-link-arrow inline-flex items-center gap-1.5 text-sm font-semibold"
-              style={{ color: 'var(--wh-pink)' }}
-            >
-              Learn more about Pap smears
-              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* ── STD TESTING & MANAGEMENT ──────────────── */}
-      <section
-        id="std-testing"
-        className="scroll-mt-24 relative overflow-hidden"
-        aria-labelledby="std-testing-heading"
-        style={{
-          backgroundImage: "url('/STD Testing Healthcare Banner.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(260deg, rgba(253,241,244,0.60) 0%, rgba(253,241,244,0.34) 55%, rgba(253,241,244,0.30) 100%)',
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div
-            className="max-w-3xl ml-auto text-left rounded-[2rem] p-7 md:p-9 backdrop-blur-sm"
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.92)',
-              boxShadow: '0 18px 44px rgba(43,34,36,0.12)',
-            }}
-          >
+            {/* STD Testing & Management */}
             <div
-              className="wh-icon-badge h-14 w-14 mb-5"
-              style={{ backgroundColor: 'var(--wh-rose)' }}
+              id="std-testing"
+              className="wh-card scroll-mt-24 rounded-[2rem] p-7 md:p-10 h-full"
+              style={{
+                backgroundColor: 'var(--wh-rose)',
+              }}
             >
-              <ShieldCheck className="h-6 w-6" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+              <div
+                className="wh-icon-badge relative h-14 w-14 mb-5 overflow-hidden"
+                style={{ backgroundColor: '#ffffff' }}
+              >
+                <Image
+                  src="/std_test.webp"
+                  alt=""
+                  fill
+                  sizes="56px"
+                  className="object-contain p-2.5"
+                  aria-hidden="true"
+                />
+              </div>
+              <h2
+                id="std-testing-heading"
+                className="text-2xl md:text-3xl mb-4"
+              >
+                STD Testing &amp; Management
+              </h2>
+              <p className="text-base leading-relaxed mb-5" style={{ color: '#5a4a4e' }}>
+                If you have concerns about a sexually transmitted disease
+                (STD), Ebenezer Health Clinic provides <strong style={{ color: 'var(--wh-charcoal)' }}>STD testing and
+                management</strong> in a private, professional and respectful clinical
+                environment. Your provider can discuss your symptoms, sexual
+                health history, previous testing and other relevant concerns
+                and recommend appropriate testing and management.
+              </p>
+              <Link
+                href="/womens-health/std-testing"
+                className="wh-link-arrow inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: 'var(--wh-pink)' }}
+              >
+                Learn more about STD testing &amp; management
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </div>
-            <h2
-              id="std-testing-heading"
-              className="text-3xl md:text-4xl mb-4"
-            >
-              STD Testing &amp; Management
-            </h2>
-            <div className="wh-rule mb-7" aria-hidden="true">
-              <span className="bar-1" />
-              <span className="bar-2" />
-              <span className="bar-3" />
-            </div>
-            <p className="text-base md:text-lg leading-relaxed mb-5" style={{ color: '#5a4a4e' }}>
-              If you have concerns about a sexually transmitted disease
-              (STD), Ebenezer Health Clinic provides <strong style={{ color: 'var(--wh-charcoal)' }}>STD testing and
-              management</strong> in a private, professional and respectful clinical
-              environment. Your provider can discuss your symptoms, sexual
-              health history, previous testing and other relevant concerns
-              and recommend appropriate testing and management.
-            </p>
-            <Link
-              href="/womens-health/std-testing"
-              className="wh-link-arrow inline-flex items-center justify-end gap-1.5 text-sm font-semibold w-full"
-              style={{ color: 'var(--wh-pink)' }}
-            >
-              Learn more about STD testing &amp; management
-              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-            </Link>
           </div>
         </div>
       </section>
@@ -1255,22 +1269,15 @@ export default function WomensHealthPage() {
         aria-labelledby="telehealth-heading"
       >
         <Image
-          src="/womens-health-02.jpg"
+          src="/answer_block2.webp"
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-center pointer-events-none"
-          style={{ opacity: 1 }}
+          className="object-cover hidden lg:block"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div
-            className="rounded-[2rem] p-7 md:p-10 max-w-3xl"
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.94)',
-              boxShadow: '0 18px 44px rgba(43,34,36,0.10)',
-            }}
-          >
+          <div className="max-w-3xl mx-auto text-center">
             <h2
               id="telehealth-heading"
               className="text-3xl md:text-4xl mb-4"
@@ -1278,7 +1285,7 @@ export default function WomensHealthPage() {
               In-Person Women&apos;s Health Care &amp; Telehealth Across
               Oklahoma
             </h2>
-            <div className="wh-rule mb-7" aria-hidden="true">
+            <div className="wh-rule mb-7 justify-center" aria-hidden="true">
               <span className="bar-1" />
               <span className="bar-2" />
               <span className="bar-3" />
@@ -1303,24 +1310,18 @@ export default function WomensHealthPage() {
       {/* ── HOW YOUR VISIT WORKS ───────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: 'var(--wh-pink)' }}
+        style={{ backgroundColor: 'var(--wh-rose-soft)' }}
         aria-labelledby="how-it-works-heading"
       >
-        <div
-          className="absolute -top-16 -left-16 h-64 w-64 rounded-full pointer-events-none"
-          style={{ backgroundColor: 'rgba(255,255,255,0.06)' }}
-          aria-hidden="true"
-        />
-
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-12 md:mb-14">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.78)' }}>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--wh-pink)' }}>
               The Process
             </span>
             <h2
               id="how-it-works-heading"
               className="text-3xl md:text-4xl"
-              style={{ color: '#ffffff' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               How Your Women&apos;s Health Visit Works
             </h2>
@@ -1332,35 +1333,35 @@ export default function WomensHealthPage() {
                 {index < steps.length - 1 && (
                   <div
                     className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-0 h-px"
-                    style={{ backgroundColor: 'rgba(255,255,255,0.22)' }}
+                    style={{ backgroundColor: 'rgba(194,37,92,0.18)' }}
                     aria-hidden="true"
                   />
                 )}
                 <div
-                  className="wh-card rounded-[1.75rem] p-6 flex flex-col gap-4 h-full"
+                  className="wh-card rounded-[1.75rem] p-6 flex flex-col gap-4 h-full bg-white"
                   style={{
-                    background: 'rgba(255,255,255,0.10)',
-                    border: '1px solid rgba(255,255,255,0.16)',
+                    border: '1px solid rgba(194,37,92,0.14)',
+                    boxShadow: '0 4px 18px rgba(43,34,36,0.06)',
                   }}
                 >
                   <div
                     className="inline-flex h-14 w-14 items-center justify-center rounded-2xl"
                     style={{
-                      backgroundColor: 'rgba(255,255,255,0.20)',
-                      color: '#ffffff',
+                      backgroundColor: 'var(--wh-rose)',
+                      color: 'var(--wh-pink)',
                     }}
                   >
                     <step.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h3
                     className="text-base font-semibold leading-snug"
-                    style={{ color: '#ffffff', fontFamily: 'var(--font-wh-body)' }}
+                    style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
                   >
                     {step.title}
                   </h3>
                   <p
                     className="text-sm leading-relaxed"
-                    style={{ color: 'rgba(255,255,255,0.86)' }}
+                    style={{ color: '#5a4a4e' }}
                   >
                     {step.description}
                   </p>
@@ -1369,8 +1370,8 @@ export default function WomensHealthPage() {
                       href="/contact"
                       className="inline-flex items-center justify-center gap-2 text-sm font-semibold rounded-full px-4 py-2.5 mt-auto transition-colors"
                       style={{
-                        backgroundColor: 'rgba(255,255,255,0.20)',
-                        color: '#ffffff',
+                        backgroundColor: 'var(--wh-rose)',
+                        color: 'var(--wh-pink)',
                       }}
                     >
                       Complete Women&apos;s Health Questionnaire
@@ -1385,7 +1386,7 @@ export default function WomensHealthPage() {
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 text-base font-semibold rounded-full px-8 py-3.5 transition-colors"
-              style={{ backgroundColor: '#ffffff', color: 'var(--wh-pink)' }}
+              style={{ backgroundColor: 'var(--wh-pink)', color: '#ffffff' }}
             >
               Book Your Visit
             </Link>
@@ -1938,7 +1939,7 @@ export default function WomensHealthPage() {
       <section
         className="relative overflow-hidden"
         style={{
-          backgroundImage: "url('/Serving-Women-in-Oklahoma.webp')",
+          backgroundImage: "url('/oklahoma.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -1946,19 +1947,22 @@ export default function WomensHealthPage() {
         }}
         aria-labelledby="serving-heading"
       >
-        {/* Left-to-right fade — keeps text legible over the map graphic at every viewport width */}
+        {/* White-to-pink gradient wash — keeps text legible over the photo at every viewport width */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to right, rgba(253,241,244,0.95) 0%, rgba(253,241,244,0.92) 45%, rgba(253,241,244,0.55) 62%, rgba(253,241,244,0) 80%)',
+              'linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(253,241,244,0.93) 45%, rgba(243,201,212,0.80) 62%, rgba(243,201,212,0.45) 80%, rgba(243,201,212,0.25) 100%)',
           }}
           aria-hidden="true"
         />
-        {/* Extra full-strength wash below lg, where the map graphic sits closer to the text column */}
+        {/* Extra full-strength wash below lg, where the photo sits closer to the text column */}
         <div
           className="absolute inset-0 lg:hidden"
-          style={{ backgroundColor: 'rgba(253,241,244,0.82)' }}
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(253,241,244,0.90) 100%)',
+          }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
@@ -1998,80 +2002,21 @@ export default function WomensHealthPage() {
         </div>
       </section>
 
-      {/* ── FEATURED INTERNAL LINKS ───────────── */}
-      <section className="bg-white" aria-labelledby="explore-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-          <h2
-            id="explore-heading"
-            className="text-xs font-semibold uppercase tracking-widest mb-8 text-center"
-            style={{ color: 'var(--wh-pink)', fontFamily: 'var(--font-wh-body)' }}
-          >
-            Explore Women&apos;s Health Services
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
-            {featuredLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="wh-card group block overflow-hidden rounded-[1.5rem]"
-                style={{
-                  boxShadow: '0 4px 18px rgba(43,34,36,0.08)',
-                }}
-              >
-                <div className="relative w-full aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={link.image}
-                    alt={link.name}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div
-                  className="px-3 py-3 sm:py-4 flex items-center justify-center gap-1.5"
-                  style={{ backgroundColor: 'var(--wh-pink)' }}
-                >
-                  <span className="text-xs sm:text-sm font-semibold text-white leading-snug text-center">
-                    {link.name}
-                  </span>
-                  <ArrowRight
-                    className="h-3.5 w-3.5 flex-shrink-0 text-white transition-transform group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FINAL CTA ────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: 'var(--wh-pink-dark)' }}
+        style={{ backgroundColor: 'var(--wh-rose-soft)' }}
         aria-labelledby="final-cta-heading"
       >
-        {/* Decorative organic shapes */}
-        <div
-          className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-72 w-72 rounded-full pointer-events-none"
-          style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
-          aria-hidden="true"
-        />
-        <div
-          className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-48 w-48 rounded-full pointer-events-none"
-          style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
-          aria-hidden="true"
-        />
-
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
           <h2
             id="final-cta-heading"
             className="text-3xl md:text-4xl mb-5"
-            style={{ color: '#ffffff' }}
+            style={{ color: 'var(--wh-charcoal)' }}
           >
             Schedule Your Women&apos;s Health Visit
           </h2>
-          <p className="text-lg mb-9 leading-relaxed" style={{ color: 'rgba(255,255,255,0.86)' }}>
+          <p className="text-lg mb-9 leading-relaxed" style={{ color: '#5a4a4e' }}>
             Whether you need birth control, PCOS management, help with
             menstrual irregularities, menopause treatment, a Pap smear, or
             STD testing and management, Ebenezer Health Clinic is here to
@@ -2083,20 +2028,20 @@ export default function WomensHealthPage() {
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 text-base font-semibold rounded-full px-8 py-3.5 w-full sm:w-auto transition-colors"
-              style={{ backgroundColor: '#ffffff', color: 'var(--wh-pink-dark)' }}
+              style={{ backgroundColor: 'var(--wh-pink)', color: '#ffffff' }}
             >
               Book Your Women&apos;s Health Visit
             </Link>
             <a
               href="tel:+14053498188"
               className="inline-flex items-center justify-center gap-2 font-semibold text-base transition-colors w-full sm:w-auto"
-              style={{ color: 'rgba(255,255,255,0.90)' }}
+              style={{ color: 'var(--wh-pink)' }}
             >
               Call (405) 349-8188
             </a>
           </div>
 
-          <p className="mt-10 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
+          <p className="mt-10 text-sm" style={{ color: '#9a8a8e' }}>
             Ebenezer Health Clinic &middot; Women&apos;s Health Clinic in Oklahoma City &middot; Telehealth statewide
             &middot; (405) 349-8188 &middot; ebenezerhealthclinic.com
           </p>

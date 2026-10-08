@@ -73,7 +73,7 @@ function ServiceMenuItem({ item, pathname, onNavigate }) {
         className={`group flex items-center gap-1 rounded-xl transition-all duration-150 ${
           isActive ? 'bg-primary/8' : 'hover:bg-gray-50'
         }`}
-        style={isActive ? { backgroundColor: 'rgba(26,166,183,0.08)' } : {}}
+        style={isActive ? { backgroundColor: 'rgba(var(--mint-rgb, 26,166,183),0.08)' } : {}}
       >
         <Link
           href={item.href}
@@ -86,13 +86,13 @@ function ServiceMenuItem({ item, pathname, onNavigate }) {
             className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center transition-colors duration-150"
             style={{
               backgroundColor: isActive
-                ? 'rgba(26,166,183,0.15)'
-                : 'rgba(26,166,183,0.07)',
+                ? 'rgba(var(--mint-rgb, 26,166,183),0.15)'
+                : 'rgba(var(--mint-rgb, 26,166,183),0.07)',
             }}
           >
             <Icon
               className="h-4 w-4 transition-colors duration-150"
-              style={{ color: isActive ? 'var(--primary)' : 'rgba(26,166,183,0.75)' }}
+              style={{ color: isActive ? 'var(--primary)' : 'rgba(var(--mint-rgb, 26,166,183),0.75)' }}
               aria-hidden="true"
             />
           </div>
@@ -120,11 +120,11 @@ function ServiceMenuItem({ item, pathname, onNavigate }) {
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={isOpen}
             aria-label={`${isOpen ? 'Hide' : 'Show'} ${item.name} services`}
-            className="flex-shrink-0 h-8 w-8 mr-2 rounded-lg flex items-center justify-center transition-colors duration-150 hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="flex-shrink-0 h-8 w-8 mr-2 rounded-lg flex items-center justify-center transition-colors duration-150 hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:[--tw-ring-color:var(--primary)]"
           >
             <ChevronDown
               className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-              style={{ color: 'rgba(26,166,183,0.75)' }}
+              style={{ color: 'rgba(var(--mint-rgb, 26,166,183),0.75)' }}
               aria-hidden="true"
             />
           </button>
@@ -135,7 +135,7 @@ function ServiceMenuItem({ item, pathname, onNavigate }) {
       {item.children && isOpen && (
         <div
           className="ml-[23px] mt-1 mb-1.5 pl-[17px] space-y-1"
-          style={{ borderLeft: '1px dashed rgba(26,166,183,0.30)' }}
+          style={{ borderLeft: '1px dashed rgba(var(--mint-rgb, 26,166,183),0.30)' }}
         >
           {item.children.map((child) => {
             const ChildIcon     = child.icon
@@ -149,19 +149,19 @@ function ServiceMenuItem({ item, pathname, onNavigate }) {
                 className={`group flex items-center gap-3 rounded-xl px-3.5 py-2.5 transition-all duration-150 ${
                   isChildActive ? 'bg-primary/8' : 'hover:bg-gray-50'
                 }`}
-                style={isChildActive ? { backgroundColor: 'rgba(26,166,183,0.08)' } : {}}
+                style={isChildActive ? { backgroundColor: 'rgba(var(--mint-rgb, 26,166,183),0.08)' } : {}}
               >
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center transition-colors duration-150"
                   style={{
                     backgroundColor: isChildActive
-                      ? 'rgba(26,166,183,0.15)'
-                      : 'rgba(26,166,183,0.07)',
+                      ? 'rgba(var(--mint-rgb, 26,166,183),0.15)'
+                      : 'rgba(var(--mint-rgb, 26,166,183),0.07)',
                   }}
                 >
                   <ChildIcon
                     className="h-3.5 w-3.5 transition-colors duration-150"
-                    style={{ color: isChildActive ? 'var(--primary)' : 'rgba(26,166,183,0.75)' }}
+                    style={{ color: isChildActive ? 'var(--primary)' : 'rgba(var(--mint-rgb, 26,166,183),0.75)' }}
                     aria-hidden="true"
                   />
                 </div>
@@ -204,8 +204,8 @@ function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
           isActive ? 'bg-primary/8' : 'hover:bg-gray-50'
         } ${!isLast && !item.children ? 'border-b' : ''}`}
         style={{
-          backgroundColor: isActive ? 'rgba(26,166,183,0.08)' : undefined,
-          borderColor:     'rgba(26,166,183,0.09)',
+          backgroundColor: isActive ? 'rgba(var(--mint-rgb, 26,166,183),0.08)' : undefined,
+          borderColor:     'rgba(var(--mint-rgb, 26,166,183),0.09)',
         }}
       >
         <Link
@@ -215,11 +215,11 @@ function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
         >
           <div
             className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: isActive ? 'rgba(26,166,183,0.15)' : 'rgba(26,166,183,0.08)' }}
+            style={{ backgroundColor: isActive ? 'rgba(var(--mint-rgb, 26,166,183),0.15)' : 'rgba(var(--mint-rgb, 26,166,183),0.08)' }}
           >
             <Icon
               className="h-4 w-4"
-              style={{ color: isActive ? 'var(--primary)' : 'rgba(26,166,183,0.65)' }}
+              style={{ color: isActive ? 'var(--primary)' : 'rgba(var(--mint-rgb, 26,166,183),0.65)' }}
               aria-hidden="true"
             />
           </div>
@@ -242,11 +242,11 @@ function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={isOpen}
             aria-label={`${isOpen ? 'Hide' : 'Show'} ${item.name} services`}
-            className="flex-shrink-0 h-10 w-10 mr-1 rounded-lg flex items-center justify-center transition-colors hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="flex-shrink-0 h-10 w-10 mr-1 rounded-lg flex items-center justify-center transition-colors hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:[--tw-ring-color:var(--primary)]"
           >
             <ChevronDown
               className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-              style={{ color: 'rgba(26,166,183,0.65)' }}
+              style={{ color: 'rgba(var(--mint-rgb, 26,166,183),0.65)' }}
               aria-hidden="true"
             />
           </button>
@@ -257,7 +257,7 @@ function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
       {item.children && isOpen && (
         <div
           className={`ml-[34px] mr-2 mb-2 pl-3 space-y-0.5 ${!isLast ? 'border-b pb-2' : ''}`}
-          style={{ borderColor: 'rgba(26,166,183,0.09)', borderLeft: '1px dashed rgba(26,166,183,0.30)' }}
+          style={{ borderColor: 'rgba(var(--mint-rgb, 26,166,183),0.09)', borderLeft: '1px dashed rgba(var(--mint-rgb, 26,166,183),0.30)' }}
         >
           {item.children.map((child) => {
             const ChildIcon      = child.icon
@@ -269,16 +269,16 @@ function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
                 className={`flex items-center gap-3 rounded-lg px-3.5 py-3 transition-colors ${
                   isChildActive ? 'bg-primary/8' : 'hover:bg-gray-50'
                 }`}
-                style={{ backgroundColor: isChildActive ? 'rgba(26,166,183,0.08)' : undefined }}
+                style={{ backgroundColor: isChildActive ? 'rgba(var(--mint-rgb, 26,166,183),0.08)' : undefined }}
                 onClick={onNavigate}
               >
                 <div
                   className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: isChildActive ? 'rgba(26,166,183,0.15)' : 'rgba(26,166,183,0.08)' }}
+                  style={{ backgroundColor: isChildActive ? 'rgba(var(--mint-rgb, 26,166,183),0.15)' : 'rgba(var(--mint-rgb, 26,166,183),0.08)' }}
                 >
                   <ChildIcon
                     className="h-3.5 w-3.5"
-                    style={{ color: isChildActive ? 'var(--primary)' : 'rgba(26,166,183,0.65)' }}
+                    style={{ color: isChildActive ? 'var(--primary)' : 'rgba(var(--mint-rgb, 26,166,183),0.65)' }}
                     aria-hidden="true"
                   />
                 </div>
@@ -354,9 +354,13 @@ export default function Header() {
   const isHomePage       = pathname === '/'
   const isTransparent    = isHomePage && !scrolled
   const isServicesActive = allServiceHrefs.some((href) => pathname === href)
+  const isWomensHealth   = pathname?.startsWith('/womens-health') ?? false
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header
+      className="fixed top-0 left-0 right-0 z-50"
+      style={isWomensHealth ? { '--primary': '#C2255C', '--mint-rgb': '194,37,92' } : undefined}
+    >
       {/* ── Top accent bar ──────────────────────────────────── */}
       <div
         className="h-1 w-full transition-opacity duration-300"
@@ -372,19 +376,21 @@ export default function Header() {
           className="mx-auto max-w-7xl flex items-center justify-between rounded-2xl px-4 sm:px-6 lg:px-8 h-[84px] sm:h-[100px] lg:h-[116px] transition-all duration-300"
           aria-label="Global"
           style={{
-            background:           'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(151,206,204,0.18) 100%)',
+            background: isWomensHealth
+              ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(243,201,212,0.28) 100%)'
+              : 'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(151,206,204,0.18) 100%)',
             backdropFilter:       'blur(24px)',
             WebkitBackdropFilter: 'blur(24px)',
-            border:               '1px solid rgba(26,166,183,0.15)',
+            border:               `1px solid rgba(var(--mint-rgb, 26,166,183),0.15)`,
             boxShadow: scrolled
-              ? '0 4px 24px rgba(26,166,183,0.12), inset 0 1px 0 rgba(255,255,255,0.9)'
+              ? `0 4px 24px rgba(var(--mint-rgb, 26,166,183),0.12), inset 0 1px 0 rgba(255,255,255,0.9)`
               : '0 2px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.9)',
           }}
         >
           {/* Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+            className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:[--tw-ring-color:var(--primary)] rounded-lg"
             aria-label="Ebenezer Health Clinic — Home"
           >
             <Image
@@ -403,9 +409,8 @@ export default function Header() {
             {/* Home */}
             <Link
               href="/"
-              className={`px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors ${
-                pathname === '/' ? 'text-primary' : 'text-gray-800 hover:text-primary'
-              }`}
+              className="px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors text-gray-800 hover:[color:var(--primary)]"
+              style={pathname === '/' ? { color: 'var(--primary)' } : undefined}
             >
               Home
             </Link>
@@ -415,11 +420,8 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setServicesOpen((v) => !v)}
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
-                  isServicesActive || servicesOpen
-                    ? 'text-primary'
-                    : 'text-gray-800 hover:text-primary'
-                }`}
+                className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:[--tw-ring-color:var(--primary)] text-gray-800 hover:[color:var(--primary)]"
+                style={isServicesActive || servicesOpen ? { color: 'var(--primary)' } : undefined}
                 aria-haspopup="menu"
                 aria-expanded={servicesOpen}
               >
@@ -441,16 +443,16 @@ export default function Header() {
                     background:           'rgba(255,255,255,0.98)',
                     backdropFilter:       'blur(24px)',
                     WebkitBackdropFilter: 'blur(24px)',
-                    border:               '1px solid rgba(26,166,183,0.18)',
-                    boxShadow:            '0 20px 48px rgba(11,61,71,0.18), 0 4px 12px rgba(26,166,183,0.10)',
+                    border:               '1px solid rgba(var(--mint-rgb, 26,166,183),0.18)',
+                    boxShadow:            '0 20px 48px rgba(11,61,71,0.18), 0 4px 12px rgba(var(--mint-rgb, 26,166,183),0.10)',
                   }}
                 >
                   {/* Dropdown header */}
                   <div
                     className="px-5 py-3.5 flex items-center justify-between"
                     style={{
-                      background:   'linear-gradient(90deg, rgba(26,166,183,0.08) 0%, rgba(151,206,204,0.06) 100%)',
-                      borderBottom: '1px solid rgba(26,166,183,0.12)',
+                      background:   'linear-gradient(90deg, rgba(var(--mint-rgb, 26,166,183),0.08) 0%, rgba(var(--mint-rgb, 26,166,183),0.06) 100%)',
+                      borderBottom: '1px solid rgba(var(--mint-rgb, 26,166,183),0.12)',
                     }}
                   >
                     <span className="text-[10px] font-black uppercase tracking-[0.18em]" style={{ color: 'var(--primary)' }}>
@@ -490,7 +492,7 @@ export default function Header() {
                   {/* Dropdown footer CTA */}
                   <div
                     className="px-4 py-3 flex items-center justify-between"
-                    style={{ borderTop: '1px solid rgba(26,166,183,0.10)' }}
+                    style={{ borderTop: '1px solid rgba(var(--mint-rgb, 26,166,183),0.10)' }}
                   >
                     <span className="text-[10px] font-medium" style={{ color: 'rgba(11,61,71,0.40)' }}>
                       Walk-ins welcome · Oklahoma City
@@ -514,11 +516,8 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors ${
-                  pathname === item.href
-                    ? 'text-primary'
-                    : 'text-gray-800 hover:text-primary'
-                }`}
+                className="px-3 py-2 rounded-lg text-xs xl:text-sm font-bold uppercase tracking-widest transition-colors text-gray-800 hover:[color:var(--primary)]"
+                style={pathname === item.href ? { color: 'var(--primary)' } : undefined}
               >
                 {item.name}
               </Link>
@@ -540,7 +539,7 @@ export default function Header() {
           {/* ── Mobile hamburger ──────────────────────────────── */}
           <button
             type="button"
-            className="lg:hidden flex-shrink-0 rounded-full p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary text-gray-800 hover:bg-gray-100"
+            className="lg:hidden flex-shrink-0 rounded-full p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:[--tw-ring-color:var(--primary)] text-gray-800 hover:bg-gray-100"
             onClick={() => setMobileMenuOpen((v) => !v)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}
@@ -565,7 +564,7 @@ export default function Header() {
               background:           'rgba(255,255,255,0.99)',
               backdropFilter:       'blur(24px)',
               WebkitBackdropFilter: 'blur(24px)',
-              border:               '1px solid rgba(26,166,183,0.18)',
+              border:               '1px solid rgba(var(--mint-rgb, 26,166,183),0.18)',
               boxShadow:            '0 8px 32px rgba(11,61,71,0.14), inset 0 1px 0 rgba(255,255,255,0.8)',
               maxHeight:            'calc(100dvh - 120px)',
               overflowY:            'auto',
@@ -581,9 +580,10 @@ export default function Header() {
                   href="/"
                   className={`flex items-center rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
                     pathname === '/'
-                      ? 'text-primary bg-primary/5'
+                      ? ''
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                   }`}
+                  style={pathname === '/' ? { color: 'var(--primary)', backgroundColor: 'rgba(var(--mint-rgb, 26,166,183),0.05)' } : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
@@ -595,9 +595,10 @@ export default function Header() {
                     type="button"
                     className={`w-full flex items-center justify-between rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
                       isServicesActive
-                        ? 'text-primary bg-primary/5'
+                        ? ''
                         : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                     }`}
+                    style={isServicesActive ? { color: 'var(--primary)', backgroundColor: 'rgba(var(--mint-rgb, 26,166,183),0.05)' } : undefined}
                     onClick={() => setMobileServicesOpen((v) => !v)}
                     aria-expanded={mobileServicesOpen}
                     aria-controls="mobile-services-menu"
@@ -616,8 +617,8 @@ export default function Header() {
                       id="mobile-services-menu"
                       className="mt-1 mb-1 mx-2 rounded-xl overflow-hidden"
                       style={{
-                        background:   'rgba(26,166,183,0.03)',
-                        border:       '1px solid rgba(26,166,183,0.12)',
+                        background:   'rgba(var(--mint-rgb, 26,166,183),0.03)',
+                        border:       '1px solid rgba(var(--mint-rgb, 26,166,183),0.12)',
                       }}
                     >
                       {serviceItems.map((item, idx) => (
@@ -640,9 +641,10 @@ export default function Header() {
                     href={item.href}
                     className={`flex items-center rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
                       pathname === item.href
-                        ? 'text-primary bg-primary/5'
+                        ? ''
                         : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                     }`}
+                    style={pathname === item.href ? { color: 'var(--primary)', backgroundColor: 'rgba(var(--mint-rgb, 26,166,183),0.05)' } : undefined}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
