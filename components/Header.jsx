@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import {
   Menu, X, Phone, ArrowUpRight, ChevronDown,
   Stethoscope, Scale, Heart, Thermometer,
-  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck, ShieldCheck,
+  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck, ShieldCheck, FlaskConical,
 } from 'lucide-react'
 import { BOOKING_URL } from '@/lib/constants'
 
@@ -31,13 +31,22 @@ const serviceColumnLeft = [
 ]
 
 const serviceColumnRight = [
-  { name: 'Medical Weight Loss', href: '/medical-weight-loss', icon: Scale, desc: 'Provider-guided plans' },
+  {
+    name: 'Medical Weight Loss', href: '/medical-weight-loss', icon: Scale, desc: 'Provider-guided plans',
+    children: [
+      { name: 'Semaglutide', href: '/medical-weight-loss/semaglutide', icon: Pill, desc: 'Medically guided Semaglutide care' },
+      { name: 'Tirzepatide', href: '/medical-weight-loss/tirzepatide', icon: Pill, desc: 'Medically guided Tirzepatide care' },
+    ],
+  },
   { name: 'Minor Illness',       href: '/minor-illness', icon: Thermometer, desc: 'Quick same-day care'    },
   {
     name: 'IV Therapy',          href: '/iv-therapy',    icon: Droplets,    desc: 'Hydration & nutrients',
     children: [
-      { name: "Myers' Cocktail IV", href: '/iv-therapy/myers-cocktail', icon: Droplets, desc: 'Vitamin & mineral IV blend' },
-      { name: 'Beauty Blend IV',    href: '/iv-therapy/beauty-blend',   icon: Sparkles, desc: 'Biotin, B-complex & vitamin C' },
+      { name: 'IV Hydration',           href: '/iv-therapy/iv-hydration',            icon: Droplets,     desc: 'Clinically screened IV hydration' },
+      { name: 'Vitamin B12 Injections', href: '/iv-therapy/vitamin-b12-injections',  icon: Syringe,      desc: 'Clinically screened B12 shots' },
+      { name: 'Glutathione Injections', href: '/iv-therapy/glutathione-injections',  icon: FlaskConical, desc: 'Special-order upon request' },
+      { name: "Myers' Cocktail IV",     href: '/iv-therapy/myers-cocktail',          icon: Droplets,     desc: 'Vitamin & mineral IV blend' },
+      { name: 'Beauty Blend IV',        href: '/iv-therapy/beauty-blend',            icon: Sparkles,     desc: 'Biotin, B-complex & vitamin C' },
     ],
   },
 ]
@@ -202,7 +211,7 @@ function MobileServiceMenuItem({ item, pathname, isLast, onNavigate }) {
       <div
         className={`flex items-center gap-1 transition-colors ${
           isActive ? 'bg-primary/8' : 'hover:bg-gray-50'
-        } ${!isLast && !item.children ? 'border-b' : ''}`}
+        } ${!isLast && !isOpen ? 'border-b' : ''}`}
         style={{
           backgroundColor: isActive ? 'rgba(var(--mint-rgb, 26,166,183),0.08)' : undefined,
           borderColor:     'rgba(var(--mint-rgb, 26,166,183),0.09)',
@@ -438,18 +447,19 @@ export default function Header() {
               {servicesOpen && (
                 <div
                   role="menu"
-                  className="absolute top-full left-0 mt-3 w-[560px] rounded-2xl overflow-hidden z-[60]"
+                  className="absolute top-full left-0 mt-3 w-[560px] max-w-[calc(100vw-2rem)] rounded-2xl overflow-hidden z-[60] flex flex-col"
                   style={{
                     background:           'rgba(255,255,255,0.98)',
                     backdropFilter:       'blur(24px)',
                     WebkitBackdropFilter: 'blur(24px)',
                     border:               '1px solid rgba(var(--mint-rgb, 26,166,183),0.18)',
                     boxShadow:            '0 20px 48px rgba(11,61,71,0.18), 0 4px 12px rgba(var(--mint-rgb, 26,166,183),0.10)',
+                    maxHeight:            'min(600px, calc(100vh - 140px))',
                   }}
                 >
                   {/* Dropdown header */}
                   <div
-                    className="px-5 py-3.5 flex items-center justify-between"
+                    className="flex-shrink-0 px-5 py-3.5 flex items-center justify-between"
                     style={{
                       background:   'linear-gradient(90deg, rgba(var(--mint-rgb, 26,166,183),0.08) 0%, rgba(var(--mint-rgb, 26,166,183),0.06) 100%)',
                       borderBottom: '1px solid rgba(var(--mint-rgb, 26,166,183),0.12)',
@@ -465,8 +475,9 @@ export default function Header() {
 
                   {/* 2-column layout: two independent stacks, so IV Therapy's
                       submenu can live in the right column without shifting
-                      the left column's rows */}
-                  <div className="grid grid-cols-2 gap-1 p-3">
+                      the left column's rows. Scrolls internally so the panel
+                      never overflows shorter (laptop) viewports. */}
+                  <div className="grid grid-cols-2 gap-1 p-3 overflow-y-auto">
                     <div className="flex flex-col gap-1">
                       {serviceColumnLeft.map((item) => (
                         <ServiceMenuItem
@@ -491,7 +502,7 @@ export default function Header() {
 
                   {/* Dropdown footer CTA */}
                   <div
-                    className="px-4 py-3 flex items-center justify-between"
+                    className="flex-shrink-0 px-4 py-3 flex items-center justify-between gap-3"
                     style={{ borderTop: '1px solid rgba(var(--mint-rgb, 26,166,183),0.10)' }}
                   >
                     <span className="text-[10px] font-medium" style={{ color: 'rgba(11,61,71,0.40)' }}>
@@ -500,7 +511,7 @@ export default function Header() {
                     <Link
                       href={BOOKING_URL}
                       onClick={closeServices}
-                      className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[10px] font-black uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95"
+                      className="flex-shrink-0 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[10px] font-black uppercase tracking-widest text-white transition-all hover:opacity-90 active:scale-95"
                       style={{ backgroundColor: 'var(--primary)' }}
                     >
                       Book Now

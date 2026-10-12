@@ -105,7 +105,7 @@ export default function InjectionsPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/injection-hero.webp')",
+            backgroundImage: "url('/Injections-in-Oklahoma-City.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -114,10 +114,19 @@ export default function InjectionsPage() {
         />
         {/* White gradient: transparent on left → solid white on right (text side) */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hidden sm:block"
           style={{
             background:
               'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0.75) 55%, rgba(255,255,255,0.97) 72%, rgba(255,255,255,1) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        {/* Mobile: top-to-bottom white fade so text stays legible over a narrow crop of the photo */}
+        <div
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.80) 28%, rgba(255,255,255,0.96) 42%, rgba(255,255,255,1) 58%)',
           }}
           aria-hidden="true"
         />

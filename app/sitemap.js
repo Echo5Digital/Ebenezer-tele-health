@@ -63,6 +63,18 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/medical-weight-loss/semaglutide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/medical-weight-loss/tirzepatide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/weight-loss-okc`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -100,6 +112,24 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/iv-therapy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/iv-therapy/iv-hydration`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/iv-therapy/vitamin-b12-injections`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/iv-therapy/glutathione-injections`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

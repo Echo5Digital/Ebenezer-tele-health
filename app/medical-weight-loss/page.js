@@ -155,12 +155,12 @@ const servingAreas = ['Oklahoma City', 'Bethany', 'Edmond', 'Norman', 'Moore', '
 const featuredLinks = [
   {
     name: 'Semaglutide Weight Loss',
-    href: '#semaglutide',
+    href: '/medical-weight-loss/semaglutide',
     image: '/semaglutide-womens-weight-loss.jpeg',
   },
   {
     name: 'Tirzepatide Weight Loss',
-    href: '#tirzepatide',
+    href: '/medical-weight-loss/tirzepatide',
     image: '/tirzepatide-womens-weight-loss.jpg',
   },
 ]

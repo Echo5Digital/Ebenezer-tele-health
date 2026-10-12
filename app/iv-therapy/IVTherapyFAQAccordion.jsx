@@ -16,50 +16,72 @@ import {
 const faqs = [
   {
     id: 'iv-faq-1',
-    question: 'What IV therapy options do you offer in Oklahoma City?',
+    question: 'What IV hydration and injection services do you offer?',
     answer:
-      "We offer an Immune Support IV (Myers' Cocktail) and a Beauty Blend IV, each in full or half strength, plus IM nutrient injections. Each is given after a provider evaluation.",
+      'Ebenezer Health Clinic offers IV hydration services, Wellness Mix, Vitamin B12 injections, and Glutathione injections available by special order upon request.',
   },
   {
     id: 'iv-faq-2',
-    question: 'How much does IV therapy cost?',
-    answer:
-      "Immune Support (Myers' Cocktail) and Beauty Blend IVs are $250 full strength or $150 half strength. IM injections are $50. Cash-pay, no insurance required.",
+    question: 'What happened to the Beauty Mix?',
+    answer: (
+      <>
+        The service previously referred to as Beauty Mix is being presented
+        as <strong>Wellness Mix</strong>.
+      </>
+    ),
   },
   {
     id: 'iv-faq-3',
-    question: "What is a Myers' Cocktail?",
+    question: 'Do you offer Vitamin B12 injections?',
     answer:
-      "It's a well-known IV blend of B vitamins, vitamin C, magnesium, and calcium, used to replenish fluids and nutrients as part of a wellness routine.",
+      'Yes. Vitamin B12 injections are available as part of our injection services, subject to appropriate clinical screening.',
   },
   {
     id: 'iv-faq-4',
-    question: 'Is the telehealth consultation really free?',
-    answer:
-      'Yes. You can meet our provider by secure video at no charge to discuss whether IV therapy or an injection is right for you. You only pay if you choose to come in for a session.',
+    question: 'Do you offer Glutathione injections?',
+    answer: (
+      <>
+        Glutathione injections are available by{' '}
+        <strong>special order upon request</strong>. Please contact the
+        clinic regarding availability before your visit.
+      </>
+    ),
   },
   {
     id: 'iv-faq-5',
-    question: 'Where is IV therapy given?',
+    question: 'Do I need to complete a questionnaire?',
     answer:
-      "In person at our Oklahoma City-area clinic. IVs and injections aren't given by telehealth - only the optional consultation is online.",
+      'Yes. The IV/IM questionnaire provides important information about your symptoms, medications, allergies, medical history, and other factors relevant to determining whether treatment is appropriate.',
   },
   {
     id: 'iv-faq-6',
-    question: 'Do I need an appointment?',
-    answer: 'No — walk in, or book ahead for a confirmed time.',
+    question: "What if I'm not sure whether I need IV hydration or an injection?",
+    answer: (
+      <>
+        You can select &ldquo;
+        <strong>Not sure – discuss with clinician</strong>
+        &rdquo; on the questionnaire. Your provider can review your
+        treatment goal and relevant health information with you.
+      </>
+    ),
   },
   {
     id: 'iv-faq-7',
-    question: 'Does IV therapy cure illness or hangovers?',
+    question: 'Does completing the questionnaire mean I am approved for treatment?',
     answer:
-      "No. It provides hydration and nutrient support after a provider evaluation and isn't a treatment for any condition.",
+      'No. Completing the questionnaire is part of the screening process and does not guarantee that treatment will be provided.',
   },
   {
     id: 'iv-faq-8',
-    question: 'Is IV therapy safe for everyone?',
+    question: 'Can everyone receive IV hydration or injections?',
     answer:
-      "Not always - that's why every IV and injection is preceded by a provider evaluation.",
+      'Not necessarily. Treatment depends on your individual health history, symptoms, medications, allergies, and clinical evaluation.',
+  },
+  {
+    id: 'iv-faq-9',
+    question: 'Are Glutathione injections always available?',
+    answer:
+      'No. Glutathione injections are available by special order upon request, so patients should contact the clinic regarding availability.',
   },
 ]
 
