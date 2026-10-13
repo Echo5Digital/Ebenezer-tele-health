@@ -41,14 +41,14 @@ export const metadata = {
     title: 'Glutathione Injections Oklahoma City | Ebenezer Health Clinic',
     description:
       'Request Glutathione injections in the Oklahoma City area at Ebenezer Health Clinic. Available by special order with appropriate clinical screening.',
-    images: ['/about.webp'],
+    images: ['/telehealth-hero.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Glutathione Injections Oklahoma City | Ebenezer Health Clinic',
     description:
       'Request Glutathione injections in the Oklahoma City area at Ebenezer Health Clinic. Available by special order with appropriate clinical screening.',
-    images: ['/about.webp'],
+    images: ['/telehealth-hero.webp'],
   },
 }
 
@@ -213,7 +213,7 @@ export default function GlutathioneInjectionsPage() {
       >
         {/* Background image */}
         <Image
-          src="/about.webp"
+          src="/telehealth-hero.webp"
           alt="Telehealth video consultation at Ebenezer Health Clinic"
           fill
           sizes="100vw"
