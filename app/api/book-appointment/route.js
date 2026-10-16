@@ -17,9 +17,17 @@ const REQUIRED_FIELDS = [
   'paymentMethod',
 ]
 
+const SUB_SERVICE_RULES = {
+  'IV Therapy': { field: 'ivSubService', label: 'IV Therapy Option' },
+  "Women's Health": { field: 'womensHealthSubService', label: "Women's Health Option" },
+  'Medical Weight Loss': { field: 'weightLossSubService', label: 'Medical Weight Loss Option' },
+}
+
 const FIELD_LABELS = {
   service: 'Service',
   ivSubService: 'IV Therapy Option',
+  womensHealthSubService: "Women's Health Option",
+  weightLossSubService: 'Medical Weight Loss Option',
   firstName: 'First Name',
   lastName: 'Last Name',
   email: 'Email',
@@ -43,8 +51,9 @@ function validate(body) {
       return `${FIELD_LABELS[field] || field} is required.`
     }
   }
-  if (body.service === 'IV Therapy' && !body.ivSubService) {
-    return 'IV Therapy Option is required.'
+  const subServiceRule = SUB_SERVICE_RULES[body.service]
+  if (subServiceRule && !body[subServiceRule.field]) {
+    return `${subServiceRule.label} is required.`
   }
   if (!EMAIL_RE.test(body.email)) {
     return 'Please enter a valid email address.'
@@ -114,6 +123,8 @@ export async function POST(request) {
   const lead = {
     service: body.service,
     ivSubService: body.ivSubService || '',
+    womensHealthSubService: body.womensHealthSubService || '',
+    weightLossSubService: body.weightLossSubService || '',
     firstName: body.firstName,
     lastName: body.lastName,
     email: body.email,

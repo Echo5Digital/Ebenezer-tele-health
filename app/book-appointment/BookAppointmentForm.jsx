@@ -2,7 +2,21 @@
 
 import { useState } from 'react'
 import { CheckCircle2, Loader2 } from 'lucide-react'
-import { SERVICES, IV_THERAPY_SUB_SERVICES, US_CA_STATES } from '@/lib/usStates'
+import {
+  SERVICES,
+  IV_THERAPY_SUB_SERVICES,
+  WOMENS_HEALTH_SUB_SERVICES,
+  MEDICAL_WEIGHT_LOSS_SUB_SERVICES,
+  US_CA_STATES,
+} from '@/lib/usStates'
+
+const SUB_SERVICE_MAP = {
+  'IV Therapy': { field: 'ivSubService', label: 'IV Therapy Option', options: IV_THERAPY_SUB_SERVICES },
+  "Women's Health": { field: 'womensHealthSubService', label: "Women's Health Option", options: WOMENS_HEALTH_SUB_SERVICES },
+  'Medical Weight Loss': { field: 'weightLossSubService', label: 'Medical Weight Loss Option', options: MEDICAL_WEIGHT_LOSS_SUB_SERVICES },
+}
+
+const SUB_SERVICE_FIELDS = Object.values(SUB_SERVICE_MAP).map((s) => s.field)
 
 const inputClass =
   'w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-[var(--primary)]'
@@ -20,6 +34,8 @@ const PAYMENT_OPTIONS = [
 const initialFormState = {
   service: '',
   ivSubService: '',
+  womensHealthSubService: '',
+  weightLossSubService: '',
   firstName: '',
   lastName: '',
   email: '',
@@ -57,8 +73,11 @@ export default function BookAppointmentForm() {
     const { name, value } = e.target
     setForm((prev) => {
       const next = { ...prev, [name]: value }
-      if (name === 'service' && value !== 'IV Therapy') {
-        next.ivSubService = ''
+      if (name === 'service') {
+        const activeField = SUB_SERVICE_MAP[value]?.field
+        for (const field of SUB_SERVICE_FIELDS) {
+          if (field !== activeField) next[field] = ''
+        }
       }
       if (name === 'state' && value !== OTHER_STATE) {
         next.stateManual = ''
@@ -145,18 +164,18 @@ export default function BookAppointmentForm() {
             </select>
           </Field>
 
-          {form.service === 'IV Therapy' && (
-            <Field label="IV Therapy Option">
+          {SUB_SERVICE_MAP[form.service] && (
+            <Field label={SUB_SERVICE_MAP[form.service].label}>
               <select
-                name="ivSubService"
-                value={form.ivSubService}
+                name={SUB_SERVICE_MAP[form.service].field}
+                value={form[SUB_SERVICE_MAP[form.service].field]}
                 onChange={handleChange}
                 required
                 aria-required="true"
                 className={inputClass}
               >
-                <option value="" disabled>Select an IV Therapy Option</option>
-                {IV_THERAPY_SUB_SERVICES.map((s) => (
+                <option value="" disabled>Select {SUB_SERVICE_MAP[form.service].label}</option>
+                {SUB_SERVICE_MAP[form.service].options.map((s) => (
                   <option key={s} value={s}>{s}</option>
                 ))}
               </select>

@@ -11,6 +11,8 @@ export const dynamic = 'force-dynamic'
 const FIELD_LABELS = {
   service: 'Service',
   ivSubService: 'IV Therapy Option',
+  womensHealthSubService: "Women's Health Option",
+  weightLossSubService: 'Medical Weight Loss Option',
   firstName: 'First Name',
   lastName: 'Last Name',
   email: 'Email',
