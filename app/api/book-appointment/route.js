@@ -17,12 +17,6 @@ const REQUIRED_FIELDS = [
   'paymentMethod',
 ]
 
-const SUB_SERVICE_RULES = {
-  'IV Therapy': { field: 'ivSubService', label: 'IV Therapy Option' },
-  "Women's Health": { field: 'womensHealthSubService', label: "Women's Health Option" },
-  'Medical Weight Loss': { field: 'weightLossSubService', label: 'Medical Weight Loss Option' },
-}
-
 const FIELD_LABELS = {
   service: 'Service',
   ivSubService: 'IV Therapy Option',
@@ -50,10 +44,6 @@ function validate(body) {
     if (!body[field] || !String(body[field]).trim()) {
       return `${FIELD_LABELS[field] || field} is required.`
     }
-  }
-  const subServiceRule = SUB_SERVICE_RULES[body.service]
-  if (subServiceRule && !body[subServiceRule.field]) {
-    return `${subServiceRule.label} is required.`
   }
   if (!EMAIL_RE.test(body.email)) {
     return 'Please enter a valid email address.'

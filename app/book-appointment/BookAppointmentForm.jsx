@@ -165,16 +165,14 @@ export default function BookAppointmentForm() {
           </Field>
 
           {SUB_SERVICE_MAP[form.service] && (
-            <Field label={SUB_SERVICE_MAP[form.service].label}>
+            <Field label={SUB_SERVICE_MAP[form.service].label} optional>
               <select
                 name={SUB_SERVICE_MAP[form.service].field}
                 value={form[SUB_SERVICE_MAP[form.service].field]}
                 onChange={handleChange}
-                required
-                aria-required="true"
                 className={inputClass}
               >
-                <option value="" disabled>Select {SUB_SERVICE_MAP[form.service].label}</option>
+                <option value="">Select {SUB_SERVICE_MAP[form.service].label}</option>
                 {SUB_SERVICE_MAP[form.service].options.map((s) => (
                   <option key={s} value={s}>{s}</option>
                 ))}
