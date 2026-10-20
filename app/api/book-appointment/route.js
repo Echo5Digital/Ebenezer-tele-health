@@ -144,6 +144,7 @@ export async function POST(request) {
   try {
     await sendMail({
       to: 'ebenezerhealth@outlook.com',
+      cc: 'sony@echo5digital.com',
       subject: `New Appointment Request — ${lead.firstName} ${lead.lastName}`,
       html: buildEmailHtml(lead),
     })
