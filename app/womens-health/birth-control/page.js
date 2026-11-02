@@ -3,7 +3,7 @@ import Image from 'next/image'
 import {
   Pill, Syringe, Layers, ShieldCheck, Info, AlertCircle,
   CalendarCheck, ClipboardList, MessageCircle, MonitorSmartphone,
-  MapPin, Phone, Mail,
+  MapPin, Phone, Mail, ArrowRight,
 } from 'lucide-react'
 import BirthControlFAQAccordion from './BirthControlFAQAccordion'
 import Testimonials from '@/components/Testimonials'
@@ -207,9 +207,80 @@ const providerCredentials = [
   'Telehealth throughout Oklahoma for appropriate services',
 ]
 
+const relatedLinks = [
+  { name: "Women's Health", href: '/womens-health', image: '/Ebenezerhealthclinic.webp' },
+  { name: 'PCOS Management', href: '/womens-health/pcos-management', image: '/Womens-health-pcos-management.webp' },
+  { name: 'Menstrual Irregularities', href: '/womens-health/menstrual-irregularities', image: '/womens-health-menstrual-irregularities.webp' },
+  { name: 'Pap Smears', href: '/womens-health/pap-smears', image: '/womens-health-pap-smears.png' },
+  { name: 'STD Testing & Management', href: '/womens-health/std-testing', image: '/womens-health-std-testing.png' },
+]
+
 export default function BirthControlPage() {
   return (
-    <>
+    <div className="wh-sub-page">
+      {/*
+        Page-scoped pink design system, matching /womens-health.
+        Only affects elements inside .wh-sub-page — shared components
+        (Header, Testimonials, Accordion primitives) keep their
+        default site styling everywhere else.
+      */}
+      <style suppressHydrationWarning>{`
+        .wh-sub-page {
+          --wh-pink: #C2255C;
+          --wh-pink-dark: #9E1C49;
+          --wh-rose: #F3C9D4;
+          --wh-rose-soft: #FBEAEF;
+          --wh-cream: #FFF9FB;
+          --wh-beige: #FDF1F4;
+          --wh-charcoal: #2B2224;
+        }
+        .wh-sub-page .hover\\:text-primary:hover { color: var(--wh-pink) !important; }
+        .wh-sub-page .text-primary { color: var(--wh-pink) !important; }
+        .wh-sub-page .text-navy { color: var(--wh-charcoal) !important; }
+        .wh-sub-page .btn-primary {
+          background-color: var(--wh-pink);
+        }
+        .wh-sub-page .btn-primary:hover {
+          background-color: var(--wh-pink-dark);
+        }
+        .wh-sub-page .btn-outline {
+          border-color: var(--wh-pink);
+          color: var(--wh-pink);
+        }
+        .wh-sub-page .btn-outline:hover {
+          background-color: var(--wh-pink);
+          color: #ffffff;
+        }
+
+        /*
+          Testimonials — shared site-wide component, hardcoded teal.
+          Overridden here so only this page shows the pink/rose palette;
+          every other page using <Testimonials /> is unaffected.
+        */
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] {
+          background-color: var(--wh-pink) !important;
+        }
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] span[style*="color: rgb(151, 206, 204)"] {
+          color: rgba(255,255,255,0.78) !important;
+        }
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] figure {
+          border-color: rgba(194,37,92,0.14) !important;
+          box-shadow: 0 2px 18px rgba(194,37,92,0.08) !important;
+        }
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] figure > figcaption {
+          border-top-color: rgba(194,37,92,0.10) !important;
+        }
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] figure img,
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] figure > figcaption > div[style*="background-color"] {
+          border-color: rgba(194,37,92,0.30) !important;
+          background-color: var(--wh-pink) !important;
+        }
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] button[aria-label="Previous reviews"],
+        .wh-sub-page section[aria-labelledby="testimonials-heading"] button[aria-label="Next reviews"] {
+          color: var(--wh-pink) !important;
+        }
+      `}</style>
+
       {/* JSON-LD structured data */}
       <script
         type="application/ld+json"
@@ -231,7 +302,7 @@ export default function BirthControlPage() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.80) 48%, rgba(26,166,183,0.30) 100%)',
+              'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.80) 48%, rgba(194,37,92,0.30) 100%)',
           }}
           aria-hidden="true"
         />
@@ -251,19 +322,19 @@ export default function BirthControlPage() {
                 Women&apos;s Health
               </Link>
               <span aria-hidden="true">/</span>
-              <span style={{ color: 'var(--primary)' }}>Birth Control</span>
+              <span style={{ color: 'var(--wh-pink)' }}>Birth Control</span>
             </nav>
 
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--wh-pink)' }}
             >
               Women&apos;s Health &middot; Birth Control &middot; Oklahoma City
             </span>
 
             <h1
               className="text-4xl md:text-5xl font-bold mb-5 leading-tight"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               Birth Control in Oklahoma City
             </h1>
@@ -276,7 +347,7 @@ export default function BirthControlPage() {
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
               Our birth control services include{' '}
-              <strong style={{ color: 'var(--navy)' }}>
+              <strong style={{ color: 'var(--wh-charcoal)' }}>
                 oral contraceptives, Depo-Provera shots, birth control patches, IUD insertion
                 and removal, and Nexplanon insertion and removal
               </strong>
@@ -322,21 +393,21 @@ export default function BirthControlPage() {
           <div className="max-w-3xl">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--wh-pink)' }}
             >
               Our Approach
             </span>
             <h2
               id="personalized-care-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               Personalized Birth Control Care
             </h2>
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
             </div>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               There is no single birth control method that works for everyone. Your medical
@@ -360,21 +431,21 @@ export default function BirthControlPage() {
           <div className="mb-10 md:mb-14 max-w-3xl">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--wh-pink)' }}
             >
               Our Services
             </span>
             <h2
               id="options-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               Birth Control Options We Offer
             </h2>
             <div className="flex items-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
             </div>
           </div>
 
@@ -383,18 +454,18 @@ export default function BirthControlPage() {
             <div
               className="rounded-2xl p-7 md:p-8 flex flex-col h-full"
               style={{
-                backgroundColor: 'rgba(151,206,204,0.08)',
-                border: '1px solid rgba(26,166,183,0.12)',
+                backgroundColor: 'rgba(243,201,212,0.08)',
+                border: '1px solid rgba(194,37,92,0.12)',
               }}
             >
               <div
                 className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                style={{ backgroundColor: 'rgba(194,37,92,0.12)' }}
                 aria-hidden="true"
               >
-                <Pill className="h-5 w-5" style={{ color: 'var(--primary)' }} />
+                <Pill className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--navy)' }}>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--wh-charcoal)' }}>
                 Oral Contraceptives
               </h3>
               <p className="text-base text-gray-600 leading-relaxed mb-3">
@@ -412,18 +483,18 @@ export default function BirthControlPage() {
             <div
               className="rounded-2xl p-7 md:p-8 flex flex-col h-full"
               style={{
-                backgroundColor: 'rgba(151,206,204,0.08)',
-                border: '1px solid rgba(26,166,183,0.12)',
+                backgroundColor: 'rgba(243,201,212,0.08)',
+                border: '1px solid rgba(194,37,92,0.12)',
               }}
             >
               <div
                 className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                style={{ backgroundColor: 'rgba(194,37,92,0.12)' }}
                 aria-hidden="true"
               >
-                <Syringe className="h-5 w-5" style={{ color: 'var(--primary)' }} />
+                <Syringe className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--navy)' }}>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--wh-charcoal)' }}>
                 Depo-Provera Shots
               </h3>
               <p className="text-base text-gray-600 leading-relaxed mb-3">
@@ -440,18 +511,18 @@ export default function BirthControlPage() {
             <div
               className="rounded-2xl p-7 md:p-8 flex flex-col h-full"
               style={{
-                backgroundColor: 'rgba(151,206,204,0.08)',
-                border: '1px solid rgba(26,166,183,0.12)',
+                backgroundColor: 'rgba(243,201,212,0.08)',
+                border: '1px solid rgba(194,37,92,0.12)',
               }}
             >
               <div
                 className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+                style={{ backgroundColor: 'rgba(194,37,92,0.12)' }}
                 aria-hidden="true"
               >
-                <Layers className="h-5 w-5" style={{ color: 'var(--primary)' }} />
+                <Layers className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--navy)' }}>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--wh-charcoal)' }}>
                 Birth Control Patches
               </h3>
               <p className="text-base text-gray-600 leading-relaxed mb-3">
@@ -470,23 +541,23 @@ export default function BirthControlPage() {
             <div
               className="rounded-2xl p-7 md:p-8 flex flex-col h-full"
               style={{
-                background: 'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                border: '1px solid rgba(26,166,183,0.20)',
+                background: 'linear-gradient(135deg, rgba(194,37,92,0.06) 0%, rgba(243,201,212,0.18) 100%)',
+                border: '1px solid rgba(194,37,92,0.20)',
               }}
             >
               <div
                 className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: 'rgba(26,166,183,0.14)' }}
+                style={{ backgroundColor: 'rgba(194,37,92,0.14)' }}
                 aria-hidden="true"
               >
-                <ShieldCheck className="h-5 w-5" style={{ color: 'var(--primary)' }} />
+                <ShieldCheck className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--navy)' }}>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--wh-charcoal)' }}>
                 IUD Insertion &amp; Removal
               </h3>
               <p className="text-base text-gray-600 leading-relaxed mb-3">
                 Ebenezer Health Clinic provides both{' '}
-                <strong style={{ color: 'var(--navy)' }}>IUD insertion and IUD removal</strong>{' '}
+                <strong style={{ color: 'var(--wh-charcoal)' }}>IUD insertion and IUD removal</strong>{' '}
                 services.
               </p>
               <p className="text-base text-gray-600 leading-relaxed mb-3">
@@ -498,10 +569,10 @@ export default function BirthControlPage() {
               </p>
               <div
                 className="rounded-xl p-3.5 flex items-start gap-2.5 mb-4"
-                style={{ backgroundColor: 'rgba(255,255,255,0.70)', border: '1px solid rgba(26,166,183,0.18)' }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.70)', border: '1px solid rgba(194,37,92,0.18)' }}
                 role="note"
               >
-                <Info className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                <Info className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                 <p className="text-sm text-gray-700">
                   Important: IUD insertion is covered by insurance only.
                 </p>
@@ -518,23 +589,23 @@ export default function BirthControlPage() {
             <div
               className="rounded-2xl p-7 md:p-8 flex flex-col h-full"
               style={{
-                background: 'linear-gradient(135deg, rgba(26,166,183,0.06) 0%, rgba(151,206,204,0.18) 100%)',
-                border: '1px solid rgba(26,166,183,0.20)',
+                background: 'linear-gradient(135deg, rgba(194,37,92,0.06) 0%, rgba(243,201,212,0.18) 100%)',
+                border: '1px solid rgba(194,37,92,0.20)',
               }}
             >
               <div
                 className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: 'rgba(26,166,183,0.14)' }}
+                style={{ backgroundColor: 'rgba(194,37,92,0.14)' }}
                 aria-hidden="true"
               >
-                <ShieldCheck className="h-5 w-5" style={{ color: 'var(--primary)' }} />
+                <ShieldCheck className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--navy)' }}>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--wh-charcoal)' }}>
                 Nexplanon Insertion &amp; Removal
               </h3>
               <p className="text-base text-gray-600 leading-relaxed mb-3">
                 Ebenezer Health Clinic also provides{' '}
-                <strong style={{ color: 'var(--navy)' }}>Nexplanon insertion and removal</strong>.
+                <strong style={{ color: 'var(--wh-charcoal)' }}>Nexplanon insertion and removal</strong>.
                 If you are considering Nexplanon, your provider can discuss your contraceptive
                 goals and relevant health information before determining whether the implant
                 may be appropriate. Patients who already have Nexplanon can also schedule an
@@ -542,10 +613,10 @@ export default function BirthControlPage() {
               </p>
               <div
                 className="rounded-xl p-3.5 flex items-start gap-2.5 mb-4"
-                style={{ backgroundColor: 'rgba(255,255,255,0.70)', border: '1px solid rgba(26,166,183,0.18)' }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.70)', border: '1px solid rgba(194,37,92,0.18)' }}
                 role="note"
               >
-                <Info className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                <Info className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                 <p className="text-sm text-gray-700">
                   Important: Nexplanon insertion is covered by insurance only.
                 </p>
@@ -564,7 +635,7 @@ export default function BirthControlPage() {
       {/* ── WHICH BIRTH CONTROL OPTION IS RIGHT FOR ME ──────────────── */}
       <section
         aria-labelledby="which-option-heading"
-        style={{ backgroundColor: 'var(--cream)' }}
+        style={{ backgroundColor: 'var(--wh-cream)' }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -572,14 +643,14 @@ export default function BirthControlPage() {
               <h2
                 id="which-option-heading"
                 className="text-3xl md:text-4xl font-bold mb-4"
-                style={{ color: 'var(--navy)' }}
+                style={{ color: 'var(--wh-charcoal)' }}
               >
                 Which Birth Control Option Is Right for Me?
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
               </div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
                 Choosing birth control involves more than selecting a contraceptive method from
@@ -596,13 +667,13 @@ export default function BirthControlPage() {
               className="rounded-2xl p-7 md:p-8"
               style={{
                 backgroundColor: 'rgba(255,255,255,0.85)',
-                border: '1px solid rgba(26,166,183,0.15)',
-                boxShadow: '0 2px 20px rgba(26,166,183,0.07)',
+                border: '1px solid rgba(194,37,92,0.15)',
+                boxShadow: '0 2px 20px rgba(194,37,92,0.07)',
               }}
             >
               <p
                 className="text-xs font-semibold uppercase tracking-widest mb-5"
-                style={{ color: 'var(--primary)' }}
+                style={{ color: 'var(--wh-pink)' }}
               >
                 Your provider may consider
               </p>
@@ -611,7 +682,7 @@ export default function BirthControlPage() {
                   <li key={item} className="flex items-start gap-3">
                     <ShieldCheck
                       className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
+                      style={{ color: 'var(--wh-pink)' }}
                       aria-hidden="true"
                     />
                     <span className="text-gray-700 leading-snug text-sm">{item}</span>
@@ -632,21 +703,21 @@ export default function BirthControlPage() {
           <div className="max-w-3xl mb-10 md:mb-14">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--wh-pink)' }}
             >
               Your Visit
             </span>
             <h2
               id="what-to-expect-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               What to Expect at Your Birth Control Consultation
             </h2>
             <div className="flex items-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
             </div>
           </div>
 
@@ -656,21 +727,21 @@ export default function BirthControlPage() {
                 key={step}
                 className="rounded-2xl p-6 flex flex-col h-full"
                 style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
+                  backgroundColor: 'rgba(243,201,212,0.08)',
+                  border: '1px solid rgba(194,37,92,0.12)',
                 }}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div
                     className="flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center text-sm font-bold text-white"
-                    style={{ backgroundColor: 'var(--primary)' }}
+                    style={{ backgroundColor: 'var(--wh-pink)' }}
                     aria-hidden="true"
                   >
                     {step}
                   </div>
-                  <Icon className="h-5 w-5" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                  <Icon className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                 </div>
-                <h3 className="text-base font-semibold mb-1.5" style={{ color: 'var(--navy)' }}>
+                <h3 className="text-base font-semibold mb-1.5" style={{ color: 'var(--wh-charcoal)' }}>
                   {title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
@@ -696,24 +767,24 @@ export default function BirthControlPage() {
       </section>
 
       {/* ── IN-PERSON & TELEHEALTH CONSULTATIONS ────────────────────── */}
-      <section aria-labelledby="telehealth-heading" style={{ backgroundColor: 'rgba(151,206,204,0.10)' }}>
+      <section aria-labelledby="telehealth-heading" style={{ backgroundColor: 'rgba(243,201,212,0.10)' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-16">
           <div
             className="rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10"
-            style={{ backgroundColor: '#ffffff', border: '1px solid rgba(26,166,183,0.18)' }}
+            style={{ backgroundColor: '#ffffff', border: '1px solid rgba(194,37,92,0.18)' }}
           >
             <div
               className="flex-shrink-0 h-14 w-14 rounded-full flex items-center justify-center"
-              style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
+              style={{ backgroundColor: 'rgba(194,37,92,0.10)' }}
               aria-hidden="true"
             >
-              <MonitorSmartphone className="h-7 w-7" style={{ color: 'var(--primary)' }} />
+              <MonitorSmartphone className="h-7 w-7" style={{ color: 'var(--wh-pink)' }} />
             </div>
             <div className="flex-1">
               <h2
                 id="telehealth-heading"
                 className="text-2xl md:text-3xl font-bold mb-2"
-                style={{ color: 'var(--navy)' }}
+                style={{ color: 'var(--wh-charcoal)' }}
               >
                 In-Person &amp; Telehealth Birth Control Consultations
               </h2>
@@ -722,7 +793,7 @@ export default function BirthControlPage() {
                 women throughout Oklahoma. Appropriate birth control consultations and
                 follow-up visits may be available through secure telehealth across Oklahoma.
                 Services requiring a physical procedure&mdash;including{' '}
-                <strong style={{ color: 'var(--navy)' }}>
+                <strong style={{ color: 'var(--wh-charcoal)' }}>
                   IUD insertion, IUD removal, Nexplanon insertion, and Nexplanon removal
                 </strong>
                 &mdash;require an in-person appointment. If you are unsure whether your visit
@@ -797,7 +868,7 @@ export default function BirthControlPage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.82)' }}
+          style={{ backgroundColor: 'rgba(253,241,244,0.94)' }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -805,14 +876,14 @@ export default function BirthControlPage() {
             <h2
               id="why-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               Why Choose Ebenezer Health Clinic for Birth Control?
             </h2>
             <div className="flex items-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
             </div>
           </div>
 
@@ -824,19 +895,19 @@ export default function BirthControlPage() {
                 style={{
                   backgroundColor: 'rgba(255,255,255,0.84)',
                   border: '1px solid rgba(255,255,255,0.92)',
-                  borderLeft: '3px solid var(--primary)',
-                  boxShadow: '0 2px 18px rgba(26,166,183,0.09)',
+                  borderLeft: '3px solid var(--wh-pink)',
+                  boxShadow: '0 2px 18px rgba(194,37,92,0.09)',
                 }}
               >
                 <div
                   className="flex-shrink-0 h-11 w-11 rounded-xl flex items-center justify-center text-sm font-bold"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.10)', color: 'var(--primary)' }}
+                  style={{ backgroundColor: 'rgba(194,37,92,0.10)', color: 'var(--wh-pink)' }}
                   aria-hidden="true"
                 >
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <div className="min-w-0">
-                  <p className="font-semibold leading-snug" style={{ color: 'var(--navy)' }}>
+                  <p className="font-semibold leading-snug" style={{ color: 'var(--wh-charcoal)' }}>
                     {point.title}
                   </p>
                   <p className="mt-1 text-sm text-gray-600 leading-relaxed">
@@ -863,14 +934,14 @@ export default function BirthControlPage() {
               <h2
                 id="provider-heading"
                 className="text-3xl md:text-4xl font-bold mb-4"
-                style={{ color: 'var(--navy)' }}
+                style={{ color: 'var(--wh-charcoal)' }}
               >
                 Meet Dr. Susan George, DNP, APRN, BC-ADM
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
               </div>
               <p className="text-base text-gray-600 leading-relaxed mb-4">
                 Women&apos;s health care at Ebenezer Health Clinic is led by{' '}
@@ -884,13 +955,13 @@ export default function BirthControlPage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
+                  backgroundColor: 'rgba(243,201,212,0.08)',
+                  border: '1px solid rgba(194,37,92,0.12)',
                 }}
               >
                 <p
                   className="text-xs font-semibold uppercase tracking-widest mb-4"
-                  style={{ color: 'var(--primary)' }}
+                  style={{ color: 'var(--wh-pink)' }}
                 >
                   Credentials
                 </p>
@@ -899,7 +970,7 @@ export default function BirthControlPage() {
                     <li key={item} className="flex items-start gap-3">
                       <ShieldCheck
                         className="h-5 w-5 mt-0.5 flex-shrink-0"
-                        style={{ color: 'var(--primary)' }}
+                        style={{ color: 'var(--wh-pink)' }}
                         aria-hidden="true"
                       />
                       <span className="text-gray-700 leading-snug text-sm">{item}</span>
@@ -913,8 +984,8 @@ export default function BirthControlPage() {
               <div
                 className="relative w-full max-w-sm lg:max-w-none overflow-hidden rounded-2xl"
                 style={{
-                  border: '1px solid rgba(26,166,183,0.12)',
-                  boxShadow: '0 8px 40px rgba(26,166,183,0.12)',
+                  border: '1px solid rgba(194,37,92,0.12)',
+                  boxShadow: '0 8px 40px rgba(194,37,92,0.12)',
                 }}
               >
                 <Image
@@ -946,7 +1017,7 @@ export default function BirthControlPage() {
         />
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
+          style={{ backgroundColor: 'rgba(253,241,244,0.88)' }}
           aria-hidden="true"
         />
 
@@ -954,14 +1025,14 @@ export default function BirthControlPage() {
           <div className="text-center mb-12">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
+              style={{ color: 'var(--wh-pink)' }}
             >
               FAQ
             </span>
             <h2
               id="faq-heading"
               className="text-3xl md:text-4xl font-bold"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               Birth Control FAQs
             </h2>
@@ -980,28 +1051,28 @@ export default function BirthControlPage() {
               <h2
                 id="visit-heading"
                 className="text-3xl md:text-4xl font-bold mb-4"
-                style={{ color: 'var(--navy)' }}
+                style={{ color: 'var(--wh-charcoal)' }}
               >
                 Visit Ebenezer Health Clinic
               </h2>
               <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
               </div>
 
               <div
                 className="rounded-2xl p-7 md:p-8"
                 style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
+                  backgroundColor: 'rgba(243,201,212,0.08)',
+                  border: '1px solid rgba(194,37,92,0.12)',
                 }}
               >
                 <ul className="space-y-5">
                   <li className="flex items-start gap-4">
-                    <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                    <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     <div>
-                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>
+                      <p className="font-semibold" style={{ color: 'var(--wh-charcoal)' }}>
                         Ebenezer Health Clinic
                       </p>
                       <p className="text-sm text-gray-600 mt-0.5">
@@ -1010,9 +1081,9 @@ export default function BirthControlPage() {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                    <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     <div>
-                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>Phone</p>
+                      <p className="font-semibold" style={{ color: 'var(--wh-charcoal)' }}>Phone</p>
                       <a
                         href="tel:+14053498188"
                         className="text-sm text-gray-600 mt-0.5 hover:text-primary transition-colors"
@@ -1022,9 +1093,9 @@ export default function BirthControlPage() {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                    <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     <div>
-                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>Email</p>
+                      <p className="font-semibold" style={{ color: 'var(--wh-charcoal)' }}>Email</p>
                       <a
                         href="mailto:ebenezerhealth@outlook.com"
                         className="text-sm text-gray-600 mt-0.5 hover:text-primary transition-colors break-all"
@@ -1034,16 +1105,16 @@ export default function BirthControlPage() {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <ShieldCheck className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                    <ShieldCheck className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     <div>
-                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>In-Person Care</p>
+                      <p className="font-semibold" style={{ color: 'var(--wh-charcoal)' }}>In-Person Care</p>
                       <p className="text-sm text-gray-600 mt-0.5">Oklahoma City area</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <ShieldCheck className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--primary)' }} aria-hidden="true" />
+                    <ShieldCheck className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     <div>
-                      <p className="font-semibold" style={{ color: 'var(--navy)' }}>Telehealth</p>
+                      <p className="font-semibold" style={{ color: 'var(--wh-charcoal)' }}>Telehealth</p>
                       <p className="text-sm text-gray-600 mt-0.5">
                         Available throughout Oklahoma for appropriate services
                       </p>
@@ -1079,7 +1150,7 @@ export default function BirthControlPage() {
             {/* Google Map embed */}
             <div
               className="relative w-full min-h-[320px] lg:min-h-full rounded-2xl overflow-hidden"
-              style={{ border: '1px solid rgba(26,166,183,0.15)' }}
+              style={{ border: '1px solid rgba(194,37,92,0.15)' }}
             >
               <iframe
                 src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&t=k&output=embed"
@@ -1096,20 +1167,20 @@ export default function BirthControlPage() {
       </section>
 
       {/* ── BIRTH CONTROL CARE IN THE OKC AREA ──────────────────────── */}
-      <section aria-labelledby="serving-heading" style={{ backgroundColor: 'rgba(151,206,204,0.10)' }}>
+      <section aria-labelledby="serving-heading" style={{ backgroundColor: 'rgba(243,201,212,0.10)' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="max-w-3xl">
             <h2
               id="serving-heading"
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: 'var(--navy)' }}
+              style={{ color: 'var(--wh-charcoal)' }}
             >
               Birth Control Care in the Oklahoma City Area
             </h2>
             <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
             </div>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Ebenezer Health Clinic provides personalized birth control care from our Bethany
@@ -1131,42 +1202,56 @@ export default function BirthControlPage() {
       {/* ── RELATED / INTERNAL LINKS ─────────────────────────────────── */}
       <section className="bg-white" aria-labelledby="related-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-16">
-          <div
-            className="rounded-2xl p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8"
-            style={{
-              backgroundColor: 'rgba(151,206,204,0.08)',
-              border: '1px solid rgba(26,166,183,0.12)',
-            }}
-          >
-            <div className="flex items-center gap-3 flex-shrink-0">
-              <div
-                className="h-10 w-10 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
-                aria-hidden="true"
-              >
-                <Info className="h-5 w-5" style={{ color: 'var(--primary)' }} />
-              </div>
-              <h2 id="related-heading" className="text-base font-semibold" style={{ color: 'var(--navy)' }}>
-                Related Women&apos;s Health Services
-              </h2>
-            </div>
-            <nav
-              className="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm font-semibold"
-              aria-label="Related women's health links"
-              style={{ color: 'var(--primary)' }}
+          <div className="flex items-center gap-3 mb-8">
+            <div
+              className="h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0"
+              style={{ backgroundColor: 'rgba(194,37,92,0.12)' }}
+              aria-hidden="true"
             >
-              <Link href="/womens-health" className="hover:opacity-80">Women&apos;s Health</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/womens-health#pcos" className="hover:opacity-80">PCOS Management</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/womens-health#menstrual-irregularities" className="hover:opacity-80">Menstrual Irregularities</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/womens-health#pap-smears" className="hover:opacity-80">Pap Smears</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/womens-health#std-testing" className="hover:opacity-80">STD Testing &amp; Management</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/contact" className="hover:opacity-80">Book / Contact</Link>
-            </nav>
+              <Info className="h-5 w-5" style={{ color: 'var(--wh-pink)' }} />
+            </div>
+            <h2 id="related-heading" className="text-base font-semibold" style={{ color: 'var(--wh-charcoal)' }}>
+              Related Women&apos;s Health Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 mb-6 items-stretch">
+            {relatedLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="wh-card group flex h-full flex-col overflow-hidden rounded-[1.5rem]"
+                style={{ boxShadow: '0 4px 18px rgba(43,34,36,0.08)' }}
+              >
+                <div className="relative w-full aspect-[4/3] overflow-hidden flex-shrink-0">
+                  <Image
+                    src={link.image}
+                    alt={link.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div
+                  className="flex-1 px-3 py-3 sm:py-4 flex items-center justify-center gap-1.5"
+                  style={{ backgroundColor: 'var(--wh-pink)' }}
+                >
+                  <span className="text-xs sm:text-sm font-semibold text-white leading-snug text-center">
+                    {link.name}
+                  </span>
+                  <ArrowRight
+                    className="h-3.5 w-3.5 flex-shrink-0 text-white transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <Link href="/contact" className="btn-outline text-sm px-5 py-2.5 inline-block">
+              Book / Contact
+            </Link>
           </div>
         </div>
       </section>
@@ -1174,17 +1259,17 @@ export default function BirthControlPage() {
       {/* ── FINAL CTA ────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: 'var(--cream)' }}
+        style={{ backgroundColor: 'var(--wh-cream)' }}
         aria-labelledby="final-cta-heading"
       >
         <div
           className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-72 w-72 rounded-full opacity-10 pointer-events-none"
-          style={{ backgroundColor: 'var(--primary)' }}
+          style={{ backgroundColor: 'var(--wh-pink)' }}
           aria-hidden="true"
         />
         <div
           className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-48 w-48 rounded-full opacity-10 pointer-events-none"
-          style={{ backgroundColor: 'var(--primary)' }}
+          style={{ backgroundColor: 'var(--wh-pink)' }}
           aria-hidden="true"
         />
 
@@ -1192,7 +1277,7 @@ export default function BirthControlPage() {
           <h2
             id="final-cta-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
-            style={{ color: 'var(--primary)' }}
+            style={{ color: 'var(--wh-pink)' }}
           >
             Schedule Your Birth Control Consultation
           </h2>
@@ -1233,6 +1318,6 @@ export default function BirthControlPage() {
           </p>
         </div>
       </section>
-    </>
+    </div>
   )
 }
