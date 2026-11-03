@@ -314,19 +314,12 @@ export default function PcosManagementPage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         <Image
-          src="/Womens-health-pcos-management.webp"
+          src="/PCOS_management_Ebenezer_OKC.webp"
           alt="PCOS management consultation at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
           className="object-cover"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.80) 48%, rgba(194,37,92,0.30) 100%)',
-          }}
-          aria-hidden="true"
+          style={{ objectPosition: 'right center' }}
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
@@ -524,10 +517,16 @@ export default function PcosManagementPage() {
 
       {/* ── PCOS & IRREGULAR PERIODS ─────────────────────────────────── */}
       <section
+        className="relative overflow-hidden"
         aria-labelledby="irregular-periods-heading"
-        style={{ backgroundColor: 'var(--wh-cream)' }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <Image
+          src="/PCOS & Irregular Periods_Ebenezer_OKC.webp"
+          alt="PCOS and irregular periods care at Ebenezer Health Clinic in Oklahoma City"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="max-w-3xl">
             <h2
               id="irregular-periods-heading"

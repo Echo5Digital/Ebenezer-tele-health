@@ -312,11 +312,11 @@ export default function MenstrualIrregularitiesPage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         <Image
-          src="/womens-health-menstrual-irregularities.webp"
+          src="/Ebenezer_Menstrual_Irregularities_OKC.webp"
           alt="Menstrual irregularities consultation at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div
           className="absolute inset-0"
@@ -521,69 +521,158 @@ export default function MenstrualIrregularitiesPage() {
 
       {/* ── IRREGULAR OR MISSED PERIODS ──────────────────────────────── */}
       <section
+        className="relative overflow-hidden"
         aria-labelledby="irregular-missed-heading"
-        style={{ backgroundColor: 'var(--wh-cream)' }}
+        style={{
+          background: 'linear-gradient(160deg, #FFFFFF 0%, #FFFFFF 55%, var(--wh-rose-soft) 100%)',
+        }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-3xl">
-            <h2
-              id="irregular-missed-heading"
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: 'var(--wh-charcoal)' }}
-            >
-              Irregular or Missed Periods
-            </h2>
-            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h2
+                id="irregular-missed-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--wh-charcoal)' }}
+              >
+                Irregular or Missed Periods
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
+              </div>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                If your menstrual cycle has become unpredictable or you are frequently missing
+                periods, it may be helpful to discuss those changes with a healthcare provider.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                During your visit, your provider can review your menstrual history, including
+                whether your cycles are typically regular, how long your cycles usually last,
+                when your last menstrual period occurred, and other symptoms or concerns you
+                may be experiencing.
+              </p>
             </div>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              If your menstrual cycle has become unpredictable or you are frequently missing
-              periods, it may be helpful to discuss those changes with a healthcare provider.
-            </p>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              During your visit, your provider can review your menstrual history, including
-              whether your cycles are typically regular, how long your cycles usually last,
-              when your last menstrual period occurred, and other symptoms or concerns you
-              may be experiencing.
-            </p>
+
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+              <div
+                className="absolute -top-6 -right-6 h-full w-full rounded-[2.5rem]"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(194,37,92,0.18) 0%, rgba(243,201,212,0.35) 100%)',
+                }}
+                aria-hidden="true"
+              />
+              <div
+                className="relative overflow-hidden rounded-[2.5rem] aspect-[4/5]"
+                style={{
+                  border: '1px solid rgba(194,37,92,0.14)',
+                  boxShadow: '0 20px 56px rgba(194,37,92,0.22)',
+                }}
+              >
+                <Image
+                  src="/irregular_periods_symptoms_ebenezer_okc.webp"
+                  alt="Irregular period symptoms discussed at Ebenezer Health Clinic in Oklahoma City"
+                  fill
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+              <div
+                className="absolute -bottom-5 left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 flex items-center gap-2.5 rounded-full px-4 py-2.5 whitespace-nowrap"
+                style={{
+                  backgroundColor: '#ffffff',
+                  border: '1px solid rgba(194,37,92,0.16)',
+                  boxShadow: '0 8px 24px rgba(194,37,92,0.18)',
+                }}
+              >
+                <Activity className="h-4 w-4 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                <span className="text-xs font-semibold" style={{ color: 'var(--wh-charcoal)' }}>
+                  Individualized Evaluation
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── HEAVY OR PAINFUL PERIODS ─────────────────────────────────── */}
-      <section className="bg-white" aria-labelledby="heavy-painful-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-3xl">
-            <h2
-              id="heavy-painful-heading"
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: 'var(--wh-charcoal)' }}
-            >
-              Heavy or Painful Periods
-            </h2>
-            <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="heavy-painful-heading"
+        style={{
+          background: 'linear-gradient(200deg, #FFFFFF 0%, #FFFFFF 55%, var(--wh-rose-soft) 100%)',
+        }}
+      >
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-none order-1">
+              <div
+                className="absolute -top-6 -left-6 h-full w-full rounded-[2.5rem]"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(194,37,92,0.18) 0%, rgba(243,201,212,0.35) 100%)',
+                }}
+                aria-hidden="true"
+              />
+              <div
+                className="relative overflow-hidden rounded-[2.5rem] aspect-[4/5]"
+                style={{
+                  border: '1px solid rgba(194,37,92,0.14)',
+                  boxShadow: '0 20px 56px rgba(194,37,92,0.22)',
+                }}
+              >
+                <Image
+                  src="/Ebenezer_heavy_pain_menstrual_irregularity.webp"
+                  alt="Heavy or painful period care at Ebenezer Health Clinic in Oklahoma City"
+                  fill
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+              <div
+                className="absolute -bottom-5 left-1/2 -translate-x-1/2 lg:left-6 lg:translate-x-0 flex items-center gap-2.5 rounded-full px-4 py-2.5 whitespace-nowrap"
+                style={{
+                  backgroundColor: '#ffffff',
+                  border: '1px solid rgba(194,37,92,0.16)',
+                  boxShadow: '0 8px 24px rgba(194,37,92,0.18)',
+                }}
+              >
+                <Activity className="h-4 w-4 flex-shrink-0" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                <span className="text-xs font-semibold" style={{ color: 'var(--wh-charcoal)' }}>
+                  Individualized Evaluation
+                </span>
+              </div>
             </div>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              Changes in menstrual flow or pain can also be an important reason to seek
-              women&apos;s health care.
-            </p>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-              If you are experiencing{' '}
-              <strong style={{ color: 'var(--wh-charcoal)' }}>
-                heavy periods, painful menstrual cycles, or changes in your usual flow
-              </strong>
-              , tell your provider about what you have noticed and how your cycle has
-              changed.
-            </p>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              Your individual evaluation will help determine what next steps may be
-              appropriate.
-            </p>
+
+            <div className="order-2">
+              <h2
+                id="heavy-painful-heading"
+                className="text-3xl md:text-4xl font-bold mb-4"
+                style={{ color: 'var(--wh-charcoal)' }}
+              >
+                Heavy or Painful Periods
+              </h2>
+              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
+                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--wh-pink)' }} />
+                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.25)' }} />
+                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(194,37,92,0.12)' }} />
+              </div>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                Changes in menstrual flow or pain can also be an important reason to seek
+                women&apos;s health care.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                If you are experiencing{' '}
+                <strong style={{ color: 'var(--wh-charcoal)' }}>
+                  heavy periods, painful menstrual cycles, or changes in your usual flow
+                </strong>
+                , tell your provider about what you have noticed and how your cycle has
+                changed.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                Your individual evaluation will help determine what next steps may be
+                appropriate.
+              </p>
+            </div>
           </div>
         </div>
       </section>

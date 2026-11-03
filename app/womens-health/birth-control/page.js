@@ -292,11 +292,11 @@ export default function BirthControlPage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         <Image
-          src="/womens-health-birth-control.webp"
+          src="/Birth_control_Ebenezer_OKC.webp"
           alt="Birth control consultation at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div
           className="absolute inset-0"

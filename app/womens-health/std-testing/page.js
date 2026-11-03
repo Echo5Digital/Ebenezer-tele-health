@@ -318,11 +318,11 @@ export default function StdTestingPage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         <Image
-          src="/womens-health-std-testing.png"
+          src="/Ebenezer_std_testing_OKC.webp"
           alt="Confidential STD testing and women's health care at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div
           className="absolute inset-0"

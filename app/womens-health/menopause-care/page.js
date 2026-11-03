@@ -306,11 +306,11 @@ export default function MenopauseCarePage() {
         className="relative overflow-hidden -mt-[112px] sm:-mt-[128px] lg:-mt-[144px] pt-[112px] sm:pt-[128px] lg:pt-[144px]"
       >
         <Image
-          src="/womens-health-menopause-care.webp"
+          src="/Ebenezer_menopause_care_okc.webp"
           alt="Menopause care consultation at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div
           className="absolute inset-0"
