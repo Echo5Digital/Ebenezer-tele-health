@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import {
   Menu, X, Phone, ArrowUpRight, ChevronDown,
   Stethoscope, Scale, Heart, Thermometer,
-  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck, ShieldCheck, FlaskConical,
+  Syringe, Droplets, Monitor, Sparkles, Pill, Activity, Repeat, Flame, ClipboardCheck, ShieldCheck, FlaskConical, Zap,
 } from 'lucide-react'
 import { BOOKING_URL } from '@/lib/constants'
 
@@ -26,8 +26,13 @@ const serviceColumnLeft = [
       { name: 'STD', href: '/womens-health/std-testing', icon: ShieldCheck, desc: 'Confidential testing & care' },
     ],
   },
-  { name: 'Injections',     href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots'   },
-  { name: 'Televisits',     href: '/telehealth',    icon: Monitor,      desc: 'See a provider online'  },
+  {
+    name: 'Injections',     href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots',
+    children: [
+      { name: 'Migraine Relief Injection', href: '/migraine-relief-injection-bethany-ok', icon: Zap, desc: 'Pain & nausea relief' },
+    ],
+  },
+  { name: 'Televisits',    href: '/telehealth',    icon: Monitor,      desc: 'See a provider online'  },
 ]
 
 const serviceColumnRight = [
