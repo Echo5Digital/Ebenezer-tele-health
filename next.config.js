@@ -28,6 +28,12 @@ const nextConfig = {
         destination: '/medical-weight-loss',
         permanent: true,
       },
+      // 301 permanent redirect: old migraine injection slug → moved under /injections
+      {
+        source: '/migraine-relief-injection-bethany-ok',
+        destination: '/injections/migraine-relief-injection-bethany-ok',
+        permanent: true,
+      },
     ]
   },
 }

@@ -111,7 +111,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/migraine-relief-injection-bethany-ok`,
+      url: `${baseUrl}/injections/migraine-relief-injection-bethany-ok`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
