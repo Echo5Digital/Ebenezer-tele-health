@@ -13,6 +13,12 @@ const PAGE_TITLE = 'Migraine Relief Injection in Bethany, OK | Ebenezer'
 const PAGE_DESCRIPTION =
   'Get migraine pain and nausea relief with a $50 injection at Ebenezer Health Clinic in Bethany, OK. Call (405) 349-8188 to schedule your visit.'
 const BANNER_IMAGE = '/ebinizer migraine banne.jpeg'
+const PROCEDURE_IMAGE = '/migraine-relief-injection-bethany-ok.jpg'
+// Shared by the <Image> alt attributes and the ImageObject captions in the schema.
+const BANNER_ALT =
+  'Woman pressing her temples in migraine pain, seeking a migraine relief injection in Bethany, OK'
+const PROCEDURE_IMAGE_ALT =
+  'Woman on a sofa holding her forehead with migraine headache pain, needing migraine pain relief injection in Bethany, OK'
 
 export const metadata = {
   // `absolute` skips the "%s | Ebenezer Health Clinic" template in app/layout.js
@@ -53,6 +59,9 @@ export const metadata = {
 // One @graph, cross-linked by @id, consistent with other service sub-pages
 // (see app/iv-therapy/myers-cocktail/page.js for the pattern).
 
+const BANNER_URL = `${SITE}${encodeURI(BANNER_IMAGE)}`
+const PROCEDURE_IMAGE_URL = `${SITE}${encodeURI(PROCEDURE_IMAGE)}`
+
 const migraineSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -63,9 +72,13 @@ const migraineSchema = {
       name: PAGE_TITLE,
       headline: 'Migraine Relief Injection in Bethany, OK',
       description: PAGE_DESCRIPTION,
+      inLanguage: 'en-US',
       isPartOf: { '@id': `${SITE}/injections#webpage` },
-      about: { '@id': `${PAGE_URL}#procedure` },
+      breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
+      primaryImageOfPage: { '@id': `${PAGE_URL}#primaryimage` },
+      about: [{ '@id': `${PAGE_URL}#procedure` }, { '@id': `${PAGE_URL}#condition` }],
       mainEntity: { '@id': `${PAGE_URL}#procedure` },
+      mentions: [{ '@id': `${PAGE_URL}#toradol` }, { '@id': `${PAGE_URL}#zofran` }],
       provider: { '@id': `${SITE}/#organization` },
       areaServed: [
         { '@type': 'City', name: 'Bethany' },
@@ -75,18 +88,32 @@ const migraineSchema = {
       medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patients' },
     },
     {
-      '@type': 'MedicalProcedure',
+      // MedicalTherapy (a TherapeuticProcedure) so `drug` and `contraindication` are valid.
+      '@type': 'MedicalTherapy',
       '@id': `${PAGE_URL}#procedure`,
       name: 'Migraine Relief Injection',
-      procedureType: 'TherapeuticProcedure',
+      alternateName: ['Migraine Injection', 'Toradol and Zofran Injection'],
+      procedureType: 'https://schema.org/PercutaneousProcedure',
       description:
         'A provider-administered intramuscular injection combining Toradol (ketorolac) for acute migraine pain and Zofran (ondansetron) for nausea and vomiting, given after a brief medical evaluation at Ebenezer Health Clinic in Bethany, OK.',
       bodyLocation: 'Intramuscular',
+      image: { '@id': `${PAGE_URL}#procedure-image` },
+      preparation:
+        'A brief medical evaluation in which the provider reviews your symptoms, medical history, current medications, allergies, and relevant health conditions to determine whether the injection is safe and appropriate for you.',
+      howPerformed:
+        'If treatment is appropriate, Toradol (ketorolac) and Zofran (ondansetron) are administered as an intramuscular (IM) injection by a qualified healthcare professional. The injection itself takes only a short time.',
+      followup:
+        'You may be asked to rest at the clinic while the medications begin taking effect. Before you leave, the provider explains precautions, possible side effects, and when to seek additional medical attention. Patients with frequent or recurring migraines may be advised to pursue further evaluation or an ongoing migraine management plan.',
+      contraindication:
+        'Not appropriate for everyone; the provider reviews your medical history before treatment. Tell the provider if you have kidney disease or reduced kidney function; stomach ulcers, gastrointestinal bleeding, or bleeding disorders; take blood thinners, aspirin, ibuprofen, naproxen, or other NSAIDs; have had an allergic reaction to NSAIDs or either medication; are pregnant, planning pregnancy, or breastfeeding; have a heart rhythm disorder such as long QT syndrome or take medications that affect heart rhythm; or have a history of heart disease, stroke, dehydration, or other significant medical conditions.',
+      drug: [{ '@id': `${PAGE_URL}#toradol` }, { '@id': `${PAGE_URL}#zofran` }],
       provider: { '@id': `${SITE}/#organization` },
       areaServed: { '@type': 'City', name: 'Bethany' },
       offers: {
         '@type': 'Offer',
         name: 'Migraine Relief Injection',
+        description:
+          'Advertised flat fee for the Migraine Relief Injection. Contact the clinic to confirm whether additional evaluation or services involve separate charges.',
         price: '50',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
@@ -95,8 +122,73 @@ const migraineSchema = {
       },
     },
     {
+      '@type': 'MedicalCondition',
+      '@id': `${PAGE_URL}#condition`,
+      name: 'Migraine',
+      alternateName: 'Migraine headache',
+      description:
+        'Migraine attacks can bring intense headache pain, nausea, vomiting, and sensitivity to light or sound.',
+      signOrSymptom: [
+        { '@type': 'MedicalSymptom', name: 'Headache' },
+        { '@type': 'MedicalSymptom', name: 'Nausea' },
+        { '@type': 'MedicalSymptom', name: 'Vomiting' },
+        { '@type': 'MedicalSymptom', name: 'Sensitivity to light' },
+        { '@type': 'MedicalSymptom', name: 'Sensitivity to sound' },
+      ],
+      possibleTreatment: { '@id': `${PAGE_URL}#procedure` },
+      sameAs: 'https://en.wikipedia.org/wiki/Migraine',
+    },
+    {
+      '@type': 'Drug',
+      '@id': `${PAGE_URL}#toradol`,
+      name: 'Toradol',
+      alternateName: 'Ketorolac',
+      nonProprietaryName: 'ketorolac',
+      activeIngredient: 'Ketorolac',
+      description:
+        'A prescription nonsteroidal anti-inflammatory drug (NSAID) used for short-term management of moderate to severe acute pain. It helps reduce pain and inflammation and may be used by healthcare providers as part of acute migraine treatment.',
+      drugClass: { '@type': 'DrugClass', name: 'Nonsteroidal anti-inflammatory drug (NSAID)' },
+      administrationRoute: 'Intramuscular',
+      prescriptionStatus: 'https://schema.org/PrescriptionOnly',
+      warning:
+        'May increase the risk of gastrointestinal bleeding, kidney problems, and cardiovascular complications. Intended for short-term acute pain management only, not routine or long-term migraine prevention. Has important pregnancy-related risks and restrictions.',
+      sameAs: 'https://en.wikipedia.org/wiki/Ketorolac',
+    },
+    {
+      '@type': 'Drug',
+      '@id': `${PAGE_URL}#zofran`,
+      name: 'Zofran',
+      alternateName: 'Ondansetron',
+      nonProprietaryName: 'ondansetron',
+      activeIngredient: 'Ondansetron',
+      description:
+        'An anti-nausea medication that helps control nausea and vomiting. It may be especially useful when migraine symptoms make eating, drinking, or taking oral medication difficult.',
+      drugClass: { '@type': 'DrugClass', name: 'Antiemetic (anti-nausea medication)' },
+      administrationRoute: 'Intramuscular',
+      prescriptionStatus: 'https://schema.org/PrescriptionOnly',
+      warning:
+        'May affect heart rhythm in susceptible patients, including those with long QT syndrome. A medical evaluation is necessary before treatment.',
+      sameAs: 'https://en.wikipedia.org/wiki/Ondansetron',
+    },
+    {
+      '@type': 'ImageObject',
+      '@id': `${PAGE_URL}#primaryimage`,
+      url: BANNER_URL,
+      contentUrl: BANNER_URL,
+      caption: BANNER_ALT,
+    },
+    {
+      '@type': 'ImageObject',
+      '@id': `${PAGE_URL}#procedure-image`,
+      url: PROCEDURE_IMAGE_URL,
+      contentUrl: PROCEDURE_IMAGE_URL,
+      caption: PROCEDURE_IMAGE_ALT,
+    },
+    {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
+      url: PAGE_URL,
+      isPartOf: { '@id': `${PAGE_URL}#webpage` },
       mainEntity: migraineFaqs.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
@@ -310,7 +402,7 @@ export default function MigraineReliefInjectionPage() {
       >
         <Image
           src={BANNER_IMAGE}
-          alt="Woman holding her temples while experiencing a migraine, seeking migraine relief in Bethany, Oklahoma"
+          alt={BANNER_ALT}
           fill
           priority
           sizes="100vw"
@@ -404,7 +496,7 @@ export default function MigraineReliefInjectionPage() {
       >
         <Image
           src="/answer_block.webp"
-          alt="Soft clinic-blue background for the migraine relief injection introduction"
+          alt="Stethoscope wrapped around a smartphone, representing provider evaluation for a migraine relief injection at Ebenezer Health Clinic"
           fill
           sizes="100vw"
           className="object-cover"
@@ -504,8 +596,8 @@ export default function MigraineReliefInjectionPage() {
               }}
             >
               <Image
-                src="/woman-with-migraine-headache.jpg"
-                alt="Woman sitting on a sofa with her hand on her forehead, suffering from a migraine headache"
+                src={PROCEDURE_IMAGE}
+                alt={PROCEDURE_IMAGE_ALT}
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover object-[35%_center]"

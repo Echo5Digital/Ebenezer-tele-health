@@ -16,6 +16,7 @@ export const metadata = {
 const injectionsPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
+  '@id': 'https://www.ebenezerhealthclinic.com/injections#webpage',
   name: 'Vitamin & B12 Injections in Oklahoma City | Ebenezer Health Clinic',
   description:
     'Vitamin and B12 injections in Oklahoma City at Ebenezer Health Clinic. Given after a brief provider evaluation. Walk-ins welcome. Cash-pay, no insurance required.',
