@@ -8,7 +8,7 @@ import MigraineReliefFAQAccordion from './MigraineReliefFAQAccordion'
 import { migraineFaqs } from './migraineFaqs'
 
 const SITE = 'https://www.ebenezerhealthclinic.com'
-const PAGE_URL = `${SITE}/migraine-relief-injection-bethany-ok`
+const PAGE_URL = `${SITE}/injections/migraine-relief-injection-bethany-ok`
 const PAGE_TITLE = 'Migraine Relief Injection in Bethany, OK | Ebenezer'
 const PAGE_DESCRIPTION =
   'Get migraine pain and nausea relief with a $50 injection at Ebenezer Health Clinic in Bethany, OK. Call (405) 349-8188 to schedule your visit.'

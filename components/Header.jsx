@@ -29,7 +29,7 @@ const serviceColumnLeft = [
   {
     name: 'Injections',     href: '/injections',    icon: Syringe,      desc: 'Vitamin & B12 shots',
     children: [
-      { name: 'Migraine Relief Injection', href: '/migraine-relief-injection-bethany-ok', icon: Zap, desc: 'Pain & nausea relief' },
+      { name: 'Migraine Relief Injection', href: '/injections/migraine-relief-injection-bethany-ok', icon: Zap, desc: 'Pain & nausea relief' },
     ],
   },
   { name: 'Televisits',    href: '/telehealth',    icon: Monitor,      desc: 'See a provider online'  },
