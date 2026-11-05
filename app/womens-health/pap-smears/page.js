@@ -308,7 +308,7 @@ export default function PapSmearsPage() {
           alt="Pap smear women's health screening at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[70%_center] sm:object-center"
         />
         <div
           className="absolute inset-0"

@@ -322,7 +322,7 @@ export default function StdTestingPage() {
           alt="Confidential STD testing and women's health care at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[70%_center] sm:object-center"
         />
         <div
           className="absolute inset-0"

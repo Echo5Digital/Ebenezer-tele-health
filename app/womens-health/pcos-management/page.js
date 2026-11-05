@@ -318,8 +318,16 @@ export default function PcosManagementPage() {
           alt="PCOS management consultation at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover"
-          style={{ objectPosition: 'right center' }}
+          className="object-cover object-[85%_center] sm:object-right"
+        />
+        {/* Mobile: top-to-bottom fade so text stays legible over the right-weighted crop */}
+        <div
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.82) 100%)',
+          }}
+          aria-hidden="true"
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
