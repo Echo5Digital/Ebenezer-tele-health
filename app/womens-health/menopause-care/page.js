@@ -310,13 +310,23 @@ export default function MenopauseCarePage() {
           alt="Menopause care consultation at Ebenezer Health Clinic in Oklahoma City"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[70%_center] sm:object-center"
         />
+        {/* Desktop: solid white on the text side fading to the photo on the right */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hidden sm:block"
           style={{
             background:
               'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.80) 48%, rgba(194,37,92,0.30) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        {/* Mobile: top-to-bottom fade so text stays legible over the right-weighted crop */}
+        <div
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.82) 100%)',
           }}
           aria-hidden="true"
         />
