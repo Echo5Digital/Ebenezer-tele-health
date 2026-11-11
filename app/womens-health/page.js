@@ -98,7 +98,7 @@ const womensHealthPageSchema = {
       '@type': 'Offer',
       name: "Women's Health In-Person Initial Visit",
       priceCurrency: 'USD',
-      price: '75',
+      price: '100',
       description:
         'Comprehensive symptom review, lab orders included, lab interpretation, and personalized treatment plan.',
     },
@@ -1644,7 +1644,7 @@ export default function WomensHealthPage() {
                   className="text-5xl"
                   style={{ color: 'var(--wh-pink)', fontFamily: 'var(--font-wh-heading)' }}
                 >
-                  $75
+                  $100
                 </span>
                 <span className="text-sm" style={{ color: '#9a8a8e' }}>initial visit</span>
               </div>

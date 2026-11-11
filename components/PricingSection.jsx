@@ -5,7 +5,7 @@ const plans = [
   {
     name: "Women's Health Visit",
     price: 'from $50',
-    note: 'In-person initial $75 · Follow-up $50',
+    note: 'In-person initial $100 · Follow-up $50',
     description: "Comprehensive virtual care for women's health needs including birth control, hormonal health, and more.",
     features: [
       'Video visit with Dr. Susan George',
