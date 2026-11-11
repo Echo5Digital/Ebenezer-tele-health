@@ -453,16 +453,10 @@ export default function IVHydrationPage() {
                 bloodstream through an intravenous line. Depending on the formulation, IV therapy
                 may also include vitamins, minerals, and other supplemental nutrients.
               </p>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 At Ebenezer Health Clinic, we offer IV hydration services with an emphasis on
                 patient safety, individualized assessment, and informed treatment decisions.
               </p>
-              <a
-                href="#iv-hydration-treatments"
-                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Explore Your IV Hydration Options
-              </a>
             </div>
 
             <div className="flex flex-col gap-5">
@@ -490,6 +484,15 @@ export default function IVHydrationPage() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="flex justify-center mt-10 md:mt-12">
+            <a
+              href="#iv-hydration-treatments"
+              className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+            >
+              Explore Your IV Hydration Options
+            </a>
           </div>
         </div>
       </section>
