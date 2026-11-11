@@ -502,7 +502,7 @@ export default function IVHydrationPage() {
         style={{ backgroundColor: TINT }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl mb-10 md:mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
             <h2
               id="treatments-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
@@ -510,7 +510,7 @@ export default function IVHydrationPage() {
             >
               IV Hydration Treatments Available in Oklahoma City
             </h2>
-            <AccentBars />
+            <AccentBars center />
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Ebenezer Health Clinic provides several IV hydration and nutrient therapy options,
               subject to medical evaluation and treatment availability.
@@ -729,7 +729,7 @@ export default function IVHydrationPage() {
       {/* ── HEALTH & SAFETY SCREENING ────────────────────────────── */}
       <section aria-labelledby="safety-screening-heading" style={{ backgroundColor: TINT }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl mb-10 md:mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
             <h2
               id="safety-screening-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
@@ -737,7 +737,7 @@ export default function IVHydrationPage() {
             >
               Health &amp; Safety Screening Before IV Hydration
             </h2>
-            <AccentBars />
+            <AccentBars center />
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
               Patient safety is a priority at Ebenezer Health Clinic. Before receiving IV
               hydration, every patient must complete appropriate health screening and clinical
@@ -1175,14 +1175,17 @@ export default function IVHydrationPage() {
           </div>
 
           <div
-            className="rounded-2xl overflow-hidden shadow-sm bg-white mb-6"
-            style={{ border: CARD_BORDER }}
+            className="rounded-2xl overflow-hidden shadow-sm mb-6"
+            style={{
+              backgroundColor: 'rgba(26,166,183,0.08)',
+              border: '1px solid rgba(26,166,183,0.30)',
+            }}
           >
             {pricingRows.map(({ label, value }, index) => (
               <div
                 key={label}
                 className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-6 px-6 py-4"
-                style={index > 0 ? { borderTop: '1px solid rgba(26,166,183,0.15)' } : undefined}
+                style={index > 0 ? { borderTop: '1px solid rgba(26,166,183,0.22)' } : undefined}
               >
                 <span className="font-bold" style={{ color: 'var(--navy)' }}>
                   {label}
