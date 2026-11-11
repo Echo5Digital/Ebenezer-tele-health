@@ -352,6 +352,16 @@ export default function IVHydrationPage() {
           }}
           aria-hidden="true"
         />
+        {/* Mobile only: white fade at the bottom of the image, behind the buttons, so the
+            "Call" button text stays readable */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-64 sm:hidden"
+          style={{
+            background:
+              'linear-gradient(to top, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.90) 50%, rgba(255,255,255,0) 100%)',
+          }}
+          aria-hidden="true"
+        />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
           <div className="max-w-2xl">
             {/* Breadcrumb */}
@@ -629,7 +639,9 @@ export default function IVHydrationPage() {
 
                 <Link
                   href="/contact"
-                  className={`${t.onRequest ? 'btn-outline' : 'btn-primary'} text-sm px-6 py-3 w-full text-center`}
+                  className={`${
+                    t.onRequest ? 'btn-outline max-md:bg-primary max-md:text-white' : 'btn-primary'
+                  } text-sm px-6 py-3 w-full text-center`}
                 >
                   {t.cta}
                 </Link>

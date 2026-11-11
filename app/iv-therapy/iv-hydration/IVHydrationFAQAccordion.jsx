@@ -60,7 +60,8 @@ export default function IVHydrationFAQAccordion() {
     <Accordion type="single" collapsible className="w-full">
       {ivHydrationFaqs.map((faq) => (
         <AccordionItem key={faq.id} value={faq.id}>
-          <AccordionTrigger>{faq.question}</AccordionTrigger>
+          {/* hover:text-navy overrides the shared trigger's blue hover so questions keep their colour */}
+          <AccordionTrigger className="hover:text-navy">{faq.question}</AccordionTrigger>
           <AccordionContent>
             {/* "faq-answer" class - speakable schema target; do not rename */}
             <p className="faq-answer">{withPhoneLink(faq.answer)}</p>
