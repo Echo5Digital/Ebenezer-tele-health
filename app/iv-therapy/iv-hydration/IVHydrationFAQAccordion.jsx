@@ -4,91 +4,66 @@
  * IVHydrationFAQAccordion - Client Component
  * CSS class "faq-answer" is referenced by SpeakableSpecification schema.
  * Do not remove or rename that class.
+ *
+ * Uses a local force-mounted AccordionContent (Radix `forceMount`) so answer
+ * text is present in the server-rendered DOM even while collapsed — the
+ * shared components/ui/accordion.jsx unmounts collapsed content, which keeps
+ * FAQ answers out of the initial HTML (schema-only, the recurring AEO bug).
  */
 
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import {
   Accordion,
-  AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import { ivHydrationFaqs } from './ivHydrationFaqs'
 
-const faqs = [
-  {
-    id: 'ivh-faq-1',
-    question: 'Does Ebenezer Health Clinic offer IV hydration?',
-    answer:
-      "Yes. IV hydration is available as part of Ebenezer Health Clinic's IV Hydration & Injections services.",
-  },
-  {
-    id: 'ivh-faq-2',
-    question: 'Where can I get IV hydration in the Oklahoma City area?',
-    answer:
-      'Ebenezer Health Clinic provides IV hydration from its Bethany location serving Oklahoma City and surrounding communities.',
-  },
-  {
-    id: 'ivh-faq-3',
-    question: 'What is the Wellness Mix?',
-    answer:
-      'Wellness Mix is an IV hydration option offered by Ebenezer Health Clinic. Contact the clinic for current information about its formulation, availability, and pricing.',
-  },
-  {
-    id: 'ivh-faq-4',
-    question: 'Do I need to complete a questionnaire before IV hydration?',
-    answer:
-      'Yes. The IV/IM Injection Questionnaire collects relevant health and safety information before treatment.',
-  },
-  {
-    id: 'ivh-faq-5',
-    question: 'What if I am not sure whether I need IV hydration or an injection?',
-    answer: (
-      <>
-        The questionnaire includes a{' '}
-        <strong>&ldquo;Not sure – discuss with clinician&rdquo;</strong>{' '}
-        option. Your clinician can review your concerns and discuss
-        appropriate options.
-      </>
-    ),
-  },
-  {
-    id: 'ivh-faq-6',
-    question: 'Does completing the questionnaire mean I am approved for IV hydration?',
-    answer:
-      'No. The questionnaire is a screening tool and does not replace clinical evaluation or guarantee treatment.',
-  },
-  {
-    id: 'ivh-faq-7',
-    question: 'Is IV hydration available through telehealth?',
-    answer: 'No. IV hydration requires in-person administration.',
-  },
-  {
-    id: 'ivh-faq-8',
-    question: 'Does Ebenezer Health Clinic also offer vitamin injections?',
-    answer: (
-      <>
-        Yes. The clinic offers <strong>Vitamin B12 Injection</strong> and{' '}
-        <strong>Glutathione Injection</strong>, with Glutathione available by
-        special order upon request.
-      </>
-    ),
-  },
-  {
-    id: 'ivh-faq-9',
-    question: 'How much does IV hydration cost?',
-    answer:
-      'Contact Ebenezer Health Clinic for current IV hydration pricing. Only clinic-confirmed pricing should be published on the website.',
-  },
-]
+const PHONE_DISPLAY = '(405) 349-8188'
+const PHONE_HREF = 'tel:+14053498188'
+
+// Turns the clinic phone number inside an FAQ answer into a tap-to-call link.
+// The answer text itself stays a plain string so the FAQPage schema is unchanged.
+function withPhoneLink(text) {
+  const parts = text.split(PHONE_DISPLAY)
+  if (parts.length === 1) return text
+  return parts.flatMap((part, index) =>
+    index < parts.length - 1
+      ? [
+          part,
+          <a
+            key={`phone-${index}`}
+            href={PHONE_HREF}
+            className="font-semibold"
+            style={{ color: 'var(--primary)' }}
+          >
+            {PHONE_DISPLAY}
+          </a>,
+        ]
+      : [part],
+  )
+}
+
+function AccordionContent({ children }) {
+  return (
+    <AccordionPrimitive.Content
+      forceMount
+      className="overflow-hidden text-sm h-0 data-[state=closed]:animate-accordion-up data-[state=open]:h-auto data-[state=open]:animate-accordion-down"
+    >
+      <div className="pb-5 pt-1">{children}</div>
+    </AccordionPrimitive.Content>
+  )
+}
 
 export default function IVHydrationFAQAccordion() {
   return (
     <Accordion type="single" collapsible className="w-full">
-      {faqs.map((faq) => (
+      {ivHydrationFaqs.map((faq) => (
         <AccordionItem key={faq.id} value={faq.id}>
           <AccordionTrigger>{faq.question}</AccordionTrigger>
           <AccordionContent>
             {/* "faq-answer" class - speakable schema target; do not rename */}
-            <p className="faq-answer">{faq.answer}</p>
+            <p className="faq-answer">{withPhoneLink(faq.answer)}</p>
           </AccordionContent>
         </AccordionItem>
       ))}

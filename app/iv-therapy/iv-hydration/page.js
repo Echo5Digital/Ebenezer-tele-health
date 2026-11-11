@@ -1,241 +1,325 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-  Info,
-  Droplets,
-  Sparkles,
-  Syringe,
-  ClipboardList,
-  ShieldCheck,
-  MapPin,
-  CheckCircle2,
+  AlertCircle,
+  Building2,
   CalendarCheck,
+  CheckCircle2,
+  ClipboardCheck,
+  ClipboardList,
+  Droplets,
+  FlaskConical,
+  HeartPulse,
+  Info,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  Stethoscope,
+  Syringe,
   UserCheck,
-  MessageSquareText,
 } from 'lucide-react'
-import Testimonials from '@/components/Testimonials'
 import IVHydrationFAQAccordion from './IVHydrationFAQAccordion'
+import { PAGE_URL, buildIVHydrationSchema } from './ivHydrationSchema'
+
+const PAGE_TITLE = "IV Hydration & Myers' Cocktail in OKC | Ebenezer Clinic"
+const PAGE_DESCRIPTION =
+  "Explore IV hydration and Myers' Cocktail in the Oklahoma City area at Ebenezer Health Clinic. Tri-Immune Boost and Nutrient Mix available on request."
+const PAGE_KEYWORDS = [
+  'IV Hydration in Oklahoma City',
+  "Myers' Cocktail IV Oklahoma City",
+  'IV Hydration Bethany OK',
+  'IV Vitamin Therapy Oklahoma City',
+  'Tri-Immune Boost IV',
+  'Nutrient Mix IV Therapy',
+  'Wellness IV Hydration OKC',
+  'IV Hydration Clinic Near Oklahoma City',
+]
+const SHARE_IMAGE = '/iv-therapy-hydration.webp'
 
 export const metadata = {
-  title: 'IV Hydration Oklahoma City',
-  description:
-    'IV hydration in the Oklahoma City area with clinical screening before treatment. Schedule IV hydration at Ebenezer Health Clinic in Bethany, OK.',
-  keywords: [
-    'IV Hydration Oklahoma City',
-    'IV Hydration OKC',
-    'IV Therapy Oklahoma City',
-    'IV Therapy OKC',
-    'IV Hydration Bethany OK',
-    'IV Hydration Clinic Oklahoma City',
-    'IV Hydration Near Oklahoma City',
-    'IV Hydration Services Oklahoma City',
-  ],
+  // `absolute` skips the "%s | Ebenezer Health Clinic" template in app/layout.js
+  // so the title is exactly the one supplied for this page.
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   alternates: {
-    canonical: 'https://www.ebenezerhealthclinic.com/iv-therapy/iv-hydration',
+    canonical: PAGE_URL,
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.ebenezerhealthclinic.com/iv-therapy/iv-hydration',
+    url: PAGE_URL,
     siteName: 'Ebenezer Health Clinic',
-    title: 'IV Hydration Oklahoma City | Ebenezer Health Clinic',
-    description:
-      'IV hydration in the Oklahoma City area with clinical screening before treatment. Schedule IV hydration at Ebenezer Health Clinic in Bethany, OK.',
-    images: ['/iv-therapy-hydration.webp'],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [SHARE_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IV Hydration Oklahoma City | Ebenezer Health Clinic',
-    description:
-      'IV hydration in the Oklahoma City area with clinical screening before treatment. Schedule IV hydration at Ebenezer Health Clinic in Bethany, OK.',
-    images: ['/iv-therapy-hydration.webp'],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [SHARE_IMAGE],
   },
 }
 
-// ─── Schema ───────────────────────────────────────────────────────────────────
+// ─── Page content ─────────────────────────────────────────────────────────────
 
-const SITE = 'https://www.ebenezerhealthclinic.com'
-const PAGE_URL = `${SITE}/iv-therapy/iv-hydration`
-
-const ivHydrationSchemaGraph = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'MedicalWebPage',
-      '@id': `${PAGE_URL}#webpage`,
-      url: PAGE_URL,
-      name: 'IV Hydration Oklahoma City | Ebenezer Health Clinic',
-      headline: 'IV Hydration in Oklahoma City',
-      description:
-        'IV hydration in the Oklahoma City area with clinical screening before treatment. Schedule IV hydration at Ebenezer Health Clinic in Bethany, OK.',
-      isPartOf: { '@id': `${SITE}/iv-therapy#webpage` },
-      about: { '@id': `${PAGE_URL}#procedure` },
-      mainEntity: { '@id': `${PAGE_URL}#procedure` },
-      provider: { '@id': `${SITE}/#organization` },
-      areaServed: [
-        { '@type': 'City', name: 'Oklahoma City' },
-        { '@type': 'City', name: 'Bethany' },
-        { '@type': 'State', name: 'Oklahoma' },
-      ],
-      medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patients' },
-    },
-    {
-      '@type': 'MedicalProcedure',
-      '@id': `${PAGE_URL}#procedure`,
-      name: 'IV Hydration',
-      procedureType: 'TherapeuticProcedure',
-      description:
-        'IV hydration at Ebenezer Health Clinic is provided after a health and safety questionnaire and appropriate clinical evaluation to help determine whether treatment is suitable.',
-      bodyLocation: 'Intravenous',
-      provider: { '@id': `${SITE}/#organization` },
-      areaServed: { '@type': 'City', name: 'Oklahoma City' },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Does Ebenezer Health Clinic offer IV hydration?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Yes. IV hydration is available as part of Ebenezer Health Clinic's IV Hydration & Injections services.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Where can I get IV hydration in the Oklahoma City area?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ebenezer Health Clinic provides IV hydration from its Bethany location serving Oklahoma City and surrounding communities.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the Wellness Mix?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Wellness Mix is an IV hydration option offered by Ebenezer Health Clinic. Contact the clinic for current information about its formulation, availability, and pricing.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I need to complete a questionnaire before IV hydration?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. The IV/IM Injection Questionnaire collects relevant health and safety information before treatment.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What if I am not sure whether I need IV hydration or an injection?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The questionnaire includes a "Not sure – discuss with clinician" option. Your clinician can review your concerns and discuss appropriate options.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does completing the questionnaire mean I am approved for IV hydration?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. The questionnaire is a screening tool and does not replace clinical evaluation or guarantee treatment.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is IV hydration available through telehealth?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. IV hydration requires in-person administration.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Ebenezer Health Clinic also offer vitamin injections?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. The clinic offers Vitamin B12 Injection and Glutathione Injection, with Glutathione available by special order upon request.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does IV hydration cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Contact Ebenezer Health Clinic for current IV hydration pricing. Only clinic-confirmed pricing should be published on the website.',
-          },
-        },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${PAGE_URL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'IV Therapy', item: `${SITE}/iv-therapy` },
-        { '@type': 'ListItem', position: 3, name: 'IV Hydration', item: PAGE_URL },
-      ],
-    },
-  ],
-}
-
-const safetyScreeningItems = [
-  'Allergies',
-  'Previous reactions to IVs or injections',
-  'Pregnancy, breastfeeding, or trying to conceive',
-  'Kidney disease or kidney stones',
-  'Dialysis',
-  'Heart disease',
-  'Heart failure',
-  'Swelling or edema',
-  'Fluid restrictions',
-  'Liver disease',
-  'Blood pressure concerns',
-  'Fainting or dizziness',
-  'Diabetes or blood glucose concerns',
-  'Bleeding conditions',
-  'Blood-thinning medications',
-  'Immune suppression',
-  'Chemotherapy',
-  'Infection, fever, or recent illness',
-  'Current medications',
-  'Recent treatments',
+const heroBadges = [
+  { icon: Building2, label: 'In-Person IV Therapy' },
+  { icon: ClipboardCheck, label: 'Clinical Screening Required' },
+  { icon: UserCheck, label: 'Individualized Care' },
 ]
 
-const dayOfScreeningItems = [
-  'Chest pain',
-  'Trouble breathing',
-  'Confusion',
-  'Severe weakness',
-  'Neurological symptoms',
-  'Vomiting or diarrhea',
-  'Difficulty keeping fluids down',
-  'Severe dehydration',
-  'Rash, infection, burns, injury, or swelling near the treatment site',
-  'Alcohol or recreational drug use within the previous 24 hours',
-  'Whether you have eaten recently',
-  'Recent water or fluid intake',
-  'Any additional concerns',
+const treatments = [
+  {
+    id: 'myers-cocktail',
+    icon: Droplets,
+    title: 'Myers’ Cocktail IV Hydration',
+    onRequest: false,
+    intro: [
+      'Myers’ Cocktail is an intravenous nutrient formulation containing fluids, B vitamins, vitamin C, magnesium, and calcium.',
+      'These nutrients contribute to important physiological processes, including normal energy metabolism, muscle and nerve function, and immune system health.',
+      'Myers’ Cocktail IV hydration provides supplemental fluids and nutrients directly into the bloodstream. However, the normal roles of these nutrients do not establish that IV administration improves energy, immunity, or overall wellness in individuals who already have adequate nutrient levels.',
+      'At Ebenezer Health Clinic, Myers’ Cocktail IV hydration is offered following appropriate medical screening and provider evaluation.',
+    ],
+    details: [{ label: 'Availability and Pricing', value: 'Contact the Clinic' }],
+    cta: 'Ask About Myers’ Cocktail IV Hydration',
+  },
+  {
+    id: 'wellness-mix',
+    icon: Sparkles,
+    title: 'Wellness Mix IV Hydration',
+    onRequest: false,
+    intro: [
+      'Wellness Mix is an IV hydration option available at Ebenezer Health Clinic in the Oklahoma City area.',
+      "Previously referred to as the Beauty Mix, this service is now presented as Wellness Mix to better reflect its place within the clinic's IV hydration and wellness services.",
+      'The specific formulation, ingredients, and suitability of Wellness Mix should be discussed with our healthcare provider before treatment.',
+      'Patients must complete appropriate health and safety screening before receiving this service.',
+    ],
+    details: [{ label: 'Availability and Pricing', value: 'Contact the Clinic' }],
+    cta: 'Ask About Wellness Mix',
+  },
+  {
+    id: 'tri-immune-boost',
+    icon: ShieldCheck,
+    title: 'Tri-Immune Boost',
+    onRequest: true,
+    intro: [
+      'Tri-Immune Boost is a nutrient formulation containing vitamin C, glutathione, and zinc.',
+      "These nutrients are involved in normal immune system function and the body's natural antioxidant defenses.",
+    ],
+    ingredients: [
+      {
+        label: 'Vitamin C',
+        text: 'Contributes to normal immune function and helps protect cells from oxidative stress.',
+      },
+      {
+        label: 'Glutathione',
+        text: 'A naturally occurring antioxidant involved in cellular protection against oxidative damage.',
+      },
+      {
+        label: 'Zinc',
+        text: 'An essential mineral that supports normal immune function and numerous cellular processes.',
+      },
+    ],
+    outro: [
+      'Although these nutrients play important roles in maintaining normal health, Tri-Immune Boost has not been proven to prevent infections. Additional nutrient administration does not guarantee improved immune protection when nutrient levels are adequate.',
+      'Tri-Immune Boost is available on request at Ebenezer Health Clinic, subject to formulation availability and medical evaluation.',
+    ],
+    details: [
+      { label: 'Availability', value: 'On Request' },
+      { label: 'Pricing', value: 'Contact the Clinic' },
+    ],
+    cta: 'Ask About Tri-Immune Boost',
+  },
+  {
+    id: 'nutrient-mix',
+    icon: FlaskConical,
+    title: 'Nutrient Mix',
+    onRequest: true,
+    intro: [
+      'Nutrient Mix combines vitamin C, biotin, and Vita Complex to provide supplemental vitamins involved in normal cellular function and nutrient metabolism.',
+    ],
+    ingredients: [
+      {
+        label: 'Vitamin C',
+        text: 'Supports collagen formation, normal immune function, and antioxidant protection.',
+      },
+      {
+        label: 'Biotin',
+        text: 'A B vitamin involved in the metabolism of carbohydrates, fats, and proteins.',
+      },
+      {
+        label: 'Vita Complex',
+        text: 'A supplemental vitamin formulation whose specific composition determines its nutritional roles and potential effects.',
+      },
+    ],
+    outro: [
+      "Nutrient Mix provides additional vitamins, but its potential benefits depend on the specific Vita Complex formulation and the patient's nutritional and medical needs.",
+      'There is insufficient evidence to assume that IV nutrient supplementation provides additional general wellness benefits to individuals who already have adequate nutrient levels.',
+      'At Ebenezer Health Clinic, Nutrient Mix is available on request following clinical assessment.',
+    ],
+    details: [
+      { label: 'Availability', value: 'On Request' },
+      { label: 'Pricing', value: 'Contact the Clinic' },
+    ],
+    cta: 'Ask About Nutrient Mix',
+  },
+]
+
+const medicalHistoryItems = [
+  'Kidney disease, kidney stones, or dialysis',
+  'Heart disease, heart failure, or fluid restrictions',
+  'High or low blood pressure',
+  'Liver disease',
+  'Diabetes or blood glucose concerns',
+  'Pregnancy or breastfeeding',
+  'Bleeding disorders or blood-thinning medications',
+  'Immune suppression or chemotherapy',
+  'Previous reactions to IV therapy or injections',
 ]
 
 const questionnaireItems = [
-  'Full legal name',
-  'Date of birth',
-  'Contact information',
-  'Emergency contact',
-  'Requested service',
-  'Treatment goal',
-  'Current symptoms',
-  'Symptom severity',
-  'Medical history',
-  'Allergies',
-  'Previous reactions',
-  'Current medications',
-  'Recent treatments',
+  'Personal and contact details',
+  'Emergency contact information',
+  'Requested service and treatment goals',
+  'Current symptoms and health concerns',
+  'Medical history and medications',
+  'Allergies and previous treatment reactions',
+  'Recent medical treatments',
   'Additional safety information',
-  'Questions or concerns',
 ]
+
+const visitSteps = [
+  {
+    icon: CalendarCheck,
+    title: 'Step 1: Schedule Your Visit',
+    text: 'Contact Ebenezer Health Clinic to arrange an IV hydration appointment at our Bethany location serving the Oklahoma City area.',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Step 2: Complete Your Health Questionnaire',
+    text: 'Provide accurate information about your health history, medications, allergies, current symptoms, and treatment goals.',
+  },
+  {
+    icon: Stethoscope,
+    title: 'Step 3: Receive a Clinical Evaluation',
+    text: 'Our healthcare provider reviews your information and determines whether IV hydration is appropriate for your needs.',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Step 4: Discuss Your IV Treatment',
+    text: 'If treatment is appropriate, our provider explains the selected formulation, administration process, potential risks, and relevant precautions.',
+  },
+  {
+    icon: Droplets,
+    title: 'Step 5: Receive IV Hydration',
+    text: 'A qualified healthcare professional administers the treatment in person, with monitoring as clinically appropriate. IV placement can cause discomfort, bruising, or infection, and some patients may experience reactions to the fluids or ingredients.',
+  },
+  {
+    icon: HeartPulse,
+    title: 'Step 6: Receive Aftercare Guidance',
+    text: 'Our team provides appropriate post-treatment instructions and explains when follow-up medical care may be necessary.',
+  },
+]
+
+const whyChoose = [
+  {
+    icon: Stethoscope,
+    title: 'Provider-Guided Treatment',
+    text: 'Every IV hydration service requires a medical assessment to determine whether treatment is appropriate.',
+  },
+  {
+    icon: UserCheck,
+    title: 'Individualized Care',
+    text: 'Our provider considers your health history, symptoms, medications, and treatment goals rather than recommending the same treatment to every patient.',
+  },
+  {
+    icon: Droplets,
+    title: 'Multiple IV Hydration Options',
+    text: 'Our clinic offers Myers’ Cocktail and Wellness Mix, with Tri-Immune Boost and Nutrient Mix available on request.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Patient Safety First',
+    text: 'We use a structured health questionnaire and clinical screening process to identify potential treatment risks before administration.',
+  },
+  {
+    icon: MapPin,
+    title: 'Convenient Oklahoma City Area Location',
+    text: 'Our Bethany clinic serves patients from Oklahoma City and surrounding communities seeking in-person IV hydration services.',
+  },
+]
+
+const pricingRows = [
+  { label: 'Myers’ Cocktail IV Hydration', value: 'Contact for current pricing and availability.' },
+  { label: 'Wellness Mix', value: 'Contact for current pricing and formulation details.' },
+  { label: 'Tri-Immune Boost', value: 'Available on request; contact for pricing.' },
+  { label: 'Nutrient Mix', value: 'Available on request; contact for pricing.' },
+]
+
+// ─── Schema ───────────────────────────────────────────────────────────────────
+// Built from the content arrays above so the JSON-LD always matches the page.
+
+const ivHydrationSchemaGraph = buildIVHydrationSchema({
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  treatments,
+  visitSteps,
+})
+
+// ─── Small presentational helpers ─────────────────────────────────────────────
+
+const TINT = 'rgba(232,247,247,0.60)'
+const CARD_BORDER = '1px solid rgba(26,166,183,0.18)'
+
+function AccentBars({ center = false }) {
+  return (
+    <div
+      className={`flex items-center gap-2 mb-5 ${center ? 'justify-center' : ''}`}
+      aria-hidden="true"
+    >
+      <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
+      <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
+      <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+    </div>
+  )
+}
+
+function IconBadge({ icon: Icon }) {
+  return (
+    <div
+      className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl"
+      style={{ backgroundColor: 'rgba(26,166,183,0.12)' }}
+      aria-hidden="true"
+    >
+      <Icon className="h-6 w-6" style={{ color: 'var(--primary)' }} />
+    </div>
+  )
+}
+
+function CheckList({ items, columns = false }) {
+  return (
+    <ul className={columns ? 'grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3' : 'space-y-3'}>
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-3">
+          <CheckCircle2
+            className="h-5 w-5 mt-0.5 flex-shrink-0"
+            style={{ color: 'var(--primary)' }}
+            aria-hidden="true"
+          />
+          <span className="text-gray-700 leading-snug">{item}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function IVHydrationPage() {
   return (
@@ -268,8 +352,8 @@ export default function IVHydrationPage() {
           }}
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
-          <div className="max-w-3xl">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28">
+          <div className="max-w-2xl">
             {/* Breadcrumb */}
             <nav
               className="flex flex-wrap items-center gap-2 text-sm text-gray-500 mb-6"
@@ -286,46 +370,51 @@ export default function IVHydrationPage() {
               <span style={{ color: 'var(--primary)' }}>IV Hydration</span>
             </nav>
 
-            {/* Label */}
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              IV Hydration · Oklahoma City
-            </span>
-
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight"
               style={{ color: 'var(--navy)' }}
             >
-              IV Hydration in Oklahoma City
+              IV Hydration &amp; Vitamin Therapy in Oklahoma City
             </h1>
 
             <p
-              className="text-base md:text-lg leading-relaxed mb-3 max-w-xl"
-              style={{ color: 'var(--navy)' }}
+              className="text-lg md:text-xl font-semibold leading-snug mb-4"
+              style={{ color: 'var(--primary)' }}
             >
-              Looking for professional IV hydration services in the Oklahoma
-              City area?
+              Provider-Guided IV Hydration at Ebenezer Health Clinic
             </p>
-            <p
-              className="text-base md:text-lg leading-relaxed mb-3 max-w-xl"
-              style={{ color: 'var(--navy)' }}
-            >
-              Ebenezer Health Clinic provides{' '}
-              <strong>IV hydration with clinical screening before
-              treatment</strong> from our Bethany location serving Oklahoma
-              City and surrounding communities.
+
+            {/* "hero-answer-line" is a speakable-schema target; do not rename */}
+            <p className="hero-answer-line mb-3">
+              Explore personalized IV hydration services at Ebenezer Health Clinic in Bethany,
+              Oklahoma, conveniently serving Oklahoma City and surrounding communities.
             </p>
-            <p
-              className="text-base md:text-lg leading-relaxed mb-8 max-w-xl"
-              style={{ color: 'var(--navy)' }}
-            >
-              Before receiving IV hydration, patients complete a health and
-              safety questionnaire and undergo appropriate clinical
-              evaluation to help determine whether treatment is suitable for
-              them.
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-3">
+              Our clinic offers IV hydration options, including Myers’ Cocktail, Wellness Mix,
+              and additional nutrient formulations available on request. These treatments provide
+              fluids and, depending on the formulation, vitamins, minerals, or other nutrients.
             </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-6">
+              Every IV hydration treatment begins with a medical assessment to determine whether
+              it is appropriate for your individual health needs.
+            </p>
+
+            {/* Highlights */}
+            <ul className="flex flex-wrap gap-2 mb-8">
+              {heroBadges.map(({ icon: Icon, label }) => (
+                <li
+                  key={label}
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
+                  style={{
+                    backgroundColor: 'rgba(151,206,204,0.40)',
+                    color: 'var(--navy)',
+                  }}
+                >
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                  {label}
+                </li>
+              ))}
+            </ul>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
@@ -346,178 +435,301 @@ export default function IVHydrationPage() {
         </div>
       </section>
 
-      {/* ── IV HYDRATION AT EBENEZER HEALTH CLINIC ───────────────── */}
+      {/* ── IV HYDRATION THERAPY ─────────────────────────────────── */}
       <section className="bg-white" aria-labelledby="intro-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <span
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
-          >
-            About This Service
-          </span>
-          <h2
-            id="intro-heading"
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: 'var(--navy)' }}
-          >
-            IV Hydration at Ebenezer Health Clinic
-          </h2>
-          <div className="flex items-center justify-center gap-2 mb-6" aria-hidden="true">
-            <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+            <div>
+              <h2
+                id="intro-heading"
+                className="text-3xl md:text-4xl font-bold mb-3"
+                style={{ color: 'var(--navy)' }}
+              >
+                IV Hydration Therapy at Ebenezer Health Clinic
+              </h2>
+              <AccentBars />
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                IV hydration is a medical procedure that delivers fluids directly into the
+                bloodstream through an intravenous line. Depending on the formulation, IV therapy
+                may also include vitamins, minerals, and other supplemental nutrients.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+                At Ebenezer Health Clinic, we offer IV hydration services with an emphasis on
+                patient safety, individualized assessment, and informed treatment decisions.
+              </p>
+              <a
+                href="#iv-hydration-treatments"
+                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
+              >
+                Explore Your IV Hydration Options
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6 shadow-sm bg-white"
+                style={{ border: CARD_BORDER, borderLeft: '4px solid var(--primary)' }}
+              >
+                <IconBadge icon={Droplets} />
+                <p className="text-[15px] text-gray-600 leading-relaxed">
+                  IV fluids may be medically appropriate in certain circumstances, including when
+                  oral hydration is insufficient or not feasible. However, IV hydration is not
+                  automatically more beneficial than drinking fluids for otherwise healthy
+                  individuals who can hydrate normally.
+                </p>
+              </div>
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6 shadow-sm bg-white"
+                style={{ border: CARD_BORDER, borderLeft: '4px solid var(--primary)' }}
+              >
+                <IconBadge icon={ClipboardCheck} />
+                <p className="text-[15px] text-gray-600 leading-relaxed">
+                  Before treatment, our healthcare provider reviews your medical history, current
+                  symptoms, medications, allergies, and relevant health concerns to determine
+                  whether IV therapy is appropriate.
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            IV hydration is one of the services available through Ebenezer
-            Health Clinic&apos;s <strong>IV Hydration &amp; Injections</strong>{' '}
-            program.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Our approach begins with understanding why you are seeking
-            treatment, your current symptoms or concerns, relevant medical
-            history, medications, allergies, and other safety information.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-            Treatment is provided only after appropriate screening and
-            clinical evaluation.
-          </p>
-          <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-            Schedule Your Appointment
-          </Link>
         </div>
       </section>
 
-      {/* ── WELLNESS MIX ──────────────────────────────────────────── */}
+      {/* ── IV HYDRATION TREATMENTS ──────────────────────────────── */}
       <section
-        className="relative overflow-hidden"
-        aria-labelledby="wellness-mix-heading"
+        id="iv-hydration-treatments"
+        className="scroll-mt-28"
+        aria-labelledby="treatments-heading"
+        style={{ backgroundColor: TINT }}
       >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <span
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
-          >
-            Wellness Option
-          </span>
-          <h2
-            id="wellness-mix-heading"
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: 'var(--navy)' }}
-          >
-            Wellness Mix
-          </h2>
-          <div className="flex items-center justify-center gap-2 mb-6" aria-hidden="true">
-            <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-          </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            As part of our IV hydration services, Ebenezer Health Clinic
-            offers the <strong>Wellness Mix</strong>.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            This service was previously referred to as the &ldquo;Beauty
-            Mix.&rdquo; The updated name better reflects its positioning
-            within the clinic&apos;s broader IV hydration and wellness
-            services.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-            Before receiving the Wellness Mix, patients complete appropriate
-            health and safety screening.
-          </p>
-          <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-            Ask About the Wellness Mix
-          </Link>
-        </div>
-      </section>
-
-      {/* ── IS IV HYDRATION RIGHT FOR ME ─────────────────────────── */}
-      <section className="bg-white" aria-labelledby="right-for-me-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center mb-6">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Not Sure Where to Start?
-            </span>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="max-w-3xl mb-10 md:mb-14">
             <h2
-              id="right-for-me-heading"
+              id="treatments-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              Is IV Hydration Right for Me?
+              IV Hydration Treatments Available in Oklahoma City
             </h2>
-            <div className="flex items-center justify-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-            </div>
+            <AccentBars />
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              Ebenezer Health Clinic provides several IV hydration and nutrient therapy options,
+              subject to medical evaluation and treatment availability.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Each formulation contains different ingredients, and its suitability depends on your
+              individual health needs. Our provider will explain the available options and discuss
+              potential benefits, limitations, and risks before treatment.
+            </p>
           </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-2 text-center">
-            Not every service is appropriate for every patient.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 text-center">
-            Before treatment, Ebenezer Health Clinic asks patients about
-            their current health, medical history, medications, allergies,
-            symptoms, and other relevant safety information.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 text-center">
-            The clinic&apos;s questionnaire also allows patients to select:
-          </p>
-          <ul className="max-w-md mx-auto space-y-3 mb-6">
-            {['IV Hydration', 'IM Injection', 'Not sure – discuss with clinician'].map(
-              (item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="h-5 w-5 mt-0.5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {treatments.map((t) => (
+              <article
+                key={t.title}
+                className="relative flex flex-col h-full overflow-hidden rounded-2xl p-7 md:p-8"
+                style={
+                  t.onRequest
+                    ? {
+                        background:
+                          'linear-gradient(160deg, #ffffff 0%, rgba(232,247,247,0.85) 100%)',
+                        border: '2px dashed rgba(26,166,183,0.35)',
+                      }
+                    : { backgroundColor: '#ffffff', border: CARD_BORDER, boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }
+                }
+              >
+                {!t.onRequest && (
+                  <div
+                    className="absolute inset-x-0 top-0 h-1"
+                    style={{ background: 'linear-gradient(90deg, var(--primary), var(--mint))' }}
                     aria-hidden="true"
                   />
-                  <span className="text-gray-700 leading-snug">{item}</span>
-                </li>
-              )
-            )}
-          </ul>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-2 text-center">
-            If you are unsure which service is appropriate, you do not need
-            to make that decision by yourself before your appointment.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 text-center">
-            Your provider can review your information and discuss the
-            appropriate next steps.
-          </p>
-          <div className="flex justify-center">
+                )}
+                <div className="flex items-center gap-4 mb-5">
+                  <IconBadge icon={t.icon} />
+                  <h3
+                    className="text-xl font-bold leading-snug"
+                    style={{ color: 'var(--navy)' }}
+                  >
+                    {t.title}
+                    {t.onRequest && (
+                      <>
+                        {' '}&mdash;{' '}
+                        <span style={{ color: 'var(--primary)' }}>Available on Request</span>
+                      </>
+                    )}
+                  </h3>
+                </div>
+
+                <div className="space-y-3 text-[15px] text-gray-600 leading-relaxed mb-5">
+                  {t.intro.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+
+                {t.ingredients && (
+                  <ul
+                    className="rounded-lg overflow-hidden mb-5"
+                    style={{
+                      backgroundColor: 'rgba(255,255,255,0.85)',
+                      border: '1px solid rgba(26,166,183,0.18)',
+                    }}
+                  >
+                    {t.ingredients.map(({ label, text }, index) => (
+                      <li
+                        key={label}
+                        className="px-4 py-3 text-[15px] leading-relaxed text-gray-600"
+                        style={
+                          index > 0 ? { borderTop: '1px solid rgba(26,166,183,0.15)' } : undefined
+                        }
+                      >
+                        <strong style={{ color: 'var(--navy)' }}>{label}:</strong> {text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {t.outro && (
+                  <div className="space-y-3 text-[15px] text-gray-600 leading-relaxed mb-6">
+                    {t.outro.map((p) => (
+                      <p key={p}>{p}</p>
+                    ))}
+                  </div>
+                )}
+
+                <dl
+                  className="mt-auto rounded-lg overflow-hidden mb-5"
+                  style={{
+                    backgroundColor: t.onRequest ? 'rgba(255,255,255,0.85)' : 'rgba(26,166,183,0.08)',
+                    border: t.onRequest ? '1px solid rgba(26,166,183,0.18)' : 'none',
+                  }}
+                >
+                  {t.details.map(({ label, value }, index) => (
+                    <div
+                      key={label}
+                      className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 px-4 py-3"
+                      style={
+                        index > 0 ? { borderTop: '1px solid rgba(26,166,183,0.15)' } : undefined
+                      }
+                    >
+                      <dt
+                        className="text-xs font-semibold uppercase tracking-widest"
+                        style={{ color: 'var(--primary)' }}
+                      >
+                        {label}
+                      </dt>
+                      <dd className="text-base font-bold sm:text-right" style={{ color: 'var(--navy)' }}>
+                        {value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <Link
+                  href="/contact"
+                  className={`${t.onRequest ? 'btn-outline' : 'btn-primary'} text-sm px-6 py-3 w-full text-center`}
+                >
+                  {t.cta}
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── IS IV HYDRATION RIGHT FOR YOU ────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="right-for-you-heading"
+      >
+        {/* Background image — phone & stethoscope sit on the right, text stays left */}
+        <Image
+          src="/answer_block.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-right pointer-events-none"
+          aria-hidden="true"
+        />
+        {/* Mobile / tablet: even white wash so text is legible over the image */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{ backgroundColor: 'rgba(255,255,255,0.90)' }}
+          aria-hidden="true"
+        />
+        {/* Desktop: white on the text side → clear on the image side */}
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.80) 50%, rgba(255,255,255,0.10) 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="lg:w-[56%]">
+            <h2
+              id="right-for-you-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              Is IV Hydration Right for You?
+            </h2>
+            <AccentBars />
+
+            <p
+              className="text-xl md:text-2xl font-semibold leading-snug mb-5"
+              style={{ color: 'var(--primary)' }}
+            >
+              IV hydration is not necessary or appropriate for everyone.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              Whether you are exploring hydration support or a nutrient-containing IV
+              formulation, our provider will assess your individual circumstances before
+              recommending treatment.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-7">
+              During your evaluation, we consider your current symptoms, medical history,
+              medications, allergies, existing health conditions, and treatment goals.
+            </p>
+
+            <div
+              className="flex items-start gap-4 rounded-2xl p-6 md:p-7 mb-7"
+              style={{
+                backgroundColor: '#ffffff',
+                border: '2px solid rgba(239,68,68,0.30)',
+                boxShadow: '0 4px 24px rgba(239,68,68,0.10)',
+              }}
+            >
+              <div
+                className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full"
+                style={{ backgroundColor: 'rgba(239,68,68,0.10)' }}
+                aria-hidden="true"
+              >
+                <AlertCircle className="h-6 w-6 text-red-500" />
+              </div>
+              <p className="text-base leading-relaxed text-gray-600">
+                Certain medical conditions, including kidney disease, heart failure, and fluid
+                restrictions, may increase the risks associated with IV hydration. Some nutrient
+                formulations may also be inappropriate depending on your medications or health
+                history.
+              </p>
+            </div>
+
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              If you are unsure which service may be appropriate, our team can discuss your
+              concerns and explain the available options.
+            </p>
             <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-              Discuss Your Options
+              Discuss Your IV Hydration Options
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── HEALTH & SAFETY SCREENING ─────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        aria-labelledby="safety-screening-heading"
-      >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center mb-6">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Your Safety
-            </span>
+      {/* ── HEALTH & SAFETY SCREENING ────────────────────────────── */}
+      <section aria-labelledby="safety-screening-heading" style={{ backgroundColor: TINT }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="max-w-3xl mb-10 md:mb-12">
             <h2
               id="safety-screening-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
@@ -525,160 +737,134 @@ export default function IVHydrationPage() {
             >
               Health &amp; Safety Screening Before IV Hydration
             </h2>
-            <div className="flex items-center justify-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-            </div>
+            <AccentBars />
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+              Patient safety is a priority at Ebenezer Health Clinic. Before receiving IV
+              hydration, every patient must complete appropriate health screening and clinical
+              evaluation.
+            </p>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Our IV/IM Injection Questionnaire collects information about your medical history,
+              medications, allergies, previous treatment reactions, and current health concerns.
+            </p>
           </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 text-center">
-            Patient screening is an important part of the IV hydration
-            process.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 text-center">
-            Before treatment, you may be asked about:
-          </p>
-          <div
-            className="rounded-2xl p-7 md:p-8 bg-white"
-            style={{ border: '1px solid rgba(26,166,183,0.15)' }}
-          >
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-              {safetyScreeningItems.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="h-5 w-5 mt-0.5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <span className="text-gray-700 leading-snug text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <p className="text-sm text-gray-500 leading-relaxed italic text-center mt-8">
-            Answering these questions accurately helps the clinician
-            determine whether IV hydration is appropriate based on your
-            individual circumstances.
-          </p>
-        </div>
-      </section>
 
-      {/* ── ADDITIONAL DAY-OF-TREATMENT SAFETY QUESTIONS ─────────── */}
-      <section className="bg-white" aria-labelledby="day-of-screening-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center mb-6">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Day of Your Visit
-            </span>
-            <h2
-              id="day-of-screening-heading"
-              className="text-3xl md:text-4xl font-bold mb-3"
-              style={{ color: 'var(--navy)' }}
-            >
-              Additional Day-of-Treatment Safety Questions
-            </h2>
-            <div className="flex items-center justify-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-            </div>
-          </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 text-center">
-            Your questionnaire also includes questions about your current
-            condition before treatment.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 text-center">
-            Patients may be asked about:
-          </p>
-          <div
-            className="rounded-2xl p-7 md:p-8"
-            style={{
-              backgroundColor: 'rgba(151,206,204,0.08)',
-              border: '1px solid rgba(26,166,183,0.12)',
-            }}
-          >
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-              {dayOfScreeningItems.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="h-5 w-5 mt-0.5 flex-shrink-0"
-                    style={{ color: 'var(--primary)' }}
-                    aria-hidden="true"
-                  />
-                  <span className="text-gray-700 leading-snug text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <p className="text-sm text-gray-500 leading-relaxed italic text-center mt-8">
-            These questions are designed to provide your clinician with
-            relevant information before determining whether treatment should
-            proceed.
-          </p>
-        </div>
-      </section>
-
-      {/* ── COMPLETE YOUR QUESTIONNAIRE ───────────────────────────── */}
-      <section
-        aria-labelledby="questionnaire-heading"
-        style={{ backgroundColor: 'rgba(151,206,204,0.10)' }}
-      >
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
             <div
-              className="inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
-              style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
-              aria-hidden="true"
+              className="rounded-2xl bg-white p-7 md:p-8 shadow-sm"
+              style={{ border: CARD_BORDER }}
             >
-              <ClipboardList className="h-7 w-7" style={{ color: 'var(--primary)' }} />
+              <div className="flex items-center gap-4 mb-5">
+                <IconBadge icon={ClipboardList} />
+                <h3 className="text-xl font-bold leading-snug" style={{ color: 'var(--navy)' }}>
+                  Medical History and Health Conditions
+                </h3>
+              </div>
+              <p className="text-base text-gray-600 mb-4">You may be asked about:</p>
+              <CheckList items={medicalHistoryItems} />
             </div>
-            <div className="flex-1">
-              <span
-                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-                style={{ color: 'var(--primary)' }}
+
+            <div
+              className="rounded-2xl bg-white p-7 md:p-8 shadow-sm flex flex-col"
+              style={{ border: CARD_BORDER }}
+            >
+              <div className="flex items-center gap-4 mb-5">
+                <IconBadge icon={Stethoscope} />
+                <h3 className="text-xl font-bold leading-snug" style={{ color: 'var(--navy)' }}>
+                  Current Symptoms and Treatment Readiness
+                </h3>
+              </div>
+              <p className="text-base text-gray-600 leading-relaxed mb-5">
+                Our team may also ask about recent illness, fever, dizziness, vomiting, diarrhea,
+                fluid intake, and other symptoms that could affect treatment suitability.
+              </p>
+              <div
+                className="flex items-start gap-3 rounded-xl p-5"
+                style={{
+                  backgroundColor: 'rgba(254,242,242,0.80)',
+                  border: '1px solid rgba(239,68,68,0.25)',
+                }}
               >
-                Before Your Visit
-              </span>
+                <AlertCircle
+                  className="h-5 w-5 mt-0.5 flex-shrink-0 text-red-500"
+                  aria-hidden="true"
+                />
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Patients experiencing severe symptoms, including chest pain, difficulty
+                  breathing, confusion, or signs of severe dehydration, may require urgent or
+                  emergency medical evaluation rather than elective IV hydration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="flex items-start gap-4 rounded-2xl p-6 md:p-7 bg-white"
+            style={{ border: CARD_BORDER, borderLeft: '4px solid var(--primary)' }}
+          >
+            <Info
+              className="h-6 w-6 mt-0.5 flex-shrink-0"
+              style={{ color: 'var(--primary)' }}
+              aria-hidden="true"
+            />
+            <p className="text-base leading-relaxed" style={{ color: 'var(--navy)' }}>
+              <strong>Completing the screening questionnaire does not guarantee treatment.</strong>{' '}
+              The final decision is made following clinical review.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── COMPLETE YOUR QUESTIONNAIRE ──────────────────────────── */}
+      <section className="bg-white" aria-labelledby="questionnaire-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-7">
               <h2
                 id="questionnaire-heading"
-                className="text-2xl md:text-3xl font-bold mb-4"
+                className="text-3xl md:text-4xl font-bold mb-3"
                 style={{ color: 'var(--navy)' }}
               >
                 Complete Your IV/IM Injection Questionnaire
               </h2>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                Before your appointment, complete the{' '}
-                <strong>IV/IM Injection Questionnaire</strong>.
+              <AccentBars />
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                Before your IV hydration appointment, you will be asked to complete the
+                clinic&apos;s IV/IM Injection Questionnaire.
               </p>
-              <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--primary)' }}>
-                The questionnaire collects information including:
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-5">
+                The questionnaire collects relevant information, including:
               </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-6">
-                {questionnaireItems.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2
-                      className="h-5 w-5 mt-0.5 flex-shrink-0"
-                      style={{ color: 'var(--primary)' }}
-                      aria-hidden="true"
-                    />
-                    <span className="text-gray-700 leading-snug text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-base text-gray-600 leading-relaxed mb-3">
-                If you are unsure whether you need IV hydration or an
-                injection, select{' '}
-                <strong>&ldquo;Not sure – discuss with clinician.&rdquo;</strong>
+              <div
+                className="rounded-2xl p-6 md:p-7"
+                style={{
+                  backgroundColor: 'rgba(151,206,204,0.10)',
+                  border: '1px solid rgba(26,166,183,0.15)',
+                }}
+              >
+                <CheckList items={questionnaireItems} columns />
+              </div>
+            </div>
+
+            <div
+              className="lg:col-span-5 rounded-2xl p-7 md:p-8 shadow-sm"
+              style={{
+                background: 'linear-gradient(160deg, #ffffff 0%, rgba(232,247,247,0.85) 100%)',
+                border: '2px dashed rgba(26,166,183,0.35)',
+              }}
+            >
+              <div className="mb-5">
+                <IconBadge icon={MessageCircle} />
+              </div>
+              <p className="text-base md:text-lg leading-relaxed mb-4" style={{ color: 'var(--navy)' }}>
+                If you are unsure whether IV hydration or an injection is appropriate, select{' '}
+                <strong>“Not sure – discuss with clinician.”</strong>
               </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                If needed, our team can assist you with completing the
-                questionnaire during your initial intake or free
-                consultation call.
+              <p className="text-base text-gray-600 leading-relaxed mb-7">
+                Our team can help explain the next steps during your appointment or consultation
+                call.
               </p>
-              <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto text-center inline-block">
+              <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full text-center">
                 Complete IV/IM Injection Questionnaire
               </Link>
             </div>
@@ -686,179 +872,92 @@ export default function IVHydrationPage() {
         </div>
       </section>
 
-      {/* ── WHAT TO EXPECT AT YOUR VISIT ──────────────────────────── */}
-      <section className="bg-white" aria-labelledby="what-to-expect-heading">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      {/* ── WHAT TO EXPECT ───────────────────────────────────────── */}
+      <section aria-labelledby="what-to-expect-heading" style={{ backgroundColor: TINT }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-10 md:mb-14">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Your Visit
-            </span>
             <h2
               id="what-to-expect-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              What to Expect at Your IV Hydration Visit
+              What to Expect During Your IV Hydration Appointment
             </h2>
-            <div className="flex items-center justify-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-            </div>
+            <AccentBars center />
           </div>
 
-          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
-            {[
-              {
-                title: 'Schedule Your Appointment',
-                body: 'Contact Ebenezer Health Clinic to schedule your IV hydration visit.',
-              },
-              {
-                title: 'Complete Your Questionnaire',
-                body: 'Provide accurate information about your current health, medical history, medications, allergies, symptoms, and treatment goals.',
-              },
-              {
-                title: 'Complete Clinical Screening',
-                body: 'Your information will be reviewed to help determine whether IV hydration is appropriate for you.',
-              },
-              {
-                title: 'Receive Your Service if Appropriate',
-                body: "If you are an appropriate candidate following screening and evaluation, your IV hydration service can proceed according to the clinic's treatment process.",
-              },
-              {
-                title: 'Ask Questions',
-                body: 'Let your clinician know about any concerns or changes in your health before treatment.',
-              },
-            ].map((step, idx) => (
+          <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {visitSteps.map(({ icon: Icon, title, text }) => (
               <li
-                key={step.title}
-                className="rounded-2xl p-6 h-full flex flex-col"
-                style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
-                }}
+                key={title}
+                className="flex flex-col h-full rounded-2xl bg-white p-6 md:p-7 shadow-sm"
+                style={{ border: CARD_BORDER }}
               >
-                <span
-                  className="flex-shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold mb-4"
-                  style={{
-                    backgroundColor: 'var(--primary)',
-                    color: '#ffffff',
-                  }}
-                  aria-hidden="true"
+                <div className="mb-4">
+                  <div
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-md"
+                    style={{ backgroundColor: 'var(--primary)' }}
+                    aria-hidden="true"
+                  >
+                    <Icon className="h-6 w-6" />
+                  </div>
+                </div>
+                <h3
+                  className="text-lg font-bold leading-snug mb-2"
+                  style={{ color: 'var(--navy)' }}
                 >
-                  {idx + 1}
-                </span>
-                <p className="text-base font-semibold mb-2" style={{ color: 'var(--navy)' }}>
-                  {step.title}
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed">{step.body}</p>
+                  {title}
+                </h3>
+                <p className="text-[15px] text-gray-600 leading-relaxed">{text}</p>
               </li>
             ))}
           </ol>
+
           <div className="flex justify-center">
             <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-              Schedule IV Hydration
+              Schedule Your IV Hydration Visit
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── COMPLETING THE QUESTIONNAIRE DOES NOT GUARANTEE TREATMENT ── */}
-      <section
-        className="relative overflow-hidden"
-        aria-labelledby="no-guarantee-heading"
-      >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <span
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
-          >
-            Important
-          </span>
-          <h2
-            id="no-guarantee-heading"
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: 'var(--navy)' }}
-          >
-            Completing the Questionnaire Does Not Guarantee Treatment
-          </h2>
-          <div className="flex items-center justify-center gap-2 mb-6" aria-hidden="true">
-            <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-          </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Completing the IV/IM Injection Questionnaire is part of the
-            screening process, but{' '}
-            <strong>
-              it does not guarantee that IV hydration or an injection will be
-              provided
-            </strong>
-            .
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Your questionnaire does not replace clinical evaluation.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Patients should provide accurate health information and inform
-            the clinic about any changes in their health before receiving
-            treatment.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-            The final decision about whether a service is appropriate is
-            made following clinical review.
-          </p>
-        </div>
-      </section>
-
-      {/* ── IV HYDRATION VS. INJECTIONS ──────────────────────────── */}
+      {/* ── IV HYDRATION VS. VITAMIN INJECTIONS ──────────────────── */}
       <section className="bg-white" aria-labelledby="vs-injections-heading">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center mb-10 md:mb-14">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Which Service Is Right for You?
-            </span>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="text-center mb-10 md:mb-12">
             <h2
               id="vs-injections-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              IV Hydration vs. Injections
+              IV Hydration vs. Vitamin Injections: What&apos;s the Difference?
             </h2>
-            <div className="flex items-center justify-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-            </div>
+            <AccentBars center />
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              Ebenezer Health Clinic offers both IV hydration and vitamin injection services.
+              Although both involve administering substances through a needle, they are different
+              treatment methods.
+            </p>
           </div>
 
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-10 text-center max-w-3xl mx-auto">
-            Ebenezer Health Clinic offers both{' '}
-            <strong>IV Hydration and Injections</strong>, but they are
-            separate types of services.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <article
-              className="rounded-2xl overflow-hidden flex flex-col bg-white"
-              style={{ border: '1px solid rgba(59,130,246,0.16)' }}
+              className="relative rounded-2xl overflow-hidden flex flex-col"
+              style={{
+                backgroundColor: 'rgba(59,130,246,0.07)',
+                border: '1px solid rgba(59,130,246,0.28)',
+              }}
             >
+              <div
+                className="absolute inset-x-0 top-0 h-1"
+                style={{ backgroundColor: '#3B82F6' }}
+                aria-hidden="true"
+              />
               <div className="p-6 md:p-7 flex flex-col flex-1">
                 <div className="flex items-start gap-3 mb-4">
                   <div
                     className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full"
-                    style={{ backgroundColor: 'rgba(59,130,246,0.15)' }}
+                    style={{ backgroundColor: 'rgba(59,130,246,0.20)' }}
                     aria-hidden="true"
                   >
                     <Droplets className="h-5 w-5" style={{ color: '#3B82F6' }} />
@@ -867,24 +966,33 @@ export default function IVHydrationPage() {
                     className="text-lg font-semibold leading-snug pt-1.5"
                     style={{ color: 'var(--navy)' }}
                   >
-                    IV Hydration
+                    IV Hydration Therapy
                   </h3>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  IV hydration involves treatment administered intravenously.
+                <p className="text-sm md:text-[15px] text-gray-700 leading-relaxed">
+                  IV hydration delivers fluids directly into a vein. Depending on the formulation,
+                  it may include vitamins, minerals, or other supplemental nutrients.
                 </p>
               </div>
             </article>
 
             <article
-              className="rounded-2xl overflow-hidden flex flex-col bg-white"
-              style={{ border: '1px solid rgba(168,85,247,0.16)' }}
+              className="relative rounded-2xl overflow-hidden flex flex-col"
+              style={{
+                backgroundColor: 'rgba(168,85,247,0.07)',
+                border: '1px solid rgba(168,85,247,0.28)',
+              }}
             >
+              <div
+                className="absolute inset-x-0 top-0 h-1"
+                style={{ backgroundColor: '#A855F7' }}
+                aria-hidden="true"
+              />
               <div className="p-6 md:p-7 flex flex-col flex-1">
                 <div className="flex items-start gap-3 mb-4">
                   <div
                     className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full"
-                    style={{ backgroundColor: 'rgba(168,85,247,0.15)' }}
+                    style={{ backgroundColor: 'rgba(168,85,247,0.20)' }}
                     aria-hidden="true"
                   >
                     <Syringe className="h-5 w-5" style={{ color: '#A855F7' }} />
@@ -893,90 +1001,34 @@ export default function IVHydrationPage() {
                     className="text-lg font-semibold leading-snug pt-1.5"
                     style={{ color: 'var(--navy)' }}
                   >
-                    Injections
+                    Vitamin &amp; Wellness Injections
                   </h3>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  The clinic also offers injectable services, including{' '}
-                  <strong>Vitamin B12 Injection and Glutathione
-                  Injection</strong>, with Glutathione available by special
-                  order upon request.
+                <p className="text-sm md:text-[15px] text-gray-700 leading-relaxed">
+                  Vitamin injections deliver specific nutrients through an injection rather than
+                  an IV infusion. Ebenezer Health Clinic offers Vitamin B12 and other wellness
+                  injections, with additional treatments available on request.
                 </p>
               </div>
             </article>
           </div>
 
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-            If you are uncertain which service you need, the clinic&apos;s
-            questionnaire allows you to select{' '}
-            <strong>&ldquo;Not sure – discuss with clinician.&rdquo;</strong>
+            The appropriate method depends on the treatment, clinical indication, and individual
+            patient needs.
           </p>
           <div className="flex justify-center">
-            <Link href="/iv-therapy" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-              Explore IV Hydration &amp; Injections
+            <Link href="/injections" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
+              Explore Our Vitamin &amp; Wellness Injections
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── IN-PERSON IV HYDRATION IN THE OKC AREA ───────────────── */}
-      <section
-        className="relative overflow-hidden"
-        aria-labelledby="in-person-heading"
-      >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <span
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
-          >
-            In-Person Only
-          </span>
-          <h2
-            id="in-person-heading"
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: 'var(--navy)' }}
-          >
-            In-Person IV Hydration in the Oklahoma City Area
-          </h2>
-          <div className="flex items-center justify-center gap-2 mb-6" aria-hidden="true">
-            <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-          </div>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            IV hydration is an <strong>in-person service</strong> and cannot
-            be administered through telehealth.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Appointments are available at Ebenezer Health Clinic&apos;s
-            Bethany location serving Oklahoma City and surrounding
-            communities.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-            Other appropriate clinic consultations may be available through
-            telehealth throughout Oklahoma.
-          </p>
-          <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-            Schedule an In-Person Appointment
-          </Link>
-        </div>
-      </section>
-
       {/* ── WHY CHOOSE EBENEZER ──────────────────────────────────── */}
-      <section className="bg-white" aria-labelledby="why-choose-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <section aria-labelledby="why-choose-heading" style={{ backgroundColor: TINT }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-10 md:mb-14">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              Why Ebenezer
-            </span>
             <h2
               id="why-choose-heading"
               className="text-3xl md:text-4xl font-bold mb-3"
@@ -984,60 +1036,26 @@ export default function IVHydrationPage() {
             >
               Why Choose Ebenezer Health Clinic for IV Hydration?
             </h2>
-            <div className="flex items-center justify-center gap-2" aria-hidden="true">
-              <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-              <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-              <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-            </div>
+            <AccentBars center />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                icon: ShieldCheck,
-                title: 'Clinical Screening Before Treatment',
-                body: 'Patients complete health and safety screening before receiving IV hydration.',
-              },
-              {
-                icon: UserCheck,
-                title: 'Individualized Evaluation',
-                body: 'Your current symptoms, medical history, medications, allergies, and other relevant information are considered before treatment.',
-              },
-              {
-                icon: Sparkles,
-                title: 'IV Hydration & Injection Options',
-                body: 'The clinic offers IV hydration alongside Vitamin B12 and special-order Glutathione injections.',
-              },
-              {
-                icon: ClipboardList,
-                title: 'Clear Intake Process',
-                body: 'The IV/IM Injection Questionnaire helps collect important information before your appointment.',
-              },
-              {
-                icon: MapPin,
-                title: 'Convenient Location',
-                body: 'IV hydration is available from our Bethany clinic serving Oklahoma City and surrounding communities.',
-              },
-            ].map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {whyChoose.map(({ icon, title, text }) => (
               <div
-                key={item.title}
-                className="rounded-2xl p-6 h-full"
-                style={{
-                  backgroundColor: 'rgba(151,206,204,0.08)',
-                  border: '1px solid rgba(26,166,183,0.12)',
-                }}
+                key={title}
+                className="flex flex-col h-full rounded-2xl bg-white p-6 shadow-sm"
+                style={{ border: CARD_BORDER }}
               >
-                <div
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full mb-4"
-                  style={{ backgroundColor: 'rgba(26,166,183,0.10)' }}
-                  aria-hidden="true"
-                >
-                  <item.icon className="h-5 w-5" style={{ color: 'var(--primary)' }} />
+                <div className="mb-4">
+                  <IconBadge icon={icon} />
                 </div>
-                <h3 className="text-base font-semibold mb-2" style={{ color: 'var(--navy)' }}>
-                  {item.title}
+                <h3
+                  className="text-base font-bold leading-snug mb-2"
+                  style={{ color: 'var(--navy)' }}
+                >
+                  {title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.body}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{text}</p>
               </div>
             ))}
           </div>
@@ -1045,80 +1063,39 @@ export default function IVHydrationPage() {
       </section>
 
       {/* ── MEET YOUR PROVIDER ───────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        aria-labelledby="provider-heading"
-      >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <section className="bg-white" aria-labelledby="provider-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Text content */}
             <div>
-              <span
-                className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-                style={{ color: 'var(--primary)' }}
-              >
-                Your Provider
-              </span>
               <h2
                 id="provider-heading"
-                className="text-3xl md:text-4xl font-bold mb-4"
+                className="text-3xl md:text-4xl font-bold mb-3"
                 style={{ color: 'var(--navy)' }}
               >
-                Meet Dr. Susan George, DNP, APRN, BC-ADM
+                Meet Your IV Hydration Provider
               </h2>
-              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-              </div>
-
-              <p className="text-base text-gray-600 leading-relaxed mb-4">
-                Care at Ebenezer Health Clinic is led by{' '}
-                <strong>Dr. Susan George, DNP, APRN, BC-ADM</strong>.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-8">
-                Dr. George provides individualized healthcare with an
-                emphasis on appropriate clinical evaluation and understanding
-                each patient&apos;s health history and concerns.
-              </p>
-
-              {/* Credentials */}
-              <div
-                className="rounded-2xl p-6 bg-white"
-                style={{
-                  border: '1px solid rgba(26,166,183,0.12)',
-                }}
+              <AccentBars />
+              <h3
+                className="text-xl md:text-2xl font-bold mb-4"
+                style={{ color: 'var(--primary)' }}
               >
-                <p
-                  className="text-xs font-semibold uppercase tracking-widest mb-4"
-                  style={{ color: 'var(--primary)' }}
-                >
-                  Credentials
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    'Doctor of Nursing Practice (DNP)',
-                    'Advanced Practice Registered Nurse (APRN)',
-                    'Board Certified in Advanced Diabetes Management (BC-ADM)',
-                    'In-person care in the Oklahoma City area',
-                    'Telehealth throughout Oklahoma for appropriate services',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2
-                        className="h-5 w-5 mt-0.5 flex-shrink-0"
-                        style={{ color: 'var(--primary)' }}
-                        aria-hidden="true"
-                      />
-                      <span className="text-gray-700 leading-snug text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                Dr. Susan George, DNP, APRN, BC-ADM
+              </h3>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                Care at Ebenezer Health Clinic is led by Dr. Susan George, a Doctor of Nursing
+                Practice and Advanced Practice Registered Nurse who is Board Certified in Advanced
+                Diabetes Management.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+                Dr. George emphasizes individualized healthcare, clinical evaluation, and informed
+                treatment decisions.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                At Ebenezer Health Clinic, patients receive guidance based on their medical
+                history and current health needs before proceeding with IV hydration or other
+                wellness services.
+              </p>
             </div>
 
             {/* Doctor photo */}
@@ -1145,9 +1122,6 @@ export default function IVHydrationPage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS (live Google Reviews carousel) ──────────── */}
-      <Testimonials />
-
       {/* ── FAQ ──────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
@@ -1167,170 +1141,150 @@ export default function IVHydrationPage() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-
           <div className="text-center mb-12">
-            <span
-              className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: 'var(--primary)' }}
-            >
-              FAQ
-            </span>
             <h2
               id="faq-heading"
-              className="text-3xl md:text-4xl font-bold"
+              className="text-3xl md:text-4xl font-bold mb-3"
               style={{ color: 'var(--navy)' }}
             >
-              IV Hydration FAQs
+              Frequently Asked Questions About IV Hydration in Oklahoma City
             </h2>
+            <AccentBars center />
           </div>
 
           <IVHydrationFAQAccordion />
-
-          {/* CTAs below FAQ */}
-          <div className="text-center mt-10">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Schedule IV Hydration
-              </Link>
-              <a
-                href="tel:+14053498188"
-                className="btn-outline text-base px-7 py-3.5 w-full sm:w-auto"
-              >
-                Call (405) 349-8188
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* ── IV HYDRATION PRICING ─────────────────────────────────── */}
+      {/* ── IV HYDRATION PRICING & AVAILABILITY ──────────────────── */}
       <section className="bg-white" aria-labelledby="pricing-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <span
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--primary)' }}
-          >
-            Pricing
-          </span>
-          <h2
-            id="pricing-heading"
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: 'var(--navy)' }}
-          >
-            IV Hydration Pricing
-          </h2>
-          <div className="flex items-center justify-center gap-2 mb-10" aria-hidden="true">
-            <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-            <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-            <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="text-center mb-10">
+            <h2
+              id="pricing-heading"
+              className="text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: 'var(--navy)' }}
+            >
+              IV Hydration Pricing &amp; Availability
+            </h2>
+            <AccentBars center />
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Ebenezer Health Clinic offers IV hydration treatments with pricing confirmed
+              directly by the clinic.
+            </p>
           </div>
+
           <div
-            className="rounded-2xl p-7 md:p-8 text-left"
-            style={{
-              backgroundColor: 'rgba(151,206,204,0.08)',
-              border: '1px solid rgba(26,166,183,0.12)',
-            }}
+            className="rounded-2xl overflow-hidden shadow-sm bg-white mb-6"
+            style={{ border: CARD_BORDER }}
           >
-            <div className="flex items-start justify-between gap-4 py-3" style={{ borderBottom: '1px solid rgba(26,166,183,0.12)' }}>
-              <span className="text-gray-700 font-semibold">IV Hydration</span>
-              <span className="text-gray-500 italic">Contact for current pricing</span>
-            </div>
-            <div className="flex items-start justify-between gap-4 py-3" style={{ borderBottom: '1px solid rgba(26,166,183,0.12)' }}>
-              <span className="text-gray-700 font-semibold">Wellness Mix</span>
-              <span className="text-gray-500 italic">Contact for current pricing</span>
-            </div>
-            <div className="flex items-start justify-between gap-4 py-3">
-              <span className="text-gray-700 font-semibold">What&apos;s Included</span>
-              <span className="text-gray-500 italic">Contact for current information</span>
-            </div>
+            {pricingRows.map(({ label, value }, index) => (
+              <div
+                key={label}
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-6 px-6 py-4"
+                style={index > 0 ? { borderTop: '1px solid rgba(26,166,183,0.15)' } : undefined}
+              >
+                <span className="font-bold" style={{ color: 'var(--navy)' }}>
+                  {label}
+                </span>
+                <span className="text-gray-600 sm:text-right">{value}</span>
+              </div>
+            ))}
           </div>
-          <div className="mt-8">
+
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed text-center mb-8">
+            All treatments require appropriate medical screening and provider evaluation before
+            administration.
+          </p>
+          <div className="flex justify-center">
             <Link href="/contact" className="btn-primary text-base px-7 py-3.5 w-full sm:w-auto">
-              Contact Us for Current Pricing
+              Contact Us for IV Hydration Pricing
             </Link>
           </div>
         </div>
       </section>
 
       {/* ── VISIT EBENEZER HEALTH CLINIC ─────────────────────────── */}
-      <section
-        className="relative overflow-hidden"
-        aria-labelledby="visit-clinic-heading"
-      >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(232,247,247,0.52)' }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+      <section aria-labelledby="visit-clinic-heading" style={{ backgroundColor: TINT }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             <div>
               <h2
                 id="visit-clinic-heading"
-                className="text-3xl md:text-4xl font-bold mb-4"
+                className="text-3xl md:text-4xl font-bold mb-3"
                 style={{ color: 'var(--navy)' }}
               >
-                Visit Ebenezer Health Clinic
+                Visit Ebenezer Health Clinic for IV Hydration
               </h2>
-              <div className="flex items-center gap-2 mb-6" aria-hidden="true">
-                <div className="h-[3px] w-10 rounded-full" style={{ backgroundColor: 'var(--primary)' }} />
-                <div className="h-[3px] w-4 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.25)' }} />
-                <div className="h-[3px] w-2 rounded-full" style={{ backgroundColor: 'rgba(26,166,183,0.12)' }} />
-              </div>
+              <AccentBars />
+
               <div
-                className="rounded-2xl p-7 md:p-8 bg-white"
-                style={{ border: '1px solid rgba(26,166,183,0.15)' }}
+                className="rounded-2xl bg-white p-7 md:p-8 shadow-sm mb-8"
+                style={{ border: CARD_BORDER }}
               >
-                <p className="text-base font-semibold mb-1" style={{ color: 'var(--navy)' }}>
-                  Ebenezer Health Clinic
-                </p>
-                <p className="text-gray-600 mb-1">7415 NW 23rd Street</p>
-                <p className="text-gray-600 mb-4">Bethany, OK 73008</p>
-                <p className="text-gray-600 mb-1">
-                  Phone:{' '}
-                  <a href="tel:+14053498188" className="font-semibold" style={{ color: 'var(--primary)' }}>
-                    (405) 349-8188
-                  </a>
-                </p>
-                <p className="text-gray-600 mb-4">
-                  Email:{' '}
-                  <a href="mailto:ebenezerhealth@outlook.com" className="font-semibold" style={{ color: 'var(--primary)' }}>
-                    ebenezerhealth@outlook.com
-                  </a>
-                </p>
-                <p className="text-gray-600 mb-1">
-                  In-Person Care: Oklahoma City area
-                </p>
-                <p className="text-gray-600 mb-6">
-                  Telehealth: Available throughout Oklahoma for appropriate
-                  services
-                </p>
-                <div className="flex flex-col sm:flex-row flex-wrap gap-3">
-                  <a
-                    href="https://www.google.com/maps/place/Ebenezer+Health+Clinic/@35.494042,-97.6437285,20.5z/data=!4m14!1m7!3m6!1s0x87b20f8f4f23cb79:0x2f141cb188297bec!2sEbenezer+Health+Clinic!8m2!3d35.494093!4d-97.643728!16s%2Fg%2F11zh1t3wkg!3m5!1s0x87b20f8f4f23cb79:0x2f141cb188297bec!8m2!3d35.494093!4d-97.643728!16s%2Fg%2F11zh1t3wkg?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-outline text-sm px-5 py-3 w-full sm:w-auto text-center"
-                  >
-                    Get Directions
-                  </a>
-                  <a
-                    href="tel:+14053498188"
-                    className="btn-primary text-sm px-5 py-3 w-full sm:w-auto text-center"
-                  >
-                    Call (405) 349-8188
-                  </a>
-                </div>
+                <address className="not-italic space-y-4">
+                  <div className="flex items-start gap-4">
+                    <IconBadge icon={Building2} />
+                    <div>
+                      <p className="text-lg font-bold" style={{ color: 'var(--navy)' }}>
+                        Ebenezer Health Clinic
+                      </p>
+                      <p className="text-gray-600">7415 NW 23rd Street</p>
+                      <p className="text-gray-600">Bethany, OK 73008</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <IconBadge icon={Phone} />
+                    <p className="text-gray-600 pt-3">
+                      Phone:{' '}
+                      <a
+                        href="tel:+14053498188"
+                        className="font-semibold"
+                        style={{ color: 'var(--primary)' }}
+                      >
+                        (405) 349-8188
+                      </a>
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <IconBadge icon={Mail} />
+                    <p className="text-gray-600 pt-3 break-all">
+                      Email:{' '}
+                      <a
+                        href="mailto:ebenezerhealth@outlook.com"
+                        className="font-semibold"
+                        style={{ color: 'var(--primary)' }}
+                      >
+                        ebenezerhealth@outlook.com
+                      </a>
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <IconBadge icon={MapPin} />
+                    <p className="text-gray-600 pt-3">
+                      Service Area: Bethany, Oklahoma City, and surrounding communities.
+                    </p>
+                  </div>
+                </address>
               </div>
+
+              <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--navy)' }}>
+                In-Person IV Hydration Services
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed mb-3">
+                Our clinic provides provider-guided IV hydration with individualized clinical
+                screening and a focus on informed patient care.
+              </p>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Contact our team to learn more about available formulations, treatment
+                requirements, and appointment scheduling.
+              </p>
             </div>
 
             {/* Google Map embed */}
             <div
               className="relative w-full min-h-[320px] lg:min-h-full rounded-2xl overflow-hidden"
-              style={{ border: '1px solid rgba(26,166,183,0.15)' }}
+              style={{ border: CARD_BORDER }}
             >
               <iframe
                 src="https://www.google.com/maps?q=Ebenezer+Health+Clinic,+7415+NW+23rd+Street,+Bethany,+OK+73008&t=k&output=embed"
@@ -1346,100 +1300,90 @@ export default function IVHydrationPage() {
         </div>
       </section>
 
-      {/* ── IV HYDRATION IN OKLAHOMA CITY & BETHANY ───────────────── */}
-      <section className="bg-white" aria-labelledby="okc-bethany-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <h2
-            id="okc-bethany-heading"
-            className="text-3xl md:text-4xl font-bold mb-6"
-            style={{ color: 'var(--navy)' }}
-          >
-            IV Hydration in Oklahoma City &amp; Bethany
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Ebenezer Health Clinic provides professional IV hydration
-            services from our Bethany location serving Oklahoma City and
-            surrounding communities.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-            Patients complete health and safety screening before treatment to
-            help determine whether IV hydration is appropriate for their
-            individual circumstances.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-            If you are interested in IV hydration or are unsure whether IV
-            hydration or an injection is right for you, contact our team to
-            discuss the next step.
-          </p>
-        </div>
-      </section>
-
       {/* ── FINAL CTA ────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden"
-        style={{ backgroundColor: '#ffffff' }}
         aria-labelledby="final-cta-heading"
+        style={{ background: 'linear-gradient(135deg, #0B3D47 0%, #1AA6B7 100%)' }}
       >
-        {/* Decorative circles */}
-        <div
-          className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-72 w-72 rounded-full opacity-10 pointer-events-none"
-          style={{ backgroundColor: 'var(--primary)' }}
-          aria-hidden="true"
-        />
-        <div
-          className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-48 w-48 rounded-full opacity-10 pointer-events-none"
-          style={{ backgroundColor: 'var(--primary)' }}
-          aria-hidden="true"
-        />
-
-        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+          <div
+            className="inline-flex h-14 w-14 items-center justify-center rounded-xl mb-6"
+            style={{ backgroundColor: 'rgba(255,255,255,0.14)' }}
+            aria-hidden="true"
+          >
+            <Droplets className="h-7 w-7 text-white" />
+          </div>
           <h2
             id="final-cta-heading"
-            className="text-3xl md:text-4xl font-bold mb-4"
-            style={{ color: 'var(--primary)' }}
+            className="text-3xl md:text-4xl font-bold mb-5"
+            style={{ color: '#ffffff' }}
           >
-            Schedule Your IV Hydration Appointment
+            Schedule Your IV Hydration Appointment in Oklahoma City
           </h2>
-          <p className="text-lg text-gray-700 mb-2 leading-relaxed">
-            Ready to learn more about IV hydration?
+          <p
+            className="text-base md:text-lg leading-relaxed mb-4 font-semibold"
+            style={{ color: '#ffffff' }}
+          >
+            Interested in Myers’ Cocktail, Wellness Mix, Tri-Immune Boost, or Nutrient Mix?
           </p>
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Schedule an appointment with Ebenezer Health Clinic and complete
-            your IV/IM Injection Questionnaire before treatment.
+          <p
+            className="text-base md:text-lg leading-relaxed mb-4"
+            style={{ color: 'rgba(255,255,255,0.92)' }}
+          >
+            At Ebenezer Health Clinic, our healthcare team can help you understand the available
+            IV hydration options and determine whether treatment is appropriate for your
+            individual health needs.
+          </p>
+          <p
+            className="text-base md:text-lg leading-relaxed mb-8"
+            style={{ color: 'rgba(255,255,255,0.92)' }}
+          >
+            Schedule your visit at our Bethany clinic, conveniently serving Oklahoma City and
+            nearby communities.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-            <Link href="/contact" className="btn-primary text-base px-8 py-3.5 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-[0.625rem] bg-white px-8 py-3.5 text-base font-semibold shadow-md transition-transform hover:-translate-y-0.5 w-full sm:w-auto"
+              style={{ color: 'var(--navy)' }}
+            >
               Schedule IV Hydration
             </Link>
-            <Link href="/contact" className="btn-outline text-base px-8 py-3.5 w-full sm:w-auto">
+            <Link
+              href="/contact"
+              className="btn-ghost-white text-base px-8 py-3.5 w-full sm:w-auto"
+            >
               Complete IV/IM Injection Questionnaire
             </Link>
           </div>
           <a
             href="tel:+14053498188"
-            className="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-primary font-semibold text-base transition-colors"
+            className="inline-flex items-center justify-center gap-2 text-white font-semibold text-base underline underline-offset-4 hover:opacity-90"
           >
             Call (405) 349-8188
           </a>
 
-          {/* Internal links */}
-          <div className="mt-10 pt-8" style={{ borderTop: '1px solid rgba(26,166,183,0.12)' }}>
-            <nav
-              className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm font-semibold"
-              aria-label="Related IV therapy links"
-              style={{ color: 'var(--primary)' }}
-            >
-              <Link href="/iv-therapy" className="hover:opacity-80">IV Hydration &amp; Injections</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/injections" className="hover:opacity-80">Vitamin B12 Injections</Link>
-              <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/injections" className="hover:opacity-80">Glutathione Injections</Link>
-            </nav>
+          <div
+            className="mt-10 rounded-2xl bg-white p-6 md:p-7 text-left shadow-md"
+            style={{ border: '1px solid rgba(26,166,183,0.25)' }}
+          >
+            <h3 className="text-base font-bold mb-2" style={{ color: 'var(--navy)' }}>
+              Important Medical Disclaimer
+            </h3>
+            <p className="text-sm leading-relaxed text-gray-600 mb-2">
+              All treatments require a medical assessment. Nutrients&apos; normal roles in the
+              body do not guarantee added benefits from injections or IV therapy when nutrient
+              levels are already adequate.
+            </p>
+            <p className="text-sm leading-relaxed text-gray-600">
+              IV hydration and nutrient therapy are not substitutes for balanced nutrition,
+              routine medical care, or evidence-based treatment of underlying health conditions.
+              Treatment availability and suitability are determined following clinical evaluation.
+            </p>
           </div>
         </div>
       </section>
-
     </>
   )
 }
