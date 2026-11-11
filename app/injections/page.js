@@ -20,12 +20,44 @@ import {
 import InjectionsFAQAccordion from './InjectionsFAQAccordion'
 import { injectionsFaqs, faqAnswerText } from './injectionsFaqs'
 
+const PAGE_URL = 'https://www.ebenezerhealthclinic.com/injections'
+const PAGE_TITLE = 'Vitamin B12 & Wellness Injections in OKC | Ebenezer'
+const PAGE_DESCRIPTION =
+  'Explore Vitamin B12 and wellness injections in Oklahoma City at Ebenezer Health Clinic. Glutathione and ALA available on request. Provider evaluation required.'
+const PAGE_KEYWORDS = [
+  'Vitamin Injections in Oklahoma City',
+  'Vitamin B12 Shots Oklahoma City',
+  'Glutathione Injection Oklahoma City',
+  'Alpha-Lipoic Acid Oklahoma City',
+  'Wellness Injections OKC',
+  'B-Complex Injections Oklahoma City',
+  'Vitamin D Injections Oklahoma City',
+]
+const SHARE_IMAGE = '/Injections-in-Oklahoma-City.webp'
+
 export const metadata = {
-  title: 'Vitamin & B12 Injections in Oklahoma City',
-  description:
-    'Vitamin, B12 & wellness injections in Oklahoma City at Ebenezer Health Clinic. $50 per injection, provider-evaluated, walk-ins welcome. Cash-pay. Book or call (405) 349-8188.',
+  // `absolute` skips the "%s | Ebenezer Health Clinic" template in app/layout.js
+  // so the title is exactly the one supplied for this page.
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   alternates: {
-    canonical: 'https://www.ebenezerhealthclinic.com/injections',
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: PAGE_URL,
+    siteName: 'Ebenezer Health Clinic',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [SHARE_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [SHARE_IMAGE],
   },
 }
 
@@ -34,11 +66,11 @@ export const metadata = {
 const injectionsPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalWebPage',
-  '@id': 'https://www.ebenezerhealthclinic.com/injections#webpage',
-  name: 'Vitamin & B12 Injections in Oklahoma City | Ebenezer Health Clinic',
-  description:
-    'Vitamin and B12 injections in Oklahoma City at Ebenezer Health Clinic. Given after a brief provider evaluation. Walk-ins welcome. Cash-pay, no insurance required.',
-  url: 'https://www.ebenezerhealthclinic.com/injections',
+  '@id': `${PAGE_URL}#webpage`,
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS.join(', '),
+  url: PAGE_URL,
   about: {
     '@type': 'MedicalProcedure',
     name: 'Vitamin Injection Therapy',
