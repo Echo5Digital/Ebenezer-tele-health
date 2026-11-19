@@ -42,7 +42,7 @@ const SERVICES = [
       },
       {
         type: 'In-Person Initial Visit',
-        price: '$75',
+        price: '$100',
         included:
           'Comprehensive symptom review, lab orders included, lab interpretation, personalized treatment plan.',
       },
@@ -136,7 +136,7 @@ const pricingPageSchema = {
         '@type': 'Offer',
         name: "Women's Health In-Person Initial Visit",
         priceCurrency: 'USD',
-        price: '75',
+        price: '100',
         description:
           'Comprehensive symptom review, lab orders included, lab interpretation, personalized treatment plan.',
       },
