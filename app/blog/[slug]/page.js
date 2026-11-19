@@ -42,7 +42,7 @@ export function generateMetadata({ params }) {
     return { title: 'Post Not Found | Ebenezer Health Clinic' }
   }
   return {
-    title: { absolute: `${post.title} | Ebenezer Health Clinic` },
+    title: { absolute: post.metaTitle ?? `${post.title} | Ebenezer Health Clinic` },
     description: post.excerpt,
     alternates: { canonical: `${SITE_URL}/blog/${post.slug}` },
   }
