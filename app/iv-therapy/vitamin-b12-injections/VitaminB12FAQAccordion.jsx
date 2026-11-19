@@ -68,7 +68,8 @@ const faqs = [
   {
     id: 'b12-faq-10',
     question: 'How much does a Vitamin B12 injection cost?',
-    answer: 'Contact Ebenezer Health Clinic for current B12 injection pricing.',
+    answer:
+      'The first Vitamin B12 injection costs $50, including lab work and a free consultation. The second injection costs $40, and the third injection costs $30.',
   },
 ]
 

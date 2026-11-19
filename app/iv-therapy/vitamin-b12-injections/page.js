@@ -168,7 +168,7 @@ const vitaminB12SchemaGraph = {
           name: 'How much does a Vitamin B12 injection cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Contact Ebenezer Health Clinic for current B12 injection pricing.',
+            text: 'The first Vitamin B12 injection costs $50, including lab work and a free consultation. The second injection costs $40, and the third injection costs $30.',
           },
         },
       ],
@@ -1249,12 +1249,16 @@ export default function VitaminB12InjectionsPage() {
             }}
           >
             <div className="flex items-start justify-between gap-4 py-3" style={{ borderBottom: '1px solid rgba(26,166,183,0.12)' }}>
-              <span className="text-gray-700 font-semibold">Vitamin B12 Injection</span>
-              <span className="text-gray-500 italic">Contact for current pricing</span>
+              <span className="text-gray-700 font-semibold">First Injection</span>
+              <span className="text-gray-500">$50 <span className="italic">(Includes lab work and a free consultation)</span></span>
+            </div>
+            <div className="flex items-start justify-between gap-4 py-3" style={{ borderBottom: '1px solid rgba(26,166,183,0.12)' }}>
+              <span className="text-gray-700 font-semibold">Second Injection</span>
+              <span className="text-gray-500">$40</span>
             </div>
             <div className="flex items-start justify-between gap-4 py-3">
-              <span className="text-gray-700 font-semibold">What&apos;s Included</span>
-              <span className="text-gray-500 italic">Contact for current information</span>
+              <span className="text-gray-700 font-semibold">Third Injection</span>
+              <span className="text-gray-500">$30</span>
             </div>
           </div>
           <div className="mt-8">
