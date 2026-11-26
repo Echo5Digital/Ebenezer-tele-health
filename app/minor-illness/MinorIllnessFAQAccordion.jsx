@@ -30,7 +30,13 @@ const faqs = [
     id: 'mi-faq-3',
     question: 'How much does it cost?',
     answer:
-      'Televisits and in-person visits without testing are $50. In-person visits that require testing range from $80 to $100. No insurance required.',
+      'Televisits and in-person visits without testing are $50. In-person visits that require testing range from $80 to $100. These are our self-pay rates; insurance is also accepted.',
+  },
+  {
+    id: 'mi-faq-3b',
+    question: 'Do you accept insurance?',
+    answer:
+      'Yes. We accept insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking. Self-pay rates are also available.',
   },
   {
     id: 'mi-faq-4',

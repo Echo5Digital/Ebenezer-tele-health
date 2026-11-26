@@ -1,3 +1,6 @@
+
+
+
 'use client'
 
 /**
@@ -33,8 +36,8 @@ const faqs = [
   },
   {
     id: 'th-faq-4',
-    question: 'Do I need insurance?',
-    answer: 'No. Cash-pay, transparent pricing.',
+    question: 'Do you accept insurance?',
+    answer: 'Yes. We accept insurance — call (405) 349-8188 to confirm your specific plan before booking. Self-pay rates are also available with transparent pricing.',
   },
 ]
 

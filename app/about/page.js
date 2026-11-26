@@ -38,7 +38,7 @@ const VALUES = [
   {
     icon: CreditCard,
     title: 'Transparent Pricing',
-    body: 'Cash-pay with flat fees you know before you book. No surprise bills.',
+    body: 'Insurance accepted, with flat self-pay fees you know before you book. No surprise bills.',
   },
   {
     icon: User,

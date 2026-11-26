@@ -88,14 +88,6 @@ const womensHealthPageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: "Women's Health Televisit",
-      priceCurrency: 'USD',
-      price: '50',
-      description:
-        'Secure video visit, symptom review, and prescriptions sent to your preferred pharmacy when appropriate.',
-    },
-    {
-      '@type': 'Offer',
       name: "Women's Health In-Person Initial Visit",
       priceCurrency: 'USD',
       price: '100',
@@ -247,12 +239,6 @@ const steps = [
     description:
       'Following your clinical evaluation, your provider will discuss appropriate next steps, which may include treatment options, testing, prescriptions, monitoring or follow-up care.',
   },
-]
-
-const pricingTelevisitFeatures = [
-  'Secure video visit with Dr. Susan George',
-  'Symptom review and consultation',
-  'Prescriptions sent to your preferred pharmacy when appropriate',
 ]
 
 const pricingInitialFeatures = [
@@ -1566,7 +1552,7 @@ export default function WomensHealthPage() {
               id="pricing-heading"
               className="text-3xl md:text-4xl mb-4"
             >
-              Women&apos;s Health Pricing
+              Women&apos;s Health Insurance &amp; Pricing
             </h2>
             <p className="text-base md:text-lg max-w-xl mx-auto" style={{ color: '#6b5a5e' }}>
               We believe patients should understand the cost of care before
@@ -1574,59 +1560,54 @@ export default function WomensHealthPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {/* Televisit Card */}
+          {/* Insurance notice — shown above self-pay rates so patients don't assume cash-pay only */}
+          <div
+            className="mb-10 max-w-5xl mx-auto rounded-2xl p-5 md:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
+            style={{
+              backgroundColor: 'var(--wh-rose-soft)',
+              border: '1px solid rgba(194,37,92,0.18)',
+            }}
+            role="note"
+          >
+            <div>
+              <h3
+                className="text-lg md:text-xl font-bold mb-1.5"
+                style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
+              >
+                Using health insurance?
+              </h3>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#5a4a4e' }}>
+                We accept health insurance. Call us to confirm your specific
+                plan before booking. Your out-of-pocket cost depends on your
+                plan and the services you receive.
+              </p>
+            </div>
+            <a
+              href="tel:+14053498188"
+              className="btn-primary text-sm sm:text-base px-6 py-3 text-center whitespace-nowrap flex-shrink-0"
+            >
+              Call to Confirm Your Plan
+            </a>
+          </div>
+
+          <div className="text-center mb-8">
+            <h3
+              className="text-xl md:text-2xl mb-2"
+              style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-heading)' }}
+            >
+              Self-Pay Visit Rates
+            </h3>
+            <p className="text-sm md:text-base" style={{ color: '#6b5a5e' }}>
+              These rates apply when you pay directly without using insurance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Initial Visit Card */}
             <div
               className="wh-card rounded-[2rem] p-7 md:p-8 flex flex-col"
               style={{
                 backgroundColor: 'var(--wh-rose-soft)',
-              }}
-            >
-              <h3
-                className="text-lg font-semibold mb-1"
-                style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
-              >
-                Televisit
-              </h3>
-              <p className="text-sm mb-5" style={{ color: '#6b5a5e' }}>
-                Secure video visit, symptom review, and prescriptions sent to
-                your pharmacy when appropriate.
-              </p>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span
-                  className="text-5xl"
-                  style={{ color: 'var(--wh-pink)', fontFamily: 'var(--font-wh-heading)' }}
-                >
-                  $50
-                </span>
-                <span className="text-sm" style={{ color: '#9a8a8e' }}>televisit</span>
-              </div>
-              <ul className="space-y-3 mb-8 flex-1">
-                {pricingTelevisitFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5">
-                    <span
-                      className="wh-icon-badge h-5 w-5 mt-0.5"
-                      style={{ backgroundColor: '#ffffff' }}
-                    >
-                      <Sparkles className="h-3 w-3" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
-                    </span>
-                    <span className="text-sm" style={{ color: '#5a4a4e' }}>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="btn-primary text-base w-full text-center"
-              >
-                Book Your Visit
-              </Link>
-            </div>
-
-            {/* Initial Visit Card */}
-            <div
-              className="wh-card rounded-[2rem] p-7 md:p-8 flex flex-col bg-white"
-              style={{
-                border: '1px solid rgba(194,37,92,0.18)',
               }}
             >
               <h3
@@ -1646,14 +1627,14 @@ export default function WomensHealthPage() {
                 >
                   $100
                 </span>
-                <span className="text-sm" style={{ color: '#9a8a8e' }}>initial visit</span>
+                <span className="text-sm" style={{ color: '#9a8a8e' }}>self-pay</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {pricingInitialFeatures.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
                     <span
                       className="wh-icon-badge h-5 w-5 mt-0.5"
-                      style={{ backgroundColor: 'var(--wh-rose)' }}
+                      style={{ backgroundColor: '#ffffff' }}
                     >
                       <Sparkles className="h-3 w-3" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     </span>
@@ -1663,7 +1644,7 @@ export default function WomensHealthPage() {
               </ul>
               <Link
                 href="/contact"
-                className="btn-outline text-base w-full text-center"
+                className="btn-primary text-base w-full text-center"
               >
                 Book Your Visit
               </Link>
@@ -1693,7 +1674,7 @@ export default function WomensHealthPage() {
                 >
                   $50
                 </span>
-                <span className="text-sm" style={{ color: '#9a8a8e' }}>follow-up</span>
+                <span className="text-sm" style={{ color: '#9a8a8e' }}>self-pay</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {pricingFollowupFeatures.map((feature) => (

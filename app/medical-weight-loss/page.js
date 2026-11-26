@@ -1150,7 +1150,7 @@ export default function WeightLossPage() {
           </div>
 
           <div className="max-w-md mx-auto">
-            {/* Monthly Program Card */}
+            {/* Initial Visit Card */}
             <div
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
@@ -1163,7 +1163,7 @@ export default function WeightLossPage() {
                 className="text-lg font-semibold mb-1"
                 style={{ color: 'var(--navy)' }}
               >
-                Monthly Program
+                Initial Visit
               </h3>
               <p className="text-sm text-gray-600 mb-5">
                 Includes initial labs and prescriptions sent to Lilly Direct
@@ -1176,9 +1176,9 @@ export default function WeightLossPage() {
                 >
                   $100
                 </span>
-                <span className="text-sm text-gray-500">/month</span>
+                <span className="text-sm text-gray-500">initial visit</span>
               </div>
-              <ul className="space-y-3 mb-8 flex-1">
+              <ul className="space-y-3 mb-6 flex-1">
                 {pricingProgramFeatures.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
@@ -1190,6 +1190,19 @@ export default function WeightLossPage() {
                   </li>
                 ))}
               </ul>
+              <div
+                className="rounded-xl p-4 mb-6 text-sm text-gray-700"
+                style={{ backgroundColor: 'rgba(255,255,255,0.6)' }}
+              >
+                <p className="flex items-center justify-between">
+                  <span>Follow-up visit</span>
+                  <strong style={{ color: 'var(--primary)' }}>$50</strong>
+                </p>
+                <p className="flex items-center justify-between mt-2">
+                  <span>Follow-up visit (with labs)</span>
+                  <strong style={{ color: 'var(--primary)' }}>$100</strong>
+                </p>
+              </div>
               <Link
                 href="/contact"
                 className="btn-primary text-base w-full text-center"
@@ -1214,7 +1227,9 @@ export default function WeightLossPage() {
               />
               <p className="text-sm text-gray-700">
                 Weight-loss medication is billed separately to the patient
-                and depends on the option chosen after evaluation.
+                and depends on the option chosen after evaluation. We accept
+                insurance — call (405) 349-8188 to confirm your specific
+                plan. Self-pay rates are also available.
               </p>
             </div>
 

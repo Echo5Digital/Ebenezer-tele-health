@@ -305,7 +305,7 @@ export default function ContactPage() {
                     style={{ color: 'var(--primary)' }}
                     aria-hidden="true"
                   />
-                  Cash-pay · no insurance needed
+                  Insurance accepted · self-pay available
                 </span>
                 <span className="flex items-center gap-2">
                   <Shield
@@ -783,12 +783,13 @@ export default function ContactPage() {
                   className="text-base font-semibold mb-2"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Cash-Pay Practice
+                  Insurance &amp; Self-Pay
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  No insurance required. You&apos;ll know your full cost before
-                  booking, no surprise bills. We accept cash, credit, and debit
-                  cards.
+                  We accept insurance — call to confirm your specific plan
+                  before booking. Self-pay rates are also available, so
+                  you&apos;ll know your full cost before booking, no surprise
+                  bills. We accept cash, credit, and debit cards.
                 </p>
               </div>
 

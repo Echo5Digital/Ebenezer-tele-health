@@ -54,10 +54,10 @@ const telehealthFAQSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Do I need insurance for a telehealth visit?',
+      name: 'Do you accept insurance for a telehealth visit?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Cash-pay, transparent pricing.',
+        text: 'Yes. We accept insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking. Self-pay rates are also available.',
       },
     },
   ],

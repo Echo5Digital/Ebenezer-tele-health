@@ -4,10 +4,10 @@ import PricingFAQAccordion from './PricingFAQAccordion'
 
 export const metadata = {
   title: {
-    absolute: 'Pricing | Cash-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
+    absolute: 'Pricing | Insurance & Self-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
   },
   description:
-    "Cash-pay pricing at our Oklahoma City clinic — weight loss $100/month, women's health from $50, minor illness from $50, plus primary care, injections & IV therapy. No insurance needed.",
+    "Insurance accepted. Self-pay rates at our Oklahoma City clinic — weight loss from $50, women's health from $50, minor illness from $50, plus primary care. Call to confirm your plan.",
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/pricing',
   },
@@ -22,11 +22,21 @@ const SERVICES = [
     featured: true,
     rows: [
       {
-        type: 'Monthly Program',
-        price: '$100/month',
+        type: 'Initial Visit',
+        price: '$100',
         included:
-          'Includes initial labs and prescriptions sent to Lilly Direct Pharmacy.',
+          'Consultation and initial labs. Prescriptions sent to Lilly Direct Pharmacy when appropriate.',
         includedNote: 'Weight loss medication is billed separately to the patient.',
+      },
+      {
+        type: 'Follow-Up Visit',
+        price: '$50',
+        included: 'Ongoing assessment and monitoring of your weight loss plan.',
+      },
+      {
+        type: 'Follow-Up Visit (With Labs)',
+        price: '$100',
+        included: 'Follow-up visit that includes lab work.',
       },
     ],
   },
@@ -34,12 +44,6 @@ const SERVICES = [
     name: "Women's Health",
     featured: false,
     rows: [
-      {
-        type: 'Televisit',
-        price: '$50',
-        included:
-          'Secure video visit, symptom review, prescriptions sent to your preferred pharmacy when appropriate.',
-      },
       {
         type: 'In-Person Initial Visit',
         price: '$100',
@@ -104,7 +108,7 @@ const CASH_PAY_BENEFITS = [
 const pricingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Pricing | Cash-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
+  name: 'Pricing | Insurance & Self-Pay Medical Clinic in Oklahoma City | Ebenezer Health Clinic',
   url: 'https://www.ebenezerhealthclinic.com/pricing',
   mainEntity: {
     '@type': 'ItemList',
@@ -112,25 +116,25 @@ const pricingPageSchema = {
     itemListElement: [
       {
         '@type': 'Offer',
-        name: 'Weight Loss Monthly Program',
+        name: 'Weight Loss Initial Visit',
         priceCurrency: 'USD',
         price: '100',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '100',
-          priceCurrency: 'USD',
-          unitCode: 'MON',
-        },
         description:
-          'Includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Weight loss medication is billed separately to the patient.',
+          'Consultation and initial labs. Prescriptions sent to Lilly Direct Pharmacy when appropriate. Weight loss medication is billed separately to the patient.',
       },
       {
         '@type': 'Offer',
-        name: "Women's Health Televisit",
+        name: 'Weight Loss Follow-Up Visit',
         priceCurrency: 'USD',
         price: '50',
-        description:
-          'Secure video visit, symptom review, prescriptions sent to your preferred pharmacy when appropriate.',
+        description: 'Ongoing assessment and monitoring of your weight loss plan.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Weight Loss Follow-Up Visit (With Labs)',
+        priceCurrency: 'USD',
+        price: '100',
+        description: 'Follow-up visit that includes lab work.',
       },
       {
         '@type': 'Offer',
@@ -187,10 +191,18 @@ const pricingFAQSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How much does telehealth cost without insurance in Oklahoma?',
+      name: 'Does Ebenezer Health Clinic accept insurance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Women's health televisits are $50, weight loss is $100/month, and minor illness televisits are $50. No insurance required.",
+        text: "Yes. Ebenezer Health Clinic accepts insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the self-pay rates for telehealth in Oklahoma?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Women's health self-pay visits start at $50, weight loss self-pay visits start at $50, and minor illness self-pay televisits are $50. These rates apply when you pay directly without using insurance.",
       },
     },
     {
@@ -198,7 +210,7 @@ const pricingFAQSchema = {
       name: 'How much does semaglutide cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The $100/month program fee covers initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
+        text: "The $100 initial visit fee covers your consultation and initial labs, with prescriptions sent to Lilly Direct Pharmacy when appropriate. Follow-up visits are $50, or $100 if labs are needed. The weight loss medication itself is billed separately to the patient and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
       },
     },
     {
@@ -222,7 +234,7 @@ const pricingFAQSchema = {
       name: 'Is in-person the same price as online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "For most visits, yes. Minor illness and women's health televisits and standard in-person visits are both $50. In-person minor illness visits that require testing range from $80 to $100.",
+        text: "For most visits, yes. Minor illness televisits and standard in-person visits are both $50, as are women's health in-person follow-up visits. In-person minor illness visits that require testing range from $80 to $100.",
       },
     },
   ],
@@ -335,13 +347,17 @@ export default function PricingPage() {
             >
               Transparent Pricing: Oklahoma City Clinic &amp; Telehealth
             </h1>
+            <p className="text-base md:text-lg text-gray-700 mb-2">
+              We accept insurance. Call (405) 349-8188 to confirm your plan,
+              or see self-pay rates below.
+            </p>
 
-            {/* Quick-scan price chips */}
+            {/* Quick-scan self-pay price chips */}
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 mt-7">
               {[
-                { label: 'Weight Loss', price: '$100/month' },
-                { label: "Women's Health", price: 'From $50' },
-                { label: 'Minor Illness', price: 'From $50' },
+                { label: 'Weight Loss', price: 'From $50 self-pay' },
+                { label: "Women's Health", price: 'From $50 self-pay' },
+                { label: 'Minor Illness', price: 'From $50 self-pay' },
               ].map((chip) => (
                 <div
                   key={chip.label}
@@ -372,7 +388,7 @@ export default function PricingPage() {
       ════════════════════════════════════════════════════════ */}
       <section
         className="relative overflow-hidden"
-        aria-label="Telehealth cost without insurance in Oklahoma"
+        aria-label="Telehealth cost and insurance in Oklahoma"
         style={{
           backgroundImage: 'url(/block_bg.webp)',
           backgroundSize: 'cover',
@@ -393,21 +409,26 @@ export default function PricingPage() {
               className="hero-answer-line text-base md:text-lg leading-relaxed"
               style={{ color: '#1AA6B7' }}
             >
-              Ebenezer Health Clinic is a cash-pay medical clinic in Oklahoma
-              City with transparent pricing and no insurance required.{' '}
+              Ebenezer Health Clinic accepts insurance. Coverage and
+              out-of-pocket costs vary by plan, so please call{' '}
+              <a href="tel:+14053498188" className="font-semibold" style={{ color: 'var(--primary)' }}>
+                (405) 349-8188
+              </a>{' '}
+              to confirm your plan before booking. Self-pay rates are also
+              available for patients without insurance:{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                Women&apos;s health from $50
+                women&apos;s health from $50
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
-                weight loss $100/month
+                weight loss from $50
               </strong>
               ,{' '}
               <strong style={{ color: 'var(--primary)' }}>
                 minor illness from $50
               </strong>
               . Primary care, injections, and IV therapy pricing below.
-              The weight loss program fee includes initial labs and
+              The weight loss initial visit fee includes labs and
               prescriptions sent to Lilly Direct Pharmacy; the weight-loss
               medication itself is billed separately to the patient. See our{' '}
               <Link href="/iv-therapy" className="font-semibold" style={{ color: 'var(--primary)' }}>
@@ -424,7 +445,7 @@ export default function PricingPage() {
       ════════════════════════════════════════════════════════ */}
       <section
         className="relative overflow-hidden"
-        aria-label="About telehealth cost without insurance in Oklahoma"
+        aria-label="Insurance and self-pay cost of care in Oklahoma"
         style={{
           backgroundImage: "url('/body_bg2.webp')",
           backgroundSize: 'cover',
@@ -450,10 +471,11 @@ export default function PricingPage() {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: 'var(--navy)' }}
               >
-                Wondering what telehealth costs without insurance in Oklahoma?
-                We keep it simple. As a cash-pay clinic serving OKC and the
-                whole state, we show you the price before you book. No
-                surprise bills, no billing runaround, just{' '}
+                Wondering what care costs in Oklahoma? We keep it simple. We
+                accept insurance, and we also show you self-pay prices up
+                front for patients serving OKC and the whole state who prefer
+                to pay directly. No surprise bills, no billing runaround,
+                just{' '}
                 <strong style={{ color: 'var(--primary)' }}>
                   affordable medical care in Oklahoma City
                 </strong>{' '}
@@ -473,6 +495,36 @@ export default function PricingPage() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
 
+          {/* Insurance notice — shown above self-pay rates so patients don't assume cash-pay only */}
+          <div
+            className="mb-10 rounded-2xl p-5 md:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
+            }}
+            role="note"
+          >
+            <div>
+              <h3
+                className="text-lg md:text-xl font-bold mb-1.5"
+                style={{ color: 'var(--navy)' }}
+              >
+                Using health insurance?
+              </h3>
+              <p className="text-sm md:text-base leading-relaxed text-gray-700">
+                We accept health insurance. Call us to confirm your specific
+                plan before booking. Your out-of-pocket cost depends on your
+                plan and the services you receive.
+              </p>
+            </div>
+            <a
+              href="tel:+14053498188"
+              className="btn-primary text-sm sm:text-base px-6 py-3 text-center whitespace-nowrap flex-shrink-0"
+            >
+              Call to Confirm Your Plan
+            </a>
+          </div>
+
           {/* Section heading */}
           <div className="mb-10">
             <h2
@@ -480,10 +532,11 @@ export default function PricingPage() {
               className="text-3xl md:text-4xl font-bold mb-2"
               style={{ color: 'var(--navy)' }}
             >
-              Our Pricing
+              Self-Pay Visit Rates
             </h2>
             <p className="text-gray-600">
-              Flat-fee per visit. No hidden costs. No insurance required.
+              Flat-fee per visit. No hidden costs. These rates apply when you
+              pay directly without using insurance.
             </p>
           </div>
 
@@ -562,9 +615,11 @@ export default function PricingPage() {
               aria-hidden="true"
             />
             <p className="text-sm text-gray-700 leading-relaxed">
-              Prices listed are your <strong>total cost</strong> for each
-              visit. No hidden fees, no additional charges. Payment is due at
-              the time of booking. We accept cash, credit, and debit cards. As telehealth services are provided remotely, payment is currently accepted via credit and debit cards only.
+              Self-pay prices listed are your <strong>total cost</strong> for
+              each visit. No hidden fees, no additional charges. Payment is
+              due at the time of booking. We accept cash, credit, and debit
+              cards. As telehealth services are provided remotely, payment is
+              currently accepted via credit and debit cards only.
             </p>
           </div>
 
@@ -636,7 +691,7 @@ export default function PricingPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════
-          WHY CASH-PAY?
+          INSURANCE & SELF-PAY OPTIONS
       ════════════════════════════════════════════════════════ */}
       <section
         className="bg-white"
@@ -651,28 +706,35 @@ export default function PricingPage() {
                 className="inline-block text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--primary)' }}
               >
-                No Insurance Needed
+                Insurance Accepted
               </span>
               <h2
                 id="cash-pay-heading"
                 className="text-3xl md:text-4xl font-bold mb-5"
                 style={{ color: 'var(--navy)' }}
               >
-                Why Cash-Pay?
+                Insurance &amp; Self-Pay Options
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                For many patients, our flat fees cost less than an insured
-                urgent care copay, and you skip the billing complexity
-                entirely.
+                We accept insurance, and coverage varies by plan. Call{' '}
+                <a href="tel:+14053498188" className="font-semibold" style={{ color: 'var(--primary)' }}>
+                  (405) 349-8188
+                </a>{' '}
+                to confirm your specific plan before booking.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                We&apos;re working toward accepting insurance as the practice
-                grows and will update this page when that&apos;s available.
+                Prefer to pay directly? Our self-pay rates are flat-fee and
+                shown up front, so for many patients they cost less than an
+                insured urgent care copay, with no billing complexity.
               </p>
             </div>
 
             {/* Right: benefit cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--primary)' }}>
+                Benefits of paying self-pay
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {CASH_PAY_BENEFITS.map((item) => (
                 <div
                   key={item.title}
@@ -700,6 +762,7 @@ export default function PricingPage() {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
 
           </div>
@@ -778,8 +841,8 @@ export default function PricingPage() {
             Ready to Book Your Visit?
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Flat-fee pricing. No insurance needed. Secure video visits for
-            patients across all of Oklahoma.
+            Insurance accepted, with transparent self-pay pricing available.
+            Secure video visits for patients across all of Oklahoma.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

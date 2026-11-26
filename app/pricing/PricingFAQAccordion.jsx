@@ -9,12 +9,16 @@ import {
 
 const PRICING_FAQS = [
   {
-    q: 'How much does telehealth cost without insurance in Oklahoma?',
-    a: "Women's health televisits are $50, weight loss is $100/month, and minor illness televisits are $50. No insurance required.",
+    q: 'Does Ebenezer Health Clinic accept insurance?',
+    a: 'Yes. We accept insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking.',
+  },
+  {
+    q: 'What are the self-pay rates for telehealth in Oklahoma?',
+    a: "Women's health self-pay visits start at $50, weight loss self-pay visits start at $50, and minor illness self-pay televisits are $50. These rates apply when you pay directly without using insurance.",
   },
   {
     q: 'How much does semaglutide cost?',
-    a: "The $100/month weight loss program fee covers initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
+    a: "The $100 initial visit fee covers your consultation and initial labs, with prescriptions sent to Lilly Direct Pharmacy when appropriate. Follow-up visits are $50, or $100 if labs are needed. The weight loss medication itself is billed separately to the patient and depends on the option chosen after evaluation. We'll be upfront about cost before prescribing.",
   },
   {
     q: 'Are there hidden fees?',
@@ -26,7 +30,7 @@ const PRICING_FAQS = [
   },
   {
     q: 'Is in-person the same price as online?',
-    a: "For most visits, yes. Minor illness and women's health televisits and standard in-person visits are both $50. In-person minor illness visits that require testing range from $80 to $100.",
+    a: "For most visits, yes. Minor illness televisits and standard in-person visits are both $50, as are women's health in-person follow-up visits. In-person minor illness visits that require testing range from $80 to $100.",
   },
 ]
 

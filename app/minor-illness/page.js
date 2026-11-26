@@ -5,7 +5,7 @@ import MinorIllnessFAQAccordion from './MinorIllnessFAQAccordion'
 export const metadata = {
   title: 'Urgent Care Alternative in Oklahoma City',
   description:
-    'An urgent care alternative in Oklahoma City for minor illness - sinus infections, UTIs, cold & flu. In-person or online, same day. From $50 per visit. (405) 349-8188.',
+    'An urgent care alternative in Oklahoma City for minor illness - sinus infections, UTIs, cold & flu. In-person or online, same day. From $50 per visit. Insurance accepted, self-pay rates available. (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/minor-illness',
   },
@@ -26,7 +26,7 @@ const pricingFeatures = [
   'Same-day video visit with Dr. Susan George',
   'Thorough evaluation, diagnosis & treatment recommendations',
   'Electronic prescriptions sent to your preferred pharmacy (including 24-hour pharmacies like Walgreens and CVS for televisits)',
-  'No insurance needed. Cash-pay transparency.',
+  'Insurance accepted. Self-pay rates also available.',
 ]
 
 const steps = [
@@ -58,7 +58,7 @@ const steps = [
 
 const whyPoints = [
   'Skip the waiting room. Get evaluated from your couch, often the same day you book.',
-  '$50 televisit vs. a typical urgent care copay. No surprise bills, no insurance required.',
+  'We accept insurance — call to confirm your plan. Self-pay rates are also available and transparent, with no surprise bills.',
   'Avoid exposure to other illnesses by staying home and getting care virtually.',
   'Prescriptions sent directly to your preferred 24-hour pharmacy, primarily Walgreens or CVS.',
 ]
@@ -70,7 +70,7 @@ const minorIllnessPageSchema = {
   '@type': 'MedicalWebPage',
   name: 'Urgent Care Alternative in Oklahoma City | Ebenezer Health Clinic',
   description:
-    'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. From $50 per visit.',
+    'An urgent care alternative in Oklahoma City for minor illness: sinus infections, UTIs, cold & flu. In-person or online, same day. From $50 per visit. Insurance accepted, self-pay rates available.',
   url: 'https://www.ebenezerhealthclinic.com/minor-illness',
   about: {
     '@type': 'MedicalProcedure',
@@ -139,7 +139,15 @@ const minorIllnessFAQSchema = {
       name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Televisits and in-person visits without testing are $50. In-person visits that require testing range from $80 to $100. No insurance required.',
+        text: 'Televisits and in-person visits without testing are $50. In-person visits that require testing range from $80 to $100. These are our self-pay rates; insurance is also accepted.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you accept insurance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We accept insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking. Self-pay rates are also available.',
       },
     },
     {
@@ -239,8 +247,8 @@ export default function MinorIllnessPage() {
             <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
               Feel better without leaving home. Get evaluated and treated online
               for common illnesses: sinus infections, cold and flu, UTIs,
-              allergies, rashes, and more. Often same day. From $50 per visit, no
-              insurance needed.
+              allergies, rashes, and more. Often same day. From $50 per visit.
+              Insurance accepted, self-pay rates available.
             </p>
 
             {/* Same-day badge */}
@@ -308,8 +316,8 @@ export default function MinorIllnessPage() {
                 concerns. As a same-day clinic in Oklahoma City and a walk-in
                 alternative in OKC, we see you in person on Saturdays or online,
                 often the same day, for $50 (in-person visits requiring testing
-                range from $80 to $100). This service is not for medical
-                emergencies.
+                range from $80 to $100). Insurance accepted, self-pay rates
+                also available. This service is not for medical emergencies.
               </p>
             </div>
           </div>
@@ -356,6 +364,7 @@ export default function MinorIllnessPage() {
                 same day, starting at{' '}
                 <strong style={{ color: 'var(--primary)' }}>$50</strong>{' '}
                 (in-person visits requiring testing range from $80 to $100).
+                Insurance accepted, with self-pay rates also available.
               </p>
             </div>
           </div>
@@ -478,12 +487,13 @@ export default function MinorIllnessPage() {
                   className="text-base font-semibold mb-2"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Cash-pay. No insurance required.
+                  Insurance accepted. Self-pay rates available.
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  You&apos;ll know the full cost before you book. No hidden
-                  fees, no insurance claims, no surprise bills. Just
-                  straightforward care at a transparent price.
+                  We accept insurance — call to confirm your specific plan
+                  before booking. Prefer to pay directly? Simple, transparent
+                  self-pay pricing is also available, with no hidden fees or
+                  surprise bills.
                 </p>
                 <Link href="/contact" className="btn-primary text-sm">
                   Book a Same-Day Visit
@@ -640,12 +650,50 @@ export default function MinorIllnessPage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--navy)' }}
             >
-              Simple Pricing: From $50 Per Visit
+              Minor Illness Insurance &amp; Pricing
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
-              No insurance required. No hidden fees. You know the cost before
-              you book.
+              We accept insurance, and self-pay rates are also available. No
+              hidden fees. You know the cost before you book.
             </p>
+          </div>
+
+          {/* Insurance notice — shown above self-pay rates so patients don't assume cash-pay only */}
+          <div
+            className="mb-10 max-w-lg mx-auto rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
+            }}
+            role="note"
+          >
+            <div>
+              <h3
+                className="text-lg font-bold mb-1.5"
+                style={{ color: 'var(--navy)' }}
+              >
+                Using health insurance?
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-700">
+                We accept health insurance. Call us to confirm your specific
+                plan before booking.
+              </p>
+            </div>
+            <a
+              href="tel:+14053498188"
+              className="btn-primary text-sm px-6 py-3 text-center whitespace-nowrap flex-shrink-0"
+            >
+              Call to Confirm Your Plan
+            </a>
+          </div>
+
+          <div className="text-center mb-2">
+            <h3
+              className="text-xl md:text-2xl font-bold"
+              style={{ color: 'var(--navy)' }}
+            >
+              Self-Pay Visit Rates
+            </h3>
           </div>
 
           <div className="max-w-lg mx-auto">
@@ -707,7 +755,7 @@ export default function MinorIllnessPage() {
               </Link>
             </div>
 
-            {/* Cash-pay note */}
+            {/* Self-pay note */}
             <div
               className="mt-6 rounded-xl p-5 flex items-start gap-3"
               style={{
@@ -722,9 +770,9 @@ export default function MinorIllnessPage() {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                We operate on a <strong>cash-pay basis</strong>. No insurance
-                claims, no surprise bills. The exact price is confirmed before
-                you book.
+                The rates above are our <strong>self-pay rates</strong> for
+                patients without insurance or who choose not to bill their
+                plan. No hidden fees, no surprise bills.
               </p>
             </div>
           </div>
@@ -899,8 +947,9 @@ export default function MinorIllnessPage() {
               room, and expose yourself to more illness. Telehealth lets you get
               evaluated and treated from your couch, often the same day you
               book, with a prescription sent directly to your pharmacy.
-              It&apos;s faster, cheaper ($50 televisit vs. a typical urgent care copay),
-              and you skip the exposure and the commute.
+              It&apos;s faster, often more affordable than a typical urgent care
+              copay ($50 televisit, insurance accepted or self-pay), and you
+              skip the exposure and the commute.
             </p>
 
             <ul className="space-y-3.5" role="list">
@@ -1141,7 +1190,8 @@ export default function MinorIllnessPage() {
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Same-day virtual care for minor illnesses across Oklahoma. From $50
-            per visit. No insurance required, no waiting room.
+            per visit. Insurance accepted, self-pay rates available, no
+            waiting room.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

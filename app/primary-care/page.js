@@ -5,7 +5,7 @@ import PrimaryCareFAQAccordion from './PrimaryCareFAQAccordion'
 export const metadata = {
   title: 'Primary Care Clinic in Oklahoma City',
   description:
-    'Primary care in Oklahoma City for you and your family. Walk-ins welcome or by appointment. Cash-pay, no insurance required. Book or call (405) 349-8188.',
+    'Primary care in Oklahoma City for you and your family. Walk-ins welcome or by appointment. Insurance accepted, self-pay rates available. Book or call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/primary-care',
   },
@@ -18,7 +18,7 @@ const primaryCarePageSchema = {
   '@type': 'MedicalWebPage',
   name: 'Primary Care Clinic in Oklahoma City | Ebenezer Health Clinic',
   description:
-    'Primary care in Oklahoma City for individuals and families, including routine checkups, preventive care, and support for everyday health concerns. Walk-ins welcome. Cash-pay, no insurance required.',
+    'Primary care in Oklahoma City for individuals and families, including routine checkups, preventive care, and support for everyday health concerns. Walk-ins welcome. Insurance accepted, self-pay rates available.',
   url: 'https://www.ebenezerhealthclinic.com/primary-care',
   about: {
     '@type': 'MedicalProcedure',
@@ -35,7 +35,7 @@ const primaryCarePageSchema = {
       name: 'Primary Care Visit',
       priceCurrency: 'USD',
       description:
-        'Walk-in or scheduled primary care visit. Cash-pay pricing, no insurance required. Contact clinic for current pricing.',
+        'Walk-in or scheduled primary care visit. Insurance accepted; self-pay pricing also available. Contact clinic for current pricing.',
     },
   ],
 }
@@ -54,10 +54,10 @@ const primaryCareFAQSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Do I need insurance for primary care?',
+      name: 'Does Ebenezer Health Clinic accept insurance for primary care?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "No. We're a cash-pay clinic. No insurance required.",
+        text: 'Yes. We accept insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking. Self-pay rates are also available.',
       },
     },
     {
@@ -207,7 +207,7 @@ export default function PrimaryCarePage() {
                 Ebenezer Health Clinic provides primary care in Oklahoma City for individuals
                 and families, including routine checkups, preventive care, and support for
                 everyday health concerns. Walk-ins are welcome or you can book ahead.
-                Cash-pay pricing, no insurance required.
+                Insurance accepted, with self-pay rates also available.
               </p>
             </div>
           </div>
@@ -374,11 +374,13 @@ export default function PrimaryCarePage() {
                   className="text-base font-semibold mb-2"
                   style={{ color: 'var(--navy)' }}
                 >
-                  Cash-pay. No insurance required.
+                  Insurance accepted. Self-pay rates available.
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  Simple, transparent pricing with no insurance claims, no hidden
-                  fees, and no surprise bills. You know the cost before your visit.
+                  We accept insurance — call to confirm your specific plan
+                  before booking. Prefer to pay directly? Simple, transparent
+                  self-pay pricing is also available, with no hidden fees or
+                  surprise bills.
                 </p>
                 <Link href="/pricing" className="btn-primary text-sm">
                   See Pricing
@@ -473,10 +475,10 @@ export default function PrimaryCarePage() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: 'var(--navy)' }}
             >
-              Simple Cash-Pay Pricing
+              Primary Care Insurance &amp; Pricing
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
-              Primary care visits are cash-pay, with no insurance required.{' '}
+              We accept insurance, and self-pay rates are also available.{' '}
               <Link
                 href="/pricing"
                 className="font-semibold underline underline-offset-2"
@@ -485,6 +487,44 @@ export default function PrimaryCarePage() {
                 See pricing →
               </Link>
             </p>
+          </div>
+
+          {/* Insurance notice — shown above self-pay rate so patients don't assume cash-pay only */}
+          <div
+            className="mb-10 max-w-lg mx-auto rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
+            style={{
+              backgroundColor: 'rgba(151,206,204,0.15)',
+              border: '1px solid rgba(26,166,183,0.20)',
+            }}
+            role="note"
+          >
+            <div>
+              <h3
+                className="text-lg font-bold mb-1.5"
+                style={{ color: 'var(--navy)' }}
+              >
+                Using health insurance?
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-700">
+                We accept health insurance. Call us to confirm your specific
+                plan before booking.
+              </p>
+            </div>
+            <a
+              href="tel:+14053498188"
+              className="btn-primary text-sm px-6 py-3 text-center whitespace-nowrap flex-shrink-0"
+            >
+              Call to Confirm Your Plan
+            </a>
+          </div>
+
+          <div className="text-center mb-2">
+            <h3
+              className="text-xl md:text-2xl font-bold"
+              style={{ color: 'var(--navy)' }}
+            >
+              Self-Pay Visit Rate
+            </h3>
           </div>
 
           <div className="max-w-lg mx-auto">
@@ -506,7 +546,7 @@ export default function PrimaryCarePage() {
                 </h3>
                 <p className="text-sm text-gray-600">
                   Walk-in or scheduled visit with your provider. Includes evaluation,
-                  guidance, and referrals when needed. No insurance required.
+                  guidance, and referrals when needed. Self-pay rate shown below.
                 </p>
               </div>
 
@@ -516,7 +556,7 @@ export default function PrimaryCarePage() {
                   'Routine checkups and preventive screenings',
                   'Evaluation of common health concerns',
                   'Referrals when specialist care is needed',
-                  'No insurance claims or surprise bills',
+                  'No hidden fees or surprise bills',
                 ].map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
                     <CheckCircle2
@@ -552,8 +592,10 @@ export default function PrimaryCarePage() {
                 aria-hidden="true"
               />
               <p className="text-sm text-gray-700">
-                We operate on a <strong>cash-pay basis</strong>. No insurance
-                claims, no surprise bills. Pricing is confirmed before your visit.
+                The rate above is our <strong>self-pay rate</strong> for
+                patients without insurance or who choose not to bill their
+                plan. No hidden fees, no surprise bills. Pricing is confirmed
+                before your visit.
               </p>
             </div>
           </div>

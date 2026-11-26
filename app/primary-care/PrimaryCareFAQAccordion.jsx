@@ -22,9 +22,9 @@ const faqs = [
   },
   {
     id: 'pc-faq-2',
-    question: 'Do I need insurance?',
+    question: 'Do you accept insurance?',
     answer:
-      "No. We're a cash-pay clinic. No insurance required, no surprise bills. Pricing is confirmed before your visit.",
+      'Yes. We accept insurance. Coverage and out-of-pocket costs vary by plan, so please call (405) 349-8188 to confirm your specific plan before booking. Self-pay rates are also available, with no surprise bills and pricing confirmed before your visit.',
   },
   {
     id: 'pc-faq-3',

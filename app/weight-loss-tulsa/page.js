@@ -12,7 +12,7 @@ import WeightLossLocationFAQAccordion from '@/components/WeightLossLocationFAQAc
 export const metadata = {
   title: 'Weight Loss Clinic in Tulsa, OK | Online Medical Weight Loss',
   description:
-    'Weight loss clinic for Tulsa, OK: semaglutide & GLP-1 plans through secure online visits with a Board Certified provider. $100/month. Book or call (405) 349-8188.',
+    'Weight loss clinic for Tulsa, OK: semaglutide & GLP-1 plans through secure online visits with a Board Certified provider. Initial visit $100, follow-ups from $50. Book or call (405) 349-8188.',
   alternates: {
     canonical: 'https://www.ebenezerhealthclinic.com/weight-loss-tulsa',
   },
@@ -67,7 +67,7 @@ const faqs = [
     id: 'tulsa-faq-3',
     question: 'What does it cost?',
     answer:
-      '$100 per month, which includes initial labs and prescriptions sent to Lilly Direct Pharmacy. The weight loss medication itself is billed separately to the patient.',
+      'The initial visit is $100 and includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Follow-up visits are $50, or $100 if labs are needed. The weight loss medication itself is billed separately to the patient.',
   },
 ]
 
@@ -78,7 +78,7 @@ const pageSchema = {
   '@type': 'MedicalWebPage',
   name: 'Weight Loss Clinic in Tulsa, OK | Online Medical Weight Loss',
   description:
-    'Weight loss clinic for Tulsa, OK: semaglutide and GLP-1 plans through secure online visits with a Board Certified provider. Oklahoma City-based practice serving Tulsa via telehealth. No Tulsa office. $100/month, includes initial labs and prescriptions sent to Lilly Direct Pharmacy. Medication billed separately.',
+    'Weight loss clinic for Tulsa, OK: semaglutide and GLP-1 plans through secure online visits with a Board Certified provider. Oklahoma City-based practice serving Tulsa via telehealth. No Tulsa office. Initial visit $100 includes initial labs and prescriptions sent to Lilly Direct Pharmacy; follow-up visits $50, or $100 with labs. Medication billed separately.',
   url: 'https://www.ebenezerhealthclinic.com/weight-loss-tulsa',
   provider: { '@id': 'https://www.ebenezerhealthclinic.com/#dr-susan-george' },
   about: {
@@ -108,17 +108,29 @@ const pageSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'Weight Loss Monthly Program',
+      name: 'Weight Loss Initial Visit',
       description:
-        'Full health and metabolic evaluation, personalized weight-loss plan, initial labs, and prescriptions sent to Lilly Direct Pharmacy, with ongoing monitoring and support. Weight loss medication is billed separately to the patient.',
+        'Full health and metabolic evaluation, personalized weight-loss plan, and initial labs, with prescriptions sent to Lilly Direct Pharmacy when appropriate. Weight loss medication is billed separately to the patient.',
       priceCurrency: 'USD',
       price: '100',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: '100',
-        priceCurrency: 'USD',
-        unitCode: 'MON',
-      },
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Weight Loss Follow-Up Visit',
+      description:
+        'Ongoing assessment and monitoring for patients in an active weight-loss plan. Weight loss medication is billed separately to the patient.',
+      priceCurrency: 'USD',
+      price: '50',
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Weight Loss Follow-Up Visit (With Labs)',
+      description:
+        'Follow-up visit that includes lab work, plus ongoing assessment and monitoring. Weight loss medication is billed separately to the patient.',
+      priceCurrency: 'USD',
+      price: '100',
       availability: 'https://schema.org/InStock',
     },
   ],
@@ -211,9 +223,10 @@ export default function WeightLossTulsaPage() {
                 through secure online visits with Ebenezer Health Clinic. Our
                 Board Certified provider builds a personalized plan that may
                 include semaglutide or GLP-1 medications when appropriate.
-                The program is $100 per month, which includes initial labs
-                and prescriptions sent to Lilly Direct Pharmacy; the weight
-                loss medication itself is billed separately to the patient.
+                Your initial visit is $100 and includes initial labs and
+                prescriptions sent to Lilly Direct Pharmacy; follow-up visits
+                are $50, or $100 if labs are needed. The weight loss
+                medication itself is billed separately to the patient.
               </p>
             </div>
 
@@ -236,7 +249,7 @@ export default function WeightLossTulsaPage() {
               }}
             >
               <Scale className="h-4 w-4" aria-hidden="true" />
-              Medically Supervised Weight Loss · $100/month
+              Medically Supervised Weight Loss · Visits From $50
             </div>
 
             {/* CTAs */}
@@ -280,13 +293,13 @@ export default function WeightLossTulsaPage() {
               What&apos;s Included in Your Tulsa Weight Loss Program
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
-              No insurance required. No hidden fees. Transparent pricing for
-              every visit.
+              We accept insurance, and self-pay rates are also available. No
+              hidden fees. Transparent pricing for every visit.
             </p>
           </div>
 
           <div className="max-w-md mx-auto">
-            {/* Monthly Program Card */}
+            {/* Initial Visit Card */}
             <div
               className="rounded-2xl p-7 md:p-8 border flex flex-col"
               style={{
@@ -301,15 +314,24 @@ export default function WeightLossTulsaPage() {
               >
                 Weight Loss Program
               </h3>
-              <div className="flex items-baseline gap-2 mb-6">
+              <div className="flex items-baseline gap-2 mb-2">
                 <span
                   className="text-5xl font-bold"
                   style={{ color: 'var(--primary)' }}
                 >
                   $100
                 </span>
-                <span className="text-sm text-gray-500">per month</span>
+                <span className="text-sm text-gray-500">initial visit</span>
               </div>
+              <p
+                className="text-sm font-medium mb-6 pb-6 border-b"
+                style={{
+                  color: 'var(--navy)',
+                  borderColor: 'rgba(26,166,183,0.20)',
+                }}
+              >
+                Follow-up visits: $50 &middot; Follow-up with labs: $100
+              </p>
               <ul className="space-y-3 mb-8 flex-1">
                 {programIncludes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
@@ -348,8 +370,9 @@ export default function WeightLossTulsaPage() {
               />
               <p className="text-sm text-gray-700">
                 <strong>Weight loss medication</strong> is billed separately
-                to the patient. We operate on a <strong>cash-pay basis</strong>{' '}
-                with no insurance required, no hidden fees.
+                to the patient. We accept insurance — call (405) 349-8188 to
+                confirm your specific plan. Self-pay rates are also
+                available, with no hidden fees.
               </p>
             </div>
 
@@ -401,10 +424,11 @@ export default function WeightLossTulsaPage() {
               style={{ color: 'rgba(255,255,255,0.90)' }}
             >
               Book online, complete your intake, meet your provider by video,
-              and get your personalized plan. The program is $100 per month,
-              which includes initial labs and prescriptions sent to Lilly
-              Direct Pharmacy. The weight loss medication itself is billed
-              separately to the patient.
+              and get your personalized plan. Your initial visit is $100 and
+              includes initial labs and prescriptions sent to Lilly Direct
+              Pharmacy. Follow-up visits are $50, or $100 if labs are needed.
+              The weight loss medication itself is billed separately to the
+              patient.
             </p>
             <Link
               href="/medical-weight-loss"
@@ -728,7 +752,7 @@ export default function WeightLossTulsaPage() {
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Our Tulsa weight loss clinic is fully online. Personalized,
             medically supervised weight loss with real follow-up.
-            $100 per month.
+            Visits from $50.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
