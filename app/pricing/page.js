@@ -45,6 +45,12 @@ const SERVICES = [
     featured: false,
     rows: [
       {
+        type: 'Televisit',
+        price: '$50',
+        included:
+          'Secure video visit, symptom review, prescriptions sent to your preferred pharmacy when appropriate.',
+      },
+      {
         type: 'In-Person Initial Visit',
         price: '$100',
         included:
@@ -138,6 +144,14 @@ const pricingPageSchema = {
       },
       {
         '@type': 'Offer',
+        name: "Women's Health Televisit",
+        priceCurrency: 'USD',
+        price: '50',
+        description:
+          'Secure video visit, symptom review, prescriptions sent to your preferred pharmacy when appropriate.',
+      },
+      {
+        '@type': 'Offer',
         name: "Women's Health In-Person Initial Visit",
         priceCurrency: 'USD',
         price: '100',
@@ -202,7 +216,7 @@ const pricingFAQSchema = {
       name: 'What are the self-pay rates for telehealth in Oklahoma?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Women's health self-pay visits start at $50, weight loss self-pay visits start at $50, and minor illness self-pay televisits are $50. These rates apply when you pay directly without using insurance.",
+        text: "Women's health self-pay televisits are $50, weight loss self-pay visits start at $50, and minor illness self-pay televisits are $50. These rates apply when you pay directly without using insurance.",
       },
     },
     {
@@ -234,7 +248,7 @@ const pricingFAQSchema = {
       name: 'Is in-person the same price as online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "For most visits, yes. Minor illness televisits and standard in-person visits are both $50, as are women's health in-person follow-up visits. In-person minor illness visits that require testing range from $80 to $100.",
+        text: "For most visits, yes. Minor illness and women's health televisits and standard in-person visits are both $50. In-person minor illness visits that require testing range from $80 to $100.",
       },
     },
   ],

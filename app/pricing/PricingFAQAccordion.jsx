@@ -14,7 +14,7 @@ const PRICING_FAQS = [
   },
   {
     q: 'What are the self-pay rates for telehealth in Oklahoma?',
-    a: "Women's health self-pay visits start at $50, weight loss self-pay visits start at $50, and minor illness self-pay televisits are $50. These rates apply when you pay directly without using insurance.",
+    a: "Women's health self-pay televisits are $50, weight loss self-pay visits start at $50, and minor illness self-pay televisits are $50. These rates apply when you pay directly without using insurance.",
   },
   {
     q: 'How much does semaglutide cost?',
@@ -30,7 +30,7 @@ const PRICING_FAQS = [
   },
   {
     q: 'Is in-person the same price as online?',
-    a: "For most visits, yes. Minor illness televisits and standard in-person visits are both $50, as are women's health in-person follow-up visits. In-person minor illness visits that require testing range from $80 to $100.",
+    a: "For most visits, yes. Minor illness and women's health televisits and standard in-person visits are both $50. In-person minor illness visits that require testing range from $80 to $100.",
   },
 ]
 

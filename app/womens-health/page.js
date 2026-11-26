@@ -88,6 +88,14 @@ const womensHealthPageSchema = {
   offers: [
     {
       '@type': 'Offer',
+      name: "Women's Health Televisit",
+      priceCurrency: 'USD',
+      price: '50',
+      description:
+        'Secure video visit, symptom review, and prescriptions sent to your preferred pharmacy when appropriate.',
+    },
+    {
+      '@type': 'Offer',
       name: "Women's Health In-Person Initial Visit",
       priceCurrency: 'USD',
       price: '100',
@@ -239,6 +247,12 @@ const steps = [
     description:
       'Following your clinical evaluation, your provider will discuss appropriate next steps, which may include treatment options, testing, prescriptions, monitoring or follow-up care.',
   },
+]
+
+const pricingTelevisitFeatures = [
+  'Secure video visit with Dr. Susan George',
+  'Symptom review and consultation',
+  'Prescriptions sent to your preferred pharmacy when appropriate',
 ]
 
 const pricingInitialFeatures = [
@@ -1602,12 +1616,59 @@ export default function WomensHealthPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Initial Visit Card */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Televisit Card */}
             <div
               className="wh-card rounded-[2rem] p-7 md:p-8 flex flex-col"
               style={{
                 backgroundColor: 'var(--wh-rose-soft)',
+              }}
+            >
+              <h3
+                className="text-lg font-semibold mb-1"
+                style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
+              >
+                Televisit
+              </h3>
+              <p className="text-sm mb-5" style={{ color: '#6b5a5e' }}>
+                Secure video visit, symptom review, and prescriptions sent to
+                your pharmacy when appropriate.
+              </p>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span
+                  className="text-5xl"
+                  style={{ color: 'var(--wh-pink)', fontFamily: 'var(--font-wh-heading)' }}
+                >
+                  $50
+                </span>
+                <span className="text-sm" style={{ color: '#9a8a8e' }}>self-pay</span>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {pricingTelevisitFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <span
+                      className="wh-icon-badge h-5 w-5 mt-0.5"
+                      style={{ backgroundColor: '#ffffff' }}
+                    >
+                      <Sparkles className="h-3 w-3" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
+                    </span>
+                    <span className="text-sm" style={{ color: '#5a4a4e' }}>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="btn-primary text-base w-full text-center"
+              >
+                Book Your Visit
+              </Link>
+            </div>
+
+            {/* Initial Visit Card */}
+            <div
+              className="wh-card rounded-[2rem] p-7 md:p-8 flex flex-col bg-white"
+              style={{
+                border: '1px solid rgba(194,37,92,0.18)',
               }}
             >
               <h3
@@ -1634,7 +1695,7 @@ export default function WomensHealthPage() {
                   <li key={feature} className="flex items-start gap-2.5">
                     <span
                       className="wh-icon-badge h-5 w-5 mt-0.5"
-                      style={{ backgroundColor: '#ffffff' }}
+                      style={{ backgroundColor: 'var(--wh-rose)' }}
                     >
                       <Sparkles className="h-3 w-3" style={{ color: 'var(--wh-pink)' }} aria-hidden="true" />
                     </span>
@@ -1644,7 +1705,7 @@ export default function WomensHealthPage() {
               </ul>
               <Link
                 href="/contact"
-                className="btn-primary text-base w-full text-center"
+                className="btn-outline text-base w-full text-center"
               >
                 Book Your Visit
               </Link>
