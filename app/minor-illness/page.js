@@ -1136,7 +1136,7 @@ export default function MinorIllnessPage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    $100/month
+                    from $50
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-gray-600">

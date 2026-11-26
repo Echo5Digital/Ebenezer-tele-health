@@ -18,8 +18,8 @@ const plans = [
   },
   {
     name: 'Weight Loss Program',
-    price: '$100/month',
-    note: null,
+    price: 'from $50',
+    note: 'Initial visit $100 · Follow-up $50 (with labs $100)',
     description: 'Medically guided weight management overseen by a BC-ADM certified provider.',
     features: [
       'Video visit with Dr. Susan George',
