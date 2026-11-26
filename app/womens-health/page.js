@@ -1590,7 +1590,7 @@ export default function WomensHealthPage() {
               >
                 Using health insurance?
               </h3>
-              <p className="text-sm md:text-base leading-relaxed font-bold" style={{ color: '#5a4a4e' }}>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#5a4a4e' }}>
                 We accept health insurance. Call us to confirm your specific
                 plan before booking. Your out-of-pocket cost depends on your
                 plan and the services you receive.
