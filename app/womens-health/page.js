@@ -1561,7 +1561,7 @@ export default function WomensHealthPage() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-10">
-            <span className="wh-eyebrow mb-4 block justify-center">Transparent Pricing</span>
+            <span className="wh-eyebrow mb-4 block justify-center">Ebenezer Health Clinic</span>
             <h2
               id="pricing-heading"
               className="text-3xl md:text-4xl mb-4"
@@ -1590,7 +1590,7 @@ export default function WomensHealthPage() {
               >
                 Using health insurance?
               </h3>
-              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#5a4a4e' }}>
+              <p className="text-sm md:text-base leading-relaxed font-bold" style={{ color: '#5a4a4e' }}>
                 We accept health insurance. Call us to confirm your specific
                 plan before booking. Your out-of-pocket cost depends on your
                 plan and the services you receive.
@@ -1625,7 +1625,7 @@ export default function WomensHealthPage() {
               }}
             >
               <h3
-                className="text-lg font-semibold mb-1"
+                className="text-lg font-bold mb-1"
                 style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
               >
                 Televisit
@@ -1672,7 +1672,7 @@ export default function WomensHealthPage() {
               }}
             >
               <h3
-                className="text-lg font-semibold mb-1"
+                className="text-lg font-bold mb-1"
                 style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
               >
                 In-Person Initial Visit
@@ -1719,7 +1719,7 @@ export default function WomensHealthPage() {
               }}
             >
               <h3
-                className="text-lg font-semibold mb-1"
+                className="text-lg font-bold mb-1"
                 style={{ color: 'var(--wh-charcoal)', fontFamily: 'var(--font-wh-body)' }}
               >
                 In-Person Follow-Up Visit
